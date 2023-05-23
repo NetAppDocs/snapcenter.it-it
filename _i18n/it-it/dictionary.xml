@@ -1486,20 +1486,13 @@
   <block id="3a1dd416224e7a96b7d4be1dfc9536cf" category="list-text">È necessario assegnare la credenziale a un utente RBAC (role-based access control) senza accesso sysadmin quando vengono soddisfatte le seguenti condizioni:</block>
   <block id="7a16850a47fecec0d6cb2c66daae6fca" category="list-text">La credenziale viene assegnata a un'istanza SQL.</block>
   <block id="6707464a5871a6aa26dcf785bea4052c" category="list-text">L'istanza o l'host SQL viene assegnato a un utente RBAC.</block>
-  <block id="4970872b4e7e80683035b5383cddcfad" category="paragraph">L'utente deve disporre sia del gruppo di risorse che dei privilegi di backup</block>
   <block id="afebb28fd320ef1336620e367e1e9af9" category="list-text">Per aggiungere una nuova credenziale, fare clic su *nuovo*.</block>
   <block id="4ef7e21a631ca3e8e53bd58d8f6a3dd8" category="list-text">Nella pagina credenziale, configurare le credenziali:</block>
-  <block id="e98129085674125eccfb10fdf1a8b903" category="paragraph">*Nome credenziale*</block>
-  <block id="22a9d94cc3dd3f3f504402ee57041a90" category="paragraph">*Nome utente*</block>
   <block id="2babd6364b44c08eef5ab4738c3db862" category="paragraph">Immettere il nome utente utilizzato per l'autenticazione di SQL Server.</block>
   <block id="2532aba4399cff0e09437703bc91a9d4" category="list-text">L'amministratore di dominio o qualsiasi membro del gruppo di amministratori specifica l'amministratore di dominio o qualsiasi membro del gruppo di amministratori nel sistema in cui si installa il plug-in SnapCenter. I formati validi per il campo *Nome utente* sono:</block>
   <block id="b2634f07b0a3a46ef7a5b2fe1993d6e2" category="list-text">Amministratore locale (solo per gruppi di lavoro) per i sistemi appartenenti a un gruppo di lavoro, specificare l'amministratore locale incorporato nel sistema in cui si sta installando il plug-in SnapCenter. È possibile specificare un account utente locale che appartiene al gruppo di amministratori locali se l'account utente dispone di privilegi elevati o se la funzione di controllo dell'accesso utente è disattivata sul sistema host. Il formato valido per il campo *Nome utente* è: _Nome utente_</block>
-  <block id="519a06883e7db4dbb9a21eeecb16986a" category="paragraph">*Password*</block>
-  <block id="95d647afc6713e290a68698e8521e757" category="paragraph">*Modalità di autenticazione*</block>
   <block id="66c5f2a1877b1e04cfa2731f1e12aa5e" category="paragraph">Selezionare la modalità di autenticazione di SQL Server. È inoltre possibile scegliere l'autenticazione di Windows se l'utente Windows dispone dei privilegi di amministratore di sistema sul server SQL.</block>
-  <block id="34a7588e855afcffbec3ec292d335369" category="paragraph">*Host*</block>
   <block id="d82b9729484cf5fd2948c596280e72fb" category="paragraph">Selezionare l'host.</block>
-  <block id="e1f1f62be4a53aaecc160ddb197e5ecd" category="paragraph">*Istanza di SQL Server*</block>
   <block id="1c6aec216640420d37199ef0555beab9" category="paragraph">Selezionare l'istanza di SQL Server.</block>
   <block id="a52c72cddb788a0e54ae847cfde710d9" category="list-text">Fare clic su *OK* per aggiungere la credenziale.</block>
   <block id="9cfc80fa5227a423a76220ce430d990c" category="list-text">Nel riquadro di navigazione a sinistra, fare clic su *risorse*.</block>
@@ -2018,45 +2011,31 @@
   <block id="9f35f4e7b1b8337e12bc210c7cc37233" category="paragraph">Il valore predefinito è false</block>
   <block id="ee2f9fb0aa9e8c0cc118a5f3a67a4b15" category="list-text">Un criterio di backup è un insieme di regole che regolano la gestione e la conservazione dei backup e la frequenza con cui viene eseguito il backup delle risorse o del gruppo di risorse. Inoltre, è possibile specificare le impostazioni di replica e script. La specifica delle opzioni in un criterio consente di risparmiare tempo quando si desidera riutilizzare il criterio per un altro gruppo di risorse.</block>
   <block id="49868beda0a485f260d92cbafbd9e394" category="list-text">Nella pagina Backup Type (tipo di backup), attenersi alla seguente procedura:</block>
-  <block id="1fbcfaad372de4aa8c4263630714d810" category="list-text">Scegliere il tipo di backup:</block>
-  <block id="881a5cadbf2af4892868c95a8925ecdd" category="paragraph">Eseguire il backup dei file di database e dei log delle transazioni e troncare i log delle transazioni</block>
   <block id="63afd0069eb731a8e67418ebe1db655d" category="list-text">Selezionare *Backup completo e Backup del registro*.</block>
   <block id="18d4675bdba207949ceb7f704c54e620" category="list-text">Inserire il numero massimo di database di cui eseguire il backup per ciascuna copia Snapshot.</block>
   <block id="b0c8f062df15022a6331b14e3bf5591e" category="admonition">È necessario aumentare questo valore se si desidera eseguire più operazioni di backup contemporaneamente.</block>
-  <block id="21b100df4a632d596f4e051c57940f20" category="paragraph">Eseguire il backup dei file di database</block>
   <block id="787c49e1272644a793119d13fc551e84" category="list-text">Selezionare *Backup completo*.</block>
   <block id="846c94f31178e6465f3c62be3f42cb3d" category="list-text">Inserire il numero massimo di database di cui eseguire il backup per ciascuna copia Snapshot. Il valore predefinito è 100</block>
-  <block id="fa9adcfe2bdc31067811e93485d16b7e" category="paragraph">Eseguire il backup dei registri delle transazioni</block>
   <block id="ad53595de135edab4a537a97159316b6" category="paragraph">Selezionare *Log backup*.</block>
   <block id="f16fca991ae99058ce41f2b4b1614852" category="list-text">Se si esegue il backup delle risorse utilizzando un'altra applicazione di backup, selezionare *Copia solo backup*.</block>
   <block id="619da134802c3fcab97a2b7c6d14c4ec" category="paragraph">Mantenendo intatti i log delle transazioni, qualsiasi applicazione di backup può ripristinare i database. In genere, l'utente non deve utilizzare l'opzione copia solo in altre circostanze.</block>
   <block id="31bbc81dcc68057ff34be7ba42a87cf4" category="admonition">Microsoft SQL non supporta l'opzione *Copia solo backup* insieme all'opzione *Backup completo e Backup del registro* per lo storage secondario.</block>
   <block id="e55dcbdf8fe92f0410aacdc7a5cf00d7" category="list-text">Nella sezione Availability Group Settings (Impostazioni gruppo di disponibilità), eseguire le seguenti operazioni:</block>
-  <block id="ed9c1af05d86fe993f785a78cddb82d4" category="paragraph">Backup solo su replica di backup preferita</block>
   <block id="6ebdb233abe23750440d3e587915a892" category="paragraph">Selezionare questa opzione per eseguire il backup solo sulla replica di backup preferita. La replica di backup preferita viene stabilita dalle preferenze di backup configurate per AG in SQL Server.</block>
-  <block id="f5c39ada6d74538eb8f8540a5b0f8397" category="paragraph">Selezionare le repliche per il backup</block>
   <block id="0a87197768544d35cfd757d20f1dab26" category="paragraph">Scegliere la replica AG primaria o la replica AG secondaria per il backup.</block>
-  <block id="e7ee0e14cb9b3655f5828c64aa7cc0e9" category="paragraph">Priorità di backup (priorità di backup minima e massima)</block>
   <block id="fb8750264c3bbfea89908048e10ef06c" category="paragraph">Specificare un numero minimo di priorità di backup e un numero massimo di priorità di backup che decida la replica AG per il backup. Ad esempio, è possibile avere una priorità minima di 10 e una priorità massima di 50. In questo caso, tutte le repliche AG con priorità superiore a 10 e inferiore a 50 vengono considerate come backup.</block>
   <block id="4035686675283d0f53d4a20e3a9588f0" category="admonition">Per impostazione predefinita, la priorità minima è 1 e la priorità massima è 100.</block>
   <block id="95f62fbbdd8b59bc3cdee3bd3e382046" category="admonition">Nelle configurazioni del cluster, i backup vengono conservati in ciascun nodo del cluster in base alle impostazioni di conservazione impostate nel criterio. Se il nodo proprietario di AG cambia, i backup vengono eseguiti in base alle impostazioni di conservazione e i backup del nodo proprietario precedente vengono conservati. La conservazione per AG è applicabile solo a livello di nodo.</block>
-  <block id="17c27964395af2cc0989da0544595045" category="list-text">Se si desidera pianificare il backup che si desidera creare con questo criterio, specificare il tipo di pianificazione selezionando *on demand*, *Hourly*, *Daily*, *Weekly* o *Monthly*.</block>
-  <block id="e6383c275762841518a895807d340c7f" category="paragraph">È possibile selezionare un tipo di pianificazione per un criterio.</block>
   <block id="1947481e76eb40f4adf8f5246fa95ff6" category="admonition">È possibile specificare la pianificazione (data di inizio, data di fine e frequenza) per l'operazione di backup durante la creazione di un gruppo di risorse. Ciò consente di creare gruppi di risorse che condividono la stessa policy e frequenza di backup, ma consente di assegnare diverse pianificazioni di backup a ciascun criterio.</block>
   <block id="886ea91e68cf0b81982d756722488f4e" category="list-text">Nella pagina di conservazione, a seconda del tipo di backup selezionato nella pagina del tipo di backup, eseguire una o più delle seguenti operazioni:</block>
   <block id="73d1997538c5c2799ee681d5e59023ad" category="list-text">Nella sezione Impostazioni di conservazione per l'operazione di ripristino aggiornata al minuto, eseguire una delle seguenti operazioni:</block>
   <block id="35c585b251342f8a3ef5f785412f91be" category="paragraph">Conserva solo un numero specifico di copie Snapshot</block>
-  <block id="5556fc25e3c9c42cb802a3ec13aa865f" category="paragraph">Selezionare l'opzione *Mantieni backup registro applicabili agli ultimi giorni &lt;number&gt;* e specificare il numero di giorni da conservare. Se ci si avvicina a questo limite, si consiglia di eliminare le copie meno recenti.</block>
   <block id="94ce778033bf4abe093ce9cc1e7a0498" category="paragraph">Conservare le copie di backup per un numero specifico di giorni</block>
   <block id="9bbf41d74c8f89f293d3299ea7bebf83" category="paragraph">Selezionare l'opzione *Mantieni backup registro applicabili agli ultimi giorni &lt;number&gt; dei backup completi* e specificare il numero di giorni per conservare le copie di backup del registro.</block>
   <block id="9de90deec5302da2195d39aecfada280" category="list-text">Nella sezione *Impostazioni di conservazione backup completo* per le impostazioni di conservazione su richiesta, eseguire le seguenti operazioni:</block>
-  <block id="e1282ba4f34b11ff282fb7d9970b2736" category="paragraph">Copie Snapshot totali da conservare</block>
-  <block id="206b2713043077c94ab3e4473a9897d7" category="paragraph">Se si desidera specificare il numero di copie Snapshot da conservare, selezionare *copie Snapshot totali da conservare*.</block>
   <block id="a0257f49f5547a6ef191dd6c2f9b4c75" category="admonition">Per impostazione predefinita, il valore del conteggio di conservazione è impostato su 2. Se si imposta il conteggio di conservazione su 1, l'operazione di conservazione potrebbe non riuscire perché la prima copia Snapshot è la copia Snapshot di riferimento per la relazione SnapVault fino a quando una copia Snapshot più recente non viene replicata nella destinazione.</block>
-  <block id="890049ee281f6f438392008ad804b79b" category="paragraph">Mantieni copie Snapshot per</block>
   <block id="6d8af80369897e48f5d0073fb1d5235e" category="paragraph">Se si desidera specificare il numero di giorni per i quali si desidera conservare le copie Snapshot prima di eliminarle, selezionare *Mantieni copie Snapshot per*.</block>
   <block id="058ebe875bccef9354f43eaa6facdc04" category="list-text">Nella sezione *Impostazioni di conservazione backup completo* per le impostazioni di conservazione oraria, giornaliera, settimanale e mensile, specificare le impostazioni di conservazione per il tipo di pianificazione selezionato nella pagina tipo di backup.</block>
-  <block id="827a94fd354ba8465165672c359a430d" category="paragraph">Se si desidera specificare il numero di copie Snapshot da conservare, selezionare *copie Snapshot totali da conservare*. Se il numero di copie Snapshot supera il numero specificato, le copie Snapshot vengono eliminate prima con le copie meno recenti.</block>
   <block id="6127fccc91f52e5ee1702cdfa7fa1673" category="admonition">Se si intende attivare la replica SnapVault, è necessario impostare il numero di conservazione su 2 o superiore. Se si imposta il conteggio di conservazione su 1, l'operazione di conservazione potrebbe non riuscire perché la prima copia Snapshot è la copia Snapshot di riferimento per la relazione SnapVault fino a quando una copia Snapshot più recente non viene replicata nella destinazione.</block>
   <block id="efa04a2e0b433b54ed88de4c3b1b5a79" category="paragraph">La conservazione delle copie Snapshot del registro è impostata su 7 giorni per impostazione predefinita. Utilizzare il cmdlet Set-SmPolicy per modificare la conservazione delle copie Snapshot del registro.</block>
   <block id="723fe9aea6dfe1a0a822f218095c1c11" category="paragraph">Questo esempio imposta la conservazione delle copie Snapshot del registro su 2:</block>
@@ -2077,7 +2056,6 @@
   <block id="78b5b7c604c7bf8d28d141a67b26385f" category="list-text">Nella sezione Opzioni di verifica della coerenza del database, eseguire le seguenti operazioni:</block>
   <block id="369cd91c3e11b99e6fa5850b92b3090a" category="paragraph">Limitare la struttura di integrità alla struttura fisica del database (SOLO_FISICA)</block>
   <block id="0de87de3224e64a78ce1093052a47d1d" category="paragraph">Selezionare *Limit the Integrity Structure to Physical Structure of the database (PHYSICAL_ONLY)* (limita la struttura di integrità alla struttura fisica del database) per limitare il controllo dell'integrità alla struttura fisica del database e rilevare pagine lacerate, errori di checksum e guasti hardware comuni che influiscono sul database.</block>
-  <block id="fdfc39464fafdd6ce6b729e0738e48a3" category="paragraph">SUSPRESS all information messages (NO INFOMSGS) (SUSC. Tutti i messaggi informativi (</block>
   <block id="82f15136daedc726dba1051c43c28284" category="paragraph">Selezionare *Sospendi tutti i messaggi informativi (NO_INFOMSGS)* per eliminare tutti i messaggi informativi. Selezionato per impostazione predefinita.</block>
   <block id="a01ae415547e2368a45ed1cc209949a9" category="paragraph">Visualizza tutti i messaggi di errore riportati per oggetto (ALL_ERRORMSGS)</block>
   <block id="afac60f293b05dc186f67c671aabe6bc" category="paragraph">Selezionare *Visualizza tutti i messaggi di errore riportati per oggetto (ALL_ERRORMSGS)* per visualizzare tutti gli errori segnalati per oggetto.</block>
@@ -2223,11 +2201,9 @@
   <block id="303271a6fa371310673fc55e65bf3af0" category="doc">Guida rapida all'installazione del plug-in SnapCenter per SQL Server</block>
   <block id="e05bc1fb0d09110d2709b8329ca82a1f" category="paragraph">Fornisce una serie di istruzioni di installazione per l'installazione del server SnapCenter e del plug-in SnapCenter per Microsoft SQL Server.</block>
   <block id="67f289221dc2b8315be57c85a28e0619" category="section-title">Preparazione per l'installazione</block>
-  <block id="e03ce187e39230106155230cb020dfa3" category="paragraph">*Requisiti di dominio e gruppo di lavoro*</block>
   <block id="c85265a6c5841b0f019403a50b63c44d" category="paragraph">Il server SnapCenter può essere installato su sistemi che si trovano in un dominio o in un gruppo di lavoro.</block>
   <block id="43727cf7c1f0b9055bad0d2c9c2e19ea" category="paragraph">Se si utilizza un dominio Active Directory, è necessario utilizzare un utente di dominio con diritti di amministratore locale. L'utente di dominio deve essere membro del gruppo Administrator locale sull'host Windows.</block>
   <block id="2632504d1b7b1f77434679b6906040dd" category="paragraph">Se si utilizzano gruppi di lavoro, è necessario utilizzare un account locale con diritti di amministratore locale.</block>
-  <block id="8091c23d0ce9e48e2abcbbcf443c75a5" category="paragraph">*Requisiti di licenza*</block>
   <block id="d5c59f9587c1784732bff8ebcc03f9fb" category="paragraph">Il tipo di licenze installate dipende dall'ambiente in uso.</block>
   <block id="794df3791a8c800841516007427a2aa3" category="cell">Licenza</block>
   <block id="b428bd66304bced88a8f85c2e42e2a8d" category="cell">Dove richiesto</block>
@@ -2246,9 +2222,7 @@
   <block id="a036788a7ed73379ca117ad8b6a48afa" category="paragraph">Licenze standard SnapCenter (opzionali)</block>
   <block id="5be74f1e9c3cdce99e50c0e439ec19b3" category="paragraph">Destinazioni secondarie</block>
   <block id="7dbd4083dc9a93160940c1e53d03999f" category="admonition">Si consiglia, ma non è necessario, di aggiungere le licenze standard di SnapCenter alle destinazioni secondarie. Se le licenze standard di SnapCenter non sono abilitate sulle destinazioni secondarie, non è possibile utilizzare SnapCenter per eseguire il backup delle risorse sulla destinazione secondaria dopo aver eseguito un'operazione di failover. Tuttavia, è necessaria una licenza FlexClone sulle destinazioni secondarie per eseguire operazioni di cloning e verifica.</block>
-  <block id="89a71adc7ceff2f08a2162d1abfd9de6" category="paragraph">*Requisiti aggiuntivi*</block>
   <block id="918d32b75f0ab883abba3a8dc0c3ae8d" category="inline-link">Tool di matrice di interoperabilità</block>
-  <block id="ed27eadf4ae8e8750cfd2fbc61ad72d7" category="paragraph">Per i requisiti minimi di ONTAP e del plug-in dell'applicazione, vedere<block ref="c50d85e9b4db596cb2a135c4e622135b" category="inline-link-rx"></block></block>
   <block id="8124579383e90243e4b06323d2b37f8d" category="cell">Host</block>
   <block id="a55b17d8324fe50e023be8010d4b5474" category="cell">Requisiti minimi</block>
   <block id="a0315547f70da02dc3ae867b333d7a34" category="paragraph">Sistema operativo (64 bit)</block>
@@ -2285,11 +2259,9 @@
   <block id="48552dce4d9810446c70f66f21f08120" category="paragraph">Porta di comunicazione SVM o cluster ONTAP</block>
   <block id="de80df6466db891ed7d7a31d71335ae1" category="paragraph">443 (HTTPS), bidirezionale; 80 (HTTP), bidirezionale</block>
   <block id="228eb7fa9d28577ec427d7baedfa7ded" category="paragraph">La porta viene utilizzata per la comunicazione tra l'host del server SnapCenter, l'host plug-in e SVM o il cluster ONTAP.</block>
-  <block id="353c85d985312d2d61ab0aeb4ee52759" category="paragraph">*Requisiti del plug-in SnapCenter per Microsoft SQL Server*</block>
   <block id="4bd535cc745449316aa463a5f52133d6" category="paragraph">Si consiglia di disporre di un utente con privilegi di amministratore locale con autorizzazioni di accesso locale sull'host remoto. Se si gestiscono i nodi del cluster, è necessario disporre di un utente con privilegi amministrativi per tutti i nodi del cluster.</block>
   <block id="cf94e6be5912bb698bcc03d64c605bc4" category="paragraph">Si consiglia di disporre di un utente con autorizzazioni sysadmin su SQL Server. Il plug-in utilizza Microsoft VDI Framework, che richiede l'accesso sysadmin.</block>
   <block id="354c84f19db927b615f7e75880c69840" category="section-title">Installare il server SnapCenter</block>
-  <block id="cf846ac585e82924ea1ad8c03b4b9bdf" category="section-title">Scaricare e installare il server SnapCenter</block>
   <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link">Sito di supporto NetApp</block>
   <block id="72de9cea28a7cca58f8423279c68e8c6" category="list-text">Scaricare il pacchetto di installazione del server SnapCenter dal<block ref="d4fdc92072f5257471f3139636068769" category="inline-link-rx"></block> quindi fare doppio clic sul file exe.</block>
   <block id="f3202cac117dff2d56e44da0f9a51af3" category="paragraph">Dopo aver avviato l'installazione, vengono eseguiti tutti i controlli preliminari e, se i requisiti minimi non vengono soddisfatti, vengono visualizzati i messaggi di errore o di avviso appropriati. È possibile ignorare i messaggi di avviso e procedere con l'installazione; tuttavia, gli errori dovrebbero essere corretti.</block>
@@ -2303,19 +2275,16 @@
   <block id="47459be4bca5ade3cc059a063f2917cd" category="paragraph">Per un formato nome utente amministratore di dominio incorporato, utilizzare: _NetBIOS/&lt;username&gt;_ o _&lt;username&gt;@&lt;domain&gt;_ o _&lt;DomainFQDN&gt;/&lt;username&gt;_.</block>
   <block id="283cf02b37e194a97bc09e5143839de4" category="paragraph">Per un formato nome utente admin locale incorporato, utilizzare _&lt;username&gt;_.</block>
   <block id="639377ecc4f9660d152b47ac6257004c" category="list-text">Fare clic su *Accedi*.</block>
-  <block id="9575d89eee3d9cea045cdf8003c58424" category="section-title">Aggiungere una licenza basata su controller standard SnapCenter</block>
   <block id="a4e7093c6cc2e4ee72e50b2a954be3f3" category="list-text">Accedere al controller utilizzando la riga di comando ONTAP e digitare:</block>
   <block id="a2f9f72a3753905e11a8704d1d64ef7e" category="paragraph"><block ref="d463bb02c0fb4e7254606b14a905916b" prefix="" category="inline-code"></block></block>
   <block id="cb7e3c5033b506aed36b6425ab46d746" category="list-text">Verificare la licenza:</block>
   <block id="8822a9cc146d06e4ec77936054fb11ca" category="paragraph"><block ref="a28d3d0bcb86e95ea1d046dfacb69a1e" prefix="" category="inline-code"></block></block>
-  <block id="9859b0644d4667764577eb03a1fcda53" category="section-title">Aggiungere una licenza SnapCenter basata sulla capacità</block>
   <block id="75d426bedc5bc7dbac82eeea5b7205cc" category="list-text">Nel riquadro sinistro della GUI di SnapCenter, fare clic su *Impostazioni &gt; Software*, quindi nella sezione licenza fare clic su *+*.</block>
   <block id="3ac6ac17d67bf3a5fa25634ee8e5ee29" category="list-text">Selezionare uno dei due metodi per ottenere la licenza:</block>
   <block id="1ec58aebb04dc06c65218ee0a1ec395c" category="list-text">Immettere le credenziali di accesso al NetApp Support Site per importare le licenze.</block>
   <block id="8d1ce47f5c181adbba927f4ce22dbb2a" category="list-text">Individuare il percorso del file di licenza NetApp e fare clic su *Open* (Apri).</block>
   <block id="7b7d58eae7c1c48c220ea2cf5f2754c6" category="list-text">Nella pagina Notifiche della procedura guidata, utilizzare la soglia di capacità predefinita del 90%.</block>
   <block id="1859e92122e266181cafb9c13d7400a0" category="list-text">Fare clic su *fine*.</block>
-  <block id="cc12c6014b5ec85f58b6fb31a26a66f7" category="section-title">Configurare le connessioni del sistema storage</block>
   <block id="4e47abeee8d7eb5a872182a350fecedb" category="list-text">Nel riquadro di sinistra, fare clic su *Storage Systems &gt; New* (sistemi storage &gt; nuovo).</block>
   <block id="610cac9ef97d97974dfcf5de0b7e0f1e" category="list-text">Nella pagina Add Storage System (Aggiungi sistema di storage), eseguire le seguenti operazioni:</block>
   <block id="2384730978fb31977e9e4d8d6cd269a1" category="list-text">Inserire il nome o l'indirizzo IP del sistema di storage.</block>
@@ -2323,9 +2292,7 @@
   <block id="270527cce60385f686064c6eef36e8dd" category="list-text">Selezionare le caselle di controllo per attivare il sistema di gestione degli eventi (EMS) e AutoSupport.</block>
   <block id="ebd85b740e18643ed1055826c9bcddf6" category="list-text">Fare clic su *altre opzioni* per modificare i valori predefiniti assegnati a piattaforma, protocollo, porta e timeout.</block>
   <block id="1b536db2490e46d75b679a68d1866ff2" category="section-title">Installare il plug-in per Microsoft SQL Server</block>
-  <block id="1d765f352f6f5ec7cfa899be682026d8" category="section-title">Impostare Esegui come credenziali per installare il plug-in per Microsoft SQL Server</block>
   <block id="edb3f96af88f92a47b3be973152729fe" category="list-text">Nel riquadro di sinistra, fare clic su *Impostazioni &gt; credenziali &gt; nuovo*.</block>
-  <block id="10976e15f1cbbbbb65eaf072d358489b" category="section-title">Aggiungere un host e installare il plug-in per Microsoft SQL Server</block>
   <block id="585cc1564f4cb6953e8c9f28c1437b7a" category="list-text">Nel riquadro sinistro della GUI di SnapCenter, fare clic su *host &gt; host gestiti &gt; Aggiungi*.</block>
   <block id="391f0cfb81e64e89ce06d9fb74afdee6" category="list-text">Nella pagina host della procedura guidata, eseguire le seguenti operazioni:</block>
   <block id="7200cb512c65b6adfa2cab18de8e420d" category="list-text">Host Type (tipo host): Selezionare il tipo di host Windows.</block>
@@ -2788,21 +2755,15 @@
   <block id="0dd1baa389f6493ff89ba4f1d23f127b" category="list-text">Se si desidera eseguire il backup di una risorsa che ha una relazione SnapMirror con lo storage secondario, il ruolo ONTAP assegnato all'utente dello storage deve includere il privilegio "`snapmirror all`". Tuttavia, se si utilizza il ruolo "`vsadmin`", il privilegio "`snapmirror all`" non è richiesto.</block>
   <block id="862569d2dbddc7f68305bb1aa73accec" category="paragraph">È possibile cercare il gruppo di risorse inserendo il nome del gruppo di risorse nella casella di ricerca o facendo clic su <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> e selezionando il tag. Quindi fare clic su <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> per chiudere il riquadro del filtro.</block>
   <block id="aa5531c2ecb8be9440f8c1f83b8e7d4f" category="summary">Un gruppo di risorse è il container al quale è necessario aggiungere risorse di cui si desidera eseguire il backup e la protezione.</block>
-  <block id="f316f1145e3342e626b49461ffc2ab89" category="list-text">Nella pagina risorse, fare clic su nuovo gruppo di risorse.</block>
   <block id="a80db864d152c8b32afdc8aba08be8a4" category="paragraph">Ad esempio, _customtext_resource group_policy_hostname o resource group_hostname_. Per impostazione predefinita, al nome della copia Snapshot viene aggiunto un indicatore data e ora.</block>
   <block id="94f48d06961651ce76410fb0e6059f76" category="list-text">Facoltativo: Nella pagina risorse, selezionare un nome host dall'elenco a discesa *host* e il tipo di risorsa dall'elenco a discesa *tipo di risorsa*.</block>
   <block id="08b935061f93c6a0dff0b7e6979bd0d5" category="list-text">Facoltativo: Nella pagina Impostazioni applicazione, effettuare le seguenti operazioni:</block>
-  <block id="b681aca5ebc16cfa17fba43067418799" category="list-text">Fare clic sulla freccia Backup per impostare opzioni di backup aggiuntive:</block>
   <block id="16bfcf20ed729d5958d62a1310952406" category="paragraph">Selezionare urgente, Medio o rilassato per specificare il tempo di attesa per il completamento dell'operazione di copia Snapshot.</block>
-  <block id="b23b98054bcf29cc3dd1bd3464052bcb" category="list-text">Fare clic sulla freccia script e immettere i comandi pre e post per le operazioni di quiete, copia Snapshot e senza richieste. In caso di errore, è anche possibile inserire i pre-comandi da eseguire prima di uscire.</block>
-  <block id="18c6405661af0f133718c3a6c6e5b2b9" category="list-text">Fare clic sulla freccia Custom Configurations (configurazioni personalizzate) e immettere le coppie chiave-valore personalizzate richieste per tutte le operazioni di protezione dei dati che utilizzano questa risorsa.</block>
   <block id="3beb0a9c61be39e8320fe0059a03c74a" category="paragraph">Consente alla gestione del log di archiviazione di eliminare i log di archiviazione.</block>
   <block id="dc703326700303bf93d1386ba9fca6a5" category="paragraph">Selezionare SnapCenter with file system Consistency (Configurazione con coerenza file system)</block>
   <block id="cc1f89ce717207d3bd06c999199b9304" category="paragraph">Selezionare SnapCenter senza coerenza del file system.</block>
   <block id="fb99cb02e8a44f5112f8225ca020b979" category="paragraph">Selezionare Other (Altro), quindi immettere il comando da eseguire sull'host per creare una copia Snapshot.</block>
   <block id="bfd0e05a188a0885b5397fae78f649b8" category="paragraph">I criteri sono elencati nella sezione *Configura pianificazioni per i criteri selezionati*.</block>
-  <block id="7968dcde042f7f2966214a9d3b89b418" category="list-text">Nella colonna *Configura pianificazioni*, fare clic su *<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>* per la policy che si desidera configurare.</block>
-  <block id="1e414da00e22b0ba0fa519e7325b7ea9" category="list-text">Nella finestra di dialogo Add schedules for policy _policy_name_, configurare la pianificazione, quindi fare clic su OK.</block>
   <block id="6041b17ee877813c3440ee714e48b911" category="paragraph">Le pianificazioni configurate sono elencate nella colonna Applied Schedules (Pianificazioni applicate). Le pianificazioni di backup di terze parti non sono supportate quando si sovrappongono alle pianificazioni di backup di SnapCenter.</block>
   <block id="83aeb7b594481ad598eb0b519836777b" category="summary">SnapCenter supporta un'ampia gamma di tipi di storage su macchine fisiche e virtuali. Prima di installare i plug-in personalizzati di SnapCenter, è necessario verificare il supporto per il tipo di storage in uso.</block>
   <block id="c48a2f5430d3aff55420b834363bcc46" category="doc">Tipi di storage supportati dai plug-in personalizzati di SnapCenter</block>
@@ -2887,10 +2848,8 @@
   <block id="48f5a315d78b006c306e66d7b35fa6f4" category="summary">È necessario aggiungere le risorse di cui si desidera eseguire il backup o la clonazione. A seconda dell'ambiente in uso, le risorse possono essere istanze di database o raccolte di cui si desidera eseguire il backup o la clonazione.</block>
   <block id="5acceba2cee4fe40d121e90d997fa439" category="doc">Aggiungere risorse ai plug-in personalizzati di SnapCenter</block>
   <block id="04e793c2d8facdc933edd3335c890a34" category="list-text">È necessario completare attività come l'installazione del server SnapCenter, l'aggiunta di host, la creazione di connessioni al sistema di storage e l'aggiunta di credenziali.</block>
-  <block id="09f1a1e976c751f8b861a75492f30752" category="list-text">È necessario aver creato un plug-in personalizzato.</block>
   <block id="797f1e031962d70e46335925184febf4" category="list-text">I plug-in devono essere stati caricati sul server SnapCenter.</block>
   <block id="eb609425665410a2e3cc5d5000880798" category="paragraph">È inoltre possibile aggiungere risorse per applicazioni MySQL e DB2. Questi plug-in possono essere scaricati da<block ref="14adb94a4faec9ea0e0992d90e98b640" category="inline-link-rx"></block>.</block>
-  <block id="134848154c843b2b7ebbc0c3bf4c17a4" category="list-text">Nella pagina risorse, fare clic su *Aggiungi risorsa*.</block>
   <block id="0750f05e0542388153777a63b5fa887c" category="paragraph">Immettere il nome della risorsa.</block>
   <block id="a1fa27779242b4902f7ae3bdd5c6d508" category="paragraph">Tipo</block>
   <block id="0e4c9e1ee0802a727d5dd0fcacc4a158" category="paragraph">Selezionare il tipo. Il tipo è definito dall'utente in base al file di descrizione del plug-in. Ad esempio, database e istanze.</block>
@@ -2898,7 +2857,6 @@
   <block id="22d904afc998596607ae9259692598fb" category="paragraph">Selezionare credenziale o creare una nuova credenziale.</block>
   <block id="16e83f7e57633cd58a4377b7c1b63e8b" category="paragraph">Percorsi di montaggio</block>
   <block id="1b77d8b94cdc028e50a0681f82c70f25" category="paragraph">Immettere i percorsi di montaggio in cui è montata la risorsa. Questo è valido solo per un host Windows.</block>
-  <block id="dc502ecfca6ae1ebeee4b624e9b44123" category="paragraph">Facoltativo: Fare clic su <block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block> Per aggiungere più volumi, LUN e qtree da altri sistemi storage.</block>
   <block id="e0a8c4d2ea78ad79b3f4ddb809734576" category="admonition">I plug-in personalizzati di SnapCenter non supportano il rilevamento automatico delle risorse e dei dettagli dello storage per ambienti fisici e virtuali. Durante la creazione delle risorse, è necessario fornire le informazioni di storage per gli ambienti fisici e virtuali.</block>
   <block id="e855bfeca424d5d865b9bac0eaf01f53" category="image-alt">Impatto dello storage</block>
   <block id="d98e943b0122d016274bcbbeba1d647d" category="list-text">Nella pagina Resource Settings (Impostazioni risorse), fornire coppie chiave-valore personalizzate per la risorsa.</block>
@@ -5997,7 +5955,6 @@
   <block id="690d3c16f8977d088a13175ac12ac454" category="paragraph">SnapCenter disconnette la sessione iSCSI.</block>
   <block id="f8a549c5d60e74034419845623f5c51a" category="summary">Si utilizza una licenza SnapCenter con capacità standard per proteggere i dati sulle piattaforme ONTAP Select e Cloud Volumes ONTAP.</block>
   <block id="247c902b5f932e2e47b98b966ab41a08" category="doc">Aggiunta di licenze SnapCenter basate sulla capacità standard</block>
-  <block id="a6f6b8e1900f201c352d37d7ad4eee46" category="paragraph">La licenza presenta le seguenti caratteristiche:</block>
   <block id="1e1ad6d102344db746935e8ae7b4053a" category="list-text">Composto da un numero di serie di nove cifre con il formato 51xxxxxxx</block>
   <block id="8df6c319bc0dd3bc17034d6f7b0b0d01" category="paragraph">Per attivare la licenza utilizzando l'interfaccia grafica di SnapCenter, utilizzare il numero di serie della licenza e le credenziali di accesso al sito di supporto NetApp valide.</block>
   <block id="f8b3fa2bcdc37eb746dd0ca2b1318a58" category="list-text">Disponibile come licenza perpetua separata, con il costo basato sulla capacità di storage utilizzata o sulla dimensione dei dati che si desidera proteggere, a seconda di quale sia inferiore, e i dati sono gestiti da SnapCenter</block>
@@ -6005,9 +5962,6 @@
   <block id="3ad8f1015a5748dc3e790e64bb9a4e26" category="paragraph">Ad esempio, è possibile ottenere una licenza basata sulla capacità per 1 TB, 2 TB, 4 TB e così via.</block>
   <block id="ec72ca404ef39d44f067aaaae39cf0e4" category="list-text">Disponibile come licenza di prova per 90 giorni con capacità di 100 TB</block>
   <block id="eb55a5732c8239cbf4f476df49cc20a3" category="paragraph">Per informazioni sulle licenze richieste, vedere <block ref="6de8516502145d64739d69762f4898a1" category="inline-link-macro-rx"></block>.</block>
-  <block id="b7045e270f9ec5cdf3d4a2f1516dd0fd" category="section-title">Prerequisiti per aggiungere una licenza basata sulla capacità</block>
-  <block id="fc839d90b395c50c0f0c94028073c2fc" category="paragraph">Prima di aggiungere una licenza basata sulla capacità, è necessario calcolare i requisiti di capacità, recuperare il numero di serie della licenza basata sulla capacità e, facoltativamente, generare un file di licenza.</block>
-  <block id="b0c7f3b2e1c49f12743f8681bad9f4d9" category="section-title">Calcola i requisiti di capacità</block>
   <block id="b253c383592a32db835b060dd347fb51" category="paragraph">Prima di ottenere una licenza SnapCenter basata sulla capacità, è necessario calcolare la capacità di un host che deve essere gestito da SnapCenter.</block>
   <block id="fff248d88b8e6fe585098d0e2e47af26" category="paragraph">L'utente deve essere un amministratore del cluster nel sistema Cloud Volumes ONTAP o ONTAP Select.</block>
   <block id="b3ce93a0fdb481ef23214dbe76f20fbd" category="paragraph">SnapCenter calcola la capacità effettiva utilizzata. Se la dimensione del file system o del database è di 1 TB, ma vengono utilizzati solo 500 GB di spazio, SnapCenter calcola 500 GB di capacità utilizzata. La capacità del volume viene calcolata dopo la deduplica e la compressione e si basa sulla capacità utilizzata dell'intero volume.</block>
@@ -6015,19 +5969,12 @@
   <block id="7a8bc63ce0be9d70f65ff4bebb9b433c" category="list-text">Per visualizzare la capacità del volume utilizzata, immettere il comando.</block>
   <block id="c52aa08e4b032ad1666772ea0c44119c" category="paragraph">La capacità combinata utilizzata per i due volumi è inferiore a 5 TB; pertanto, se si desidera proteggere tutti i 5 TB di dati, il requisito minimo di licenza SnapCenter basato sulla capacità è di 5 TB.</block>
   <block id="9efbb933648d3e7cf5a18b9babea2e3b" category="paragraph">Tuttavia, se si desidera proteggere solo 2 TB dei 5 TB di capacità totale utilizzata, è possibile acquistare una licenza basata sulla capacità da 2 TB.</block>
-  <block id="8653cfd71a4452fb9ae4b9ab1e4f43c5" category="section-title">Recuperare il numero di serie della licenza basata sulla capacità</block>
   <block id="2743dc2e5d64cfecd6d65ef69f417e95" category="paragraph">Il numero di serie della licenza SnapCenter basata sulla capacità è disponibile nella conferma dell'ordine o nella documentazione; tuttavia, se non si dispone di questo numero di serie, è possibile recuperarlo dal sito del supporto NetApp.</block>
   <block id="8e4be97b92b5d685df7ecc1adcda7baf" category="paragraph">È necessario disporre di credenziali di accesso al sito di supporto NetApp valide.</block>
-  <block id="0373910e51252c7b97dcbea9f4942604" category="inline-link">mysupport.netapp.com</block>
-  <block id="260c486181bff01291b08f4368caf4e0" category="list-text">Accedere al sito di supporto NetApp all'indirizzo<block ref="28649c93049a329043d206ec7fa0c6f8" category="inline-link-rx"></block>.</block>
   <block id="55b506dcddf68638833e19d289e73897" category="list-text">Accedere a *sistemi* &gt; *licenze software*.</block>
   <block id="a83a5d4a0177a0501c4a3ed3bc37cd53" category="list-text">Nell'area Selection Criteria (Criteri di selezione), scegliere *SC_STANDARD* dal menu a discesa Show Me All: Serial Numbers and Licenses (Mostra tutti: Numeri di serie e licenze).</block>
-  <block id="afdb1414f39146e968c3e38bd864c000" category="image-alt">selezione della licenza nss</block>
-  <block id="969166d70500094403472cee53c7eb80" category="list-text">Digitare il nome della società, quindi fare clic su *Go!*.</block>
   <block id="072c7ce9ef654fbadd39bfb8d07dd1f6" category="paragraph">Viene visualizzato il numero di serie di nove cifre della licenza SnapCenter, con il formato 51xxxxxxx.</block>
   <block id="2be4e86fec9db8038212e41252f1f190" category="list-text">Annotare il numero di serie.</block>
-  <block id="aec2fa195585d5a55c735b267231ecf8" category="section-title">Generare un file di licenza NetApp</block>
-  <block id="7ab335ae0eb6b3dd5aa9c839cf5ead00" category="paragraph">Se si preferisce non inserire le credenziali del sito di supporto NetApp e il numero di serie della licenza SnapCenter nell'interfaccia grafica di SnapCenter o se non si dispone dell'accesso a Internet al sito di supporto NetApp da SnapCenter, è possibile generare un file di licenza NetApp (NLF), Quindi scaricare e memorizzare il file in una posizione accessibile dall'host SnapCenter.</block>
   <block id="b38bcb46a26616707e57598919123e4f" category="list-text">SnapCenter deve essere utilizzato con ONTAP Select o Cloud Volumes ONTAP.</block>
   <block id="26e6565b87611c0e2e61e424bbf253a8" category="list-text">È necessario disporre di credenziali di accesso al sito di supporto NetApp valide.</block>
   <block id="ef37f690ac766ca61a4b063851b90274" category="list-text">Il numero seriale a nove cifre della licenza deve essere in formato 51xxxxxxx.</block>
@@ -6036,9 +5983,7 @@
   <block id="cc5aaa62ea65ba445a0ca28e684ec137" category="list-text">Inserire le informazioni richieste.</block>
   <block id="aa96972d8a9d395572c58293f4cfc359" category="list-text">Nel campo linea di prodotti, selezionare *SnapCenter standard (basato sulla capacità)* dal menu a discesa.</block>
   <block id="abd5fbd31eb442bc0a035e9cad7fe8f3" category="list-text">Nel campo Product Serial Number (numero di serie del prodotto), inserire il numero di serie della licenza SnapCenter</block>
-  <block id="32b485c6c6f806ed5cacdc290d9f46ae" category="list-text">Leggere e accettare la direttiva sulla privacy dei dati di NetApp, quindi fare clic su *Invia*.</block>
   <block id="352b74507f3abbcaae93745904ef3f5a" category="list-text">Salvare il file di licenza, quindi registrare la posizione del file.</block>
-  <block id="2fab191a54d328d06a3a746dee5bbad2" category="section-title">Aggiungere una licenza basata sulla capacità</block>
   <block id="8c1f23f212262c3300e93f874826f6e5" category="paragraph">Se si utilizza SnapCenter con piattaforme ONTAP Select o Cloud Volumes ONTAP, è necessario installare una o più licenze SnapCenter basate sulla capacità.</block>
   <block id="55f664ebb6051a6a8020142e125c7571" category="paragraph">Se si utilizza un file di licenza NetApp (NLF) per aggiungere la licenza, è necessario conoscere la posizione del file di licenza.</block>
   <block id="e5acff5734e40c3c2497b77505329dc5" category="paragraph">Nella pagina Impostazioni è possibile eseguire le seguenti operazioni:</block>
@@ -6047,7 +5992,6 @@
   <block id="8f6fed4fa1610c2a997789b9a9a24e26" category="list-text">Modificare una licenza quando si desidera sostituire la licenza esistente, ad esempio per aggiornare la capacità della licenza o per modificare le impostazioni di notifica della soglia.</block>
   <block id="fd6d824ad448d73f9d1f6b3c5509232a" category="list-text">Eliminare una licenza quando si desidera sostituire una licenza esistente o quando la licenza non è più necessaria.</block>
   <block id="ba2f4fc969f990edea2a0f9e7c17885f" category="admonition">La licenza di prova (numero di serie che termina con 50) non può essere eliminata utilizzando l'interfaccia grafica di SnapCenter. La licenza di prova viene sovrascritta automaticamente quando si aggiunge una licenza basata sulla capacità dello standard SnapCenter procurato.</block>
-  <block id="0b5bbb1f8e9316f184ffc46a55fde594" category="list-text">Nella sezione License (licenza) della pagina Software, fare clic su *Add* (<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>).</block>
   <block id="d72c1df6aa761e08a22ad7e68c16406d" category="list-text">Nella procedura guidata Aggiungi licenza SnapCenter, selezionare uno dei seguenti metodi per ottenere la licenza che si desidera aggiungere:</block>
   <block id="a1d8662559bac2669232432df90e6db3" category="paragraph">Immettere le credenziali di accesso al NetApp Support Site (NSS) per importare le licenze</block>
   <block id="a426e2b1ae7b2ed68b622079636cb9f8" category="list-text">Immettere il nome utente NSS.</block>
@@ -6055,10 +5999,8 @@
   <block id="d6cd0a28d068c868d81bfecd02276ee3" category="list-text">Inserire il numero di serie della licenza basata su controller.</block>
   <block id="07cb62e97402d6f5f7ae164e960f673c" category="paragraph">File di licenza NetApp</block>
   <block id="358adfd23e97ae6d9631faacdf38349f" category="list-text">Individuare il percorso del file di licenza, quindi selezionarlo.</block>
-  <block id="31d9f23fbb53d2787e021e33f512537e" category="list-text">Fare clic su *Apri*.</block>
   <block id="139acbc75e1fdf242ad639e953306c0d" category="list-text">Nella pagina Notifiche, immettere la soglia di capacità alla quale SnapCenter invia le notifiche di posta elettronica, EMS e AutoSupport.</block>
   <block id="ca8d06ca31fa65de1d7fa189cbd9053a" category="paragraph">La soglia predefinita è 90 percento.</block>
-  <block id="c5ac91f9d71868d67600ac6e3d555ce9" category="list-text">Per configurare il server SMTP per le notifiche e-mail, fare clic su *Impostazioni* &gt; *Impostazioni globali* &gt; *Impostazioni server di notifica*, quindi immettere i seguenti dettagli:</block>
   <block id="fe7c6832f02e9c6d619cf94f17ad3887" category="paragraph">Preferenza e-mail</block>
   <block id="a4e7a8fc83bab6b154d5ea518f9f930c" category="paragraph">Scegliere *sempre* o *mai*.</block>
   <block id="0ea82c1bf7269950e927586b6dba0eac" category="paragraph">Fornire le impostazioni e-mail</block>
@@ -6067,11 +6009,6 @@
   <block id="a70a5bbea3c1a0732c3b119e34ac958c" category="list-text">Indirizzo e-mail del destinatario</block>
   <block id="d97e109d66d82a3998e928297ea76bdc" category="list-text">Facoltativo: Consente di modificare la riga dell'oggetto predefinita</block>
   <block id="fb929cc1541d57b8296794b2a588840d" category="paragraph">Il soggetto predefinito è il seguente: "Notifica della capacità della licenza SnapCenter".</block>
-  <block id="8440ad9407c2e5813eaab7eb5fa92051" category="list-text">Se si desidera che i messaggi del sistema di gestione degli eventi (EMS) vengano inviati al sistema di storage syslog o che i messaggi AutoSupport vengano inviati al sistema di storage per le operazioni non riuscite, selezionare le caselle di controllo appropriate.</block>
-  <block id="3327dba9ffd8c9c2d9846fc889607703" category="cell">*Best practice*: Si consiglia di abilitare AutoSupport per risolvere eventuali problemi.</block>
-  <block id="b15a52a99ef14861ba148ae197add182" category="section-title">Come SnapCenter calcola l'utilizzo della capacità</block>
-  <block id="33e4a71d44495d6f1fd89da8547d2ff8" category="paragraph">SnapCenter calcola automaticamente l'utilizzo della capacità una volta al giorno a mezzanotte sullo storage ONTAP Select e Cloud Volumes ONTAP gestito. Per assicurarsi di aver configurato correttamente SnapCenter, è necessario conoscere il modo in cui SnapCenter calcola la capacità.</block>
-  <block id="b49e5091a9fa2af83579f7097033c636" category="paragraph">Quando si utilizza una licenza con capacità standard, SnapCenter calcola la capacità inutilizzata deducendo la capacità utilizzata su tutti i volumi dalla capacità totale concessa in licenza. Se la capacità utilizzata supera la capacità concessa in licenza, viene visualizzato un avviso di utilizzo eccessivo nella dashboard di SnapCenter. Se sono state configurate soglie di capacità e notifiche in SnapCenter, viene inviata un'e-mail quando la capacità utilizzata raggiunge la soglia specificata.</block>
   <block id="91f32543aa28b785a5495845a7fb8cec" category="summary">Se si utilizzano i controller di storage FAS o AFF, è necessaria una licenza basata su controller standard SnapCenter.</block>
   <block id="f011a01ebc3350e546311efaf71140bc" category="doc">Aggiunta di licenze SnapCenter basate su controller standard</block>
   <block id="b1c23ca4e9e67a158bfb24299743d88f" category="paragraph">La licenza basata su controller ha le seguenti caratteristiche:</block>
@@ -6080,39 +6017,27 @@
   <block id="b867b5a0cc0e8c022da3fb526dbf2e0d" category="list-text">È possibile aggiungerlo direttamente al controller di storage FAS o AFF utilizzando Gestione di sistema ONTAP o la riga di comando del cluster di storage</block>
   <block id="c0919ecf5802c65bf773794b7af70540" category="admonition">Non inserire alcuna informazione di licenza nell'interfaccia grafica di SnapCenter per le licenze basate su controller SnapCenter.</block>
   <block id="17449a90a0d7161db56cba83fa4f2728" category="list-text">Bloccato sul numero di serie del controller</block>
-  <block id="20284ac6e2b70536e661c28917c1f549" category="section-title">Prerequisiti per aggiungere una licenza basata su controller</block>
-  <block id="caaa0ad9310c0a99138c911b96b968e3" category="paragraph">Prima di aggiungere una licenza basata su controller, verificare se la licenza della suite SnapManager è installata, identificare le licenze installate sul controller, recuperare il numero di serie del controller e recuperare il numero di serie della licenza basata su controller.</block>
-  <block id="3a6c1a3709f142da8374f25ad7aabeda" category="section-title">Verificare che la licenza della suite SnapManager sia installata</block>
   <block id="b7bbc11caf1a65c77460de0469d40f7d" category="paragraph">È possibile utilizzare l'interfaccia grafica di SnapCenter per verificare se una licenza della suite SnapManager è installata su sistemi di storage primari FAS o AFF e per identificare i sistemi di storage che potrebbero richiedere le licenze della suite SnapManager. Le licenze della suite SnapManager si applicano solo alle SVM FAS e AFF o ai cluster sui sistemi storage primari.</block>
   <block id="6aa5717c99b34de9980debfbe3c6fa76" category="admonition">Se si dispone già di una licenza della suite SnapManager sul controller, il diritto alla licenza basata su controller standard SnapCenter viene fornito automaticamente. I nomi licenza SnapManagerSuite e licenza basata su controller standard SnapCenter vengono utilizzati in modo intercambiabile, ma si riferiscono alla stessa licenza.</block>
   <block id="05f4bbedc7296e63af5610bfc33574b5" category="list-text">Nella pagina Storage Systems (sistemi storage), dal menu a discesa *Type* (tipo), selezionare se visualizzare tutte le SVM o i cluster aggiunti:</block>
   <block id="9ba45610f0250c3f3d93d968194d341c" category="list-text">Per visualizzare tutte le SVM aggiunte, selezionare *ONTAP SVM*.</block>
   <block id="91fd94b5750743b0b4db66d235c0cab9" category="list-text">Per visualizzare tutti i cluster aggiunti, selezionare *ONTAP Clusters*.</block>
-  <block id="784f9d2e91aebe7dc2a98209e667372a" category="paragraph">Quando si fa clic sul nome del cluster, tutte le SVM che fanno parte del cluster vengono visualizzate nella sezione Storage Virtual Machines (macchine virtuali di storage).</block>
   <block id="98670eb8cc95dd053ed921df2975cefe" category="list-text">Nell'elenco Storage Connections (connessioni storage), individuare la colonna Controller License (licenza controller).</block>
   <block id="56ea331cb0dea9dc3bddc3e0e2f3ef88" category="paragraph">La colonna Controller License (licenza controller) visualizza il seguente stato:</block>
-  <block id="2522d4d4da08f9de2686d2c18e41a94b" category="list-text"><block ref="da9849daa2aa04218f87948a7256713b" category="inline-image-macro-rx" type="image"></block> Indica che una licenza della suite SnapManager è installata su un sistema di storage primario FAS o AFF.</block>
-  <block id="3064686d0324adfa86cb183026ea8a66" category="list-text"><block ref="355b5886443669e7ad5ff1741a77218f" category="inline-image-macro-rx" type="image"></block> Indica che la licenza della suite SnapManager non è installata su un sistema di storage primario FAS o AFF.</block>
   <block id="a909f2df296012a51dc7da77f9e20dc6" category="list-text">Non applicabile indica che una licenza della suite SnapManager non è applicabile perché lo storage controller si trova su piattaforme di storage Cloud Volumes ONTAP, ONTAP Select o secondarie.</block>
-  <block id="3991b99f14bb81b2f89217b235be9e25" category="section-title">Identificare le licenze installate sul controller</block>
   <block id="6709a231567d24784eb3e160f2720365" category="paragraph">È possibile utilizzare la riga di comando ONTAP per visualizzare tutte le licenze installate sul controller. L'utente deve essere un amministratore del cluster nel sistema FAS o AFF.</block>
   <block id="e7590fb47d0f1f083a0a8a323aa643a0" category="admonition">La licenza basata su controller standard SnapCenter viene visualizzata come licenza SnapManagerSuite sul controller.</block>
   <block id="9865599458fea2a88fc4f94d29ab5c4e" category="list-text">Immettere il comando License show, quindi visualizzare l'output per determinare se la licenza SnapManagerSuite è installata.</block>
   <block id="5b12cbd18ef5bbd432e4411b45e422ad" category="paragraph">Nell'esempio, la licenza SnapManagerSuite è installata, pertanto non sono richieste ulteriori azioni di licenza SnapCenter.</block>
-  <block id="9c665690c697cc93e5a897a8a63d25c2" category="section-title">Recuperare il numero di serie del controller</block>
   <block id="aa9f3e3dd8188fb5cf1d9979b4a7a787" category="paragraph">Per recuperare il numero di serie della licenza basata su controller, è necessario disporre del numero di serie del controller. È possibile recuperare il numero di serie del controller utilizzando la riga di comando ONTAP. L'utente deve essere un amministratore del cluster nel sistema FAS o AFF.</block>
   <block id="ed996e97427b9382e039c0a5dde5d493" category="list-text">Accedere al controller utilizzando la riga di comando ONTAP.</block>
   <block id="1220394f5402b4332338e11150062d91" category="list-text">Immettere il comando show -instance del sistema, quindi esaminare l'output per individuare il numero di serie del controller.</block>
   <block id="065b83de49a875bb4bd71dbe16fad428" category="list-text">Annotare i numeri di serie.</block>
-  <block id="8903a54a74657bc9f41f9375ea9d6adc" category="section-title">Recuperare il numero di serie della licenza basata su controller</block>
   <block id="da68fe81ae35bfda8d512b213d4ea64f" category="paragraph">Se si utilizza lo storage FAS o AFF, è possibile recuperare la licenza basata su controller SnapCenter dal sito di supporto NetApp prima di poterla installare utilizzando la riga di comando ONTAP.</block>
   <block id="315713e21026e04eaaa2b9a3821e4c3d" category="paragraph">Se non si inseriscono credenziali valide, non vengono restituite informazioni per la ricerca.</block>
   <block id="253fa4a7008b4934e4b20001065ef254" category="list-text">Il numero di serie del controller dovrebbe essere disponibile.</block>
-  <block id="371319a0c9817abb98eea29d4567a795" category="list-text">Nell'area Selection Criteria (Criteri di selezione), assicurarsi che sia selezionato Serial Number (numero di serie) (situato sul retro dell'unità), inserire il numero di serie del controller, quindi fare clic su *Go!* (Vai).</block>
-  <block id="d9996bb23744ed1a95dc297c99d45d4d" category="image-alt">nss controller license select (selezione licenza controller nss)</block>
   <block id="b5ddaee766816307a016e7736f50313d" category="paragraph">Viene visualizzato un elenco di licenze per il controller specificato.</block>
   <block id="5da6f07d19afc1937b1b5b064152d98e" category="list-text">Individuare e registrare la licenza di SnapCenter o SnapManagerSuite.</block>
-  <block id="f11c7003376367fce75352e6129d04ca" category="section-title">Aggiungere una licenza basata su controller</block>
   <block id="9c53e7ba342b700373ad570a7701ac93" category="paragraph">È possibile utilizzare la riga di comando di ONTAP per aggiungere una licenza basata su controller SnapCenter quando si utilizzano sistemi FAS o AFF e si dispone di una licenza standard o SnapManagerSuite di SnapCenter.</block>
   <block id="8109f2b1a2b4fcb7f972be2b07c29c46" category="list-text">L'utente deve essere un amministratore del cluster nel sistema FAS o AFF.</block>
   <block id="9a935baf19dae6c50cae12b831745abd" category="list-text">È necessario disporre della licenza standard o SnapManagerSuite di SnapCenter.</block>
@@ -6123,7 +6048,6 @@
   <block id="a9109f87be4f882e4af7256b03cf8603" category="paragraph"><block ref="bfcb87c76ba89e6289c2a3081ebff6b3" prefix="" category="inline-code"></block></block>
   <block id="f19a479c9a38f158a358148b2b6e17cc" category="paragraph">Questo comando è disponibile a livello di privilegio admin.</block>
   <block id="a138b0f06f247274d2e4ba8de6e7bf8d" category="list-text">Verificare che la licenza SnapManagerSuite sia installata:</block>
-  <block id="a2e769316816cc255f9f37fbed415c69" category="section-title">Rimuovere la licenza di prova</block>
   <block id="f01f22cfc141e64ad20b64a9b3f2ac85" category="paragraph">Se si utilizza una licenza standard SnapCenter basata su controller e si deve rimuovere la licenza di prova basata su capacità (numero di serie che termina con "`50`"), utilizzare i comandi MySQL per rimuovere manualmente la licenza di prova. La licenza di prova non può essere eliminata utilizzando l'interfaccia grafica di SnapCenter.</block>
   <block id="87d0fa08c99bcc9a194b85ddcbe3da26" category="admonition">La rimozione manuale di una licenza di prova è necessaria solo se si utilizza una licenza basata su controller standard SnapCenter. Se si è acquistata una licenza basata sulla capacità standard di SnapCenter e la si è aggiunta nella GUI di SnapCenter, la licenza di prova viene sovrascritta automaticamente.</block>
   <block id="68dae2573ac7874d6dd234af4fa4c752" category="list-text">Sul server SnapCenter, aprire una finestra PowerShell per reimpostare la password MySQL.</block>
@@ -8073,4 +7997,131 @@
   <block id="75b8e448161fa30feba883267dc81521" category="sidebar">Eseguire il backup utilizzando i comandi UNIX</block>
   <block id="de148ec1fc3c9bb7b03f1506761bed93" category="sidebar">Visualizzare i backup</block>
   <block id="020a36deb114af1bb518c70d5975e940" category="sidebar">Creare gruppi di risorse</block>
+  <block id="0a02bf5b6e4ef63d70216baaf241dd57" category="paragraph">L'utente deve disporre sia del gruppo di risorse che dei privilegi di backup.</block>
+  <block id="476db1bd23910410216ee3e35ccd94a9" category="section-title">Fase 1: Aggiungere e configurare le credenziali</block>
+  <block id="8471bcaa60af0da808996bbee1cb49ed" category="paragraph">Modalità di autenticazione</block>
+  <block id="b814c14851890120c8936eb5b4e76601" category="paragraph">Istanza di SQL Server</block>
+  <block id="57dec0d5fea8ca9066aa74005656dde3" category="section-title">Fase 2: Configurare le istanze</block>
+  <block id="dddaf244cf1e3908c97cc243765422db" category="summary">Vengono fornite istruzioni per l'installazione del server SnapCenter per Microsoft SQL Server.</block>
+  <block id="5bb995f2cea5f09b3870d6cba0a2bff4" category="doc">Installare il server SnapCenter per Microsoft SQL Server</block>
+  <block id="696fdc5b81985319a8afbf8c7c554de1" category="paragraph">Fornisce una serie di istruzioni di installazione per l'installazione del server SnapCenter per Microsoft SQL Server.</block>
+  <block id="44d77fb23ef94aa2e99acffb06349cce" category="section-title">Fase 1: Scaricare e installare il server SnapCenter</block>
+  <block id="182fe557d952dd099523bf0f0a12a03d" category="section-title">Fase 2: Accedere a SnapCenter</block>
+  <block id="6dbb525493b617ed15acb54f48a1fb80" category="section-title">Fase 3: Aggiunta di una licenza basata su controller standard SnapCenter</block>
+  <block id="1e6838af3ca39fb21a3ce673d779549e" category="section-title">Fase 4: Aggiunta di una licenza SnapCenter basata sulla capacità</block>
+  <block id="a1e54ab14313eddc39c36f7ae4c3bdbf" category="section-title">Fase 5: Configurare le connessioni del sistema di storage</block>
+  <block id="e7080d37366699598c6a93289cf833a8" category="summary">Fornisce istruzioni per l'installazione del plug-in SnapCenter per Microsoft SQL Server.</block>
+  <block id="665256d7cf5062280fa2126edee4e9ed" category="paragraph">Fornisce una serie di istruzioni di installazione per il plug-in SnapCenter per Microsoft SQL Server.</block>
+  <block id="13c41a91e51556266f1446c3f3118575" category="section-title">Fase 1: Impostare le credenziali Run as per installare il plug-in per Microsoft SQL Server</block>
+  <block id="50e45622cbe6ba6b72a9cba939e77623" category="section-title">Fase 2: Aggiungere un host e installare il plug-in per Microsoft SQL Server</block>
+  <block id="3f205e124554b1be0d5f3a4955ed598c" category="paragraph">Il valore predefinito è false.</block>
+  <block id="398199fedb54e43a278fa46313e8a350" category="section-title">Fase 1: Creazione del nome della policy</block>
+  <block id="efb5373e3d8e2817008f63857d38a814" category="section-title">Fase 2: Configurare le opzioni di backup</block>
+  <block id="f7b8f416ca34a425d97e1cba3100233c" category="list-text">Scegliere il tipo di backup</block>
+  <block id="c4dee4ab1e265b9beacb9e140fafa516" category="open-title">Backup completo e backup dei log</block>
+  <block id="7e26a626a8bd9210daa716e7391b1a91" category="paragraph">Eseguire il backup dei file di database e dei log delle transazioni e troncare i log delle transazioni.</block>
+  <block id="daf1071588d67be46c2b3881de2b7f3e" category="open-title">Backup completo</block>
+  <block id="a06cb63b4e5676ff4993e87c5a096590" category="paragraph">Eseguire il backup dei file di database.</block>
+  <block id="4357e1f197bec05bc87b0ef0557cd533" category="open-title">Backup del registro</block>
+  <block id="9bc97b084411adbb231ca53ca80640b7" category="paragraph">Eseguire il backup dei registri delle transazioni. . Selezionare *Log backup*.</block>
+  <block id="197904dc82a19f6818f66048a61e90f9" category="open-title">Backup solo copia</block>
+  <block id="17d5127f9f01a5ee99467658118a5e9b" category="list-text">Backup solo su replica di backup preferita.</block>
+  <block id="c61f65bb5aa14eca9140c3d0e7ece927" category="list-text">Selezionare le repliche per il backup.</block>
+  <block id="868b11998351ef690a54ffedfc194731" category="list-text">Selezionare la priorità di backup (priorità di backup minima e massima)</block>
+  <block id="a9e3835459894cca73ddb217d50af0db" category="list-text">Pianificare la frequenza di backup per questa policy. Specificare il tipo di pianificazione selezionando *on demand*, *Hourly*, *Daily*, *Weekly* o *Monthly*.</block>
+  <block id="016bcd6d9710c9d2dde84a3ff020b0de" category="paragraph">È possibile selezionare un solo tipo di pianificazione per un criterio.</block>
+  <block id="ef077dad77fac08deaf5fe61aced7bc3" category="section-title">Fase 3: Configurare le impostazioni di conservazione</block>
+  <block id="d8d914bba3878c80c4a43efb4e1ce72c" category="open-title">Numero specifico di copie</block>
+  <block id="5a0290e9f5b4a432c42379432ee6f5c8" category="paragraph">Conserva solo un numero specifico di copie Snapshot.</block>
+  <block id="619f22faf39c2dfe9a11af29647bb1a6" category="list-text">Selezionare l'opzione *Mantieni backup registro applicabili agli ultimi giorni &lt;number&gt;* e specificare il numero di giorni da conservare. Se ci si avvicina a questo limite, si consiglia di eliminare le copie meno recenti.</block>
+  <block id="fe9e179b8597c5b1e7f1e2ff0644a5c8" category="open-title">Numero specifico di giorni</block>
+  <block id="82c2224d099110596a9863d056598afe" category="paragraph">Conservare le copie di backup per un numero specifico di giorni.</block>
+  <block id="805b73e03f8c3c7c7a8238ed9766dee3" category="list-text">Specificare il numero totale di copie Snapshot da conservare</block>
+  <block id="ffe60c98392393713d4e1d365c27b6be" category="list-text">Per specificare il numero di copie Snapshot da conservare, selezionare *copie Snapshot totali da conservare*.</block>
+  <block id="d4f0bf88ec19106300653daff553435f" category="list-text">Tempo di conservazione delle copie Snapshot</block>
+  <block id="7fcb4d3ce02337b7e14c71c970e6aa6e" category="list-text">Per specificare il numero di copie Snapshot da conservare, selezionare *copie Snapshot totali da conservare*. Se il numero di copie Snapshot supera il numero specificato, le copie Snapshot vengono eliminate prima con le copie meno recenti.</block>
+  <block id="6618a5f84aa25633e669aa723e59a0cd" category="list-text">Per specificare il numero di giorni per i quali si desidera conservare le copie Snapshot prima di eliminarle, selezionare *Mantieni copie Snapshot per*.</block>
+  <block id="92ac5fc0212c94ee50e6dc85913caeec" category="example-title">Mostra esempio</block>
+  <block id="8047dd542f0833c625160d18deaef831" category="paragraph">Set-SmPolicy -policyName 'newpol' -PolicyType 'Backup' -PluginPolicyType 'SCSQL' -sqlbackuptype 'FullBackupAndLogBackup' -RetentionSettings @{BackupType='DATA';ScheduleType='Hourly';RetentionCount=}@{ScheduleType='Hourly Count';Retenth2} ScheduleType='Hourly Count';None=Hourly Count'Hourly='2';Conteggio@{}</block>
+  <block id="b1cf83519efa64342d0b96985ded3691" category="section-title">Fase 4: Configurare le impostazioni di replica</block>
+  <block id="df5624cba097e4a1613f2162cfe02d72" category="open-title">Aggiornare SnapMirror</block>
+  <block id="4fbf861fa73d7c46a9d919de9dba7f88" category="paragraph">Aggiornare SnapMirror dopo aver creato una copia Snapshot locale.</block>
+  <block id="721dcaba6ffe06898a1264f811fd7874" category="open-title">Aggiornare SnapVault</block>
+  <block id="aafae6ead4b01f0afa9e2d2dcfc5ecdd" category="paragraph">Aggiornare SnapVault dopo aver creato una copia Snapshot.</block>
+  <block id="c174e73377b0caee145d55a594cd4122" category="open-title">Etichetta policy secondaria</block>
+  <block id="103ff4d651f40a22f8ac13b7d439054e" category="open-title">Numero tentativi di errore</block>
+  <block id="d9179dd8d5b7e66714a9152a60aff94d" category="section-title">Fase 5: Configurare le impostazioni dello script</block>
+  <block id="a6e367864d05c1235a3dc068e29fb052" category="section-title">Fase 6: Configurare le impostazioni di verifica</block>
+  <block id="e11807f1f1cff5721f85802ddac261ed" category="list-text">Elimina tutti i messaggi informativi (NESSUN INFOMSGS)</block>
+  <block id="79418e51dfe3ef30c9d30317f30d19e2" category="section-title">Fase 7: Riepilogo</block>
+  <block id="96ccca164f6b65c860546bba66a6485a" category="summary">Vengono fornite istruzioni per la preparazione dell'installazione del server SnapCenter e del plug-in SnapCenter per Microsoft SQL Server.</block>
+  <block id="bb7367ec62fb74511977df150181bc7f" category="doc">Preparazione per l'installazione del server e del plug-in SnapCenter</block>
+  <block id="63408836354c40518fc610de2ff61aef" category="paragraph">Fornisce una serie di istruzioni per la preparazione dell'installazione del server SnapCenter e del plug-in SnapCenter per Microsoft SQL Server.</block>
+  <block id="7527dcedb498a9e111f7eb26b4f075a6" category="section-title">Requisiti di licenza</block>
+  <block id="7a98b5f499da77fa6e09b98a638328d7" category="section-title">Requisiti di host e porte</block>
+  <block id="1cd526ed887ba66c61f02b843ef02d9d" category="paragraph">Per i requisiti minimi di ONTAP e del plug-in dell'applicazione, vedere<block ref="895e9fc4fedf805e54b700a772e16c16" category="inline-link-rx"></block>.</block>
+  <block id="cfcb453ff70ad933cab89769866a7ca8" category="paragraph">Vedere<block ref="895e9fc4fedf805e54b700a772e16c16" category="inline-link-rx"></block></block>
+  <block id="bc6cdf099cec9fa3dce7fb43c644e659" category="section-title">Requisiti del plug-in SnapCenter per Microsoft SQL Server</block>
+  <block id="aa829ddf1acbdd2a8aa6a61635c33dec" category="inline-link-macro">Importare i backup archiviati</block>
+  <block id="b06af5128852d56366a94b0a3584c1a6" category="paragraph">Se si utilizza SnapManager per Microsoft SQL Server e si desidera importare i dati da SnapManager per Microsoft SQL Server a SnapCenter, vedere <block ref="0079f46f6850618db9fdf32f5f6051e0" category="inline-link-macro-rx"></block></block>
+  <block id="96a63fe0cf1de573b75ba5f458cbdc60" category="doc">Creare gruppi di risorse e allegare policy in SnapCenter</block>
+  <block id="3b6d3b427a92116014d4ee868e0f04ba" category="paragraph">Un gruppo di risorse è il container al quale è necessario aggiungere risorse di cui si desidera eseguire il backup e la protezione. Consente di eseguire contemporaneamente il backup di tutti i dati associati a una determinata applicazione e necessari per qualsiasi lavoro di protezione dei dati. È inoltre necessario associare uno o più criteri al gruppo di risorse per definire il tipo di lavoro di protezione dei dati che si desidera eseguire.</block>
+  <block id="0b5045b3b137ebb25cf08b5081075426" category="list-text">Nel riquadro di spostamento di sinistra, selezionare *risorse*, quindi selezionare il plug-in appropriato dall'elenco.</block>
+  <block id="b68b243f9420806e3cfb840322caf2eb" category="list-text">Nella pagina risorse, selezionare nuovo gruppo di risorse.</block>
+  <block id="2ace8412659382e8d9b1bc3d644b1428" category="paragraph">Nota: Il nome del gruppo di risorse non deve superare i 250 caratteri.</block>
+  <block id="4cf0a65bb5f9d16da67277436248fba9" category="list-text">Selezionare le risorse dalla sezione *risorse disponibili*, quindi selezionare la freccia destra per spostarle nella sezione *risorse selezionate*.</block>
+  <block id="7bc2103c2a80cd91e9a026c0f2b3f943" category="list-text">Selezionare la freccia Backup per impostare opzioni di backup aggiuntive:</block>
+  <block id="6ab7eeea8e6b1dcd3c8360b245f0e3c0" category="inline-image-macro">Una schermata delle opzioni per il backup dei gruppi di coerenza: Urgente, medio o rilassato.</block>
+  <block id="072de5e2138004f9a67883cb0ff2aaa6" category="paragraph"><block ref="072de5e2138004f9a67883cb0ff2aaa6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e92d78d72bbcff05469cd98c282ac8c4" category="list-text">Selezionare la freccia script e immettere i comandi pre e post per le operazioni di quiete, copia Snapshot e senza richieste. In caso di errore, è anche possibile inserire i pre-comandi da eseguire prima di uscire.</block>
+  <block id="3328b0dbde4c99683e19eca586842ffb" category="list-text">Selezionare la freccia Custom Configurations (configurazioni personalizzate) e immettere le coppie chiave-valore personalizzate richieste per tutte le operazioni di protezione dei dati che utilizzano questa risorsa.</block>
+  <block id="dfa18f81ec763693ffdac89624763ae3" category="list-text">Selezionare la freccia *Snapshot Copy Tool* per selezionare lo strumento per creare le copie Snapshot:</block>
+  <block id="7f368ffa9ab4869382c31a28f17f3a4a" category="inline-image-macro">Un'icona più</block>
+  <block id="f79b4ba47e778727c1290b36487ea0bc" category="admonition">Puoi anche creare una policy selezionando *<block ref="a55421dd685609006a21f2507444357f" category="inline-image-macro-rx" type="image"></block>*.</block>
+  <block id="b11a42908bee80055dfed2bb0e9a583a" category="list-text">Nella colonna *Configura pianificazioni*, selezionare *<block ref="a55421dd685609006a21f2507444357f" category="inline-image-macro-rx" type="image"></block>* per la policy che si desidera configurare.</block>
+  <block id="729d9de2082bbc8f839869a30daadc5d" category="list-text">Nella finestra di dialogo Add schedules for policy _policy_name_, configurare la pianificazione e selezionare OK.</block>
+  <block id="f389a38ece1c258dbc71da8826870236" category="paragraph">Dove policy_name è il nome del criterio selezionato.</block>
+  <block id="8417b61ea6ac680285a40b7f679829a2" category="list-text">Dall'elenco a discesa *Email preference* (Preferenze email) della pagina Notification (notifica), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.</block>
+  <block id="7444cb400c788a3d3aad71fb264fbbee" category="list-text">Esaminare il riepilogo, quindi selezionare *fine*.</block>
+  <block id="135b308ed83c53f1516b7c754566d1c4" category="list-title">Prima di iniziare</block>
+  <block id="be2d786365162f9949969e2f176ef13a" category="inline-link-macro">creazione di un plug-in personalizzato per l'applicazione</block>
+  <block id="86de8a90b3fba9ddc4880b8903987555" category="list-text">Devi avere <block ref="4ad0bd1144546248adc0fb1c490ceec4" category="inline-link-macro-rx"></block>.</block>
+  <block id="b828f6db4e08909e879dfbf229208eff" category="list-text">Nella pagina risorse, selezionare *Aggiungi risorsa*.</block>
+  <block id="20fc40c342831a6dee50cd66efb74566" category="list-text">Nella pagina fornire footprint dello storage, selezionare un sistema storage e scegliere uno o più volumi, LUN e qtree, quindi selezionare *Salva*.</block>
+  <block id="1e5544d55f6c9334a30e6a4bef8c3c4a" category="inline-image-macro">Icona più</block>
+  <block id="a28f52bcf0c820558e017ed65d61bbc4" category="paragraph">Facoltativo: Selezionare <block ref="0f5cf3219ae11ea795d8e8abf4dbc7f0" category="inline-image-macro-rx" type="image"></block> Per aggiungere più volumi, LUN e qtree da altri sistemi storage.</block>
+  <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">Risultato</block>
+  <block id="da13ae3255e491cec106772af9fdae44" category="paragraph">Una licenza di capacità ha le seguenti caratteristiche:</block>
+  <block id="f5dfa5a7bae196d1dd8c957d9f4d6ee5" category="paragraph">SnapCenter calcola automaticamente l'utilizzo della capacità una volta al giorno a mezzanotte sullo storage ONTAP Select e Cloud Volumes ONTAP gestito. Quando si utilizza una licenza con capacità standard, SnapCenter calcola la capacità inutilizzata deducendo la capacità utilizzata su tutti i volumi dalla capacità totale concessa in licenza. Se la capacità utilizzata supera la capacità concessa in licenza, viene visualizzato un avviso di utilizzo eccessivo nella dashboard di SnapCenter. Se sono state configurate soglie di capacità e notifiche in SnapCenter, viene inviata un'e-mail quando la capacità utilizzata raggiunge la soglia specificata.</block>
+  <block id="2406c708606f0c3c933decdd65dc3b7d" category="section-title">Fase 1: Calcolo dei requisiti di capacità</block>
+  <block id="44cdaaa6b20a4237e33563c8be0bf929" category="section-title">Fase 2: Recuperare il numero di serie della licenza basata sulla capacità</block>
+  <block id="9340114ddf8bf8ff75303afd847a3076" category="list-text">Accedere a.<block ref="1850de052c61829b534b07ba1a2ca402" category="inline-link-rx"></block>.</block>
+  <block id="c6faeb7fe853ef1d638674945ae59142" category="image-alt">Una schermata dell'interfaccia utente per la selezione della licenza con il menu a discesa numero di serie e licenze evidenziato.</block>
+  <block id="765c7784df072a40de94af7161fbb973" category="list-text">Digitare il nome della società, quindi selezionare *Go!*.</block>
+  <block id="ef8acdd4fcda9cad2a21f3a15c796340" category="section-title">Fase 3: Generare un file di licenza NetApp</block>
+  <block id="97ccd9ecd4ac0cb4ebb4d3d991db3790" category="paragraph">Se non si desidera inserire le credenziali del sito di supporto NetApp e il numero di serie della licenza SnapCenter nell'interfaccia grafica di SnapCenter o se non si dispone dell'accesso a Internet al sito di supporto NetApp da SnapCenter, è possibile generare un file di licenza NetApp (NLF). È quindi possibile scaricare e memorizzare il file in una posizione accessibile dall'host SnapCenter.</block>
+  <block id="af8501c4af7bf18d1d41ad63b494028d" category="list-text">Leggere e accettare la direttiva sulla privacy dei dati di NetApp, quindi selezionare *Invia*.</block>
+  <block id="a70eeba6b0a5bfca6c7904fd0edc9fd2" category="section-title">Fase 4: Aggiunta di una licenza basata sulla capacità</block>
+  <block id="a79d31012252514c1817004ac27f6c78" category="list-text">Nel riquadro di navigazione a sinistra, selezionare *Impostazioni*.</block>
+  <block id="a646fca044aab578f560ca4fc105e766" category="list-text">Nella pagina Impostazioni, selezionare *Software*.</block>
+  <block id="494d74fe2d3b6e8b71d672a1143d6aa0" category="list-text">Nella sezione License (licenza) della pagina Software, selezionare *Add* (<block ref="a55421dd685609006a21f2507444357f" category="inline-image-macro-rx" type="image"></block>).</block>
+  <block id="91dd66dbbc7bcb9ff2accc62e548e2fa" category="list-text">Selezionare *Apri*.</block>
+  <block id="cd9fa57ea794c74666a3c676c5f7a179" category="list-text">Per configurare il server SMTP per le notifiche e-mail, selezionare *Impostazioni* &gt; *Impostazioni globali* &gt; *Impostazioni server di notifica*, quindi immettere i seguenti dettagli:</block>
+  <block id="ae309cefe1783b2d190dcaf0c63c7f17" category="list-text">Se si desidera che i messaggi del sistema di gestione degli eventi (EMS) vengano inviati al sistema di storage syslog o che i messaggi AutoSupport vengano inviati al sistema di storage per le operazioni non riuscite, selezionare le caselle di controllo appropriate. Si consiglia di attivare AutoSupport per risolvere eventuali problemi.</block>
+  <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">Selezionare *Avanti*.</block>
+  <block id="19a8e13fe92c770e7ed404e67e6bec99" category="section-title">Fase 1: Verificare che la licenza della suite SnapManager sia installata</block>
+  <block id="cc9c449ada243c7f7945df60c3bb511a" category="list-text">Nel riquadro di navigazione a sinistra, selezionare *Storage Systems*.</block>
+  <block id="d232915b5e459729c2ebb05cce4351c3" category="paragraph">Quando si seleziona il nome del cluster, tutte le SVM che fanno parte del cluster vengono visualizzate nella sezione Storage Virtual Machines (macchine virtuali di storage).</block>
+  <block id="b334c2fd16b2dbb1653525b0da09940d" category="inline-image-macro">Icona di un segno di spunta</block>
+  <block id="b708e8602f17540d711c077ef6ce5bb6" category="list-text"><block ref="1b6b7d2df953b943aed63061cd428e2b" category="inline-image-macro-rx" type="image"></block> Indica che una licenza della suite SnapManager è installata su un sistema di storage primario FAS o AFF.</block>
+  <block id="8e9f59a7ba19ac78a77252b5cc8530f6" category="inline-image-macro">Icona di annullamento</block>
+  <block id="72acec0d06c1d26aeb0b87907c970c31" category="list-text"><block ref="1ca20f925112adf63235e58f0e4483cd" category="inline-image-macro-rx" type="image"></block> Indica che la licenza della suite SnapManager non è installata su un sistema di storage primario FAS o AFF.</block>
+  <block id="778623bf565f3d8f537019c7e81b0948" category="section-title">Fase 2: Identificare le licenze installate sul controller</block>
+  <block id="587b796170a9abac4701cd8aa1bb38cb" category="example-title">Output di esempio</block>
+  <block id="09bfdac33144afac4f96f313740dc959" category="section-title">Fase 3: Recuperare il numero di serie del controller</block>
+  <block id="4fb6996a4b0fc33cbed31ac896875422" category="section-title">Fase 4: Recuperare il numero di serie della licenza basata su controller</block>
+  <block id="681132950ecc3ff0338e2bc9f5253c4e" category="list-text">Nell'area Selection Criteria (Criteri di selezione), assicurarsi che sia selezionato Serial Number (numero di serie) (situato sul retro dell'unità), inserire il numero di serie del controller, quindi selezionare *Go!* (Vai).</block>
+  <block id="6c0673b42ebb5475d507b9bee432a6e1" category="image-alt">Schermata dei criteri di selezione e dell'immissione del numero di serie.</block>
+  <block id="e54115ab5aedb070ef9c763b003e67f1" category="section-title">Fase 5: Aggiungere una licenza basata su controller</block>
+  <block id="392e651b70e91641288713738f526ce0" category="section-title">Fase 6: Rimuovere la licenza di prova</block>
 </blocks>

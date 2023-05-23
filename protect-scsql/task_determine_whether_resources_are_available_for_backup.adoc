@@ -13,8 +13,7 @@ summary: 'Le risorse sono i database, le istanze dell"applicazione, i gruppi di 
 [role="lead"]
 Le risorse sono i database, le istanze dell'applicazione, i gruppi di disponibilità e i componenti simili gestiti dai plug-in installati. È possibile aggiungere tali risorse ai gruppi di risorse in modo da poter eseguire lavori di protezione dei dati, ma prima occorre identificare le risorse disponibili. La determinazione delle risorse disponibili verifica inoltre che l'installazione del plug-in sia stata completata correttamente.
 
-*Cosa ti serve*
-
+.Di cosa hai bisogno
 * È necessario aver già completato attività come l'installazione del server SnapCenter, l'aggiunta di host, la creazione di connessioni al sistema di storage e l'aggiunta di credenziali.
 * Per rilevare i database Microsoft SQL, è necessario soddisfare una delle seguenti condizioni.
 +
@@ -30,8 +29,7 @@ Per ulteriori informazioni, vedere https://docs.netapp.com/us-en/sc-plugin-vmwar
 * Se l'host viene aggiunto con gMSA e gMSA dispone dei privilegi di accesso e amministratore di sistema, gMSA verrà utilizzato per connettersi all'istanza SQL.
 
 
-*A proposito di questa attività*
-
+.A proposito di questa attività
 Non è possibile eseguire il backup dei database se l'opzione *Stato generale* nella pagina Dettagli è impostata su non disponibile per il backup. L'opzione *Stato generale* è impostata su non disponibile per il backup quando si verifica una delle seguenti condizioni:
 
 * I database non si trovano su un LUN NetApp.
@@ -48,8 +46,7 @@ Ad esempio, se un utente ha solo accesso di visualizzazione al database, i file 
 
 NOTE: SnapCenter può eseguire il backup solo del database primario se si dispone di una configurazione del gruppo di disponibilità nell'edizione standard di SQL Server.
 
-*Fasi*
-
+.Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina risorse, selezionare *Database*, *Instance* o *Availability Group* dall'elenco a discesa *View*.
 +
@@ -81,4 +78,5 @@ Non è possibile eseguire operazioni di protezione dei dati su un database su un
 
 NOTE: Se è stata attivata un'autenticazione SQL durante la configurazione delle credenziali, l'istanza o il database rilevato viene visualizzato con un'icona a forma di lucchetto rosso. Se viene visualizzata l'icona del lucchetto, è necessario specificare le credenziali dell'istanza o del database per aggiungere correttamente l'istanza o il database a un gruppo di risorse.
 
-Dopo che l'amministratore di SnapCenter ha assegnato le risorse a un utente RBAC, l'utente RBAC deve effettuare l'accesso e fare clic su *Aggiorna risorse* per visualizzare l'ultimo *Stato complessivo* delle risorse.
+. Dopo che l'amministratore di SnapCenter ha assegnato le risorse a un utente RBAC, l'utente RBAC deve effettuare l'accesso e fare clic su *Aggiorna risorse* per visualizzare l'ultimo *Stato complessivo* delle risorse.
+

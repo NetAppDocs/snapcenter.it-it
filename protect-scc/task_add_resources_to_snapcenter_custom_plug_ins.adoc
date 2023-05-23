@@ -13,24 +13,18 @@ summary: 'È necessario aggiungere le risorse di cui si desidera eseguire il bac
 [role="lead"]
 È necessario aggiungere le risorse di cui si desidera eseguire il backup o la clonazione. A seconda dell'ambiente in uso, le risorse possono essere istanze di database o raccolte di cui si desidera eseguire il backup o la clonazione.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 * È necessario completare attività come l'installazione del server SnapCenter, l'aggiunta di host, la creazione di connessioni al sistema di storage e l'aggiunta di credenziali.
-* È necessario aver creato un plug-in personalizzato.
-+
-link:concept_develop_a_plug_in_for_your_application.html["Sviluppare un plug-in per l'applicazione"]
-
+* Devi avere link:concept_develop_a_plug_in_for_your_application.html["creazione di un plug-in personalizzato per l'applicazione"].
 * I plug-in devono essere stati caricati sul server SnapCenter.
 
 
-*A proposito di questa attività*
-
+.A proposito di questa attività
 È inoltre possibile aggiungere risorse per applicazioni MySQL e DB2. Questi plug-in possono essere scaricati da https://automationstore.netapp.com/home.shtml["Storage Automation Store di NetApp"].
 
-*Fasi*
-
-. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
-. Nella pagina risorse, fare clic su *Aggiungi risorsa*.
+.Fasi
+. Nel riquadro di spostamento di sinistra, selezionare *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina risorse, selezionare *Aggiungi risorsa*.
 . Nella pagina fornire dettagli sulle risorse, eseguire le seguenti operazioni:
 +
 |===
@@ -73,9 +67,9 @@ Percorsi di montaggio
 Immettere i percorsi di montaggio in cui è montata la risorsa. Questo è valido solo per un host Windows.
 
 |===
-. Nella pagina fornire footprint dello storage, selezionare un sistema storage e scegliere uno o più volumi, LUN e qtree, quindi fare clic su *Salva*.
+. Nella pagina fornire footprint dello storage, selezionare un sistema storage e scegliere uno o più volumi, LUN e qtree, quindi selezionare *Salva*.
 +
-Facoltativo: Fare clic su image:../media/add_policy_from_resourcegroup.gif[""] Per aggiungere più volumi, LUN e qtree da altri sistemi storage.
+Facoltativo: Selezionare image:../media/add_policy_from_resourcegroup.gif["Icona più"] Per aggiungere più volumi, LUN e qtree da altri sistemi storage.
 
 +
 
@@ -95,18 +89,16 @@ NOTE: Assicurarsi che LE parole HOST e PORT siano in maiuscolo.
 +
 image::../media/resource_settings.gif[impostazioni delle risorse]
 
-. Esaminare il riepilogo, quindi fare clic su *fine*.
+. Esaminare il riepilogo, quindi selezionare *fine*.
 
 
-*Risultato*
-
+.Risultato
 Le risorse vengono visualizzate insieme a informazioni quali tipo, nome host o cluster, criteri e gruppi di risorse associati e stato generale.
 
 
 IMPORTANT: È necessario aggiornare le risorse se i database vengono rinominati al di fuori di SnapCenter.
 
-*Al termine*
-
+.Al termine
 Se si desidera fornire l'accesso alle risorse ad altri utenti, l'amministratore di SnapCenter deve assegnare le risorse a tali utenti. In questo modo, gli utenti possono eseguire le azioni per le quali dispongono delle autorizzazioni per le risorse ad essi assegnate.
 
 Dopo aver aggiunto le risorse, è possibile modificarne i dettagli. Se a una risorsa plug-in personalizzata sono associati backup, non è possibile modificare i seguenti campi: Nome risorsa, tipo di risorsa e nome host.

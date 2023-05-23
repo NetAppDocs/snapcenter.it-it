@@ -4,19 +4,17 @@ sidebar: sidebar
 keywords:  
 summary: Un gruppo di risorse è il container al quale è necessario aggiungere risorse di cui si desidera eseguire il backup e la protezione. 
 ---
-= Creare gruppi di risorse e allegare policy
+= Creare gruppi di risorse e allegare policy in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
-[role="lead"]
-Un gruppo di risorse è il container al quale è necessario aggiungere risorse di cui si desidera eseguire il backup e la protezione. Un gruppo di risorse consente di eseguire contemporaneamente il backup di tutti i dati associati a una determinata applicazione. Per qualsiasi lavoro di protezione dei dati è necessario un gruppo di risorse. È inoltre necessario associare uno o più criteri al gruppo di risorse per definire il tipo di lavoro di protezione dei dati che si desidera eseguire.
+Un gruppo di risorse è il container al quale è necessario aggiungere risorse di cui si desidera eseguire il backup e la protezione. Consente di eseguire contemporaneamente il backup di tutti i dati associati a una determinata applicazione e necessari per qualsiasi lavoro di protezione dei dati. È inoltre necessario associare uno o più criteri al gruppo di risorse per definire il tipo di lavoro di protezione dei dati che si desidera eseguire.
 
-*Fasi*
-
-. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
-. Nella pagina risorse, fare clic su nuovo gruppo di risorse.
+.Fasi
+. Nel riquadro di spostamento di sinistra, selezionare *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina risorse, selezionare nuovo gruppo di risorse.
 . Nella pagina Name (Nome), eseguire le seguenti operazioni:
 +
 |===
@@ -28,8 +26,7 @@ Nome
  a| 
 Immettere un nome per il gruppo di risorse.
 
-
-NOTE: Il nome del gruppo di risorse non deve superare i 250 caratteri.
+Nota: Il nome del gruppo di risorse non deve superare i 250 caratteri.
 
 
 
@@ -54,10 +51,10 @@ Ad esempio, _customtext_resource group_policy_hostname o resource group_hostname
 +
 In questo modo è possibile filtrare le informazioni sullo schermo.
 
-. Selezionare le risorse dalla sezione *risorse disponibili*, quindi fare clic sulla freccia destra per spostarle nella sezione *risorse selezionate*.
+. Selezionare le risorse dalla sezione *risorse disponibili*, quindi selezionare la freccia destra per spostarle nella sezione *risorse selezionate*.
 . Facoltativo: Nella pagina Impostazioni applicazione, effettuare le seguenti operazioni:
 +
-.. Fare clic sulla freccia Backup per impostare opzioni di backup aggiuntive:
+.. Selezionare la freccia Backup per impostare opzioni di backup aggiuntive:
 +
 Abilitare il backup dei gruppi di coerenza ed eseguire le seguenti attività:
 
@@ -82,10 +79,10 @@ Selezionare questa opzione per evitare di forzare un punto di coerenza WAFL.
 
 |===
 +
-image:../media/application_settings.gif[""]
+image:../media/application_settings.gif["Una schermata delle opzioni per il backup dei gruppi di coerenza: Urgente, medio o rilassato."]
 
-.. Fare clic sulla freccia script e immettere i comandi pre e post per le operazioni di quiete, copia Snapshot e senza richieste. In caso di errore, è anche possibile inserire i pre-comandi da eseguire prima di uscire.
-.. Fare clic sulla freccia Custom Configurations (configurazioni personalizzate) e immettere le coppie chiave-valore personalizzate richieste per tutte le operazioni di protezione dei dati che utilizzano questa risorsa.
+.. Selezionare la freccia script e immettere i comandi pre e post per le operazioni di quiete, copia Snapshot e senza richieste. In caso di errore, è anche possibile inserire i pre-comandi da eseguire prima di uscire.
+.. Selezionare la freccia Custom Configurations (configurazioni personalizzate) e immettere le coppie chiave-valore personalizzate richieste per tutte le operazioni di protezione dei dati che utilizzano questa risorsa.
 +
 |===
 | Parametro | Impostazione | Descrizione 
@@ -141,7 +138,7 @@ Attiva la gestione dei log di archiviazione all'interno delle sottodirectory.
 Utilizzare questo parametro se i log di archiviazione si trovano nelle sottodirectory.
 
 |===
-.. Fare clic sulla freccia *Snapshot Copy Tool* per selezionare lo strumento per creare le copie Snapshot:
+.. Selezionare la freccia *Snapshot Copy Tool* per selezionare lo strumento per creare le copie Snapshot:
 +
 |===
 | Se vuoi... | Quindi... 
@@ -176,24 +173,24 @@ Selezionare Other (Altro), quindi immettere il comando da eseguire sull'host per
 .. Selezionare uno o più criteri dall'elenco a discesa.
 +
 
-NOTE: Puoi anche creare una policy facendo clic su *image:../media/add_policy_from_resourcegroup.gif[""]*.
+NOTE: Puoi anche creare una policy selezionando *image:../media/add_policy_from_resourcegroup.gif["Un'icona più"]*.
 
 +
 I criteri sono elencati nella sezione *Configura pianificazioni per i criteri selezionati*.
 
-.. Nella colonna *Configura pianificazioni*, fare clic su *image:../media/add_policy_from_resourcegroup.gif[""]* per la policy che si desidera configurare.
-.. Nella finestra di dialogo Add schedules for policy _policy_name_, configurare la pianificazione, quindi fare clic su OK.
+.. Nella colonna *Configura pianificazioni*, selezionare *image:../media/add_policy_from_resourcegroup.gif["Un'icona più"]* per la policy che si desidera configurare.
+.. Nella finestra di dialogo Add schedules for policy _policy_name_, configurare la pianificazione e selezionare OK.
 +
-Dove, policy_name è il nome del criterio selezionato.
+Dove policy_name è il nome del criterio selezionato.
 
 +
 Le pianificazioni configurate sono elencate nella colonna Applied Schedules (Pianificazioni applicate). Le pianificazioni di backup di terze parti non sono supportate quando si sovrappongono alle pianificazioni di backup di SnapCenter.
 
 
 
-. Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
+. Dall'elenco a discesa *Email preference* (Preferenze email) della pagina Notification (notifica), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
 +
 È inoltre necessario specificare gli indirizzi e-mail del mittente e del destinatario e l'oggetto dell'e-mail. Il server SMTP deve essere configurato in *Impostazioni* > *Impostazioni globali*.
 
-. Esaminare il riepilogo, quindi fare clic su *fine*.
+. Esaminare il riepilogo, quindi selezionare *fine*.
 

@@ -1,0 +1,52 @@
+---
+permalink: protect-scsql/task-install-snapcenter-plug-in-for-sql-server.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: 'Fornisce istruzioni per l"installazione del plug-in SnapCenter per Microsoft SQL Server.' 
+---
+= Installare il plug-in SnapCenter per Microsoft SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Fornisce una serie di istruzioni di installazione per il plug-in SnapCenter per Microsoft SQL Server.
+
+
+
+== Fase 1: Impostare le credenziali Run as per installare il plug-in per Microsoft SQL Server
+
+. Nel riquadro di sinistra, fare clic su *Impostazioni > credenziali > nuovo*.
+. Immettere le credenziali.
++
+Per un formato nome utente amministratore di dominio incorporato, utilizzare: _NetBIOS/<username>_ o _<username>@<domain>_ o _<DomainFQDN>/<username>_.
+
++
+Per un formato nome utente admin locale incorporato, utilizzare _<username>_.
+
+
+
+
+
+== Fase 2: Aggiungere un host e installare il plug-in per Microsoft SQL Server
+
+. Nel riquadro sinistro della GUI di SnapCenter, fare clic su *host > host gestiti > Aggiungi*.
+. Nella pagina host della procedura guidata, eseguire le seguenti operazioni:
++
+.. Host Type (tipo host): Selezionare il tipo di host Windows.
+.. Host name (Nome host): Utilizzare l'host SQL o specificare l'FQDN di un host Windows dedicato.
+.. Credenziali: Selezionare il nome della credenziale valido dell'host creato o creare nuove credenziali.
+
+
+. Nella sezione Seleziona plug-in da installare, selezionare *Microsoft SQL Server*.
+. Fare clic su *altre opzioni* per specificare i seguenti dettagli:
++
+.. Port (porta): Mantenere il numero di porta predefinito o specificare il numero di porta.
+.. Installation Path (percorso di installazione): Il percorso predefinito è _C:/Program Files/NetApp/SnapCenter_. È possibile personalizzare il percorso.
+.. Add all hosts in the cluster (Aggiungi tutti gli host nel cluster): Selezionare questa casella di controllo se si utilizza SQL in WSFC.
+.. Ignora controlli di preinstallazione: Selezionare questa casella di controllo se i plug-in sono già stati installati manualmente o non si desidera verificare se l'host soddisfa i requisiti per l'installazione del plug-in.
+
+
+. Fare clic su *Invia*.
+

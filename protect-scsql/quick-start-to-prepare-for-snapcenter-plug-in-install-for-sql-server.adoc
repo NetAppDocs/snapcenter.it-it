@@ -1,0 +1,206 @@
+---
+permalink: protect-scsql/quick-start-to-prepare-for-snapcenter-plug-in-install-for-sql-server.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: 'Vengono fornite istruzioni per la preparazione dell"installazione del server SnapCenter e del plug-in SnapCenter per Microsoft SQL Server.' 
+---
+= Preparazione per l'installazione del server e del plug-in SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Fornisce una serie di istruzioni per la preparazione dell'installazione del server SnapCenter e del plug-in SnapCenter per Microsoft SQL Server.
+
+
+
+== Requisiti di dominio e gruppo di lavoro
+
+Il server SnapCenter può essere installato su sistemi che si trovano in un dominio o in un gruppo di lavoro.
+
+Se si utilizza un dominio Active Directory, è necessario utilizzare un utente di dominio con diritti di amministratore locale. L'utente di dominio deve essere membro del gruppo Administrator locale sull'host Windows.
+
+Se si utilizzano gruppi di lavoro, è necessario utilizzare un account locale con diritti di amministratore locale.
+
+
+
+== Requisiti di licenza
+
+Il tipo di licenze installate dipende dall'ambiente in uso.
+
+[cols="1,3"]
+|===
+| Licenza | Dove richiesto 
+
+
+ a| 
+Basato su controller standard SnapCenter
+ a| 
+Richiesto per i controller di storage FAS o AFF
+
+La licenza standard di SnapCenter è una licenza basata su controller ed è inclusa nel pacchetto premium. Se si dispone della licenza della suite SnapManager, si ottiene anche il diritto di licenza standard SnapCenter. Se si desidera installare SnapCenter in prova con lo storage FAS o AFF, è possibile ottenere una licenza di valutazione Premium Bundle contattando il rappresentante commerciale.
+
+
+
+ a| 
+SnapCenter basato sulla capacità standard
+ a| 
+Richiesto con ONTAP Select e Cloud Volumes ONTAP
+
+Se sei un cliente Cloud Volumes ONTAP o ONTAP Select, devi procurarti una licenza per TB basata sulla capacità in base ai dati gestiti da SnapCenter. Per impostazione predefinita, SnapCenter fornisce una licenza di prova integrata per SnapCenter standard da 100 TB, valida 90 giorni. Per ulteriori informazioni, contattare il rappresentante commerciale.
+
+
+
+ a| 
+SnapMirror o SnapVault
+ a| 
+ONTAP
+
+Se la replica è attivata in SnapCenter, è necessario disporre di una licenza SnapMirror o SnapVault.
+
+
+
+ a| 
+Licenze aggiuntive (opzionali)
+ a| 
+Vedere link:../install/concept_snapcenter_licenses.html["Licenze SnapCenter"^].
+
+
+
+ a| 
+Licenze standard SnapCenter (opzionali)
+ a| 
+Destinazioni secondarie
+
+
+NOTE: Si consiglia, ma non è necessario, di aggiungere le licenze standard di SnapCenter alle destinazioni secondarie. Se le licenze standard di SnapCenter non sono abilitate sulle destinazioni secondarie, non è possibile utilizzare SnapCenter per eseguire il backup delle risorse sulla destinazione secondaria dopo aver eseguito un'operazione di failover. Tuttavia, è necessaria una licenza FlexClone sulle destinazioni secondarie per eseguire operazioni di cloning e verifica.
+
+|===
+
+
+== Requisiti di host e porte
+
+Per i requisiti minimi di ONTAP e del plug-in dell'applicazione, vedere https://imt.netapp.com/matrix/imt.jsp?components=105961;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità"^].
+
+[cols="1,3"]
+|===
+| Host | Requisiti minimi 
+
+
+ a| 
+Sistema operativo (64 bit)
+ a| 
+Vedere https://imt.netapp.com/matrix/imt.jsp?components=105961;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità"^]
+
+
+
+ a| 
+CPU
+ a| 
+* Host server: 4 core
+* Host plug-in: 1 core
+
+
+
+
+ a| 
+RAM
+ a| 
+* Host server: 8 GB
+* Host plug-in: 1 GB
+
+
+
+
+ a| 
+Spazio su disco rigido
+ a| 
+Host del server:
+
+* 4 GB per il software e i registri del server SnapCenter
+* 6 GB per repository SnapCenter
+* Ciascun host plug-in: 2 GB per l'installazione del plug-in e i log, necessario solo se il plug-in è installato su un host dedicato.
+
+
+
+
+ a| 
+Librerie di terze parti
+ a| 
+Richiesto sull'host del server SnapCenter e sull'host plug-in:
+
+* Microsoft .NET Framework 4.7.2 o versione successiva
+* Windows Management Framework (WMF) 4.0 o versione successiva
+* PowerShell 4.0 o versione successiva
+
+
+
+
+ a| 
+Browser
+ a| 
+Chrome, Internet Explorer e Microsoft Edge
+
+|===
+[cols="1,3"]
+|===
+| Tipo di porta | Porta predefinita 
+
+
+ a| 
+Porta SnapCenter
+ a| 
+8146 (HTTPS), bidirezionale, personalizzabile, come nell'URL _ https://server:8146_
+
+
+
+ a| 
+Porta di comunicazione SMCore SnapCenter
+ a| 
+8145 (HTTPS), bidirezionale, personalizzabile
+
+
+
+ a| 
+Database del repository
+ a| 
+3306 (HTTPS), bidirezionale
+
+
+
+ a| 
+Host plug-in Windows
+ a| 
+135, 445 (TCP)
+
+Oltre alle porte 135 e 445, dovrebbe essere aperto anche l'intervallo di porte dinamiche specificato da Microsoft. Le operazioni di installazione remota utilizzano il servizio WMI (Windows Management Instrumentation), che ricerca dinamicamente questo intervallo di porte.
+
+Per informazioni sull'intervallo di porte dinamiche supportato, vedere https://docs.microsoft.com/en-US/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements["Panoramica del servizio e requisiti della porta di rete per Windows"^].
+
+
+
+ a| 
+Plug-in SnapCenter per Windows
+ a| 
+8145 (HTTPS), bidirezionale, personalizzabile
+
+
+
+ a| 
+Porta di comunicazione SVM o cluster ONTAP
+ a| 
+443 (HTTPS), bidirezionale; 80 (HTTP), bidirezionale
+
+La porta viene utilizzata per la comunicazione tra l'host del server SnapCenter, l'host plug-in e SVM o il cluster ONTAP.
+
+|===
+
+
+== Requisiti del plug-in SnapCenter per Microsoft SQL Server
+
+Si consiglia di disporre di un utente con privilegi di amministratore locale con autorizzazioni di accesso locale sull'host remoto. Se si gestiscono i nodi del cluster, è necessario disporre di un utente con privilegi amministrativi per tutti i nodi del cluster.
+
+Si consiglia di disporre di un utente con autorizzazioni sysadmin su SQL Server. Il plug-in utilizza Microsoft VDI Framework, che richiede l'accesso sysadmin.
+
+Se si utilizza SnapManager per Microsoft SQL Server e si desidera importare i dati da SnapManager per Microsoft SQL Server a SnapCenter, vedere link:../protect-scsql/concept_import_archived_backups_from_snapmanager_for_sql_to_snapcenter.html["Importare i backup archiviati"^]
