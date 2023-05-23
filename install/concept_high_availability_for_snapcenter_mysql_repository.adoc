@@ -19,7 +19,7 @@ Se si desidera utilizzare la funzionalità di disponibilità elevata (ha) di MyS
 
 SnapCenter fornisce i cmdlet _Get-SmRepositoryConfig_ e _Set-SmRepositoryConfig_ PowerShell per gestire la replica MySQL.
 
-Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento alla https://["Guida di riferimento al cmdlet del software SnapCenter"^].
+Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento alla https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["Guida di riferimento al cmdlet del software SnapCenter"^].
 
 È necessario conoscere le limitazioni relative alla funzionalità MySQL ha:
 
@@ -35,4 +35,4 @@ Se il failover si verifica perché il server MySQL o SnapCenter non è attivo, i
 
 
 
-Per informazioni sulla configurazione della disponibilità elevata, vedere https://["Come configurare NLB e ARR con SnapCenter"^].
+Per informazioni sulla configurazione della disponibilità elevata, vedere https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_NLB_and_ARR_with_SnapCenter["Come configurare NLB e ARR con SnapCenter"^].

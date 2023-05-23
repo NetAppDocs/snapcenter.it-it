@@ -152,7 +152,7 @@ Il timeout predefinito dello script è di 60 secondi.
 NOTE: Per la notifica via email, è necessario aver specificato i dettagli del server SMTP utilizzando la GUI o il comando PowerShell Set-SmtpServer.
 
 +
-Per EMS, fare riferimento a. https://["Gestire la raccolta di dati EMS"]
+Per EMS, fare riferimento a. https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_ems_data_collection.html["Gestire la raccolta di dati EMS"]
 
 . Esaminare il riepilogo, quindi fare clic su *fine*.
 . Monitorare l'avanzamento dell'operazione facendo clic su *Monitor* > *Jobs*.
@@ -168,6 +168,6 @@ link:reference_back_up_sql_server_database_or_instance_or_availability_group.htm
 
 link:task_clone_backups_using_powershell_cmdlets_for_sql.html["Clonare i backup utilizzando i cmdlet PowerShell"]
 
-https://["L'operazione di clonazione potrebbe non riuscire o richiedere più tempo per il completamento con il valore TCP_TIMEOUT predefinito"]
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["L'operazione di clonazione potrebbe non riuscire o richiedere più tempo per il completamento con il valore TCP_TIMEOUT predefinito"]
 
-https://["Il clone del database dell'istanza del cluster di failover non riesce"]
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/The_failover_cluster_instance_database_clone_fails["Il clone del database dell'istanza del cluster di failover non riesce"]

@@ -13,51 +13,38 @@ summary: Se una risorsa non fa parte di un gruppo di risorse, è possibile esegu
 [role="lead"]
 Se una risorsa non fa parte di un gruppo di risorse, è possibile eseguarne il backup dalla pagina risorse.
 
-*Fasi*
-
-. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
-. Nella pagina Resources (risorse), selezionare *Database* dall'elenco *View* (Visualizza).
-. Fare clic su *image:../media/filter_icon.gif[""]*, quindi selezionare il nome host e il tipo di database per filtrare le risorse.
+.Fasi
+. Nel riquadro di navigazione a sinistra, selezionare *risorse* e il plug-in appropriato dall'elenco.
+. Nella pagina Resources (risorse), selezionare *Database* dall'elenco View (Visualizza).
+. Fare clic su image:../media/filter_icon.gif["Icona del filtro"], quindi selezionare il nome host e il tipo di database per filtrare le risorse.
 +
-Quindi fare clic su *image:../media/filter_icon.gif[""]* per chiudere il riquadro del filtro.
+Quindi fare clic su image:../media/filter_icon.gif["Icona del filtro"] per chiudere il riquadro del filtro.
 
 . Selezionare il database di cui si desidera eseguire il backup.
 +
 Viene visualizzata la pagina protezione database.
 
-. Nella pagina Resource, eseguire le seguenti operazioni:
+. Nella pagina Resources (risorse), è possibile effettuare le seguenti operazioni:
 +
-|===
-| Per questo campo... | Eseguire questa operazione... 
+.. Selezionare la casella di controllo e immettere un formato nome personalizzato da utilizzare per il nome della copia Snapshot.
++
+Ad esempio, `customtext_policy_hostname` oppure `resource_hostname`. Per impostazione predefinita, al nome della copia Snapshot viene aggiunto un indicatore data e ora.
+
+.. Specificare le destinazioni dei file di log dell'archivio di cui non si desidera eseguire il backup.
 
 
- a| 
-USA il formato nome personalizzato per la copia Snapshot
- a| 
-Selezionare questa casella di controllo, quindi immettere un formato nome personalizzato da utilizzare per il nome della copia Snapshot.
-
-Ad esempio, customtext__policy_hostname o resource_hostname. Per impostazione predefinita, al nome della copia Snapshot viene aggiunto un indicatore data e ora.
-
-
-
- a| 
-Escludi le destinazioni del registro di archiviazione dal backup
- a| 
-Specificare le destinazioni dei file di log dell'archivio di cui non si desidera eseguire il backup.
-
-|===
 . Nella pagina Criteri, attenersi alla seguente procedura:
 +
 .. Selezionare uno o più criteri dall'elenco a discesa.
 +
 
-NOTE: Puoi anche creare una policy facendo clic su *image:../media/add_policy_from_resourcegroup.gif[""]*.
+NOTE: È possibile creare un criterio facendo clic su image:../media/add_policy_from_resourcegroup.gif["aggiungi simbolo"].
 
 +
 Nella sezione Configure schedules for selected policies (Configura pianificazioni per policy selezionate), vengono elencati i criteri selezionati.
 
-.. Fare clic su image:../media/add_policy_from_resourcegroup.gif[""] Nella colonna Configure Schedules (Configura pianificazioni) per il criterio per il quale si desidera configurare una pianificazione.
-.. Nella finestra Add schedules for policy _policy_name_, configurare la pianificazione, quindi fare clic su *OK*.
+.. Fare clic su image:../media/add_policy_from_resourcegroup.gif["aggiungi simbolo"] Nella colonna Configura pianificazioni per configurare una pianificazione per il criterio desiderato.
+.. Nella finestra Add schedules for policy _policy_name_, configurare la pianificazione, quindi selezionare `OK`.
 +
 _policy_name_ è il nome del criterio selezionato.
 
@@ -68,30 +55,14 @@ Le pianificazioni configurate sono elencate nella colonna Applied Schedules (Pia
 
 . Nella pagina verifica, attenersi alla seguente procedura:
 +
-.. Fare clic su *Load Locators* (carica locatori) per caricare i volumi SnapMirror o SnapVault per eseguire la verifica sullo storage secondario.
-.. Fare clic su image:../media/add_policy_from_resourcegroup.gif[""] Nella colonna Configura pianificazioni per configurare la pianificazione di verifica per tutti i tipi di pianificazione del criterio.
-.. Nella finestra di dialogo Add Verification Schedules _policy_name_, eseguire le seguenti operazioni:
+.. Fare clic su *Load Locators* (carica locatori) per caricare i volumi SnapMirror o SnapVault e verificare lo storage secondario.
+.. Fare clic su image:../media/add_policy_from_resourcegroup.gif["aggiungi simbolo"] Nella colonna Configura pianificazioni per configurare la pianificazione di verifica per tutti i tipi di pianificazione del criterio. + nella finestra di dialogo Add Verification Schedules _policy_name_, è possibile effettuare le seguenti operazioni:
+.. Selezionare *Esegui verifica dopo backup*.
+.. Selezionare *Esegui verifica pianificata* e selezionare il tipo di pianificazione dall'elenco a discesa.
 +
-|===
-| Se si desidera... | Eseguire questa operazione... 
-
-
- a| 
-Eseguire la verifica dopo il backup
- a| 
-Selezionare *Esegui verifica dopo backup*.
-
-
-
- a| 
-Pianifica una verifica
- a| 
-Selezionare *Esegui verifica pianificata*, quindi selezionare il tipo di pianificazione dall'elenco a discesa.
-
 
 NOTE: In una configurazione di Flex ASM, non è possibile eseguire l'operazione di verifica sui nodi Leaf se la cardinalità è inferiore al numero di nodi nel cluster RAC.
 
-|===
 .. Selezionare *verify on secondary location* (verifica su posizione secondaria) per verificare i backup sullo storage secondario.
 .. Fare clic su *OK*.
 +
@@ -99,13 +70,13 @@ Le pianificazioni di verifica configurate sono elencate nella colonna Applied Sc
 
 
 
-. Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
+. Nella pagina Notification (notifica), selezionare gli scenari in cui si desidera inviare i messaggi di posta elettronica dall'elenco a discesa *Email preference* (Preferenze email).
 +
-È inoltre necessario specificare gli indirizzi e-mail del mittente e del destinatario e l'oggetto dell'e-mail. Se si desidera allegare il report dell'operazione di backup eseguita sulla risorsa, quindi selezionare *Allega report del processo*.
+Specificare gli indirizzi e-mail del mittente e del destinatario e l'oggetto del messaggio. Se si desidera allegare il report dell'operazione di backup eseguita sulla risorsa, selezionare *Attach Job Report*.
 
 +
 
-NOTE: Per la notifica via email, è necessario aver specificato i dettagli del server SMTP utilizzando la GUI o il comando PowerShell Set-SmtpServer.
+NOTE: Per la notifica via email, è necessario aver specificato i dettagli del server SMTP utilizzando il comando GUI o PowerShell `Set-SmSmtpServer`.
 
 . Esaminare il riepilogo, quindi fare clic su *fine*.
 +
@@ -114,7 +85,7 @@ Viene visualizzata la pagina della topologia del database.
 . Fare clic su *Esegui backup ora*.
 . Nella pagina Backup, attenersi alla seguente procedura:
 +
-.. Se sono stati applicati più criteri alla risorsa, selezionare il criterio da utilizzare per il backup dall'elenco a discesa *Policy*.
+.. Se sono stati applicati più criteri alla risorsa, dall'elenco a discesa Policy (criterio), selezionare il criterio da utilizzare per il backup.
 +
 Se il criterio selezionato per il backup on-demand è associato a una pianificazione di backup, i backup on-demand verranno conservati in base alle impostazioni di conservazione specificate per il tipo di pianificazione.
 
@@ -124,13 +95,12 @@ Se il criterio selezionato per il backup on-demand è associato a una pianificaz
 . Monitorare l'avanzamento dell'operazione facendo clic su *Monitor* > *Jobs*.
 
 
-*Al termine*
-
-* Nell'installazione di AIX, è possibile utilizzare il comando lkdev per bloccare e il comando rendev per rinominare i dischi su cui si trovava il database di cui è stato eseguito il backup.
+.Al termine
+* Nell'installazione di AIX, è possibile utilizzare `lkdev` per bloccare e il `rendev` comando per rinominare i dischi su cui risiede il database di cui è stato eseguito il backup.
 +
 Il blocco o la ridenominazione dei dispositivi non influisce sull'operazione di ripristino quando si esegue il ripristino utilizzando tale backup.
 
-* Se l'operazione di backup non riesce perché il tempo di esecuzione della query del database ha superato il valore di timeout, modificare il valore dei parametri ORACLE_SQL_QUERY_TIMEOUT e ORACLE_PLUGIN_SQL_QUERY_TIMEOUT eseguendo il cmdlet Set-SmConfigSettings:
+* Se l'operazione di backup non riesce perché il tempo di esecuzione della query del database ha superato il valore di timeout, è necessario modificare il valore dei parametri ORACLE_SQL_QUERY_TIMEOUT e ORACLE_PLUGIN_SQL_QUERY_TIMEOUT eseguendo il `Set-SmConfigSettings` cmdlet:
 +
 Dopo aver modificato il valore dei parametri, riavviare il servizio caricatore plug-in (SPL) di SnapCenter eseguendo il seguente comando `/opt/NetApp/snapcenter/spl/bin/spl restart`
 
@@ -145,10 +115,9 @@ Per aumentare la dimensione dell'heap Java, individuare il file script _/opt/net
 
 
 
-*Ulteriori informazioni*
-
-* https://["Impossibile rilevare la relazione SnapMirror o SnapVault dopo il failover di MetroCluster"^]
-* https://["Il database Oracle RAC One Node viene ignorato per l'esecuzione delle operazioni SnapCenter"^]
-* https://["Impossibile modificare lo stato di un database ASM Oracle 12c"^]
-* https://["Parametri personalizzabili per operazioni di backup, ripristino e clonazione su sistemi AIX"^]
+.Trova ulteriori informazioni
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["Impossibile rilevare la relazione SnapMirror o SnapVault dopo il failover di MetroCluster"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Oracle_RAC_One_Node_database_is_skipped_for_performing_SnapCenter_operations["Il database Oracle RAC One Node viene ignorato per l'esecuzione delle operazioni SnapCenter"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_change_the_state_of_an_Oracle_12c_ASM_database_from_shutdown_to_mount["Impossibile modificare lo stato di un database ASM Oracle 12c"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/What_are_the_customizable_parameters_for_backup_restore_and_clone_operations_on_AIX_systems["Parametri personalizzabili per operazioni di backup, ripristino e clonazione su sistemi AIX"^] (Richiede accesso)
 

@@ -27,7 +27,7 @@ link:task_back_up_resource_groups_sap_hana.html["Eseguire il backup dei gruppi d
 
 * Se si desidera creare un backup basato su file quando uno o più database tenant sono inattivi, impostare IL parametro ALLOW_FILE_BASED_BACKUP_IFINATTIVO_TENANTS_PRESENT su *YES* nel file di proprietà HANA utilizzando `Set-SmConfigSettings` cmdlet.
 +
-Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo Get-Help _command_name_. In alternativa, fare riferimento alla https://["Guida di riferimento al cmdlet del software SnapCenter"]
+Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo Get-Help _command_name_. In alternativa, fare riferimento alla https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["Guida di riferimento al cmdlet del software SnapCenter"]
 
 * Per i comandi pre e post per le operazioni quiesce, Snapshot copy e unquiesce, controllare se i comandi esistono nell'elenco dei comandi disponibile sull'host plug-in dai seguenti percorsi:
 +
@@ -155,7 +155,7 @@ Se il criterio selezionato per il backup on-demand è associato a una pianificaz
 +
 ** Nelle configurazioni MetroCluster, SnapCenter potrebbe non essere in grado di rilevare una relazione di protezione dopo un failover.
 +
-Per ulteriori informazioni, vedere: https://["Impossibile rilevare la relazione SnapMirror o SnapVault dopo il failover di MetroCluster"^]
+Per ulteriori informazioni, vedere: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["Impossibile rilevare la relazione SnapMirror o SnapVault dopo il failover di MetroCluster"^]
 
 ** Se si esegue il backup dei dati delle applicazioni su VMDK e la dimensione dell'heap Java per il plug-in SnapCenter per VMware vSphere non è sufficiente, il backup potrebbe non riuscire.
 +

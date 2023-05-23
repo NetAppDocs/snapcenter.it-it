@@ -334,7 +334,7 @@ Elenco vuoto
 Questo elenco contiene tutti i messaggi che un plug-in desidera restituire al server. Il server SnapCenter visualizza questi messaggi nella CLI o nella GUI.
 
 |===
-L'agente SnapCenter fornisce costruttori (https://["Modello di costruttore"]) per tutti i tipi di risultato. Questo rende l'utilizzo molto semplice:
+L'agente SnapCenter fornisce costruttori (https://en.wikipedia.org/wiki/Builder_pattern["Modello di costruttore"]) per tutti i tipi di risultato. Questo rende l'utilizzo molto semplice:
 
 ....
 Result result = Result.builder()

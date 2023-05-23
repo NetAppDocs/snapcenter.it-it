@@ -30,7 +30,7 @@ Se si desidera accedere ai file del backup, è necessario montare manualmente un
 
 
 
-NOTE: Per informazioni su come modificare il parametro asm_diskstring, vedere https://["Come aggiungere i percorsi dei dischi ad asm_diskstring"^].
+NOTE: Per informazioni su come modificare il parametro asm_diskstring, vedere https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Disk_paths_are_not_added_to_the_asm_diskstring_database_parameter["Come aggiungere i percorsi dei dischi ad asm_diskstring"^].
 
 * È necessario configurare le credenziali ASM e la porta ASM se differisce da quella dell'host del database di origine durante il montaggio del backup.
 * Se si desidera eseguire il montaggio su un host alternativo, verificare che l'host alternativo soddisfi i seguenti requisiti:
@@ -78,7 +78,7 @@ Se si sta montando il backup di un database ASM, viene visualizzato il percorso 
 `./sccli Get-Smbackup-BackupNamebackup_name`
 
 +
-Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help _command_name_. In alternativa, fare riferimento alla https://["Guida di riferimento al comando software SnapCenter"^].
+Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help _command_name_. In alternativa, fare riferimento alla https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486["Guida di riferimento al comando software SnapCenter"^].
 
 
 

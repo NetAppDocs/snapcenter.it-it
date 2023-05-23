@@ -140,7 +140,7 @@ Viene creato un gruppo di risorse implicito. È possibile visualizzare questa op
 
 * Nelle configurazioni MetroCluster, SnapCenter potrebbe non essere in grado di rilevare una relazione di protezione dopo un failover.
 +
-https://["Impossibile rilevare la relazione SnapMirror o SnapVault dopo il failover di MetroCluster"]
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["Impossibile rilevare la relazione SnapMirror o SnapVault dopo il failover di MetroCluster"]
 
 * Se si esegue il backup dei dati delle applicazioni su VMDK e la dimensione dell'heap Java per il plug-in SnapCenter per VMware vSphere non è sufficiente, il backup potrebbe non riuscire. Per aumentare la dimensione dell'heap Java, individuare il file script /opt/netapp/init_scripts/scvservice. In questo script, il `do_start method` Avvia il servizio plug-in VMware di SnapCenter. Aggiornare il comando ai seguenti valori: `Java -jar -Xmx8192M -Xms4096M`.
 
@@ -151,8 +151,8 @@ link:task_create_backup_policies_for_sql_server_databases.html["Creare criteri d
 
 link:task_back_up_resources_using_powershell_cmdlets_for_sql.html["Eseguire il backup delle risorse utilizzando i cmdlet PowerShell"]
 
-https://["Le operazioni di backup non riescono con un errore di connessione MySQL a causa del ritardo nel TCP_TIMEOUT"]
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["Le operazioni di backup non riescono con un errore di connessione MySQL a causa del ritardo nel TCP_TIMEOUT"]
 
-https://["Il backup non riesce e viene visualizzato un errore dello scheduler di Windows"]
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Backup_fails_with_Windows_scheduler_error["Il backup non riesce e viene visualizzato un errore dello scheduler di Windows"]
 
-https://["Le operazioni di quiesce o raggruppamento delle risorse non riescono"]
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Quiesce_or_grouping_resources_operations_fail["Le operazioni di quiesce o raggruppamento delle risorse non riescono"]

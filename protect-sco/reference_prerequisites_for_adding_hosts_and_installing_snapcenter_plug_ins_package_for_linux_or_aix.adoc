@@ -32,8 +32,8 @@ NOTE: Assicurarsi di aver installato solo L'edizione certificata DI JAVA 11 sull
 Per informazioni su come scaricare JAVA, consulta:
 
 +
-** http://["Download Java per tutti i sistemi operativi"^]
-** https://["IBM Java per AIX"^]
+** http://www.java.com/en/download/manual.jsp["Download Java per tutti i sistemi operativi"^]
+** https://www.ibm.com/support/pages/java-sdk-aix["IBM Java per AIX"^]
 
 
 * Per i database Oracle in esecuzione su un host Linux o AIX, è necessario installare sia il plug-in SnapCenter per il database Oracle che il plug-in SnapCenter per UNIX.
@@ -104,7 +104,7 @@ NOTE: Assicurarsi di aver installato solo L'edizione certificata DI JAVA 11 sull
 Se JAVA è stato aggiornato alla versione più recente, assicurarsi che l'opzione JAVA_HOME disponibile in /var/opt/snapcenter/spl/etc/spl.properties sia impostata sulla versione JAVA corretta e sul percorso corretto.
 
 |===
-Per informazioni aggiornate sulle versioni supportate, consultare https://["Tool di matrice di interoperabilità NetApp"^].
+Per informazioni aggiornate sulle versioni supportate, consultare https://imt.netapp.com/matrix/imt.jsp?components=108392;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^].
 
 
 
@@ -228,7 +228,7 @@ Pacchetti software richiesti
 Se JAVA è stato aggiornato alla versione più recente, assicurarsi che l'opzione JAVA_HOME disponibile in /var/opt/snapcenter/spl/etc/spl.properties sia impostata sulla versione JAVA corretta e sul percorso corretto.
 
 |===
-Per informazioni aggiornate sulle versioni supportate, consultare https://["Tool di matrice di interoperabilità NetApp"^].
+Per informazioni aggiornate sulle versioni supportate, consultare https://imt.netapp.com/matrix/imt.jsp?components=108392;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^].
 
 
 

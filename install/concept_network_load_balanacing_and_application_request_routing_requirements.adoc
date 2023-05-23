@@ -13,7 +13,7 @@ summary: È possibile configurare il bilanciamento del carico di rete Microsoft 
 [role="lead"]
 È possibile configurare il bilanciamento del carico di rete Microsoft per impostare la disponibilità elevata SnapCenter. A partire da SnapCenter 4.2, è necessario configurare manualmente NLB al di fuori dell'installazione di SnapCenter per ottenere una disponibilità elevata.
 
-Per informazioni su come configurare il bilanciamento del carico di rete (NLB) con SnapCenter, vedere https://["Come configurare NLB con SnapCenter"^].
+Per informazioni su come configurare il bilanciamento del carico di rete (NLB) con SnapCenter, vedere https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_NLB_and_ARR_with_SnapCenter["Come configurare NLB con SnapCenter"^].
 
 
 NOTE: SnapCenter 4.1.1 o versioni precedenti supportava la configurazione del bilanciamento del carico di rete (NLB) durante l'installazione di SnapCenter.

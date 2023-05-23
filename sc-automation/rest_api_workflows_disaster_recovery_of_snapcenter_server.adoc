@@ -51,7 +51,7 @@ Le voci del server etc/host non verranno ripristinate. È possibile ripristinarl
 
 
 
-NOTE: Per un'installazione F5, l'operazione di ripristino viene eseguita come standalone; è necessario eseguire una serie di comandi per creare di nuovo F5. Vedere, collegamento: https://["Come migrare SnapCenter su un altro server"^]
+NOTE: Per un'installazione F5, l'operazione di ripristino viene eseguita come standalone; è necessario eseguire una serie di comandi per creare di nuovo F5. Vedere, collegamento: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_Migrate_SnapCenter_migrate_to_another_Server["Come migrare SnapCenter su un altro server"^]
 
 
 NOTE: Dopo il ripristino di DR, l'host viene aggiunto, ma è necessario installare il plug-in manualmente.
@@ -126,4 +126,4 @@ Attivare o disattivare il DR dello storage
 POST
 
 |===
-Per ulteriori informazioni, consultare https://["API di disaster recovery"^] video.
+Per ulteriori informazioni, consultare https://www.youtube.com/watch?v=Nbr_wm9Cnd4&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg["API di disaster recovery"^] video.

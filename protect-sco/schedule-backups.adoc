@@ -1,0 +1,30 @@
+---
+permalink: protect-sco/schedule-backups.html 
+sidebar: sidebar 
+keywords: oracle databases discover 
+summary: In che modo SnapCenter rileva i database Oracle. 
+---
+= Pianificazioni di backup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La frequenza di backup (tipo di pianificazione) viene specificata nei criteri; nella configurazione del gruppo di risorse viene specificata una pianificazione di backup. Il fattore più critico per determinare una frequenza o una pianificazione di backup è il tasso di cambiamento per la risorsa e l'importanza dei dati. È possibile eseguire il backup di una risorsa utilizzata in modo pesante ogni ora, mentre è possibile eseguire il backup di una risorsa utilizzata raramente una volta al giorno. Altri fattori includono l'importanza della risorsa per la tua organizzazione, il tuo Service Level Agreement (SLA) e il tuo Recover Point Objective (RPO).
+
+Uno SLA definisce il livello di servizio previsto e risolve molti problemi relativi al servizio, tra cui la disponibilità e le performance del servizio. Un RPO definisce la strategia per l'età dei file che devono essere ripristinati dallo storage di backup per consentire il ripristino delle normali operazioni dopo un errore. SLA e RPO contribuiscono alla strategia di protezione dei dati.
+
+Anche per una risorsa molto utilizzata, non è necessario eseguire un backup completo più di una o due volte al giorno. Ad esempio, i backup regolari del log delle transazioni potrebbero essere sufficienti per garantire la disponibilità dei backup necessari. Più spesso si esegue il backup dei database, minore è il numero di log delle transazioni che SnapCenter deve utilizzare al momento del ripristino, con conseguente accelerazione delle operazioni di ripristino.
+
+Le pianificazioni dei backup sono in due parti, come segue:
+
+* Frequenza di backup
++
+La frequenza di backup (con quale frequenza devono essere eseguiti i backup), denominata _tipo di pianificazione_ per alcuni plug-in, fa parte di una configurazione di policy. È possibile selezionare ogni ora, ogni giorno, ogni settimana o ogni mese come frequenza di backup per la policy. Se non si seleziona una di queste frequenze, la policy creata è solo on-demand. Puoi accedere alle policy facendo clic su *Impostazioni* > *politiche*.
+
+* Pianificazioni di backup
++
+Le pianificazioni di backup (esattamente quando devono essere eseguiti i backup) fanno parte di una configurazione di gruppo di risorse. Ad esempio, se si dispone di un gruppo di risorse con una policy configurata per i backup settimanali, è possibile configurare la pianificazione per il backup ogni giovedì alle 10:00. È possibile accedere alle pianificazioni dei gruppi di risorse facendo clic su *risorse* > *gruppi di risorse*.
+
+

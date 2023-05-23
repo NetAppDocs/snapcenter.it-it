@@ -40,7 +40,7 @@ Se il criterio selezionato per il backup on-demand è associato a una pianificaz
 +
 ** Nelle configurazioni MetroCluster, SnapCenter potrebbe non essere in grado di rilevare una relazione di protezione dopo un failover.
 +
-https://["Impossibile rilevare la relazione SnapMirror o SnapVault dopo il failover di MetroCluster"]
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["Impossibile rilevare la relazione SnapMirror o SnapVault dopo il failover di MetroCluster"]
 
 ** Se si esegue il backup dei dati delle applicazioni su VMDK e la dimensione dell'heap Java per il plug-in SnapCenter per VMware vSphere non è sufficiente, il backup potrebbe non riuscire. Per aumentare la dimensione dell'heap Java, individuare il file script /opt/netapp/init_scripts/scvservice. In questo script, il `do_start method` Avvia il servizio plug-in VMware di SnapCenter. Aggiornare il comando ai seguenti valori: `Java -jar -Xmx8192M -Xms4096M`.
 

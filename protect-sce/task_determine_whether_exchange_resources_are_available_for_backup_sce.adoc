@@ -17,7 +17,7 @@ Le risorse sono i database, i gruppi di disponibilità dei database Exchange ges
 
 * È necessario aver già completato attività come l'installazione del server SnapCenter, l'aggiunta di host, la creazione di connessioni al sistema di storage, l'aggiunta di credenziali e l'installazione del plug-in per Exchange.
 * Per sfruttare le funzionalità del software Single Mailbox Recovery, è necessario che il database attivo sia stato posizionato sul server Exchange in cui è installato il software Single Mailbox Recovery.
-* Se i database risiedono su LUN VMware RDM, è necessario implementare il plug-in SnapCenter per VMware vSphere e registrare il plug-in con SnapCenter. Il https://["Plug-in SnapCenter per la documentazione di VMware vSphere"] contiene ulteriori informazioni.
+* Se i database risiedono su LUN VMware RDM, è necessario implementare il plug-in SnapCenter per VMware vSphere e registrare il plug-in con SnapCenter. Il https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_get_started_overview.html["Plug-in SnapCenter per la documentazione di VMware vSphere"] contiene ulteriori informazioni.
 
 
 *A proposito di questa attività*

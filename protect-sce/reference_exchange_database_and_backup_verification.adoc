@@ -20,4 +20,4 @@ Lo strumento Microsoft Exchange Eseutil è un'utilità della riga di comando inc
 
 | *Best practice:* non è necessario eseguire controlli di coerenza sui database che fanno parte di una configurazione DAG (Database Availability Group) con almeno due repliche. 
 |===
-Per ulteriori informazioni, vedere https://["Documentazione di Microsoft Exchange Server"^].
+Per ulteriori informazioni, vedere https://docs.microsoft.com/en-us/exchange/exchange-server?view=exchserver-2019["Documentazione di Microsoft Exchange Server"^].

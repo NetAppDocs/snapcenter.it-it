@@ -1,0 +1,23 @@
+---
+permalink: protect-sco/retention-backups.html 
+sidebar: sidebar 
+keywords: oracle databases discover 
+summary: Opzioni di conservazione del backup. 
+---
+= Opzioni di conservazione del backup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile scegliere il numero di giorni per i quali conservare le copie di backup o specificare il numero di copie di backup che si desidera conservare, fino a un massimo di 255 copie ONTAP. Ad esempio, l'organizzazione potrebbe richiedere di conservare 10 giorni di copie di backup o 130 copie di backup.
+
+Durante la creazione di un criterio, è possibile specificare le opzioni di conservazione per il tipo di backup e il tipo di pianificazione.
+
+Se si imposta la replica di SnapMirror, il criterio di conservazione viene mirrorato sul volume di destinazione.
+
+SnapCenter elimina i backup conservati con etichette di conservazione corrispondenti al tipo di pianificazione. Se il tipo di pianificazione è stato modificato per la risorsa o il gruppo di risorse, i backup con la vecchia etichetta del tipo di pianificazione potrebbero rimanere nel sistema.
+
+
+NOTE: Per la conservazione a lungo termine delle copie di backup, è necessario utilizzare il backup di SnapVault.

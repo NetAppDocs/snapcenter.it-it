@@ -23,7 +23,7 @@ summary: È possibile utilizzare SnapCenter per ripristinare i database Exchange
 Eseguire `Move-ActiveMailboxDatabase` per eseguire la copia passiva del database come copia attiva del database.
 
 +
-Il https://["Documentazione Microsoft"^] contiene informazioni su questo comando.
+Il https://docs.microsoft.com/en-us/powershell/module/exchange/move-activemailboxdatabase?view=exchange-ps["Documentazione Microsoft"^] contiene informazioni su questo comando.
 
 
 

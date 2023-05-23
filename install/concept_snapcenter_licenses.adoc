@@ -106,6 +106,6 @@ Installare una o più licenze SnapCenter. Per informazioni su come aggiungere li
 
 Se si utilizza il plug-in SnapCenter per Exchange per gestire i database e il ripristino di una singola casella postale (SMBR), è necessaria una licenza aggiuntiva per SMBR che deve essere acquistata separatamente in base alla casella postale dell'utente.
 
-Contatta il tuo commerciale NetApp per acquistare le licenze SMBR disponibili come unità di bundle di 1000, 5000, 15000 e 25000 caselle postali. Una volta acquistato lo SKU, è possibile ottenere la licenza seguendo le istruzioni riportate in https://["Note di rilascio di SMBR"^].
+Contatta il tuo commerciale NetApp per acquistare le licenze SMBR disponibili come unità di bundle di 1000, 5000, 15000 e 25000 caselle postali. Una volta acquistato lo SKU, è possibile ottenere la licenza seguendo le istruzioni riportate in https://library.netapp.com/ecm/ecm_download_file/ECMLP2863893["Note di rilascio di SMBR"^].
 
 Quando si invia la richiesta di chiave di licenza, Kroll Ontrack emetterà 50 chiavi di licenza per la mailbox. In base ai tuoi diritti, Kroll Ontrack aggiornerà le licenze per la mailbox dopo la verifica.

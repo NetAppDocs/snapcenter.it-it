@@ -31,7 +31,7 @@ Supporta il controller SCSI paravirtuale VMware. È possibile supportare 256 dis
 
 
 
-Per informazioni aggiornate sulle versioni supportate, vedere https://["Tool di matrice di interoperabilità NetApp"^].
+Per informazioni aggiornate sulle versioni supportate, vedere https://imt.netapp.com/matrix/imt.jsp?components=108380;&solution=1257&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^].
 
 
 
@@ -136,4 +136,4 @@ Gli iniziatori devono essere FC o Microsoft iSCSI, ma non entrambi.
 
 Prima di poter utilizzare le LUN RDM FC per condividere lo storage tra i nodi di un cluster Microsoft, è necessario creare il disco di quorum condiviso e il disco di storage condiviso, quindi aggiungerli a entrambe le macchine virtuali del cluster.
 
-Il disco condiviso non viene creato utilizzando il plug-in per Windows. Creare e aggiungere il LUN condiviso a ciascuna macchina virtuale del cluster. Per ulteriori informazioni, vedere https://["Cluster di macchine virtuali tra host fisici"^].
+Il disco condiviso non viene creato utilizzando il plug-in per Windows. Creare e aggiungere il LUN condiviso a ciascuna macchina virtuale del cluster. Per ulteriori informazioni, vedere https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.mscs.doc/GUID-1A2476C0-CA66-4B80-B6F9-8421B6983808.html["Cluster di macchine virtuali tra host fisici"^].

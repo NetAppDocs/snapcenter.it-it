@@ -31,7 +31,7 @@ Il ripristino di AG non riesce quando viene soddisfatta una delle seguenti condi
 * Se si ripristinano i backup personalizzati della directory di log su un host alternativo, il server SnapCenter e l'host del plug-in devono avere la stessa versione di SnapCenter installata.
 * È necessario aver installato la correzione rapida Microsoft KB2887595. Il sito del supporto Microsoft contiene ulteriori informazioni su KB2887595.
 +
-https://["Articolo di supporto Microsoft 2887595: Rollup degli aggiornamenti di Windows RT 8.1, Windows 8.1 e Windows Server 2012 R2: Novembre 2013"]
+https://support.microsoft.com/kb/2887595["Articolo di supporto Microsoft 2887595: Rollup degli aggiornamenti di Windows RT 8.1, Windows 8.1 e Windows Server 2012 R2: Novembre 2013"]
 
 * È necessario aver eseguito il backup dei gruppi di risorse o del database.
 * Se si stanno replicando le copie Snapshot in un mirror o vault, l'amministratore di SnapCenter deve aver assegnato le macchine virtuali di storage (SVM) per i volumi di origine e di destinazione.

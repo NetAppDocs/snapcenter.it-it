@@ -13,12 +13,12 @@ summary: 'Il software SMBR (Single Mailbox Recovery) consente di ripristinare e 
 [role="lead"]
 Il software SMBR (Single Mailbox Recovery) consente di ripristinare e ripristinare i messaggi e-mail o le caselle postali anziché l'intero database Exchange.
 
-Il ripristino di un database completo solo per recuperare un singolo messaggio di posta consumerà molto tempo e risorse. SMBR consente di recuperare rapidamente i messaggi di posta creando una copia clone di Snapshot e utilizzando le API Microsoft per montare la casella di posta in SMBR. Per informazioni su come utilizzare SMBR, vedere https://["Guida all'amministrazione di SMBR"^].
+Il ripristino di un database completo solo per recuperare un singolo messaggio di posta consumerà molto tempo e risorse. SMBR consente di recuperare rapidamente i messaggi di posta creando una copia clone di Snapshot e utilizzando le API Microsoft per montare la casella di posta in SMBR. Per informazioni su come utilizzare SMBR, vedere https://library.netapp.com/ecm/ecm_download_file/ECMLP2871407["Guida all'amministrazione di SMBR"^].
 
 *Ulteriori informazioni*
 
 * link:../install/concept_snapcenter_licenses.html#single-mailbox-recovery-smbr-licenses["Licenze SMBR"^]
-* https://["Libreria di documentazione SMBR"^]
-* https://["Come eseguire il ripristino dallo storage secondario in SMBR con SnapCenter"^]
-* https://["Ripristino della posta di Microsoft Exchange da SnapVault utilizzando SMBR"^]
+* https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30035["Libreria di documentazione SMBR"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Single_Mailbox_Recovery_(SMBR)/How_to_restore_from_secondary_storage_in_SMBR_with_SnapCenter["Come eseguire il ripristino dallo storage secondario in SMBR con SnapCenter"^]
+* https://www.youtube.com/watch?v=fOMuaaXrreI&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg&index=3["Ripristino della posta di Microsoft Exchange da SnapVault utilizzando SMBR"^]
 

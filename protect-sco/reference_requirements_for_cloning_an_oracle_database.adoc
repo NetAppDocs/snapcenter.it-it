@@ -24,7 +24,7 @@ Per impostazione predefinita, i file di log e di controllo del database clonato 
 * Se si utilizza ASM su NFS, aggiungere _/var/opt/snapcenter/scu/cloni/*/*_ al percorso esistente definito nel parametro asm_diskstring.
 * Nel parametro asm_diskstring, configurare _AFD:*_ se si utilizza ASMFD o configurare _ORCL:*_ se si utilizza ASMLIB.
 +
-Per informazioni su come modificare il parametro asm_diskstring, vedere https://["Come aggiungere i percorsi dei dischi ad asm_diskstring"^].
+Per informazioni su come modificare il parametro asm_diskstring, vedere https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Disk_paths_are_not_added_to_the_asm_diskstring_database_parameter["Come aggiungere i percorsi dei dischi ad asm_diskstring"^].
 
 * Se si crea il clone su un host alternativo, l'host alternativo deve soddisfare i seguenti requisiti:
 +
@@ -33,8 +33,8 @@ Per informazioni su come modificare il parametro asm_diskstring, vedere https://
 +
 *** Se si esegue la clonazione dallo storage primario o secondario (Vault o Mirror) a un host alternativo, assicurarsi che sia stata stabilita una sessione iSCSI tra lo storage secondario e l'host alternativo o che sia stata inserita correttamente la zoning per FC.
 +
-**** https://["Guida all'installazione e all'installazione delle utility host Linux"^]
-**** https://["Guida all'installazione e all'installazione delle utility host DI AIX"^]
+**** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547936["Guida all'installazione e all'installazione delle utility host Linux"^]
+**** https://library.netapp.com/ecm/ecm_download_file/ECMP1119223["Guida all'installazione e all'installazione delle utility host DI AIX"^]
 
 
 *** Se si esegue la clonazione dallo storage Vault o Mirror allo stesso host, assicurarsi che sia stata stabilita una sessione iSCSI tra lo storage Vault o Mirror e l'host oppure che sia stata creata una zoning corretta per FC.

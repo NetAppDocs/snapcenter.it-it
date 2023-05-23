@@ -76,4 +76,4 @@ Supporta la registrazione inline su file system SAN e layout LVM.
 
 
 |===
-Il https://["Tool di matrice di interoperabilità NetApp"] contiene le informazioni più recenti sulle versioni supportate.
+Il https://imt.netapp.com/matrix/imt.jsp?components=108392;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"] contiene le informazioni più recenti sulle versioni supportate.

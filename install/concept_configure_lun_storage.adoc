@@ -13,7 +13,7 @@ summary: È possibile utilizzare SnapCenter per configurare un LUN connesso a FC
 [role="lead"]
 È possibile utilizzare SnapCenter per configurare un LUN connesso a FC o a iSCSI. È inoltre possibile utilizzare SnapCenter per connettere un LUN esistente a un host Windows.
 
-I LUN sono l'unità di storage di base in una configurazione SAN. L'host Windows vede le LUN del sistema come dischi virtuali. Per ulteriori informazioni, vedere http://["Guida alla configurazione SAN di ONTAP 9"^].
+I LUN sono l'unità di storage di base in una configurazione SAN. L'host Windows vede le LUN del sistema come dischi virtuali. Per ulteriori informazioni, vedere http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanconf/home.html["Guida alla configurazione SAN di ONTAP 9"^].
 
 
 
@@ -24,7 +24,7 @@ Se si utilizza iSCSI per connettersi a un LUN, è necessario stabilire una sessi
 *Prima di iniziare*
 
 * È necessario aver definito il nodo del sistema di storage come destinazione iSCSI.
-* È necessario aver avviato il servizio iSCSI sul sistema di storage. http://["Scopri di più"^]
+* È necessario aver avviato il servizio iSCSI sul sistema di storage. http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["Scopri di più"^]
 
 
 *A proposito di questa attività*

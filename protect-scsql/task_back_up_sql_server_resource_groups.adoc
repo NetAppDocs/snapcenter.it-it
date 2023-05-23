@@ -45,6 +45,6 @@ link:task_create_resource_groups_and_attach_policies_for_sql_server.html["Creare
 
 link:task_back_up_resources_using_powershell_cmdlets_for_sql.html["Eseguire il backup delle risorse utilizzando i cmdlet PowerShell"]
 
-https://["Le operazioni di backup non riescono con un errore di connessione MySQL a causa del ritardo nel TCP_TIMEOUT"]
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["Le operazioni di backup non riescono con un errore di connessione MySQL a causa del ritardo nel TCP_TIMEOUT"]
 
-https://["Il backup non riesce e viene visualizzato un errore dello scheduler di Windows"]
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Backup_fails_with_Windows_scheduler_error["Il backup non riesce e viene visualizzato un errore dello scheduler di Windows"]

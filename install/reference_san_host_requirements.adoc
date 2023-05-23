@@ -17,7 +17,7 @@ SnapCenter non include le utility host o un DSM. Se l'host SnapCenter fa parte d
 
 * Utility host
 +
-Le utility host supportano FC e iSCSI e consentono di utilizzare MPIO sui server Windows. Per ulteriori informazioni, vedere https://["Documentazione delle utility host"^].
+Le utility host supportano FC e iSCSI e consentono di utilizzare MPIO sui server Windows. Per ulteriori informazioni, vedere https://docs.netapp.com/us-en/ontap-sanhost/["Documentazione delle utility host"^].
 
 * Microsoft DSM per Windows MPIO
 +
@@ -28,6 +28,6 @@ Per le configurazioni ad alta disponibilità è necessario un DSM.
 
 +
 
-NOTE: Se si utilizza ONTAP DSM, è necessario eseguire la migrazione a Microsoft DSM. Per ulteriori informazioni, vedere https://["Come migrare da ONTAP DSM a Microsoft DSM"^].
+NOTE: Se si utilizza ONTAP DSM, è necessario eseguire la migrazione a Microsoft DSM. Per ulteriori informazioni, vedere https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Data_ONTAP_DSM_for_Windows_MPIO/How_to_migrate_from_Data_ONTAP_DSM_4.1p1_to_Microsoft_native_DSM["Come migrare da ONTAP DSM a Microsoft DSM"^].
 
 

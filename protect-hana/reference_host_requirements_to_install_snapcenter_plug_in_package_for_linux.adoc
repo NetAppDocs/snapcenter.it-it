@@ -24,7 +24,7 @@ Sistemi operativi
 * SUSE Linux Enterprise Server (SLES)
 
 
-Per informazioni aggiornate sulle versioni supportate, consultare https://["Tool di matrice di interoperabilità NetApp"].
+Per informazioni aggiornate sulle versioni supportate, consultare https://imt.netapp.com/matrix/imt.jsp?components=108380;&solution=1257&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"].
 
 
 
@@ -52,6 +52,6 @@ Java 1.8.x (64-bit)Oracle Java e OpenJDK Flavors
 
 Se JAVA è stato aggiornato alla versione più recente, assicurarsi che l'opzione JAVA_HOME disponibile in /var/opt/snapcenter/spl/etc/spl.properties sia impostata sulla versione JAVA corretta e sul percorso corretto.
 
-Per informazioni aggiornate sulle versioni supportate, consultare https://["Tool di matrice di interoperabilità NetApp"].
+Per informazioni aggiornate sulle versioni supportate, consultare https://imt.netapp.com/matrix/imt.jsp?components=108380;&solution=1257&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"].
 
 |===

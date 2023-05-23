@@ -16,7 +16,7 @@ Per supportare l'alta disponibilità (ha) in SnapCenter, è possibile installare
 
 IMPORTANT: Se è stato eseguito l'aggiornamento da SnapCenter 4.2.x e in precedenza si utilizzava il bilanciamento del carico di rete (NLB), è possibile continuare a utilizzare tale configurazione o passare a F5.
 
-L'immagine del flusso di lavoro elenca i passaggi per configurare i server SnapCenter per l'alta disponibilità utilizzando il bilanciamento del carico F5. Per istruzioni dettagliate, vedere https://["Come configurare i server SnapCenter per l'alta disponibilità utilizzando F5 Load Balancer"^].
+L'immagine del flusso di lavoro elenca i passaggi per configurare i server SnapCenter per l'alta disponibilità utilizzando il bilanciamento del carico F5. Per istruzioni dettagliate, vedere https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_SnapCenter_Servers_for_high_availability_using_F5_Load_Balancer["Come configurare i server SnapCenter per l'alta disponibilità utilizzando F5 Load Balancer"^].
 
 image::../media/sc-F5-configure-workflow.png[sc F5 configurare il flusso di lavoro]
 
@@ -26,7 +26,7 @@ Per aggiungere e rimuovere i cluster F5, è necessario essere membri del gruppo 
 * Add-SmServer
 * Remove-SmServerCluster
 +
-Per ulteriori informazioni, vedere https://["Guida di riferimento al cmdlet del software SnapCenter"^].
+Per ulteriori informazioni, vedere https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["Guida di riferimento al cmdlet del software SnapCenter"^].
 
 
 

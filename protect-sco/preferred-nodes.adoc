@@ -1,0 +1,42 @@
+---
+permalink: protect-sco/preferred-nodes.html 
+sidebar: sidebar 
+keywords: oracle databases discover 
+summary: In che modo SnapCenter rileva i database Oracle. 
+---
+= Nodi preferiti nella configurazione RAC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nella configurazione di Oracle Real Application Clusters (RAC), è possibile specificare i nodi preferiti utilizzati da SnapCenter per eseguire l'operazione di backup. Se non si specifica il nodo preferito, SnapCenter assegna automaticamente un nodo come nodo preferito e viene creato il backup su tale nodo.
+
+I nodi preferiti possono essere uno o tutti i nodi del cluster in cui sono presenti le istanze del database RAC. L'operazione di backup viene attivata solo su questi nodi preferiti nell'ordine delle preferenze.
+
+.Esempio
+Il database RAC cdbrac ha tre istanze: Cdbrac1 su node1, cdbrac2 su node2 e cdbrac3 su node3.
+
+Le istanze node1 e node2 sono configurate per essere i nodi preferiti, con node2 come prima preferenza e node1 come seconda preferenza. Quando si esegue un'operazione di backup, l'operazione viene prima tentata sul nodo 2 perché si tratta del primo nodo preferito.
+
+Se node2 non si trova nello stato di backup, il che potrebbe essere dovuto a diversi motivi, come ad esempio l'agente plug-in non è in esecuzione sull'host, l'istanza del database sull'host non si trova nello stato richiesto per il tipo di backup specificato, Oppure l'istanza del database sul nodo 2 in una configurazione FlexASM non viene servita dall'istanza ASM locale; quindi l'operazione verrà tentata sul nodo 1.
+
+Il node3 non verrà utilizzato per il backup perché non è presente nell'elenco dei nodi preferiti.
+
+
+
+== Configurazione di Flex ASM
+
+In una configurazione di Flex ASM, i nodi Leaf non vengono elencati come nodi preferiti se la cardinalità è inferiore al numero di nodi nel cluster RAC. In caso di modifiche nei ruoli dei nodi del cluster Flex ASM, è necessario eseguire manualmente la ricerca in modo da aggiornare i nodi preferiti.
+
+
+
+== Stato del database richiesto
+
+Le istanze del database RAC sui nodi preferiti devono trovarsi nello stato richiesto per il completamento del backup:
+
+* Una delle istanze di database RAC nei nodi preferiti configurati deve essere in stato aperto per creare un backup online.
+* Una delle istanze del database RAC nei nodi preferiti configurati deve essere in stato di montaggio e tutte le altre istanze, compresi gli altri nodi preferiti, devono essere in stato di montaggio o inferiori per creare un backup di montaggio offline.
+* Le istanze del database RAC possono essere in qualsiasi stato, ma è necessario specificare i nodi preferiti per creare un backup di shutdown offline.
+

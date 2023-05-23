@@ -1,0 +1,65 @@
+---
+permalink: protect-sco/discover-oracle-database.html 
+sidebar: sidebar 
+keywords: oracle databases discover 
+summary: In che modo SnapCenter rileva i database Oracle. 
+---
+= In che modo SnapCenter rileva i database Oracle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le risorse sono database Oracle sull'host gestiti da SnapCenter. È possibile aggiungere questi database ai gruppi di risorse per eseguire operazioni di protezione dei dati dopo aver individuato i database disponibili.
+
+Nelle sezioni seguenti viene descritto il processo utilizzato da SnapCenter per rilevare diversi tipi e versioni di database Oracle.
+
+
+
+== Per le versioni Oracle da 11__g__ a 12__c__R1
+
+.Database RAC
+I database RAC vengono rilevati solo sulla base di /etc/oratab`entry. Le voci del database dovrebbero essere presenti nel file /etc/oratab.
+
+.Standalone
+I database standalone vengono rilevati solo in base alle voci /etc/oratab.
+
+.ASM
+La voce dell'istanza di ASM dovrebbe essere disponibile nel file /etc/oratab.
+
+.RAC un nodo
+I database RAC One Node vengono rilevati solo in base alle voci /etc/oratab. I database devono essere in stato nomount, mount o open. Le voci del database dovrebbero essere presenti nel file /etc/oratab.
+
+Lo stato del database RAC One Node viene contrassegnato come rinominato o cancellato se il database è già stato rilevato e i backup sono associati al database.
+
+Se il database viene trasferito, attenersi alla seguente procedura:
+
+. Aggiungere manualmente la voce del database ricollocata nel file /etc/oratab sul nodo RAC failed-over.
+. Aggiornare manualmente le risorse.
+. Selezionare il database RAC One Node dalla pagina delle risorse, quindi fare clic su Database Settings (Impostazioni database).
+. Configurare il database per impostare i nodi del cluster preferiti sul nodo RAC che ospita il database.
+. Eseguire le operazioni SnapCenter.
+. Se si è trasferito un database da un nodo a un altro e la voce di oratab nel nodo precedente non viene eliminata, eliminare manualmente la voce di oratab per evitare che lo stesso database venga visualizzato due volte.
+
+
+
+
+== Per le versioni Oracle da 12cR2 a 18c
+
+.Database RAC
+I database RAC vengono rilevati utilizzando il comando srvctl config. Le voci del database dovrebbero essere presenti nel file /etc/oratab.
+
+.Standalone
+I database standalone vengono rilevati in base alle voci nel file /etc/oratab e all'output del comando srvctl config.
+
+.ASM
+La voce dell'istanza ASM non deve essere nel file /etc/oratab.
+
+.RAC un nodo
+I database RAC One Node vengono rilevati solo utilizzando il comando srvctl config. I database devono essere in stato nomount, mount o open. Lo stato del database RAC One Node viene contrassegnato come rinominato o cancellato se il database è già stato rilevato e i backup sono associati al database.
+
+Se il database viene trasferito, attenersi alla seguente procedura: . Aggiornare manualmente le risorse. . Selezionare il database RAC One Node dalla pagina delle risorse, quindi fare clic su Database Settings (Impostazioni database). . Configurare il database per impostare i nodi del cluster preferiti sul nodo RAC che ospita il database. . Eseguire le operazioni SnapCenter.
+
+
+NOTE: Se sono presenti voci di database Oracle 12__c__R2 e 18__c__ nel file /etc/oratab e lo stesso database viene registrato con il comando srvctl config, SnapCenter eliminerà le voci di database duplicate. Se sono presenti voci di database obsolete, il database viene rilevato ma il database non sarà raggiungibile e lo stato sarà offline.

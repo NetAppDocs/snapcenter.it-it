@@ -19,10 +19,10 @@ summary: È necessario conoscere il sistema di storage, le applicazioni e i data
 Se si utilizza Amazon FSX per NetApp ONTAP, assicurarsi che i plug-in host del server SnapCenter siano aggiornati alla versione 4.5 P1 o successiva per eseguire le operazioni di protezione dei dati.
 
 +
-Per informazioni su Amazon FSX per NetApp ONTAP, vedere https://["Documentazione di Amazon FSX per NetApp ONTAP"^].
+Per informazioni su Amazon FSX per NetApp ONTAP, vedere https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Documentazione di Amazon FSX per NetApp ONTAP"^].
 
 * SnapCenter supporta la protezione di diverse applicazioni e database.
 +
-Per informazioni dettagliate sulle applicazioni e i database supportati, vedere https://["Tool di matrice di interoperabilità NetApp"^].
+Per informazioni dettagliate sulle applicazioni e i database supportati, vedere https://imt.netapp.com/matrix/imt.jsp?components=108380;&solution=1257&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^].
 
 

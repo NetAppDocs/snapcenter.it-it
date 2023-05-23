@@ -110,7 +110,7 @@ NOTE: È necessario definire lo spazio necessario per i backup dei log in base a
 
 +
 
-NOTE: Creare policy di vault separate per log e database quando si gestiscono volumi Exchange (LUN) e impostare il mantenimento (conservazione) del criterio di log sul doppio del numero per ciascuna etichetta del criterio di database, utilizzando le stesse etichette. Per ulteriori informazioni, vedere https://["I backup di SnapCenter per Exchange conservano solo la metà delle istantanee sul volume di log di destinazione del vault"^]
+NOTE: Creare policy di vault separate per log e database quando si gestiscono volumi Exchange (LUN) e impostare il mantenimento (conservazione) del criterio di log sul doppio del numero per ciascuna etichetta del criterio di database, utilizzando le stesse etichette. Per ulteriori informazioni, vedere https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_for_Exchange_Backups_only_keep_half_the_Snapshots_on_the_Vault_destination_log_volume["I backup di SnapCenter per Exchange conservano solo la metà delle istantanee sul volume di log di destinazione del vault"^]
 
 .. Nella sezione Database Availability Group Settings (Impostazioni gruppo disponibilità database), selezionare un'azione:
 +

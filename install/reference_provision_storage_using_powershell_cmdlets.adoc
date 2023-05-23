@@ -15,6 +15,6 @@ Se non si desidera utilizzare l'interfaccia grafica di SnapCenter per eseguire i
 
 Se si eseguono i cmdlet su un host plug-in remoto, è necessario eseguire il cmdlet SnapCenter Open-SMConnection per aprire una connessione al server SnapCenter.
 
-Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento alla https://["Guida di riferimento al cmdlet del software SnapCenter"^].
+Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento alla https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["Guida di riferimento al cmdlet del software SnapCenter"^].
 
-Se i cmdlet PowerShell di SnapCenter vengono danneggiati a causa della rimozione di SnapDrive per Windows dal server, fare riferimento a. https://["I cmdlet di SnapCenter sono guasti quando SnapDrive per Windows viene disinstallato"^].
+Se i cmdlet PowerShell di SnapCenter vengono danneggiati a causa della rimozione di SnapDrive per Windows dal server, fare riferimento a. https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_cmdlets_broken_when_SnapDrive_for_Windows_is_uninstalled["I cmdlet di SnapCenter sono guasti quando SnapDrive per Windows viene disinstallato"^].

@@ -2,7 +2,7 @@
 permalink: protect-sco/task_define_a_backup_strategy_for_oracle_databases.html 
 sidebar: sidebar 
 keywords: backup type, preferred nodes, catalog backups, schedules, backup name format, retention, verification 
-summary: 'La definizione di una strategia di backup prima della creazione dei processi di backup garantisce la disponibilità dei backup necessari per ripristinare o clonare correttamente i database. Il tuo SLA (Service-Level Agreement), RTO (Recovery Time Objective) e RPO (Recovery Point Objective) determinano in gran parte la tua strategia di backup.' 
+summary: La definizione di una strategia di backup garantisce la possibilità di ripristinare o clonare correttamente i database. 
 ---
 = Definire una strategia di backup per i database Oracle
 :allow-uri-read: 
@@ -11,9 +11,14 @@ summary: 'La definizione di una strategia di backup prima della creazione dei pr
 
 
 [role="lead"]
-La definizione di una strategia di backup prima della creazione dei processi di backup garantisce la disponibilità dei backup necessari per ripristinare o clonare correttamente i database. Il tuo SLA (Service-Level Agreement), RTO (Recovery Time Objective) e RPO (Recovery Point Objective) determinano in gran parte la tua strategia di backup.
+Definire una strategia di backup per assicurarsi di disporre dei mezzi per ripristinare o clonare correttamente i database.
 
-Uno SLA definisce il livello di servizio previsto e risolve molti problemi relativi al servizio, tra cui la disponibilità e le performance del servizio. RTO è il momento in cui un processo di business deve essere ripristinato dopo un'interruzione del servizio. RPO definisce la strategia per l'età dei file che devono essere ripristinati dallo storage di backup per consentire il ripristino delle normali operazioni dopo un errore. SLA, RTO e RPO contribuiscono alla strategia di protezione dei dati.
+Il tuo SLA (Service-Level Agreement), RTO (Recovery Time Objective) e RPO (Recovery Point Objective) determinano in gran parte la tua strategia di backup.
+
+* SLA definisce il livello di servizio previsto e risolve i problemi relativi al servizio, come la disponibilità e le prestazioni del servizio.
+* RTO definisce il tempo in cui un processo di business deve essere ripristinato dopo un'interruzione del servizio.
+* RPO definisce l'età dei file che devono essere ripristinati dallo storage di backup per consentire il ripristino delle normali operazioni dopo un errore.
+
 
 
 
@@ -55,7 +60,7 @@ NOTE: Le operazioni di migrazione PDB e clonazione PDB non sono supportate.
 
 
 
-Per informazioni aggiornate sulle versioni di Oracle supportate, consultare https://["Tool di matrice di interoperabilità NetApp"^].
+Per informazioni aggiornate sulle versioni di Oracle supportate, consultare https://imt.netapp.com/matrix/imt.jsp?components=108392;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^].
 
 
 
@@ -224,7 +229,7 @@ Dopo aver modificato il valore del parametro, riavviare il servizio caricatore p
 
 `/opt/NetApp/snapcenter/spl/bin/spl restart`
 
-Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help command_name. In alternativa, fare riferimento alla https://["Guida di riferimento al comando software SnapCenter"^].
+Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help command_name. In alternativa, fare riferimento alla https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486["Guida di riferimento al comando software SnapCenter"^].
 
 
 

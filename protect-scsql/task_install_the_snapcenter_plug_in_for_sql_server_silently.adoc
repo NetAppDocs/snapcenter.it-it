@@ -17,7 +17,7 @@ Installare il plug-in SnapCenter per Microsoft SQL Server dall'interfaccia utent
 
 * Prima di eseguire l'installazione, è necessario eliminare la versione precedente del plug-in SnapCenter per Microsoft SQL Server.
 +
-Per ulteriori informazioni, vedere https://["Come installare un plug-in SnapCenter manualmente e direttamente dall'host del plug-in"^].
+Per ulteriori informazioni, vedere https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_Install_a_SnapCenter_Plug-In_manually_and_directly_from_thePlug-In_Host["Come installare un plug-in SnapCenter manualmente e direttamente dall'host del plug-in"^].
 
 
 

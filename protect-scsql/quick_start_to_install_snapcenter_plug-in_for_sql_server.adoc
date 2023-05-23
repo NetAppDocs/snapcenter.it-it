@@ -78,7 +78,7 @@ NOTE: Si consiglia, ma non è necessario, di aggiungere le licenze standard di S
 |===
 *Requisiti aggiuntivi*
 
-Per i requisiti minimi di ONTAP e del plug-in dell'applicazione, vedere https://["Tool di matrice di interoperabilità"^]
+Per i requisiti minimi di ONTAP e del plug-in dell'applicazione, vedere https://imt.netapp.com/matrix/imt.jsp?components=108408;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità"^]
 
 |===
 | Host | Requisiti minimi 
@@ -87,7 +87,7 @@ Per i requisiti minimi di ONTAP e del plug-in dell'applicazione, vedere https://
  a| 
 Sistema operativo (64 bit)
  a| 
-Vedere https://["Tool di matrice di interoperabilità"^]
+Vedere https://imt.netapp.com/matrix/imt.jsp?components=108408;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità"^]
 
 
 
@@ -171,7 +171,7 @@ Host plug-in Windows
 
 Oltre alle porte 135 e 445, dovrebbe essere aperto anche l'intervallo di porte dinamiche specificato da Microsoft. Le operazioni di installazione remota utilizzano il servizio WMI (Windows Management Instrumentation), che ricerca dinamicamente questo intervallo di porte.
 
-Per informazioni sull'intervallo di porte dinamiche supportato, vedere https://["Panoramica del servizio e requisiti della porta di rete per Windows"^].
+Per informazioni sull'intervallo di porte dinamiche supportato, vedere https://docs.microsoft.com/en-US/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements["Panoramica del servizio e requisiti della porta di rete per Windows"^].
 
 
 
@@ -206,7 +206,7 @@ Si consiglia di disporre di un utente con autorizzazioni sysadmin su SQL Server.
 
 *Fasi*
 
-. Scaricare il pacchetto di installazione del server SnapCenter dal https://["Sito di supporto NetApp"^] quindi fare doppio clic sul file exe.
+. Scaricare il pacchetto di installazione del server SnapCenter dal https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["Sito di supporto NetApp"^] quindi fare doppio clic sul file exe.
 +
 Dopo aver avviato l'installazione, vengono eseguiti tutti i controlli preliminari e, se i requisiti minimi non vengono soddisfatti, vengono visualizzati i messaggi di errore o di avviso appropriati. È possibile ignorare i messaggi di avviso e procedere con l'installazione; tuttavia, gli errori dovrebbero essere corretti.
 

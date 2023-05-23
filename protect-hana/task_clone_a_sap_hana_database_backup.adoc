@@ -33,7 +33,7 @@ NOTE: Se i comandi non sono presenti nell'elenco dei comandi, l'operazione avrà
 
 *A proposito di questa attività*
 
-Per informazioni sulle limitazioni delle operazioni di suddivisione dei cloni, vedere http://["Guida alla gestione dello storage logico di ONTAP 9"^].
+Per informazioni sulle limitazioni delle operazioni di suddivisione dei cloni, vedere http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["Guida alla gestione dello storage logico di ONTAP 9"^].
 
 *Fasi*
 

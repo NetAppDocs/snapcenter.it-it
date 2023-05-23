@@ -45,7 +45,7 @@ Nella pagina *Dettagli lavoro*, un messaggio di avviso consiglia al cliente di c
 
 . Scaricare il pacchetto di installazione del server SnapCenter dal sito del supporto NetApp.
 +
-https://[]
+https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab[]
 
 . Creare una copia del file web.config che si trova in C: File di programma NetApp SnapCenter WebApp.
 . Esportare le pianificazioni SnapCenter relative all'host plug-in dalla pianificazione delle attività di Windows in modo da poterle utilizzare per ripristinare le pianificazioni in caso di errore nell'aggiornamento.

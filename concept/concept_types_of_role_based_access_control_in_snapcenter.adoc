@@ -67,7 +67,7 @@ Allo stesso modo, se si desidera eseguire operazioni di protezione dei dati su u
 
 Se si utilizza il plug-in VMware di SnapCenter per la protezione dei dati coerente con le macchine virtuali, il server vCenter fornisce un livello aggiuntivo di RBAC. Il plug-in VMware di SnapCenter supporta sia vCenter Server RBAC che Data ONTAP RBAC.
 
-Per ulteriori informazioni, vedere https://["Plug-in SnapCenter per VMware vSphere RBAC"^]
+Per ulteriori informazioni, vedere https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_role_based_access_control.html["Plug-in SnapCenter per VMware vSphere RBAC"^]
 
 
 

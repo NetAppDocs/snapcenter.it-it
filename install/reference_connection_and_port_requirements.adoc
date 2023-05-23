@@ -72,7 +72,7 @@ Host plug-in Windows
 
 Oltre alle porte 135 e 445, dovrebbe essere aperto anche l'intervallo di porte dinamiche specificato da Microsoft. Le operazioni di installazione remota utilizzano il servizio WMI (Windows Management Instrumentation), che ricerca dinamicamente questo intervallo di porte.
 
-Per informazioni sull'intervallo di porte dinamiche supportato, vedere https://["Panoramica del servizio e requisiti della porta di rete per Windows"^]
+Per informazioni sull'intervallo di porte dinamiche supportato, vedere https://support.microsoft.com/kb/832017["Panoramica del servizio e requisiti della porta di rete per Windows"^]
 
 Le porte vengono utilizzate per la comunicazione tra il server SnapCenter e l'host su cui viene installato il plug-in. Per inviare i binari dei pacchetti plug-in agli host plug-in di Windows, le porte devono essere aperte solo sull'host plug-in e possono essere chiuse dopo l'installazione.
 

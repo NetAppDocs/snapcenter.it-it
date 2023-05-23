@@ -25,7 +25,7 @@ Le risorse sono i database, le istanze dell'applicazione, i gruppi di disponibil
 * Per rilevare i database Microsoft SQL in un cluster Windows, è necessario sbloccare la porta TCP/IP FCI (failover Cluster Instance).
 * Se i database risiedono su LUN o VMDK VMware RDM, è necessario implementare il plug-in SnapCenter per VMware vSphere e registrare il plug-in con SnapCenter.
 +
-Per ulteriori informazioni, vedere https://["Implementare il plug-in SnapCenter per VMware vSphere"^]
+Per ulteriori informazioni, vedere https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html["Implementare il plug-in SnapCenter per VMware vSphere"^]
 
 * Se l'host viene aggiunto con gMSA e gMSA dispone dei privilegi di accesso e amministratore di sistema, gMSA verrà utilizzato per connettersi all'istanza SQL.
 

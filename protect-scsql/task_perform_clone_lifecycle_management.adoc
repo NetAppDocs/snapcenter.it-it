@@ -112,7 +112,7 @@ Il timeout predefinito dello script è di 60 secondi.
 NOTE: Per la notifica via email, è necessario aver specificato i dettagli del server SMTP utilizzando la GUI o il comando PowerShell Set-SmtpServer.
 
 +
-Per EMS, fare riferimento a. https://["Gestire la raccolta di dati EMS"]
+Per EMS, fare riferimento a. https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_ems_data_collection.html["Gestire la raccolta di dati EMS"]
 
 . Esaminare il riepilogo, quindi fare clic su *fine*.
 

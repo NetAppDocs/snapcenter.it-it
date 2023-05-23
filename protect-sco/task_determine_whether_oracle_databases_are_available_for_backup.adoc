@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials,SnapCenter Plug-in for Oracle Databases, non-database entries, oratab 
 summary: 'Le risorse sono database Oracle sull"host gestiti da SnapCenter. È possibile aggiungere questi database ai gruppi di risorse per eseguire operazioni di protezione dei dati dopo aver individuato i database disponibili.' 
 ---
-= Determinare se i database Oracle sono disponibili per il backup
+= Scopri i database Oracle disponibili per il backup
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,54 +18,15 @@ Le risorse sono database Oracle sull'host gestiti da SnapCenter. È possibile ag
 * È necessario completare attività come l'installazione del server SnapCenter, l'aggiunta di host, la creazione di connessioni al sistema di storage e l'aggiunta di credenziali.
 * Se i database risiedono su un disco macchina virtuale (VMDK) o su un RDM (raw device mapping), è necessario implementare il plug-in SnapCenter per VMware vSphere e registrare il plug-in con SnapCenter.
 +
-Per ulteriori informazioni, vedere https://["Implementare il plug-in SnapCenter per VMware vSphere"^].
+Per ulteriori informazioni, vedere https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html["Implementare il plug-in SnapCenter per VMware vSphere"^].
 
 * Se i database risiedono su un file system VMDK, è necessario aver effettuato l'accesso a vCenter e aver effettuato la navigazione in *Opzioni VM* > *Avanzate* > *Modifica configurazione* per impostare il valore di _disk.enableUUID_ su true per la macchina virtuale.
 * È necessario aver esaminato il processo seguito da SnapCenter per individuare diversi tipi e versioni di database Oracle.
 
 
-*A proposito di questa attività*
-
-Dopo aver installato il plug-in, tutti i database su quell'host vengono automaticamente rilevati e visualizzati nella pagina risorse.
-
-I database devono trovarsi almeno nello stato montato o superiore per consentire il rilevamento dei database. In un ambiente Oracle Real Application Clusters (RAC), l'istanza del database RAC nell'host in cui viene eseguito il rilevamento deve trovarsi almeno nello stato montato o superiore per consentire il rilevamento dell'istanza del database. È possibile aggiungere ai gruppi di risorse solo i database rilevati correttamente.
-
-Se è stato eliminato un database Oracle sull'host, il server SnapCenter non sarà a conoscenza e elenterà il database cancellato. È necessario aggiornare manualmente le risorse per aggiornare l'elenco delle risorse SnapCenter.
-
-*Fasi*
-
-. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
-. Nella pagina Resources (risorse), selezionare *Database* dall'elenco *View* (Visualizza).
-+
-Fare clic su image:../media/filter_icon.gif[""], quindi selezionare il nome host e il tipo di database per filtrare le risorse. Quindi, fare clic su image:../media/filter_icon.gif[""] per chiudere il pannello dei filtri.
-
-. Fare clic su *Aggiorna risorse*.
-+
-In uno scenario RAC One Node, il database viene rilevato come database RAC sul nodo in cui è attualmente ospitato.
 
 
-
-*Risultati*
-
-I database vengono visualizzati insieme a informazioni quali tipo di database, nome host o cluster, criteri e gruppi di risorse associati e stato.
-
-
-IMPORTANT: È necessario aggiornare le risorse se i database vengono rinominati al di fuori di SnapCenter.
-
-* Se il database si trova su un sistema di storage non NetApp, l'interfaccia utente visualizza un messaggio non disponibile per il backup nella colonna Stato generale.
-+
-Non è possibile eseguire operazioni di protezione dei dati sul database su un sistema di storage non NetApp.
-
-* Se il database si trova su un sistema storage NetApp e non è protetto, l'interfaccia utente visualizza un messaggio non protetto nella colonna Stato generale.
-* Se il database si trova su un sistema storage NetApp e viene protetto, l'interfaccia utente visualizza un messaggio Available for backup (disponibile per il backup) nella colonna Overall Status (Stato generale).
-
-
-
-NOTE: Se è stata attivata l'autenticazione di un database Oracle, nella vista delle risorse viene visualizzata un'icona a forma di lucchetto rosso. È necessario configurare le credenziali del database per proteggere il database o aggiungerlo al gruppo di risorse per eseguire le operazioni di protezione dei dati.
-
-
-
-== Come impedire a SnapCenter di rilevare voci non di database
+== Fase 1: Impedire a SnapCenter di rilevare voci non del database
 
 È possibile impedire a SnapCenter di rilevare voci non di database aggiunte nel file oratab.
 
@@ -104,3 +65,44 @@ Le voci non di database aggiunte in *sc_oratab.config* non verranno elencate nel
 
 
 IMPORTANT: Si consiglia sempre di eseguire un backup del file sc_oratab.config prima di aggiornare il plug-in SnapCenter.
+
+
+
+== Fase 2: Individuare le risorse
+
+Dopo aver installato il plug-in, tutti i database su quell'host vengono automaticamente rilevati e visualizzati nella pagina risorse.
+
+I database devono trovarsi almeno nello stato montato o superiore per consentire il rilevamento dei database. In un ambiente Oracle Real Application Clusters (RAC), l'istanza del database RAC nell'host in cui viene eseguito il rilevamento deve trovarsi almeno nello stato montato o superiore per consentire il rilevamento dell'istanza del database. È possibile aggiungere ai gruppi di risorse solo i database rilevati correttamente.
+
+Se è stato eliminato un database Oracle sull'host, il server SnapCenter non sarà a conoscenza e elenterà il database cancellato. È necessario aggiornare manualmente le risorse per aggiornare l'elenco delle risorse SnapCenter.
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina Resources (risorse), selezionare *Database* dall'elenco *View* (Visualizza).
++
+Fare clic su image:../media/filter_icon.gif[""], quindi selezionare il nome host e il tipo di database per filtrare le risorse. Quindi, fare clic su image:../media/filter_icon.gif[""] per chiudere il pannello dei filtri.
+
+. Fare clic su *Aggiorna risorse*.
++
+In uno scenario RAC One Node, il database viene rilevato come database RAC sul nodo in cui è attualmente ospitato.
+
+
+
+*Risultati*
+
+I database vengono visualizzati insieme a informazioni quali tipo di database, nome host o cluster, criteri e gruppi di risorse associati e stato.
+
+
+IMPORTANT: È necessario aggiornare le risorse se i database vengono rinominati al di fuori di SnapCenter.
+
+* Se il database si trova su un sistema di storage non NetApp, l'interfaccia utente visualizza un messaggio non disponibile per il backup nella colonna Stato generale.
++
+Non è possibile eseguire operazioni di protezione dei dati sul database su un sistema di storage non NetApp.
+
+* Se il database si trova su un sistema storage NetApp e non è protetto, l'interfaccia utente visualizza un messaggio non protetto nella colonna Stato generale.
+* Se il database si trova su un sistema storage NetApp e viene protetto, l'interfaccia utente visualizza un messaggio Available for backup (disponibile per il backup) nella colonna Overall Status (Stato generale).
+
+
+
+NOTE: Se è stata attivata l'autenticazione di un database Oracle, nella vista delle risorse viene visualizzata un'icona a forma di lucchetto rosso. È necessario configurare le credenziali del database per proteggere il database o aggiungerlo al gruppo di risorse per eseguire le operazioni di protezione dei dati.

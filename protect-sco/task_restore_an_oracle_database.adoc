@@ -170,8 +170,8 @@ Se i log di archiviazione vengono annullati come parte del backup e sono stati m
 
 NOTE: Verificare il percorso e il contenuto del percorso di montaggio prima di inserirlo come percorso di log esterno.
 
-** http://["Report tecnico di NetApp 4591: Backup, ripristino, replica e DR per la protezione dei dati del database"^]
-** https://["Operazione non riuscita con errore ora-00308"^]
+** http://www.netapp.com/us/media/tr-4591.pdf["Report tecnico di NetApp 4591: Backup, ripristino, replica e DR per la protezione dei dati del database"^]
+** https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/ORA-00308%3A_cannot_open_archived_log_ORA_LOG_arch1_123_456789012.arc["Operazione non riuscita con errore ora-00308"^]
 
 
 |===
@@ -232,8 +232,8 @@ NOTE: Per la notifica via email, è necessario specificare i dettagli del server
 
 *Per ulteriori informazioni*
 
-* https://["Il database Oracle RAC One Node viene ignorato per l'esecuzione delle operazioni SnapCenter"^]
-* https://["Impossibile eseguire il ripristino da una posizione SnapMirror o SnapVault secondaria"^]
-* https://["Impossibile eseguire il ripristino da un backup di un'incarnazione orfana"^]
-* https://["Parametri personalizzabili per operazioni di backup, ripristino e clonazione su sistemi AIX"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Oracle_RAC_One_Node_database_is_skipped_for_performing_SnapCenter_operations["Il database Oracle RAC One Node viene ignorato per l'esecuzione delle operazioni SnapCenter"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_restore_from_a_secondary_SnapMirror_or_SnapVault_location["Impossibile eseguire il ripristino da una posizione SnapMirror o SnapVault secondaria"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_restore_when_a_backup_of_an_orphan_incarnation_is_selected["Impossibile eseguire il ripristino da un backup di un'incarnazione orfana"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/What_are_the_customizable_parameters_for_backup_restore_and_clone_operations_on_AIX_systems["Parametri personalizzabili per operazioni di backup, ripristino e clonazione su sistemi AIX"^]
 

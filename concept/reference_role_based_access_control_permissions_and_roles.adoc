@@ -40,7 +40,7 @@ Per la gestione della protezione dei dati coerente con le macchine virtuali di m
 * Ripristino del file ospite SCV
 
 
-Per ulteriori informazioni, vedere https://["Tipi di plug-in RBAC per SnapCenter per utenti di VMware vSphere"^]
+Per ulteriori informazioni, vedere https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_types_of_rbac_for_snapcenter_users.html["Tipi di plug-in RBAC per SnapCenter per utenti di VMware vSphere"^]
 
 |===
 

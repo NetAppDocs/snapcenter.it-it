@@ -30,4 +30,4 @@ Https://<OVA_IP_address_or_host_name>:<scv_plugin_port>/api/swagger-ui.html n.
 |===
 Per informazioni sulle API REST di SnapCenter, vedere link:../sc-automation/overview_rest_apis.html["Panoramica delle API REST"^]
 
-Per informazioni sulle API REST del plug-in SnapCenter per VMware vSphere, vedere https://["Plug-in SnapCenter per le API REST di VMware vSphere"^]
+Per informazioni sulle API REST del plug-in SnapCenter per VMware vSphere, vedere https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_rest_apis_overview.html["Plug-in SnapCenter per le API REST di VMware vSphere"^]

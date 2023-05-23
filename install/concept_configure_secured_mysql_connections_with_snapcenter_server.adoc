@@ -30,7 +30,7 @@ Vengono generati i seguenti certificati:
 
 . Impostare i certificati SSL e i file delle chiavi per i server e i client MySQL su Windows utilizzando il comando openssl.
 +
-Per ulteriori informazioni, vedere https://["MySQL versione 5.7: Creazione di certificati e chiavi SSL con openssl"^]
+Per ulteriori informazioni, vedere https://dev.mysql.com/doc/refman/5.7/en/creating-ssl-files-using-openssl.html["MySQL versione 5.7: Creazione di certificati e chiavi SSL con openssl"^]
 
 +
 
@@ -146,7 +146,7 @@ Un certificato CA viene generato su uno dei nodi ha e questo certificato CA vien
 
 . Per il primo nodo ha, impostare i certificati SSL e i file delle chiavi per i server e i client MySQL su Windows utilizzando il comando openssl.
 +
-Per ulteriori informazioni, vedere https://["MySQL versione 5.7: Creazione di certificati e chiavi SSL con openssl"^]
+Per ulteriori informazioni, vedere https://dev.mysql.com/doc/refman/5.7/en/creating-ssl-files-using-openssl.html["MySQL versione 5.7: Creazione di certificati e chiavi SSL con openssl"^]
 
 +
 
@@ -221,7 +221,7 @@ NOTE: Non è necessario creare nuovamente un certificato CA. Creare solo il cert
 
 .. Per il primo nodo ha, impostare i certificati SSL e i file delle chiavi per i server e i client MySQL su Windows utilizzando il comando openssl.
 +
-https://["MySQL versione 5.7: Creazione di certificati e chiavi SSL con openssl"]
+https://dev.mysql.com/doc/refman/5.7/en/creating-ssl-files-using-openssl.html["MySQL versione 5.7: Creazione di certificati e chiavi SSL con openssl"]
 
 +
 

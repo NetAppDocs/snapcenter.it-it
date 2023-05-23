@@ -33,9 +33,9 @@ IMPORTANT: Se nel browser Web sono aperte più schede, la chiusura della scheda 
 |===
 L'URL GUI predefinito è una connessione sicura alla porta predefinita 8146 sul server in cui è installato il server SnapCenter (_ https://server:8146_). Se durante l'installazione di SnapCenter è stata fornita una porta server diversa, viene utilizzata tale porta.
 
-Per l'implementazione ad alta disponibilità (ha), è necessario accedere a SnapCenter utilizzando l'IP del cluster virtuale _ https://Virtual_Cluster_IP_or_FQDN:8146_. Se l'interfaccia utente di SnapCenter non viene visualizzata quando si passa a _ https://Virtual_Cluster_IP_or_FQDN:8146_ in Internet Explorer (IE), è necessario aggiungere l'indirizzo IP del cluster virtuale o l'FQDN come sito attendibile in IE su ciascun host plug-in oppure disattivare la protezione avanzata IE su ciascun host plug-in. Per ulteriori informazioni, vedere https://["Impossibile accedere all'indirizzo IP del cluster dall'esterno della rete"^].
+Per l'implementazione ad alta disponibilità (ha), è necessario accedere a SnapCenter utilizzando l'IP del cluster virtuale _ https://Virtual_Cluster_IP_or_FQDN:8146_. Se l'interfaccia utente di SnapCenter non viene visualizzata quando si passa a _ https://Virtual_Cluster_IP_or_FQDN:8146_ in Internet Explorer (IE), è necessario aggiungere l'indirizzo IP del cluster virtuale o l'FQDN come sito attendibile in IE su ciascun host plug-in oppure disattivare la protezione avanzata IE su ciascun host plug-in. Per ulteriori informazioni, vedere https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_access_cluster_IP_address_from_outside_network["Impossibile accedere all'indirizzo IP del cluster dall'esterno della rete"^].
 
-Oltre a utilizzare l'interfaccia grafica di SnapCenter, è possibile utilizzare i cmdlet PowerShell per creare script per eseguire operazioni di configurazione, backup e ripristino. Alcuni cmdlet potrebbero essere stati modificati con ogni release di SnapCenter. Il https://["Guida di riferimento al cmdlet del software SnapCenter"^] contiene i dettagli.
+Oltre a utilizzare l'interfaccia grafica di SnapCenter, è possibile utilizzare i cmdlet PowerShell per creare script per eseguire operazioni di configurazione, backup e ripristino. Alcuni cmdlet potrebbero essere stati modificati con ogni release di SnapCenter. Il https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["Guida di riferimento al cmdlet del software SnapCenter"^] contiene i dettagli.
 
 
 NOTE: Se si effettua l'accesso a SnapCenter per la prima volta, è necessario effettuare l'accesso utilizzando le credenziali fornite durante il processo di installazione.
@@ -78,7 +78,7 @@ L'utente corrente e il ruolo associato vengono visualizzati nella parte superior
 
 Viene visualizzata la pagina Dashboard.
 
-Se la registrazione non riesce e viene visualizzato l'errore che indica che il sito non può essere raggiunto, è necessario mappare il certificato SSL a SnapCenter. https://["Scopri di più"^]
+Se la registrazione non riesce e viene visualizzato l'errore che indica che il sito non può essere raggiunto, è necessario mappare il certificato SSL a SnapCenter. https://kb.netapp.com/?title=Advice_and_Troubleshooting%2FData_Protection_and_Security%2FSnapCenter%2FSnapCenter_will_not_open_with_error_%2522This_site_can%2527t_be_reached%2522["Scopri di più"^]
 
 *Al termine*
 

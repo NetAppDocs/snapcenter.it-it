@@ -25,7 +25,7 @@ link:concept_develop_a_plug_in_for_your_application.html["Sviluppare un plug-in 
 
 *A proposito di questa attività*
 
-È inoltre possibile aggiungere risorse per applicazioni MySQL e DB2. Questi plug-in possono essere scaricati da https://["Storage Automation Store di NetApp"].
+È inoltre possibile aggiungere risorse per applicazioni MySQL e DB2. Questi plug-in possono essere scaricati da https://automationstore.netapp.com/home.shtml["Storage Automation Store di NetApp"].
 
 *Fasi*
 

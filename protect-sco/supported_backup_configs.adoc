@@ -1,0 +1,47 @@
+---
+permalink: protect-sco/supported_backup_configs.html 
+sidebar: sidebar 
+keywords: backup type, preferred nodes, catalog backups, schedules, backup name format, retention, verification 
+summary: SnapCenter supporta il backup di diverse configurazioni di database Oracle. 
+---
+= Configurazioni di database Oracle supportate per i backup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter supporta il backup di diverse configurazioni di database Oracle.
+
+* Oracle Standalone
+* Oracle Real Application Clusters (RAC)
+* Oracle Standalone Legacy
+* Database Oracle Standalone Container (CDB)
+* Oracle Data Guard in standby
++
+È possibile creare solo backup offline dei database di standby di Data Guard. Backup offline-shutdown, backup solo log di archiviazione e backup completo non sono supportati.
+
+* Oracle Active Data Guard in standby
++
+È possibile creare solo backup online dei database di standby di Active Data Guard. Il backup solo del registro di archiviazione e il backup completo non sono supportati.
+
++
+Prima di creare un backup del database di standby Data Guard o Active Data Guard, il processo di ripristino gestito (MRP) viene interrotto e, una volta creato, viene avviato MRP.
+
+* Gestione automatica dello storage (ASM)
++
+** ASM standalone e ASM RAC su Virtual Machine Disk (VMDK)
++
+Tra tutti i metodi di ripristino supportati per i database Oracle, è possibile eseguire solo il ripristino Connect-and-copy dei database RAC ASM su VMDK.
+
+** ASM standalone e ASM RAC on Raw Device Mapping (RDM) + è possibile eseguire operazioni di backup, ripristino e clonazione sui database Oracle su ASM, con o senza ASMLib.
+** Oracle ASM Filter driver (ASMFD)
++
+Le operazioni di migrazione PDB e clonazione PDB non sono supportate.
+
+** Oracle Flex ASM
+
+
+
+
+Per informazioni aggiornate sulle versioni di Oracle supportate, consultare https://imt.netapp.com/matrix/imt.jsp?components=105283;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^].

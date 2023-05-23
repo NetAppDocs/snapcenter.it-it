@@ -17,7 +17,7 @@ Il flusso di lavoro di ripristino e ripristino include la pianificazione, l'esec
 
 Eseguire i seguenti comandi per stabilire la connessione con il server SnapCenter, elencare i backup, recuperare le informazioni e ripristinare il backup.
 
-Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help _command_name_. In alternativa, fare riferimento alla https://["Guida di riferimento al comando software SnapCenter"^].
+Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help _command_name_. In alternativa, fare riferimento alla https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486["Guida di riferimento al comando software SnapCenter"^].
 
 *Fasi*
 

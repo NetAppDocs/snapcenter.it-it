@@ -80,7 +80,7 @@ Il numero di serie della licenza SnapCenter basata sulla capacità è disponibil
 
 *Fasi*
 
-. Accedere al sito di supporto NetApp all'indirizzo http://["mysupport.netapp.com"^].
+. Accedere al sito di supporto NetApp all'indirizzo http://mysupport.netapp.com/["mysupport.netapp.com"^].
 . Accedere a *sistemi* > *licenze software*.
 . Nell'area Selection Criteria (Criteri di selezione), scegliere *SC_STANDARD* dal menu a discesa Show Me All: Serial Numbers and Licenses (Mostra tutti: Numeri di serie e licenze).
 +
@@ -108,7 +108,7 @@ Se si preferisce non inserire le credenziali del sito di supporto NetApp e il nu
 
 *Fasi*
 
-. Passare a. https://["NetApp License file Generator"^].
+. Passare a. https://register.netapp.com/register/eclg.xwic["NetApp License file Generator"^].
 . Inserire le informazioni richieste.
 . Nel campo linea di prodotti, selezionare *SnapCenter standard (basato sulla capacità)* dal menu a discesa.
 . Nel campo Product Serial Number (numero di serie del prodotto), inserire il numero di serie della licenza SnapCenter

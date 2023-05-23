@@ -23,7 +23,7 @@ Prima di ripristinare un database Oracle, assicurarsi che i prerequisiti siano s
 * Nel parametro asm_diskstring, configurare _AFD:*_ se si utilizza ASMFD o configurare _ORCL:*_ se si utilizza ASMLIB.
 +
 
-NOTE: Per informazioni su come modificare il parametro asm_diskstring, vedere https://["Come aggiungere i percorsi dei dischi ad asm_diskstring"^]
+NOTE: Per informazioni su come modificare il parametro asm_diskstring, vedere https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Disk_paths_are_not_added_to_the_asm_diskstring_database_parameter["Come aggiungere i percorsi dei dischi ad asm_diskstring"^]
 
 * È necessario configurare il listener statico nel file *listener.ora* disponibile all'indirizzo _ Oracle_HOME/network/admin_ per i database non ASM e _ Grid_HOME/network/admin_ per i database ASM se l'autenticazione del sistema operativo è stata disattivata e l'autenticazione del database Oracle è stata abilitata per un database Oracle e si desidera ripristinare i file di dati e di controllo di tale database.
 * Se le dimensioni del database sono in terabyte (TB), aumentare il valore del parametro SCORestoreTimeout eseguendo il comando Set- SmConfigSettings.

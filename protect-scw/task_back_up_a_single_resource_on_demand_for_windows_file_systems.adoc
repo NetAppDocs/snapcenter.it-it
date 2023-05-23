@@ -53,7 +53,7 @@ I criteri selezionati sono elencati nella colonna Policy della sezione Configure
 Le pianificazioni configurate sono elencate nella colonna Applied Schedules (Pianificazioni applicate) della sezione Configure schedules for selected policies (Configura pianificazioni per criteri selezionati).
 
 +
-https://["Le operazioni pianificate potrebbero non riuscire"]
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Scheduled_data_protection_operations_fail_if_the_number_of_operations_running_reaches_maximum_limit["Le operazioni pianificate potrebbero non riuscire"]
 
 
 
