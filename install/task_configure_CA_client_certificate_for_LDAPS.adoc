@@ -1,0 +1,43 @@
+---
+permalink: install/task_configure_CA_client_certificate_for_LDAPS.html 
+sidebar: sidebar 
+keywords: CA client certificate, LDAPS 
+summary: 'È necessario configurare il certificato del client CA per LDAPS sul server SnapCenter quando quest"ultimo è configurato con i certificati CA.' 
+---
+= Configurare il certificato del client CA per LDAPS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario configurare il certificato del client CA per LDAPS sul server SnapCenter quando quest'ultimo è configurato con i certificati CA.
+
+*Fasi*
+
+. Accedere alla console di gestione Microsoft (MMC), quindi fare clic su *file* > *Aggiungi/Rimuovi Snapin*.
+. Nella finestra Aggiungi o Rimuovi snap-in, selezionare *certificati*, quindi fare clic su *Aggiungi*.
+. Nella finestra dello snap-in certificati, selezionare l'opzione *account computer*, quindi fare clic su *fine*.
+. Fare clic su *root console* > *certificati – computer locale* > *autorità di certificazione root attendibili* > *certificati*.
+. Fare clic con il pulsante destro del mouse sulla cartella "Trusted Root Certification Authorities", quindi selezionare *All Tasks* > *Import* per avviare l'importazione guidata.
+. Completare la procedura guidata come segue:
++
+|===
+| In questa finestra della procedura guidata... | Effettuare le seguenti operazioni... 
+
+
+ a| 
+Nella seconda pagina della procedura guidata
+ a| 
+Fare clic su *Browse* (Sfoglia), selezionare _Root Certificate_ (certificato principale) e fare clic su *Next* (Avanti).
+
+
+
+ a| 
+Completamento dell'importazione guidata certificati
+ a| 
+Esaminare il riepilogo, quindi fare clic su *fine* per avviare l'importazione.
+
+|===
+. Ripetere i passaggi 5 e 6 per i certificati intermedi.
+

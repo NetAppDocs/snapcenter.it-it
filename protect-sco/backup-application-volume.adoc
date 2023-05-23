@@ -1,0 +1,96 @@
+---
+permalink: protect-sco/backup-application-volume.html 
+sidebar: sidebar 
+keywords: application volume, back up 
+summary: 'È possibile eseguire il backup del volume dell"applicazione dalla pagina risorse se il volume dell"applicazione non fa parte di alcun gruppo di risorse.' 
+---
+= Eseguire il backup del volume dell'applicazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se il volume dell'applicazione non fa parte di alcun gruppo di risorse, è possibile eseguire il backup del volume dell'applicazione dalla pagina risorse.
+
+*A proposito di questa attività*
+
+Per impostazione predefinita, vengono creati i backup del gruppo di coerenza (CG). Se si desidera creare backup basati su volume, impostare il valore *EnableOracleNdvVolumeBasedBackup* su true nel file _web.config_.
+
+*Fasi*
+
+. Nel riquadro di navigazione a sinistra, fare clic su *Resources*, quindi selezionare il plug-in Oracle Database dall'elenco.
+. Nella pagina Resources (risorse), selezionare *Application Volume* (Volume applicazione) dall'elenco *View* (Visualizza).
+. Fare clic su *image:../media/filter_icon.gif[""]*, quindi selezionare il nome host e il tipo di database per filtrare le risorse.
++
+Quindi fare clic su *image:../media/filter_icon.gif[""]* per chiudere il riquadro del filtro.
+
+. Selezionare il volume dell'applicazione di cui si desidera eseguire il backup.
++
+Viene visualizzata la pagina Application volume-Protect.
+
+. Nella pagina Resource, eseguire le seguenti operazioni:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+USA il formato nome personalizzato per la copia Snapshot
+ a| 
+Selezionare questa casella di controllo, quindi immettere un formato nome personalizzato da utilizzare per il nome della copia Snapshot.
+
+Ad esempio, customtext__policy_hostname o resource_hostname. Per impostazione predefinita, al nome della copia Snapshot viene aggiunto un indicatore data e ora.
+
+
+
+ a| 
+Escludi le destinazioni del registro di archiviazione dal backup
+ a| 
+Specificare le destinazioni dei file di log dell'archivio di cui non si desidera eseguire il backup.
+
+|===
+. Nella pagina Criteri, attenersi alla seguente procedura:
++
+.. Selezionare uno o più criteri dall'elenco a discesa.
++
+
+NOTE: Puoi anche creare una policy facendo clic su *image:../media/add_policy_from_resourcegroup.gif[""]*.
+
+
+
++
+Nella sezione Configure schedules for selected policies (Configura pianificazioni per policy selezionate), vengono elencati i criteri selezionati.
+
++
+.. Fare clic su image:../media/add_policy_from_resourcegroup.gif[""] Nella colonna Configure Schedules (Configura pianificazioni) per il criterio per il quale si desidera configurare una pianificazione.
+.. Nella finestra Add schedules for policy _policy_name_, configurare la pianificazione, quindi fare clic su *OK*.
++
+_policy_name_ è il nome del criterio selezionato.
+
++
+Le pianificazioni configurate sono elencate nella colonna Applied Schedules (Pianificazioni applicate).
+
+
+
+. Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
++
+È inoltre necessario specificare gli indirizzi e-mail del mittente e del destinatario e l'oggetto dell'e-mail. Se si desidera allegare il report dell'operazione di backup eseguita sulla risorsa, quindi selezionare *Allega report del processo*.
+
++
+
+NOTE: Per la notifica via email, è necessario aver specificato i dettagli del server SMTP utilizzando la GUI o il comando PowerShell Set-SmtpServer.
+
+. Esaminare il riepilogo, quindi fare clic su *fine*.
++
+Viene visualizzata la pagina della topologia del volume dell'applicazione.
+
+. Fare clic su *Esegui backup ora*.
+. Nella pagina Backup, attenersi alla seguente procedura:
++
+.. Se sono stati applicati più criteri alla risorsa, selezionare il criterio da utilizzare per il backup dall'elenco a discesa *Policy*.
+.. Fare clic su *Backup*.
+
+
+. Monitorare l'avanzamento dell'operazione facendo clic su *Monitor* > *Jobs*.
+

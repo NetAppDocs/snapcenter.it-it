@@ -1,0 +1,31 @@
+---
+permalink: install/reference_domain_and_workgroup_requirements.html 
+sidebar: sidebar 
+keywords: active directory domain, workgroups, multi-domain forests, cross-domain, cross-forest domains 
+summary: 'Il server SnapCenter può essere installato su sistemi che si trovano in un dominio o in un gruppo di lavoro. L"utente utilizzato per l"installazione deve disporre dei privilegi di amministratore sul computer in caso di gruppo di lavoro e dominio.' 
+---
+= Requisiti di dominio e gruppo di lavoro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il server SnapCenter può essere installato su sistemi che si trovano in un dominio o in un gruppo di lavoro. L'utente utilizzato per l'installazione deve disporre dei privilegi di amministratore sul computer in caso di gruppo di lavoro e dominio.
+
+Per installare il server SnapCenter e i plug-in SnapCenter su host Windows, è necessario utilizzare uno dei seguenti elementi:
+
+* *Dominio Active Directory*
++
+È necessario utilizzare un utente di dominio con diritti di amministratore locale. L'utente di dominio deve essere membro del gruppo Administrator locale sull'host Windows.
+
+* *Gruppi di lavoro*
++
+È necessario utilizzare un account locale con diritti di amministratore locale.
+
+
+
+Sebbene siano supportati trust di dominio, foreste di domini multipli e trust tra domini, i domini tra foreste non sono supportati. La documentazione Microsoft sui domini e trust di Active Directory contiene ulteriori informazioni.
+
+
+NOTE: Dopo aver installato il server SnapCenter, non modificare il dominio in cui si trova l'host SnapCenter. Se si rimuove l'host del server SnapCenter dal dominio in cui si trovava quando è stato installato il server SnapCenter e si tenta di disinstallare il server SnapCenter, l'operazione di disinstallazione non riesce.

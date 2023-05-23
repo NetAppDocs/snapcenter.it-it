@@ -1,0 +1,77 @@
+---
+permalink: concept/concept_prescripts_and_postscripts.html 
+sidebar: sidebar 
+keywords: prescript, postscript, script path, script timeout, script types supported 
+summary: 'È possibile utilizzare prescritture e postscript personalizzati come parte delle operazioni di protezione dei dati. Questi script consentono l"automazione prima o dopo il lavoro di protezione dei dati. Ad esempio, è possibile includere uno script che notifica automaticamente gli errori o gli avvisi dei processi di protezione dei dati. Prima di impostare le prescrizioni e i postscript, è necessario comprendere alcuni dei requisiti per la creazione di questi script.' 
+---
+= Prescrizioni e post-script
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare prescritture e postscript personalizzati come parte delle operazioni di protezione dei dati. Questi script consentono l'automazione prima o dopo il lavoro di protezione dei dati. Ad esempio, è possibile includere uno script che notifica automaticamente gli errori o gli avvisi dei processi di protezione dei dati. Prima di impostare le prescrizioni e i postscript, è necessario comprendere alcuni dei requisiti per la creazione di questi script.
+
+
+
+== Tipi di script supportati
+
+Per Windows sono supportati i seguenti tipi di script:
+
+* File batch
+* Script PowerShell
+* Script Perl
+
+
+Sono supportati i seguenti tipi di script per UNIX:
+
+* Script Perl
+* Script Python
+* Script shell
++
+
+NOTE: Insieme alla shell bash di default sono supportate anche altre shell come sh-shell, k-shell e c-shell.
+
+
+
+
+
+== Percorso dello script
+
+Tutte le prescritture e i postscript eseguiti come parte delle operazioni SnapCenter, su sistemi storage non virtualizzati e virtualizzati, vengono eseguiti sull'host plug-in.
+
+* Gli script di Windows devono essere posizionati sull'host del plug-in.
+
+
+
+NOTE: Il percorso prescripts o postscripts non deve includere dischi o condivisioni. Il percorso deve essere relativo al PERCORSO_SCRIPT.
+
+* Gli script UNIX devono essere posizionati sull'host del plug-in.
+
+
+
+NOTE: Il percorso dello script viene convalidato al momento dell'esecuzione.
+
+
+
+== Dove specificare gli script
+
+Gli script sono specificati nelle policy di backup. Quando viene avviato un processo di backup, il criterio associa automaticamente lo script alle risorse di cui viene eseguito il backup. Quando si crea un criterio di backup, è possibile specificare gli argomenti prescrittt e postscript.
+
+
+NOTE: Non è possibile specificare più script.
+
+
+
+== Timeout dello script
+
+Per impostazione predefinita, il timeout è impostato su 60 secondi. È possibile modificare il valore di timeout.
+
+
+
+== Output dello script
+
+La directory predefinita per i file di output delle prescrizioni e dei post-script di Windows è Windows System32.
+
+Non esiste una posizione predefinita per le prescrizioni e i postscript UNIX. È possibile reindirizzare il file di output in qualsiasi posizione preferita.

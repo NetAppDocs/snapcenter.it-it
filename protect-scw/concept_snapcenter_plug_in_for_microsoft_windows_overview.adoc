@@ -1,0 +1,16 @@
+---
+permalink: protect-scw/concept_snapcenter_plug_in_for_microsoft_windows_overview.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for Microsoft Windows 
+summary: 'Il plug-in SnapCenter per Microsoft Windows è un componente sul lato host del software NetApp SnapCenter che consente la gestione della protezione dei dati applicativa delle risorse del file system Microsoft. Inoltre, offre provisioning dello storage, coerenza delle copie Snapshot e recupero dello spazio per i file system Windows. Il plug-in per Windows automatizza le operazioni di backup, ripristino e clonazione del file system nell"ambiente SnapCenter.' 
+---
+= Panoramica del plug-in SnapCenter per Microsoft Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il plug-in SnapCenter per Microsoft Windows è un componente sul lato host del software NetApp SnapCenter che consente la gestione della protezione dei dati applicativa delle risorse del file system Microsoft. Inoltre, offre provisioning dello storage, coerenza delle copie Snapshot e recupero dello spazio per i file system Windows. Il plug-in per Windows automatizza le operazioni di backup, ripristino e clonazione del file system nell'ambiente SnapCenter.
+
+Una volta installato il plug-in per Windows, è possibile utilizzare SnapCenter con la tecnologia NetApp SnapMirror per creare copie mirror dei set di backup su un altro volume e con la tecnologia NetApp SnapVault per eseguire la replica del backup disk-to-disk per l'archiviazione o la conformità agli standard.

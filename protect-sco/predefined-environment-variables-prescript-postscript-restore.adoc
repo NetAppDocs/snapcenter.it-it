@@ -1,0 +1,82 @@
+---
+permalink: protect-sco/predefined-environment-variables-prescript-postscript-restore.html 
+sidebar: sidebar 
+keywords: environment variable, predefined, prescript, postscript, restore 
+summary: SnapCenter consente di utilizzare le variabili di ambiente predefinite quando si eseguono prespt e postscript durante il ripristino di un database. 
+---
+= Variabili di ambiente predefinite per il ripristino di specifiche prescrittt e postscript
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter consente di utilizzare le variabili di ambiente predefinite quando si eseguono prespt e postscript durante il ripristino di un database.
+
+*Variabili di ambiente predefinite supportate per il ripristino di un database*
+
+* *SC_JOB_ID* specifica l'ID lavoro dell'operazione.
++
+Esempio: 257
+
+* *SC_ORACLE_SID* specifica l'identificatore di sistema del database.
++
+Se l'operazione coinvolge più database, questo conterrà nomi di database separati da pipe.
+
++
+Esempio: NFSB31
+
+* *SC_HOST* specifica il nome host del database.
++
+Questo parametro verrà popolato per i volumi dell'applicazione.
+
++
+Esempio: scsmohost2.gdl.englabe.netapp.com
+
+* *SC_OS_USER* specifica il proprietario del sistema operativo del database.
++
+Esempio: oracle
+
+* *SC_OS_GROUP* specifica il gruppo del sistema operativo del database.
++
+Esempio: Oinstall
+
+* *SC_BACKUP_NAME* specifica il nome del backup.
++
+Questo parametro verrà popolato per i volumi dell'applicazione.
+
++
+Esempi:
+
++
+** Se il database non è in esecuzione in modalità ARCHIVELOG: DATA@RG2_scspr2417819002_07-20-2021_12.16.48.9267_0|LOG@RG2_scspr2417819002_07-20-2021_12.16.48.9267_1
+** Se il database è in esecuzione in modalità ARCHIVELOG: DATA@RG2_scspr2417819002_07-20-2021_12.16.48.9267_0|LOG@RG2_scspr2417819002_07-20-2021_12.16.48.9267_1,RG2_scspr2417819002_07-21-2021_12.16.48.9267_1,RG2_scspr2417819002_07-22-2021_12.16.48.9267_1
+
+
+* *SC_BACKUP_ID* specifica l'ID del backup.
++
+Questo parametro verrà popolato per i volumi dell'applicazione.
+
++
+Esempi:
+
++
+** Se il database non è in esecuzione in modalità ARCHIVELOG: DATA@203|LOG@205
+** Se il database è in esecuzione in modalità ARCHIVELOG: DATA@203|LOG@205,206,207
+
+
+* *Nome_GRUPPO_RISORSA_SC* specifica il nome del gruppo di risorse.
++
+Esempio: RG1
+
+* *SC_ORACLE_HOME* specifica il percorso della home directory Oracle.
++
+Esempio: /Ora01/app/oracle/product/18.1.0/db_1
+
+* *SC_RECOVERY_TYPE* specifica i file ripristinati e l'ambito del ripristino.
++
+Esempio: RESTORESCOPE:usingBackupControlfile=false|RECOVERYSCOPE:allLogs=true,noLogs=false,untiltime=false,untilscn=false.
+
+
+
+Per informazioni sui delimitatori, vedere link:../protect-sco/predefined-environment-variables-prescript-postscript-backup.html#supported-delimiters["Delimitatori supportati"^].

@@ -1,0 +1,16 @@
+---
+permalink: protect-scsql/concept_when_to_schedule_verification_jobs.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Sebbene SnapCenter sia in grado di verificare i backup subito dopo averli creati, ciò può aumentare significativamente il tempo necessario per completare il processo di backup e richiede un uso intensivo di risorse. Quindi, è quasi sempre meglio pianificare la verifica in un lavoro separato per un secondo momento. Ad esempio, se si esegue il backup di un database alle 17:00 ogni giorno, è possibile programmare la verifica un"ora più tardi alle 18:00' 
+---
+= Quando pianificare i processi di verifica
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sebbene SnapCenter sia in grado di verificare i backup subito dopo averli creati, ciò può aumentare significativamente il tempo necessario per completare il processo di backup e richiede un uso intensivo di risorse. Quindi, è quasi sempre meglio pianificare la verifica in un lavoro separato per un secondo momento. Ad esempio, se si esegue il backup di un database alle 17:00 ogni giorno, è possibile programmare la verifica un'ora più tardi alle 18:00
+
+Per lo stesso motivo, di solito non è necessario eseguire la verifica del backup ogni volta che si esegue un backup. L'esecuzione di verifiche a intervalli regolari ma meno frequenti è in genere sufficiente per garantire l'integrità del backup. Un singolo processo di verifica può verificare più backup contemporaneamente.

@@ -1,0 +1,132 @@
+---
+permalink: protect-sce/task_define_a_backup_strategy_for_exchange_server_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La definizione di una strategia di backup prima di creare i processi di backup consente di garantire la presenza dei backup necessari per ripristinare correttamente i database. Il contratto SLA (Service Level Agreement), l"RTO (Recovery Time Objective) e l"RPO (Recovery Point Objective) determinano in gran parte la strategia di backup.' 
+---
+= Definire una strategia di backup per le risorse di Exchange Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La definizione di una strategia di backup prima di creare i processi di backup consente di garantire la presenza dei backup necessari per ripristinare correttamente i database. Il Service Level Agreement (SLA), l'RTO (Recovery Time Objective) e l'RPO (Recovery Point Objective) determinano in gran parte la strategia di backup.
+
+Uno SLA definisce il livello di servizio previsto e risolve molti problemi relativi al servizio, tra cui la disponibilità e le performance del servizio. L'RTO è il momento in cui un processo di business deve essere ripristinato dopo un'interruzione del servizio. Un RPO definisce la strategia per l'età dei file che devono essere ripristinati dallo storage di backup per consentire il ripristino delle normali operazioni dopo un errore. SLA, RTO e RPO contribuiscono alla strategia di backup.
+
+
+
+== Tipi di backup supportati per il database Exchange
+
+Il backup delle cassette postali Exchange mediante SnapCenter richiede la scelta del tipo di risorsa, ad esempio database e gruppi di disponibilità database (DAG). La tecnologia di copia Snapshot consente di creare copie online di sola lettura dei volumi su cui risiedono le risorse.
+
+|===
+| Tipo di backup | Descrizione 
+
+
+ a| 
+Backup completo e del log
+ a| 
+Esegue il backup dei database e di tutti i log delle transazioni, inclusi i log troncati.
+
+Al termine di un backup completo, Exchange Server tronca i log delle transazioni già impegnati nel database.
+
+In genere, scegliere questa opzione. Tuttavia, se il tempo di backup è breve, è possibile scegliere di non eseguire un backup del log delle transazioni con un backup completo.
+
+
+
+ a| 
+Backup completo
+ a| 
+Esegue il backup di database e log delle transazioni.
+
+Non viene eseguito il backup dei log delle transazioni troncati.
+
+
+
+ a| 
+Backup del log
+ a| 
+Esegue il backup di tutti i log delle transazioni.
+
+Non viene eseguito il backup dei log troncati che sono già stati impegnati nel database. Se si pianificano backup frequenti del log delle transazioni tra backup completi del database, è possibile scegliere punti di ripristino granulari.
+
+|===
+
+
+== Pianificazioni di backup per i plug-in del database
+
+La frequenza di backup (tipo di pianificazione) viene specificata nei criteri; nella configurazione del gruppo di risorse viene specificata una pianificazione di backup. Il fattore più critico per determinare una frequenza o una pianificazione di backup è il tasso di cambiamento per la risorsa e l'importanza dei dati. È possibile eseguire il backup di una risorsa utilizzata in modo pesante ogni ora, mentre è possibile eseguire il backup di una risorsa utilizzata raramente una volta al giorno. Altri fattori includono l'importanza della risorsa per la tua organizzazione, il tuo Service Level Agreement (SLA) e il tuo Recover Point Objective (RPO).
+
+Uno SLA definisce il livello di servizio previsto e risolve molti problemi relativi al servizio, tra cui la disponibilità e le performance del servizio. Un RPO definisce la strategia per l'età dei file che devono essere ripristinati dallo storage di backup per consentire il ripristino delle normali operazioni dopo un errore. SLA e RPO contribuiscono alla strategia di protezione dei dati.
+
+Anche per una risorsa molto utilizzata, non è necessario eseguire un backup completo più di una o due volte al giorno. Ad esempio, i backup regolari del log delle transazioni potrebbero essere sufficienti per garantire la disponibilità dei backup necessari. Più spesso si esegue il backup dei database, minore è il numero di log delle transazioni che SnapCenter deve utilizzare al momento del ripristino, con conseguente accelerazione delle operazioni di ripristino.
+
+Le pianificazioni dei backup sono in due parti, come segue:
+
+* Frequenza di backup
++
+La frequenza di backup (con quale frequenza devono essere eseguiti i backup), denominata _tipo di pianificazione_ per alcuni plug-in, fa parte di una configurazione di policy. È possibile selezionare ogni ora, ogni giorno, ogni settimana o ogni mese come frequenza di backup per la policy. Se non si seleziona una di queste frequenze, la policy creata è solo on-demand. Puoi accedere alle policy facendo clic su *Impostazioni* > *politiche*.
+
+* Pianificazioni di backup
++
+Le pianificazioni di backup (esattamente quando devono essere eseguiti i backup) fanno parte di una configurazione di gruppo di risorse. Ad esempio, se si dispone di un gruppo di risorse con una policy configurata per i backup settimanali, è possibile configurare la pianificazione per il backup ogni giovedì alle 10:00. È possibile accedere alle pianificazioni dei gruppi di risorse facendo clic su *risorse* > *gruppi di risorse*.
+
+
+
+
+
+== Numero di processi di backup necessari per i database
+
+I fattori che determinano il numero di processi di backup necessari includono la dimensione della risorsa, il numero di volumi utilizzati, il tasso di cambiamento della risorsa e il contratto SLA (Service Level Agreement).
+
+
+
+== Convenzioni di denominazione del backup
+
+È possibile utilizzare la convenzione di denominazione predefinita per la copia Snapshot o una convenzione di denominazione personalizzata. La convenzione di denominazione predefinita per il backup aggiunge un indicatore data e ora ai nomi delle copie Snapshot che consente di identificare quando sono state create le copie.
+
+La copia Snapshot utilizza la seguente convenzione di denominazione predefinita:
+
+`resourcegroupname_hostname_timestamp`
+
+È necessario assegnare un nome logico ai gruppi di risorse di backup, come nell'esempio seguente:
+
+[listing]
+----
+dts1_mach1x88_03-12-2015_23.17.26
+----
+In questo esempio, gli elementi di sintassi hanno i seguenti significati:
+
+* _dts1_ è il nome del gruppo di risorse.
+* _mach1x88_ è il nome host.
+* _03-12-2015_23.17.26_ indica data e ora.
+
+
+In alternativa, è possibile specificare il formato del nome della copia Snapshot proteggendo le risorse o i gruppi di risorse selezionando *Usa il formato del nome personalizzato per la copia Snapshot*. Ad esempio, customtext_resourcegroup_policy_hostname o resourcegroup_hostname. Per impostazione predefinita, il suffisso dell'indicatore orario viene aggiunto al nome della copia Snapshot.
+
+
+
+== Opzioni di conservazione del backup
+
+È possibile scegliere il numero di giorni per i quali conservare le copie di backup o specificare il numero di copie di backup che si desidera conservare, fino a un massimo di 255 copie ONTAP. Ad esempio, l'organizzazione potrebbe richiedere di conservare 10 giorni di copie di backup o 130 copie di backup.
+
+Durante la creazione di un criterio, è possibile specificare le opzioni di conservazione per il tipo di backup e il tipo di pianificazione.
+
+Se si imposta la replica di SnapMirror, il criterio di conservazione viene mirrorato sul volume di destinazione.
+
+SnapCenter elimina i backup conservati con etichette di conservazione corrispondenti al tipo di pianificazione. Se il tipo di pianificazione è stato modificato per la risorsa o il gruppo di risorse, i backup con la vecchia etichetta del tipo di pianificazione potrebbero rimanere nel sistema.
+
+
+NOTE: Per la conservazione a lungo termine delle copie di backup, è necessario utilizzare il backup di SnapVault.
+
+
+
+== Per quanto tempo conservare i backup del log delle transazioni sul volume di storage di origine per Exchange Server
+
+Il plug-in SnapCenter per Microsoft Exchange Server richiede backup del log delle transazioni per eseguire operazioni di ripristino aggiornate al minuto, che ripristinano il database a un intervallo di tempo compreso tra due backup completi.
+
+Ad esempio, se il plug-in per Exchange ha eseguito un backup completo del log delle transazioni Plus alle 8:00 e un altro backup completo del log delle transazioni alle 17:00, poteva utilizzare l'ultimo backup del log delle transazioni per ripristinare il database in qualsiasi momento tra le 8:00 e alle 17:00 Se i registri delle transazioni non sono disponibili, il plug-in per Exchange può eseguire solo operazioni di ripristino point-in-time, che ripristinano un database al momento in cui il plug-in per Exchange ha completato un backup completo.
+
+In genere, è necessario eseguire operazioni di ripristino fino al minuto per uno o due giorni. Per impostazione predefinita, SnapCenter conserva un minimo di due giorni.

@@ -1,0 +1,32 @@
+---
+permalink: protect-hana/task_clone_sap_hana_resource_backups.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: 'Il flusso di lavoro dei cloni include l"esecuzione dell"operazione di cloni e il monitoraggio dell"operazione.' 
+---
+= Clonare il flusso di lavoro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il flusso di lavoro dei cloni include l'esecuzione dell'operazione di cloni e il monitoraggio dell'operazione.
+
+*A proposito di questa attività*
+
+* È possibile clonare sul server SAP HANA di origine.
+* È possibile clonare i backup delle risorse per i seguenti motivi:
++
+** Per testare le funzionalità che devono essere implementate utilizzando la struttura e il contenuto delle risorse correnti durante i cicli di sviluppo delle applicazioni
+** Per l'estrazione e la manipolazione dei dati durante il popolamento dei data warehouse
+** Per ripristinare i dati cancellati o modificati per errore
+
+
+
+
+Il seguente flusso di lavoro mostra la sequenza in cui è necessario eseguire l'operazione di clonazione:
+
+image::../media/sco_scc_wfs_clone_workflow.png[Clonare il flusso di lavoro]
+
+È inoltre possibile utilizzare i cmdlet PowerShell manualmente o negli script per eseguire operazioni di backup, ripristino e clonazione. La guida in linea del cmdlet di SnapCenter e le informazioni di riferimento del cmdlet contengono informazioni dettagliate sui cmdlet di PowerShell.

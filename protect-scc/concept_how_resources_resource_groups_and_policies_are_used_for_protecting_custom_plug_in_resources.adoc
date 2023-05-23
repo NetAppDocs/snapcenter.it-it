@@ -1,0 +1,30 @@
+---
+permalink: protect-scc/concept_how_resources_resource_groups_and_policies_are_used_for_protecting_custom_plug_in_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: Prima di utilizzare SnapCenter, è utile comprendere i concetti di base relativi alle operazioni di backup, clonazione e ripristino che si desidera eseguire. Interagisci con risorse, gruppi di risorse e policy per diverse operazioni. 
+---
+= Utilizzo di risorse, gruppi di risorse e policy per la protezione delle risorse plug-in personalizzate
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di utilizzare SnapCenter, è utile comprendere i concetti di base relativi alle operazioni di backup, clonazione e ripristino che si desidera eseguire. Interagisci con risorse, gruppi di risorse e policy per diverse operazioni.
+
+* In genere, le risorse sono database, file system Windows o macchine virtuali di cui si esegue il backup o la clonazione con SnapCenter.
+* Un gruppo di risorse SnapCenter è un insieme di risorse su un host o cluster.
++
+Quando si esegue un'operazione su un gruppo di risorse, tale operazione viene eseguita sulle risorse definite nel gruppo di risorse in base alla pianificazione specificata per il gruppo di risorse.
+
++
+È possibile eseguire il backup su richiesta di una singola risorsa o di un gruppo di risorse. È inoltre possibile eseguire backup pianificati per singole risorse e gruppi di risorse.
+
+* I criteri specificano la frequenza di backup, la conservazione delle copie, la replica, gli script e altre caratteristiche delle operazioni di protezione dei dati.
++
+Quando si crea un gruppo di risorse, si selezionano uno o più criteri per tale gruppo. È inoltre possibile selezionare un criterio quando si esegue un backup su richiesta per una singola risorsa.
+
+
+
+Un gruppo di risorse definisce _cosa_ si desidera proteggere e quando si desidera proteggerlo in termini di giorno e ora. Pensa a una policy come a definire _come_ la vuoi proteggere. Ad esempio, se si esegue il backup di tutti i database o di tutti i file system di un host, è possibile creare un gruppo di risorse che includa tutti i database o tutti i file system dell'host. È quindi possibile associare due criteri al gruppo di risorse: Una policy giornaliera e una policy oraria. Quando si crea il gruppo di risorse e si allegano i criteri, è possibile configurare il gruppo di risorse in modo che esegua un backup basato su file ogni giorno e un altro programma che esegua il backup basato su Snapshot ogni ora.

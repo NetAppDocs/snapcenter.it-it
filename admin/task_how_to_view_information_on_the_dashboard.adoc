@@ -1,0 +1,23 @@
+---
+permalink: admin/task_how_to_view_information_on_the_dashboard.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Dal riquadro di navigazione sinistro di SnapCenter, è possibile visualizzare vari riquadri o display del dashboard, insieme ai dettagli del sistema associati. Il numero di display disponibili nella dashboard è fisso e non può essere modificato. Il contenuto fornito all"interno di ogni display dipende dal controllo dell"accesso basato sui ruoli (RBAC).' 
+---
+= Come visualizzare le informazioni sulla dashboard
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dal riquadro di navigazione sinistro di SnapCenter, è possibile visualizzare vari riquadri o display del dashboard, insieme ai dettagli del sistema associati. Il numero di display disponibili nella dashboard è fisso e non può essere modificato. Il contenuto fornito all'interno di ogni display dipende dal RBAC (role-based access control).
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *Dashboard*.
+. Fare clic sulle aree attive su ciascun display per ottenere ulteriori informazioni.
++
+Ad esempio, facendo clic su un grafico in *Jobs*, si reindirizza alla pagina Monitor per ulteriori informazioni sulla selezione. Facendo clic su un grafico in *Riepilogo protezione*, si accede nuovamente alla pagina Report, che fornisce ulteriori informazioni sulla selezione.
+
+

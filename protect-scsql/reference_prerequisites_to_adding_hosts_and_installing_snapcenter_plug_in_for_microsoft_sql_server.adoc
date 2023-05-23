@@ -1,0 +1,35 @@
+---
+permalink: protect-scsql/reference_prerequisites_to_adding_hosts_and_installing_snapcenter_plug_in_for_microsoft_sql_server.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: Prima di aggiungere un host e installare i pacchetti plug-in, è necessario completare tutti i requisiti. 
+---
+= Prerequisiti per aggiungere host e installare il plug-in SnapCenter per Microsoft SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di aggiungere un host e installare i pacchetti plug-in, è necessario completare tutti i requisiti.
+
+* Se si utilizza iSCSI, il servizio iSCSI deve essere in esecuzione.
+* È necessario disporre di un utente con privilegi di amministratore locale con autorizzazioni di accesso locale sull'host remoto.
+* Se si gestiscono i nodi del cluster in SnapCenter, è necessario disporre di un utente con privilegi amministrativi per tutti i nodi del cluster.
+* È necessario disporre di un utente con autorizzazioni sysadmin su SQL Server.
++
+Il plug-in SnapCenter per Microsoft SQL Server utilizza Microsoft VDI Framework, che richiede l'accesso sysadmin.
+
++
+http://["Articolo di supporto Microsoft 2926557: Le operazioni di backup e ripristino VDI di SQL Server richiedono privilegi di amministratore di sistema"]
+
+* Quando si installa un plug-in su un host Windows, se si specifica una credenziale non integrata o se l'utente appartiene a un utente del gruppo di lavoro locale, è necessario disattivare il controllo dell'account utente sull'host.
+* Se SnapManager per Microsoft SQL Server è installato, è necessario aver arrestato o disattivato il servizio e le pianificazioni.
++
+Se si prevede di importare processi di backup o clonazione in SnapCenter, non disinstallare SnapManager per Microsoft SQL Server.
+
+* L'host deve essere risolvibile con il nome di dominio completo (FQDN) dal server.
++
+Se il file hosts viene modificato in modo da renderlo risolvibile e se nel file hosts sono specificati sia il nome breve che l'FQDN, creare una voce nel file hosts di SnapCenter nel seguente formato: <ip_address> <host_fqdn> <host_name>
+
+

@@ -1,0 +1,562 @@
+---
+permalink: install/task_create_and_manage_disks.html 
+sidebar: sidebar 
+keywords: disks, create, manage, clustered disks, view 
+summary: 'L"host Windows vede le LUN del sistema storage come dischi virtuali. È possibile utilizzare SnapCenter per creare e configurare un LUN connesso a FC o iSCSI.' 
+---
+= Creare e gestire i dischi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'host Windows vede le LUN del sistema storage come dischi virtuali. È possibile utilizzare SnapCenter per creare e configurare un LUN connesso a FC o iSCSI.
+
+* SnapCenter supporta solo dischi di base. I dischi dinamici non sono supportati.
+* Per GPT è consentita una sola partizione di dati e per MBR una partizione primaria con un volume formattato con NTFS o CSVFS e un percorso di montaggio.
+* Stili di partizione supportati: GPT, MBR; in una macchina virtuale VMware UEFI, sono supportati solo i dischi iSCSI
+
+
+
+NOTE: SnapCenter non supporta la ridenominazione di un disco. Se un disco gestito da SnapCenter viene rinominato, le operazioni SnapCenter non avranno esito positivo.
+
+
+
+== Visualizzare i dischi su un host
+
+È possibile visualizzare i dischi su ciascun host Windows gestito con SnapCenter.
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *hosts*.
+. Nella pagina host, fare clic su *dischi*.
+. Selezionare l'host dall'elenco a discesa *host*.
++
+I dischi sono elencati.
+
+
+
+
+
+== Visualizzare i dischi in cluster
+
+È possibile visualizzare i dischi in cluster nel cluster gestito con SnapCenter. I dischi in cluster vengono visualizzati solo quando si seleziona il cluster dall'elenco a discesa host.
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *hosts*.
+. Nella pagina host, fare clic su *dischi*.
+. Selezionare il cluster dall'elenco a discesa *host*.
++
+I dischi sono elencati.
+
+
+
+
+
+== Creazione di LUN o dischi connessi a FC o iSCSI
+
+L'host Windows vede le LUN del sistema storage come dischi virtuali. È possibile utilizzare SnapCenter per creare e configurare un LUN connesso a FC o iSCSI.
+
+Se si desidera creare e formattare dischi al di fuori di SnapCenter, sono supportati solo i file system NTFS e CSVFS.
+
+*Cosa ti serve*
+
+* È necessario aver creato un volume per il LUN sul sistema storage.
++
+Il volume deve contenere solo LUN e solo LUN creati con SnapCenter.
+
++
+
+NOTE: Non è possibile creare un LUN su un volume clone creato da SnapCenter a meno che il clone non sia già stato diviso.
+
+* È necessario aver avviato il servizio FC o iSCSI sul sistema di storage.
+* Se si utilizza iSCSI, è necessario aver stabilito una sessione iSCSI con il sistema di storage.
+* Il pacchetto di plug-in SnapCenter per Windows deve essere installato solo sull'host su cui si sta creando il disco.
+
+
+*A proposito di questa attività*
+
+* Non è possibile connettere un LUN a più di un host a meno che il LUN non sia condiviso dagli host in un cluster di failover di Windows Server.
+* Se un LUN viene condiviso dagli host in un cluster di failover di Windows Server che utilizza CSV (Cluster Shared Volumes), è necessario creare il disco sull'host proprietario del gruppo di cluster.
+
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *hosts*.
+. Nella pagina host, fare clic su *dischi*.
+. Selezionare l'host dall'elenco a discesa *host*.
+. Fare clic su *nuovo*.
++
+Viene visualizzata la procedura guidata Create Disk (Crea disco).
+
+. Nella pagina LUN Name (Nome LUN), identificare il LUN:
++
+|===
+| In questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Sistema storage
+ a| 
+Selezionare la SVM per il LUN.
+
+
+
+ a| 
+Percorso LUN
+ a| 
+Fare clic su *Browse* (Sfoglia) per selezionare il percorso completo della cartella contenente il LUN.
+
+
+
+ a| 
+Nome del LUN
+ a| 
+Immettere il nome del LUN.
+
+
+
+ a| 
+Dimensione del cluster
+ a| 
+Selezionare la dimensione di allocazione del blocco LUN per il cluster.
+
+Le dimensioni del cluster dipendono dal sistema operativo e dalle applicazioni.
+
+
+
+ a| 
+Etichetta LUN
+ a| 
+Se si desidera, inserire un testo descrittivo per il LUN.
+
+|===
+. Nella pagina Disk Type (tipo di disco), selezionare il tipo di disco:
++
+|===
+| Selezionare... | Se... 
+
+
+ a| 
+Disco dedicato
+ a| 
+È possibile accedere al LUN solo da un host.
+
+Ignorare il campo *Gruppo di risorse*.
+
+
+
+ a| 
+Disco condiviso
+ a| 
+Il LUN è condiviso dagli host in un cluster di failover di Windows Server.
+
+Inserire il nome del gruppo di risorse del cluster nel campo *Gruppo di risorse*. È necessario creare il disco su un solo host nel cluster di failover.
+
+
+
+ a| 
+Volume condiviso del cluster (CSV)
+ a| 
+Il LUN è condiviso dagli host di un cluster di failover di Windows Server che utilizza CSV.
+
+Inserire il nome del gruppo di risorse del cluster nel campo *Gruppo di risorse*. Assicurarsi che l'host su cui si sta creando il disco sia il proprietario del gruppo di cluster.
+
+|===
+. Nella pagina Drive Properties, specificare le proprietà del disco:
++
+|===
+| Proprietà | Descrizione 
+
+
+ a| 
+Assegnazione automatica del punto di montaggio
+ a| 
+SnapCenter assegna automaticamente un punto di montaggio del volume in base al disco di sistema.
+
+Ad esempio, se il disco di sistema è C:, l'assegnazione automatica crea un punto di montaggio del volume sotto l'unità C:. L'assegnazione automatica non è supportata per i dischi condivisi.
+
+
+
+ a| 
+Assegnare la lettera dell'unità
+ a| 
+Montare il disco sull'unità selezionata nell'elenco a discesa adiacente.
+
+
+
+ a| 
+Utilizzare il punto di montaggio del volume
+ a| 
+Montare il disco sul percorso specificato nel campo adiacente.
+
+La directory principale del punto di montaggio del volume deve essere di proprietà dell'host su cui si sta creando il disco.
+
+
+
+ a| 
+Non assegnare la lettera del disco o il punto di montaggio del volume
+ a| 
+Scegliere questa opzione se si preferisce montare il disco manualmente in Windows.
+
+
+
+ a| 
+Dimensione del LUN
+ a| 
+Specificare la dimensione del LUN; almeno 150 MB.
+
+Selezionare MB, GB o TB nell'elenco a discesa adiacente.
+
+
+
+ a| 
+Utilizzare il thin provisioning per il volume che ospita questo LUN
+ a| 
+Eseguire il thin provisioning del LUN.
+
+Il thin provisioning alloca solo lo spazio di storage necessario alla volta, consentendo al LUN di crescere in modo efficiente fino alla massima capacità disponibile.
+
+Assicurarsi che sul volume sia disponibile spazio sufficiente per ospitare tutto lo storage LUN che si ritiene necessario.
+
+
+
+ a| 
+Scegliere il tipo di partizione
+ a| 
+Selezionare la partizione GPT per una tabella di partizione GUID o la partizione MBR per un record di avvio principale.
+
+Le partizioni MBR potrebbero causare problemi di disallineamento nei cluster di failover di Windows Server.
+
+
+NOTE: I dischi di partizione UEFI (Unified Extensible firmware Interface) non sono supportati.
+
+|===
+. Nella pagina Map LUN (LUN mappa), selezionare iSCSI o FC Initiator (iniziatore iSCSI o FC) sull'host:
++
+|===
+| In questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Host
+ a| 
+Fare doppio clic sul nome del gruppo di cluster per visualizzare un elenco a discesa che mostra gli host che appartengono al cluster, quindi selezionare l'host per l'iniziatore.
+
+Questo campo viene visualizzato solo se il LUN è condiviso dagli host in un cluster di failover di Windows Server.
+
+
+
+ a| 
+Scegliere l'iniziatore host
+ a| 
+Selezionare *Fibre Channel* o *iSCSI*, quindi selezionare l'iniziatore sull'host.
+
+È possibile selezionare più iniziatori FC se si utilizza FC con multipath i/o (MPIO).
+
+|===
+. Nella pagina Group Type (tipo gruppo), specificare se si desidera mappare un igroup esistente al LUN o creare un nuovo igroup:
++
+|===
+| Selezionare... | Se... 
+
+
+ a| 
+Creare un nuovo igroup per gli iniziatori selezionati
+ a| 
+Si desidera creare un nuovo igroup per gli iniziatori selezionati.
+
+
+
+ a| 
+Scegliere un igroup esistente o specificare un nuovo igroup per gli iniziatori selezionati
+ a| 
+Si desidera specificare un igroup esistente per gli iniziatori selezionati o creare un nuovo igroup con il nome specificato.
+
+Digitare il nome dell'igroup nel campo *igroup name*. Digitare le prime lettere del nome igroup esistente per completare automaticamente il campo.
+
+|===
+. Nella pagina Summary (Riepilogo), rivedere le selezioni e fare clic su *Finish* (fine).
++
+SnapCenter crea il LUN e lo connette all'unità o al percorso del disco specificato sull'host.
+
+
+
+
+
+== Ridimensionare un disco
+
+È possibile aumentare o ridurre le dimensioni di un disco in base alle esigenze del sistema di storage.
+
+*A proposito di questa attività*
+
+* Per i LUN con thin provisioning, la dimensione della geometria del lun ONTAP viene visualizzata come dimensione massima.
+* Per i LUN con thick provisioning, la dimensione espandibile (dimensione disponibile nel volume) viene visualizzata come dimensione massima.
+* Le LUN con partizioni di tipo MBR hanno una dimensione massima di 2 TB.
+* Le LUN con partizioni di tipo GPT hanno un limite di dimensioni del sistema storage di 16 TB.
+* È consigliabile creare una copia Snapshot prima di ridimensionare un LUN.
+* Se è necessario ripristinare un LUN da una copia Snapshot eseguita prima del ridimensionamento del LUN, SnapCenter ridimensiona automaticamente il LUN in base alle dimensioni della copia Snapshot.
++
+Dopo l'operazione di ripristino, i dati aggiunti al LUN dopo il ridimensionamento devono essere ripristinati da una copia Snapshot eseguita dopo il ridimensionamento.
+
+
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *hosts*.
+. Nella pagina host, fare clic su *dischi*.
+. Selezionare l'host dall'elenco a discesa host.
++
+I dischi sono elencati.
+
+. Selezionare il disco che si desidera ridimensionare, quindi fare clic su *Ridimensiona*.
+. Nella finestra di dialogo Ridimensiona disco, utilizzare lo strumento a scorrimento per specificare le nuove dimensioni del disco oppure inserire le nuove dimensioni nel campo dimensione.
++
+
+NOTE: Se si inserisce la dimensione manualmente, è necessario fare clic all'esterno del campo dimensione prima che il pulsante Riduci o Espandi sia attivato correttamente. Inoltre, è necessario fare clic su MB, GB o TB per specificare l'unità di misura.
+
+. Quando si è soddisfatti delle voci immesse, fare clic su *Riduci* o *Espandi*, a seconda dei casi.
++
+SnapCenter ridimensiona il disco.
+
+
+
+
+
+== Collegare un disco
+
+È possibile utilizzare la procedura guidata Connect Disk per connettere un LUN esistente a un host o per riconnettere un LUN disconnesso.
+
+*Cosa ti serve*
+
+* È necessario aver avviato il servizio FC o iSCSI sul sistema di storage.
+* Se si utilizza iSCSI, è necessario aver stabilito una sessione iSCSI con il sistema di storage.
+* Non è possibile connettere un LUN a più di un host a meno che il LUN non sia condiviso dagli host in un cluster di failover di Windows Server.
+* Se il LUN è condiviso da host in un cluster di failover di Windows Server che utilizza CSV (Cluster Shared Volumes), è necessario collegare il disco all'host proprietario del gruppo di cluster.
+* Il plug-in per Windows deve essere installato solo sull'host su cui si sta collegando il disco.
+
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *hosts*.
+. Nella pagina host, fare clic su *dischi*.
+. Selezionare l'host dall'elenco a discesa *host*.
+. Fare clic su *Connect* (Connetti).
++
+Viene visualizzata la procedura guidata Connect Disk.
+
+. Nella pagina LUN Name (Nome LUN), identificare il LUN a cui connettersi:
++
+|===
+| In questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Sistema storage
+ a| 
+Selezionare la SVM per il LUN.
+
+
+
+ a| 
+Percorso LUN
+ a| 
+Fare clic su *Browse* (Sfoglia) per selezionare il percorso completo del volume contenente il LUN.
+
+
+
+ a| 
+Nome del LUN
+ a| 
+Immettere il nome del LUN.
+
+
+
+ a| 
+Dimensione del cluster
+ a| 
+Selezionare la dimensione di allocazione del blocco LUN per il cluster.
+
+Le dimensioni del cluster dipendono dal sistema operativo e dalle applicazioni.
+
+
+
+ a| 
+Etichetta LUN
+ a| 
+Se si desidera, inserire un testo descrittivo per il LUN.
+
+|===
+. Nella pagina Disk Type (tipo di disco), selezionare il tipo di disco:
++
+|===
+| Selezionare... | Se... 
+
+
+ a| 
+Disco dedicato
+ a| 
+È possibile accedere al LUN solo da un host.
+
+
+
+ a| 
+Disco condiviso
+ a| 
+Il LUN è condiviso dagli host in un cluster di failover di Windows Server.
+
+È necessario connettere il disco a un solo host nel cluster di failover.
+
+
+
+ a| 
+Volume condiviso del cluster (CSV)
+ a| 
+Il LUN è condiviso dagli host di un cluster di failover di Windows Server che utilizza CSV.
+
+Assicurarsi che l'host su cui ci si connette al disco sia il proprietario del gruppo di cluster.
+
+|===
+. Nella pagina Drive Properties, specificare le proprietà del disco:
++
+|===
+| Proprietà | Descrizione 
+
+
+ a| 
+Assegnazione automatica
+ a| 
+Consentire a SnapCenter di assegnare automaticamente un punto di montaggio del volume in base al disco di sistema.
+
+Ad esempio, se il disco di sistema è C:, la proprietà di assegnazione automatica crea un punto di montaggio del volume sotto l'unità C:. La proprietà di assegnazione automatica non è supportata per i dischi condivisi.
+
+
+
+ a| 
+Assegnare la lettera dell'unità
+ a| 
+Montare il disco sull'unità selezionata nell'elenco a discesa adiacente.
+
+
+
+ a| 
+Utilizzare il punto di montaggio del volume
+ a| 
+Montare il disco sul percorso specificato nel campo adiacente.
+
+La directory principale del punto di montaggio del volume deve essere di proprietà dell'host su cui si sta creando il disco.
+
+
+
+ a| 
+Non assegnare la lettera del disco o il punto di montaggio del volume
+ a| 
+Scegliere questa opzione se si preferisce montare il disco manualmente in Windows.
+
+|===
+. Nella pagina Map LUN (LUN mappa), selezionare iSCSI o FC Initiator (iniziatore iSCSI o FC) sull'host:
++
+|===
+| In questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Host
+ a| 
+Fare doppio clic sul nome del gruppo di cluster per visualizzare un elenco a discesa che mostra gli host che appartengono al cluster, quindi selezionare l'host per l'iniziatore.
+
+Questo campo viene visualizzato solo se il LUN è condiviso dagli host in un cluster di failover di Windows Server.
+
+
+
+ a| 
+Scegliere l'iniziatore host
+ a| 
+Selezionare *Fibre Channel* o *iSCSI*, quindi selezionare l'iniziatore sull'host.
+
+È possibile selezionare più iniziatori FC se si utilizza FC con MPIO.
+
+|===
+. Nella pagina Group Type (tipo di gruppo), specificare se si desidera mappare un igroup esistente al LUN o creare un nuovo igroup:
++
+|===
+| Selezionare... | Se... 
+
+
+ a| 
+Creare un nuovo igroup per gli iniziatori selezionati
+ a| 
+Si desidera creare un nuovo igroup per gli iniziatori selezionati.
+
+
+
+ a| 
+Scegliere un igroup esistente o specificare un nuovo igroup per gli iniziatori selezionati
+ a| 
+Si desidera specificare un igroup esistente per gli iniziatori selezionati o creare un nuovo igroup con il nome specificato.
+
+Digitare il nome dell'igroup nel campo *igroup name*. Digitare le prime lettere del nome igroup esistente per completare automaticamente il campo.
+
+|===
+. Nella pagina Summary (Riepilogo), rivedere le selezioni e fare clic su *Finish* (fine).
++
+SnapCenter connette il LUN all'unità o al percorso del disco specificato sull'host.
+
+
+
+
+
+== Scollegare un disco
+
+È possibile disconnettere un LUN da un host senza influire sul contenuto del LUN, con un'eccezione: Se si disconnette un clone prima che sia stato separato, il contenuto del clone viene perso.
+
+*Cosa ti serve*
+
+* Assicurarsi che il LUN non sia in uso da nessuna applicazione.
+* Assicurarsi che il LUN non venga monitorato con il software di monitoraggio.
+* Se il LUN è condiviso, assicurarsi di rimuovere le dipendenze delle risorse del cluster dal LUN e verificare che tutti i nodi del cluster siano accesi, funzionino correttamente e disponibili per SnapCenter.
+
+
+*A proposito di questa attività*
+
+Se si disconnette un LUN in un volume FlexClone creato da SnapCenter e non sono connessi altri LUN sul volume, SnapCenter elimina il volume. Prima di disconnettere il LUN, SnapCenter visualizza un messaggio che avvisa che il volume FlexClone potrebbe essere stato eliminato.
+
+Per evitare l'eliminazione automatica del volume FlexClone, rinominare il volume prima di disconnettere l'ultimo LUN. Quando si rinomina il volume, assicurarsi di modificare più caratteri rispetto all'ultimo carattere del nome.
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *hosts*.
+. Nella pagina host, fare clic su *dischi*.
+. Selezionare l'host dall'elenco a discesa *host*.
++
+I dischi sono elencati.
+
+. Selezionare il disco che si desidera disconnettere, quindi fare clic su *Disconnetti*.
+. Nella finestra di dialogo Disconnetti disco, fare clic su *OK*.
++
+SnapCenter disconnette il disco.
+
+
+
+
+
+== Eliminare un disco
+
+È possibile eliminare un disco quando non è più necessario. Una volta eliminato un disco, non è possibile annullarlo.
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *hosts*.
+. Nella pagina host, fare clic su *dischi*.
+. Selezionare l'host dall'elenco a discesa *host*.
++
+I dischi sono elencati.
+
+. Selezionare il disco che si desidera eliminare, quindi fare clic su *Delete* (Elimina).
+. Nella finestra di dialogo Delete Disk (Elimina disco), fare clic su *OK*.
++
+SnapCenter elimina il disco.
+
+

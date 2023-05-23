@@ -1,0 +1,198 @@
+---
+permalink: protect-scsql/reference_minimum_ontap_privileges_required_for_sql_plug_in.html 
+sidebar: sidebar 
+keywords:  
+summary: I privilegi minimi di ONTAP richiesti variano in base ai plug-in di SnapCenter utilizzati per la protezione dei dati. 
+---
+= Privilegi minimi di ONTAP richiesti per il plug-in SQL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I privilegi minimi di ONTAP richiesti variano in base ai plug-in di SnapCenter utilizzati per la protezione dei dati.
+
+|===
+| All-access comands (comandi all-access): Privilegi minimi richiesti per ONTAP 8.3.0 e versioni successive 
+
+
+ a| 
+event generate-autosupport-log
+
+
+
+ a| 
+mostra la cronologia dei lavori
+
+interruzione del lavoro
+
+
+
+ a| 
+lun
+
+lun create (crea lun)
+
+lun delete (elimina lun)
+
+lun igroup add
+
+lun igroup create
+
+lun igroup delete (elimina igroup lun)
+
+lun igroup rename (rinomina lun igroup)
+
+lun igroup show
+
+lun mapping add-reporting-node
+
+creazione mappatura lun
+
+eliminazione della mappatura lun
+
+nodi di remove-reporting-mapping lun
+
+visualizzazione della mappatura del lun
+
+modifica del lun
+
+lun move-in-volume
+
+lun offline
+
+lun online
+
+ridimensionamento del lun
+
+lun seriale
+
+lun show
+
+
+
+ a| 
+regola aggiuntiva del criterio snapmirror
+
+regola-modifica del criterio snapmirror
+
+regola di rimozione del criterio snapmirror
+
+policy di snapmirror
+
+ripristino di snapmirror
+
+spettacolo di snapmirror
+
+storia di snapmirror
+
+aggiornamento di snapmirror
+
+snapmirror update-ls-set
+
+elenco-destinazioni snapmirror
+
+
+
+ a| 
+versione
+
+
+
+ a| 
+creazione del clone del volume
+
+visualizzazione del clone del volume
+
+avvio della divisione del clone del volume
+
+interruzione della divisione del clone del volume
+
+creazione del volume
+
+distruggere il volume
+
+creazione del clone del file di volume
+
+file di volume show-disk-usage
+
+volume offline
+
+volume online
+
+modifica del volume
+
+creazione del qtree del volume
+
+eliminazione del qtree del volume
+
+modifica del qtree del volume
+
+visualizzazione del qtree del volume
+
+limitazione del volume
+
+presentazione del volume
+
+creazione di snapshot di volume
+
+eliminazione dello snapshot del volume
+
+modifica dello snapshot del volume
+
+rinominare lo snapshot del volume
+
+ripristino dello snapshot del volume
+
+file di ripristino dello snapshot del volume
+
+visualizzazione di snapshot di volume
+
+smontare il volume
+
+
+
+ a| 
+cifs vserver
+
+creazione condivisione cifs vserver
+
+eliminazione condivisione cifs vserver
+
+vserver cifs shadowcopy mostra
+
+show di condivisione di vserver cifs
+
+vserver cifs show
+
+policy di esportazione di vserver
+
+creazione policy di esportazione vserver
+
+eliminazione della policy di esportazione di vserver
+
+creazione della regola dei criteri di esportazione di vserver
+
+visualizzazione della regola dei criteri di esportazione di vserver
+
+visualizzazione della policy di esportazione di vserver
+
+iscsi vserver
+
+visualizzazione della connessione iscsi del vserver
+
+show di vserver
+
+
+
+ a| 
+interfaccia di rete
+
+visualizzazione dell'interfaccia di rete
+
+server virtuale
+
+spettacolo di MetroCluster
+
+|===

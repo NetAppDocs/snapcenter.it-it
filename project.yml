@@ -1,0 +1,42 @@
+---
+settings:
+  name: SnapCenter Software 4.8
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  versions:
+  - name: Software SnapCenter
+    url: "/snapcenter"
+    version-number: '4.8'
+  - name: Software SnapCenter
+    url: "/snapcenter-47"
+    version-number: '4.7'
+  - name: Software SnapCenter
+    url: "/snapcenter-46"
+    version-number: '4.6'
+  - name: Software SnapCenter
+    url: "/snapcenter-45"
+    version-number: '4.5'
+  langs: it-it,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,es-es,fr-fr
+sidebar:
+  entries:
+  - title: Documentazione del software SnapCenter 4.8
+    url: "/index.html"
+  - title: Note di rilascio
+    url: "/release-notes.html"
+  - section: concept
+  - section: install
+  - section: protect-scsql
+  - section: protect-hana
+  - section: protect-sco
+  - section: protect-scw
+  - section: protect-sce
+  - section: protect-scc
+  - section: admin
+  - section: upgrade
+  - section: uninstall
+  - section: sc-automation
+  - title: Note legali
+    url: "/legal-notices.html"

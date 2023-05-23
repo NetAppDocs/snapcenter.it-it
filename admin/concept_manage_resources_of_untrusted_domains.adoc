@@ -1,0 +1,83 @@
+---
+permalink: admin/concept_manage_resources_of_untrusted_domains.html 
+sidebar: sidebar 
+keywords:  
+summary: Oltre a gestire gli host nei domini attendibili di Active Directory, SnapCenter gestisce anche gli host in più domini ad non attendibili. I domini ad non attendibili devono essere registrati con il server SnapCenter. SnapCenter supporta utenti e gruppi di più domini ad non attendibili. 
+---
+= Gestire le risorse di domini non attendibili
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Oltre a gestire gli host nei domini attendibili di Active Directory (ad), SnapCenter gestisce anche gli host in più domini ad non attendibili. I domini ad non attendibili devono essere registrati con il server SnapCenter. SnapCenter supporta utenti e gruppi di più domini ad non attendibili.
+
+È possibile installare il server SnapCenter su un computer che si trova in un dominio o in un gruppo di lavoro. Per installare il server SnapCenter, specificare le credenziali di dominio se il computer si trova in un dominio o le credenziali di amministratore locale se il computer si trova in un gruppo di lavoro.
+
+I gruppi Active Directory (ad) che appartengono a domini non registrati con il server SnapCenter non sono supportati. Sebbene sia possibile creare ruoli SnapCenter con questi gruppi ad, l'accesso al server SnapCenter non riesce e viene visualizzato il seguente messaggio di errore: L'utente che si sta tentando di accedere non appartiene ad alcun ruolo. Contattare l'amministratore.
+
+
+
+== Modificare i domini non attendibili
+
+È possibile modificare un dominio non attendibile quando si desidera aggiornare gli indirizzi IP del controller di dominio o il nome di dominio completo (FQDN).
+
+*A proposito di questa attività*
+
+Dopo aver modificato l'FQDN, le risorse associate (host, utenti e gruppi) potrebbero non funzionare come previsto.
+
+Per modificare un dominio non attendibile, è possibile utilizzare l'interfaccia utente di SnapCenter o i cmdlet PowerShell.
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *Impostazioni*.
+. Nella pagina Impostazioni, fare clic su *Impostazioni globali*.
+. Nella pagina Global Settings (Impostazioni globali), fare clic su *Domain Settings* (Impostazioni dominio).
+. Fare clic su image:../media/edit_icon.gif["Icona Edit (Modifica)"], quindi fornire i seguenti dettagli:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+FQDN del dominio
+ a| 
+Specificare l'FQDN e fare clic su *Resolve* (Risolvi).
+
+
+
+ a| 
+Indirizzi IP dei controller di dominio
+ a| 
+Se l'FQDN del dominio non è risolvibile, specificare uno o più indirizzi IP del controller di dominio.
+
+|===
+. Fare clic su *OK*.
+
+
+
+
+== Annullare la registrazione dei domini Active Directory non attendibili
+
+È possibile annullare la registrazione di un dominio Active Directory non attendibile se non si desidera utilizzare le risorse associate a tale dominio.
+
+*Cosa ti serve*
+
+Gli host, gli utenti, i gruppi e le credenziali associati al dominio non attendibile dovrebbero essere stati rimossi.
+
+*A proposito di questa attività*
+
+* Una volta che il dominio viene disregistrato dal server SnapCenter, gli utenti di tale dominio non possono accedere al server SnapCenter.
+* Se sono presenti risorse associate (host, utenti e gruppi), dopo aver disregistrato il dominio, le risorse non saranno operative.
+* Per annullare la registrazione di un dominio non attendibile, è possibile utilizzare l'interfaccia utente di SnapCenter o i cmdlet PowerShell.
+
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *Impostazioni*.
+. Nella pagina Impostazioni, fare clic su *Impostazioni globali*.
+. Nella pagina Global Settings (Impostazioni globali), fare clic su *Domain Settings* (Impostazioni dominio).
+. Dall'elenco dei domini, selezionare il dominio che si desidera annullare la registrazione.
+. Fare clic su image:../media/delete_icon.gif[""], Quindi fare clic su *OK*.
+

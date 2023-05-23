@@ -1,0 +1,29 @@
+---
+permalink: protect-scc/reference_prepare_storage_systems_for_snapmirror_and_snapvault_replication_for_plugin_for_scc.html 
+sidebar: sidebar 
+keywords: snapmirror, snapvault, storage system, replication 
+summary: È possibile utilizzare un plug-in SnapCenter con le tecnologie SnapMirror e SnapVault di ONTAP 
+---
+= Preparazione dei sistemi storage per la replica di SnapMirror e SnapVault per plug-in personalizzati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare un plug-in SnapCenter con la tecnologia SnapMirror di ONTAP per creare copie mirror dei set di backup su un altro volume e con la tecnologia ONTAP SnapVault per eseguire la replica del backup disk-to-disk per la conformità agli standard e altri scopi correlati alla governance. Prima di eseguire queste attività, è necessario configurare una relazione di protezione dei dati tra i volumi di origine e di destinazione e inizializzare la relazione.
+
+SnapCenter esegue gli aggiornamenti di SnapMirror e SnapVault dopo aver completato l'operazione di copia Snapshot. Gli aggiornamenti di SnapMirror e SnapVault vengono eseguiti come parte del processo SnapCenter; non creare una pianificazione ONTAP separata.
+
+
+NOTE: Se vieni a SnapCenter da un prodotto NetApp SnapManager e sei soddisfatto delle relazioni di protezione dei dati che hai configurato, puoi saltare questa sezione.
+
+Una relazione di protezione dei dati replica i dati sullo storage primario (il volume di origine) nello storage secondario (il volume di destinazione). Quando si inizializza la relazione, ONTAP trasferisce i blocchi di dati a cui fa riferimento il volume di origine al volume di destinazione.
+
+
+NOTE: SnapCenter non supporta le relazioni a cascata tra SnapMirror e i volumi SnapVault (*primario* > *Mirror* > *Vault*). Si consiglia di utilizzare le relazioni fanout.
+
+SnapCenter supporta la gestione delle relazioni SnapMirror flessibili in base alla versione. Per ulteriori informazioni sulle relazioni SnapMirror flessibili per la versione e su come configurarle, vedere http://["Documentazione ONTAP"^].
+
+
+NOTE: SnapCenter non supporta la replica *Sync_mirror*.

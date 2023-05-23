@@ -1,0 +1,142 @@
+---
+permalink: protect-sco/task_create_resource_groups_and_attaching_policies_for_oracle_databases.html 
+sidebar: sidebar 
+keywords: run as 
+summary: Un gruppo di risorse è il container al quale è necessario aggiungere risorse di cui si desidera eseguire il backup e la protezione. Un gruppo di risorse consente di eseguire contemporaneamente il backup di tutti i dati associati a una determinata applicazione. 
+---
+= Crea gruppi di risorse e allega policy per database Oracle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un gruppo di risorse è il container al quale è necessario aggiungere risorse di cui si desidera eseguire il backup e la protezione. Un gruppo di risorse consente di eseguire contemporaneamente il backup di tutti i dati associati a una determinata applicazione.
+
+*A proposito di questa attività*
+
+Assicurarsi che il database con i file sui gruppi di dischi ASM sia in stato "MOUNT" o "OPEN" per verificarne i backup utilizzando l'utility Oracle DBVERIFY.
+
+È necessario associare uno o più criteri al gruppo di risorse per definire il tipo di lavoro di protezione dei dati che si desidera eseguire.
+
+L'immagine seguente illustra la relazione tra risorse, gruppi di risorse e criteri per i database:
+
+image::../media/sco_resourcegroup_policy.gif[policy del resourcegroup sco]
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina Resources (risorse), fare clic su *New Resource Group* (nuovo gruppo di risorse).
+. Nella pagina Name (Nome), eseguire le seguenti operazioni:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Nome
+ a| 
+Immettere un nome per il gruppo di risorse.
+
+
+NOTE: Il nome del gruppo di risorse non deve superare i 250 caratteri.
+
+
+
+ a| 
+Tag
+ a| 
+Inserire una o più etichette per facilitare la ricerca del gruppo di risorse in un secondo momento.
+
+Ad esempio, se si aggiunge HR come tag a più gruppi di risorse, è possibile trovare in seguito tutti i gruppi di risorse associati al tag HR.
+
+
+
+ a| 
+USA il formato nome personalizzato per la copia Snapshot
+ a| 
+Selezionare questa casella di controllo e immettere un formato nome personalizzato da utilizzare per il nome della copia Snapshot.
+
+Ad esempio, customtext_resource group_policy_hostname o resource group_hostname. Per impostazione predefinita, al nome della copia Snapshot viene aggiunto un indicatore data e ora.
+
+
+
+ a| 
+Escludi le destinazioni del registro di archiviazione dal backup
+ a| 
+Specificare le destinazioni dei file di log dell'archivio di cui non si desidera eseguire il backup.
+
+|===
+. Nella pagina Resources (risorse), selezionare un nome host di database Oracle dall'elenco a discesa *host* (host*).
++
+
+NOTE: Le risorse vengono elencate nella sezione risorse disponibili solo se la risorsa viene rilevata correttamente. Le risorse aggiunte di recente vengono visualizzate nell'elenco delle risorse disponibili solo dopo l'aggiornamento dell'elenco delle risorse.
+
+. Selezionare le risorse dalla sezione risorse disponibili e spostarle nella sezione risorse selezionate.
++
+
+NOTE: È possibile aggiungere database da host Linux e AIX in un singolo gruppo di risorse.
+
+. Nella pagina Criteri, attenersi alla seguente procedura:
++
+.. Selezionare uno o più criteri dall'elenco a discesa.
++
+
+NOTE: È anche possibile creare un criterio facendo clic su image:../media/add_policy_from_resourcegroup.gif[""].
+
++
+Nella sezione Configure schedules for selected policies (Configura pianificazioni per policy selezionate), vengono elencati i criteri selezionati.
+
+.. Fare clic su *image:../media/add_policy_from_resourcegroup.gif[""]* Nella colonna Configure Schedules (Configura pianificazioni) per il criterio per il quale si desidera configurare una pianificazione.
+.. Nella finestra Add schedules for policy _policy_name_, configurare la pianificazione, quindi fare clic su *OK*.
++
+Dove _policy_name_ è il nome del criterio selezionato.
+
++
+Le pianificazioni configurate sono elencate nella colonna Applied Schedules (Pianificazioni applicate).
+
+
+
++
+Le pianificazioni di backup di terze parti non sono supportate quando si sovrappongono alle pianificazioni di backup di SnapCenter.
+
+. Nella pagina verifica, attenersi alla seguente procedura:
++
+.. Fare clic su *Load Locators* (carica locatori) per caricare i volumi SnapMirror o SnapVault per eseguire la verifica sullo storage secondario.
+.. Fare clic su *image:../media/add_policy_from_resourcegroup.gif[""]* Nella colonna Configure Schedules (Configura pianificazioni) per configurare la pianificazione di verifica per tutti i tipi di pianificazione della policy.
+.. Nella finestra di dialogo Add Verification Schedules policy_name, eseguire le seguenti operazioni:
++
+|===
+| Se si desidera... | Eseguire questa operazione... 
+
+
+ a| 
+Eseguire la verifica dopo il backup
+ a| 
+Selezionare *Esegui verifica dopo backup*.
+
+
+
+ a| 
+Pianifica una verifica
+ a| 
+Selezionare *Esegui verifica pianificata*, quindi selezionare il tipo di pianificazione dall'elenco a discesa.
+
+|===
+.. Selezionare *verify on secondary location* (verifica su posizione secondaria) per verificare i backup sul sistema di storage secondario.
+.. Fare clic su *OK*.
++
+Le pianificazioni di verifica configurate sono elencate nella colonna Applied Schedules (Pianificazioni applicate).
+
+
+
+. Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
++
+È inoltre necessario specificare gli indirizzi e-mail del mittente e del destinatario e l'oggetto dell'e-mail. Se si desidera allegare il report dell'operazione eseguita sul gruppo di risorse, selezionare *Allega report*.
+
++
+
+NOTE: Per la notifica via email, è necessario aver specificato i dettagli del server SMTP utilizzando la GUI o il comando PowerShell Set-SmtpServer.
+
+. Esaminare il riepilogo, quindi fare clic su *fine*.
+

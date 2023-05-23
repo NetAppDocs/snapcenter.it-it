@@ -1,0 +1,89 @@
+---
+permalink: protect-sco/reference_requirements_for_cloning_an_oracle_database.html 
+sidebar: sidebar 
+keywords:  
+summary: Prima di clonare un database Oracle, è necessario assicurarsi che i prerequisiti siano stati completati. 
+---
+= Requisiti per la clonazione di un database Oracle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di clonare un database Oracle, è necessario assicurarsi che i prerequisiti siano stati completati.
+
+* È necessario aver creato un backup del database utilizzando SnapCenter.
++
+Per eseguire correttamente l'operazione di cloning, è necessario aver creato correttamente backup di dati e log online o backup offline (montaggio o arresto).
+
+* Se si desidera personalizzare il file di controllo o ripetere i percorsi dei file di log, è necessario aver preconfigurato il file system o il gruppo di dischi ASM (Automatic Storage Management) richiesto.
++
+Per impostazione predefinita, i file di log e di controllo del database clonato vengono creati nel gruppo di dischi ASM o nel file system fornito da SnapCenter per i file di dati del database clone.
+
+* Se si utilizza ASM su NFS, aggiungere _/var/opt/snapcenter/scu/cloni/*/*_ al percorso esistente definito nel parametro asm_diskstring.
+* Nel parametro asm_diskstring, configurare _AFD:*_ se si utilizza ASMFD o configurare _ORCL:*_ se si utilizza ASMLIB.
++
+Per informazioni su come modificare il parametro asm_diskstring, vedere https://["Come aggiungere i percorsi dei dischi ad asm_diskstring"^].
+
+* Se si crea il clone su un host alternativo, l'host alternativo deve soddisfare i seguenti requisiti:
++
+** Il plug-in SnapCenter per database Oracle deve essere installato sull'host alternativo.
+** L'host clone deve essere in grado di rilevare LUN dallo storage primario o secondario.
++
+*** Se si esegue la clonazione dallo storage primario o secondario (Vault o Mirror) a un host alternativo, assicurarsi che sia stata stabilita una sessione iSCSI tra lo storage secondario e l'host alternativo o che sia stata inserita correttamente la zoning per FC.
++
+**** https://["Guida all'installazione e all'installazione delle utility host Linux"^]
+**** https://["Guida all'installazione e all'installazione delle utility host DI AIX"^]
+
+
+*** Se si esegue la clonazione dallo storage Vault o Mirror allo stesso host, assicurarsi che sia stata stabilita una sessione iSCSI tra lo storage Vault o Mirror e l'host oppure che sia stata creata una zoning corretta per FC.
+*** Se si esegue la clonazione in un ambiente virtualizzato, assicurarsi che venga stabilita una sessione iSCSI tra lo storage primario o secondario e il server ESX che ospita l'host alternativo o che venga eseguita la zoning appropriata per FC.
+
+
+** Se il database di origine è un database ASM:
++
+*** L'istanza di ASM deve essere attiva e in esecuzione sull'host in cui verrà eseguito il clone.
+*** Il provisioning del gruppo di dischi ASM deve essere eseguito prima dell'operazione di clonazione se si desidera inserire i file di log di archiviazione del database clonato in un gruppo di dischi ASM dedicato.
+*** Il nome del gruppo di dischi dati può essere configurato, ma assicurarsi che il nome non sia utilizzato da altri gruppi di dischi ASM sull'host in cui verrà eseguito il clone.
++
+I file di dati che risiedono nel gruppo di dischi ASM vengono forniti come parte del flusso di lavoro dei cloni di SnapCenter.
+
+
+
+** Per NVMe, è necessario installare NVMe util
+
+
+* Il tipo di protezione per il LUN dei dati e il LUN del log, ad esempio mirror, vault o vault mirror, deve essere lo stesso per rilevare i locatori secondari durante la clonazione su un host alternativo utilizzando i backup del log.
+* Impostare IL valore di exclude_seed_cdb_view su FALSE nel file dei parametri del database di origine per recuperare le informazioni relative a PDB seme per clonare un backup del database 12_c_.
++
+La PDB seme è un modello fornito dal sistema che la CDB può utilizzare per creare PDB. La PDB seme è denominata SEME PDB. Per informazioni sul VALORE DI INIZIALIZZAZIONE PDB, consultare l'Oracle Doc ID 1940806.1.
+
++
+
+NOTE: Impostare il valore prima di eseguire il backup del database 12_c_.
+
+* SnapCenter supporta il backup dei file system gestiti dal sottosistema autofs. Se si esegue la clonazione del database, assicurarsi che i punti di montaggio dei dati non si trovino sotto la radice del punto di montaggio autofs, perché l'utente root dell'host plug-in non dispone dell'autorizzazione per creare directory sotto la radice del punto di montaggio autofs.
++
+Se i file di log di controllo e ripristino si trovano sotto il punto di montaggio dei dati, modificare il percorso del file di controllo e quindi ripetere il percorso del file di log di conseguenza.
+
++
+
+NOTE: È possibile registrare manualmente i nuovi punti di montaggio clonati con il sottosistema autofs. I nuovi punti di montaggio clonati non verranno registrati automaticamente.
+
+* Se si dispone di un TDE (accesso automatico) e si desidera clonare il database sullo stesso host o su un host alternativo, copiare il portafoglio (file chiave) sotto _/etc/ORACLE/WALLET/€ORACLE_SID_ dal database di origine al database clonato.
+* Impostare il valore di use_lvmetad = 0 in _/etc/lvm/lvm.conf_ e arrestare il servizio lvm2-lvmetad per eseguire correttamente la clonazione in ambienti SAN (Storage Area Network) su Oracle Linux 7 o versione successiva o Red Hat Enterprise Linux (RHEL) 7 o versione successiva.
+* Installare la patch Oracle 13366202 se si utilizza il database Oracle 11.2.0.3 o versione successiva e l'ID del database per l'istanza ausiliaria viene modificato utilizzando uno script NID.
+* Assicurarsi che gli aggregati che ospitano i volumi siano inclusi nell'elenco degli aggregati assegnati della macchina virtuale di storage (SVM).
+* Per NVMe, se una porta di destinazione deve essere esclusa dalla connessione, aggiungere il nome del nodo di destinazione e il nome della porta nel file /var/opt/snapcenter/scu/etc/nvme.conf.
++
+Se il file non esiste, crearlo come illustrato nell'esempio seguente:
+
++
+....
+blacklist {
+nn-0x<target_node_name_1>:pn-0x<target_port_name_1>
+nn-0x<target_node_name_2>:pn-0x<target_port_name_2>
+}
+....
+

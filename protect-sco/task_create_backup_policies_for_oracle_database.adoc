@@ -1,0 +1,212 @@
+---
+permalink: protect-sco/task_create_backup_policies_for_oracle_database.html 
+sidebar: sidebar 
+keywords: backup policies, policies 
+summary: 'Prima di utilizzare SnapCenter per eseguire il backup delle risorse di database Oracle, è necessario creare un criterio di backup per la risorsa o il gruppo di risorse di cui si desidera eseguire il backup. Un criterio di backup è un insieme di regole che regolano la gestione, la pianificazione e la conservazione dei backup. È inoltre possibile specificare le impostazioni di replica, script e tipo di backup. La creazione di una policy consente di risparmiare tempo quando si desidera riutilizzare la policy su un"altra risorsa o gruppo di risorse.' 
+---
+= Creare policy di backup per i database Oracle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di utilizzare SnapCenter per eseguire il backup delle risorse di database Oracle, è necessario creare un criterio di backup per la risorsa o il gruppo di risorse di cui si desidera eseguire il backup. Un criterio di backup è un insieme di regole che regolano la gestione, la pianificazione e la conservazione dei backup. È inoltre possibile specificare le impostazioni di replica, script e tipo di backup. La creazione di una policy consente di risparmiare tempo quando si desidera riutilizzare la policy su un'altra risorsa o gruppo di risorse.
+
+*Prima di iniziare*
+
+* È necessario aver definito la strategia di backup.
+* Devi essere preparato per la protezione dei dati completando attività come l'installazione di SnapCenter, l'aggiunta di host, il rilevamento di database e la creazione di connessioni al sistema di storage.
+* Se si stanno replicando le copie Snapshot su uno storage secondario mirror o vault, l'amministratore di SnapCenter deve aver assegnato le SVM per i volumi di origine e di destinazione.
+* Se il plug-in è stato installato come utente non root, è necessario assegnare manualmente le autorizzazioni di esecuzione alle directory prescrittt e postscript.
+
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *Impostazioni*.
+. Nella pagina Impostazioni, fare clic su *Criteri*.
+. Selezionare *Oracle Database* dall'elenco a discesa.
+. Fare clic su *nuovo*.
+. Nella pagina Name (Nome), immettere il nome e la descrizione della policy.
+. Nella pagina Backup Type (tipo di backup), attenersi alla seguente procedura:
++
+** Se si desidera *creare un backup online*, selezionare *Backup online*.
++
+È necessario specificare se si desidera eseguire il backup di tutti i file di dati, di controllo e di log dell'archivio, solo dei file di dati e di controllo o solo dei file di log dell'archivio.
+
+** Se si desidera *creare un backup offline*, selezionare *Backup offline*, quindi selezionare una delle seguenti opzioni:
++
+*** Se si desidera creare un backup offline quando il database è in stato di montaggio, selezionare *Mount*.
+*** Se si desidera creare un backup di shutdown offline cambiando lo stato di shutdown del database, selezionare *Shutdown*.
++
+Se si dispone di database collegabili (PDB) e si desidera salvare lo stato dei PDB prima di creare il backup, selezionare *Save state of PDBs* (Salva stato dei PDB). In questo modo è possibile portare i PDB allo stato originale dopo la creazione del backup.
+
+
+
+** Specificare la frequenza del programma selezionando *on demand*, *Hourly*, *Daily*, *Weekly* o *Monthly*.
++
+
+NOTE: È possibile specificare la pianificazione (data di inizio e data di fine) per l'operazione di backup durante la creazione di un gruppo di risorse. Ciò consente di creare gruppi di risorse che condividono la stessa policy e frequenza di backup, ma consente di assegnare diverse pianificazioni di backup a ciascun criterio.
+
++
+
+NOTE: Se sono previste le 2:00, la programmazione non verrà attivata durante l'ora legale (DST).
+
+** Se si desidera catalogare il backup utilizzando Oracle Recovery Manager (RMAN), selezionare *Catalog backup with Oracle Recovery Manager (RMAN)*.
++
+È possibile eseguire la catalogazione posticipata per un backup alla volta utilizzando l'interfaccia grafica o il comando CLI di SnapCenter Catalog-SmBackupWithOracleRMAN.
+
++
+
+NOTE: Se si desidera catalogare i backup di un database RAC, assicurarsi che non siano in esecuzione altri processi per tale database. Se è in esecuzione un altro processo, l'operazione di catalogazione non riesce invece di essere messa in coda.
+
+** Se si desidera ridurre i registri di archiviazione dopo il backup, selezionare *Prune archive logs after backup* (Sintonizzare i registri di archiviazione dopo il backup).
++
+
+NOTE: L'eliminazione dei registri di archiviazione dalla destinazione del registro di archiviazione non configurata nel database viene ignorata.
+
++
+
+IMPORTANT: Se si utilizza Oracle Standard Edition, è possibile utilizzare I parametri LOG_ARCHIVE_DEST e LOG_ARCHIVE_DUPLEX_DEST durante l'esecuzione del backup del registro di archiviazione.
+
+** È possibile eliminare i log di archiviazione solo se sono stati selezionati i file di log di archiviazione come parte del backup.
++
+
+NOTE: Affinché l'operazione di eliminazione abbia esito positivo, è necessario assicurarsi che tutti i nodi in un ambiente RAC possano accedere a tutte le posizioni del registro di archiviazione.
+
++
+|===
+| Se si desidera... | Quindi... 
+
+
+ a| 
+Eliminare tutti i log di archiviazione
+ a| 
+Selezionare *Elimina tutti i log di archiviazione*.
+
+
+
+ a| 
+Eliminare i log di archiviazione meno recenti
+ a| 
+Selezionare *Delete archive logs older than* (Elimina log di archiviazione precedenti a*), quindi specificare l'età dei log di archiviazione che devono essere cancellati in giorni e ore.
+
+
+
+ a| 
+Eliminare i log di archiviazione da tutte le destinazioni
+ a| 
+Selezionare *Delete archive logs from all the destinations*.
+
+
+
+ a| 
+Eliminare i registri di archiviazione dalle destinazioni del registro che fanno parte del backup
+ a| 
+Selezionare *Delete archive logs from the destinations welling are of backup*.
+
+|===
++
+image:../media/sco_backuppolicy_prunning.gif[""]
+
+
+
+. Nella pagina conservazione, specificare le impostazioni di conservazione per il tipo di backup e il tipo di pianificazione selezionati nella pagina tipo di backup:
++
+|===
+
+
+| Se si desidera... | Quindi... 
+
+
+ a| 
+Conservare un certo numero di copie Snapshot
+ a| 
+Selezionare *copie Snapshot totali da conservare*, quindi specificare il numero di copie Snapshot che si desidera conservare.
+
+Se il numero di copie Snapshot supera il numero specificato, le copie Snapshot vengono eliminate prima con le copie meno recenti.
+
+
+NOTE: Il valore massimo di conservazione è 1018 per le risorse su ONTAP 9.4 o versioni successive e 254 per le risorse su ONTAP 9.3 o versioni precedenti. I backup non avranno esito positivo se la conservazione viene impostata su un valore superiore a quello supportato dalla versione di ONTAP sottostante.
+
+
+IMPORTANT: Se si intende attivare la replica SnapVault, è necessario impostare il numero di conservazione su 2 o superiore. Se si imposta il conteggio di conservazione su 1, l'operazione di conservazione potrebbe non riuscire perché la prima copia Snapshot è la copia Snapshot di riferimento per la relazione SnapVault fino a quando una copia Snapshot più recente non viene replicata nella destinazione.
+
+
+
+ a| 
+Conservare le copie Snapshot per un certo numero di giorni
+ a| 
+Selezionare *Mantieni copie Snapshot per*, quindi specificare il numero di giorni per i quali si desidera conservare le copie Snapshot prima di eliminarle.
+
+|===
++
+
+NOTE: È possibile conservare i backup dei log di archiviazione solo se sono stati selezionati i file di log di archiviazione come parte del backup.
+
+. Nella pagina Replication, specificare le impostazioni di replica:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Aggiornare SnapMirror dopo aver creato una copia Snapshot locale
+ a| 
+Selezionare questo campo per creare copie mirror dei set di backup su un altro volume (replica SnapMirror).
+
+
+
+ a| 
+Aggiornare SnapVault dopo aver creato una copia Snapshot locale
+ a| 
+Selezionare questa opzione per eseguire la replica del backup disk-to-disk (backup SnapVault).
+
+
+
+ a| 
+Etichetta del criterio secondario
+ a| 
+Selezionare un'etichetta Snapshot.
+
+A seconda dell'etichetta della copia Snapshot selezionata, ONTAP applica la policy di conservazione della copia Snapshot secondaria corrispondente all'etichetta.
+
+
+NOTE: Se è stato selezionato *Update SnapMirror dopo la creazione di una copia Snapshot locale*, è possibile specificare l'etichetta del criterio secondario. Tuttavia, se è stato selezionato *Aggiorna SnapVault dopo la creazione di una copia Snapshot locale*, è necessario specificare l'etichetta del criterio secondario.
+
+
+
+ a| 
+Numero tentativi di errore
+ a| 
+Immettere il numero massimo di tentativi di replica consentiti prima dell'interruzione dell'operazione.
+
+|===
++
+
+NOTE: È necessario configurare il criterio di conservazione di SnapMirror in ONTAP per lo storage secondario per evitare di raggiungere il limite massimo di copie Snapshot sullo storage secondario.
+
+. Nella pagina script, immettere il percorso e gli argomenti del prespt o del postscript che si desidera eseguire rispettivamente prima o dopo l'operazione di backup.
++
+È necessario memorizzare le prescrizioni e i postscript in _/var/opt/snapcenter/spl/scripts_ o in qualsiasi cartella all'interno di questo percorso. Per impostazione predefinita, il percorso _/var/opt/snapcenter/spl/scripts_ viene compilato. Se sono state create cartelle all'interno di questo percorso per memorizzare gli script, è necessario specificare tali cartelle nel percorso.
+
++
+È inoltre possibile specificare il valore di timeout dello script. Il valore predefinito è 60 secondi.
+
++
+SnapCenter consente di utilizzare le variabili di ambiente predefinite quando si eseguono prespt e postscript. link:../protect-sco/predefined-environment-variables-prescript-postscript-backup.html["Scopri di più"^]
+
+. Nella pagina verifica, attenersi alla seguente procedura:
++
+.. Selezionare la pianificazione di backup per la quale si desidera eseguire l'operazione di verifica.
+.. Nella sezione Verification script Commands (comandi script di verifica), immettere il percorso e gli argomenti del prescrittt o del postscript che si desidera eseguire rispettivamente prima o dopo l'operazione di verifica.
++
+È necessario memorizzare le prescrizioni e i postscript in _/var/opt/snapcenter/spl/scripts_ o in qualsiasi cartella all'interno di questo percorso. Per impostazione predefinita, il percorso _/var/opt/snapcenter/spl/scripts_ viene compilato. Se sono state create cartelle all'interno di questo percorso per memorizzare gli script, è necessario specificare tali cartelle nel percorso.
+
++
+È inoltre possibile specificare il valore di timeout dello script. Il valore predefinito è 60 secondi.
+
+
+
+. Esaminare il riepilogo, quindi fare clic su *fine*.
+

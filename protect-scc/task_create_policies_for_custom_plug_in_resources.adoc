@@ -1,0 +1,134 @@
+---
+permalink: protect-scc/task_create_policies_for_custom_plug_in_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: Prima di utilizzare SnapCenter per eseguire il backup di risorse specifiche del plug-in personalizzato, è necessario creare un criterio di backup per la risorsa o il gruppo di risorse di cui si desidera eseguire il backup. 
+---
+= Creare policy per risorse plug-in personalizzate
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di utilizzare SnapCenter per eseguire il backup di risorse specifiche del plug-in personalizzato, è necessario creare un criterio di backup per la risorsa o il gruppo di risorse di cui si desidera eseguire il backup.
+
+*Cosa ti serve*
+
+* Dovresti aver definito la tua strategia di backup.
++
+Per ulteriori informazioni, consulta le informazioni sulla definizione di una strategia di protezione dei dati per i plug-in personalizzati.
+
+* Dovresti aver preparato per la protezione dei dati.
++
+La preparazione per la protezione dei dati include attività come l'installazione di SnapCenter, l'aggiunta di host, la creazione di connessioni al sistema di storage e l'aggiunta di risorse.
+
+* Le macchine virtuali di storage (SVM) devono essere assegnate all'utente per le operazioni di mirroring o vault.
++
+L'amministratore di SnapCenter deve aver assegnato all'utente le SVM per i volumi di origine e di destinazione se si stanno replicando le copie Snapshot in un mirror o in un vault.
+
+* Dovrebbero essere state aggiunte manualmente le risorse che si desidera proteggere.
+
+
+*A proposito di questa attività*
+
+* Un criterio di backup è un insieme di regole che regolano la gestione, la pianificazione e la conservazione dei backup. Inoltre, è possibile specificare le impostazioni di replica, script e applicazione.
+* La specifica delle opzioni in un criterio consente di risparmiare tempo quando si desidera riutilizzare il criterio per un altro gruppo di risorse.
+
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *Impostazioni*.
+. Nella pagina Impostazioni, fare clic su *Criteri*.
+. Fare clic su *nuovo*.
+. Nella pagina Name (Nome), immettere il nome e la descrizione della policy.
+. Nella pagina Impostazioni, attenersi alla seguente procedura:
++
+** Specificare il tipo di pianificazione selezionando *on demand*, *Hourly*, *Daily*, *Weekly* o *Monthly*.
++
+
+NOTE: È possibile specificare la pianificazione (data di inizio, data di fine e frequenza) per l'operazione di backup durante la creazione di un gruppo di risorse. Ciò consente di creare gruppi di risorse che condividono la stessa policy e frequenza di backup, ma consente di assegnare diverse pianificazioni di backup a ciascun criterio.
+
++
+image::../media/backup_settings.gif[impostazioni di backup]
+
++
+
+NOTE: Se sono previste le 2:00, la programmazione non verrà attivata durante l'ora legale (DST).
+
+** Nella sezione Custom backup settings (Impostazioni di backup personalizzate), fornire le impostazioni di backup specifiche che devono essere passate al plug-in in formato key-value. È possibile fornire più valori chiave da passare al plug-in.
+
+
+. Nella pagina conservazione, specificare le impostazioni di conservazione per il tipo di backup e il tipo di pianificazione selezionati nella pagina tipo di backup:
++
+|===
+| Se si desidera... | Quindi... 
+
+
+ a| 
+Conservare un certo numero di copie Snapshot
+ a| 
+Selezionare *copie Snapshot totali da conservare*, quindi specificare il numero di copie Snapshot che si desidera conservare.
+
+Se il numero di copie Snapshot supera il numero specificato, le copie Snapshot vengono eliminate prima con le copie meno recenti.
+
+
+NOTE: Se si intende attivare la replica SnapVault, è necessario impostare il numero di conservazione su 2 o superiore. Se si imposta il conteggio di conservazione su 1, l'operazione di conservazione potrebbe non riuscire perché la prima copia Snapshot è la copia Snapshot di riferimento per la relazione SnapVault fino a quando una copia Snapshot più recente non viene replicata nella destinazione.
+
+
+NOTE: Il valore massimo di conservazione è 1018 per le risorse su ONTAP 9.4 o versioni successive e 254 per le risorse su ONTAP 9.3 o versioni precedenti. I backup non avranno esito positivo se la conservazione viene impostata su un valore superiore a quello supportato dalla versione di ONTAP sottostante.
+
+
+
+ a| 
+Conservare le copie Snapshot per un certo numero di giorni
+ a| 
+Selezionare *Mantieni copie Snapshot per*, quindi specificare il numero di giorni per i quali si desidera conservare le copie Snapshot prima di eliminarle.
+
+|===
+. Nella pagina Replication, specificare le impostazioni di replica:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+*Aggiornare SnapMirror dopo aver creato una copia Snapshot locale*
+ a| 
+Selezionare questo campo per creare copie mirror dei set di backup su un altro volume (replica SnapMirror).
+
+Se la relazione di protezione in ONTAP è di tipo Mirror e Vault e se si seleziona solo questa opzione, la copia Snapshot creata sul primario non verrà trasferita alla destinazione, ma verrà elencata nella destinazione. Se questa copia Snapshot viene selezionata dalla destinazione per eseguire un'operazione di ripristino, viene visualizzato il seguente messaggio di errore: Secondary Location is not available for the selected vault/mirrored backup.
+
+
+
+ a| 
+*Aggiornare SnapVault dopo aver creato una copia Snapshot locale*
+ a| 
+Selezionare questa opzione per eseguire la replica del backup disk-to-disk (backup SnapVault).
+
+
+
+ a| 
+*Etichetta del criterio secondario*
+ a| 
+Selezionare un'etichetta Snapshot.
+
+A seconda dell'etichetta della copia Snapshot selezionata, ONTAP applica la policy di conservazione della copia Snapshot secondaria corrispondente all'etichetta.
+
+
+NOTE: Se è stato selezionato *Update SnapMirror dopo la creazione di una copia Snapshot locale*, è possibile specificare l'etichetta del criterio secondario. Tuttavia, se è stato selezionato *Aggiorna SnapVault dopo la creazione di una copia Snapshot locale*, è necessario specificare l'etichetta del criterio secondario.
+
+
+
+ a| 
+*Numero tentativi di errore*
+ a| 
+Immettere il numero massimo di tentativi di replica consentiti prima dell'interruzione dell'operazione.
+
+|===
++
+
+NOTE: È necessario configurare il criterio di conservazione di SnapMirror in ONTAP per lo storage secondario per evitare di raggiungere il limite massimo di copie Snapshot sullo storage secondario.
+
+. Esaminare il riepilogo, quindi fare clic su *fine*.
+

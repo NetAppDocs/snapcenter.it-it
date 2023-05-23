@@ -1,0 +1,25 @@
+---
+permalink: install/task_switch_from_nlb_to_f5_for_high_availability.html 
+sidebar: sidebar 
+keywords: F5, NLB, high availability 
+summary: 'È possibile modificare la configurazione SnapCenter ha da bilanciamento del carico di rete (NLB) per utilizzare bilanciamento del carico F5.' 
+---
+= Passa da NLB a F5 per ottenere alta disponibilità
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile modificare la configurazione SnapCenter ha da bilanciamento del carico di rete (NLB) per utilizzare bilanciamento del carico F5.
+
+*Fasi*
+
+. Configurare i server SnapCenter per la disponibilità elevata utilizzando F5. https://["Scopri di più"^].
+. Sull'host del server SnapCenter, avviare PowerShell.
+. Avviare una sessione utilizzando il cmdlet Open-SmConnection, quindi immettere le credenziali.
+. Aggiornare il server SnapCenter in modo che punti all'indirizzo IP del cluster F5 utilizzando il cmdlet Update-SmServerCluster.
++
+Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento alla https://["Guida di riferimento al cmdlet del software SnapCenter"^].
+
+

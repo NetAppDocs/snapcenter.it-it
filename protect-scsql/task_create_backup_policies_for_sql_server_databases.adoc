@@ -1,0 +1,340 @@
+---
+permalink: protect-scsql/task_create_backup_policies_for_sql_server_databases.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile creare un criterio di backup per la risorsa o il gruppo di risorse prima di utilizzare SnapCenter per eseguire il backup delle risorse di SQL Server oppure creare un criterio di backup al momento della creazione di un gruppo di risorse o del backup di una singola risorsa. 
+---
+= Creare criteri di backup per i database di SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare un criterio di backup per la risorsa o il gruppo di risorse prima di utilizzare SnapCenter per eseguire il backup delle risorse di SQL Server oppure creare un criterio di backup al momento della creazione di un gruppo di risorse o del backup di una singola risorsa.
+
+*Cosa ti serve*
+
+* Devi aver definito la tua strategia di protezione dei dati.
+* Devi essere preparato per la protezione dei dati completando attività come l'installazione di SnapCenter, l'aggiunta di host, l'identificazione delle risorse e la creazione di connessioni al sistema di storage.
+* È necessario aver configurato la directory del registro host per il backup del registro.
+* È necessario aggiornare (rilevare) le risorse di SQL Server.
+* Se si stanno replicando le copie Snapshot in un mirror o vault, l'amministratore di SnapCenter deve aver assegnato all'utente le macchine virtuali di storage (SVM) per i volumi di origine e di destinazione.
++
+Per informazioni sulle modalità di assegnazione delle risorse agli utenti da parte degli amministratori, consultare le informazioni di installazione di SnapCenter.
+
+* Se si desidera eseguire gli script PowerShell in prescripts e postscripts, impostare il valore del parametro usePowershellProcessforScripts su true nel file web.config.
++
+Il valore predefinito è false
+
+
+
+*A proposito di questa attività*
+
+* Un criterio di backup è un insieme di regole che regolano la gestione e la conservazione dei backup e la frequenza con cui viene eseguito il backup delle risorse o del gruppo di risorse. Inoltre, è possibile specificare le impostazioni di replica e script. La specifica delle opzioni in un criterio consente di risparmiare tempo quando si desidera riutilizzare il criterio per un altro gruppo di risorse.
+* IL PERCORSO_SCRIPT viene definito utilizzando la chiave PredesedWindowsScriptsDirectory situata nel file SMCoreServiceHost.exe.Config dell'host del plug-in.
++
+Se necessario, è possibile modificare questo percorso e riavviare il servizio SMcore. Si consiglia di utilizzare il percorso predefinito per la protezione.
+
++
+Il valore della chiave può essere visualizzato da swagger attraverso l'API: API /4.7/configsettings
+
++
+È possibile utilizzare L'API GET per visualizzare il valore della chiave. L'API SET non è supportata.
+
+* La maggior parte dei campi presenti in queste pagine della procedura guidata sono esplicativi. Le seguenti informazioni descrivono alcuni dei campi per i quali potrebbe essere necessaria una guida.
+
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *Impostazioni*.
+. Nella pagina Impostazioni, fare clic su *Criteri*.
+. Fare clic su *nuovo*.
+. Nella pagina Name (Nome), immettere il nome e la descrizione della policy.
+. Nella pagina Backup Type (tipo di backup), attenersi alla seguente procedura:
++
+.. Scegliere il tipo di backup:
++
+|===
+| Se si desidera... | Eseguire questa operazione... 
+
+
+ a| 
+Eseguire il backup dei file di database e dei log delle transazioni e troncare i log delle transazioni
+ a| 
+... Selezionare *Backup completo e Backup del registro*.
+... Inserire il numero massimo di database di cui eseguire il backup per ciascuna copia Snapshot.
++
+
+NOTE: È necessario aumentare questo valore se si desidera eseguire più operazioni di backup contemporaneamente.
+
+
+
+
+
+ a| 
+Eseguire il backup dei file di database
+ a| 
+... Selezionare *Backup completo*.
+... Inserire il numero massimo di database di cui eseguire il backup per ciascuna copia Snapshot. Il valore predefinito è 100
++
+
+NOTE: È necessario aumentare questo valore se si desidera eseguire più operazioni di backup contemporaneamente.
+
+
+
+
+
+ a| 
+Eseguire il backup dei registri delle transazioni
+ a| 
+Selezionare *Log backup*.
+
+|===
+.. Se si esegue il backup delle risorse utilizzando un'altra applicazione di backup, selezionare *Copia solo backup*.
++
+Mantenendo intatti i log delle transazioni, qualsiasi applicazione di backup può ripristinare i database. In genere, l'utente non deve utilizzare l'opzione copia solo in altre circostanze.
+
++
+
+NOTE: Microsoft SQL non supporta l'opzione *Copia solo backup* insieme all'opzione *Backup completo e Backup del registro* per lo storage secondario.
+
+.. Nella sezione Availability Group Settings (Impostazioni gruppo di disponibilità), eseguire le seguenti operazioni:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Backup solo su replica di backup preferita
+ a| 
+Selezionare questa opzione per eseguire il backup solo sulla replica di backup preferita. La replica di backup preferita viene stabilita dalle preferenze di backup configurate per AG in SQL Server.
+
+
+
+ a| 
+Selezionare le repliche per il backup
+ a| 
+Scegliere la replica AG primaria o la replica AG secondaria per il backup.
+
+
+
+ a| 
+Priorità di backup (priorità di backup minima e massima)
+ a| 
+Specificare un numero minimo di priorità di backup e un numero massimo di priorità di backup che decida la replica AG per il backup. Ad esempio, è possibile avere una priorità minima di 10 e una priorità massima di 50. In questo caso, tutte le repliche AG con priorità superiore a 10 e inferiore a 50 vengono considerate come backup.
+
+
+NOTE: Per impostazione predefinita, la priorità minima è 1 e la priorità massima è 100.
+
+|===
++
+
+NOTE: Nelle configurazioni del cluster, i backup vengono conservati in ciascun nodo del cluster in base alle impostazioni di conservazione impostate nel criterio. Se il nodo proprietario di AG cambia, i backup vengono eseguiti in base alle impostazioni di conservazione e i backup del nodo proprietario precedente vengono conservati. La conservazione per AG è applicabile solo a livello di nodo.
+
+.. Se si desidera pianificare il backup che si desidera creare con questo criterio, specificare il tipo di pianificazione selezionando *on demand*, *Hourly*, *Daily*, *Weekly* o *Monthly*.
++
+È possibile selezionare un tipo di pianificazione per un criterio.
+
++
+image::../media/backup_settings.gif[impostazioni di backup]
+
++
+
+NOTE: È possibile specificare la pianificazione (data di inizio, data di fine e frequenza) per l'operazione di backup durante la creazione di un gruppo di risorse. Ciò consente di creare gruppi di risorse che condividono la stessa policy e frequenza di backup, ma consente di assegnare diverse pianificazioni di backup a ciascun criterio.
+
++
+
+NOTE: Se sono previste le 2:00, la programmazione non verrà attivata durante l'ora legale (DST).
+
+
+
+. Nella pagina di conservazione, a seconda del tipo di backup selezionato nella pagina del tipo di backup, eseguire una o più delle seguenti operazioni:
++
+.. Nella sezione Impostazioni di conservazione per l'operazione di ripristino aggiornata al minuto, eseguire una delle seguenti operazioni:
++
+|===
+| Se si desidera... | Eseguire questa operazione... 
+
+
+ a| 
+Conserva solo un numero specifico di copie Snapshot
+ a| 
+Selezionare l'opzione *Mantieni backup registro applicabili agli ultimi giorni <number>* e specificare il numero di giorni da conservare. Se ci si avvicina a questo limite, si consiglia di eliminare le copie meno recenti.
+
+
+
+ a| 
+Conservare le copie di backup per un numero specifico di giorni
+ a| 
+Selezionare l'opzione *Mantieni backup registro applicabili agli ultimi giorni <number> dei backup completi* e specificare il numero di giorni per conservare le copie di backup del registro.
+
+|===
+.. Nella sezione *Impostazioni di conservazione backup completo* per le impostazioni di conservazione su richiesta, eseguire le seguenti operazioni:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Copie Snapshot totali da conservare
+ a| 
+Se si desidera specificare il numero di copie Snapshot da conservare, selezionare *copie Snapshot totali da conservare*.
+
+Se il numero di copie Snapshot supera il numero specificato, le copie Snapshot vengono eliminate prima con le copie meno recenti.
+
+
+NOTE: Il valore massimo di conservazione è 1018 per le risorse su ONTAP 9.4 o versioni successive e 254 per le risorse su ONTAP 9.3 o versioni precedenti. I backup non avranno esito positivo se la conservazione viene impostata su un valore superiore a quello supportato dalla versione di ONTAP sottostante.
+
+
+IMPORTANT: Per impostazione predefinita, il valore del conteggio di conservazione è impostato su 2. Se si imposta il conteggio di conservazione su 1, l'operazione di conservazione potrebbe non riuscire perché la prima copia Snapshot è la copia Snapshot di riferimento per la relazione SnapVault fino a quando una copia Snapshot più recente non viene replicata nella destinazione.
+
+
+
+ a| 
+Mantieni copie Snapshot per
+ a| 
+Se si desidera specificare il numero di giorni per i quali si desidera conservare le copie Snapshot prima di eliminarle, selezionare *Mantieni copie Snapshot per*.
+
+|===
+.. Nella sezione *Impostazioni di conservazione backup completo* per le impostazioni di conservazione oraria, giornaliera, settimanale e mensile, specificare le impostazioni di conservazione per il tipo di pianificazione selezionato nella pagina tipo di backup.
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Copie Snapshot totali da conservare
+ a| 
+Se si desidera specificare il numero di copie Snapshot da conservare, selezionare *copie Snapshot totali da conservare*. Se il numero di copie Snapshot supera il numero specificato, le copie Snapshot vengono eliminate prima con le copie meno recenti.
+
+
+IMPORTANT: Se si intende attivare la replica SnapVault, è necessario impostare il numero di conservazione su 2 o superiore. Se si imposta il conteggio di conservazione su 1, l'operazione di conservazione potrebbe non riuscire perché la prima copia Snapshot è la copia Snapshot di riferimento per la relazione SnapVault fino a quando una copia Snapshot più recente non viene replicata nella destinazione.
+
+
+
+ a| 
+Mantieni copie Snapshot per
+ a| 
+Se si desidera specificare il numero di giorni per i quali si desidera conservare le copie Snapshot prima di eliminarle, selezionare *Mantieni copie Snapshot per*.
+
+|===
++
+La conservazione delle copie Snapshot del registro è impostata su 7 giorni per impostazione predefinita. Utilizzare il cmdlet Set-SmPolicy per modificare la conservazione delle copie Snapshot del registro.
+
++
+Questo esempio imposta la conservazione delle copie Snapshot del registro su 2:
+
++
+[listing]
+----
+Set-SmPolicy -PolicyName 'newpol' -PolicyType 'Backup' -PluginPolicyType 'SCSQL' -sqlbackuptype 'FullBackupAndLogBackup' -RetentionSettings @{BackupType='DATA';ScheduleType='Hourly';RetentionCount=2},@{BackupType='LOG_SNAPSHOT';ScheduleType='None';RetentionCount=2},@{BackupType='LOG';ScheduleType='Hourly';RetentionCount=2} -scheduletype 'Hourly'
+----
++
+https://["SnapCenter conserva le copie Snapshot del database"]
+
+
+
+. Nella pagina Replication (Replica), specificare la replica nel sistema di storage secondario:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Aggiornare SnapMirror dopo aver creato una copia Snapshot locale
+ a| 
+Selezionare questa opzione per creare copie mirror dei set di backup su un altro volume (SnapMirror).
+
+
+
+ a| 
+Aggiornare SnapVault dopo aver creato una copia Snapshot
+ a| 
+Selezionare questa opzione per eseguire la replica del backup disk-to-disk.
+
+
+
+ a| 
+Etichetta del criterio secondario
+ a| 
+Selezionare un'etichetta Snapshot.
+
+A seconda dell'etichetta della copia Snapshot selezionata, ONTAP applica la policy di conservazione della copia Snapshot secondaria corrispondente all'etichetta.
+
+
+NOTE: Se è stato selezionato *Update SnapMirror dopo la creazione di una copia Snapshot locale*, è possibile specificare l'etichetta del criterio secondario. Tuttavia, se è stato selezionato *Aggiorna SnapVault dopo la creazione di una copia Snapshot locale*, è necessario specificare l'etichetta del criterio secondario.
+
+
+
+ a| 
+Numero tentativi di errore
+ a| 
+Immettere il numero di tentativi di replica che devono verificarsi prima dell'arresto del processo.
+
+|===
+. Nella pagina script, immettere il percorso e gli argomenti del prespt o del postscript che devono essere eseguiti rispettivamente prima o dopo l'operazione di backup.
++
+Ad esempio, è possibile eseguire uno script per aggiornare i trap SNMP, automatizzare gli avvisi e inviare i registri.
+
++
+
+NOTE: Il percorso prescripts o postscripts non deve includere dischi o condivisioni. Il percorso deve essere relativo al PERCORSO_SCRIPT.
+
++
+
+NOTE: È necessario configurare il criterio di conservazione di SnapMirror in ONTAP in modo che lo storage secondario non raggiunga il limite massimo di copie Snapshot.
+
+. Nella pagina verifica, attenersi alla seguente procedura:
++
+.. Nella sezione Esegui verifica per le seguenti pianificazioni di backup, selezionare la frequenza di pianificazione.
+.. Nella sezione Opzioni di verifica della coerenza del database, eseguire le seguenti operazioni:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Limitare la struttura di integrità alla struttura fisica del database (SOLO_FISICA)
+ a| 
+Selezionare *Limit the Integrity Structure to Physical Structure of the database (PHYSICAL_ONLY)* (limita la struttura di integrità alla struttura fisica del database) per limitare il controllo dell'integrità alla struttura fisica del database e rilevare pagine lacerate, errori di checksum e guasti hardware comuni che influiscono sul database.
+
+
+
+ a| 
+SUSPRESS all information messages (NO INFOMSGS) (SUSC. Tutti i messaggi informativi (
+ a| 
+Selezionare *Sospendi tutti i messaggi informativi (NO_INFOMSGS)* per eliminare tutti i messaggi informativi. Selezionato per impostazione predefinita.
+
+
+
+ a| 
+Visualizza tutti i messaggi di errore riportati per oggetto (ALL_ERRORMSGS)
+ a| 
+Selezionare *Visualizza tutti i messaggi di errore riportati per oggetto (ALL_ERRORMSGS)* per visualizzare tutti gli errori segnalati per oggetto.
+
+
+
+ a| 
+Non controllare gli indici non in cluster (NOINDEX)
+ a| 
+Selezionare *non selezionare gli indici non cluster (NOINDEX)* se non si desidera controllare gli indici non cluster. Il database SQL Server utilizza Microsoft SQL Server Database Consistency Checker (DBCC) per verificare l'integrità fisica e logica degli oggetti nel database.
+
+
+
+ a| 
+Limitare i controlli e ottenere i blocchi invece di utilizzare una copia Snapshot del database interno (TABLOCK)
+ a| 
+Selezionare *limita i controlli e ottieni i blocchi invece di utilizzare una copia Snapshot del database interno (TABLOCK)* per limitare i controlli e ottenere i blocchi invece di utilizzare una copia Snapshot del database interno.
+
+|===
+.. Nella sezione *Log Backup*, selezionare *Verify log backup upon completed* (verifica backup registro al completamento) per verificare il backup del registro al completamento.
+.. Nella sezione *Verification script settings* (Impostazioni script di verifica), immettere il percorso e gli argomenti del prescrittt o del postscript che devono essere eseguiti rispettivamente prima o dopo l'operazione di verifica.
++
+
+NOTE: Il percorso prescripts o postscripts non deve includere dischi o condivisioni. Il percorso deve essere relativo al PERCORSO_SCRIPT.
+
+
+
+. Esaminare il riepilogo, quindi fare clic su *fine*.
+

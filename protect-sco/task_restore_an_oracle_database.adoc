@@ -1,0 +1,239 @@
+---
+permalink: protect-sco/task_restore_an_oracle_database.html 
+sidebar: sidebar 
+keywords: restore, recover, Oracle 
+summary: In caso di perdita di dati, è possibile utilizzare SnapCenter per ripristinare i dati da uno o più backup nel file system attivo e quindi ripristinare il database. 
+---
+= Ripristinare e ripristinare il database Oracle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In caso di perdita di dati, è possibile utilizzare SnapCenter per ripristinare i dati da uno o più backup nel file system attivo e quindi ripristinare il database.
+
+*Prima di iniziare*
+
+Se il plug-in è stato installato come utente non root, è necessario assegnare manualmente le autorizzazioni di esecuzione alle directory prescrittt e postscript.
+
+*A proposito di questa attività*
+
+Il ripristino viene eseguito utilizzando i registri di archiviazione disponibili nella posizione del registro di archiviazione configurata. Se il database viene eseguito in modalità ARCHIVELOG, il database Oracle salva i gruppi pieni di file di log di ripristino in una o più destinazioni offline, denominate collettivamente log di ripristino archiviato. SnapCenter identifica e monta il numero ottimale di backup dei log in base all'opzione SCN specificata, data e ora selezionate o tutti i log. Se i registri di archiviazione richiesti per il ripristino non sono disponibili nella posizione configurata, montare la copia Snapshot contenente i registri e specificare il percorso come registri di archiviazione esterni.
+
+Se si esegue la migrazione del database ASM da ASMLIB ad ASMFD, i backup creati con ASMLIB non possono essere utilizzati per ripristinare il database. È necessario creare backup nella configurazione ASMFD e utilizzarli per il ripristino. Analogamente, se il database ASM viene migrato da ASMFD ad ASMLIB, è necessario creare i backup nella configurazione ASMLIB per il ripristino.
+
+Quando si ripristina un database, viene creato un file di blocco operativo (.SM_lock_dbsid) sull'host del database Oracle nella directory _/var/opt/snapcenter/sco/lock_ per evitare l'esecuzione di più operazioni sul database. Una volta ripristinato il database, il file di blocco operativo viene automaticamente rimosso.
+
+
+NOTE: Il ripristino del file SPFILE e Password non è supportato.
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina Resources (risorse), selezionare *Database* o *Resource Group* dall'elenco *View* (Visualizza).
+. Selezionare il database dalla vista dei dettagli del database o dalla vista dei dettagli del gruppo di risorse.
++
+Viene visualizzata la pagina della topologia del database.
+
+. Dalla vista Manage Copies (Gestisci copie), selezionare *Backup* dal sistema di storage primario o secondario (mirrorato o replicato).
+. Selezionare il backup dalla tabella, quindi fare clic su *image:../media/restore_icon.gif["icona restore (ripristina)"]*.
+. Nella pagina Restore Scope (ambito ripristino), eseguire le seguenti operazioni:
++
+.. Se è stato selezionato un backup di un database in un ambiente RAC (Real Application Clusters), selezionare il nodo RAC.
+.. Quando si selezionano dati mirrorati o del vault:
++
+*** se non è presente alcun backup del log nel mirror o nel vault, non viene selezionato nulla e i locatori sono vuoti.
+*** se i backup del log esistono nel mirror o nel vault, viene selezionato l'ultimo backup del log e viene visualizzato il localizzatore corrispondente.
++
+
+NOTE: Se il backup del log selezionato esiste sia nella posizione del mirror che nel vault, vengono visualizzati entrambi i locator.
+
+
+
+.. Eseguire le seguenti operazioni:
++
+|===
+| Se si desidera ripristinare... | Eseguire questa operazione... 
+
+
+ a| 
+Tutti i file di dati del database
+ a| 
+Selezionare *tutti i file dati*.
+
+Vengono ripristinati solo i file di dati del database. I file di controllo, i log di archiviazione o i file di log di ripristino non vengono ripristinati.
+
+
+
+ a| 
+Tablespace
+ a| 
+Selezionare *tablespace*.
+
+È possibile specificare gli spazi delle tabelle che si desidera ripristinare.
+
+
+
+ a| 
+File di controllo
+ a| 
+Selezionare *file di controllo*.
+
+
+NOTE: Durante il ripristino dei file di controllo, assicurarsi che la struttura della directory esista o debba essere creata con le proprietà corrette di utenti e gruppi, se presenti, per consentire la copia dei file nella posizione di destinazione mediante il processo di ripristino. Se la directory non esiste, il processo di ripristino avrà esito negativo.
+
+
+
+ a| 
+Ripristinare i file di log
+ a| 
+Selezionare *Ripeti file di log*.
+
+Questa opzione è disponibile solo per i database di standby Data Guard o Active Data Guard.
+
+
+NOTE: Il backup dei file di log di ripristino non viene eseguito per i database non Data Guard. Per i database non Data Guard, il ripristino viene eseguito utilizzando i registri di archiviazione.
+
+
+
+ a| 
+Database collegabili (PDB)
+ a| 
+Selezionare *Database inseribili*, quindi specificare i PDB che si desidera ripristinare.
+
+
+
+ a| 
+Tablespace dei database collegabili (PDB)
+ a| 
+Selezionare *tablespace del database Pluggable (PDB)*, quindi specificare il PDB e gli spazi delle tabelle del PDB che si desidera ripristinare.
+
+Questa opzione è disponibile solo se è stato selezionato un PDB per il ripristino.
+
+|===
+.. Selezionare *Cambia stato del database se necessario per il ripristino e il ripristino* per impostare lo stato del database sullo stato richiesto per eseguire le operazioni di ripristino e ripristino.
++
+I vari stati di un database, da quelli superiori a quelli inferiori, sono aperti, montati, avviati e arrestati. Selezionare questa casella di controllo se il database si trova in uno stato superiore ma lo stato deve essere modificato in uno stato inferiore per eseguire un'operazione di ripristino. Se il database si trova in uno stato inferiore ma lo stato deve essere modificato in uno stato superiore per eseguire l'operazione di ripristino, lo stato del database viene modificato automaticamente anche se non si seleziona la casella di controllo.
+
++
+Se un database si trova in stato aperto e per il ripristino il database deve essere in stato montato, lo stato del database viene modificato solo se si seleziona questa casella di controllo.
+
+.. Selezionare *Imponi ripristino* se si desidera eseguire il ripristino in-place negli scenari in cui vengono aggiunti nuovi file di dati dopo il backup o quando i LUN vengono aggiunti, cancellati o ricreati in un gruppo di dischi LVM.
+
+
+. Nella pagina Recovery Scope (ambito ripristino), eseguire le seguenti operazioni:
++
+|===
+| Se... | Eseguire questa operazione... 
+
+
+ a| 
+Ripristinare l'ultima transazione
+ a| 
+Selezionare *tutti i registri*.
+
+
+
+ a| 
+Ripristinare un numero SCN (System Change Number) specifico
+ a| 
+Selezionare *fino a quando SCN (System Change Number)*.
+
+
+
+ a| 
+Desidera ripristinare dati e tempi specifici
+ a| 
+Selezionare *Data e ora*.
+
+Specificare la data e l'ora del fuso orario dell'host del database.
+
+
+
+ a| 
+Non si desidera eseguire il ripristino
+ a| 
+Selezionare *Nessun ripristino*.
+
+
+
+ a| 
+Specificare le posizioni dei registri di archiviazione esterni
+ a| 
+Se il database viene eseguito in modalità ARCHIVELOG, SnapCenter identifica e monta il numero ottimale di backup dei log in base all'opzione SCN specificata, data e ora selezionate o tutti i log.
+
+Se si desidera comunque specificare la posizione dei file di log dell'archivio esterno, selezionare *specifica le posizioni esterne del log dell'archivio*.
+
+Se i log di archiviazione vengono annullati come parte del backup e sono stati montati manualmente i backup del log di archiviazione richiesti, è necessario specificare il percorso di backup montato come posizione del log di archiviazione esterno per il ripristino.
+
+
+NOTE: Verificare il percorso e il contenuto del percorso di montaggio prima di inserirlo come percorso di log esterno.
+
+** http://["Report tecnico di NetApp 4591: Backup, ripristino, replica e DR per la protezione dei dati del database"^]
+** https://["Operazione non riuscita con errore ora-00308"^]
+
+
+|===
++
+Non è possibile eseguire il ripristino con il ripristino da backup secondari se i volumi di log dell'archivio non sono protetti ma i volumi di dati sono protetti. È possibile eseguire il ripristino solo selezionando *No recovery*.
+
++
+Se si sta ripristinando un database RAC con l'opzione di database aperto selezionata, solo l'istanza RAC in cui è stata avviata l'operazione di ripristino viene riportata allo stato aperto.
+
++
+
+NOTE: Il ripristino non è supportato per i database di standby Data Guard e Active Data Guard.
+
+. Nella pagina PreOps, immettere il percorso e gli argomenti della prescrizione che si desidera eseguire prima dell'operazione di ripristino.
++
+È necessario memorizzare le prescrizioni nel percorso _/var/opt/snapcenter/spl/scripts_ o in qualsiasi cartella all'interno di questo percorso. Per impostazione predefinita, il percorso _/var/opt/snapcenter/spl/scripts_ viene compilato. Se sono state create cartelle all'interno di questo percorso per memorizzare gli script, è necessario specificare tali cartelle nel percorso.
+
++
+È inoltre possibile specificare il valore di timeout dello script. Il valore predefinito è 60 secondi.
+
++
+SnapCenter consente di utilizzare le variabili di ambiente predefinite quando si eseguono prespt e postscript. link:../protect-sco/predefined-environment-variables-prescript-postscript-restore.html["Scopri di più"^]
+
+. Nella pagina PostOps, attenersi alla seguente procedura:
++
+.. Immettere il percorso e gli argomenti del postscript che si desidera eseguire dopo l'operazione di ripristino.
++
+È necessario memorizzare i postscript in _/var/opt/snapcenter/spl/scripts_ o in qualsiasi cartella all'interno di questo percorso. Per impostazione predefinita, il percorso _/var/opt/snapcenter/spl/scripts_ viene compilato. Se sono state create cartelle all'interno di questo percorso per memorizzare gli script, è necessario specificare tali cartelle nel percorso.
+
++
+
+NOTE: Se l'operazione di ripristino non riesce, i postscript non vengono eseguiti e le attività di pulizia vengono attivate direttamente.
+
+.. Selezionare questa casella di controllo se si desidera aprire il database dopo il ripristino.
++
+Dopo il ripristino di un database container (CDB) con o senza file di controllo, o dopo il ripristino solo dei file di controllo CDB, se si specifica di aprire il database dopo il ripristino, viene aperto solo il CDB e non i database collegabili (PDB) in quel CDB.
+
++
+In un'installazione RAC, dopo il ripristino viene aperta solo l'istanza RAC utilizzata per il ripristino.
+
++
+
+NOTE: Dopo aver ripristinato uno spazio tabella utente con file di controllo, uno spazio tabella di sistema con o senza file di controllo o un PDB con o senza file di controllo, solo lo stato del PDB correlato all'operazione di ripristino viene modificato nello stato originale. Lo stato degli altri PDB non utilizzati per il ripristino non viene modificato nello stato originale perché lo stato di tali PDB non è stato salvato. È necessario modificare manualmente lo stato dei PDB non utilizzati per il ripristino.
+
+
+
+. Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare le notifiche email.
++
+È inoltre necessario specificare gli indirizzi e-mail del mittente e del destinatario e l'oggetto dell'e-mail. Se si desidera allegare il report dell'operazione di ripristino eseguita, selezionare *Allega report*.
+
++
+
+NOTE: Per la notifica via email, è necessario specificare i dettagli del server SMTP utilizzando la GUI o il comando PowerShell Set-SmtpServer.
+
+. Esaminare il riepilogo, quindi fare clic su *fine*.
+. Monitorare l'avanzamento dell'operazione facendo clic su *Monitor* > *Jobs*.
+
+
+*Per ulteriori informazioni*
+
+* https://["Il database Oracle RAC One Node viene ignorato per l'esecuzione delle operazioni SnapCenter"^]
+* https://["Impossibile eseguire il ripristino da una posizione SnapMirror o SnapVault secondaria"^]
+* https://["Impossibile eseguire il ripristino da un backup di un'incarnazione orfana"^]
+* https://["Parametri personalizzabili per operazioni di backup, ripristino e clonazione su sistemi AIX"^]
+

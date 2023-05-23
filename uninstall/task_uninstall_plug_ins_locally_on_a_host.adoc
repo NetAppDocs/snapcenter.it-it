@@ -1,0 +1,35 @@
+---
+permalink: uninstall/task_uninstall_plug_ins_locally_on_a_host.html 
+sidebar: sidebar 
+keywords: uninstall, uninstall plug-in locally, uninstall plug-in from a host 
+summary: 'È possibile disinstallare i plug-in SnapCenter localmente su un host se non è possibile raggiungere l"host dal server SnapCenter.' 
+---
+= Disinstallare i plug-in localmente su un host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile disinstallare i plug-in SnapCenter localmente su un host se non è possibile raggiungere l'host dal server SnapCenter.
+
+*A proposito di questa attività*
+
+La procedura consigliata per disinstallare singoli plug-in o pacchetti plug-in consiste nell'utilizzare la GUI di SnapCenter o il cmdlet Uninstall-SmHostPackage sull'interfaccia della riga di comando dell'host server SnapCenter. Queste procedure consentono al server SnapCenter di rimanere aggiornato su eventuali modifiche.
+
+Tuttavia, potrebbe essere raro disinstallare i plug-in localmente. Ad esempio, è possibile che sia stato eseguito un processo di disinstallazione dal server SnapCenter ma il processo non è riuscito oppure che il server SnapCenter e i plug-in orfani siano stati disinstallati su un host.
+
+
+IMPORTANT: La disinstallazione locale di un pacchetto plug-in su un host non elimina i dati associati all'host, ad esempio i processi pianificati e i metadati di backup.
+
+
+IMPORTANT: Non tentare di disinstallare il pacchetto di plug-in SnapCenter per Windows localmente dal pannello di controllo. È necessario utilizzare l'interfaccia grafica di SnapCenter per assicurarsi che il plug-in SnapCenter per Microsoft Windows sia stato disinstallato correttamente.
+
+*Fasi*
+
+. Sul sistema host, accedere al pannello di controllo e fare clic su *Disinstalla un programma*.
+. Nell'elenco dei programmi, selezionare il plug-in o il pacchetto plug-in SnapCenter che si desidera disinstallare e fare clic su *Disinstalla*.
++
+Windows disinstalla tutti i plug-in del pacchetto selezionato.
+
+

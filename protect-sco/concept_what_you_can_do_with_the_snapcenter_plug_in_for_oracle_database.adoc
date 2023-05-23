@@ -1,0 +1,37 @@
+---
+permalink: protect-sco/concept_what_you_can_do_with_the_snapcenter_plug_in_for_oracle_database.html 
+sidebar: sidebar 
+keywords: backup, restore, clone, oracle database 
+summary: 'È possibile utilizzare il plug-in per database Oracle per eseguire il backup, verificare, ripristinare, ripristinare, montare, Smontare e clonare i database Oracle e le relative risorse. Con Oracle Recovery Manager (RMAN) è inoltre possibile catalogare o decatalogare i backup del database.' 
+---
+= Cosa puoi fare con il plug-in per database Oracle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il plug-in SnapCenter per database Oracle è un componente sul lato host del software NetApp SnapCenter che consente la gestione della protezione dei dati applicativa dei database Oracle.
+
+Il plug-in per database Oracle automatizza il backup, la catalogazione e la decatalogazione con Oracle Recovery Manager (RMAN), la verifica, il montaggio, lo smontaggio, il ripristino, Recovery e cloning di database Oracle nel tuo ambiente SnapCenter. Il plug-in per database Oracle installa il plug-in SnapCenter per UNIX per eseguire tutte le operazioni di protezione dei dati.
+
+È possibile utilizzare il plug-in per database Oracle per gestire i backup dei database Oracle che eseguono applicazioni SAP. Tuttavia, l'integrazione SAP BR*Tools non è supportata.
+
+* Eseguire il backup di file di dati, file di controllo e file di log di archiviazione.
++
+Il backup è supportato solo a livello di database container (CDB).
+
+* Ripristino e ripristino di database, CDBS e database collegabili (PDB).
++
+Il ripristino incompleto dei PDB non è supportato.
+
+* Crea cloni di database di produzione fino a un punto in tempo.
++
+La clonazione è supportata solo a livello di CDB.
+
+* Verificare immediatamente i backup.
+* Montare e smontare i backup dei dati e dei log per l'operazione di recovery.
+* Pianifica le operazioni di backup e verifica.
+* Monitorare tutte le operazioni.
+* Visualizza i report per le operazioni di backup, ripristino e clonazione.
+

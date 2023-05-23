@@ -1,0 +1,119 @@
+---
+permalink: protect-sce/task_back_up_exchange_databases.html 
+sidebar: sidebar 
+keywords: SnapCenter plug-in for Exchange Server 
+summary: Se un database non fa parte di alcun gruppo di risorse, è possibile eseguire il backup del database o del gruppo disponibilità database dalla pagina risorse. 
+---
+= Eseguire il backup dei database Exchange
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se un database non fa parte di alcun gruppo di risorse, è possibile eseguire il backup del database o del gruppo disponibilità database dalla pagina risorse.
+
+*Cosa ti serve*
+
+* È necessario aver creato una policy di backup.
+* È necessario assegnare l'aggregato utilizzato dall'operazione di backup alla SVM utilizzata dal database.
+* Se si desidera eseguire il backup di una risorsa che ha una relazione SnapMirror con uno storage secondario, il ruolo assegnato all'utente dello storage deve includere il privilegio "`snapmirror all`". Tuttavia, se si utilizza il ruolo "`vsadmin`", il privilegio "`snapmirror all`" non è richiesto.
+* Se si desidera eseguire il backup di un database o di un Database Availability Group con copia del database attiva/passiva su uno storage NetApp e non NetApp, Inoltre, è stata selezionata l'opzione *Backup delle copie attive* o *Backup delle copie sui server da selezionare durante l'ora di creazione del processo di backup* nel criterio, i processi di backup passano allo stato di avviso. Il backup avrà esito positivo per la copia del database attiva/passiva sullo storage NetApp e il backup non avrà esito positivo per la copia del database attiva/passiva su storage non NetApp.
++
+|===
+
+
+| *Best practice:* non eseguire contemporaneamente backup di database attivi e passivi. Può verificarsi una race condition e uno dei backup potrebbe non riuscire. 
+|===
+
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare *plug-in Microsoft Exchange Server* dall'elenco.
+. Nella pagina risorse, selezionare *Database* o *Database Availability Group* dall'elenco *View*.
++
+Nella pagina risorse, la image:../media/not_supported_icon.png[""] Indica che il database si trova su storage non NetApp.
+
++
+
+NOTE: In un DAG, se una copia del database attiva si trova su uno storage non NetApp e almeno una copia passiva del database risiede su uno storage NetApp, è possibile proteggere il database.
+
++
+Fare clic su *image:../media/filter_icon.gif[""]*, quindi selezionare il nome host e il tipo di database per filtrare le risorse. Quindi fare clic su *image:../media/filter_icon.gif[""]* per chiudere il riquadro del filtro.
+
++
+** Se si desidera eseguire il backup di un database, fare clic sul nome del database.
++
+... Se viene visualizzata la vista topologia, fare clic su *Protect* (protezione).
+... Se viene visualizzata la procedura guidata Database - Protect Resource, passare alla fase 3.
+
+
+** Se si desidera eseguire il backup di un gruppo di disponibilità database, fare clic sul nome del gruppo di disponibilità database.
+
+
+. Se si desidera specificare un nome di copia Snapshot personalizzato, nella pagina risorse selezionare la casella di controllo *Usa formato nome personalizzato per copia Snapshot*, quindi immettere un formato nome personalizzato da utilizzare per il nome della copia Snapshot.
++
+Ad esempio, _customtext_policy_hostname_ o _resource_hostname_. Per impostazione predefinita, al nome della copia Snapshot viene aggiunto un indicatore data e ora.
+
+. Nella pagina Criteri, attenersi alla seguente procedura:
++
+.. Selezionare uno o più criteri dall'elenco a discesa.
++
+
+NOTE: Puoi anche creare una policy facendo clic su *image:../media/add_policy_from_resourcegroup.gif[""]*.
+
++
+
+NOTE: Se un criterio contiene l'opzione *Backup delle copie sui server da selezionare al momento della creazione del processo di backup*, viene visualizzata un'opzione di selezione del server per selezionare uno o più server. L'opzione di selezione del server elenca solo il server in cui il database selezionato si trova su uno storage NetApp.
+
+
+
++
+Nella sezione Configure schedules for selected policies (Configura pianificazioni per policy selezionate), vengono elencati i criteri selezionati.
+
++
+.. Fare clic su *image:../media/add_policy_from_resourcegroup.gif[""]* Nella colonna Configure Schedules (Configura pianificazioni) per il criterio per il quale si desidera configurare una pianificazione.
+.. Nella finestra Add schedules for policy _policy_name_, configurare la pianificazione, quindi fare clic su *OK*.
++
+Dove _policy_name_ è il nome del criterio selezionato.
+
++
+Le pianificazioni configurate sono elencate nella colonna Applied Schedules (Pianificazioni applicate).
+
+
+
+. Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
++
+È inoltre necessario specificare gli indirizzi e-mail del mittente e del destinatario e l'oggetto dell'e-mail. Se si desidera allegare il report dell'operazione di backup eseguita sulla risorsa, selezionare *Attach Job Report*.
+
++
+
+NOTE: Per la notifica via email, è necessario aver specificato i dettagli del server SMTP utilizzando la GUI o il comando PowerShell Set-SmtpServer.
+
+. Esaminare il riepilogo, quindi fare clic su *fine*.
++
+Viene visualizzata la pagina della topologia del database.
+
+. Fare clic su *Esegui backup ora*.
+. Nella pagina Backup, attenersi alla seguente procedura:
++
+.. Se sono stati applicati più criteri alla risorsa, selezionare il criterio da utilizzare per il backup dall'elenco a discesa *Policy*.
++
+Se il criterio selezionato per il backup on-demand è associato a una pianificazione di backup, i backup on-demand verranno conservati in base alle impostazioni di conservazione specificate per il tipo di pianificazione.
+
+.. Fare clic su *Backup*.
+
+
+. Monitorare l'avanzamento del backup facendo doppio clic sul processo nel riquadro attività nella parte inferiore della pagina per visualizzare la pagina Dettagli lavoro.
++
+** Nelle configurazioni MetroCluster, SnapCenter potrebbe non essere in grado di rilevare una relazione di protezione dopo un failover.
++
+Per ulteriori informazioni, vedere: https://["Impossibile rilevare la relazione SnapMirror o SnapVault dopo il failover di MetroCluster"^]
+
+** Se si esegue il backup dei dati delle applicazioni su VMDK e la dimensione dell'heap Java per il plug-in SnapCenter per VMware vSphere non è sufficiente, il backup potrebbe non riuscire.
++
+Per aumentare la dimensione dell'heap Java, individuare il file script _/opt/netapp/init_scripts/scvservice_. In questo script, il comando _do_start method_ avvia il servizio plug-in VMware di SnapCenter. Aggiornare il comando al seguente: _Java -jar -Xmx8192M -Xms4096M_
+
+
+
+

@@ -1,0 +1,20 @@
+---
+permalink: protect-sce/reference_restore_exchange_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile utilizzare SnapCenter per ripristinare i database Exchange ripristinando uno o più backup nel file system attivo. 
+---
+= Ripristinare il flusso di lavoro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare SnapCenter per ripristinare i database Exchange ripristinando uno o più backup nel file system attivo.
+
+Il seguente flusso di lavoro mostra la sequenza in cui è necessario eseguire le operazioni di ripristino del database di Exchange:
+
+image:../media/all_plug_ins_restore_workflow.png[""]
+
+È inoltre possibile utilizzare i cmdlet PowerShell manualmente o negli script per eseguire operazioni di backup e ripristino. Per informazioni dettagliate sui cmdlet di PowerShell, consultare la guida in linea del cmdlet di SnapCenter o consultare https://["Guida di riferimento al cmdlet del software SnapCenter"^].

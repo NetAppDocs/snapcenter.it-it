@@ -1,0 +1,42 @@
+---
+permalink: protect-scsql/concept_what_you_can_do_with_the_snapcenter_plug_in_for_microsoft_sql_server.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Una volta installato il plug-in SnapCenter per Microsoft SQL Server nell"ambiente, è possibile utilizzare SnapCenter per eseguire il backup, il ripristino e la clonazione dei database.' 
+---
+= Operazioni che è possibile eseguire con il plug-in SnapCenter per Microsoft SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una volta installato il plug-in SnapCenter per Microsoft SQL Server nell'ambiente, è possibile utilizzare SnapCenter per eseguire il backup, il ripristino e la clonazione dei database.
+
+È possibile eseguire le seguenti attività che supportano le operazioni di backup, ripristino e clonazione dei database e delle risorse di database di SQL Server:
+
+* Eseguire il backup dei database SQL Server e dei log delle transazioni associati
++
+Non è possibile creare un backup del registro per i database master e del sistema msdb. Tuttavia, è possibile creare backup di log per il database del modello di sistema.
+
+* Ripristinare le risorse del database
++
+** È possibile ripristinare i database del sistema master, i database del sistema msdb e i database del sistema modello.
+** Non è possibile ripristinare più database, istanze e gruppi di disponibilità.
+** Non è possibile ripristinare il database di sistema su un percorso alternativo.
+
+
+* Crea cloni point-in-time di database di produzione
++
+Non è possibile eseguire operazioni di backup, ripristino, clonazione e ciclo di vita dei cloni sui database del sistema tempdb.
+
+* Verificare immediatamente le operazioni di backup o rinviare la verifica a un secondo momento
++
+La verifica del database di sistema di SQL Server non è supportata. SnapCenter clona i database per eseguire le operazioni di verifica. SnapCenter non è in grado di clonare i database del sistema SQL Server, pertanto la verifica di questi database non è supportata.
+
+* Pianificazione delle operazioni di backup e clonazione
+* Monitorare le operazioni di backup, ripristino e clonazione
+
+
+
+NOTE: Il plug-in per SQL Server non supporta il backup e il ripristino dei database SQL Server sulle condivisioni SMB.

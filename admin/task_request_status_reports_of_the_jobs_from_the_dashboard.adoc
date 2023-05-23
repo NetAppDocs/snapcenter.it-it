@@ -1,0 +1,34 @@
+---
+permalink: admin/task_request_status_reports_of_the_jobs_from_the_dashboard.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile richiedere report sui processi di backup, ripristino e clonazione dalla pagina Dashboard. Questa opzione è utile se si desidera identificare il numero totale di processi riusciti o non riusciti nell"ambiente SnapCenter.' 
+---
+= Richiedere i report di stato dei lavori dalla dashboard
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile richiedere report sui processi di backup, ripristino e clonazione dalla pagina Dashboard. Questa opzione è utile se si desidera identificare il numero totale di processi riusciti o non riusciti nell'ambiente SnapCenter.
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *Dashboard*
+. Individuare il riquadro lavori nella dashboard, quindi selezionare *Backup*, *Ripristina* o *Clone*.
+. Dal menu a discesa, selezionare l'intervallo di tempo per il quale si desidera specificare le informazioni relative ai lavori: 24 ore, 7 giorni o 30 giorni.
++
+I sistemi visualizzano un grafico a ciambelle che copre i dati.
+
+. Fare clic sulla sezione che rappresenta le informazioni sul lavoro per cui si desidera creare un report.
++
+Facendo clic sul grafico a ciambelle, si viene reindirizzati dalla pagina Dashboard alla pagina Monitor. La pagina Monitor visualizza i lavori con lo stato selezionato dal grafico a ciambelle.
+
+. Dall'elenco della pagina Monitor, fare clic su un job specifico per selezionarlo.
+. Nella parte superiore della pagina Monitor, fare clic su *Report*.
+
+
+*Risultati*
+
+Il report visualizza le informazioni solo per il lavoro selezionato. È possibile rivedere il report o scaricarlo sul sistema locale.

@@ -1,0 +1,43 @@
+---
+permalink: protect-sce/task_reseed_a_replica_using_powershell_cmdlets_for_exchange_database.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile utilizzare i cmdlet PowerShell per ripristinare una replica non sana utilizzando la copia più recente sullo stesso host o la copia più recente da un host alternativo. 
+---
+= Eseguire di nuovo il reeeding di una replica utilizzando i cmdlet PowerShell per il database Exchange
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare i cmdlet PowerShell per ripristinare una replica non sana utilizzando la copia più recente sullo stesso host o la copia più recente da un host alternativo.
+
+Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento alla https://["Guida di riferimento al cmdlet del software SnapCenter"^].
+
+*Fasi*
+
+. Avviare una sessione di connessione con il server SnapCenter per un utente specifico utilizzando `Open-SmConnection` cmdlet.
++
+[listing]
+----
+Open-smconnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146/
+----
+. Eseguire nuovamente il reed del database utilizzando `reseed-SmDagReplicaCopy` cmdlet.
++
+In questo esempio viene reeseguita la copia non riuscita del database denominata execdb sull'host "mva-rx200.netapp.com" utilizzando l'ultimo backup su tale host.
+
++
+[listing]
+----
+reseed-SmDagReplicaCopy -ReplicaHost "mva-rx200.netapp.com" -Database execdb
+----
++
+In questo esempio viene reinstallata la copia non riuscita del database denominata execdb utilizzando l'ultimo backup del database (produzione/copia) su un host alternativo "mva-rx201.netapp.com."
+
++
+[listing]
+----
+reseed-SmDagReplicaCopy -ReplicaHost "mva-rx200.netapp.com" -Database  execdb -BackupHost "mva-rx201.netapp.com"
+----
+

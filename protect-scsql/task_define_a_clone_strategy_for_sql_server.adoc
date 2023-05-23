@@ -1,0 +1,46 @@
+---
+permalink: protect-scsql/task_define_a_clone_strategy_for_sql_server.html 
+sidebar: sidebar 
+keywords:  
+summary: La definizione di una strategia di cloning consente di clonare correttamente il database. 
+---
+= Definire una strategia di cloning per SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La definizione di una strategia di cloning consente di clonare correttamente il database.
+
+. Esaminare le limitazioni relative alle operazioni di clonazione.
+. Decidere il tipo di clone desiderato.
+
+
+
+
+== Limitazioni delle operazioni di cloni
+
+Prima di clonare i database, è necessario conoscere i limiti delle operazioni di clonazione.
+
+* Se si utilizza una qualsiasi versione di Oracle dalla 11.2.0.4 alla 12.1.0.1, l'operazione di clonazione sarà in stato di sospensione quando si esegue il comando _renamedg_. È possibile applicare la patch Oracle 19544733 per risolvere questo problema.
+* Non è supportata la clonazione di database da un LUN direttamente collegato a un host (ad esempio, utilizzando Microsoft iSCSI Initiator su un host Windows) a un LUN VMDK o RDM sullo stesso host Windows o su un altro host Windows o viceversa.
+* La directory principale del punto di montaggio del volume non può essere una directory condivisa.
+* Se si sposta un LUN che contiene un clone in un nuovo volume, il clone non può essere cancellato.
+
+
+
+
+== Tipi di operazioni di cloni
+
+È possibile utilizzare SnapCenter per clonare un backup del database SQL Server o un database di produzione.
+
+* Clonare da un backup del database
++
+Il database clonato può fungere da base per lo sviluppo di nuove applicazioni e aiutare a isolare gli errori delle applicazioni che si verificano nell'ambiente di produzione. Il database clonato può essere utilizzato anche per il ripristino da errori del database soft.
+
+* Ciclo di vita dei cloni
++
+È possibile utilizzare SnapCenter per pianificare i lavori ricorrenti di clonazione che si verificheranno quando il database di produzione non è occupato.
+
+

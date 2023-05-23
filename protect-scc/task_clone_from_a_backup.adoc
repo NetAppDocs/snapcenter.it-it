@@ -1,0 +1,108 @@
+---
+permalink: protect-scc/task_clone_from_a_backup.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile utilizzare SnapCenter per clonare un backup. È possibile clonare dal backup primario o secondario. Le funzionalità delle operazioni di clonazione dipendono dal plug-in utilizzato. 
+---
+= Clonare da un backup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare SnapCenter per clonare un backup. È possibile clonare dal backup primario o secondario. Le funzionalità delle operazioni di clonazione dipendono dal plug-in utilizzato.
+
+*Cosa ti serve*
+
+* È necessario aver eseguito il backup delle risorse o del gruppo di risorse.
+* L'operazione di cloni predefinita clona solo gli oggetti di storage. Le operazioni di clonazione a livello di applicazione possono essere eseguite solo se il plug-in personalizzato fornisce tale funzionalità.
+* Assicurarsi che gli aggregati che ospitano i volumi siano inclusi nell'elenco degli aggregati assegnati della macchina virtuale di storage (SVM).
+
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina risorse, filtrare le risorse dall'elenco a discesa *Visualizza* in base al tipo di risorsa.
++
+Le risorse vengono visualizzate insieme a informazioni quali tipo, nome host o cluster, criteri e gruppi di risorse associati e stato.
+
+. Selezionare la risorsa o il gruppo di risorse.
++
+Selezionare una risorsa se si seleziona un gruppo di risorse.
+
++
+Viene visualizzata la pagina della topologia di risorse o gruppi di risorse.
+
+. Dalla vista Manage Copies (Gestisci copie), selezionare *Backup* dai sistemi di storage primario o secondario (mirrorati o vault).
+. Selezionare il backup dei dati dalla tabella, quindi fare clic su image:../media/clone_icon.gif["icona clona"].
+. Nella pagina Locations (posizioni), eseguire le seguenti operazioni:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Server clone
+ a| 
+Per impostazione predefinita, l'host di origine viene popolato.
+
+Se si desidera specificare un host diverso, selezionare l'host su cui montare il clone e installare il plug-in.
+
+
+
+ a| 
+Suffisso clone
+ a| 
+Questo è obbligatorio quando la destinazione del clone è la stessa dell'origine.
+
+Inserire un suffisso che verrà aggiunto al nome della risorsa appena clonata. Il suffisso garantisce che la risorsa clonata sia univoca sull'host.
+
+ad esempio, rs1_clone. Se si esegue la clonazione sullo stesso host della risorsa originale, è necessario fornire un suffisso per differenziare la risorsa clonata dalla risorsa originale; in caso contrario, l'operazione non riesce.
+
+|===
++
+Se la risorsa selezionata è un LUN e si esegue la clonazione da un backup secondario, vengono elencati i volumi di destinazione. Una singola origine può avere più volumi di destinazione.
+
+. Nella pagina Impostazioni, eseguire le seguenti operazioni:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Nome dell'iniziatore
+ a| 
+Immettere il nome dell'iniziatore host, ovvero un IQDN o WWPN.
+
+
+
+ a| 
+Protocollo iGroup
+ a| 
+Selezionare il protocollo iGroup.
+
+|===
++
+
+NOTE: La pagina delle impostazioni viene visualizzata solo se il tipo di storage è LUN.
+
+. Nella pagina script, immettere i comandi per il pre-clone o il post-clone che devono essere eseguiti rispettivamente prima o dopo l'operazione di clone. Immettere il comando mount per montare un file system su un host.
++
+Ad esempio:
+
++
+** Comando pre-clone: Elimina i database esistenti con lo stesso nome
+** Comando post clone: Verifica di un database o avvia un database.
++
+Comando mount per un volume o un qtree su una macchina Linux: Mountanon <VSERVER_NAME>:%<VOLUME_NAME_Clone /mnt>
+
+
+
+. Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
++
+È inoltre necessario specificare gli indirizzi e-mail del mittente e del destinatario e l'oggetto dell'e-mail.
+
+. Esaminare il riepilogo e fare clic su *fine*.
+. Monitorare l'avanzamento dell'operazione facendo clic su *Monitor* > *Jobs*.
+

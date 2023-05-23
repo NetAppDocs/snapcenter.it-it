@@ -1,0 +1,97 @@
+---
+permalink: protect-hana/task_create_a_storage_system_connection_and_a_run_as_account_using_powershell_cmdlets_for_sap_hana_database.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: 'È necessario creare una connessione SVM (Storage Virtual Machine) e una credenziale prima di utilizzare i cmdlet PowerShell per eseguire il backup, il ripristino o la clonazione dei database SAP HANA.' 
+---
+= Creare una connessione al sistema storage e una credenziale utilizzando i cmdlet PowerShell per il database SAP HANA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario creare una connessione SVM (Storage Virtual Machine) e una credenziale prima di utilizzare i cmdlet PowerShell per eseguire il backup, il ripristino o la clonazione dei database SAP HANA.
+
+*Cosa ti serve*
+
+* L'ambiente PowerShell dovrebbe essere stato preparato per l'esecuzione dei cmdlet PowerShell.
+* Per creare le connessioni storage, è necessario disporre delle autorizzazioni necessarie nel ruolo Infrastructure Admin.
+* Assicurarsi che le installazioni dei plug-in non siano in corso.
++
+Le installazioni dei plug-in host non devono essere in corso durante l'aggiunta di una connessione al sistema di storage perché la cache host potrebbe non essere aggiornata e lo stato dei database potrebbe essere visualizzato nella GUI di SnapCenter come "`non disponibile per il backup`" o "`non su storage NetApp`".
+
+* I nomi dei sistemi di storage devono essere univoci.
++
+SnapCenter non supporta più sistemi storage con lo stesso nome su cluster diversi. Ogni sistema storage supportato da SnapCenter deve avere un nome univoco e un indirizzo IP LIF dei dati univoco.
+
+
+
+*Fasi*
+
+. Avviare una sessione di connessione PowerShell utilizzando il cmdlet Open-SmConnection.
++
+[listing]
+----
+PS C:\> Open-SmStorageConnection
+----
+. Creare una nuova connessione al sistema di storage utilizzando il cmdlet Add-SmStorageConnection.
++
+[listing]
+----
+PS C:\> Add-SmStorageConnection -Storage test_vs1 -Protocol Https
+-Timeout 60
+----
+. Creare una nuova credenziale utilizzando il cmdlet Add-SmCredential.
++
+Questo esempio mostra come creare una nuova credenziale denominata FinanceAdmin con credenziali Windows:
+
++
+[listing]
+----
+PS C:> Add-SmCredential -Name FinanceAdmin -AuthMode Windows
+-Credential sddev\administrator
+----
+. Aggiungere l'host di comunicazione SAP HANA al server SnapCenter.
++
+[listing]
+----
+PS C:> Add-SmHost -HostName 10.232.204.61 -OSType Windows -RunAsName FinanceAdmin -PluginCode hana
+----
+. Installare il pacchetto e il plug-in SnapCenter per il database SAP HANA sull'host.
++
+Per Linux:
+
++
+[listing]
+----
+PS C:> Install-SmHostPackage -HostNames 10.232.204.61 -ApplicationCode hana
+----
++
+Per Windows:
+
++
+[listing]
+----
+Install-SmHostPackage -HostNames 10.232.204.61 -ApplicationCode hana -FilesystemCode scw -RunAsName FinanceAdmin
+----
+. Impostare il percorso del client HDBSQL.
++
+Per Windows:
+
++
+[listing]
+----
+PS C:> Set-SmConfigSettings -Plugin -HostName 10.232.204.61 -PluginCode hana -configSettings @{"HANA_HDBSQL_CMD" = "C:\Program Files\sap\hdbclient\hdbsql.exe"}
+----
++
+Per Linux:
+
++
+[listing]
+----
+Set-SmConfigSettings -Plugin -HostName scs-hana.gdl.englab.netapp.com -PluginCode hana -configSettings @{"HANA_HDBSQL_CMD"="/usr/sap/hdbclient/hdbsql"}
+----
+
+
+Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento alla https://["Guida di riferimento al cmdlet del software SnapCenter"^].

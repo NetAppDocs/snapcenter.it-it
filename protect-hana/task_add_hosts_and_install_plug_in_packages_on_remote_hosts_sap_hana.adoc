@@ -1,0 +1,150 @@
+---
+permalink: protect-hana/task_add_hosts_and_install_plug_in_packages_on_remote_hosts_sap_hana.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: Utilizzare la pagina Aggiungi host di SnapCenter per aggiungere host e installare i pacchetti dei plug-in. I plug-in vengono installati automaticamente sugli host remoti. È possibile aggiungere un host e installare pacchetti plug-in per un singolo host o per un cluster. 
+---
+= Aggiungere host e installare pacchetti plug-in su host remoti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilizzare la pagina Aggiungi host di SnapCenter per aggiungere host e installare i pacchetti dei plug-in. I plug-in vengono installati automaticamente sugli host remoti. È possibile aggiungere un host e installare pacchetti plug-in per un singolo host o per un cluster.
+
+*Cosa ti serve*
+
+* È necessario essere un utente assegnato a un ruolo che disponga delle autorizzazioni di installazione e disinstallazione del plug-in, ad esempio il ruolo di amministratore di SnapCenter.
+* Quando si installa un plug-in su un host Windows, se si specifica una credenziale non integrata o se l'utente appartiene a un utente del gruppo di lavoro locale, è necessario disattivare il controllo dell'account utente sull'host.
+* Assicurarsi che il servizio di accodamento dei messaggi sia in esecuzione.
+* La documentazione di amministrazione contiene informazioni sulla gestione degli host.
+* Se si utilizza un account di servizio gestito di gruppo (gMSA), è necessario configurare gMSA con privilegi amministrativi.
++
+link:../protect-hana/task_configure_gMSA_on_windows_server_2012_or_later.html["Configurare account di servizio gestito di gruppo su Windows Server 2012 o versione successiva per SAP HANA"^]
+
+
+
+*A proposito di questa attività*
+
+* Non è possibile aggiungere un server SnapCenter come host plug-in a un altro server SnapCenter.
+* Per consentire a SAP HANA System Replication di rilevare le risorse sui sistemi primario e secondario, si consiglia di aggiungere sia il sistema primario che quello secondario utilizzando l'utente root o sudo.
+
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *hosts*.
+. Verificare che la scheda *Managed hosts* sia selezionata nella parte superiore.
+. Fare clic su *Aggiungi*.
+. Nella pagina host, eseguire le seguenti operazioni:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Tipo di host
+ a| 
+Selezionare il tipo di host:
+
+** Windows
+** Linux
++
+
+NOTE: Il plug-in per SAP HANA viene installato sull'host client HDBSQL e questo host può essere installato su un sistema Windows o Linux.
+
+
+
+
+
+ a| 
+Nome host
+ a| 
+Inserire il nome host della comunicazione. Inserire il nome di dominio completo (FQDN) o l'indirizzo IP dell'host. SnapCenter dipende dalla configurazione corretta del DNS. Pertanto, la procedura consigliata consiste nell'inserire l'FQDN.
+
+È necessario configurare il client HDBSQL e HDBUserStore su questo host.
+
+
+
+ a| 
+Credenziali
+ a| 
+Selezionare il nome della credenziale creata o creare nuove credenziali. La credenziale deve disporre di diritti amministrativi sull'host remoto. Per ulteriori informazioni, vedere le informazioni sulla creazione delle credenziali.
+
+È possibile visualizzare i dettagli relativi alle credenziali posizionando il cursore sul nome fornito.
+
+
+NOTE: La modalità di autenticazione delle credenziali è determinata dal tipo di host specificato nella procedura guidata Aggiungi host.
+
+|===
+. Nella sezione Select Plug-in to Install (Seleziona plug-in da installare), selezionare i plug-in da installare.
+. (Facoltativo) fare clic su *altre opzioni*.
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Porta
+ a| 
+Mantenere il numero di porta predefinito o specificare il numero di porta. Il numero di porta predefinito è 8145. Se il server SnapCenter è stato installato su una porta personalizzata, tale numero di porta viene visualizzato come porta predefinita.
+
+
+NOTE: Se i plug-in sono stati installati manualmente e si è specificata una porta personalizzata, è necessario specificare la stessa porta. In caso contrario, l'operazione non riesce.
+
+
+
+ a| 
+Percorso di installazione
+ a| 
+Il plug-in per SAP HANA viene installato sull'host client HDBSQL e questo host può essere installato su un sistema Windows o Linux.
+
+** Per il pacchetto di plug-in SnapCenter per Windows, il percorso predefinito è C: In alternativa, è possibile personalizzare il percorso.
+** Per il pacchetto di plug-in SnapCenter per Linux, il percorso predefinito è /opt/NetApp/snapcenter. In alternativa, è possibile personalizzare il percorso.
+
+
+
+
+ a| 
+Ignorare i controlli di preinstallazione
+ a| 
+Selezionare questa casella di controllo se i plug-in sono già stati installati manualmente e non si desidera verificare se l'host soddisfa i requisiti per l'installazione del plug-in.
+
+
+
+ a| 
+Utilizzare l'account di servizio gestito di gruppo (gMSA) per eseguire i servizi plug-in
+ a| 
+Per l'host Windows, selezionare questa casella di controllo se si desidera utilizzare l'account di servizio gestito di gruppo (gMSA) per eseguire i servizi plug-in.
+
+
+NOTE: Fornire il nome gMSA nel seguente formato: Nome dominio/nome account.
+
+
+NOTE: GMSA verrà utilizzato come account del servizio di accesso solo per il servizio del plug-in SnapCenter per Windows.
+
+|===
+. Fare clic su *Invia*.
++
+Se non è stata selezionata la casella di controllo Ignora precheck, l'host viene validato per verificare se l'host soddisfa i requisiti per l'installazione del plug-in. Lo spazio su disco, la RAM, la versione di PowerShell, la versione di .NET, la posizione (per i plug-in Windows) e la versione di Java (per i plug-in Linux) sono validati in base ai requisiti minimi. Se i requisiti minimi non vengono soddisfatti, vengono visualizzati messaggi di errore o di avviso appropriati.
+
++
+Se l'errore riguarda lo spazio su disco o la RAM, è possibile aggiornare il file web.config che si trova in C: File di programma NetApp SnapCenter WebApp per modificare i valori predefiniti. Se l'errore è correlato ad altri parametri, è necessario risolvere il problema.
+
++
+
+NOTE: In una configurazione ha, se si aggiorna il file web.config, è necessario aggiornare il file su entrambi i nodi.
+
+. Se il tipo di host è Linux, verificare l'impronta digitale, quindi fare clic su *Confirm and Submit* (Conferma e invia).
++
+In una configurazione del cluster, verificare l'impronta digitale di ciascuno dei nodi del cluster.
+
++
+
+NOTE: La verifica dell'impronta digitale è obbligatoria anche se lo stesso host è stato aggiunto in precedenza a SnapCenter e l'impronta digitale è stata confermata.
+
+. Monitorare l'avanzamento dell'installazione.
++
+I file di log specifici dell'installazione si trovano in /custom_location/snapcenter/logs.
+
+

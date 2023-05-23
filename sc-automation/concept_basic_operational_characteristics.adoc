@@ -1,0 +1,93 @@
+---
+sidebar: sidebar 
+permalink: sc-automation/concept_basic_operational_characteristics.html 
+keywords: request and response, object identifiers, synchronous, asynchronous 
+summary: Mentre REST stabilisce un insieme comune di tecnologie e Best practice, i dettagli di ciascuna API possono variare in base alle scelte di progettazione. 
+---
+= Caratteristiche operative di base
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Mentre REST stabilisce un insieme comune di tecnologie e Best practice, i dettagli di ciascuna API possono variare in base alle scelte di progettazione.
+
+
+
+== Transazione API di richiesta e risposta
+
+Ogni chiamata API REST viene eseguita come richiesta HTTP al sistema del server SnapCenter che genera una risposta associata al client. Questa coppia di richieste e risposte è considerata una transazione API.
+
+Prima di utilizzare l'API, è necessario conoscere le variabili di input disponibili per controllare una richiesta e il contenuto dell'output della risposta.
+
+
+
+== Supporto per le operazioni CRUD
+
+Si accede a ciascuna delle risorse disponibili tramite l'API REST SnapCenter in base al modello CRUD:
+
+* Creare
+* Leggi
+* Aggiornare
+* Eliminare
+
+
+Per alcune delle risorse, è supportato solo un sottoinsieme delle operazioni.
+
+
+
+== Identificatori di oggetti
+
+A ogni istanza o oggetto di risorsa viene assegnato un identificatore univoco al momento della creazione. Nella maggior parte dei casi, l'identificatore è un UUID a 128 bit. Questi identificatori sono univoci a livello globale all'interno di uno specifico server SnapCenter.
+
+Dopo aver eseguito una chiamata API che crea una nuova istanza di oggetto, un URL con l'ID associato viene restituito al chiamante nell'intestazione di posizione della risposta HTTP. È possibile estrarre l'identificatore e utilizzarlo nelle chiamate successive quando si fa riferimento all'istanza della risorsa.
+
+
+IMPORTANT: Il contenuto e la struttura interna degli identificatori di oggetti possono cambiare in qualsiasi momento. È necessario utilizzare gli identificatori delle chiamate API applicabili solo se necessario quando si fa riferimento agli oggetti associati.
+
+
+
+== Istanze e raccolte di oggetti
+
+A seconda del percorso di risorsa e del metodo HTTP, una chiamata API può essere applicata a un'istanza di oggetto specifica o a un insieme di oggetti.
+
+
+
+== Operazioni sincrone e asincrone
+
+SnapCenter esegue una richiesta HTTP ricevuta da un client in modo sincrono o asincrono.
+
+
+
+=== Elaborazione sincrona
+
+SnapCenter esegue immediatamente la richiesta e risponde con un codice di stato HTTP 200 o 201 se l'operazione ha esito positivo.
+
+Ogni richiesta che utilizza il metodo GET viene sempre eseguita in modo sincrono. Inoltre, le richieste che utilizzano IL POST sono progettate per essere eseguite in modo sincrono se si prevede che vengano completate in meno di due secondi.
+
+
+
+=== Elaborazione asincrona
+
+Se una richiesta asincrona è valida, SnapCenter crea un'attività in background per elaborare la richiesta e un oggetto di lavoro per ancorare l'attività. Il codice di stato HTTP 202 viene restituito al chiamante insieme all'oggetto lavoro. È necessario recuperare lo stato del lavoro per determinare il successo o l'errore.
+
+Le richieste che utilizzano i metodi POST e DELETE sono progettate per essere eseguite in modo asincrono se il completamento richiede più di due secondi.
+
+
+
+== Sicurezza
+
+La sicurezza fornita con L'API REST si basa principalmente sulle funzionalità di sicurezza esistenti disponibili con SnapCenter. L'API utilizza la seguente protezione:
+
+
+
+=== Transport Layer Security
+
+Tutto il traffico inviato in rete tra il server SnapCenter e il client viene in genere crittografato utilizzando TLS, in base alle impostazioni di configurazione di SnapCenter.
+
+
+
+=== Autenticazione HTTP
+
+A livello HTTP, per le transazioni API viene utilizzata l'autenticazione di base. A ogni richiesta viene aggiunta un'intestazione HTTP con nome utente e password in una stringa base64.

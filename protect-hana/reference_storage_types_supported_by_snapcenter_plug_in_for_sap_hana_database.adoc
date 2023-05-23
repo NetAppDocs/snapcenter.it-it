@@ -1,0 +1,39 @@
+---
+permalink: protect-hana/reference_storage_types_supported_by_snapcenter_plug_in_for_sap_hana_database.html 
+sidebar: sidebar 
+keywords: storage types, 
+summary: 'SnapCenter supporta un"ampia gamma di tipi di storage su macchine fisiche e macchine virtuali (VM). Prima di installare il plug-in SnapCenter per il database SAP HANA, è necessario verificare il supporto per il tipo di storage in uso.' 
+---
+= Tipi di storage supportati dal plug-in SnapCenter per database SAP HANA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter supporta un'ampia gamma di tipi di storage su macchine fisiche e macchine virtuali (VM). Prima di installare il plug-in SnapCenter per il database SAP HANA, è necessario verificare il supporto per il tipo di storage in uso.
+
+|===
+| Macchina | Tipo di storage 
+
+
+ a| 
+Server fisici e virtuali
+ a| 
+LUN connessi a FC
+
+
+
+ a| 
+Server fisico
+ a| 
+LUN connessi a iSCSI
+
+
+
+ a| 
+Server fisici e virtuali
+ a| 
+Volumi connessi a NFS
+
+|===

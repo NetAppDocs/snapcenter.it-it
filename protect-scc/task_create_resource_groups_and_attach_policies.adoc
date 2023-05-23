@@ -1,0 +1,199 @@
+---
+permalink: protect-scc/task_create_resource_groups_and_attach_policies.html 
+sidebar: sidebar 
+keywords:  
+summary: Un gruppo di risorse è il container al quale è necessario aggiungere risorse di cui si desidera eseguire il backup e la protezione. 
+---
+= Creare gruppi di risorse e allegare policy
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un gruppo di risorse è il container al quale è necessario aggiungere risorse di cui si desidera eseguire il backup e la protezione. Un gruppo di risorse consente di eseguire contemporaneamente il backup di tutti i dati associati a una determinata applicazione. Per qualsiasi lavoro di protezione dei dati è necessario un gruppo di risorse. È inoltre necessario associare uno o più criteri al gruppo di risorse per definire il tipo di lavoro di protezione dei dati che si desidera eseguire.
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina risorse, fare clic su nuovo gruppo di risorse.
+. Nella pagina Name (Nome), eseguire le seguenti operazioni:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Nome
+ a| 
+Immettere un nome per il gruppo di risorse.
+
+
+NOTE: Il nome del gruppo di risorse non deve superare i 250 caratteri.
+
+
+
+ a| 
+Tag
+ a| 
+Inserire una o più etichette per facilitare la ricerca del gruppo di risorse in un secondo momento.
+
+Ad esempio, se si aggiunge HR come tag a più gruppi di risorse, è possibile trovare in seguito tutti i gruppi di risorse associati al tag HR.
+
+
+
+ a| 
+USA il formato nome personalizzato per la copia Snapshot
+ a| 
+Selezionare questa casella di controllo e immettere un formato nome personalizzato da utilizzare per il nome della copia Snapshot.
+
+Ad esempio, _customtext_resource group_policy_hostname o resource group_hostname_. Per impostazione predefinita, al nome della copia Snapshot viene aggiunto un indicatore data e ora.
+
+|===
+. Facoltativo: Nella pagina risorse, selezionare un nome host dall'elenco a discesa *host* e il tipo di risorsa dall'elenco a discesa *tipo di risorsa*.
++
+In questo modo è possibile filtrare le informazioni sullo schermo.
+
+. Selezionare le risorse dalla sezione *risorse disponibili*, quindi fare clic sulla freccia destra per spostarle nella sezione *risorse selezionate*.
+. Facoltativo: Nella pagina Impostazioni applicazione, effettuare le seguenti operazioni:
++
+.. Fare clic sulla freccia Backup per impostare opzioni di backup aggiuntive:
++
+Abilitare il backup dei gruppi di coerenza ed eseguire le seguenti attività:
+
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Tempo di attesa per il completamento dell'operazione Consistency Group Snapshot
+ a| 
+Selezionare urgente, Medio o rilassato per specificare il tempo di attesa per il completamento dell'operazione di copia Snapshot.
+
+Urgente = 5 secondi, Medio = 7 secondi e rilassato = 20 secondi.
+
+
+
+ a| 
+Disattiva sincronizzazione WAFL
+ a| 
+Selezionare questa opzione per evitare di forzare un punto di coerenza WAFL.
+
+|===
++
+image:../media/application_settings.gif[""]
+
+.. Fare clic sulla freccia script e immettere i comandi pre e post per le operazioni di quiete, copia Snapshot e senza richieste. In caso di errore, è anche possibile inserire i pre-comandi da eseguire prima di uscire.
+.. Fare clic sulla freccia Custom Configurations (configurazioni personalizzate) e immettere le coppie chiave-valore personalizzate richieste per tutte le operazioni di protezione dei dati che utilizzano questa risorsa.
++
+|===
+| Parametro | Impostazione | Descrizione 
+
+
+ a| 
+ARCHIVE_LOG_ENABLE
+ a| 
+(S/N)
+ a| 
+Consente alla gestione del log di archiviazione di eliminare i log di archiviazione.
+
+
+
+ a| 
+ARCHIVE_LOG_RETENTION
+ a| 
+numero_di_giorni
+ a| 
+Specifica il numero di giorni in cui i registri di archiviazione vengono conservati.
+
+Questa impostazione deve essere uguale o superiore a NTAP_SNAPSHOT_ RETENTIONS.
+
+
+
+ a| 
+ARCHIVE_LOG_DIR
+ a| 
+change_info_directory/logs
+ a| 
+Specifica il percorso della directory che contiene i log di archiviazione.
+
+
+
+ a| 
+ARCHIVE_LOG_EXT
+ a| 
+estensione_file
+ a| 
+Specifica la lunghezza dell'estensione del file di log dell'archivio.
+
+Ad esempio, se il log di archiviazione è log_backup_0_0_0_0.161518551942 9 e il valore di estensione_file è 5, l'estensione del log conserverà 5 cifre, ossia 16151.
+
+
+
+ a| 
+ARCHIVE_LOG_RECURSIVE_SE ARCH
+ a| 
+(S/N)
+ a| 
+Attiva la gestione dei log di archiviazione all'interno delle sottodirectory.
+
+Utilizzare questo parametro se i log di archiviazione si trovano nelle sottodirectory.
+
+|===
+.. Fare clic sulla freccia *Snapshot Copy Tool* per selezionare lo strumento per creare le copie Snapshot:
++
+|===
+| Se vuoi... | Quindi... 
+
+
+ a| 
+SnapCenter per utilizzare il plug-in per Windows e mettere il file system in uno stato coerente prima di creare una copia Snapshot. Per le risorse Linux, questa opzione non è applicabile.
+ a| 
+Selezionare SnapCenter with file system Consistency (Configurazione con coerenza file system)
+
+Questa opzione non è applicabile al plug-in SnapCenter per database SAP HANA.
+
+
+
+ a| 
+SnapCenter per creare una copia Snapshot a livello di storage
+ a| 
+Selezionare SnapCenter senza coerenza del file system.
+
+
+
+ a| 
+Per inserire il comando da eseguire sull'host per creare copie Snapshot.
+ a| 
+Selezionare Other (Altro), quindi immettere il comando da eseguire sull'host per creare una copia Snapshot.
+
+|===
+
+
+. Nella pagina Criteri, attenersi alla seguente procedura:
++
+.. Selezionare uno o più criteri dall'elenco a discesa.
++
+
+NOTE: Puoi anche creare una policy facendo clic su *image:../media/add_policy_from_resourcegroup.gif[""]*.
+
++
+I criteri sono elencati nella sezione *Configura pianificazioni per i criteri selezionati*.
+
+.. Nella colonna *Configura pianificazioni*, fare clic su *image:../media/add_policy_from_resourcegroup.gif[""]* per la policy che si desidera configurare.
+.. Nella finestra di dialogo Add schedules for policy _policy_name_, configurare la pianificazione, quindi fare clic su OK.
++
+Dove, policy_name è il nome del criterio selezionato.
+
++
+Le pianificazioni configurate sono elencate nella colonna Applied Schedules (Pianificazioni applicate). Le pianificazioni di backup di terze parti non sono supportate quando si sovrappongono alle pianificazioni di backup di SnapCenter.
+
+
+
+. Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
++
+È inoltre necessario specificare gli indirizzi e-mail del mittente e del destinatario e l'oggetto dell'e-mail. Il server SMTP deve essere configurato in *Impostazioni* > *Impostazioni globali*.
+
+. Esaminare il riepilogo, quindi fare clic su *fine*.
+

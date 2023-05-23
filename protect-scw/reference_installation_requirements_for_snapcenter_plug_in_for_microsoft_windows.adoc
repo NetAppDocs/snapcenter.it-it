@@ -1,0 +1,210 @@
+---
+permalink: protect-scw/reference_installation_requirements_for_snapcenter_plug_in_for_microsoft_windows.html 
+sidebar: sidebar 
+keywords: requirements 
+summary: Prima di installare il plug-in per Windows, è necessario conoscere alcuni requisiti di installazione. 
+---
+= Requisiti di installazione del plug-in SnapCenter per Microsoft Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di installare il plug-in per Windows, è necessario conoscere alcuni requisiti di installazione.
+
+Prima di iniziare a utilizzare il plug-in per Windows, l'amministratore di SnapCenter deve installare e configurare il server SnapCenter ed eseguire le attività dei prerequisiti.
+
+* Per installare il plug-in per Windows, è necessario disporre dei privilegi di amministratore di SnapCenter.
++
+Il ruolo di amministratore di SnapCenter deve disporre dei privilegi di amministratore.
+
+* È necessario aver installato e configurato il server SnapCenter.
+* Quando si installa un plug-in su un host Windows, se si specifica una credenziale non integrata o se l'utente appartiene a un utente del gruppo di lavoro locale, è necessario disattivare il controllo dell'account utente sull'host.
+* Se si desidera eseguire la replica di backup, è necessario configurare SnapMirror e SnapVault.
+
+
+
+
+== Requisiti dell'host per installare il pacchetto di plug-in SnapCenter per Windows
+
+Prima di installare il pacchetto di plug-in SnapCenter per Windows, è necessario conoscere alcuni requisiti di base relativi allo spazio del sistema host e al dimensionamento.
+
+|===
+| Elemento | Requisiti 
+
+
+ a| 
+Sistemi operativi
+ a| 
+Microsoft Windows
+
+Per informazioni aggiornate sulle versioni supportate, consultare https://["Tool di matrice di interoperabilità NetApp"^].
+
+
+
+ a| 
+RAM minima per il plug-in SnapCenter sull'host
+ a| 
+1 GB
+
+
+
+ a| 
+Spazio minimo di installazione e registrazione per il plug-in SnapCenter sull'host
+ a| 
+5 GB
+
+
+NOTE: È necessario allocare spazio su disco sufficiente e monitorare il consumo di storage da parte della cartella dei log. Lo spazio di log richiesto varia in base al numero delle entità da proteggere e alla frequenza delle operazioni di protezione dei dati. Se lo spazio su disco non è sufficiente, i registri non verranno creati per le operazioni eseguite di recente.
+
+
+
+ a| 
+Pacchetti software richiesti
+ a| 
+* Microsoft .NET Framework 4.7.2 o versione successiva
+* Windows Management Framework (WMF) 4.0 o versione successiva
+* PowerShell 4.0 o versione successiva
+
+
+Per informazioni aggiornate sulle versioni supportate, consultare https://["Tool di matrice di interoperabilità NetApp"^].
+
+Per informazioni specifiche sulla risoluzione dei problemi di .NET, vedere https://["L'aggiornamento o l'installazione di SnapCenter non riesce per i sistemi legacy che non dispongono di connettività Internet."]
+
+|===
+
+
+== Impostare le credenziali per il plug-in per Windows
+
+SnapCenter utilizza le credenziali per autenticare gli utenti per le operazioni SnapCenter. È necessario creare credenziali per l'installazione dei plug-in di SnapCenter e credenziali aggiuntive per l'esecuzione delle operazioni di protezione dei dati sui file system di Windows.
+
+*Cosa ti serve*
+
+* Prima di installare i plug-in, è necessario impostare le credenziali di Windows.
+* È necessario impostare le credenziali con privilegi di amministratore, inclusi i diritti di amministratore, sull'host remoto.
+* Se si impostano le credenziali per singoli gruppi di risorse e l'utente non dispone di privilegi di amministratore completi, è necessario assegnare almeno il gruppo di risorse e i privilegi di backup all'utente.
+
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *Impostazioni*.
+. Nella pagina Impostazioni, fare clic su *credenziale*.
+. Fare clic su *nuovo*.
+. Nella pagina Credential, effettuare le seguenti operazioni:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Nome della credenziale
+ a| 
+Immettere un nome per le credenziali.
+
+
+
+ a| 
+Nome utente/Password
+ a| 
+Immettere il nome utente e la password utilizzati per l'autenticazione.
+
+** Amministratore di dominio o qualsiasi membro del gruppo di amministratori
++
+Specificare l'amministratore di dominio o qualsiasi membro del gruppo di amministratori nel sistema in cui si installa il plug-in SnapCenter. I formati validi per il campo Nome utente sono i seguenti:
+
++
+*** `NetBIOS\UserName`
+*** `Domain FQDN\UserName`
+*** `UserName@upn`
+
+
+** Amministratore locale (solo per gruppi di lavoro)
++
+Per i sistemi appartenenti a un gruppo di lavoro, specificare l'amministratore locale incorporato nel sistema in cui si installa il plug-in SnapCenter. È possibile specificare un account utente locale che appartiene al gruppo di amministratori locali se l'account utente dispone di privilegi elevati o se la funzione di controllo dell'accesso utente è disattivata sul sistema host. Il formato valido per il campo Nome utente è il seguente: `UserName`
+
++
+Non utilizzare virgolette doppie (") o backtick (`) nelle password. Non utilizzare il valore inferiore a (<) e il punto esclamativo (!) simboli insieme nelle password. Ad esempio, meno di<!10, meno di 10<!, backtick`12.
+
+
+
+
+
+ a| 
+Password
+ a| 
+Inserire la password utilizzata per l'autenticazione.
+
+|===
+. Fare clic su *OK*.
++
+Al termine dell'impostazione delle credenziali, è possibile assegnare la manutenzione delle credenziali a un utente o a un gruppo di utenti nella pagina User and Access (utenti e accesso).
+
+
+
+
+
+== Configurare gMSA su Windows Server 2012 o versione successiva
+
+Windows Server 2012 o versione successiva consente di creare un account di servizio gestito di gruppo (gMSA) che fornisce la gestione automatica delle password dell'account di servizio da un account di dominio gestito.
+
+*Cosa ti serve*
+
+* È necessario disporre di un controller di dominio Windows Server 2012 o versione successiva.
+* È necessario disporre di un host Windows Server 2012 o versione successiva, membro del dominio.
+
+
+*Fasi*
+
+. Creare una chiave root KDS per generare password univoche per ogni oggetto in gMSA.
+. Per ciascun dominio, eseguire il seguente comando dal controller di dominio Windows: Add-KDSRootKey -EffectiveImmediately
+. Creare e configurare gMSA:
++
+.. Creare un account di gruppo utenti nel seguente formato:
++
+ domainName\accountName$
+.. Aggiungere oggetti computer al gruppo.
+.. Utilizzare il gruppo di utenti appena creato per creare gMSA.
++
+Ad esempio,
+
++
+ New-ADServiceAccount -name <ServiceAccountName> -DNSHostName <fqdn> -PrincipalsAllowedToRetrieveManagedPassword <group> -ServicePrincipalNames <SPN1,SPN2,…>
+.. Eseguire `Get-ADServiceAccount` per verificare l'account del servizio.
+
+
+. Configurare gMSA sugli host:
++
+.. Attivare il modulo Active Directory per Windows PowerShell sull'host in cui si desidera utilizzare l'account gMSA.
++
+A tale scopo, eseguire il seguente comando da PowerShell:
+
++
+[listing]
+----
+PS C:\> Get-WindowsFeature AD-Domain-Services
+
+Display Name                           Name                Install State
+------------                           ----                -------------
+[ ] Active Directory Domain Services   AD-Domain-Services  Available
+
+
+PS C:\> Install-WindowsFeature AD-DOMAIN-SERVICES
+
+Success Restart Needed Exit Code      Feature Result
+------- -------------- ---------      --------------
+True    No             Success        {Active Directory Domain Services, Active ...
+WARNING: Windows automatic updating is not enabled. To ensure that your newly-installed role or feature is
+automatically updated, turn on Windows Update.
+----
+.. Riavviare l'host.
+.. Installare gMSA sull'host eseguendo il seguente comando dal prompt dei comandi di PowerShell: `Install-AdServiceAccount <gMSA>`
+.. Verificare l'account gMSA eseguendo il seguente comando: `Test-AdServiceAccount <gMSA>`
+
+
+. Assegnare i privilegi amministrativi al gMSA configurato sull'host.
+. Aggiungere l'host Windows specificando l'account gMSA configurato nel server SnapCenter.
++
+Il server SnapCenter installerà i plug-in selezionati sull'host e il gMSA specificato verrà utilizzato come account di accesso al servizio durante l'installazione del plug-in.
+
+

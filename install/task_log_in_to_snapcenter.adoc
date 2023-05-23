@@ -1,0 +1,171 @@
+---
+permalink: install/task_log_in_to_snapcenter.html 
+sidebar: sidebar 
+keywords: log in, logging, SnapCenter UI, modify timeout, GUI session timeout, disbale SSL 3.0, SSL 3.0, security 
+summary: 'SnapCenter supporta il RBAC (role-based access control). L"amministratore di SnapCenter assegna ruoli e risorse tramite SnapCenter RBAC a un utente nel gruppo di lavoro o in Active Directory o a gruppi in Active Directory. L"utente RBAC può ora accedere a SnapCenter con i ruoli assegnati.' 
+---
+= Accedere a SnapCenter utilizzando l'autorizzazione RBAC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter supporta il RBAC (role-based access control). L'amministratore di SnapCenter assegna ruoli e risorse tramite SnapCenter RBAC a un utente nel gruppo di lavoro o in Active Directory o a gruppi in Active Directory. L'utente RBAC può ora accedere a SnapCenter con i ruoli assegnati.
+
+*Cosa ti serve*
+
+* Attivare il servizio di attivazione del processo Windows (WAS) in Windows Server Manager.
+* Se si desidera utilizzare Internet Explorer come browser per accedere al server SnapCenter, assicurarsi che la modalità protetta sia disattivata.
+
+
+*A proposito di questa attività*
+
+Durante l'installazione, l'installazione guidata del server SnapCenter crea un collegamento e lo posiziona sul desktop e nel menu Start dell'host in cui è installato SnapCenter. Inoltre, al termine dell'installazione, la procedura guidata di installazione visualizza l'URL SnapCenter in base alle informazioni fornite durante l'installazione, che è possibile copiare se si desidera effettuare l'accesso da un sistema remoto.
+
+
+IMPORTANT: Se nel browser Web sono aperte più schede, la chiusura della scheda del browser SnapCenter non consente di disconnettersi da SnapCenter. Per terminare la connessione con SnapCenter, è necessario disconnettersi da SnapCenter facendo clic sul pulsante *Esci* o chiudendo l'intero browser Web.
+
+|===
+
+
+| *Best practice:* per motivi di sicurezza, si consiglia di non abilitare il browser per il salvataggio della password SnapCenter. 
+|===
+L'URL GUI predefinito è una connessione sicura alla porta predefinita 8146 sul server in cui è installato il server SnapCenter (_ https://server:8146_). Se durante l'installazione di SnapCenter è stata fornita una porta server diversa, viene utilizzata tale porta.
+
+Per l'implementazione ad alta disponibilità (ha), è necessario accedere a SnapCenter utilizzando l'IP del cluster virtuale _ https://Virtual_Cluster_IP_or_FQDN:8146_. Se l'interfaccia utente di SnapCenter non viene visualizzata quando si passa a _ https://Virtual_Cluster_IP_or_FQDN:8146_ in Internet Explorer (IE), è necessario aggiungere l'indirizzo IP del cluster virtuale o l'FQDN come sito attendibile in IE su ciascun host plug-in oppure disattivare la protezione avanzata IE su ciascun host plug-in. Per ulteriori informazioni, vedere https://["Impossibile accedere all'indirizzo IP del cluster dall'esterno della rete"^].
+
+Oltre a utilizzare l'interfaccia grafica di SnapCenter, è possibile utilizzare i cmdlet PowerShell per creare script per eseguire operazioni di configurazione, backup e ripristino. Alcuni cmdlet potrebbero essere stati modificati con ogni release di SnapCenter. Il https://["Guida di riferimento al cmdlet del software SnapCenter"^] contiene i dettagli.
+
+
+NOTE: Se si effettua l'accesso a SnapCenter per la prima volta, è necessario effettuare l'accesso utilizzando le credenziali fornite durante il processo di installazione.
+
+*Fasi*
+
+. Avviare SnapCenter dal collegamento situato sul desktop host locale, dall'URL fornito al termine dell'installazione o dall'URL fornito dall'amministratore di SnapCenter.
+. Immettere le credenziali dell'utente.
++
+|===
+| Per specificare quanto segue... | Utilizzare uno di questi formati... 
+
+
+ a| 
+Amministratore di dominio
+ a| 
+** NetBIOS/nome utente
+** Nome utente@suffisso UPN
++
+Ad esempio, username@netapp.com
+
+** Nome utente FQDN del dominio
+
+
+
+
+ a| 
+Amministratore locale
+ a| 
+Nome utente
+
+|===
+. Se si dispone di più ruoli, selezionare il ruolo che si desidera utilizzare per questa sessione di accesso dalla casella ruolo.
++
+L'utente corrente e il ruolo associato vengono visualizzati nella parte superiore destra di SnapCenter dopo l'accesso.
+
+
+
+*Risultati*
+
+Viene visualizzata la pagina Dashboard.
+
+Se la registrazione non riesce e viene visualizzato l'errore che indica che il sito non può essere raggiunto, è necessario mappare il certificato SSL a SnapCenter. https://["Scopri di più"^]
+
+*Al termine*
+
+Dopo aver effettuato l'accesso al server SnapCenter come utente RBAC per la prima volta, aggiornare l'elenco delle risorse.
+
+Se si desidera che SnapCenter supporti domini Active Directory non attendibili, è necessario registrarli con SnapCenter prima di configurare i ruoli per gli utenti su domini non attendibili. link:../install/task_register_untrusted_active_directory_domains.html["Scopri di più"^]
+
+
+
+== Accedere a SnapCenter utilizzando l'autenticazione multifattore (MFA)
+
+Il server SnapCenter supporta MFA per l'account di dominio, che fa parte di Active Directory.
+
+*Cosa ti serve*
+
+* Dovrebbe essere stata attivata l'autenticazione MFA.
++
+Per informazioni su come attivare MFA, vedere link:../install/enable_multifactor_authentication.html["Abilitare l'autenticazione a più fattori"]
+
+
+
+*A proposito di questa attività*
+
+* È supportato solo il nome FQDN
+* Gli utenti di gruppi di lavoro e di più domini non possono accedere utilizzando MFA
+
+
+*Fasi*
+
+. Avviare SnapCenter dal collegamento situato sul desktop host locale, dall'URL fornito al termine dell'installazione o dall'URL fornito dall'amministratore di SnapCenter.
+. Nella pagina di accesso ad FS, immettere il nome utente e la password.
++
+Quando il messaggio di errore nome utente o password non valida viene visualizzato nella pagina ad FS, verificare quanto segue:
+
++
+** Se il nome utente o la password sono validi
++
+L'account utente deve esistere in Active Directory (ad)
+
+** Se è stato superato il numero massimo di tentativi consentito impostato in ad
+** Se ad e ad FS sono attivi e in esecuzione
+
+
+
+
+
+
+== Modificare il timeout della sessione GUI predefinita di SnapCenter
+
+È possibile modificare il periodo di timeout della sessione GUI di SnapCenter in modo che sia inferiore o superiore al periodo di timeout predefinito di 20 minuti.
+
+Come funzione di sicurezza, dopo un periodo di inattività predefinito di 15 minuti, SnapCenter avvisa che la sessione della GUI verrà disconnessa in 5 minuti. Per impostazione predefinita, SnapCenter disconnette l'utente dalla sessione GUI dopo 20 minuti di inattività ed è necessario effettuare nuovamente l'accesso.
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *Impostazioni* > *Impostazioni globali*.
+. Nella pagina Global Settings (Impostazioni globali), fare clic su *Configuration Settings* (Impostazioni di configurazione).
+. Nel campo Timeout sessione, immettere il timeout della nuova sessione in minuti, quindi fare clic su *Salva*.
+
+
+
+
+== Proteggere il server Web SnapCenter disattivando SSL 3.0
+
+Per motivi di sicurezza, è necessario disattivare il protocollo SSL (Secure Socket Layer) 3.0 in Microsoft IIS, se attivato sul server Web SnapCenter.
+
+Il protocollo SSL 3.0 presenta difetti che un utente malintenzionato può utilizzare per causare errori di connessione o per eseguire attacchi man-in-the-middle e osservare il traffico di crittografia tra il sito Web e i relativi visitatori.
+
+*Fasi*
+
+. Per avviare l'editor del Registro di sistema sull'host del server Web di SnapCenter, fare clic su *Start* > *Esegui*, quindi digitare regedit.
+. Nell'Editor del Registro di sistema, accedere a HKEY_LOCAL_MACHINE/SYSTEM/CurrentControlSet/Control/SecurityProviders/SCHANNEL/Protocols/SSL 3.0.
++
+** Se la chiave Server esiste già:
++
+... Selezionare il DWORD abilitato, quindi fare clic su *Modifica* > *Modifica*.
+... Impostare il valore su 0, quindi fare clic su *OK*.
+
+
+** Se la chiave Server non esiste:
++
+... Fare clic su *Modifica* > *nuovo* > *chiave*, quindi assegnare un nome al server delle chiavi.
+... Con la nuova chiave Server selezionata, fare clic su *Edit* > *New* > *DWORD*.
+... Assegnare un nome al nuovo DWORD abilitato, quindi immettere 0 come valore.
+
+
+
+
+. Chiudere l'Editor del Registro di sistema.
+

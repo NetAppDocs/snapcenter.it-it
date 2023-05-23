@@ -1,0 +1,72 @@
+---
+permalink: install/task_configure_audit_log_settings.html 
+sidebar: sidebar 
+keywords: audit, log, configure 
+summary: È possibile configurare per registrare gli eventi di sicurezza delle piattaforme software e di tutto il software in esecuzione su tali piattaforme. 
+---
+= Configurare le impostazioni del registro di controllo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I registri di audit vengono generati per ogni attività del server SnapCenter. Per impostazione predefinita, i registri di controllo sono protetti nella posizione predefinita installata _C: File di programma/NetApp/SnapCenter WebApp/audit.
+
+I registri di audit sono protetti mediante la generazione di digest con firma digitale per ogni evento di audit per proteggerlo da modifiche non autorizzate. I digest generati vengono mantenuti nel file checksum di audit separato e vengono sottoposti a controlli di integrità periodici per garantire l'integrità del contenuto.
+
+Dovresti aver effettuato l'accesso come ruolo "SnapCenterAdmin".
+
+*A proposito di questa attività*
+
+* Gli avvisi vengono inviati nei seguenti scenari:
++
+** Il programma di controllo dell'integrità del registro di controllo o il server Syslog sono attivati o disattivati
+** Controllo dell'integrità del registro di controllo, registro di controllo o errore del registro del server Syslog
+** Spazio su disco insufficiente
+
+
+* L'e-mail viene inviata solo quando il controllo dell'integrità non riesce.
+* È necessario modificare insieme la directory del registro di controllo e i percorsi della directory del registro di controllo. Non è possibile modificarne solo uno.
+* Quando vengono modificati i percorsi delle directory dei log di audit e dei log di checksum, non è possibile eseguire il controllo dell'integrità dei log di audit presenti nella posizione precedente.
+* I percorsi delle directory dei log di audit e dei log di checksum devono trovarsi sul disco locale del server SnapCenter.
++
+I dischi condivisi o montati in rete non sono supportati.
+
+* Se nelle impostazioni del server Syslog viene utilizzato il protocollo UDP, gli errori dovuti alla porta non sono attivi o non disponibili non possono essere acquisiti come errore o avviso in SnapCenter.
+* È possibile utilizzare i comandi Set-SmAuditSettings e Get-SmAuditSettings per configurare i registri di controllo.
++
+Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo Get-Help command_name. In alternativa, è possibile consultare anche https://["Guida di riferimento al cmdlet del software SnapCenter"^].
+
+
+
+*Fasi*
+
+. Nella pagina *Impostazioni*, selezionare *Impostazioni* > *Impostazioni globali* > *Impostazioni registro di controllo*.
+. Nella sezione Registro di controllo, immettere i dettagli.
+. Inserire la directory *Registro audit* e la directory *Registro checksum audit*
++
+.. Inserire la dimensione massima del file
+.. Immettere il numero massimo di file di log
+.. Immettere la percentuale di utilizzo dello spazio su disco per inviare un avviso
+
+
+. (Facoltativo) attiva *Log UTC Time*.
+. (Facoltativo) attivare *Audit Log Integrity Check Schedule* e fare clic su *Start Integrity Check* per il controllo dell'integrità on-demand.
++
+È inoltre possibile eseguire il comando *Start-SmAuditIntegrityCheck* per avviare il controllo dell'integrità on-demand.
+
+. (Facoltativo) attivare i registri di controllo inoltrati al server syslog remoto e immettere i dettagli del server Syslog.
++
+È necessario importare il certificato dal server Syslog nel protocollo "Trusted Root" per TLS 1.2.
+
++
+.. Immettere Syslog Server host
+.. Immettere la porta del server Syslog
+.. Immettere il protocollo del server Syslog
+.. Inserire il formato RFC
+
+
+. Fare clic su *Save* (Salva).
+. È possibile visualizzare i controlli di integrità e lo spazio su disco facendo clic su *Monitor* > *Jobs*.
+

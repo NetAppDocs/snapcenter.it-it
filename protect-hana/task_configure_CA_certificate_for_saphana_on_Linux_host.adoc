@@ -1,0 +1,121 @@
+---
+permalink: protect-hana/task_configure_CA_certificate_for_saphana_on_Linux_host.html 
+sidebar: sidebar 
+keywords: SnapCenter 
+summary: 'Configurare il certificato CA per il servizio plug-in personalizzati di SnapCenter sull"host Linux' 
+---
+= Configurare il certificato CA per il servizio plug-in SAP HANA di SnapCenter sull'host Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario gestire la password dell'archivio chiavi dei plug-in personalizzati e il relativo certificato, configurare il certificato CA, configurare i certificati root o intermedi per l'archivio certificati attendibili dei plug-in personalizzati e configurare la coppia di chiavi firmate CA per l'archivio di fiducia dei plug-in personalizzati con il servizio Plug-in personalizzati di SnapCenter per attivare il certificato digitale installato.
+
+I plug-in personalizzati utilizzano il file 'keystore.jks', che si trova in _/opt/NetApp/snapcenter/scc/etc_ sia come Trust-store che come keystore.
+
+
+
+== Gestire la password per l'archivio chiavi del plug-in personalizzato e l'alias della coppia di chiavi firmate CA in uso
+
+*Fasi*
+
+. È possibile recuperare la password predefinita del keystore del plug-in personalizzato dal file di proprietà dell'agente del plug-in personalizzato.
++
+È il valore corrispondente alla chiave 'KEYSTORE_PASS'.
+
+. Modificare la password del keystore:
++
+ keytool -storepasswd -keystore keystore.jks
+. Modificare la password per tutti gli alias delle chiavi private nel keystore con la stessa password utilizzata per il keystore:
++
+ keytool -keypasswd -alias "alias_name_in_cert" -keystore keystore.jks
++
+Aggiornare lo stesso per la chiave KEYSTORE_PASS nel file _agent.properties_.
+
+. Riavviare il servizio dopo aver modificato la password.
+
+
+
+NOTE: La password per il keystore del plug-in personalizzato e per tutte le password alias associate della chiave privata deve essere la stessa.
+
+
+
+== Configurare i certificati root o intermedi per l'archivio di trust del plug-in personalizzato
+
+È necessario configurare i certificati root o intermedi senza la chiave privata per l'archivio di trust del plug-in personalizzato.
+
+*Fasi*
+
+. Accedere alla cartella contenente il keystore del plug-in personalizzato: /Opt/NetApp/snapcenter/scc/ecc.
+. Individuare il file 'keystore.jks'.
+. Elencare i certificati aggiunti nel keystore:
++
+`keytool -list -v -keystore keystore.jks`
+
+. Aggiungere un certificato root o intermedio:
++
+ keytool -import -trustcacerts -alias myRootCA -file /root/USERTrustRSA_Root.cer -keystore keystore.jks
+. Riavviare il servizio dopo aver configurato i certificati root o intermedi in un archivio di trust plug-in personalizzato.
+
+
+
+NOTE: Aggiungere il certificato CA principale e i certificati CA intermedi.
+
+
+
+== Configurare la coppia di chiavi firmate della CA nell'archivio di trust del plug-in personalizzato
+
+È necessario configurare la coppia di chiavi firmate della CA nell'archivio di trust del plug-in personalizzato.
+
+*Fasi*
+
+. Accedere alla cartella contenente il keystore del plug-in personalizzato /opt/NetApp/snapcenter/scc/ecc.
+. Individuare il file 'keystore.jks'.
+. Elencare i certificati aggiunti nel keystore:
++
+`keytool -list -v -keystore keystore.jks`
+
+. Aggiungere il certificato CA con chiave pubblica e privata.
++
+`keytool -importkeystore -srckeystore /root/snapcenter.ssl.test.netapp.com.pfx -srcstoretype pkcs12 -destkeystore keystore.jks -deststoretype JKS`
+
+. Elencare i certificati aggiunti nel keystore.
++
+`keytool -list -v -keystore keystore.jks`
+
+. Verificare che il keystore contenga l'alias corrispondente al nuovo certificato CA aggiunto al keystore.
+. Modificare la password della chiave privata aggiunta per il certificato CA in password archivio chiavi.
++
+La password predefinita customizzato del plug-in keystore è il valore della chiave KEYSTORE_PASS nel file agent.properties.
+
++
+ keytool -keypasswd -alias "alias_name_in_CA_cert" -keystore keystore.jks
+. Se il nome alias nel certificato CA è lungo e contiene spazi o caratteri speciali ("*",","), modificare il nome alias con un nome semplice:
++
+ keytool -changealias -alias "long_alias_name" -destalias "simple_alias" -keystore keystore.jks
+. Configurare il nome alias del certificato CA nel file agent.properties.
++
+Aggiornare questo valore con la chiave SCC_CERTIFICATE_ALIAS.
+
+. Riavviare il servizio dopo aver configurato la coppia di chiavi firmate della CA nell'archivio di trust del plug-in personalizzato.
+
+
+
+
+== Configurare l'elenco CRL (Certificate Revocation List) per i plug-in personalizzati di SnapCenter
+
+*A proposito di questa attività*
+
+* I plug-in personalizzati di SnapCenter cercheranno i file CRL in una directory preconfigurata.
+* La directory predefinita per i file CRL per i plug-in personalizzati di SnapCenter è ' opt/NetApp/snapcenter/scc/etc/crl'.
+
+
+*Fasi*
+
+. È possibile modificare e aggiornare la directory predefinita nel file agent.properties in base alla chiave CRL_PATH.
++
+È possibile inserire più file CRL in questa directory. I certificati in entrata verranno verificati per ciascun CRL.
+
+

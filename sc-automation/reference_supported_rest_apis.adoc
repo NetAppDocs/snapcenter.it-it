@@ -1,0 +1,373 @@
+---
+permalink: sc-automation/reference_supported_rest_apis.html 
+sidebar: sidebar 
+keywords: REST API categories 
+summary: 'Le risorse disponibili tramite l"API REST di SnapCenter sono organizzate in categorie, come mostrato nella pagina di documentazione dell"API di SnapCenter.' 
+---
+= API REST supportate per il server e i plug-in SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le risorse disponibili tramite l'API REST di SnapCenter sono organizzate in categorie, come mostrato nella pagina di documentazione dell'API di SnapCenter. Di seguito viene presentata una breve descrizione di ciascuna delle risorse con i percorsi delle risorse di base, insieme a ulteriori considerazioni sull'utilizzo, se del caso.
+
+
+
+== Auth
+
+È possibile utilizzare questa API per accedere al server SnapCenter. Questa API restituisce un token di autorizzazione utente utilizzato per autenticare le richieste successive.
+
+
+
+== Domini
+
+È possibile utilizzare le API per eseguire diverse operazioni.
+
+* Recuperare tutti i domini in SnapCenter
+* recuperare i dettagli di un dominio specifico
+* registrare o annullare la registrazione di un dominio
+* modificare un dominio
+
+
+
+
+== Lavori
+
+È possibile utilizzare le API per eseguire diverse operazioni.
+
+* Recuperare tutti i lavori in SnapCenter
+* recuperare lo stato di un lavoro
+* annullare o interrompere un lavoro
+
+
+
+
+== Impostazioni
+
+È possibile utilizzare le API per eseguire diverse operazioni.
+
+* registrare, modificare o rimuovere una credenziale
+* Visualizza le informazioni sulle credenziali registrate nel server SnapCenter
+* configurare le impostazioni di notifica
+* Recupera le informazioni sul server SMTP attualmente configurato per l'invio di notifiche e-mail e visualizza il nome del server SMTP, il nome dei destinatari e il nome del mittente
+* Visualizza la configurazione di autenticazione a più fattori (MFA) dell'accesso al server SnapCenter
+* Attivare o disattivare e configurare MFA per l'accesso al server SnapCenter
+* Creare il file di configurazione richiesto per configurare MFA
+
+
+
+
+== Host
+
+È possibile utilizzare le API per eseguire diverse operazioni.
+
+* Eseguire query su tutti gli host SnapCenter
+* Rimuovere uno o più host da SnapCenter
+* recuperare un host in base al nome
+* recuperare tutte le risorse su un host
+* Recuperare una risorsa utilizzando l'ID risorsa
+* recuperare i dettagli di configurazione del plug-in
+* configurare l'host del plug-in
+* Recuperare tutte le risorse del plug-in per l'host Microsoft SQL Server
+* Recuperare tutte le risorse del plug-in per l'host del database Oracle
+* recuperare tutte le risorse del plug-in per l'host dell'applicazione personalizzato
+* Recuperare tutte le risorse del plug-in per l'host SAP HANA
+* recuperare i plug-in installati
+* installare i plug-in su un host esistente
+* pacchetto host di upgrade
+* rimuovere i plug-in da un host esistente
+* aggiungere il plug-in su un host
+* aggiungere o modificare l'host
+* Ottenere la firma dell'host Linux
+* Registrare la firma dell'host Linux
+* impostare l'host in modalità di manutenzione o produzione
+* avviare o riavviare i servizi plug-in sull'host
+* rinominare un host
+
+
+
+
+== Risorse
+
+È possibile utilizzare le API per eseguire diverse operazioni.
+
+* recuperare tutte le risorse
+* Recuperare una risorsa utilizzando l'ID risorsa
+* Recuperare tutte le risorse del plug-in per l'host Microsoft SQL Server
+* Recuperare tutte le risorse del plug-in per l'host del database Oracle
+* recuperare tutte le risorse del plug-in per l'host dell'applicazione personalizzato
+* Recuperare tutte le risorse del plug-in per l'host SAP HANA
+* Recuperare una risorsa Microsoft SQL Server utilizzando una chiave
+* recuperare una risorsa personalizzata utilizzando una chiave
+* modificare una risorsa del plug-in per l'host dell'applicazione personalizzato
+* rimuovere una risorsa del plug-in per l'host dell'applicazione personalizzato utilizzando una chiave
+* Recuperare una risorsa SAP HANA utilizzando una chiave
+* Modificare una risorsa del plug-in per l'host SAP HANA
+* Rimuovere una risorsa del plug-in per l'host SAP HANA utilizzando una chiave
+* Recuperare una risorsa Oracle utilizzando una chiave
+* Creare una risorsa di volume per applicazioni Oracle
+* Modificare una risorsa di volume dell'applicazione Oracle
+* Rimuovere una risorsa di volume dell'applicazione Oracle utilizzando una chiave
+* Recuperare i dettagli secondari della risorsa Oracle
+* Eseguire il backup della risorsa Microsoft SQL Server utilizzando il plug-in per Microsoft SQL Server
+* Eseguire il backup della risorsa Oracle utilizzando il plug-in per il database Oracle
+* eseguire il backup della risorsa personalizzata utilizzando il plug-in per l'applicazione personalizzata
+* Configurare il database SAP HANA
+* Configurare il database Oracle
+* Ripristinare un backup del database SQL
+* Ripristinare un backup del database Oracle
+* ripristinare un backup personalizzato dell'applicazione
+* creare una risorsa plug-in personalizzata
+* Creare una risorsa SAP HANA
+* proteggere una risorsa personalizzata utilizzando il plug-in per l'applicazione personalizzata
+* Proteggere una risorsa Microsoft SQL Server utilizzando il plug-in per Microsoft SQL Server
+* Modificare una risorsa Microsoft SQL Server protetta
+* Rimuovere la protezione per la risorsa Microsoft SQL Server
+* Proteggere una risorsa Oracle utilizzando il plug-in per il database Oracle
+* Modificare una risorsa Oracle protetta
+* Rimuovere la protezione dalla risorsa Oracle
+* clonare una risorsa dal backup utilizzando il plug-in per l'applicazione personalizzata
+* Clonare un volume applicativo Oracle dal backup utilizzando il plug-in per il database Oracle
+* Clonare una risorsa Microsoft SQL Server dal backup utilizzando il plug-in per Microsoft SQL Server
+* Creare un ciclo di vita clone di una risorsa Microsoft SQL Server
+* Modificare il ciclo di vita dei cloni di una risorsa Microsoft SQL Server
+* Eliminare il ciclo di vita di un clone di una risorsa Microsoft SQL Server
+* Spostare un database Microsoft SQL Server esistente da un disco locale a un LUN NetApp
+* Creare un file di specifica clone per un database Oracle
+* Avviare un processo di refresh dei cloni on-demand di una risorsa Oracle
+* Creare una risorsa Oracle dal backup utilizzando il file di specifica del clone
+* ripristina il database nella replica secondaria e lo ricongiunge al gruppo di disponibilità
+* Creare una risorsa di volume per applicazioni Oracle
+
+
+
+
+== Backup
+
+È possibile utilizzare le API per eseguire diverse operazioni.
+
+* recuperare i dettagli del backup in base al nome, al tipo, al plug-in, alla risorsa o alla data del backup
+* recuperare tutti i backup
+* recuperare i dettagli del backup
+* rinominare o eliminare i backup
+* Montare un backup Oracle
+* Smontare un backup Oracle
+* cataloga un backup Oracle
+* Discatalogare un backup Oracle
+* ottieni tutti i backup necessari per eseguire il recovery point-in-time
+
+
+
+
+== Cloni
+
+È possibile utilizzare le API per eseguire diverse operazioni.
+
+* Creare, visualizzare, modificare ed eliminare il file delle specifiche dei cloni del database Oracle
+* Visualizzare la gerarchia di cloni del database Oracle
+* recuperare i dettagli dei cloni
+* recuperare tutti i cloni
+* eliminare i cloni
+* Recuperare i dettagli del clone per ID
+* Avviare un processo di refresh dei cloni on-demand di una risorsa Oracle
+* Clonare una risorsa Oracle dal backup utilizzando il file di specifica del clone
+
+
+
+
+== Suddivisione dei cloni
+
+È possibile utilizzare le API per eseguire diverse operazioni.
+
+* stima dell'operazione di suddivisione del clone della risorsa clonata
+* recuperare lo stato di un'operazione di suddivisione dei cloni
+* avviare o arrestare un'operazione di suddivisione dei cloni
+
+
+
+
+== Gruppi di risorse
+
+È possibile utilizzare le API per eseguire diverse operazioni.
+
+* recuperare i dettagli di tutti i gruppi di risorse
+* recuperare il gruppo di risorse in base al nome
+* creare un gruppo di risorse per il plug-in per l'applicazione personalizzata
+* Creare un gruppo di risorse per il plug-in per Microsoft SQL Server
+* Creare un gruppo di risorse per il plug-in per il database Oracle
+* modificare un gruppo di risorse per il plug-in per l'applicazione personalizzata
+* Modificare un gruppo di risorse per il plug-in per Microsoft SQL Server
+* Modificare un gruppo di risorse per il plug-in per il database Oracle
+* Creare, modificare o eliminare il ciclo di vita dei cloni di un gruppo di risorse per il plug-in per Microsoft SQL Server
+* eseguire il backup di un gruppo di risorse
+* impostare il gruppo di risorse in modalità di manutenzione o produzione
+* rimuovere un gruppo di risorse
+
+
+
+
+== Policy
+
+È possibile utilizzare le API per eseguire diverse operazioni.
+
+* recuperare i dettagli della policy
+* recuperare i dettagli della policy per nome
+* eliminare una policy
+* creare una copia di un criterio esistente
+* creare o modificare il criterio per il plug-in per l'applicazione personalizzata
+* Creare o modificare i criteri per il plug-in per Microsoft SQL Server
+* Creare o modificare il criterio per il plug-in per il database Oracle
+* Creare o modificare i criteri per il plug-in per il database SAP HANA
+
+
+
+
+== Storage
+
+È possibile utilizzare le API per eseguire diverse operazioni.
+
+* recuperare tutte le condivisioni
+* recuperare una condivisione in base al nome
+* creare o eliminare una condivisione
+* recuperare i dettagli dello storage
+* recuperare i dettagli dello storage per nome
+* creare, modificare o eliminare uno storage
+* scopri le risorse su un cluster di storage
+* recuperare le risorse su un cluster di storage
+
+
+
+
+== Condividere
+
+È possibile utilizzare le API per eseguire diverse operazioni.
+
+* recuperare i dettagli di una condivisione
+* recuperare i dettagli di tutte le condivisioni
+* creare o eliminare una condivisione sullo storage
+* recuperare una condivisione in base al nome
+
+
+
+
+== Plug-in
+
+È possibile utilizzare le API per eseguire diverse operazioni.
+
+* elencare tutti i plug-in per un host
+* Recuperare una risorsa Microsoft SQL Server utilizzando una chiave
+* modificare una risorsa personalizzata utilizzando una chiave
+* rimuovere una risorsa personalizzata utilizzando una chiave
+* Recuperare una risorsa SAP HANA utilizzando una chiave
+* Modificare una risorsa SAP HANA utilizzando una chiave
+* Rimuovere una risorsa SAP HANA utilizzando una chiave
+* Recuperare una risorsa Oracle utilizzando una chiave
+* Modificare una risorsa di volume di un'applicazione Oracle utilizzando una chiave
+* Rimuovere una risorsa di volume dell'applicazione Oracle utilizzando una chiave
+* Eseguire il backup della risorsa Microsoft SQL Server utilizzando il plug-in per Microsoft SQL Server e una chiave
+* Eseguire il backup della risorsa Oracle utilizzando un plug-in per il database Oracle e una chiave
+* eseguire il backup della risorsa applicativa personalizzata utilizzando il plug-in per l'applicazione personalizzata e una chiave
+* Configurare il database SAP HANA utilizzando una chiave
+* Configurare il database Oracle utilizzando una chiave
+* ripristinare un backup personalizzato dell'applicazione utilizzando una chiave
+* creare una risorsa plug-in personalizzata
+* Creare una risorsa SAP HANA
+* Creare una risorsa di volume per applicazioni Oracle
+* proteggere una risorsa personalizzata utilizzando il plug-in per l'applicazione personalizzata
+* Proteggere una risorsa Microsoft SQL Server utilizzando il plug-in per Microsoft SQL Server
+* Modificare una risorsa Microsoft SQL Server protetta
+* Rimuovere la protezione per la risorsa Microsoft SQL Server
+* Proteggere una risorsa Oracle utilizzando il plug-in per il database Oracle
+* Modificare una risorsa Oracle protetta
+* Rimuovere la protezione dalla risorsa Oracle
+* clonare una risorsa dal backup utilizzando il plug-in per l'applicazione personalizzata
+* Clonare un volume applicativo Oracle dal backup utilizzando il plug-in per il database Oracle
+* Clonare una risorsa Microsoft SQL Server dal backup utilizzando il plug-in per Microsoft SQL Server
+* Creare un ciclo di vita clone di una risorsa Microsoft SQL Server
+* Modificare il ciclo di vita dei cloni di una risorsa Microsoft SQL Server
+* Eliminare il ciclo di vita di un clone di una risorsa Microsoft SQL Server
+* Creare un file di specifica clone per un database Oracle
+* Avviare un ciclo di vita dei cloni on-demand di una risorsa Oracle
+* Clonare una risorsa Oracle dal backup utilizzando il file di specifica del clone
+
+
+
+
+== Report
+
+È possibile utilizzare le API per eseguire diverse operazioni.
+
+* recuperare i report delle operazioni di backup, ripristino e clonazione per i rispettivi plug-in
+* aggiungere, eseguire, eliminare o modificare le pianificazioni
+* recuperare i dati per i report pianificati
+
+
+
+
+== Avvisi
+
+È possibile utilizzare le API per eseguire diverse operazioni.
+
+* recuperare tutti gli avvisi
+* Recuperare gli avvisi in base agli ID
+* Consente di eliminare più avvisi o un avviso per ID
+
+
+
+
+== RBAC
+
+È possibile utilizzare le API per eseguire diverse operazioni.
+
+* recuperare i dettagli di utenti, gruppi e ruoli
+* aggiungere o eliminare utenti
+* assegnare l'utente al ruolo
+* annullare l'assegnazione dell'utente dal ruolo
+* creare, modificare o eliminare ruoli
+* assegnare un gruppo a un ruolo
+* annullare l'assegnazione di un gruppo da un ruolo
+* aggiungere o eliminare gruppi
+* creare una copia di un ruolo esistente
+* assegnare o annullare l'assegnazione delle risorse all'utente o al gruppo
+
+
+
+
+== Configurazione
+
+È possibile utilizzare le API per eseguire diverse operazioni.
+
+* visualizzare le impostazioni di configurazione
+* modificare le impostazioni di configurazione
+
+
+
+
+== CertificateSettings (Impostazioni certificazione)
+
+È possibile utilizzare le API per eseguire diverse operazioni.
+
+* Visualizzare lo stato del certificato per il server SnapCenter o l'host del plug-in
+* Modificare le impostazioni del certificato per il server SnapCenter o l'host del plug-in
+
+
+
+
+== Repository
+
+È possibile utilizzare le API per eseguire diverse operazioni.
+
+* recuperare i backup del repository
+* visualizzare le informazioni di configurazione relative al repository
+* Proteggere e ripristinare il repository SnapCenter
+* Annullare la protezione del repository SnapCenter
+* ricostruire e eseguire il failover del repository
+
+
+
+
+== Versione
+
+È possibile utilizzare questa API per visualizzare la versione di SnapCenter.

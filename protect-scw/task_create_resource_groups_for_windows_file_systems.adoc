@@ -1,0 +1,131 @@
+---
+permalink: protect-scw/task_create_resource_groups_for_windows_file_systems.html 
+sidebar: sidebar 
+keywords: resource groups 
+summary: Un gruppo di risorse è il container a cui è possibile aggiungere più file system che si desidera proteggere. È inoltre necessario associare uno o più criteri al gruppo di risorse per definire il tipo di lavoro di protezione dei dati che si desidera eseguire, quindi specificare la pianificazione del backup. 
+---
+= Creare gruppi di risorse per i file system Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un gruppo di risorse è il container a cui è possibile aggiungere più file system che si desidera proteggere. È inoltre necessario associare uno o più criteri al gruppo di risorse per definire il tipo di lavoro di protezione dei dati che si desidera eseguire, quindi specificare la pianificazione del backup.
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina Resources (risorse), selezionare *file Systems* dall'elenco.
++
+
+NOTE: Se di recente è stato aggiunto un file system a SnapCenter, fare clic su *Aggiorna risorse* per visualizzare la risorsa appena aggiunta.
+
+. Fare clic su *New Resource Group* (nuovo gruppo di risorse).
+. Nella pagina Nome della procedura guidata, effettuare le seguenti operazioni:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Nome
+ a| 
+Immettere il nome del gruppo di risorse.
+
+
+NOTE: Il nome del gruppo di risorse non deve superare i 250 caratteri.
+
+
+
+ a| 
+USA il formato nome personalizzato per la copia Snapshot
+ a| 
+Facoltativo: Inserire un nome e un formato di copia Snapshot personalizzati.
+
+Ad esempio, customtext_resourcegroup_policy_hostname o resourcegroup_hostname. Per impostazione predefinita, al nome della copia Snapshot viene aggiunto un indicatore data e ora.
+
+
+
+ a| 
+Tag
+ a| 
+Inserire un tag descrittivo per facilitare la ricerca di un gruppo di risorse.
+
+|===
+. Nella pagina risorse, eseguire le seguenti operazioni:
++
+.. Selezionare l'host per filtrare l'elenco delle risorse.
++
+Le risorse aggiunte di recente vengono visualizzate nell'elenco delle risorse disponibili solo dopo l'aggiornamento dell'elenco delle risorse.
+
+.. Nella sezione risorse disponibili, fare clic sui file system di cui si desidera eseguire il backup, quindi fare clic sulla freccia destra per spostarli nella sezione aggiunta.
++
+Se si seleziona l'opzione *selezione automatica di tutte le risorse sullo stesso volume di storage*, vengono selezionate tutte le risorse dello stesso volume. Quando vengono spostate nella sezione aggiunta, tutte le risorse del volume vengono spostate insieme.
+
++
+Per aggiungere un singolo file system, deselezionare l'opzione *selezione automatica di tutte le risorse sullo stesso volume di storage* e selezionare i file system da spostare nella sezione aggiunta.
+
+
+
+. Nella pagina Criteri, eseguire le seguenti operazioni:
++
+.. Selezionare uno o più criteri dall'elenco a discesa.
++
+È possibile selezionare qualsiasi policy esistente e fare clic su *Dettagli* per determinare se è possibile utilizzare tale policy.
+
++
+Se nessuna policy esistente soddisfa i tuoi requisiti, puoi creare una nuova policy facendo clic su *image:../media/add_policy_from_resourcegroup.gif[""]* per avviare la procedura guidata delle policy.
+
++
+I criteri selezionati sono elencati nella colonna Policy della sezione Configure schedules for selected policies.
+
+.. Nella sezione Configure schedules for selected policy (Configura pianificazioni per policy selezionate), fare clic su *image:../media/add_policy_from_resourcegroup.gif[""]* Nella colonna Configure Schedules (Configura pianificazioni) per il criterio per il quale si desidera configurare la pianificazione.
+.. Se il criterio è associato a più tipi di pianificazione (frequenze), selezionare la frequenza che si desidera configurare.
+.. Nella finestra di dialogo Add schedules for policy _policy_name_, configurare la pianificazione specificando la data di inizio, la data di scadenza e la frequenza, quindi fare clic su *fine*.
++
+Le pianificazioni configurate sono elencate nella colonna Applied Schedules (Pianificazioni applicate) della sezione Configure schedules for selected policies (Configura pianificazioni per criteri selezionati).
+
+
+
++
+Le pianificazioni di backup di terze parti non sono supportate quando si sovrappongono alle pianificazioni di backup di SnapCenter. Non modificare le pianificazioni da Task Scheduler di Windows e SQL Server Agent.
+
+. Nella pagina Notification (notifica), fornire le informazioni di notifica, come indicato di seguito:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Preferenza e-mail
+ a| 
+Selezionare *Always*, *on Failure* o *on failure or warning*, per inviare e-mail ai destinatari dopo la creazione di gruppi di risorse di backup, l'aggiunta di criteri e la configurazione delle pianificazioni. Immettere il server SMTP, l'oggetto e-mail predefinito e gli indirizzi e-mail a e da.
+
+
+
+ a| 
+Da
+ a| 
+Indirizzo e-mail
+
+
+
+ a| 
+A.
+ a| 
+Indirizzo e-mail
+
+
+
+ a| 
+Soggetto
+ a| 
+Oggetto e-mail predefinito
+
+|===
+. Esaminare il riepilogo, quindi fare clic su *fine*.
++
+È possibile eseguire un backup su richiesta o attendere che venga eseguito il backup pianificato.
+
+

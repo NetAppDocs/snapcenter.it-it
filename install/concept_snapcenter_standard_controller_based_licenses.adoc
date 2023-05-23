@@ -1,0 +1,253 @@
+---
+permalink: install/concept_snapcenter_standard_controller_based_licenses.html 
+sidebar: sidebar 
+keywords: controller-based licenses, standard license, SnapManager Suite license, FAS, AFF, retrieve controller serial number, controller serial number, controller-based license serial number, add controller-based license, remove trial license 
+summary: Se si utilizzano i controller di storage FAS o AFF, è necessaria una licenza basata su controller standard SnapCenter. 
+---
+= Aggiunta di licenze SnapCenter basate su controller standard
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se si utilizzano i controller di storage FAS o AFF, è necessaria una licenza basata su controller standard SnapCenter.
+
+La licenza basata su controller ha le seguenti caratteristiche:
+
+* Diritto standard SnapCenter incluso con l'acquisto di bundle premium o flash (non con il pacchetto base)
+* Utilizzo illimitato dello storage
+* È possibile aggiungerlo direttamente al controller di storage FAS o AFF utilizzando Gestione di sistema ONTAP o la riga di comando del cluster di storage
++
+
+NOTE: Non inserire alcuna informazione di licenza nell'interfaccia grafica di SnapCenter per le licenze basate su controller SnapCenter.
+
+* Bloccato sul numero di serie del controller
+
+
+Per informazioni sulle licenze richieste, vedere link:../install/concept_snapcenter_licenses.html["Licenze SnapCenter"^].
+
+
+
+== Prerequisiti per aggiungere una licenza basata su controller
+
+Prima di aggiungere una licenza basata su controller, verificare se la licenza della suite SnapManager è installata, identificare le licenze installate sul controller, recuperare il numero di serie del controller e recuperare il numero di serie della licenza basata su controller.
+
+
+
+=== Verificare che la licenza della suite SnapManager sia installata
+
+È possibile utilizzare l'interfaccia grafica di SnapCenter per verificare se una licenza della suite SnapManager è installata su sistemi di storage primari FAS o AFF e per identificare i sistemi di storage che potrebbero richiedere le licenze della suite SnapManager. Le licenze della suite SnapManager si applicano solo alle SVM FAS e AFF o ai cluster sui sistemi storage primari.
+
+
+NOTE: Se si dispone già di una licenza della suite SnapManager sul controller, il diritto alla licenza basata su controller standard SnapCenter viene fornito automaticamente. I nomi licenza SnapManagerSuite e licenza basata su controller standard SnapCenter vengono utilizzati in modo intercambiabile, ma si riferiscono alla stessa licenza.
+
+*Fasi*
+
+. Nel riquadro di navigazione a sinistra, fare clic su *Storage Systems*.
+. Nella pagina Storage Systems (sistemi storage), dal menu a discesa *Type* (tipo), selezionare se visualizzare tutte le SVM o i cluster aggiunti:
++
+** Per visualizzare tutte le SVM aggiunte, selezionare *ONTAP SVM*.
+** Per visualizzare tutti i cluster aggiunti, selezionare *ONTAP Clusters*.
++
+Quando si fa clic sul nome del cluster, tutte le SVM che fanno parte del cluster vengono visualizzate nella sezione Storage Virtual Machines (macchine virtuali di storage).
+
+
+
+. Nell'elenco Storage Connections (connessioni storage), individuare la colonna Controller License (licenza controller).
++
+La colonna Controller License (licenza controller) visualizza il seguente stato:
+
++
+** image:../media/controller_licensed_icon.gif[""] Indica che una licenza della suite SnapManager è installata su un sistema di storage primario FAS o AFF.
+** image:../media/controller_not_licensed_icon.gif[""] Indica che la licenza della suite SnapManager non è installata su un sistema di storage primario FAS o AFF.
+** Non applicabile indica che una licenza della suite SnapManager non è applicabile perché lo storage controller si trova su piattaforme di storage Cloud Volumes ONTAP, ONTAP Select o secondarie.
+
+
+
+
+
+
+=== Identificare le licenze installate sul controller
+
+È possibile utilizzare la riga di comando ONTAP per visualizzare tutte le licenze installate sul controller. L'utente deve essere un amministratore del cluster nel sistema FAS o AFF.
+
+
+NOTE: La licenza basata su controller standard SnapCenter viene visualizzata come licenza SnapManagerSuite sul controller.
+
+*Fasi*
+
+. Accedere al controller NetApp utilizzando la riga di comando ONTAP.
+. Immettere il comando License show, quindi visualizzare l'output per determinare se la licenza SnapManagerSuite è installata.
++
+[listing]
+----
+cluster1::> license show
+(system license show)
+
+Serial Number: 1-80-0000xx
+Owner: cluster1
+Package           Type     Description              Expiration
+----------------- -------- ---------------------    ---------------
+Base              site     Cluster Base License     -
+
+Serial Number: 1-81-000000000000000000000000xx
+Owner: cluster1-01
+Package           Type     Description              Expiration
+----------------- -------- ---------------------    ---------------
+NFS               license  NFS License              -
+CIFS              license  CIFS License             -
+iSCSI             license  iSCSI License            -
+FCP               license  FCP License              -
+SnapRestore       license  SnapRestore License      -
+SnapMirror        license  SnapMirror License       -
+FlexClone         license  FlexClone License        -
+SnapVault         license  SnapVault License        -
+SnapManagerSuite  license  SnapManagerSuite License -
+----
++
+Nell'esempio, la licenza SnapManagerSuite è installata, pertanto non sono richieste ulteriori azioni di licenza SnapCenter.
+
+
+
+
+
+=== Recuperare il numero di serie del controller
+
+Per recuperare il numero di serie della licenza basata su controller, è necessario disporre del numero di serie del controller. È possibile recuperare il numero di serie del controller utilizzando la riga di comando ONTAP. L'utente deve essere un amministratore del cluster nel sistema FAS o AFF.
+
+*Fasi*
+
+. Accedere al controller utilizzando la riga di comando ONTAP.
+. Immettere il comando show -instance del sistema, quindi esaminare l'output per individuare il numero di serie del controller.
++
+[listing]
+----
+cluster1::> system show -instance
+
+Node: fas8080-41-42-01
+Owner:
+Location: RTP 1.5
+Model: FAS8080
+Serial Number: 123451234511
+Asset Tag: -
+Uptime: 143 days 23:46
+NVRAM System ID: xxxxxxxxx
+System ID: xxxxxxxxxx
+Vendor: NetApp
+Health: true
+Eligibility: true
+Differentiated Services: false
+All-Flash Optimized: false
+
+Node: fas8080-41-42-02
+Owner:
+Location: RTP 1.5
+Model: FAS8080
+Serial Number: 123451234512
+Asset Tag: -
+Uptime: 144 days 00:08
+NVRAM System ID: xxxxxxxxx
+System ID: xxxxxxxxxx
+Vendor: NetApp
+Health: true
+Eligibility: true
+Differentiated Services: false
+All-Flash Optimized: false
+2 entries were displayed.
+----
+. Annotare i numeri di serie.
+
+
+
+
+=== Recuperare il numero di serie della licenza basata su controller
+
+Se si utilizza lo storage FAS o AFF, è possibile recuperare la licenza basata su controller SnapCenter dal sito di supporto NetApp prima di poterla installare utilizzando la riga di comando ONTAP.
+
+*Cosa ti serve*
+
+* È necessario disporre di credenziali di accesso al sito di supporto NetApp valide.
++
+Se non si inseriscono credenziali valide, non vengono restituite informazioni per la ricerca.
+
+* Il numero di serie del controller dovrebbe essere disponibile.
+
+
+*Fasi*
+
+. Accedere al sito di supporto NetApp all'indirizzo http://["mysupport.netapp.com"^].
+. Accedere a *sistemi* > *licenze software*.
+. Nell'area Selection Criteria (Criteri di selezione), assicurarsi che sia selezionato Serial Number (numero di serie) (situato sul retro dell'unità), inserire il numero di serie del controller, quindi fare clic su *Go!* (Vai).
++
+image::../media/nss_controller_license_select.gif[nss controller license select (selezione licenza controller nss)]
+
++
+Viene visualizzato un elenco di licenze per il controller specificato.
+
+. Individuare e registrare la licenza di SnapCenter o SnapManagerSuite.
+
+
+
+
+== Aggiungere una licenza basata su controller
+
+È possibile utilizzare la riga di comando di ONTAP per aggiungere una licenza basata su controller SnapCenter quando si utilizzano sistemi FAS o AFF e si dispone di una licenza standard o SnapManagerSuite di SnapCenter.
+
+*Cosa ti serve*
+
+* L'utente deve essere un amministratore del cluster nel sistema FAS o AFF.
+* È necessario disporre della licenza standard o SnapManagerSuite di SnapCenter.
+
+
+*A proposito di questa attività*
+
+Se si desidera installare SnapCenter in prova con lo storage FAS o AFF, è possibile ottenere una licenza di valutazione Premium Bundle da installare sul controller.
+
+Se si desidera installare SnapCenter in prova, contattare il rappresentante commerciale per ottenere una licenza di valutazione del bundle Premium da installare sul controller.
+
+*Fasi*
+
+. Accedere al cluster NetApp utilizzando la riga di comando ONTAP.
+. Aggiungere la chiave di licenza SnapManagerSuite:
++
+`system license add -license-code license_key`
+
++
+Questo comando è disponibile a livello di privilegio admin.
+
+. Verificare che la licenza SnapManagerSuite sia installata:
++
+`license show`
+
+
+
+
+
+=== Rimuovere la licenza di prova
+
+Se si utilizza una licenza standard SnapCenter basata su controller e si deve rimuovere la licenza di prova basata su capacità (numero di serie che termina con "`50`"), utilizzare i comandi MySQL per rimuovere manualmente la licenza di prova. La licenza di prova non può essere eliminata utilizzando l'interfaccia grafica di SnapCenter.
+
+
+NOTE: La rimozione manuale di una licenza di prova è necessaria solo se si utilizza una licenza basata su controller standard SnapCenter. Se si è acquistata una licenza basata sulla capacità standard di SnapCenter e la si è aggiunta nella GUI di SnapCenter, la licenza di prova viene sovrascritta automaticamente.
+
+*Fasi*
+
+. Sul server SnapCenter, aprire una finestra PowerShell per reimpostare la password MySQL.
++
+.. Eseguire il cmdlet Open-SmConnection per avviare una sessione di connessione con il server SnapCenter per un account SnapCenterAdmin.
+.. Eseguire Set-SmRepositoryPassword per reimpostare la password MySQL.
++
+Per informazioni sui cmdlet, vedere https://["Guida di riferimento al cmdlet del software SnapCenter"^].
+
+
+
+. Aprire il prompt dei comandi ed eseguire mysql -u root -p per accedere a MySQL.
++
+MySQL richiede la password. Immettere le credenziali fornite durante la reimpostazione della password.
+
+. Rimuovere la licenza di prova dal database:
++
+`use nsm;``DELETE FROM nsm_License WHERE nsm_License_Serial_Number='510000050';`
+
+

@@ -1,0 +1,47 @@
+---
+permalink: protect-scc/concept_what_you_can_do_with_the_snapcenter_custom_plug_ins.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile utilizzare i plug-in personalizzati di SnapCenter per le operazioni di protezione dei dati. 
+---
+= Operazioni che è possibile eseguire con i plug-in e i plug-in di storage personalizzati di SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare i plug-in personalizzati di SnapCenter per le operazioni di protezione dei dati.
+
+*Plug-in personalizzato*
+
+* Aggiungere risorse come database, istanze, documenti o spazi tabella.
+* Creare backup.
+* Ripristinare dai backup.
+* Clonare i backup.
+* Pianificare le operazioni di backup.
+* Monitorare le operazioni di backup, ripristino e clonazione.
+* Visualizza i report per le operazioni di backup, ripristino e clonazione.
+
+
+*Plug-in di storage*
+
+È possibile utilizzare il plug-in di storage per le operazioni di protezione dei dati.
+
+* Copie Snapshot di gruppi di coerenza dei volumi di storage nei cluster ONTAP.
+* Eseguire il backup delle applicazioni personalizzate utilizzando il framework pre e post-scripting integrato
++
+È possibile eseguire il backup di un volume ONTAP, di un LUN o di un Qtree.
+
+* Aggiornare le copie Snapshot eseguite sul primario su un ONTAP secondario, sfruttando la relazione di replica esistente (SnapVault/SnapMirror/replica unificata) utilizzando la policy SnapCenter
++
+ONTAP primario e secondario possono essere ONTAP FAS, AFF, Select o Cloud ONTAP.
+
+* Ripristinare il volume, il LUN o i file ONTAP completi.
++
+È necessario specificare manualmente il percorso del file corrispondente, poiché le funzioni di ricerca o indicizzazione non sono integrate nel prodotto.
+
++
+Il ripristino di qtree o directory non è supportato, ma è possibile clonare ed esportare solo il Qtree se l'ambito di backup è definito a livello di Qtree.
+
+

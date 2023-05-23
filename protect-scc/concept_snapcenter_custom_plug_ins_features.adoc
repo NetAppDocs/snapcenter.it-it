@@ -1,0 +1,48 @@
+---
+permalink: protect-scc/concept_snapcenter_custom_plug_ins_features.html 
+sidebar: sidebar 
+keywords:  
+summary: 'SnapCenter si integra con l"applicazione plug-in e con le tecnologie NetApp del sistema storage. Per utilizzare i plug-in personalizzati, utilizzare l"interfaccia grafica utente di SnapCenter.' 
+---
+= Funzionalità dei plug-in personalizzati di SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter si integra con l'applicazione plug-in e con le tecnologie NetApp del sistema storage. Per utilizzare i plug-in personalizzati, utilizzare l'interfaccia grafica utente di SnapCenter.
+
+* *Interfaccia utente grafica unificata*
++
+L'interfaccia SnapCenter offre standardizzazione e coerenza tra plug-in e ambienti. L'interfaccia di SnapCenter consente di completare operazioni di backup, ripristino, ripristino e clonazione coerenti tra i plug-in, utilizzare report centralizzati, utilizzare visualizzazioni dashboard a colpo d'occhio, impostare RBAC (role-based access control) e monitorare i processi in tutti i plug-in.
+
+* *Amministrazione centrale automatizzata*
++
+È possibile pianificare le operazioni di backup, configurare la conservazione dei backup basata su policy ed eseguire operazioni di ripristino. Puoi anche monitorare in modo proattivo il tuo ambiente configurando SnapCenter per l'invio di avvisi e-mail.
+
+* *Tecnologia di copia Snapshot NetApp senza interruzioni*
++
+SnapCenter utilizza la tecnologia di copia Snapshot di NetApp con i plug-in personalizzati di SnapCenter per eseguire il backup delle risorse. Le copie Snapshot occupano uno spazio di storage minimo.
+
+
+
+L'utilizzo della funzione Custom Plug-ins offre anche i seguenti vantaggi:
+
+* Supporto per flussi di lavoro di backup, ripristino e clonazione
+* Sicurezza supportata da RBAC e delega centralizzata dei ruoli
++
+È inoltre possibile impostare le credenziali in modo che gli utenti SnapCenter autorizzati dispongano delle autorizzazioni a livello di applicazione.
+
+* Creazione di copie delle risorse efficienti in termini di spazio e point-in-time per il test o l'estrazione dei dati utilizzando la tecnologia NetApp FlexClone
++
+È necessaria una licenza FlexClone sul sistema storage in cui si desidera creare il clone.
+
+* Supporto per la funzione di copia Snapshot del gruppo di coerenza (CG) di ONTAP durante la creazione dei backup.
+* Possibilità di eseguire più backup contemporaneamente su più host di risorse
++
+In una singola operazione, le copie Snapshot vengono consolidate quando le risorse di un singolo host condividono lo stesso volume.
+
+* Possibilità di creare una copia Snapshot utilizzando comandi esterni.
+* Capacità di creare copie Snapshot coerenti del file system in ambienti Windows.
+

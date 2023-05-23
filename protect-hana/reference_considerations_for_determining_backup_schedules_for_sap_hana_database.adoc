@@ -1,0 +1,26 @@
+---
+permalink: protect-hana/reference_considerations_for_determining_backup_schedules_for_sap_hana_database.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: 'Il fattore più critico per determinare una pianificazione di backup è il tasso di cambiamento per la risorsa. È possibile eseguire il backup di una risorsa utilizzata in modo pesante ogni ora, mentre è possibile eseguire il backup di una risorsa utilizzata raramente una volta al giorno. Altri fattori includono l"importanza della risorsa per la tua organizzazione, il tuo SLA (Service Level Agreement) e l"obiettivo RPO (Recovery Point Objective).' 
+---
+= Considerazioni per la determinazione delle pianificazioni di backup per il database SAP HANA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il fattore più critico per determinare una pianificazione di backup è il tasso di cambiamento per la risorsa. È possibile eseguire il backup di una risorsa utilizzata in modo pesante ogni ora, mentre è possibile eseguire il backup di una risorsa utilizzata raramente una volta al giorno. Altri fattori includono l'importanza della risorsa per la tua organizzazione, il tuo SLA (Service Level Agreement) e l'RPO (Recovery Point Objective).
+
+Le pianificazioni dei backup sono in due parti, come segue:
+
+* Frequenza del backup (frequenza con cui devono essere eseguiti i backup)
++
+La frequenza di backup, chiamata anche tipo di pianificazione per alcuni plug-in, fa parte di una configurazione di policy. Ad esempio, è possibile configurare la frequenza di backup come oraria, giornaliera, settimanale o mensile.
+
+* Pianificazioni di backup (esattamente quando devono essere eseguiti i backup
++
+Le pianificazioni dei backup fanno parte di una configurazione di risorse o gruppi di risorse. Ad esempio, se si dispone di un gruppo di risorse con un criterio configurato per i backup settimanali, è possibile configurare la pianificazione per il backup ogni giovedì alle 10:00
+
+

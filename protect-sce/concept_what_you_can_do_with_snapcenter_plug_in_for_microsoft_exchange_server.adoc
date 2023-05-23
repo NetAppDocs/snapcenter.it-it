@@ -1,0 +1,22 @@
+---
+permalink: protect-sce/concept_what_you_can_do_with_snapcenter_plug_in_for_microsoft_exchange_server.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile utilizzare il plug-in per Exchange per eseguire il backup e il ripristino dei database di Exchange Server. 
+---
+= Operazioni che è possibile eseguire con il plug-in SnapCenter per Microsoft Exchange Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare il plug-in per Exchange per eseguire il backup e il ripristino dei database di Exchange Server.
+
+* Visualizzare e gestire un inventario attivo di DAG (Database Availability Group), database e set di repliche di Exchange
+* Definire le policy che forniscono le impostazioni di protezione per l'automazione del backup
+* Assegnare i criteri ai gruppi di risorse
+* Proteggere singoli DAG e database
+* Eseguire il backup dei database delle cassette postali di Exchange primario e secondario
+* Ripristinare i database dai backup primari e secondari
+

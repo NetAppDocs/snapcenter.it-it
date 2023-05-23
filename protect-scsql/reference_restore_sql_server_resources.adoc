@@ -1,0 +1,28 @@
+---
+permalink: protect-scsql/reference_restore_sql_server_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile utilizzare SnapCenter per ripristinare i database di SQL Server ripristinando i dati da uno o più backup nel file system attivo e ripristinando il database. È inoltre possibile ripristinare i database presenti nei gruppi di disponibilità e aggiungere i database ripristinati al gruppo di disponibilità. Prima di ripristinare un database SQL Server, è necessario eseguire diverse attività preparatorie. 
+---
+= Ripristinare il flusso di lavoro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare SnapCenter per ripristinare i database di SQL Server ripristinando i dati da uno o più backup nel file system attivo e ripristinando il database. È inoltre possibile ripristinare i database presenti nei gruppi di disponibilità e aggiungere i database ripristinati al gruppo di disponibilità. Prima di ripristinare un database SQL Server, è necessario eseguire diverse attività preparatorie.
+
+Il seguente flusso di lavoro mostra la sequenza in cui è necessario eseguire le operazioni di ripristino del database:
+
+image::../media/all_plug_ins_restore_workflow.png[all_plug-in_restore_workflow]
+
+È inoltre possibile utilizzare i cmdlet PowerShell manualmente o negli script per eseguire operazioni di backup, ripristino, ripristino, verifica e clonazione. Per informazioni dettagliate sui cmdlet di PowerShell, consultare la guida in linea del cmdlet di SnapCenter o la https://["Guida di riferimento per il software SnapCenter 4.4 cmdlet"]
+
+*Ulteriori informazioni*
+
+link:task_restore_a_sql_server_database_from_secondary_storage.html["Ripristinare un database SQL Server dallo storage secondario"]
+
+link:task_restore_and_recover_resources_using_powershell_cmdlets_for_sql.html["Ripristinare e ripristinare le risorse utilizzando i cmdlet PowerShell"]
+
+link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Restore_operation_might_fail_on_Windows_2008_R2["L'operazione di ripristino potrebbe non riuscire in Windows 2008 R2"]

@@ -1,0 +1,18 @@
+---
+permalink: protect-hana/concept_snapcenter_plug_in_for_sap_hana_database_overview.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: Il plug-in SnapCenter per database SAP HANA è un componente lato host del software NetApp SnapCenter che consente la gestione della protezione dei dati applicativa dei database SAP HANA. Il plug-in per il database SAP HANA automatizza il backup, il ripristino e la clonazione dei database SAP HANA nel tuo ambiente SnapCenter. 
+---
+= Panoramica del plug-in SnapCenter per il database SAP HANA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il plug-in SnapCenter per database SAP HANA è un componente lato host del software NetApp SnapCenter che consente la gestione della protezione dei dati applicativa dei database SAP HANA. Il plug-in per il database SAP HANA automatizza il backup, il ripristino e la clonazione dei database SAP HANA nel tuo ambiente SnapCenter.
+
+SnapCenter supporta container singoli e container di database multi-tenant (MDC). È possibile utilizzare il plug-in per il database SAP HANA in ambienti Windows e Linux. Il plug-in non installato sull'host del database HANA è noto come plug-in host centralizzato. Il plug-in host centralizzato è in grado di gestire più database HANA su diversi host.
+
+Una volta installato il plug-in per il database SAP HANA, è possibile utilizzare SnapCenter con la tecnologia NetApp SnapMirror per creare copie mirror dei set di backup su un altro volume. È inoltre possibile utilizzare il plug-in con la tecnologia NetApp SnapVault per eseguire la replica del backup disk-to-disk per garantire la conformità agli standard.

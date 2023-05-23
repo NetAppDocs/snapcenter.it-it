@@ -1,0 +1,119 @@
+---
+permalink: install/task_register_untrusted_active_directory_domains.html 
+sidebar: sidebar 
+keywords:  
+summary: È necessario registrare Active Directory con il server SnapCenter per gestire host, utenti e gruppi di più domini Active Directory non attendibili. 
+---
+= Registrare domini Active Directory non attendibili
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario registrare Active Directory con il server SnapCenter per gestire host, utenti e gruppi di più domini Active Directory non attendibili.
+
+*Cosa ti serve*
+
+*Protocolli LDAP e LDAPS*
+
+* È possibile registrare i domini Active Directory non attendibili utilizzando il protocollo LDAP o LDAPS.
+* La comunicazione bidirezionale tra gli host plug-in e il server SnapCenter dovrebbe essere stata attivata.
+* La risoluzione DNS deve essere impostata dal server SnapCenter agli host plug-in e viceversa.
+
+
+*Protocollo LDAP*
+
+* Il nome di dominio completo (FQDN) deve essere risolvibile dal server SnapCenter.
++
+È possibile registrare un dominio non attendibile con l'FQDN. Se l'FQDN non è risolvibile dal server SnapCenter, è possibile registrarsi con un indirizzo IP del controller di dominio, che dovrebbe essere risolvibile dal server SnapCenter.
+
+
+
+*Protocollo LDAPS*
+
+* I certificati CA sono necessari affinché LDAPS fornisca la crittografia end-to-end durante la comunicazione Active Directory.
++
+link:task_configure_CA_client_certificate_for_LDAPS.html["Configurare il certificato del client CA per LDAPS"]
+
+* I nomi host dei controller di dominio (nome host DC) devono essere raggiungibili dal server SnapCenter.
+
+
+*A proposito di questa attività*
+
+* È possibile utilizzare l'interfaccia utente di SnapCenter, i cmdlet PowerShell o l'API REST per registrare un dominio non attendibile.
+
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *Impostazioni*.
+. Nella pagina Impostazioni, fare clic su *Impostazioni globali*.
+. Nella pagina Global Settings (Impostazioni globali), fare clic su *Domain Settings* (Impostazioni dominio).
+. Fare clic su image:../media/add_policy_from_resourcegroup.gif[""] per registrare un nuovo dominio.
+. Nella pagina Registra nuovo dominio, selezionare *LDAP* o *LDAPS*.
++
+.. Se si seleziona *LDAP*, specificare le informazioni necessarie per la registrazione del dominio non attendibile per LDAP:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Domain Name (Nome dominio)
+ a| 
+Specificare il nome NetBIOS per il dominio.
+
+
+
+ a| 
+FQDN del dominio
+ a| 
+Specificare l'FQDN e fare clic su *Resolve* (Risolvi).
+
+
+
+ a| 
+Indirizzi IP dei controller di dominio
+ a| 
+Se l'FQDN del dominio non è risolvibile dal server SnapCenter, specificare uno o più indirizzi IP del controller di dominio.
+
+Per ulteriori informazioni, vedere https://["Aggiungere l'IP del controller di dominio per il dominio non attendibile dalla GUI"^].
+
+|===
+.. Se si seleziona *LDAPS*, specificare le informazioni necessarie per la registrazione del dominio non attendibile per LDAPS:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Domain Name (Nome dominio)
+ a| 
+Specificare il nome NetBIOS per il dominio.
+
+
+
+ a| 
+FQDN del dominio
+ a| 
+Specificare l'FQDN.
+
+
+
+ a| 
+Nomi dei controller di dominio
+ a| 
+Specificare uno o più nomi di controller di dominio e fare clic su *Risolvi*.
+
+
+
+ a| 
+Indirizzi IP dei controller di dominio
+ a| 
+Se i nomi dei controller di dominio non sono risolvibili dal server SnapCenter, correggere le risoluzioni DNS.
+
+|===
+
+
+. Fare clic su *OK*.
+

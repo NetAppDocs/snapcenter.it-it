@@ -1,0 +1,63 @@
+---
+permalink: protect-hana/task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: Quando si prepara il backup o la clonazione di una risorsa, potrebbe essere utile visualizzare una rappresentazione grafica di tutti i backup e cloni sullo storage primario e secondario. 
+---
+= Visualizzare i backup e i cloni del database SAP HANA nella pagina topologia
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando si prepara il backup o la clonazione di una risorsa, potrebbe essere utile visualizzare una rappresentazione grafica di tutti i backup e cloni sullo storage primario e secondario.
+
+*A proposito di questa attività*
+
+È possibile esaminare le seguenti icone nella vista Manage Copies (Gestisci copie) per determinare se i backup e i cloni sono disponibili sullo storage primario o secondario (copie Mirror o copie Vault).
+
+* image:../media/topology_primary_storage.gif["icona dello storage primario"] visualizza il numero di backup e cloni disponibili sullo storage primario.
+* image:../media/topology_mirror_secondary_storage.gif["Icona Mirror dello storage secondario"] Visualizza il numero di backup e cloni mirrorati sullo storage secondario utilizzando la tecnologia SnapMirror.
+* image:../media/topology_vault_secondary_storage.gif["icona del vault secondario"] Visualizza il numero di backup e cloni replicati sullo storage secondario utilizzando la tecnologia SnapVault.
++
+
+NOTE: Il numero di backup visualizzati include i backup eliminati dallo storage secondario. Ad esempio, se sono stati creati 6 backup utilizzando un criterio per conservare solo 4 backup, il numero di backup visualizzato è 6.
+
+
+
+
+NOTE: I cloni di un backup di un mirror flessibile della versione su un volume di tipo mirror-vault vengono visualizzati nella vista della topologia, ma il numero di backup mirror nella vista della topologia non include il backup flessibile della versione.
+
+
+NOTE: Per le risorse primarie di replica del sistema SAP HANA, sono supportate le operazioni di ripristino ed eliminazione, mentre per le risorse secondarie è supportata l'operazione di clonazione.
+
+Nella pagina topologia, è possibile visualizzare tutti i backup e i cloni disponibili per la risorsa o il gruppo di risorse selezionato. È possibile visualizzare i dettagli di tali backup e cloni e selezionarli per eseguire le operazioni di protezione dei dati.
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina risorse, selezionare la risorsa o il gruppo di risorse dall'elenco a discesa *Visualizza*.
+. Selezionare la risorsa dalla vista dei dettagli della risorsa o dalla vista dei dettagli del gruppo di risorse.
++
+Se la risorsa è protetta, viene visualizzata la pagina della topologia della risorsa selezionata.
+
+. Consultare la scheda *Summary* per visualizzare un riepilogo del numero di backup e cloni disponibili sullo storage primario e secondario.
++
+La sezione *Summary Card* mostra il numero totale di backup basati su file, backup di copie Snapshot e cloni.
+
++
+Facendo clic sul pulsante *Refresh* viene avviata una query dello storage per visualizzare un conteggio accurato.
+
+. Nella vista Gestisci copie, fare clic su *backup* o *cloni* dallo storage primario o secondario per visualizzare i dettagli di un backup o clone.
++
+I dettagli dei backup e dei cloni vengono visualizzati in formato tabella.
+
+. Selezionare il backup dalla tabella, quindi fare clic sulle icone di protezione dei dati per eseguire operazioni di ripristino, clonazione ed eliminazione.
++
+
+NOTE: Non è possibile rinominare o eliminare i backup presenti nello storage secondario.
+
+. Se si desidera eliminare un clone, selezionarlo dalla tabella, quindi fare clic su image:../media/delete_icon.gif[""].
+. Se si desidera suddividere un clone, selezionarlo dalla tabella, quindi fare clic su image:../media/split_cone.gif[""].
+

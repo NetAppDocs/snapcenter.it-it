@@ -1,0 +1,129 @@
+---
+permalink: sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html 
+sidebar: sidebar 
+keywords:  
+summary: La funzionalità di disaster recovery di SnapCenter utilizza API REST per il backup del server SnapCenter. 
+---
+= API REST di disaster recovery (DR)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+:firstname: [.lead]
+:author: [.lead]
+:authorinitials: [
+:authors: [.lead]
+
+
+La funzionalità di disaster recovery (DR) di SnapCenter utilizza API REST per il backup del server SnapCenter. Prima di utilizzare le API REST di DR, eseguire le seguenti operazioni.
+
+*Fasi*
+
+. Creare un nuovo backup DR del server, che ripristini un server SnapCenter da un backup DR del server specificato utilizzando l'API REST del backup DR: `/4.5/disasterrecovery/server/backup`
+. Avviare il computer server secondario, ma prima di installare il server SnapCenter sul server secondario è necessario completare i prerequisiti.
++
+** Il nome host/host FQDN del server alternativo deve essere uguale al nome host del server primario, ma l'indirizzo IP può essere diverso.
+** La versione del server secondario deve essere la stessa del server primario.
+** Il SnapCenter secondario deve essere installato nella stessa posizione e sulla stessa porta del server primario.
+
+
+. Prima di attivare l'operazione di ripristino DR del server, è necessario visualizzare il percorso di destinazione o il percorso in cui vengono memorizzati i backup DR dopo il disastro.
++
+** Assicurarsi che i file di backup del DR vengano copiati nel nuovo server SnapCenter utilizzando il seguente comando:
+`xcopy <Ssource_Path> \\<Destination_Server_IP>\<Folder_Path> /O /X /E /H /K {ex : xcopy C:\DRBackup \\10.225.81.114\c$\DRBackup /O /X /E /H /K}`
+
+
+. Installare il server SnapCenter sul computer secondario.
++
+** Durante l'esecuzione dell'operazione di ripristino DR, assicurarsi che non siano in esecuzione processi relativi al server SnapCenter.
+
+
+. Installare il server SnapCenter secondario nella stessa posizione e sulla stessa porta del server primario.
++
+** Eseguire l'operazione di ripristino DR del server utilizzando l'API di ripristino DR:  `/4.5/disasterrecovery/server/restore`
++
+Se il plug-in non è in grado di risolvere il nome host del server, accedere a ciascuno degli host del plug-in e aggiungere la voce etc/host per il nuovo IP nel formato nome_server_SC_<New IP>. Ad esempio, `10.225.81.35 SCServer1`
+
++
+Le voci del server etc/host non verranno ripristinate. È possibile ripristinarlo manualmente dalla cartella di backup del DR.
+
+
+
+
+
+
+NOTE: Per un'installazione F5, l'operazione di ripristino viene eseguita come standalone; è necessario eseguire una serie di comandi per creare di nuovo F5. Vedere, collegamento: https://["Come migrare SnapCenter su un altro server"^]
+
+
+NOTE: Dopo il ripristino di DR, l'host viene aggiunto, ma è necessario installare il plug-in manualmente.
+
+
+NOTE: La pianificazione del backup del repository verrà ripristinata solo se si installa il plug-in SnapCenter per Windows e si collega il LUN NetApp alla macchina server.
+
+
+
+== API REST supportata per il disaster recovery del server SnapCenter
+
+Utilizzando le API REST, è possibile eseguire le seguenti operazioni nella pagina REST API Swagger. Per informazioni su come accedere alla pagina Swagger, vedere link:https://docs.netapp.com/us-en/snapcenter/sc-automation/task_how%20to_access_rest_apis_using_the_swagger_api_web_page.html["Come accedere alle API REST utilizzando la pagina web delle API di swagger"].
+
+*Cosa ti serve*
+
+* Accedere come utente amministratore di SnapCenter.
+* Il server SnapCenter deve essere attivo e in esecuzione per eseguire l'API di ripristino DR.
+
+
+*A proposito di questa attività*
+
+Il DR del server SnapCenter supporta tutti i plug-in.
+
+|===
+| Descrizione | API REST | Metodo HTTP 
+
+
+ a| 
+Recuperare i backup DR del server SnapCenter esistenti
+
+
+NOTE: Specificare il percorso di destinazione in cui sono memorizzati i backup di DR.
+ a| 
+`/4.5/disasterrecovery/server/backup?targetpath={path}`
+ a| 
+OTTIENI
+
+
+
+ a| 
+Creare un nuovo backup DR del server.
+ a| 
+`/4.5/disasterrecovery/server/backup`
+ a| 
+POST
+
+
+
+ a| 
+Ripristina un server SnapCenter da un backup DR del server specificato.
+ a| 
+`/4.5/disasterrecovery/server/restore`
+ a| 
+POST
+
+
+
+ a| 
+Eliminare il backup DR del server in base al nome del backup.
+ a| 
+``/4.5/disasterrecovery/server/backup``
+ a| 
+ELIMINARE
+
+
+
+ a| 
+Attivare o disattivare il DR dello storage
+ a| 
+`/4.5/disasterrecovery/storage`
+ a| 
+POST
+
+|===
+Per ulteriori informazioni, consultare https://["API di disaster recovery"^] video.

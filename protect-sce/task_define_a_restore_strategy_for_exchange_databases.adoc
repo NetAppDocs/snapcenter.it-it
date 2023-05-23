@@ -1,0 +1,73 @@
+---
+permalink: protect-sce/task_define_a_restore_strategy_for_exchange_databases.html 
+sidebar: sidebar 
+keywords:  
+summary: La definizione di una strategia di ripristino per Exchange Server consente di ripristinare correttamente il database. 
+---
+= Definire una strategia di ripristino per i database Exchange
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La definizione di una strategia di ripristino per Exchange Server consente di ripristinare correttamente il database.
+
+
+
+== Origini di un'operazione di ripristino in Exchange Server
+
+È possibile ripristinare un database Exchange Server da una copia di backup sullo storage primario.
+
+È possibile ripristinare i database solo dallo storage primario.
+
+
+
+== Tipi di operazioni di ripristino supportate per Exchange Server
+
+È possibile utilizzare SnapCenter per eseguire diversi tipi di operazioni di ripristino sulle risorse Exchange.
+
+* Ripristino up-to-the-minute
+* Ripristinare un punto precedente
+
+
+
+
+=== Ripristino fino al minuto
+
+In un'operazione di ripristino up-to-the-minute, i database vengono ripristinati fino al punto di errore. SnapCenter esegue questa operazione eseguendo la seguente sequenza:
+
+. Ripristina i database dal backup completo del database selezionato.
+. Applica tutti i log delle transazioni di cui è stato eseguito il backup, nonché tutti i nuovi log creati dopo il backup più recente.
++
+I log delle transazioni vengono spostati in avanti e applicati a qualsiasi database selezionato.
+
++
+Exchange crea una nuova catena di log al termine di un ripristino.
+
++
+|===
+
+
+| *Best practice:* si consiglia di eseguire un nuovo backup completo e di log al termine di un ripristino. 
+|===
++
+Un'operazione di ripristino aggiornata al minuto richiede un set contiguo di log delle transazioni.
+
++
+Dopo aver eseguito un ripristino up-to-the-minute, il backup utilizzato per il ripristino è disponibile solo per le operazioni di ripristino point-in-time.
+
++
+Se non è necessario mantenere una funzionalità di ripristino aggiornata al minuto per tutti i backup, è possibile configurare la conservazione del backup del log delle transazioni del sistema attraverso le policy di backup.
+
+
+
+
+
+=== Ripristinare un punto precedente
+
+In un'operazione di ripristino point-in-time, i database vengono ripristinati solo a un'ora specifica rispetto al passato. Un'operazione di ripristino point-in-time si verifica nelle seguenti situazioni di ripristino:
+
+* Il database viene ripristinato a un determinato intervallo di tempo in un log delle transazioni di cui è stato eseguito il backup.
+* Il database viene ripristinato e viene applicato solo un sottoinsieme di log delle transazioni di cui è stato eseguito il backup.
+

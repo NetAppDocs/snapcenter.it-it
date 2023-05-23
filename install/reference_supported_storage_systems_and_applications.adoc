@@ -1,0 +1,28 @@
+---
+permalink: install/reference_supported_storage_systems_and_applications.html 
+sidebar: sidebar 
+keywords: storage system, ONTAP version 
+summary: È necessario conoscere il sistema di storage, le applicazioni e i database supportati. 
+---
+= Sistemi e applicazioni storage supportati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario conoscere il sistema di storage, le applicazioni e i database supportati.
+
+* SnapCenter supporta ONTAP 8.3.0 e versioni successive per la protezione dei dati.
+* SnapCenter supporta Amazon FSX per NetApp ONTAP per proteggere i dati dalla versione della patch P1 del software SnapCenter 4.5.
++
+Se si utilizza Amazon FSX per NetApp ONTAP, assicurarsi che i plug-in host del server SnapCenter siano aggiornati alla versione 4.5 P1 o successiva per eseguire le operazioni di protezione dei dati.
+
++
+Per informazioni su Amazon FSX per NetApp ONTAP, vedere https://["Documentazione di Amazon FSX per NetApp ONTAP"^].
+
+* SnapCenter supporta la protezione di diverse applicazioni e database.
++
+Per informazioni dettagliate sulle applicazioni e i database supportati, vedere https://["Tool di matrice di interoperabilità NetApp"^].
+
+

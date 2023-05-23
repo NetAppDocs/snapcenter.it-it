@@ -1,0 +1,824 @@
+---
+permalink: concept/reference_pre_defined_snapcenter_roles_and_permissions.html 
+sidebar: sidebar 
+keywords: RBAC, role, permission, pre-defined role 
+summary: SnapCenter viene fornito con ruoli predefiniti, ciascuno con un set di autorizzazioni già attivate. Quando si imposta e si amministra il controllo degli accessi basato sui ruoli, è possibile utilizzare questi ruoli predefiniti o crearne di nuovi. 
+---
+= Ruoli e autorizzazioni SnapCenter predefiniti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter viene fornito con ruoli predefiniti, ciascuno con un set di autorizzazioni già attivate. Quando si imposta e si amministra RBAC (role-based access control), è possibile utilizzare questi ruoli predefiniti o crearne di nuovi.
+
+SnapCenter include i seguenti ruoli predefiniti:
+
+* Ruolo di amministratore di SnapCenter
+* Backup dell'app e ruolo di amministratore del clone
+* Ruolo di Backup e Clone Viewer
+* Ruolo di amministratore dell'infrastruttura
+
+
+Quando si aggiunge un utente a un ruolo, è necessario assegnare l'autorizzazione StorageConnection per abilitare la comunicazione SVM (Storage Virtual Machine) o assegnare una SVM all'utente per abilitare l'autorizzazione all'utilizzo di SVM. L'autorizzazione connessione storage consente agli utenti di creare connessioni SVM.
+
+Ad esempio, un utente con il ruolo di amministratore SnapCenter può creare connessioni SVM e assegnarle a un utente con il ruolo di backup dell'applicazione e amministratore clone, che per impostazione predefinita non dispone dell'autorizzazione per creare o modificare connessioni SVM. Senza una connessione SVM, gli utenti non possono completare alcuna operazione di backup, clonazione o ripristino.
+
+
+
+== Ruolo di amministratore di SnapCenter
+
+Il ruolo di amministratore di SnapCenter ha tutte le autorizzazioni attivate. Non è possibile modificare le autorizzazioni per questo ruolo. È possibile aggiungere utenti e gruppi al ruolo o rimuoverli.
+
+
+
+== Backup dell'app e ruolo di amministratore del clone
+
+Il ruolo App Backup and Clone Admin dispone delle autorizzazioni necessarie per eseguire azioni amministrative per i backup delle applicazioni e le attività correlate ai cloni. Questo ruolo non dispone di autorizzazioni per la gestione degli host, il provisioning, la gestione della connessione dello storage o l'installazione remota.
+
+|===
+| Permessi | Attivato | Creare | Leggi | Aggiornare | Eliminare 
+
+
+ a| 
+Gruppo di risorse
+ a| 
+Non applicabile
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Policy
+ a| 
+Non applicabile
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Backup
+ a| 
+Non applicabile
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Host
+ a| 
+Non applicabile
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Connessione storage
+ a| 
+Non applicabile
+ a| 
+No
+ a| 
+Sì
+ a| 
+No
+ a| 
+No
+
+
+
+ a| 
+Clonare
+ a| 
+Non applicabile
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Provisioning
+ a| 
+Non applicabile
+ a| 
+No
+ a| 
+Sì
+ a| 
+No
+ a| 
+No
+
+
+
+ a| 
+Dashboard
+ a| 
+Sì
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+
+
+
+ a| 
+Report
+ a| 
+Sì
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+
+
+
+ a| 
+Ripristinare
+ a| 
+Sì
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+
+
+
+ a| 
+Risorsa
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Installazione/disinstallazione del plug-in
+ a| 
+No
+ a| 
+Non applicabile
+ a| 
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+
+
+
+ a| 
+Migrazione
+ a| 
+No
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+
+
+
+ a| 
+Montare
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+
+
+
+ a| 
+Smontare
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+
+
+
+ a| 
+Ripristino completo del volume
+ a| 
+No
+ a| 
+No
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+
+
+
+ a| 
+Monitoraggio del processo
+ a| 
+Sì
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+
+|===
+
+
+== Ruolo di Backup e Clone Viewer
+
+Il ruolo Backup and Clone Viewer (Visualizzatore di backup e clonazione) dispone di una vista in sola lettura di tutte le autorizzazioni. Questo ruolo dispone anche di autorizzazioni abilitate per il rilevamento, la creazione di report e l'accesso al dashboard.
+
+|===
+| Permessi | Attivato | Creare | Leggi | Aggiornare | Eliminare 
+
+
+ a| 
+Gruppo di risorse
+ a| 
+Non applicabile
+ a| 
+No
+ a| 
+Sì
+ a| 
+No
+ a| 
+No
+
+
+
+ a| 
+Policy
+ a| 
+Non applicabile
+ a| 
+No
+ a| 
+Sì
+ a| 
+No
+ a| 
+No
+
+
+
+ a| 
+Backup
+ a| 
+Non applicabile
+ a| 
+No
+ a| 
+Sì
+ a| 
+No
+ a| 
+No
+
+
+
+ a| 
+Host
+ a| 
+Non applicabile
+ a| 
+No
+ a| 
+Sì
+ a| 
+No
+ a| 
+No
+
+
+
+ a| 
+Connessione storage
+ a| 
+Non applicabile
+ a| 
+No
+ a| 
+Sì
+ a| 
+No
+ a| 
+No
+
+
+
+ a| 
+Clonare
+ a| 
+Non applicabile
+ a| 
+No
+ a| 
+Sì
+ a| 
+No
+ a| 
+No
+
+
+
+ a| 
+Provisioning
+ a| 
+Non applicabile
+ a| 
+No
+ a| 
+Sì
+ a| 
+No
+ a| 
+No
+
+
+
+ a| 
+Dashboard
+ a| 
+Sì
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+
+
+
+ a| 
+Report
+ a| 
+Sì
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+
+
+
+ a| 
+Ripristinare
+ a| 
+No
+ a| 
+No
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+
+
+
+ a| 
+Risorsa
+ a| 
+No
+ a| 
+No
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+No
+
+
+
+ a| 
+Installazione/disinstallazione del plug-in
+ a| 
+No
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+
+
+
+ a| 
+Migrazione
+ a| 
+No
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+
+
+
+ a| 
+Montare
+ a| 
+Sì
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+
+
+
+ a| 
+Smontare
+ a| 
+Sì
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+
+
+
+ a| 
+Ripristino completo del volume
+ a| 
+No
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+
+
+
+ a| 
+Monitoraggio del processo
+ a| 
+Sì
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+
+|===
+
+
+== Ruolo di amministratore dell'infrastruttura
+
+Il ruolo Infrastructure Admin (Amministratore dell'infrastruttura) dispone di autorizzazioni abilitate per la gestione degli host, la gestione dello storage, il provisioning, i gruppi di risorse, i report di installazione remota, E l'accesso alla dashboard.
+
+|===
+| Permessi | Attivato | Creare | Leggi | Aggiornare | Eliminare 
+
+
+ a| 
+Gruppo di risorse
+ a| 
+Non applicabile
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Policy
+ a| 
+Non applicabile
+ a| 
+No
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Backup
+ a| 
+Non applicabile
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Host
+ a| 
+Non applicabile
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Connessione storage
+ a| 
+Non applicabile
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Clonare
+ a| 
+Non applicabile
+ a| 
+No
+ a| 
+Sì
+ a| 
+No
+ a| 
+No
+
+
+
+ a| 
+Provisioning
+ a| 
+Non applicabile
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Dashboard
+ a| 
+Sì
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+
+
+
+ a| 
+Report
+ a| 
+Sì
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+
+
+
+ a| 
+Ripristinare
+ a| 
+Sì
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+
+
+
+ a| 
+Risorsa
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Installazione/disinstallazione del plug-in
+ a| 
+Sì
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+
+
+
+ a| 
+Migrazione
+ a| 
+No
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+
+
+
+ a| 
+Montare
+ a| 
+No
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+
+
+
+ a| 
+Smontare
+ a| 
+No
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+
+
+
+ a| 
+Ripristino completo del volume
+ a| 
+No
+ a| 
+No
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+
+
+
+ a| 
+Monitoraggio del processo
+ a| 
+Sì
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+
+|===

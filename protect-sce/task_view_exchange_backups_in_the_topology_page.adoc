@@ -1,0 +1,64 @@
+---
+permalink: protect-sce/task_view_exchange_backups_in_the_topology_page.html 
+sidebar: sidebar 
+keywords:  
+summary: Quando si prepara il backup di una risorsa, potrebbe essere utile visualizzare una rappresentazione grafica di tutti i backup sullo storage primario e secondario. 
+---
+= Visualizzare i backup di Exchange nella pagina topologia
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando si prepara il backup di una risorsa, potrebbe essere utile visualizzare una rappresentazione grafica di tutti i backup sullo storage primario e secondario.
+
+*A proposito di questa attività*
+
+Nella pagina topologia, è possibile visualizzare tutti i backup disponibili per la risorsa o il gruppo di risorse selezionato. È possibile visualizzare i dettagli di tali backup e selezionarli per eseguire le operazioni di protezione dei dati.
+
+È possibile esaminare la seguente icona nella vista Manage Copies (Gestisci copie) per determinare se i backup sono disponibili sullo storage primario o secondario (copie Mirror o copie Vault).
+
+* image:../media/topology_primary_storage.gif["icona dello storage primario"] visualizza il numero di backup disponibili sullo storage primario.
+* image:../media/topology_mirror_secondary_storage.gif["Icona Mirror dello storage secondario"] Visualizza il numero di backup mirrorati sullo storage secondario utilizzando la tecnologia SnapMirror.
+* image:../media/topology_vault_secondary_storage.gif["icona del vault secondario"] Visualizza il numero di backup replicati sullo storage secondario utilizzando la tecnologia SnapVault.
++
+** Il numero di backup visualizzati include i backup eliminati dallo storage secondario.
++
+Ad esempio, se sono stati creati 6 backup utilizzando un criterio per conservare solo 4 backup, il numero di backup visualizzato è 6.
+
+
+
++
+|===
+
+
+| *Best practice:* per garantire che venga visualizzato il numero corretto di backup replicati, si consiglia di aggiornare la topologia. 
+|===
+
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina risorse, selezionare il database, la risorsa o il gruppo di risorse dall'elenco a discesa *Visualizza*.
+. Selezionare la risorsa dalla vista dei dettagli del database o dalla vista dei dettagli del gruppo di risorse.
++
+Se la risorsa è protetta, viene visualizzata la pagina topologia della risorsa selezionata.
+
+. Consultare la sezione Summary Card (scheda di riepilogo) per visualizzare un riepilogo del numero di backup disponibili sullo storage primario e secondario.
++
+La sezione Summary Card (scheda di riepilogo) visualizza il numero totale di backup e il numero totale di backup del registro.
+
++
+Facendo clic sul pulsante *Refresh* viene avviata una query dello storage per visualizzare un conteggio accurato.
+
+. Nella vista Manage Copies (Gestisci copie), fare clic su *Backup* dallo storage primario o secondario per visualizzare i dettagli di un backup.
++
+I dettagli dei backup vengono visualizzati in formato tabella.
+
+. Selezionare il backup dalla tabella, quindi fare clic sulle icone di protezione dei dati per eseguire operazioni di ripristino, ridenominazione ed eliminazione.
++
+
+NOTE: Non è possibile rinominare o eliminare i backup presenti nello storage secondario. L'eliminazione delle copie Snapshot viene gestita dalle impostazioni di conservazione ONTAP.
+
+

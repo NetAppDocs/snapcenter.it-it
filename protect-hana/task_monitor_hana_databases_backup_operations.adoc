@@ -1,0 +1,50 @@
+---
+permalink: protect-hana/task_monitor_hana_databases_backup_operations.html 
+sidebar: sidebar 
+keywords: SnapCenter Server 
+summary: 'È possibile monitorare l"avanzamento di diverse operazioni di backup utilizzando la pagina lavori SnapCenter. Potrebbe essere necessario controllare i progressi per determinare quando sono stati completati o se si è verificato un problema.' 
+---
+= Monitorare le operazioni di backup dei database SAP HANA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile monitorare l'avanzamento di diverse operazioni di backup utilizzando la pagina SnapCenterJobs. Potrebbe essere necessario controllare i progressi per determinare quando sono stati completati o se si è verificato un problema.
+
+*A proposito di questa attività*
+
+Nella pagina lavori vengono visualizzate le seguenti icone che indicano lo stato corrispondente delle operazioni:
+
+* image:../media/progress_icon.gif["Icona in corso"] In corso
+* image:../media/success_icon.gif["Completato"] Completato correttamente
+* image:../media/failed_icon.gif["Icona failed (guasto)"] Non riuscito
+* image:../media/warning_icon.gif["Completato con l'icona delle avvertenze"] Completato con avvisi o impossibile avviarlo a causa di avvisi
+* image:../media/verification_job_in_queue.gif["Processo di verifica in coda"] In coda
+* image:../media/cancel_icon.gif[""] Annullato
+
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *Monitor*.
+. Nella pagina Monitor, fare clic su *Jobs*.
+. Nella pagina lavori, attenersi alla seguente procedura:
++
+.. Fare clic su image:../media/filter_icon.gif[""] filtrare l'elenco in modo che vengano elencate solo le operazioni di backup.
+.. Specificare le date di inizio e di fine.
+.. Dall'elenco a discesa *tipo*, selezionare *Backup*.
+.. Dal menu a discesa *Status* (Stato), selezionare lo stato del backup.
+.. Fare clic su *Apply* (Applica) per visualizzare le operazioni completate correttamente.
+
+
+. Selezionare un processo di backup, quindi fare clic su *Dettagli* per visualizzare i dettagli del processo.
++
+
+NOTE: Sebbene venga visualizzato lo stato del processo di backupimage:../media/success_icon.gif["Completato"], facendo clic sui dettagli del lavoro, è possibile che alcune delle attività secondarie dell'operazione di backup siano ancora in corso o contrassegnate da segnali di avviso.
+
+. Nella pagina Job Details (Dettagli processo), fare clic su *View logs* (Visualizza registri).
++
+Il pulsante *View logs* (Visualizza registri) visualizza i registri dettagliati per l'operazione selezionata.
+
+

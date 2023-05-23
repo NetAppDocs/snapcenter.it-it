@@ -1,0 +1,114 @@
+---
+permalink: protect-scw/task_back_up_resources_using_powershell_cmdlets_for_windows.html 
+sidebar: sidebar 
+keywords: backup 
+summary: 'È possibile utilizzare i cmdlet PowerShell per eseguire il backup dei database SQL Server o dei file system Windows. Il backup di un database o di un file system di SQL Server include la connessione con il server SnapCenter, il rilevamento delle istanze o dei file system di SQL Server, l"aggiunta di un criterio, la creazione di un gruppo di risorse di backup, il backup e la verifica del backup.' 
+---
+= Eseguire il backup delle risorse utilizzando i cmdlet PowerShell
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare i cmdlet PowerShell per eseguire il backup dei database SQL Server o dei file system Windows. Il backup di un database o di un file system di SQL Server include la connessione con il server SnapCenter, il rilevamento delle istanze o dei file system di SQL Server, l'aggiunta di un criterio, la creazione di un gruppo di risorse di backup, il backup e la verifica del backup.
+
+*Cosa ti serve*
+
+* È necessario aver preparato l'ambiente PowerShell per eseguire i cmdlet PowerShell.
+* È necessario aver aggiunto la connessione al sistema di storage e creato una credenziale.
+* È necessario aggiungere host e rilevare risorse.
+
+
+*Fasi*
+
+. Avviare una sessione di connessione con il server SnapCenter per un utente specifico utilizzando il cmdlet Open-SmConnection.
++
+[listing]
+----
+Open-smconnection  -SMSbaseurl  https://snapctr.demo.netapp.com:8146
+----
++
+Viene visualizzato il prompt di nome utente e password.
+
+. Creare un criterio di backup utilizzando il cmdlet Add-SmPolicy.
++
+In questo esempio viene creata una nuova policy di backup con un tipo di backup completo SQL:
+
++
+[listing]
+----
+PS C:\> Add-SmPolicy -PolicyName TESTPolicy
+-PluginPolicyType SCSQL -PolicyType Backup
+-SqlBackupType FullBackup -Verbose
+----
++
+Questo esempio crea una nuova policy di backup con un tipo di backup del file system Windows di CrashConsistent:
+
++
+[listing]
+----
+PS C:\> Add-SmPolicy -PolicyName FileSystemBackupPolicy
+-PluginPolicyType SCW -PolicyType Backup
+-ScwBackupType CrashConsistent -Verbose
+----
+. Individuare le risorse host utilizzando il cmdlet Get-SmResources.
++
+In questo esempio vengono illustrate le risorse per il plug-in Microsoft SQL sull'host specificato:
+
++
+[listing]
+----
+C:\PS>PS C:\> Get-SmResources -HostName vise-f6.sddev.mycompany.com
+-PluginCode SCSQL
+----
++
+In questo esempio vengono illustrate le risorse per i file system Windows sull'host specificato:
+
++
+[listing]
+----
+C:\PS>PS C:\> Get-SmResources -HostName vise2-f6.sddev.mycompany.com
+-PluginCode SCW
+----
+. Aggiungere un nuovo gruppo di risorse a SnapCenter utilizzando il cmdlet Add-SmResourceGroup.
++
+Questo esempio crea un nuovo gruppo di risorse di backup del database SQL con i criteri e le risorse specificati:
+
++
+[listing]
+----
+PS C:\> Add-SmResourceGroup -ResourceGroupName AccountingResource
+-Resources @{"Host"="visef6.org.com";
+"Type"="SQL Database";"Names"="vise-f6\PayrollDatabase"}
+-Policies "BackupPolicy"
+----
++
+Questo esempio crea un nuovo gruppo di risorse di backup del file system Windows con i criteri e le risorse specificati:
+
++
+[listing]
+----
+PS C:\> Add-SmResourceGroup -ResourceGroupName EngineeringResource
+-PluginCode SCW -Resources @{"Host"="WIN-VOK20IKID5I";
+"Type"="Windows Filesystem";"Names"="E:\"}
+-Policies "EngineeringBackupPolicy"
+----
+. Avviare un nuovo processo di backup utilizzando il cmdlet New-SmBackup.
++
+[listing]
+----
+PS C:> New-SmBackup -ResourceGroupName PayrollDataset -Policy FinancePolicy
+----
+. Visualizzare lo stato del processo di backup utilizzando il cmdlet Get-SmBackupReport.
++
+Questo esempio visualizza un report di riepilogo di tutti i lavori eseguiti alla data specificata:
+
++
+[listing]
+----
+PS C:\> Get-SmJobSummaryReport -Date '1/27/2016'
+----
+
+
+Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento alla https://["Guida di riferimento al cmdlet del software SnapCenter"^].

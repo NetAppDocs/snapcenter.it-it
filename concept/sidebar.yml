@@ -1,0 +1,24 @@
+---
+section: concept
+title: Concetti
+entries:
+- title: Panoramica di SnapCenter
+  url: "/concept/concept_snapcenter_overview.html"
+- title: Funzionalità di sicurezza
+  url: "/concept/reference_data_security.html"
+- title: RBAC (Role-Based Access Control) di SnapCenter
+  entries:
+  - title: Tipi di RBAC
+    url: "/concept/concept_types_of_role_based_access_control_in_snapcenter.html"
+  - title: Autorizzazioni e ruoli RBAC
+    url: "/concept/reference_role_based_access_control_permissions_and_roles.html"
+  - title: Ruoli e autorizzazioni SnapCenter predefiniti
+    url: "/concept/reference_pre_defined_snapcenter_roles_and_permissions.html"
+- title: Disaster recovery
+  url: "/concept/concept_disaster_recovery.html"
+- title: Risorse, gruppi di risorse e policy
+  url: "/concept/concept_resources_resource_groups_and_policies.html"
+- title: Prescrizioni e post-script
+  url: "/concept/concept_prescripts_and_postscripts.html"
+- title: Automazione SnapCenter con API REST
+  url: "/concept/concept_snapcenter_rest_apis.html"

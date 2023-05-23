@@ -1,0 +1,39 @@
+---
+permalink: protect-hana/task_get_the_CA_certificate_thumbprint.html 
+sidebar: sidebar 
+keywords: SnapCenter 
+summary: Ottenere il thumbprint del certificato CA. 
+---
+= Ottenere il thumbprint del certificato CA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un'identificazione personale del certificato è una stringa esadecimale che identifica un certificato. Un'identificazione personale viene calcolata dal contenuto del certificato utilizzando un algoritmo di identificazione personale.
+
+*Fasi*
+
+. Eseguire le seguenti operazioni sulla GUI:
++
+.. Fare doppio clic sul certificato.
+.. Nella finestra di dialogo certificato, fare clic sulla scheda *Dettagli*.
+.. Scorrere l'elenco dei campi e fare clic su *Thumbprint*.
+.. Copiare i caratteri esadecimali dalla casella.
+.. Rimuovere gli spazi tra i numeri esadecimali.
++
+Ad esempio, se la stampa personale è: "a9 09 50 2d d8 2a e4 14 33 e6 f8 38 86 b0 0d 42 77 a3 2a 7b", dopo aver rimosso gli spazi, sarà: "A909502ddd82ae41433e6f83886b00d4277a32a7b".
+
+
+
+. Eseguire le seguenti operazioni da PowerShell:
++
+.. Eseguire il comando seguente per elencare l'identificazione del certificato installato e identificare il certificato installato di recente in base al nome del soggetto.
++
+_Get-ChildItem -Path Certate: LocalMachine/My_
+
+.. Copiare la stampa personale.
+
+
+

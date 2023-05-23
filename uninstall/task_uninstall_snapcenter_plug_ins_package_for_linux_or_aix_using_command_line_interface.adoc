@@ -1,0 +1,24 @@
+---
+permalink: uninstall/task_uninstall_snapcenter_plug_ins_package_for_linux_or_aix_using_command_line_interface.html 
+sidebar: sidebar 
+keywords: uninstall plug-ins, linux, aix, command-line interface, cli 
+summary: 'È possibile disinstallare il pacchetto di plug-in SnapCenter per Linux o il pacchetto di plug-in SnapCenter per AIX utilizzando l"interfaccia della riga di comando.' 
+---
+= Disinstallare il pacchetto plug-in per Linux o AIX utilizzando CLI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile disinstallare il pacchetto di plug-in SnapCenter per Linux o il pacchetto di plug-in SnapCenter per AIX utilizzando l'interfaccia della riga di comando.
+
+*Cosa ti serve*
+
+* Assicurarsi di aver eliminato i processi pianificati
+* Assicurarsi che tutti i lavori in esecuzione siano stati completati.
+
+
+*Passo*
+
+Eseguire _/custom_location/NetApp/snapcenter/spl/installation/plugins/uninstall_ per disinstallare.

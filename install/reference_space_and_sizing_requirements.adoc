@@ -1,0 +1,80 @@
+---
+permalink: install/reference_space_and_sizing_requirements.html 
+sidebar: sidebar 
+keywords: SnapCenter 
+summary: Prima di installare il server SnapCenter, è necessario conoscere i requisiti di spazio e dimensionamento. È inoltre necessario applicare gli aggiornamenti di sicurezza e di sistema disponibili. 
+---
+= Requisiti di spazio e dimensionamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di installare il server SnapCenter, è necessario conoscere i requisiti di spazio e dimensionamento. È inoltre necessario applicare gli aggiornamenti di sicurezza e di sistema disponibili.
+
+|===
+| Elemento | Requisiti 
+
+
+ a| 
+Sistemi operativi
+ a| 
+Microsoft Windows
+
+Sono supportate solo le versioni in inglese, tedesco, giapponese e cinese semplificato dei sistemi operativi.
+
+Per informazioni aggiornate sulle versioni supportate, vedere https://["Tool di matrice di interoperabilità NetApp"^].
+
+
+
+ a| 
+Numero minimo di CPU
+ a| 
+4 core
+
+
+
+ a| 
+RAM minima
+ a| 
+8 GB
+
+
+NOTE: Il pool di buffer di MySQL Server utilizza il 20% della RAM totale.
+
+
+
+ a| 
+Spazio minimo su disco rigido per il software e i registri del server SnapCenter
+ a| 
+4 GB
+
+
+NOTE: Se il repository SnapCenter si trova nello stesso disco in cui è installato il server SnapCenter, si consiglia di utilizzare 10 GB.
+
+
+
+ a| 
+Spazio minimo su disco rigido per il repository SnapCenter
+ a| 
+6 GB
+
+
+NOTE: NOTA: Se il server SnapCenter si trova nello stesso disco in cui è installato il repository SnapCenter, si consiglia di utilizzare 10 GB.
+
+
+
+ a| 
+Pacchetti software richiesti
+ a| 
+* Microsoft .NET Framework 4.7.2 o versione successiva
+* Windows Management Framework (WMF) 4.0 o versione successiva
+* PowerShell 4.0 o versione successiva
+
+
+Per informazioni specifiche sulla risoluzione dei problemi di .NET, vedere https://["L'aggiornamento o l'installazione di SnapCenter non riesce per i sistemi legacy che non dispongono di connettività Internet"^].
+
+Per informazioni aggiornate sulle versioni supportate, vedere https://["Tool di matrice di interoperabilità NetApp"^].
+
+|===

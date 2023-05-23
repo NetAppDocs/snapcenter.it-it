@@ -1,0 +1,101 @@
+---
+permalink: admin/concept_manage_the_storage_system.html 
+sidebar: sidebar 
+keywords:  
+summary: Dopo aver aggiunto il sistema di storage, è possibile modificare la configurazione e le connessioni del sistema di storage o eliminarlo. 
+---
+= Gestire il sistema storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver aggiunto il sistema di storage, è possibile modificare la configurazione e le connessioni del sistema di storage o eliminarlo.
+
+
+
+== Modificare la configurazione del sistema storage
+
+È possibile utilizzare SnapCenter per modificare la configurazione del sistema di storage se si desidera modificare il nome utente, la password, la piattaforma, la porta, il protocollo, Periodo di timeout, indirizzo IP preferito o opzioni di messaggistica.
+
+*A proposito di questa attività*
+
+È possibile modificare le connessioni di storage per un singolo utente o per un gruppo. Se si appartiene a uno o più gruppi con autorizzazione per lo stesso sistema di storage, il nome della connessione di storage viene visualizzato più volte nell'elenco delle connessioni di storage, una volta per ogni gruppo con autorizzazione per il sistema di storage.
+
+*Fasi*
+
+. Nel riquadro di navigazione a sinistra, fare clic su *Storage Systems*.
+. Nella pagina Storage Systems (sistemi storage), dal menu a discesa *Type* (tipo), eseguire una delle seguenti operazioni:
++
+|===
+| Selezionare... | Fasi... 
+
+
+ a| 
+SVM ONTAP
+ a| 
+Per visualizzare tutte le macchine virtuali di storage (SVM) aggiunte e modificare la configurazione SVM richiesta.
+
+.. Nella pagina Storage Connections (connessioni storage), fare clic sul nome SVM appropriato.
+.. Eseguire una delle seguenti operazioni:
++
+*** Se la SVM non fa parte di alcun cluster, nella pagina Modifica sistema di storage, modificare le configurazioni come nome utente, password, impostazioni EMS e AutoSupport, piattaforma, protocollo, porta, timeout, E IP preferito.
+*** Se la SVM fa parte di un cluster, nella pagina Modifica sistema storage, selezionare *Gestisci SVM in modo indipendente* e modificare le configurazioni come nome utente, password, impostazioni EMS e AutoSupport, piattaforma, protocollo, porta, timeout, E IP preferito.
++
+Dopo aver modificato la SVM in modo da gestirla in modo indipendente, se si decide di gestirla attraverso il cluster, eliminare la SVM e fare clic su *riscopri*. La SVM verrà aggiunta al cluster ONTAP.
+
++
+
+NOTE: Quando una password del sistema di storage viene aggiornata sull'interfaccia grafica di SnapCenter, è necessario riavviare i servizi SMCore del rispettivo plug-in o dell'host del server perché la password aggiornata non si riflette in SMCore e i processi di backup non vengono eseguiti correttamente con un errore di credenziale errato.
+
+
+
+
+
+
+
+ a| 
+Cluster ONTAP
+ a| 
+Per visualizzare tutti i cluster aggiunti e modificare la configurazione del cluster richiesta.
+
+.. Nella pagina Storage Connections (connessioni storage), fare clic sul nome del cluster.
+.. Nella pagina Modify Storage System (Modifica sistema storage), fare clic sull'icona di modifica accanto a Username (Nome utente) e modificare il nome utente e la password.
+.. Selezionare o deselezionare le impostazioni EMS e AutoSupport.
+.. Fare clic su *altre opzioni* e modificare altre configurazioni come piattaforma, protocollo, porta, timeout e IP preferito.
+
+
+|===
+. Fare clic su *Invia*.
+
+
+
+
+== Eliminare il sistema di storage
+
+È possibile utilizzare SnapCenter per eliminare qualsiasi sistema di storage inutilizzato.
+
+*A proposito di questa attività*
+
+È possibile eliminare le connessioni di storage per un singolo utente o per un gruppo. Se si appartiene a uno o più gruppi con autorizzazione per lo stesso sistema di storage, il nome del sistema di storage viene visualizzato più volte nell'elenco delle connessioni di storage, una volta per ogni gruppo con autorizzazione per il sistema di storage.
+
+
+IMPORTANT: Quando si elimina un sistema di storage, tutte le operazioni eseguite su tale sistema di storage avranno esito negativo.
+
+*Fasi*
+
+. Nel riquadro di navigazione a sinistra, fare clic su *Storage Systems*.
+. Nella pagina sistemi storage, dal menu a discesa *tipo*, selezionare *SVM ONTAP* o *Clusters ONTAP*.
+. Nella pagina Storage Connections (connessioni storage), selezionare la casella di controllo accanto a SVM o il cluster che si desidera eliminare.
++
+
+NOTE: Non è possibile selezionare la SVM che fa parte di un cluster.
+
+. Fare clic su *Delete* (Elimina).
+. Nella pagina Delete Storage System Connection Settings (Elimina impostazioni di connessione del sistema di storage), fare clic su *OK*.
++
+
+NOTE: Se una SVM viene eliminata dal cluster ONTAP utilizzando l'interfaccia grafica di ONTAP, nella GUI di SnapCenter fare clic su *riscopri* per aggiornare l'elenco SVM.
+
+

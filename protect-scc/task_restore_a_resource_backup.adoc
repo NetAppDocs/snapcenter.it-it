@@ -1,0 +1,101 @@
+---
+permalink: protect-scc/task_restore_a_resource_backup.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile utilizzare SnapCenter per ripristinare le risorse. Le funzionalità delle operazioni di ripristino dipendono dal plug-in utilizzato. 
+---
+= Ripristinare un backup delle risorse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare SnapCenter per ripristinare le risorse. Le funzionalità delle operazioni di ripristino dipendono dal plug-in utilizzato.
+
+*Cosa ti serve*
+
+* È necessario aver eseguito il backup delle risorse o dei gruppi di risorse.
+* L'amministratore di SnapCenter deve aver assegnato all'utente le macchine virtuali di storage (SVM) per i volumi di origine e di destinazione se si stanno replicando le copie Snapshot in un mirror o vault.
+* È necessario annullare qualsiasi operazione di backup attualmente in corso per la risorsa o il gruppo di risorse che si desidera ripristinare.
+
+
+*A proposito di questa attività*
+
+L'operazione di ripristino predefinita ripristina solo gli oggetti di storage. Le operazioni di ripristino a livello di applicazione possono essere eseguite solo se il plug-in personalizzato fornisce tale funzionalità.
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina risorse, filtrare le risorse dall'elenco a discesa *Visualizza* in base al tipo di risorsa.
++
+Le risorse vengono visualizzate insieme a informazioni quali tipo, nome host o cluster, criteri e gruppi di risorse associati e stato.
+
++
+
+NOTE: Anche se un backup potrebbe essere per un gruppo di risorse, quando si esegue il ripristino, è necessario selezionare le singole risorse da ripristinare.
+
++
+Se la risorsa non è protetta, nella colonna *Stato generale* viene visualizzato _non protetto_.
+
++
+Lo stato _non protetto_ nella colonna *Stato generale* può indicare che la risorsa non è protetta o che il backup della risorsa è stato eseguito da un altro utente.
+
+. Selezionare la risorsa o un gruppo di risorse, quindi selezionare una risorsa in tale gruppo.
++
+Viene visualizzata la pagina della topologia delle risorse.
+
+. Dalla vista *Gestisci copie*, selezionare *backup* dai sistemi di storage primario o secondario (mirrorati o vault).
+. Nella tabella Primary backup(s) (Backup primari), selezionare il backup da cui si desidera ripristinare, quindi fare clic su image:../media/restore_icon.gif["icona restore (ripristina)"].
++
+image::../media/restoring_resource.gif[ripristino delle risorse]
+
+. Nella pagina Restore Scope (ambito ripristino), selezionare *complete Resource* (completa risorsa) o *file Level* (livello file).
++
+.. Se si seleziona *completa risorsa*, il backup delle risorse viene ripristinato.
++
+Se la risorsa contiene volumi o qtree come Storage Footprint, le copie Snapshot più recenti su tali volumi o qtree vengono eliminate e non possono essere ripristinate. Inoltre, se un'altra risorsa è ospitata sugli stessi volumi o qtree, anche tale risorsa viene eliminata.
+
+.. Se è stato selezionato *file Level*, è possibile selezionare *All* (tutto) oppure selezionare Volumes (volumi) o qtree (qtree), quindi immettere il percorso relativo ai volumi o alle qtree selezionati separati da virgole.
++
+*** È possibile selezionare più volumi e qtree.
+*** Se il tipo di risorsa è LUN, viene ripristinato l'intero LUN. È possibile selezionare più LUN. + NOTA: Se si seleziona *All*, vengono ripristinati tutti i file presenti nei volumi, nei qtree o nei LUN.
+
+
+
+
+. Nella pagina Recovery Type (tipo di ripristino), attenersi alla seguente procedura: Selezionare l'opzione per applicare i registri. Assicurarsi che il plug-in supporti tutti i log e i log fino al tipo di ripristino prima di selezionarlo.
++
+|===
+| Se si desidera... | Eseguire questa operazione... 
+
+
+ a| 
+Ripristinare tutti i log
+ a| 
+Selezionare *tutti i log*. Assicurarsi che il plug-in supporti *tutti i log*.
+
+
+
+ a| 
+Ripristinare tutti i log fino all'ora specificata
+ a| 
+Selezionare *Logs until*. Assicurarsi che il plug-in supporti *Logs until*.
+
+
+
+ a| 
+Ripristinare il backup delle risorse
+ a| 
+Selezionare *Nessuno*.
+
+|===
+. Nella pagina Pre Ops (operazioni preliminari), immettere i comandi di pre-ripristino e disinstallazione da eseguire prima di eseguire un processo di ripristino.
+. Nella pagina Post Ops (operazioni post), immettere i comandi di montaggio e post ripristino da eseguire dopo l'esecuzione di un processo di ripristino.
+. Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
++
+È inoltre necessario specificare gli indirizzi e-mail del mittente e del destinatario e l'oggetto dell'e-mail. SMTP deve essere configurato anche nella pagina *Impostazioni* > *Impostazioni globali*.
+
+. Esaminare il riepilogo, quindi fare clic su *fine*.
+. Monitorare l'avanzamento dell'operazione facendo clic su *Monitor* > *Jobs*.
+

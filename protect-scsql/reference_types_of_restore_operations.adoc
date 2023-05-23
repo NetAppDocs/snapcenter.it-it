@@ -1,0 +1,87 @@
+---
+permalink: protect-scsql/reference_types_of_restore_operations.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SQL Server 
+summary: È possibile utilizzare SnapCenter per eseguire diversi tipi di operazioni di ripristino sulle risorse di SQL Server. 
+---
+= Tipi di operazioni di ripristino
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare SnapCenter per eseguire diversi tipi di operazioni di ripristino sulle risorse di SQL Server.
+
+* Ripristino up-to-the-minute
+* Ripristinare un punto precedente
+
+
+È possibile eseguire il ripristino fino al minuto o fino a un punto precedente nelle seguenti situazioni:
+
+* Ripristino dallo storage secondario SnapMirror o SnapVault
+* Ripristina su percorso alternativo (posizione)
+
+
+
+NOTE: SnapCenter non supporta SnapRestore basato su volume.
+
+
+
+== Ripristino fino al minuto
+
+In un'operazione di ripristino up-to-the-minute (selezionata per impostazione predefinita), i database vengono ripristinati fino al punto di errore. SnapCenter esegue questa operazione eseguendo la seguente sequenza:
+
+. Esegue il backup dell'ultimo log delle transazioni attivo prima di ripristinare il database.
+. Ripristina i database dal backup completo del database selezionato.
+. Applica tutti i log delle transazioni che non sono stati impegnati nei database (inclusi i log delle transazioni dei backup dal momento in cui è stato creato il backup fino all'ora più recente).
++
+I log delle transazioni vengono spostati in avanti e applicati a qualsiasi database selezionato.
+
+
+
+Un'operazione di ripristino aggiornata al minuto richiede un set contiguo di log delle transazioni.
+
+Poiché SnapCenter non è in grado di ripristinare i log delle transazioni del database SQL Server dai file di backup per la distribuzione dei log (la distribuzione dei log consente di inviare automaticamente i backup del log delle transazioni da un database primario su un'istanza del server primario a uno o più database secondari su istanze del server secondario separate), non è possibile eseguire un'operazione di ripristino aggiornata al minuto dai backup del log delle transazioni. Per questo motivo, è necessario utilizzare SnapCenter per eseguire il backup dei file di log delle transazioni del database SQL Server.
+
+Se non è necessario mantenere una funzionalità di ripristino aggiornata al minuto per tutti i backup, è possibile configurare la conservazione del backup del log delle transazioni del sistema attraverso le policy di backup.
+
+
+
+== Esempio di un'operazione di ripristino aggiornata al minuto
+
+Si supponga di eseguire il backup di SQL Server ogni giorno alle 12:00 e mercoledì alle 16:00 è necessario eseguire il ripristino da un backup. Per qualche motivo, la verifica del backup da mercoledì a mezzogiorno non è riuscita, quindi si decide di eseguire il ripristino dal backup di martedì a mezzogiorno. In seguito, se il backup viene ripristinato, tutti i log delle transazioni vengono spostati in avanti e applicati ai database ripristinati, a partire da quelli non impegnati al momento della creazione del backup di martedì e proseguendo con l'ultimo log delle transazioni scritto mercoledì alle 16:00 (se è stato eseguito il backup dei log delle transazioni).
+
+
+
+== Ripristinare un punto precedente
+
+In un'operazione di ripristino point-in-time, i database vengono ripristinati solo a un'ora specifica rispetto al passato. Un'operazione di ripristino point-in-time si verifica nelle seguenti situazioni di ripristino:
+
+* Il database viene ripristinato a un determinato intervallo di tempo in un log delle transazioni di cui è stato eseguito il backup.
+* Il database viene ripristinato e viene applicato solo un sottoinsieme di log delle transazioni di cui è stato eseguito il backup.
+
+
+
+NOTE: Il ripristino di un database a un punto nel tempo determina un nuovo percorso di ripristino.
+
+La seguente immagine illustra i problemi che si verificano quando viene eseguita un'operazione di ripristino point-in-time:
+
+image::../media/point_in_time_recovery_path.gif[Ripristino a un punto in tempo precedente]
+
+Nell'immagine, il percorso di ripristino 1 è costituito da un backup completo seguito da diversi backup del log delle transazioni. Il database viene ripristinato a un punto temporale. I nuovi backup del log delle transazioni vengono creati dopo l'operazione di ripristino point-in-time, che determina il percorso di ripristino 2. I nuovi backup del log delle transazioni vengono creati senza creare un nuovo backup completo. A causa della corruzione dei dati o di altri problemi, non è possibile ripristinare il database corrente fino a quando non viene creato un nuovo backup completo. Inoltre, non è possibile applicare i log delle transazioni creati nel percorso di ripristino 2 al backup completo appartenente al percorso di ripristino 1.
+
+Se si applicano i backup del log delle transazioni, è anche possibile specificare una data e un'ora particolari in cui si desidera interrompere l'applicazione delle transazioni di cui è stato eseguito il backup. A tale scopo, si specifica una data e un'ora all'interno dell'intervallo disponibile e il SnapCenter rimuove tutte le transazioni che non sono state impegnate prima di quel momento. È possibile utilizzare questo metodo per ripristinare i database a un punto temporale prima che si verificasse un danneggiamento o per eseguire il ripristino da un database accidentale o dall'eliminazione di una tabella.
+
+
+
+== Esempio di un'operazione di ripristino point-in-time
+
+Si supponga di eseguire backup completi del database una volta a mezzanotte e un backup del log delle transazioni ogni ora. Il database si blocca alle 9:45, ma si continua a eseguire il backup dei registri delle transazioni del database guasto. È possibile scegliere tra i seguenti scenari di ripristino point-in-time:
+
+* Ripristinare il backup completo del database eseguito a mezzanotte e accettare la perdita delle modifiche apportate successivamente. (Opzione: Nessuna)
+* Ripristinare il backup completo del database e applicare tutti i backup del log delle transazioni fino alle 9:45 (Opzione: Log until)
+* Ripristinare il backup completo del database e applicare i backup del log delle transazioni, specificando l'ora in cui si desidera che le transazioni vengano ripristinate dall'ultimo set di backup del log delle transazioni. (Opzione: In base all'ora specifica)
+
+
+In questo caso, è necessario calcolare la data e l'ora in cui è stato segnalato un determinato errore. Tutte le transazioni che non sono state impegnate prima della data e dell'ora specificate vengono rimosse.

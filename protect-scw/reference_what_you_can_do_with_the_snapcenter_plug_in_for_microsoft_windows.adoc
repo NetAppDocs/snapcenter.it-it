@@ -1,0 +1,25 @@
+---
+permalink: protect-scw/reference_what_you_can_do_with_the_snapcenter_plug_in_for_microsoft_windows.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Una volta installato il plug-in per Windows nell"ambiente, è possibile utilizzare SnapCenter per eseguire il backup, il ripristino e la clonazione dei file system Windows. È inoltre possibile eseguire attività a supporto di tali operazioni.' 
+---
+= Operazioni che è possibile eseguire con il plug-in SnapCenter per Microsoft Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una volta installato il plug-in per Windows nell'ambiente, è possibile utilizzare SnapCenter per eseguire il backup, il ripristino e la clonazione dei file system Windows. È inoltre possibile eseguire attività a supporto di tali operazioni.
+
+* Scopri le risorse
+* Eseguire il backup dei file system Windows
+* Pianificare le operazioni di backup
+* Ripristinare i backup del file system
+* Clonare i backup del file system
+* Monitorare le operazioni di backup, ripristino e clonazione
+
+
+
+NOTE: Il plug-in per Windows non supporta il backup e il ripristino dei file system sulle condivisioni SMB.

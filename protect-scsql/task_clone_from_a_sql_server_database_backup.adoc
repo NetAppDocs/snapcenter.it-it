@@ -1,0 +1,173 @@
+---
+permalink: protect-scsql/task_clone_from_a_sql_server_database_backup.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile utilizzare SnapCenter per clonare un backup del database SQL Server. Se si desidera accedere o ripristinare una versione precedente dei dati, è possibile clonare i backup del database su richiesta. 
+---
+= Clonare da un backup di database SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare SnapCenter per clonare un backup del database SQL Server. Se si desidera accedere o ripristinare una versione precedente dei dati, è possibile clonare i backup del database su richiesta.
+
+*Cosa ti serve*
+
+* Dovresti aver preparato per la protezione dei dati completando attività come l'aggiunta di host, l'identificazione delle risorse e la creazione di connessioni al sistema di storage.
+* Si dovrebbe aver eseguito il backup di database o gruppi di risorse.
+* Il tipo di protezione, ad esempio mirror, vault o mirror-vault per LUN di dati e LUN di log, deve essere lo stesso per rilevare i locatori secondari durante la clonazione a un host alternativo utilizzando i backup di log.
+* Se il disco clone montato non viene trovato durante un'operazione di clonazione SnapCenter, modificare il parametro CloneRetryTimeout del server SnapCenter in 300.
+* Assicurarsi che gli aggregati che ospitano i volumi siano inclusi nell'elenco degli aggregati assegnati della macchina virtuale di storage (SVM).
+
+
+*A proposito di questa attività*
+
+* Durante la clonazione in un'istanza di database standalone, assicurarsi che il percorso del punto di montaggio esista e che si tratti di un disco dedicato.
+* Durante la clonazione in un'istanza del cluster di failover (FCI), assicurarsi che i punti di montaggio esistano, che si tratti di un disco condiviso e che il percorso e l'FCI appartengano allo stesso gruppo di risorse SQL.
+* Assicurarsi che a ciascun host sia collegato un solo iniziatore VFC o FC. Questo perché SnapCenter supporta un solo iniziatore per host.
+* Se il database di origine o l'istanza di destinazione si trova su un volume condiviso del cluster (csv), il database clonato si trova nel file csv.
+* IL PERCORSO_SCRIPT viene definito utilizzando la chiave PredesedWindowsScriptsDirectory situata nel file SMCoreServiceHost.exe.Config dell'host del plug-in.
++
+Se necessario, è possibile modificare questo percorso e riavviare il servizio SMcore. Si consiglia di utilizzare il percorso predefinito per la protezione.
+
++
+Il valore della chiave può essere visualizzato da swagger attraverso l'API: API /4.7/configsettings
+
++
+È possibile utilizzare L'API GET per visualizzare il valore della chiave. L'API SET non è supportata.
+
+
+
+
+NOTE: Per gli ambienti virtuali (VMDK/RDM), assicurarsi che il punto di montaggio sia un disco dedicato.
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare *plug-in SnapCenter per SQL Server* dall'elenco.
+. Nella pagina Resources (risorse), selezionare *Database* o *Resource Group* dall'elenco *View* (Visualizza).
++
+
+NOTE: La clonazione di un backup di un'istanza non è supportata.
+
+
+
+*Fasi*
+
+. Selezionare il database o il gruppo di risorse.
+. Dalla pagina di visualizzazione Gestisci copie, selezionare il backup dal sistema di storage primario o secondario (mirrorato o vault).
+. Selezionare il backup, quindi fare clic su *image:../media/clone_icon.gif[""]*.
+. Nella pagina Clone Options (Opzioni clone), eseguire le seguenti operazioni:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Server clone
+ a| 
+Scegliere un host su cui creare il clone.
+
+
+
+ a| 
+Clonare l'istanza
+ a| 
+Scegliere un'istanza di clone in cui clonare il backup del database.
+
+Questa istanza SQL deve trovarsi nel server clone specificato.
+
+
+
+ a| 
+Suffisso clone
+ a| 
+Inserire un suffisso che verrà aggiunto al nome del file clone per identificare che il database è un clone.
+
+Ad esempio, _db1_clone_. Se si esegue la clonazione nella stessa posizione del database originale, è necessario fornire un suffisso per differenziare il database clonato dal database originale. In caso contrario, l'operazione non riesce.
+
+
+
+ a| 
+Assegnazione automatica del punto di montaggio o assegnazione automatica del punto di montaggio del volume sotto il percorso
+ a| 
+Scegliere se assegnare automaticamente un punto di montaggio o un punto di montaggio del volume sotto un percorso.
+
+Auto assign volume mount point under path (assegnazione automatica del punto di montaggio del volume sotto il percorso): Il punto di montaggio sotto un percorso consente di fornire una directory specifica. I punti di montaggio verranno creati all'interno di tale directory. Prima di scegliere questa opzione, assicurarsi che la directory sia vuota. Se nella directory è presente un database, il database si trova in uno stato non valido dopo l'operazione di montaggio.
+
+|===
+. Nella pagina registri, selezionare una delle seguenti opzioni:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Nessuno
+ a| 
+Scegliere questa opzione se si desidera clonare solo il backup completo senza alcun log.
+
+
+
+ a| 
+Tutti i backup dei log
+ a| 
+Scegliere questa opzione per clonare tutti i backup del registro disponibili datati dopo il backup completo.
+
+
+
+ a| 
+In base ai backup dei log fino a.
+ a| 
+Scegliere questa opzione per clonare il database in base ai registri di backup creati fino al log di backup con la data selezionata.
+
+
+
+ a| 
+Per data specifica fino al
+ a| 
+Specificare la data e l'ora dopo le quali i log delle transazioni non vengono applicati al database clonato.
+
+Questo clone point-in-time interrompe il clone delle voci del log delle transazioni registrate dopo la data e l'ora specificate.
+
+|===
+. Nella pagina script, immettere il timeout dello script, il percorso e gli argomenti del prescrittt o del postscript che devono essere eseguiti rispettivamente prima o dopo l'operazione di clone.
++
+Ad esempio, è possibile eseguire uno script per aggiornare i trap SNMP, automatizzare gli avvisi, inviare i registri e così via.
+
++
+
+NOTE: Il percorso prescripts o postscripts non deve includere dischi o condivisioni. Il percorso deve essere relativo al PERCORSO_SCRIPT.
+
++
+Il timeout predefinito dello script è di 60 secondi.
+
+. Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
++
+È inoltre necessario specificare gli indirizzi e-mail del mittente e del destinatario e l'oggetto dell'e-mail. Se si desidera allegare il report dell'operazione di clonazione eseguita, selezionare *Allega report*.
+
++
+
+NOTE: Per la notifica via email, è necessario aver specificato i dettagli del server SMTP utilizzando la GUI o il comando PowerShell Set-SmtpServer.
+
++
+Per EMS, fare riferimento a. https://["Gestire la raccolta di dati EMS"]
+
+. Esaminare il riepilogo, quindi fare clic su *fine*.
+. Monitorare l'avanzamento dell'operazione facendo clic su *Monitor* > *Jobs*.
+
+
+*Al termine*
+
+Una volta creato il clone, non rinominarlo.
+
+*Ulteriori informazioni*
+
+link:reference_back_up_sql_server_database_or_instance_or_availability_group.html["Eseguire il backup del database, dell'istanza o del gruppo di disponibilità di SQL Server"]
+
+link:task_clone_backups_using_powershell_cmdlets_for_sql.html["Clonare i backup utilizzando i cmdlet PowerShell"]
+
+https://["L'operazione di clonazione potrebbe non riuscire o richiedere più tempo per il completamento con il valore TCP_TIMEOUT predefinito"]
+
+https://["Il clone del database dell'istanza del cluster di failover non riesce"]

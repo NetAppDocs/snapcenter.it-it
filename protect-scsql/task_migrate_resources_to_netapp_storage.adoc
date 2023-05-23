@@ -1,0 +1,101 @@
+---
+permalink: protect-scsql/task_migrate_resources_to_netapp_storage.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Dopo aver eseguito il provisioning del sistema storage NetApp utilizzando il plug-in SnapCenter per Microsoft Windows, è possibile migrare le risorse al sistema storage NetApp o da un LUN NetApp a un altro LUN NetApp utilizzando l"interfaccia grafica utente SnapCenter o i cmdlet PowerShell.' 
+---
+= Migrazione delle risorse al sistema storage NetApp
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver eseguito il provisioning del sistema storage NetApp utilizzando il plug-in SnapCenter per Microsoft Windows, è possibile migrare le risorse al sistema storage NetApp o da un LUN NetApp a un altro LUN NetApp utilizzando l'interfaccia grafica utente (GUI) SnapCenter o i cmdlet PowerShell.
+
+*Cosa ti serve*
+
+* È necessario aggiungere sistemi storage al server SnapCenter.
+* È necessario aggiornare (rilevare) le risorse di SQL Server.
+
+
+La maggior parte dei campi presenti in queste pagine della procedura guidata sono esplicativi. Le seguenti informazioni descrivono alcuni dei campi per i quali potrebbe essere necessaria una guida.
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina Resources (risorse), selezionare *Database* o *Instance* dall'elenco a discesa *View* (Visualizza).
+. Selezionare il database o l'istanza dall'elenco e fare clic su *Migra*.
+. Nella pagina risorse, eseguire le seguenti operazioni:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+*Nome database* (opzionale)
+ a| 
+Se è stata selezionata un'istanza per la migrazione, è necessario selezionare i database di tale istanza dall'elenco a discesa *Database*.
+
+
+
+ a| 
+*Scegliere le destinazioni*
+ a| 
+Selezionare la posizione di destinazione per i file di dati e di log.
+
+I file di dati e di log vengono spostati rispettivamente nella cartella Data e Log sotto l'unità NetApp selezionata. Se non è presente alcuna cartella nella struttura di cartelle, viene creata una cartella e la risorsa viene migrata.
+
+
+
+ a| 
+*Mostra dettagli file di database* (opzionale)
+ a| 
+Selezionare questa opzione se si desidera migrare più file di un singolo database.
+
+
+NOTE: Questa opzione non viene visualizzata quando si seleziona la risorsa *istanza*.
+
+
+
+ a| 
+*Opzioni*
+ a| 
+Selezionare *Delete copy of migrated Database at Original Location* (Elimina copia del database migrato nella posizione originale) per eliminare la copia del database dall'origine.
+
+Facoltativo: *ESEGUIRE LE STATISTICHE DI AGGIORNAMENTO sulle tabelle prima di scollegare il database*.
+
+|===
+. Nella pagina di verifica, eseguire le seguenti operazioni:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+*Opzioni di verifica della coerenza del database*
+ a| 
+Selezionare *Esegui prima* per verificare l'integrità del database prima della migrazione. Selezionare *Esegui dopo* per verificare l'integrità del database dopo la migrazione.
+
+
+
+ a| 
+*DBCC CHECKDB options*
+ a| 
+** Selezionare l'opzione *PHYSICAL_ONLY* per limitare il controllo dell'integrità alla struttura fisica del database e rilevare pagine lacerate, errori di checksum e guasti hardware comuni che influiscono sul database.
+** Selezionare l'opzione *NO_INFOMSGS* per eliminare tutti i messaggi informativi.
+** Selezionare l'opzione *ALL_ERRORMSGS* per visualizzare tutti gli errori segnalati per oggetto.
+** Selezionare l'opzione *NOINDEX* se non si desidera controllare gli indici non in cluster.
++
+Il database SQL Server utilizza Microsoft SQL Server Database Consistency Checker (DBCC) per verificare l'integrità fisica e logica degli oggetti nel database.
+
++
+
+NOTE: Selezionare questa opzione per ridurre il tempo di esecuzione.
+
+** Selezionare l'opzione **TABLOCK** per limitare i controlli e ottenere i blocchi invece di utilizzare una copia Snapshot del database interno.
+
+
+|===
+. Esaminare il riepilogo, quindi fare clic su **fine**.
+

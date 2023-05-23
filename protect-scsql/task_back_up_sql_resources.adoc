@@ -1,0 +1,158 @@
+---
+permalink: protect-scsql/task_back_up_sql_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: Se una risorsa non fa ancora parte di un gruppo di risorse, è possibile eseguire il backup della risorsa dalla pagina risorse. 
+---
+= Eseguire il backup delle risorse SQL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se una risorsa non fa ancora parte di un gruppo di risorse, è possibile eseguire il backup della risorsa dalla pagina risorse.
+
+*A proposito di questa attività*
+
+* Per l'autenticazione delle credenziali Windows, è necessario impostare le credenziali prima di installare i plug-in.
+* Per l'autenticazione dell'istanza di SQL Server, è necessario aggiungere la credenziale dopo l'installazione dei plug-in.
+* Per l'autenticazione gMSA, è necessario configurare gMSA durante la registrazione dell'host con SnapCenter nella pagina *Aggiungi host* o *Modifica host* per abilitare e utilizzare gMSA.
+* Se l'host viene aggiunto con gMSA e gMSA dispone dei privilegi di accesso e amministratore di sistema, gMSA verrà utilizzato per connettersi all'istanza SQL.
+
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina risorse, selezionare *Database*, *Instance* o *Availability Group* dall'elenco a discesa *View*.
++
+.. Selezionare il database, l'istanza o il gruppo di disponibilità di cui si desidera eseguire il backup.
++
+Quando si esegue un backup di un'istanza, le informazioni sullo stato dell'ultimo backup o sull'indicatore data e ora di tale istanza non saranno disponibili nella pagina delle risorse.
+
++
+Nella vista della topologia, non è possibile distinguere se lo stato del backup, la data e l'ora o il backup sono per un'istanza o un database.
+
+
+
+. Nella pagina risorse, selezionare la casella di controllo *formato nome personalizzato per copia Snapshot*, quindi immettere un formato nome personalizzato da utilizzare per il nome della copia Snapshot.
++
+Ad esempio, customtext_policy_hostname o resource_hostname. Per impostazione predefinita, al nome della copia Snapshot viene aggiunto un indicatore data e ora.
+
+. Nella pagina Criteri, eseguire le seguenti operazioni:
++
+.. Nella sezione Criteri, selezionare uno o più criteri dall'elenco a discesa.
++
+È possibile creare una policy facendo clic su *image:../media/add_policy_from_resourcegroup.gif[""]* per avviare la procedura guidata delle policy.
+
++
+Nella sezione *Configure schedules for selected policy* (Configura pianificazioni per policy selezionate), vengono elencati i criteri selezionati.
+
+.. Fare clic su *image:../media/add_policy_from_resourcegroup.gif[""]* Nella colonna Configure Schedules (Configura pianificazioni) per il criterio per il quale si desidera configurare una pianificazione.
+.. Nel campo *Aggiungi pianificazioni per policy* `policy_name` Configurare la pianificazione, quindi fare clic su *OK*.
++
+Qui `policy_name` è il nome del criterio selezionato.
+
++
+Le pianificazioni configurate sono elencate nella colonna *Pianificazioni applicate*.
+
+.. Selezionare *Use Microsoft SQL Server Scheduler*, quindi selezionare l'istanza di scheduler dall'elenco a discesa *Scheduler Instance* associata al criterio di scheduling.
+
+
+. Nella pagina verifica, attenersi alla seguente procedura:
++
+.. Selezionare il server di verifica dall'elenco a discesa *Server di verifica*.
++
+È possibile selezionare più server di verifica (host locale o host remoto).
+
++
+
+NOTE: La versione del server di verifica deve essere uguale o superiore alla versione dell'edizione del server SQL che ospita il database primario.
+
+.. Selezionare *Load secondary locators to verify backups on secondary* (carica locatori secondari) per verificare i backup sul sistema di storage secondario.
+.. Selezionare il criterio per il quale si desidera configurare la pianificazione di verifica, quindi fare clic su *image:../media/add_policy_from_resourcegroup.gif[""]*.
+.. Nella finestra di dialogo Add Verification Schedules _policy_name_, eseguire le seguenti operazioni:
++
+|===
+| Se si desidera... | Eseguire questa operazione... 
+
+
+ a| 
+Eseguire la verifica dopo il backup
+ a| 
+Selezionare *Esegui verifica dopo backup*.
+
+
+
+ a| 
+Pianifica una verifica
+ a| 
+Selezionare *Esegui verifica pianificata*.
+
+|===
++
+
+NOTE: Se il server di verifica non dispone di una connessione storage, l'operazione di verifica non riesce e viene visualizzato il messaggio di errore: Impossibile montare il disco.
+
+.. Fare clic su *OK*.
++
+Le pianificazioni configurate sono elencate nella colonna Applied Schedules (Pianificazioni applicate).
+
+
+
+. Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
++
+È inoltre necessario specificare gli indirizzi e-mail del mittente e del destinatario e l'oggetto dell'e-mail. Se si desidera allegare il report dell'operazione eseguita sul gruppo di risorse, selezionare *Allega report*.
+
++
+
+NOTE: Per la notifica via email, è necessario aver specificato i dettagli del server SMTP utilizzando il comando GUI o PowerShell Set-SmtpServer.
+
+. Esaminare il riepilogo, quindi fare clic su *fine*.
++
+Viene visualizzata la pagina della topologia del database.
+
+. Fare clic su *Esegui backup ora*.
+. Nella pagina Backup, attenersi alla seguente procedura:
++
+.. Se sono stati applicati più criteri alla risorsa, selezionare il criterio da utilizzare per il backup dall'elenco a discesa *Policy*.
++
+Se il criterio selezionato per il backup on-demand è associato a una pianificazione di backup, i backup on-demand verranno conservati in base alle impostazioni di conservazione specificate per il tipo di pianificazione.
+
+.. Selezionare *verify after backup* (verifica dopo il backup) per verificare il backup.
+.. Fare clic su *Backup*.
++
+
+NOTE: Non rinominare il processo di backup creato in Windows Scheduler o nell'agente SQL Server.
+
++
+Se il criterio selezionato per il backup on-demand è associato a una pianificazione di backup, i backup on-demand verranno conservati in base alle impostazioni di conservazione specificate per il tipo di pianificazione.
+
++
+Viene creato un gruppo di risorse implicito. È possibile visualizzare questa opzione selezionando il rispettivo utente o gruppo dalla pagina User Access (accesso utente). Il tipo di gruppo di risorse implicito è "`Resource`".
+
+
+
+. Monitorare l'avanzamento dell'operazione facendo clic su *Monitor* > *Jobs*.
+
+
+*Al termine*
+
+* Nelle configurazioni MetroCluster, SnapCenter potrebbe non essere in grado di rilevare una relazione di protezione dopo un failover.
++
+https://["Impossibile rilevare la relazione SnapMirror o SnapVault dopo il failover di MetroCluster"]
+
+* Se si esegue il backup dei dati delle applicazioni su VMDK e la dimensione dell'heap Java per il plug-in SnapCenter per VMware vSphere non è sufficiente, il backup potrebbe non riuscire. Per aumentare la dimensione dell'heap Java, individuare il file script /opt/netapp/init_scripts/scvservice. In questo script, il `do_start method` Avvia il servizio plug-in VMware di SnapCenter. Aggiornare il comando ai seguenti valori: `Java -jar -Xmx8192M -Xms4096M`.
+
+
+*Ulteriori informazioni*
+
+link:task_create_backup_policies_for_sql_server_databases.html["Creare criteri di backup per i database di SQL Server"]
+
+link:task_back_up_resources_using_powershell_cmdlets_for_sql.html["Eseguire il backup delle risorse utilizzando i cmdlet PowerShell"]
+
+https://["Le operazioni di backup non riescono con un errore di connessione MySQL a causa del ritardo nel TCP_TIMEOUT"]
+
+https://["Il backup non riesce e viene visualizzato un errore dello scheduler di Windows"]
+
+https://["Le operazioni di quiesce o raggruppamento delle risorse non riescono"]

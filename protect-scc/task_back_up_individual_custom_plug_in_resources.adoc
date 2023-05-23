@@ -1,0 +1,135 @@
+---
+permalink: protect-scc/task_back_up_individual_custom_plug_in_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: Se una singola risorsa plug-in personalizzata non fa parte di alcun gruppo di risorse, è possibile eseguire il backup della risorsa dalla pagina risorse. È possibile eseguire il backup della risorsa on-demand oppure, se la risorsa dispone di un criterio allegato e di una pianificazione configurata, i backup vengono eseguiti automaticamente in base alla pianificazione. 
+---
+= Eseguire il backup di singole risorse plug-in personalizzate
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se una singola risorsa plug-in personalizzata non fa parte di alcun gruppo di risorse, è possibile eseguire il backup della risorsa dalla pagina risorse. È possibile eseguire il backup della risorsa on-demand oppure, se la risorsa dispone di un criterio allegato e di una pianificazione configurata, i backup vengono eseguiti automaticamente in base alla pianificazione.
+
+*Cosa ti serve*
+
+* È necessario aver creato una policy di backup.
+* Se si desidera eseguire il backup di una risorsa che ha una relazione SnapMirror con uno storage secondario, il ruolo ONTAP assegnato all'utente dello storage deve includere il privilegio "`snapmirror all`". Tuttavia, se si utilizza il ruolo "`vsadmin`", il privilegio "`snapmirror all`" non è richiesto.
+
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina risorse, filtrare le risorse dall'elenco a discesa *Visualizza* in base al tipo di risorsa.
++
+Fare clic su image:../media/filter_icon.gif[""], quindi selezionare il nome host e il tipo di risorsa per filtrare le risorse. Quindi fare clic su image:../media/filter_icon.gif[""] per chiudere il riquadro del filtro.
+
+. Fare clic sulla risorsa di cui si desidera eseguire il backup.
+. Nella pagina Resource, se si desidera utilizzare un nome personalizzato, selezionare la casella di controllo *Usa formato nome personalizzato per copia Snapshot* , quindi immettere un formato nome personalizzato per il nome della copia Snapshot.
++
+Ad esempio, _customtext_policy_hostname_ o _resource_hostname_. Per impostazione predefinita, al nome della copia Snapshot viene aggiunto un indicatore data e ora.
+
+. Nella pagina Impostazioni applicazione, effettuare le seguenti operazioni:
++
+.. Fare clic sulla freccia *Backup* per impostare opzioni di backup aggiuntive:
++
+Attivare il backup dei gruppi di coerenza, se necessario, ed eseguire le seguenti attività:
+
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Tempo di attesa per il completamento dell'operazione Consistency Group Snapshot
+ a| 
+Selezionare urgente, Medio o rilassato per specificare il tempo di attesa per il completamento dell'operazione di copia Snapshot.
+
+Urgente = 5 secondi, Medio = 7 secondi e rilassato = 20 secondi.
+
+
+
+ a| 
+Disattiva sincronizzazione WAFL
+ a| 
+Selezionare questa opzione per evitare di forzare un punto di coerenza WAFL.
+
+|===
++
+image:../media/application_settings.gif[""]
+
+.. Fare clic sulla freccia *Scripts* per eseguire i comandi pre e post per le operazioni di quiesce, copia Snapshot e senza richieste. È inoltre possibile eseguire i comandi preliminari prima di uscire dall'operazione di backup.
++
+Le prescrizioni e i postscript vengono eseguiti nel server SnapCenter.
+
+.. Fare clic sulla freccia *Custom Configurations* (configurazioni personalizzate), quindi immettere le coppie di valori personalizzate richieste per tutti i lavori che utilizzano questa risorsa.
+.. Fare clic sulla freccia *Snapshot Copy Tool* per selezionare lo strumento per creare le copie Snapshot:
++
+|===
+| Se vuoi... | Quindi... 
+
+
+ a| 
+SnapCenter per eseguire una copia Snapshot a livello di storage
+ a| 
+Selezionare *SnapCenter senza coerenza del file system*.
+
+
+
+ a| 
+SnapCenter utilizza il plug-in per Windows per mettere il file system in uno stato coerente e quindi eseguire una copia Snapshot
+ a| 
+Selezionare *SnapCenter with file system Consistency*.
+
+
+
+ a| 
+Per immettere il comando per creare una copia Snapshot
+ a| 
+Selezionare *Altro*, quindi immettere il comando per creare una copia Snapshot.
+
+|===
+
+
+. Nella pagina Criteri, attenersi alla seguente procedura:
++
+.. Selezionare uno o più criteri dall'elenco a discesa.
++
+
+NOTE: È anche possibile creare un criterio facendo clic su image:../media/add_policy_from_resourcegroup.gif[""].
+
++
+Nella sezione Configure schedules for selected policies (Configura pianificazioni per policy selezionate), vengono elencati i criteri selezionati.
+
+.. Fare clic su image:../media/add_policy_from_resourcegroup.gif[""] Nella colonna Configure Schedules (Configura pianificazioni) per il criterio per il quale si desidera configurare una pianificazione.
+.. Nella finestra di dialogo Add schedules for policy _policy_name_, configurare la pianificazione, quindi fare clic su *OK*.
++
+Dove _policy_name_ è il nome del criterio selezionato.
+
++
+Le pianificazioni configurate sono elencate nella colonna Applied Schedules (Pianificazioni applicate).
+
+
+
+. Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
++
+È inoltre necessario specificare gli indirizzi e-mail del mittente e del destinatario e l'oggetto dell'e-mail. SMTP deve essere configurato anche in *Impostazioni* > *Impostazioni globali*.
+
+. Esaminare il riepilogo, quindi fare clic su *fine*.
++
+Viene visualizzata la pagina della topologia delle risorse.
+
+. Fare clic su *Esegui backup ora*.
+. Nella pagina Backup, attenersi alla seguente procedura:
++
+.. Se sono stati applicati più criteri alla risorsa, selezionare il criterio da utilizzare per il backup dall'elenco a discesa *Policy*.
++
+Se il criterio selezionato per il backup on-demand è associato a una pianificazione di backup, i backup on-demand verranno conservati in base alle impostazioni di conservazione specificate per il tipo di pianificazione.
+
+.. Fare clic su *Backup*.
+
+
+. Monitorare l'avanzamento dell'operazione facendo clic su *Monitor* > *Jobs*.
+

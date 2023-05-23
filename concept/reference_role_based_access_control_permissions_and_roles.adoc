@@ -1,0 +1,86 @@
+---
+permalink: concept/reference_role_based_access_control_permissions_and_roles.html 
+sidebar: sidebar 
+keywords: RBAC, roles, permissions 
+summary: 'Il RBAC (Role-Based Access Control) di SnapCenter consente di creare ruoli e aggiungere autorizzazioni a tali ruoli, quindi di assegnare utenti o gruppi di utenti ai ruoli. Ciò consente agli amministratori di SnapCenter di creare un ambiente gestito centralmente, mentre gli amministratori delle applicazioni possono gestire i processi di protezione dei dati. SnapCenter viene fornito con alcuni ruoli e autorizzazioni predefiniti.' 
+---
+= Autorizzazioni e ruoli RBAC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il RBAC (Role-Based Access Control) di SnapCenter consente di creare ruoli e assegnare autorizzazioni a tali ruoli, quindi assegnare utenti o gruppi di utenti ai ruoli. Ciò consente agli amministratori di SnapCenter di creare un ambiente gestito centralmente, mentre gli amministratori delle applicazioni possono gestire i processi di protezione dei dati. SnapCenter viene fornito con alcuni ruoli e autorizzazioni predefiniti.
+
+
+
+== Ruoli di SnapCenter
+
+SnapCenter viene fornito con i seguenti ruoli predefiniti. È possibile assegnare utenti e gruppi a questi ruoli o creare nuovi ruoli.
+
+Quando si assegna un ruolo a un utente, nella pagina lavori sono visibili solo i lavori pertinenti a tale utente, a meno che non sia stato assegnato il ruolo Amministratore SnapCenter.
+
+* Backup dell'app e amministratore del clone
+* Visualizzatore di backup e cloni
+* Amministratore dell'infrastruttura
+* SnapCenterAdmin
+
+
+
+
+== Plug-in SnapCenter per i ruoli di VMware vSphere
+
+Per la gestione della protezione dei dati coerente con le macchine virtuali di macchine virtuali, VMDK e datastore, i seguenti ruoli vengono creati in vCenter dal plug-in SnapCenter per VMware vSphere:
+
+* Amministratore SCV
+* Vista dei distributori idraulici
+* SCV di backup
+* Ripristino dei distributori idraulici
+* Ripristino del file ospite SCV
+
+
+Per ulteriori informazioni, vedere https://["Tipi di plug-in RBAC per SnapCenter per utenti di VMware vSphere"^]
+
+|===
+
+
+| *Best practice:* NetApp consiglia di creare un ruolo ONTAP per il plug-in SnapCenter per le operazioni VMware vSphere e assegnargli tutti i privilegi richiesti. 
+|===
+
+
+== Permessi SnapCenter
+
+SnapCenter fornisce le seguenti autorizzazioni:
+
+* Gruppo di risorse
+* Policy
+* Backup
+* Host
+* Connessione storage
+* Clonare
+* Provisioning (solo per database Microsoft SQL)
+* Dashboard
+* Report
+* Ripristinare
++
+** Full Volume Restore (solo per plug-in personalizzati)
+
+
+* Risorsa
++
+L'amministratore deve disporre dei privilegi del plug-in per consentire ai non amministratori di eseguire l'operazione di rilevamento delle risorse.
+
+* Installazione o disinstallazione del plug-in
++
+
+NOTE: Quando si abilitano le autorizzazioni per l'installazione del plug-in, è necessario modificare anche l'autorizzazione host per abilitare le letture e gli aggiornamenti.
+
+* Migrazione
+* Montare (solo per database Oracle)
+* Smontare (solo per database Oracle)
+* Monitoraggio del processo
++
+L'autorizzazione Job Monitor consente ai membri di diversi ruoli di visualizzare le operazioni su tutti gli oggetti a cui sono assegnati.
+
+

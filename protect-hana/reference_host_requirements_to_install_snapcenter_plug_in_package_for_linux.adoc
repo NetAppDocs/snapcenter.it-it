@@ -1,0 +1,57 @@
+---
+permalink: protect-hana/reference_host_requirements_to_install_snapcenter_plug_in_package_for_linux.html 
+sidebar: sidebar 
+keywords: SnapCenter 
+summary: Prima di installare il pacchetto di plug-in SnapCenter per Linux, è necessario conoscere alcuni requisiti di spazio e dimensionamento di base del sistema host. 
+---
+= Requisiti dell'host per l'installazione del pacchetto di plug-in SnapCenter per Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di installare il pacchetto di plug-in SnapCenter per Linux, è necessario conoscere alcuni requisiti di spazio e dimensionamento di base del sistema host.
+
+|===
+| Elemento | Requisiti 
+
+
+ a| 
+Sistemi operativi
+ a| 
+* Red Hat Enterprise Linux
+* SUSE Linux Enterprise Server (SLES)
+
+
+Per informazioni aggiornate sulle versioni supportate, consultare https://["Tool di matrice di interoperabilità NetApp"].
+
+
+
+ a| 
+RAM minima per il plug-in SnapCenter sull'host
+ a| 
+1 GB
+
+
+
+ a| 
+Spazio minimo di installazione e registrazione per il plug-in SnapCenter sull'host
+ a| 
+2 GB
+
+
+NOTE: È necessario allocare spazio su disco sufficiente e monitorare il consumo di storage da parte della cartella dei log. Lo spazio di log richiesto varia in base al numero delle entità da proteggere e alla frequenza delle operazioni di protezione dei dati. Se lo spazio su disco non è sufficiente, i registri non verranno creati per le operazioni eseguite di recente.
+
+
+
+ a| 
+Pacchetti software richiesti
+ a| 
+Java 1.8.x (64-bit)Oracle Java e OpenJDK Flavors
+
+Se JAVA è stato aggiornato alla versione più recente, assicurarsi che l'opzione JAVA_HOME disponibile in /var/opt/snapcenter/spl/etc/spl.properties sia impostata sulla versione JAVA corretta e sul percorso corretto.
+
+Per informazioni aggiornate sulle versioni supportate, consultare https://["Tool di matrice di interoperabilità NetApp"].
+
+|===

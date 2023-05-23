@@ -1,0 +1,50 @@
+---
+permalink: admin/task_delete_clones.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile eliminare i cloni se non sono più necessari. 
+---
+= Eliminare i cloni
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eliminare i cloni se non sono più necessari.
+
+*A proposito di questa attività*
+
+Non è possibile eliminare cloni che agiscono come origine per altri cloni.
+
+Ad esempio, se il database di produzione è db1, il clono1 del database viene clonato dal backup di db1 e successivamente il clono1 viene protetto. Il clone2 del database viene clonato dal backup del clone1. Se si decide di eliminare il clone1, è necessario prima eliminare il clone2, quindi eliminarlo.
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina risorse, selezionare la risorsa o il gruppo di risorse dall'elenco a discesa *Visualizza*.
+. Selezionare la risorsa o il gruppo di risorse dall'elenco.
++
+Viene visualizzata la pagina della topologia della risorsa o del gruppo di risorse.
+
+. Dalla vista Manage Copies (Gestisci copie), selezionare *cloni* dai sistemi di storage primario o secondario (mirrorati o replicati).
+. Selezionare il clone, quindi fare clic su image:../media/delete_icon.gif[""].
++
+Se si stanno eliminando i cloni del database SAP HANA, nella pagina Delete Clone (Elimina clone), eseguire le seguenti operazioni:
+
++
+.. Nel campo *Pre clone delete*, immettere i comandi da eseguire prima di eliminare il clone.
+.. Nel campo *Unmount*, immettere il comando per smontare il clone prima di eliminarlo.
+
+
+. Fare clic su *OK*.
+
+
+*Al termine*
+
+A volte i file system non vengono cancellati. È necessario aumentare il valore del parametro CLONE_DELETE_DELAY eseguendo il seguente comando:``./sccli Set-SmConfigSettings``
+
+
+NOTE: Il parametro CLONE_DELETE_DELAY specifica il numero di secondi di attesa dopo il completamento dell'eliminazione del clone dell'applicazione e prima di iniziare l'eliminazione del file system.
+
+Dopo aver modificato il valore del parametro, riavviare il servizio caricatore plug-in (SPL) di SnapCenter.

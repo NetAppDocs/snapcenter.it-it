@@ -1,0 +1,89 @@
+---
+permalink: protect-scw/task_clone_from_a_windows_file_system_backup.html 
+sidebar: sidebar 
+keywords: clone 
+summary: È possibile utilizzare SnapCenter per clonare un backup del file system Windows. Se si desidera una copia di un singolo file che è stata erroneamente eliminata o modificata, è possibile clonare un backup e accedere a tale file nel clone. 
+---
+= Clonare da un backup del file system Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare SnapCenter per clonare un backup del file system Windows. Se si desidera una copia di un singolo file che è stata erroneamente eliminata o modificata, è possibile clonare un backup e accedere a tale file nel clone.
+
+*Cosa ti serve*
+
+* Dovresti aver preparato per la protezione dei dati completando attività come l'aggiunta di host, l'identificazione delle risorse e la creazione di connessioni alle macchine virtuali di storage (SVM).
+* Si dovrebbe disporre di un backup del file system.
+* Assicurarsi che gli aggregati che ospitano i volumi siano inclusi nell'elenco degli aggregati assegnati della macchina virtuale di storage (SVM).
+* Non è possibile clonare un gruppo di risorse. È possibile clonare solo backup di file system singoli.
+* Se un backup risiede su una macchina virtuale con un disco VMDK, SnapCenter non può clonare il backup su un server fisico.
+* Se si clona un cluster Windows (ad esempio, un LUN condiviso o un LUN del volume condiviso del cluster (CSV)), il clone viene memorizzato come LUN dedicato sull'host specificato.
+* Per un'operazione di cloning, la directory principale del punto di montaggio del volume non può essere una directory condivisa.
+* Non è possibile creare un clone su un nodo che non è il nodo principale per l'aggregato.
+* Non è possibile pianificare operazioni ricorrenti di cloni (ciclo di vita dei cloni) per i file system Windows; è possibile clonare un backup solo su richiesta.
+* Se si sposta un LUN contenente un clone in un nuovo volume, SnapCenter non supporta più il clone. Ad esempio, non è possibile utilizzare SnapCenter per eliminare il clone.
+* Non è possibile clonare in più ambienti. Ad esempio, la clonazione da un disco fisico a un disco virtuale o viceversa.
+
+
+*A proposito di questa attività*
+
+* IL PERCORSO_SCRIPT viene definito utilizzando la chiave PredesedWindowsScriptsDirectory situata nel file SMCoreServiceHost.exe.Config dell'host del plug-in.
++
+Se necessario, è possibile modificare questo percorso e riavviare il servizio SMcore. Si consiglia di utilizzare il percorso predefinito per la protezione.
+
++
+Il valore della chiave può essere visualizzato da swagger attraverso l'API: API /4.7/configsettings
+
++
+È possibile utilizzare L'API GET per visualizzare il valore della chiave. L'API SET non è supportata.
+
+
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina Resources (risorse), selezionare *file Systems* dall'elenco.
+. Selezionare l'host.
++
+La vista della topologia viene visualizzata automaticamente se la risorsa è protetta.
+
+. Dall'elenco delle risorse, selezionare il backup che si desidera clonare, quindi fare clic sull'icona del clone.
+. Nella pagina Opzioni, procedere come segue:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Server clone
+ a| 
+Scegliere l'host su cui creare il clone.
+
+
+
+ a| 
+"`Auto assign mount point`" o "`Auto assign volume mount point under path`"
+ a| 
+Scegliere se assegnare automaticamente un punto di montaggio o un punto di montaggio del volume sotto un percorso.
+
+Auto assign volume mount point under path (assegnazione automatica del punto di montaggio del volume sotto il percorso): Il punto di montaggio sotto un percorso consente di fornire una directory specifica in cui verranno creati i punti di montaggio. Prima di scegliere questa opzione, verificare che la directory sia vuota. Se nella directory è presente un backup, il backup non sarà valido dopo l'operazione di montaggio.
+
+
+
+ a| 
+Percorso di archiviazione
+ a| 
+Scegliere un percorso di archiviazione se si desidera clonare un backup secondario.
+
+|===
+. Nella pagina script, specificare eventuali prescritture o postscript da eseguire.
++
+
+NOTE: Il percorso prescripts o postscripts non deve includere dischi o condivisioni. Il percorso deve essere relativo al PERCORSO_SCRIPT.
+
+. Esaminare il riepilogo, quindi fare clic su *fine*.
+. Monitorare l'avanzamento dell'operazione facendo clic su *Monitor* > *Jobs*.
+

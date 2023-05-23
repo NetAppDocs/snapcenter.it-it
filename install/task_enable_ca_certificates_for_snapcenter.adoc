@@ -1,0 +1,42 @@
+---
+permalink: install/task_enable_ca_certificates_for_snapcenter.html 
+sidebar: sidebar 
+keywords: SnapCenter, enable CA, certificate 
+summary: È necessario configurare i certificati CA e attivare la convalida del certificato CA per il server SnapCenter. 
+---
+= Abilitare i certificati CA per SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario configurare i certificati CA e attivare la convalida del certificato CA per il server SnapCenter.
+
+*Cosa ti serve*
+
+* È possibile attivare o disattivare i certificati CA utilizzando il cmdlet Set-SmCertificateSettings.
+* È possibile visualizzare lo stato del certificato per il server SnapCenter utilizzando il cmdlet Get-SmCertificateSettings.
+
+
+Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento a. https://["Guida di riferimento al cmdlet del software SnapCenter"^].
+
+*Fasi*
+
+. Nella pagina Settings (Impostazioni), selezionare *Settings* (Impostazioni) > *Global Settings* (Impostazioni globali) > *CA Certificate Settings* (Impostazioni certificato CA).
+. Selezionare *attiva convalida certificato*.
+. Fare clic su *Apply* (Applica).
+
+
+*Al termine*
+
+L'host della scheda host gestiti visualizza un lucchetto e il colore del lucchetto indica lo stato della connessione tra il server SnapCenter e l'host del plug-in.
+
+* *image:../media/enable_ca_issues_icon.png[""]* Indica che all'host del plug-in non è abilitato o assegnato alcun certificato CA.
+* *image:../media/enable_ca_good_icon.png[""]* Indica che il certificato CA è stato validato correttamente.
+* *image:../media/enable_ca_failed_icon.png[""]* Indica che non è stato possibile validare il certificato CA.
+* *image:../media/enable_ca_undefined_icon.png[""]* indica che non è stato possibile recuperare le informazioni di connessione.
+
+
+
+NOTE: Quando lo stato è giallo o verde, le operazioni di protezione dei dati vengono completate correttamente.

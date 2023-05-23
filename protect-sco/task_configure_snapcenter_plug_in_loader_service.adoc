@@ -1,0 +1,180 @@
+---
+permalink: protect-sco/task_configure_snapcenter_plug_in_loader_service.html 
+sidebar: sidebar 
+keywords: SPL, plug-in loader service 
+summary: Il servizio caricatore plug-in SnapCenter carica il pacchetto plug-in per Linux o AIX per interagire con il server SnapCenter. Il servizio caricatore plug-in SnapCenter viene installato quando si installa il pacchetto plug-in SnapCenter per Linux o il pacchetto plug-in SnapCenter per AIX. 
+---
+= Configurare il servizio caricatore plug-in di SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il servizio caricatore plug-in SnapCenter carica il pacchetto plug-in per Linux o AIX per interagire con il server SnapCenter. Il servizio caricatore plug-in SnapCenter viene installato quando si installa il pacchetto plug-in SnapCenter per Linux o il pacchetto plug-in SnapCenter per AIX.
+
+*A proposito di questa attività*
+
+Dopo aver installato il pacchetto plug-in SnapCenter per Linux o il pacchetto plug-in SnapCenter per AIX, il servizio caricatore plug-in SnapCenter si avvia automaticamente. Se il servizio caricatore plug-in di SnapCenter non si avvia automaticamente, è necessario:
+
+* Assicurarsi che la directory in cui opera il plug-in non venga eliminata
+* Aumentare lo spazio di memoria assegnato alla Java Virtual Machine
+
+
+Il file spl.properties, che si trova in _/custom_location/NetApp/snapcenter/spl/etc/_, contiene i seguenti parametri. A questi parametri vengono assegnati valori predefiniti.
+
+|===
+| Nome del parametro | Descrizione 
+
+
+ a| 
+LOG_LEVEL
+ a| 
+Visualizza i livelli di registro supportati.
+
+I valori possibili sono INFO, DEBUG, TRACE, ERROR, FATALE, E AVVISARE.
+
+
+
+ a| 
+PROTOCOLLO_SPL
+ a| 
+Visualizza il protocollo supportato dal caricatore plug-in SnapCenter.
+
+È supportato solo il protocollo HTTPS. È possibile aggiungere il valore se manca il valore predefinito.
+
+
+
+ a| 
+PROTOCOLLO_SERVER_SNAPCENTER
+ a| 
+Visualizza il protocollo supportato dal server SnapCenter.
+
+È supportato solo il protocollo HTTPS. È possibile aggiungere il valore se manca il valore predefinito.
+
+
+
+ a| 
+SKIP_JAVAHOME_UPDATE
+ a| 
+Per impostazione predefinita, il servizio SPL rileva il percorso java e aggiorna IL parametro JAVA_HOME.
+
+Pertanto, il valore predefinito è IMPOSTATO SU FALSE. È possibile impostare SU TRUE se si desidera disattivare il comportamento predefinito e correggere manualmente il percorso java.
+
+
+
+ a| 
+SPL_KEYSTORE_PASS
+ a| 
+Visualizza la password del file keystore.
+
+È possibile modificare questo valore solo se si modifica la password o si crea un nuovo file keystore.
+
+
+
+ a| 
+SPL_PORT
+ a| 
+Visualizza il numero di porta su cui è in esecuzione il servizio caricatore plug-in di SnapCenter.
+
+È possibile aggiungere il valore se manca il valore predefinito.
+
+
+NOTE: Non modificare il valore dopo l'installazione dei plug-in.
+
+
+
+ a| 
+SNAPCENTER_SERVER_HOST
+ a| 
+Visualizza l'indirizzo IP o il nome host del server SnapCenter.
+
+
+
+ a| 
+SPL_KEYSTORE_PATH
+ a| 
+Visualizza il percorso assoluto del file keystore.
+
+
+
+ a| 
+PORTA_SERVER_SNAPCENTER
+ a| 
+Visualizza il numero di porta su cui è in esecuzione il server SnapCenter.
+
+
+
+ a| 
+LOG_MAX_COUNT
+ a| 
+Visualizza il numero di file di log del caricatore plug-in SnapCenter conservati nella cartella _/custom_location/snapcenter/spl/logs_.
+
+Il valore predefinito è 5000. Se il conteggio supera il valore specificato, vengono conservati gli ultimi 5000 file modificati. Il controllo del numero di file viene eseguito automaticamente ogni 24 ore dall'avvio del servizio caricatore plug-in di SnapCenter.
+
+
+NOTE: Se si elimina manualmente il file spl.properties, il numero di file da conservare viene impostato su 9999.
+
+
+
+ a| 
+JAVA_HOME
+ a| 
+Visualizza il percorso assoluto della directory DI JAVA_HOME che viene utilizzato per avviare il servizio SPL.
+
+Questo percorso viene determinato durante l'installazione e come parte dell'avvio di SPL.
+
+
+
+ a| 
+LOG_MAX_SIZE
+ a| 
+Visualizza la dimensione massima del file di log del lavoro.
+
+Una volta raggiunta la dimensione massima, il file di registro viene compresso e i registri vengono scritti nel nuovo file del lavoro.
+
+
+
+ a| 
+RETAIN_LOGS_OF_LAST_DAYS
+ a| 
+Visualizza il numero di giorni in cui i registri vengono conservati.
+
+
+
+ a| 
+ENABLE_CERTIFICATE_VALIDATION
+ a| 
+Viene visualizzato true quando la convalida del certificato CA è attivata per l'host.
+
+È possibile attivare o disattivare questo parametro modificando il file spl.properties o utilizzando l'interfaccia grafica o il cmdlet di SnapCenter.
+
+|===
+Se uno di questi parametri non è assegnato al valore predefinito o se si desidera assegnare o modificare il valore, è possibile modificare il file spl.properties. È inoltre possibile verificare il file spl.properties e modificarlo per risolvere eventuali problemi relativi ai valori assegnati ai parametri. Dopo aver modificato il file spl.properties, riavviare il servizio caricatore plug-in di SnapCenter.
+
+*Fasi*
+
+. Eseguire una delle seguenti operazioni, secondo necessità:
++
+** Avviare il servizio caricatore plug-in di SnapCenter come utente root:
++
+ `/custom_location/NetApp/snapcenter/spl/bin/spl start`
+** Arrestare il servizio caricatore plug-in di SnapCenter:
++
+ `/custom_location/NetApp/snapcenter/spl/bin/spl stop`
++
+
+NOTE: È possibile utilizzare l'opzione -force con il comando stop per arrestare con forza il servizio caricatore plug-in di SnapCenter. Tuttavia, prima di eseguire questa operazione, è necessario prestare attenzione, in quanto termina anche le operazioni esistenti.
+
+** Riavviare il servizio caricatore plug-in di SnapCenter:
++
+ `/custom_location/NetApp/snapcenter/spl/bin/spl restart`
+** Individuare lo stato del servizio caricatore plug-in di SnapCenter:
++
+ `/custom_location/NetApp/snapcenter/spl/bin/spl status`
+** Individuare la modifica nel servizio caricatore plug-in di SnapCenter:
++
+ `/custom_location/NetApp/snapcenter/spl/bin/spl change`
+
+
+

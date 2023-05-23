@@ -1,0 +1,30 @@
+---
+permalink: protect-scsql/reference_clone_sql_server_database_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: Prima di clonare le risorse di database da un backup, è necessario eseguire diverse attività utilizzando il server SnapCenter. La clonazione del database è il processo di creazione di una copia point-in-time di un database di produzione o del relativo set di backup. È possibile clonare i database per testare le funzionalità che devono essere implementate utilizzando la struttura e il contenuto del database corrente durante i cicli di sviluppo delle applicazioni, per utilizzare gli strumenti di estrazione e manipolazione dei dati durante il popolamento dei data warehouse o per ripristinare i dati cancellati o modificati erroneamente. 
+---
+= Clonare il flusso di lavoro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di clonare le risorse di database da un backup, è necessario eseguire diverse attività utilizzando il server SnapCenter. La clonazione del database è il processo di creazione di una copia point-in-time di un database di produzione o del relativo set di backup. È possibile clonare i database per testare le funzionalità che devono essere implementate utilizzando la struttura e il contenuto del database corrente durante i cicli di sviluppo delle applicazioni, per utilizzare gli strumenti di estrazione e manipolazione dei dati durante il popolamento dei data warehouse o per ripristinare i dati cancellati o modificati erroneamente.
+
+Un'operazione di clonazione del database genera report basati sugli ID lavoro.
+
+Il seguente flusso di lavoro mostra la sequenza in cui è necessario eseguire le operazioni di cloning:
+
+image::../media/scsql_clone_workflow.png[Diagramma del flusso di lavoro dei cloni]
+
+È inoltre possibile utilizzare i cmdlet PowerShell manualmente o negli script per eseguire operazioni di backup, ripristino, ripristino, verifica e clonazione. Per informazioni dettagliate sui cmdlet di PowerShell, consultare la guida in linea del cmdlet di SnapCenter o la https://["Guida di riferimento al cmdlet del software SnapCenter"]
+
+*Ulteriori informazioni*
+
+link:task_clone_from_a_sql_server_database_backup.html["Clonare da un backup di database SQL Server"]
+
+link:task_perform_clone_lifecycle_management.html["Eseguire il ciclo di vita del clone"]
+
+link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["L'operazione di clonazione potrebbe non riuscire o richiedere più tempo per il completamento con il valore TCP_TIMEOUT predefinito"]

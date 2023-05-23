@@ -1,0 +1,138 @@
+---
+permalink: protect-scw/reference_storage_types_supported_by_snapcenter_plug_ins_for_microsoft_windows.html 
+sidebar: sidebar 
+keywords:  
+summary: 'SnapCenter supporta un"ampia gamma di tipi di storage su macchine fisiche e virtuali. Prima di installare il pacchetto per l"host, è necessario verificare se il supporto è disponibile per il tipo di storage in uso.' 
+---
+= Tipi di storage supportati dai plug-in SnapCenter per Microsoft Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter supporta un'ampia gamma di tipi di storage su macchine fisiche e virtuali. Prima di installare il pacchetto per l'host, è necessario verificare se il supporto è disponibile per il tipo di storage in uso.
+
+Il provisioning SnapCenter e il supporto per la protezione dei dati sono disponibili su Windows Server. Per informazioni aggiornate sulle versioni supportate, consultare  https://["Tool di matrice di interoperabilità NetApp"^].
+
+|===
+| Macchina | Tipo di storage | Eseguire il provisioning utilizzando | Note di supporto 
+
+
+ a| 
+Server fisico
+ a| 
+LUN connessi a FC
+ a| 
+Interfaccia grafica utente (GUI) o cmdlet PowerShell di SnapCenter
+ a| 
+
+
+
+ a| 
+Server fisico
+ a| 
+LUN connessi a iSCSI
+ a| 
+GUI SnapCenter o cmdlet PowerShell
+ a| 
+
+
+
+ a| 
+Server fisico
+ a| 
+Condivisioni SMB3 (CIFS) che risiedono su una macchina virtuale di storage (SVM)
+ a| 
+GUI SnapCenter o cmdlet PowerShell
+ a| 
+Supporto solo per il provisioning.
+
+Non è possibile utilizzare SnapCenter per eseguire il backup di dati o condivisioni utilizzando il protocollo SMB.
+
+
+
+ a| 
+Macchina virtuale VMware
+ a| 
+LUN RDM collegati da un HBA FC o iSCSI
+ a| 
+Cmdlet PowerShell
+ a| 
+
+
+
+ a| 
+Macchina virtuale VMware
+ a| 
+LUN iSCSI collegati direttamente al sistema guest dall'iniziatore iSCSI
+ a| 
+GUI SnapCenter o cmdlet PowerShell
+ a| 
+
+
+
+ a| 
+Macchina virtuale VMware
+ a| 
+Virtual Machine file Systems (VMFS) o datastore NFS
+ a| 
+VMware vSphere
+ a| 
+
+
+
+ a| 
+Macchina virtuale VMware
+ a| 
+Un sistema guest connesso alle condivisioni SMB3 che risiedono su una SVM
+ a| 
+GUI SnapCenter o cmdlet PowerShell
+ a| 
+Supporto solo per il provisioning.
+
+Non è possibile utilizzare SnapCenter per eseguire il backup di dati o condivisioni utilizzando il protocollo SMB.
+
+
+
+ a| 
+Macchina virtuale Hyper-V.
+ a| 
+LUN Virtual FC (VFC) collegate da uno switch Fibre Channel virtuale
+ a| 
+GUI SnapCenter o cmdlet PowerShell
+ a| 
+È necessario utilizzare Hyper-V Manager per eseguire il provisioning dei LUN Virtual FC (VFC) collegati da uno switch Fibre Channel virtuale.
+
+
+NOTE: I dischi pass-through Hyper-V e il backup dei database su VHD(x) forniti sullo storage NetApp non sono supportati.
+
+
+
+ a| 
+Macchina virtuale Hyper-V.
+ a| 
+LUN iSCSI collegati direttamente al sistema guest dall'iniziatore iSCSI
+ a| 
+GUI SnapCenter o cmdlet PowerShell
+ a| 
+
+NOTE: I dischi pass-through Hyper-V e il backup dei database su VHD(x) forniti sullo storage NetApp non sono supportati.
+
+
+
+ a| 
+Macchina virtuale Hyper-V.
+ a| 
+Un sistema guest connesso alle condivisioni SMB3 che risiedono su una SVM
+ a| 
+GUI SnapCenter o cmdlet PowerShell
+ a| 
+Supporto solo per il provisioning.
+
+Non è possibile utilizzare SnapCenter per eseguire il backup di dati o condivisioni utilizzando il protocollo SMB.
+
+
+NOTE: I dischi pass-through Hyper-V e il backup dei database su VHD(x) forniti sullo storage NetApp non sono supportati.
+
+|===

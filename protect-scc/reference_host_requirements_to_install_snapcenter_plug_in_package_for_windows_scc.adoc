@@ -1,0 +1,58 @@
+---
+permalink: protect-scc/reference_host_requirements_to_install_snapcenter_plug_in_package_for_windows_scc.html 
+sidebar: sidebar 
+keywords: SAP HANA,Custom plug-ins 
+summary: Prima di installare il pacchetto di plug-in SnapCenter per Windows, è necessario conoscere alcuni requisiti di base relativi allo spazio del sistema host e al dimensionamento. 
+---
+= Requisiti dell'host per installare il pacchetto di plug-in SnapCenter per Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di installare il pacchetto di plug-in SnapCenter per Windows, è necessario conoscere alcuni requisiti di base relativi allo spazio del sistema host e al dimensionamento.
+
+|===
+| Elemento | Requisiti 
+
+
+ a| 
+Sistemi operativi
+ a| 
+Microsoft Windows
+
+Per informazioni aggiornate sulle versioni supportate, consultare https://["Tool di matrice di interoperabilità NetApp"^].
+
+
+
+ a| 
+RAM minima per il plug-in SnapCenter sull'host
+ a| 
+1 GB
+
+
+
+ a| 
+Spazio minimo di installazione e registrazione per il plug-in SnapCenter sull'host
+ a| 
+5 GB
+
+
+NOTE: È necessario allocare spazio su disco sufficiente e monitorare il consumo di storage da parte della cartella dei log. Lo spazio di log richiesto varia in base al numero delle entità da proteggere e alla frequenza delle operazioni di protezione dei dati. Se lo spazio su disco non è sufficiente, i registri non verranno creati per le operazioni eseguite di recente.
+
+
+
+ a| 
+Pacchetti software richiesti
+ a| 
+* Microsoft .NET Framework 4.7.2 o versione successiva
+* Windows Management Framework (WMF) 4.0 o versione successiva
+* PowerShell 4.0 o versione successiva
+
+
+Per informazioni aggiornate sulle versioni supportate, consultare https://["Tool di matrice di interoperabilità NetApp"^].
+
+Per informazioni specifiche sulla risoluzione dei problemi di .NET, vedere https://["L'aggiornamento o l'installazione di SnapCenter non riesce per i sistemi legacy che non dispongono di connettività Internet."]
+
+|===

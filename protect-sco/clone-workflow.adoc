@@ -1,0 +1,25 @@
+---
+permalink: protect-sco/clone-workflow.html 
+sidebar: sidebar 
+keywords: clone operation, clone, workflow 
+summary: 'Il flusso di lavoro dei cloni include la pianificazione, l"esecuzione dell"operazione di cloni e il monitoraggio dell"operazione.' 
+---
+= Clonare il flusso di lavoro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il flusso di lavoro dei cloni include la pianificazione, l'esecuzione dell'operazione di cloni e il monitoraggio dell'operazione.
+
+È possibile clonare i database per i seguenti motivi:
+
+* Per testare le funzionalità che devono essere implementate utilizzando la struttura e il contenuto del database corrente durante i cicli di sviluppo delle applicazioni.
+* Popolare i data warehouse utilizzando strumenti di estrazione e manipolazione dei dati.
+* Per ripristinare i dati cancellati o modificati per errore.
+
+
+Il seguente flusso di lavoro mostra la sequenza in cui è necessario eseguire l'operazione di clonazione:
+
+image::../media/sco_scc_wfs_clone_workflow.png[clonare il flusso di lavoro]

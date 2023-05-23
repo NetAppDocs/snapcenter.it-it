@@ -1,0 +1,16 @@
+---
+permalink: protect-hana/concept_housekeeping_of_log_backups.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: 'SnapCenter gestisce la gestione dei backup di log e dati a livello di sistema storage e file system e all"interno del catalogo di backup SAP HANA.' 
+---
+= In che modo SnapCenter gestisce l'housekeeping dei backup di log e dati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter gestisce la gestione dei backup di log e dati a livello di sistema storage e file system e all'interno del catalogo di backup SAP HANA.
+
+Le copie Snapshot sullo storage primario o secondario e le relative voci nel catalogo SAP HANA vengono eliminate in base alle impostazioni di conservazione. Le voci del catalogo SAP HANA vengono eliminate anche durante il backup e l'eliminazione del gruppo di risorse.

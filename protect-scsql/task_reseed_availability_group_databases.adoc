@@ -1,0 +1,36 @@
+---
+permalink: protect-scsql/task_reseed_availability_group_databases.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Reseed è un"opzione per ripristinare i database del gruppo di disponibilità. Se un database secondario non viene sincronizzato con il database primario in un AG, è possibile eseguire nuovamente il reeeding del database secondario.' 
+---
+= Eseguire nuovamente il reeed dei database del gruppo di disponibilità
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Reseed è un'opzione per ripristinare i database del gruppo di disponibilità (AG). Se un database secondario non viene sincronizzato con il database primario in un AG, è possibile eseguire nuovamente il reeeding del database secondario.
+
+*Cosa ti serve*
+
+* È necessario aver creato il backup del database AG secondario che si desidera ripristinare.
+* Il server SnapCenter e l'host del plug-in devono avere la stessa versione di SnapCenter installata.
+
+
+*A proposito di questa attività*
+
+* Non è possibile eseguire l'operazione di riseed sui database primari.
+* Non è possibile eseguire un'operazione di riseed se il database di replica viene rimosso dal gruppo di disponibilità. Quando la replica viene rimossa, l'operazione di reeed non riesce.
+* Durante l'esecuzione dell'operazione di riseed nel database di SQL Availability Group, non è necessario attivare i backup dei log nei database di replica del database di quel gruppo di disponibilità. Se si attivano i backup dei log durante l'operazione di riseed, l'operazione di riseeding non riesce con il database mirror, "nome_database" non dispone di dati del log delle transazioni sufficienti per conservare la catena di backup dei log del messaggio di errore del database principale.
+
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare *plug-in SnapCenter per SQL Server* dall'elenco.
+. Nella pagina Resources (risorse), selezionare *Database* dall'elenco *View* (Visualizza).
+. Selezionare il database AG secondario dall'elenco.
+. Fare clic su *reseed*.
+. Monitorare l'avanzamento dell'operazione facendo clic su *Monitor* > *Jobs*.
+

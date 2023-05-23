@@ -1,0 +1,148 @@
+---
+permalink: protect-scc/reference_native.html 
+sidebar: sidebar 
+keywords:  
+summary: Sviluppare il plug-in utilizzando lo stile NATIVO. 
+---
+= Stile NATIVO
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter supporta linguaggi di programmazione o scripting non PERL per creare plug-in. Questa è nota come programmazione in stile NATIVO, che può essere un file script o BATCH.
+
+I plug-in DI stile NATIVO devono seguire alcune convenzioni fornite di seguito:
+
+Il plug-in deve essere eseguibile
+
+* Per i sistemi Unix, l'utente che esegue l'agente deve disporre dei privilegi di esecuzione sul plug-in
+* Per i sistemi Windows, i plug-in PowerShell devono avere il suffisso .ps1, gli altri script di Windows devono avere il suffisso .cmd o .bat e devono essere eseguibili dall'utente
+* I plug-in devono reagire a argomenti della riga di comando come "-quiesce", "-unquiesce"
+* I plug-in devono restituire il codice di uscita 99 nel caso in cui un'operazione o una funzione non sia implementata
+* I plug-in devono utilizzare una sintassi specifica per restituire i risultati al server
+
+
+
+
+== Gestione generale dei plug-in
+
+
+
+=== Registrazione dei messaggi di errore
+
+Ogni operazione può inviare messaggi al server, che visualizza e memorizza il contenuto. Un messaggio contiene il livello del messaggio, un indicatore data e ora e un testo del messaggio. Sono supportati i messaggi multilinea.
+
+Formato:
+
+....
+SC_MSG#<level>#<timestamp>#<message>
+SC_MESSAGE#<level>#<timestamp>#<message>
+....
+
+
+=== Utilizzo di stub plug-in
+
+I plug-in SnapCenter devono implementare i plug-in stub. Si tratta di metodi richiamati dal server SnapCenter in base a un flusso di lavoro specifico.
+
+|===
+| Stub plug-in | Opzionale/obbligatorio | Scopo 
+
+
+ a| 
+quiesce
+ a| 
+obbligatorio
+ a| 
+Questo stub è responsabile dell'esecuzione di un quiesce. L'applicazione viene inserita in uno stato in cui è possibile creare una copia Snapshot. Questo viene chiamato prima dell'operazione di copia Snapshot dello storage.
+
+
+
+ a| 
+non fare domande
+ a| 
+obbligatorio
+ a| 
+Questo stub è responsabile dell'esecuzione di una richiesta. Pone l'applicazione in uno stato normale. Questo viene chiamato dopo l'operazione di copia Snapshot dello storage.
+
+
+
+ a| 
+clone_pre
+ a| 
+opzionale
+ a| 
+Questo stub è responsabile dell'esecuzione delle attività pre-clonate. Questo presuppone che si stia utilizzando l'interfaccia di cloning SnapCenter integrata e che venga attivata solo durante l'esecuzione dell'azione "clone_vol o clone_lun".
+
+
+
+ a| 
+clone_post
+ a| 
+Opzionale
+ a| 
+Questo stub è responsabile dell'esecuzione delle attività post-clone. Questo presuppone che si stia utilizzando l'interfaccia di cloning SnapCenter integrata e che venga attivata solo durante l'esecuzione delle operazioni "clone_vol o clone_lun".
+
+
+
+ a| 
+ripristina_pre
+ a| 
+Opzionale
+ a| 
+Questo stub è responsabile dell'esecuzione delle attività di pre-ripristino. Ciò presuppone che si stia utilizzando l'interfaccia di ripristino SnapCenter integrata e che venga attivata solo durante l'esecuzione dell'operazione di ripristino.
+
+
+
+ a| 
+ripristinare
+ a| 
+opzionale
+ a| 
+Questo stub è responsabile dell'esecuzione di tutte le azioni di ripristino. Ciò presuppone che non si stia utilizzando un'interfaccia di ripristino integrata. Viene attivato durante l'esecuzione dell'operazione di ripristino.
+
+|===
+
+
+=== Esempi
+
+
+
+==== Windows PowerShell
+
+Controllare se lo script può essere eseguito sul sistema. Se non è possibile eseguire lo script, impostare il bypass Set-ExecutionPolicy per lo script e riprovare l'operazione.
+
+....
+if ($args.length -ne 1) {
+  write-warning "You must specify a method";
+  break;
+}
+function log ($level, $message) {
+  $d = get-date
+  echo "SC_MSG#$level#$d#$message"
+}
+function quiesce {
+  $app_name = (get-item env:APP_NAME).value
+  log "INFO" "Quiescing application using script $app_name";
+  log "INFO" "Quiescing application finished successfully"
+}
+function unquiesce {
+  $app_name = (get-item env:APP_NAME).value
+  log "INFO" "Unquiescing application using script $app_name";
+  log "INFO" "Unquiescing application finished successfully"
+}
+  switch ($args[0]) {
+    "-quiesce" {
+    quiesce;
+}
+"-unquiesce" {
+    unquiesce;
+}
+default {
+    write-error "Function $args[0] is not implemented";
+    exit 99;
+  }
+}
+exit 0;
+....

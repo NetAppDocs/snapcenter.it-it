@@ -1,0 +1,50 @@
+---
+permalink: protect-hana/reference_types_of_restore_performed_for_auto_discovered_sap_hana_databases.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Databases 
+summary: 'SnapCenter supporta i tipi di ripristino VBSR (Volume-Based SnapRestore), Single file SnapRestore e Connect-and-copy per i database SAP HANA rilevati automaticamente.' 
+---
+= Tipi di operazioni di ripristino per i database SAP HANA rilevati automaticamente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter supporta i tipi di ripristino VBSR (Volume-Based SnapRestore), Single file SnapRestore e Connect-and-copy per i database SAP HANA rilevati automaticamente.
+
+
+
+== Il volume-based SnapRestore (VBSR) viene eseguito in ambienti NFS per i seguenti scenari:
+
+* Quando il backup selezionato per il ripristino viene eseguito su release precedenti a SnapCenter 4.3 e solo se è selezionata l'opzione **completa risorsa**
+* Quando il backup selezionato per il ripristino viene eseguito in SnapCenter 4.3 e se è selezionata l'opzione *Ripristino volume*
+
+
+
+
+== Single file SnapRestore viene eseguito in ambienti NFS per i seguenti scenari:
+
+* Quando il backup selezionato per il ripristino viene eseguito in SnapCenter 4.3 e se è selezionata solo l'opzione *completa risorsa*
+* Per i contenitori di database multi-tenant (MDC), quando il backup selezionato per il ripristino viene eseguito su SnapCenter 4.3 e l'opzione *Database tenant* è selezionata
+* Quando il backup selezionato proviene da una posizione secondaria SnapMirror o SnapVault e l'opzione *completa risorsa* è selezionata
+
+
+
+
+== Single file SnapRestore viene eseguito negli ambienti SAN per i seguenti scenari:
+
+* Quando i backup vengono eseguiti su release precedenti a SnapCenter 4.3 e solo se è selezionata l'opzione *completa risorsa*
+* Quando i backup vengono eseguiti in SnapCenter 4.3 e solo se è selezionata l'opzione *completa risorsa*
+* Quando si seleziona il backup da una posizione secondaria SnapMirror o SnapVault e si seleziona l'opzione *completa risorsa*
+
+
+
+
+== Il ripristino basato su connessione e copia viene eseguito negli ambienti SAN per il seguente scenario:
+
+* Per MDC, quando il backup selezionato per il ripristino viene eseguito in SnapCenter 4.3 e l'opzione *Database tenant* è selezionata
+
+
+
+NOTE: Le opzioni *complete Resource*, *Volume Revert* e *Database tenant* sono disponibili nella pagina Restore Scope.

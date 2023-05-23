@@ -1,0 +1,45 @@
+---
+permalink: protect-scw/concept_snapcenter_plug_in_for_windows_features.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Il plug-in per Windows si integra con la tecnologia di copia Snapshot di NetApp sul sistema storage. Per utilizzare il plug-in per Windows, utilizzare l"interfaccia SnapCenter.' 
+---
+= Funzionalità del plug-in SnapCenter per Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il plug-in per Windows si integra con la tecnologia di copia Snapshot di NetApp sul sistema storage. Per utilizzare il plug-in per Windows, utilizzare l'interfaccia SnapCenter.
+
+Il plug-in per Windows include le seguenti funzionalità principali:
+
+* *Interfaccia utente grafica unificata con tecnologia SnapCenter*
++
+L'interfaccia SnapCenter offre standardizzazione e coerenza tra plug-in e ambienti. L'interfaccia di SnapCenter consente di completare processi di backup e ripristino coerenti tra i plug-in, utilizzare report centralizzati, utilizzare visualizzazioni dashboard a colpo d'occhio, impostare il controllo degli accessi basato sui ruoli (RBAC) e monitorare i processi in tutti i plug-in. SnapCenter offre inoltre la pianificazione centralizzata e la gestione delle policy per supportare le operazioni di backup e clonazione.
+
+* *Amministrazione centrale automatizzata*
++
+È possibile pianificare backup di routine del file system, configurare la conservazione dei backup basata su policy e impostare le operazioni di ripristino. È inoltre possibile monitorare in modo proattivo l'ambiente del file system configurando SnapCenter per l'invio di avvisi e-mail.
+
+* *Tecnologia di copia Snapshot NetApp senza interruzioni*
++
+Il plug-in per Windows utilizza la tecnologia di copia Snapshot di NetApp. In questo modo, è possibile eseguire il backup dei file system in pochi secondi e ripristinarli rapidamente senza interrompere la linea dell'host. Le copie Snapshot occupano uno spazio di storage minimo.
+
+
+
+Oltre a queste funzionalità principali, il plug-in per Windows offre i seguenti vantaggi:
+
+* Supporto del workflow di backup, ripristino e clonazione
+* Sicurezza supportata da RBAC e delega centralizzata dei ruoli
+* Creazione di copie efficienti in termini di spazio dei file system di produzione per il test o l'estrazione dei dati utilizzando la tecnologia FlexClone di NetApp
++
+Per informazioni sulle licenze FlexClone, vedere link:../install/concept_snapcenter_licenses.html["Licenze SnapCenter"^].
+
+* Possibilità di eseguire più backup contemporaneamente su più server
+* Cmdlet PowerShell per lo scripting delle operazioni di backup, ripristino e clonazione
+* Supporto per il backup di file system e dischi di macchine virtuali (VMDK)
+* Supporto per infrastrutture fisiche e virtualizzate
+* Supporto per iSCSI, Fibre Channel, FCoE, RDM (raw device mapping), ALM (Asymmetric LUN Mapping), VMDK su NFS e VMFS e FC virtuale
+

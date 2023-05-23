@@ -1,0 +1,51 @@
+---
+permalink: protect-hana/concept_auto_discovery_of_resources_on_linux_host.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: 'Le risorse sono database SAP HANA e volumi non dati sull"host Linux gestiti da SnapCenter. Dopo aver installato il plug-in SnapCenter per il database SAP HANA, i database SAP HANA su quell"host vengono automaticamente rilevati e visualizzati nella pagina risorse.' 
+---
+= Rilevamento automatico delle risorse sull'host Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le risorse sono database SAP HANA e volumi non dati sull'host Linux gestiti da SnapCenter. Dopo aver installato il plug-in SnapCenter per il database SAP HANA, i database SAP HANA su quell'host vengono automaticamente rilevati e visualizzati nella pagina risorse.
+
+Il rilevamento automatico è supportato per le seguenti risorse SAP HANA:
+
+* Contenitori singoli
++
+Dopo l'installazione o l'aggiornamento del plug-in, le singole risorse container situate in un plug-in host centralizzato continueranno come risorse aggiunte manualmente.
+
++
+Dopo aver installato o aggiornato il plug-in, i database SAP HANA vengono rilevati automaticamente solo sugli host SAP HANA Linux, che sono direttamente registrati in SnapCenter.
+
+* Container di database multi-tenant (MDC)
++
+Dopo aver installato o aggiornato il plug-in, le risorse MDC che si trovano in un plug-in host centralizzato continueranno come risorse aggiunte manualmente.
+
++
+È necessario continuare ad aggiungere manualmente le risorse MDC nel plug-in host centralizzato dopo l'aggiornamento a SnapCenter 4.3.
+
++
+Per gli host SAP HANA Linux registrati direttamente in SnapCenter, l'installazione o l'aggiornamento del plug-in attiverà un rilevamento automatico delle risorse sull'host. Dopo l'aggiornamento del plug-in, per ogni risorsa MDC che si trovava sull'host del plug-in, un'altra risorsa MDC verrà automaticamente rilevata con un formato GUID diverso e registrata in SnapCenter. La nuova risorsa sarà bloccata.
+
++
+Ad esempio, in SnapCenter 4.2, se la risorsa MDC E90 era localizzata nell'host del plug-in e registrata manualmente, dopo l'aggiornamento a SnapCenter 4.3, un'altra risorsa MDC E90 con un GUID diverso verrà rilevata e registrata in SnapCenter.
+
+
+
+Il rilevamento automatico non è supportato per le seguenti configurazioni:
+
+* Layout RDM e VMDK
++
+
+NOTE: Nel caso in cui vengano rilevate le suddette risorse, le operazioni di protezione dei dati non sono supportate da queste risorse.
+
+* Configurazione di più host HANA
+* Istanze multiple sullo stesso host
+* Replica del sistema HANA con scalabilità orizzontale multi-Tier
+* Ambiente di replica a cascata in modalità di replica del sistema
+

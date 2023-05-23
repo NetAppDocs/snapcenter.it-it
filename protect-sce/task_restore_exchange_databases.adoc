@@ -1,0 +1,135 @@
+---
+permalink: protect-sce/task_restore_exchange_databases.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile utilizzare SnapCenter per ripristinare i database Exchange di cui è stato eseguito il backup. 
+---
+= Ripristinare i database Exchange
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare SnapCenter per ripristinare i database Exchange di cui è stato eseguito il backup.
+
+*Cosa ti serve*
+
+* È necessario aver eseguito il backup dei gruppi di risorse, del database o dei DAG (Database Availability Group).
+* Quando il database Exchange viene migrato in un'altra posizione, l'operazione di ripristino non funziona per i backup precedenti.
+* Se si stanno replicando le copie Snapshot in un mirror o vault, l'amministratore di SnapCenter deve aver assegnato le SVM sia per i volumi di origine che per i volumi di destinazione.
+* In un DAG, se una copia del database attiva si trova su uno storage non NetApp e si desidera eseguire il ripristino dal backup passivo della copia del database presente su uno storage NetApp, eseguire la copia passiva (storage NetApp) come copia attiva, aggiornare le risorse ed eseguire l'operazione di ripristino.
++
+Eseguire `Move-ActiveMailboxDatabase` per eseguire la copia passiva del database come copia attiva del database.
+
++
+Il https://["Documentazione Microsoft"^] contiene informazioni su questo comando.
+
+
+
+*A proposito di questa attività*
+
+* Quando si esegue un'operazione di ripristino su un database, il database viene montato nuovamente sullo stesso host e non viene creato alcun nuovo volume.
+* I backup a livello DI DAG devono essere ripristinati da singoli database.
+* Il ripristino completo del disco non è supportato quando esistono file diversi dal file di database Exchange (.edb).
++
+Il plug-in per Exchange non esegue un ripristino completo su un disco se il disco contiene file Exchange come quelli utilizzati per la replica. Quando un ripristino completo potrebbe influire sulla funzionalità di Exchange, Plug-in per Exchange esegue una singola operazione di ripristino dei file.
+
+* Il plug-in per Exchange non è in grado di ripristinare le unità crittografate di BitLocker.
+* IL PERCORSO_SCRIPT viene definito utilizzando la chiave PredesedWindowsScriptsDirectory situata nel file SMCoreServiceHost.exe.Config dell'host del plug-in.
++
+Se necessario, è possibile modificare questo percorso e riavviare il servizio SMcore. Si consiglia di utilizzare il percorso predefinito per la protezione.
+
++
+Il valore della chiave può essere visualizzato da swagger attraverso l'API: API /4.7/configsettings
+
++
+È possibile utilizzare L'API GET per visualizzare il valore della chiave. L'API SET non è supportata.
+
+
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *Resources* nell'angolo superiore sinistro della pagina Resource.
+. Selezionare il plug-in di Exchange Server dall'elenco a discesa.
+. Nella pagina Resources (risorse), selezionare *Database* dall'elenco View (Visualizza).
+. Selezionare il database dall'elenco.
+. Dalla vista Manage Copies (Gestisci copie), selezionare *Backup* dalla tabella Primary Backup (Backup primari), quindi fare clic su *image:../media/restore_icon.gif["icona restore (ripristina)"]*.
+. Nella pagina Opzioni, selezionare una delle seguenti opzioni di backup del registro:
++
+|===
+| Opzione | Descrizione 
+
+
+ a| 
+Tutti i backup dei log
+ a| 
+Scegliere *All log backups* (tutti i backup dei log) per eseguire un'operazione di backup di ripristino aggiornata al minuto per ripristinare tutti i backup dei log disponibili dopo il backup completo.
+
+
+
+ a| 
+In base ai backup dei log fino a.
+ a| 
+Scegliere *by log backups until* per eseguire un'operazione di ripristino point-in-time, che ripristina il database in base ai backup dei log fino al log selezionato.
+
+
+NOTE: Il numero di registri visualizzati nell'elenco a discesa si basa su UTM. Ad esempio, se la conservazione completa del backup è 5 e la conservazione UTM è 3, il numero di backup del registro disponibili è 5, ma nell'elenco a discesa vengono elencati solo 3 registri per eseguire l'operazione di ripristino.
+
+
+
+ a| 
+Per data specifica fino al
+ a| 
+Scegliere *per data specifica fino a* per specificare la data e l'ora in cui i registri delle transazioni vengono applicati al database ripristinato. Questa operazione di ripristino point-in-time ripristina le voci del log delle transazioni registrate fino all'ultimo backup nella data e nell'ora specificate.
+
+
+
+ a| 
+Nessuno
+ a| 
+Scegliere *None* (Nessuno) quando è necessario ripristinare solo il backup completo senza alcun backup del registro.
+
+|===
++
+È possibile eseguire una delle seguenti operazioni:
+
++
+** *Recover and mount database after restore (Ripristina e monta database dopo il ripristino)* - questa opzione è selezionata per impostazione predefinita.
+** *Non verificare l'integrità dei log delle transazioni nel backup prima del ripristino* - per impostazione predefinita, SnapCenter verifica l'integrità dei log delle transazioni in un backup prima di eseguire un'operazione di ripristino.
++
+|===
+
+
+| *Best practice:* non selezionare questa opzione. 
+|===
+
+
+. Nella pagina script, immettere il percorso e gli argomenti del prespt o del postscript che devono essere eseguiti rispettivamente prima o dopo l'operazione di ripristino.
++
+Gli argomenti prescrittivi del ripristino includono il database e l'istanza del server.
+
++
+Gli argomenti relativi al ripristino postscript includono: Database, ServerInstance, BackupName, LogDirectory e TargetServerInstance.
+
++
+È possibile eseguire uno script per aggiornare i trap SNMP, automatizzare gli avvisi, inviare i registri e così via.
+
++
+
+NOTE: Il percorso prescripts o postscripts non deve includere dischi o condivisioni. Il percorso deve essere relativo al PERCORSO_SCRIPT.
+
+. Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
++
+È inoltre necessario specificare gli indirizzi e-mail del mittente e del destinatario e l'oggetto dell'e-mail.
+
+. Esaminare il riepilogo, quindi fare clic su *fine*.
+. È possibile visualizzare lo stato del processo di ripristino espandendo il pannello attività nella parte inferiore della pagina.
++
+È necessario monitorare il processo di ripristino utilizzando la pagina *Monitor* > *Jobs*.
+
+
+
+Quando si ripristina un database attivo da un backup, il database passivo potrebbe andare in stato di sospensione o di errore se si verifica un ritardo tra la replica e il database attivo.
+
+La modifica dello stato può verificarsi quando la catena di log del database attivo passa e inizia una nuova filiale che interrompe la replica. Exchange Server tenta di correggere la replica, ma se non è in grado di farlo, dopo il ripristino, è necessario creare un nuovo backup e quindi eseguire nuovamente il reeeding della replica.

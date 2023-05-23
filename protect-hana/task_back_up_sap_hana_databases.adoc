@@ -1,0 +1,166 @@
+---
+permalink: protect-hana/task_back_up_sap_hana_databases.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: Se una risorsa non fa ancora parte di un gruppo di risorse, è possibile eseguire il backup della risorsa dalla pagina risorse. 
+---
+= Eseguire il backup dei database SAP HANA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se una risorsa non fa ancora parte di un gruppo di risorse, è possibile eseguire il backup della risorsa dalla pagina risorse.
+
+*Cosa ti serve*
+
+* È necessario aver creato una policy di backup.
+* Se si desidera eseguire il backup di una risorsa che ha una relazione SnapMirror con uno storage secondario, il ruolo ONTAP assegnato all'utente dello storage deve includere il privilegio "`snapmirror all`". Tuttavia, se si utilizza il ruolo "`vsadmin`", il privilegio "`snapmirror all`" non è richiesto.
+* Per le operazioni di backup basate su copia Snapshot, assicurarsi che tutti i database del tenant siano validi e attivi.
+* Per creare backup di replica del sistema SAP HANA, si consiglia di aggiungere tutte le risorse del sistema SAP HANA in un unico gruppo di risorse. Ciò garantisce un backup perfetto durante la modalità takeover-failback.
++
+link:task_create_resource_groups_and_attach_policies.html["Creare gruppi di risorse e allegare policy"].
+
++
+link:task_back_up_resource_groups_sap_hana.html["Eseguire il backup dei gruppi di risorse"]
+
+* Se si desidera creare un backup basato su file quando uno o più database tenant sono inattivi, impostare IL parametro ALLOW_FILE_BASED_BACKUP_IFINATTIVO_TENANTS_PRESENT su *YES* nel file di proprietà HANA utilizzando `Set-SmConfigSettings` cmdlet.
++
+Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo Get-Help _command_name_. In alternativa, fare riferimento alla https://["Guida di riferimento al cmdlet del software SnapCenter"]
+
+* Per i comandi pre e post per le operazioni quiesce, Snapshot copy e unquiesce, controllare se i comandi esistono nell'elenco dei comandi disponibile sull'host plug-in dai seguenti percorsi:
++
+Per Windows: _C: File di programma NetApp, SnapCenter, Snapcenter Plug-in Creator, ecc., allowed_comands_list.txt_
+
++
+Per Linux: _/var/opt/snapcenter/scc/allowed_comands_list.txt_
+
+
+
+
+NOTE: Se i comandi non sono presenti nell'elenco dei comandi, l'operazione avrà esito negativo.
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina Resource, filtrare le risorse dall'elenco a discesa *View* in base al tipo di risorsa.
++
+Fare clic su *image:../media/filter_icon.gif[""]*, quindi selezionare il nome host e il tipo di risorsa per filtrare le risorse. Quindi fare clic su image:../media/filter_icon.gif[""] per chiudere il riquadro del filtro.
+
+. Fare clic sulla risorsa di cui si desidera eseguire il backup.
+. Nella pagina Resource, selezionare *Use customed name format for Snapshot copy* (Usa formato nome personalizzato per la copia Snapshot), quindi immettere un formato nome personalizzato da utilizzare per il nome della copia Snapshot.
++
+Ad esempio, _customtext_policy_hostname_ o _resource_hostname_. Per impostazione predefinita, al nome della copia Snapshot viene aggiunto un indicatore data e ora.
+
+. Nella pagina Impostazioni applicazione, effettuare le seguenti operazioni:
++
+** Fare clic sulla freccia *Backup* per impostare opzioni di backup aggiuntive:
++
+Attivare il backup dei gruppi di coerenza, se necessario, ed eseguire le seguenti attività:
+
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Attendere il completamento dell'operazione "Consistency Group Snapshot"
+ a| 
+Selezionare *urgente*, *Medio* o *rilassato* per specificare il tempo di attesa per il completamento dell'operazione di copia Snapshot. Urgente = 5 secondi, Medio = 7 secondi e rilassato = 20 secondi.
+
+
+
+ a| 
+Disattiva sincronizzazione WAFL
+ a| 
+Selezionare questa opzione per evitare di forzare un punto di coerenza WAFL.
+
+|===
+** Fare clic sulla freccia *Scripts* per eseguire i comandi pre e post per le operazioni di quiesce, copia Snapshot e senza richieste.
++
+È inoltre possibile eseguire i comandi preliminari prima di uscire dall'operazione di backup. Le prescrizioni e i postscript vengono eseguiti nel server SnapCenter.
+
+** Fare clic sulla freccia **configurazioni personalizzate**, quindi immettere le coppie di valori personalizzate richieste per tutti i lavori che utilizzano questa risorsa.
+** Fare clic sulla freccia *Snapshot Copy Tool* per selezionare lo strumento per creare le copie Snapshot:
++
+|===
+| Se vuoi... | Quindi... 
+
+
+ a| 
+SnapCenter per creare una copia Snapshot a livello di storage
+ a| 
+Selezionare *SnapCenter senza coerenza del file system*.
+
+
+
+ a| 
+SnapCenter utilizza il plug-in per Windows per mettere il file system in uno stato coerente e quindi creare una copia Snapshot
+ a| 
+Selezionare *SnapCenter with file system Consistency*.
+
+
+
+ a| 
+Per immettere il comando per creare una copia Snapshot
+ a| 
+Selezionare *Altro*, quindi immettere il comando per creare una copia Snapshot.
+
+|===
++
+image:../media/application_settings.gif[""]
+
+
+
+. Nella pagina Criteri, attenersi alla seguente procedura:
++
+.. Selezionare uno o più criteri dall'elenco a discesa.
++
+
+NOTE: Puoi anche creare una policy facendo clic su *image:../media/add_policy_from_resourcegroup.gif[""]*.
+
++
+Nella sezione Configure schedules for selected policies (Configura pianificazioni per policy selezionate), vengono elencati i criteri selezionati.
+
+.. Fare clic su *image:../media/add_policy_from_resourcegroup.gif[""]* Nella colonna Configure Schedules (Configura pianificazioni) per il criterio per il quale si desidera configurare una pianificazione.
+.. Nella finestra di dialogo Add schedules for policy _policy_name_, configurare la pianificazione, quindi fare clic su *OK*.
++
+_policy_name_ è il nome del criterio selezionato.
+
++
+Le pianificazioni configurate sono elencate nella colonna Applied Schedules (Pianificazioni applicate).
+
+
+
+. Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
++
+È inoltre necessario specificare gli indirizzi e-mail del mittente e del destinatario e l'oggetto dell'e-mail. SMTP deve essere configurato anche in *Impostazioni* > *Impostazioni globali*.
+
+. Esaminare il riepilogo, quindi fare clic su *fine*.
++
+Viene visualizzata la pagina della topologia delle risorse.
+
+. Fare clic su *Esegui backup ora*.
+. Nella pagina Backup, attenersi alla seguente procedura:
++
+.. Se sono stati applicati più criteri alla risorsa, selezionare il criterio da utilizzare per il backup dall'elenco a discesa *Policy*.
++
+Se il criterio selezionato per il backup on-demand è associato a una pianificazione di backup, i backup on-demand verranno conservati in base alle impostazioni di conservazione specificate per il tipo di pianificazione.
+
+.. Fare clic su *Backup*.
+
+
+. Monitorare l'avanzamento dell'operazione facendo clic su *Monitor* > *Jobs*.
++
+** Nelle configurazioni MetroCluster, SnapCenter potrebbe non essere in grado di rilevare una relazione di protezione dopo un failover.
++
+Per ulteriori informazioni, vedere: https://["Impossibile rilevare la relazione SnapMirror o SnapVault dopo il failover di MetroCluster"^]
+
+** Se si esegue il backup dei dati delle applicazioni su VMDK e la dimensione dell'heap Java per il plug-in SnapCenter per VMware vSphere non è sufficiente, il backup potrebbe non riuscire.
++
+Per aumentare la dimensione dell'heap Java, individuare il file script _/opt/netapp/init_scripts/scvservice_. In questo script, il comando _do_start method_ avvia il servizio plug-in VMware di SnapCenter. Aggiornare il comando al seguente: _Java -jar -Xmx8192M -Xms4096M_
+
+
+
+

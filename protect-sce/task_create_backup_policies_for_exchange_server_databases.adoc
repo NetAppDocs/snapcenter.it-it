@@ -1,0 +1,293 @@
+---
+permalink: protect-sce/task_create_backup_policies_for_exchange_server_databases.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile creare un criterio di backup per le risorse di Exchange o per i gruppi di risorse prima di utilizzare SnapCenter per eseguire il backup delle risorse di Exchange Server oppure creare un criterio di backup al momento della creazione di un gruppo di risorse o del backup di una singola risorsa. 
+---
+= Creare criteri di backup per i database di Exchange Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare un criterio di backup per le risorse di Exchange o per i gruppi di risorse prima di utilizzare SnapCenter per eseguire il backup delle risorse di Exchange Server oppure creare un criterio di backup al momento della creazione di un gruppo di risorse o del backup di una singola risorsa.
+
+*Cosa ti serve*
+
+* Devi aver definito la tua strategia di protezione dei dati.
++
+Per ulteriori informazioni, vedere la sezione relativa alla definizione di una strategia di protezione dei dati per i database Exchange.
+
+* Devi essere preparato per la protezione dei dati completando attività come l'installazione di SnapCenter, l'aggiunta di host, l'identificazione delle risorse e la creazione di connessioni al sistema di storage.
+* È necessario aver aggiornato (rilevato) le risorse di Exchange Server.
+* Se si stanno replicando le copie Snapshot in un mirror o vault, l'amministratore di SnapCenter deve aver assegnato all'utente le macchine virtuali di storage (SVM) per i volumi di origine e di destinazione.
+* Se si desidera eseguire gli script PowerShell in prescripts e postscripts, è necessario impostare il valore di `usePowershellProcessforScripts` parametro su true in `web.config` file.
++
+Il valore predefinito è false
+
+
+
+*A proposito di questa attività*
+
+* Un criterio di backup è un insieme di regole che regolano la gestione e la conservazione dei backup e la frequenza con cui viene eseguito il backup delle risorse o del gruppo di risorse. Inoltre, è possibile specificare le impostazioni dello script. La specifica delle opzioni in un criterio consente di risparmiare tempo quando si desidera riutilizzare il criterio per un altro gruppo di risorse.
+* La conservazione completa del backup è specifica di una determinata policy. Un database o una risorsa che utilizza il criterio A con una conservazione completa del backup di 4 conserva 4 backup completi e non ha alcun effetto sul criterio B per lo stesso database o risorsa, che potrebbe avere una conservazione di 3 per conservare 3 backup completi.
+* La conservazione del backup dei log è efficace in tutti i criteri e si applica a tutti i backup dei log di un database o di una risorsa. Pertanto, quando si esegue un backup completo utilizzando il criterio B, l'impostazione di conservazione del registro influisce sui backup del registro creati dal criterio A sullo stesso database o risorsa. Allo stesso modo, l'impostazione di conservazione dei log per il criterio A influisce sui backup dei log creati dal criterio B sullo stesso database.
+* IL PERCORSO_SCRIPT viene definito utilizzando la chiave PredesedWindowsScriptsDirectory situata nel file SMCoreServiceHost.exe.Config dell'host del plug-in.
++
+Se necessario, è possibile modificare questo percorso e riavviare il servizio SMcore. Si consiglia di utilizzare il percorso predefinito per la protezione.
+
++
+Il valore della chiave può essere visualizzato da swagger attraverso l'API: API /4.7/configsettings
+
++
+È possibile utilizzare L'API GET per visualizzare il valore della chiave. L'API SET non è supportata.
+
+
+
+|===
+
+
+| *Best practice:* è meglio configurare il criterio di conservazione secondario in base al numero di backup completi e di log che si desidera conservare. Quando si configurano i criteri di conservazione secondari, tenere presente che quando i database e i log che si trovano in volumi diversi, ciascun backup può avere tre copie Snapshot e quando i database e i log si trovano nello stesso volume, ciascun backup può avere due copie Snapshot. 
+|===
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *Impostazioni*.
+. Nella pagina Impostazioni, fare clic su *Criteri*.
+. Fare clic su *nuovo*.
+. Nella pagina Name (Nome), immettere il nome e la descrizione della policy.
+. Nella pagina Backup Type (tipo di backup), attenersi alla seguente procedura:
++
+.. Scegliere il tipo di backup:
++
+|===
+| Se si desidera... | Eseguire questa operazione... 
+
+
+ a| 
+Eseguire il backup dei file di database e dei registri delle transazioni richiesti
+ a| 
+Selezionare *Backup completo e Backup del registro*.
+
+Il backup dei database viene eseguito con il troncamento del log e viene eseguito il backup di tutti i log, inclusi quelli troncati.
+
+
+NOTE: Si tratta del tipo di backup consigliato.
+
+
+
+ a| 
+Eseguire il backup dei file di database e dei log delle transazioni non assegnate
+ a| 
+Selezionare *Backup completo*.
+
+Il backup dei database viene eseguito con il troncamento del log e non viene eseguito il backup dei log troncati.
+
+
+
+ a| 
+Eseguire il backup di tutti i log delle transazioni
+ a| 
+Selezionare *Log backup*.
+
+Viene eseguito il backup di tutti i log delle transazioni nel file system attivo e non viene eseguito alcun troncamento del log.
+
+Sullo stesso disco del log live viene creata una directory _scebackupinfo_. Questa directory contiene il puntatore alle modifiche incrementali per il database Exchange e non è equivalente ai file di log completi.
+
+
+
+ a| 
+Eseguire il backup di tutti i file di database e dei log delle transazioni senza troncare i file di log delle transazioni
+ a| 
+Selezionare *Copy Backup* (Copia backup).
+
+Viene eseguito il backup di tutti i database e di tutti i registri e non viene eseguito alcun troncamento del registro. In genere, si utilizza questo tipo di backup per eseguire di nuovo la configurazione di una replica o per verificare o diagnosticare un problema.
+
+|===
++
+
+NOTE: È necessario definire lo spazio necessario per i backup dei log in base alla conservazione completa del backup e non in base alla conservazione up-to-the-minute (UTM).
+
++
+
+NOTE: Creare policy di vault separate per log e database quando si gestiscono volumi Exchange (LUN) e impostare il mantenimento (conservazione) del criterio di log sul doppio del numero per ciascuna etichetta del criterio di database, utilizzando le stesse etichette. Per ulteriori informazioni, vedere https://["I backup di SnapCenter per Exchange conservano solo la metà delle istantanee sul volume di log di destinazione del vault"^]
+
+.. Nella sezione Database Availability Group Settings (Impostazioni gruppo disponibilità database), selezionare un'azione:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Eseguire il backup delle copie attive
+ a| 
+Selezionare questa opzione per eseguire il backup solo delle copie attive del database selezionato.
+
+Per i DAG (Database Availability Group), questa opzione esegue il backup solo delle copie attive di tutti i database nel DAG.
+
+Non viene eseguito il backup delle copie passive.
+
+
+
+ a| 
+Copie di backup sui server da selezionare al momento della creazione del processo di backup
+ a| 
+Selezionare questa opzione per eseguire il backup delle copie dei database sui server selezionati, sia attive che passive.
+
+Per i DAG, questa opzione consente di eseguire il backup delle copie attive e passive di tutti i database sui server selezionati.
+
+|===
++
+
+NOTE: Nelle configurazioni del cluster, i backup vengono conservati in ciascun nodo del cluster in base alle impostazioni di conservazione impostate nel criterio. Se il nodo proprietario del cluster cambia, i backup del nodo proprietario precedente verranno conservati. La conservazione è applicabile solo a livello di nodo.
+
+.. Nella sezione Schedule frequency (frequenza pianificazione), selezionare uno o più tipi di frequenza: *On demand*, *Hourly*, *Daily*, *Weekly* e *Monthly*.
++
+
+NOTE: È possibile specificare la pianificazione (data di inizio, data di fine) per le operazioni di backup durante la creazione di un gruppo di risorse. Ciò consente di creare gruppi di risorse che condividono la stessa policy e frequenza di backup, ma consente di assegnare diverse pianificazioni di backup a ciascun criterio.
+
++
+
+NOTE: Se sono previste le 2:00, la programmazione non verrà attivata durante l'ora legale (DST).
+
+
+
+. Nella pagina di conservazione, configurare le impostazioni di conservazione.
++
+Le opzioni visualizzate dipendono dal tipo di backup e dal tipo di frequenza precedentemente selezionati.
+
++
+
+NOTE: Il valore massimo di conservazione è 1018 per le risorse su ONTAP 9.4 o versioni successive e 254 per le risorse su ONTAP 9.3 o versioni precedenti. I backup non avranno esito positivo se la conservazione viene impostata su un valore superiore a quello supportato dalla versione di ONTAP sottostante.
+
++
+
+IMPORTANT: Se si intende attivare la replica SnapVault, è necessario impostare il numero di conservazione su 2 o superiore. Se si imposta il conteggio di conservazione su 1, l'operazione di conservazione potrebbe non riuscire perché la prima copia Snapshot è la copia Snapshot di riferimento per la relazione SnapVault fino a quando una copia Snapshot più recente non viene replicata nella destinazione.
+
++
+.. Nella sezione Impostazioni conservazione backup registro, selezionare una delle seguenti opzioni:
++
+|===
+| Se si desidera... | Eseguire questa operazione... 
+
+
+ a| 
+Conserva solo un numero specifico di backup del log
+ a| 
+Selezionare *numero di backup completi per i quali vengono conservati i registri* e specificare il numero di backup completi per i quali si desidera eseguire un ripristino up-to-the-minute.
+
+La conservazione UTM (up-to-the-minute) si applica al backup del registro creato tramite backup completo o del registro. Ad esempio, se le impostazioni di conservazione UTM sono configurate per conservare i backup dei log degli ultimi 5 backup completi, i backup dei log degli ultimi 5 backup completi vengono conservati.
+
+Le cartelle di log create come parte dei backup completi e dei log vengono automaticamente eliminate come parte di UTM. Non è possibile eliminare manualmente le cartelle di log. Ad esempio, se l'impostazione di conservazione Full (completa) o Full (completa) e Log Backup (Backup registro) è impostata su 1 mese e UTM Retention (conservazione UTM) è impostata su 10 giorni, la cartella di registro creata come parte di questi backup verrà eliminata come da UTM. Di conseguenza, saranno presenti solo cartelle di log di 10 giorni e tutti gli altri backup saranno contrassegnati per il ripristino point-in-time.
+
+È possibile impostare il valore di conservazione UTM su 0, se non si desidera eseguire un ripristino up-to-the-minute. In questo modo si attiva l'operazione di ripristino point-in-time.
+
+*Best practice:* è meglio che l'impostazione sia uguale all'impostazione per Total Snapshot Copies (full backups) nella sezione Full backup retention settings. In questo modo, i file di registro vengono conservati per ogni backup completo.
+
+
+
+ a| 
+Conservare le copie di backup per un numero specifico di giorni
+ a| 
+Selezionare l'opzione *Mantieni backup registro per ultimo* e specificare il numero di giorni in cui conservare le copie di backup del registro.
+
+I backup del registro vengono conservati fino al numero di giorni di backup completi.
+
+|===
++
+Se è stato selezionato *Log backup* come tipo di backup, i backup dei log vengono conservati come parte delle impostazioni di conservazione aggiornate al minuto per i backup completi.
+
+.. Nella sezione Full backup retention settings (Impostazioni di conservazione backup complete), selezionare una delle seguenti opzioni per i backup on-demand, quindi selezionarne una per i backup completi:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Conserva solo un numero specifico di copie Snapshot
+ a| 
+Se si desidera specificare il numero di backup completi da conservare, selezionare l'opzione *Total Snapshot Copies to Keep* (copie Snapshot totali da conservare) e specificare il numero di copie Snapshot (backup completi) da conservare.
+
+Se il numero di backup completi supera il numero specificato, i backup completi che superano il numero specificato vengono eliminati, con le copie meno recenti eliminate per prime.
+
+
+
+ a| 
+Conserva backup completi per un numero specifico di giorni
+ a| 
+Selezionare l'opzione *Mantieni copie Snapshot per* e specificare il numero di giorni in cui conservare le copie Snapshot (backup completi).
+
+|===
++
+
+NOTE: Se si dispone di un database con solo backup di log e nessun backup completo su un host in una configurazione DAG, i backup di log vengono conservati nei seguenti modi:
+
++
+*** Per impostazione predefinita, SnapCenter trova il backup completo più vecchio per questo database in tutti gli altri host del DAG ed elimina tutti i backup del registro su questo host che sono stati eseguiti prima del backup completo.
+*** È possibile eseguire l'override del comportamento di conservazione predefinito di un database su un host in un DAG con solo backup di log aggiungendo la chiave *MaxLogBackupOnlyCountWithoutFullBackup* nel file _C: File di programma/NetApp/SnapCenter WebApp/web.config_.
++
+ <add key="MaxLogBackupOnlyCountWithoutFullBackup" value="10">
++
+Nell'esempio, il valore 10 significa che si mantengono fino a 10 backup del log sull'host.
+
+
+
+
+
+. Nella pagina Replication (Replica), selezionare una o entrambe le seguenti opzioni di replica secondaria:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Aggiornare SnapMirror dopo aver creato una copia Snapshot locale
+ a| 
+Selezionare questa opzione per conservare le copie mirror dei set di backup su un altro volume (SnapMirror).
+
+
+
+ a| 
+Aggiornare SnapVault dopo aver creato una copia Snapshot locale
+ a| 
+Selezionare questa opzione per eseguire la replica del backup disk-to-disk.
+
+
+
+ a| 
+Etichetta del criterio secondario
+ a| 
+Selezionare un'etichetta Snapshot.
+
+A seconda dell'etichetta della copia Snapshot selezionata, ONTAP applica la policy di conservazione della copia Snapshot secondaria corrispondente all'etichetta.
+
+
+NOTE: Se è stato selezionato *Update SnapMirror dopo la creazione di una copia Snapshot locale*, è possibile specificare l'etichetta del criterio secondario. Tuttavia, se è stato selezionato *Aggiorna SnapVault dopo la creazione di una copia Snapshot locale*, è necessario specificare l'etichetta del criterio secondario.
+
+
+
+ a| 
+Numero tentativi di errore
+ a| 
+Immettere il numero di tentativi di replica che devono verificarsi prima dell'arresto del processo.
+
+|===
++
+
+NOTE: È necessario configurare il criterio di conservazione di SnapMirror in ONTAP per lo storage secondario per evitare di raggiungere il limite massimo di copie Snapshot sullo storage secondario.
+
+. Nella pagina script, immettere il percorso e gli argomenti del prespt o del postscript che devono essere eseguiti rispettivamente prima o dopo l'operazione di backup.
++
+** Gli argomenti di backup prescrittivi includono "` database`" e "`` ServerInstance".
+** Gli argomenti di backup PostScript includono "` database`", "` ServerInstance`", "` BackupName`", "` LogDirectory`" e "`` LogSnapshot".
++
+È possibile eseguire uno script per aggiornare i trap SNMP, automatizzare gli avvisi, inviare i registri e così via.
+
++
+
+NOTE: Il percorso prescripts o postscripts non deve includere dischi o condivisioni. Il percorso deve essere relativo al PERCORSO_SCRIPT.
+
+
+
+. Esaminare il riepilogo, quindi fare clic su *fine*.
+

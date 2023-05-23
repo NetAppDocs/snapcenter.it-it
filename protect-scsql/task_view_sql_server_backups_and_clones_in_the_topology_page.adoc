@@ -1,0 +1,66 @@
+---
+permalink: protect-scsql/task_view_sql_server_backups_and_clones_in_the_topology_page.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SQL Server 
+summary: Quando si prepara il backup o la clonazione di una risorsa, potrebbe essere utile visualizzare una rappresentazione grafica di tutti i backup e cloni sullo storage primario e secondario. 
+---
+= Visualizzare i backup e i cloni di SQL Server nella pagina topologia
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando si prepara il backup o la clonazione di una risorsa, potrebbe essere utile visualizzare una rappresentazione grafica di tutti i backup e cloni sullo storage primario e secondario.
+
+*A proposito di questa attività*
+
+Nella pagina topologia, è possibile visualizzare tutti i backup e i cloni disponibili per la risorsa o il gruppo di risorse selezionato. È possibile visualizzare i dettagli di tali backup e cloni e selezionarli per eseguire le operazioni di protezione dei dati.
+
+È possibile esaminare le seguenti icone nella vista *Gestisci copie* per determinare se i backup e i cloni sono disponibili sullo storage primario o secondario (copie Mirror o copie Vault).
+
+* image:../media/topology_primary_storage.gif["icona dello storage primario"] visualizza il numero di backup e cloni disponibili sullo storage primario.
+* image:../media/topology_mirror_secondary_storage.gif["Icona Mirror dello storage secondario"] Visualizza il numero di backup e cloni mirrorati sullo storage secondario utilizzando la tecnologia SnapMirror.
+* image:../media/topology_vault_secondary_storage.gif["icona del vault secondario"] Visualizza il numero di backup e cloni replicati sullo storage secondario utilizzando la tecnologia SnapVault.
++
+** Il numero di backup visualizzati include i backup eliminati dallo storage secondario.
++
+Ad esempio, se sono stati creati 6 backup utilizzando un criterio per conservare solo 4 backup, il numero di backup visualizzato è 6.
+
+
+
+
+
+
+NOTE: I cloni di un backup di un mirror flessibile della versione su un volume di tipo mirror-vault vengono visualizzati nella vista della topologia, ma il numero di backup mirror nella vista della topologia non include il backup flessibile della versione.
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina risorse, selezionare la risorsa o il gruppo di risorse dall'elenco a discesa *Visualizza*.
+. Selezionare la risorsa dalla vista dei dettagli della risorsa o dalla vista dei dettagli del gruppo di risorse.
++
+Se la risorsa selezionata è un database clonato, proteggere il database clonato, l'origine del clone viene visualizzata nella pagina topologia. Fare clic su *Dettagli* per visualizzare il backup utilizzato per la clonazione.
+
++
+Se la risorsa è protetta, viene visualizzata la pagina topologia della risorsa selezionata.
+
+. Consulta la scheda Summary per visualizzare un riepilogo del numero di backup e cloni disponibili sullo storage primario e secondario.
++
+La sezione *Summary Card* mostra il numero totale di backup e cloni.
+
++
+Facendo clic sul pulsante *Refresh* viene avviata una query dello storage per visualizzare un conteggio accurato.
+
+. Nella vista *Gestisci copie*, fare clic su *backup* o *cloni* dallo storage primario o secondario per visualizzare i dettagli di un backup o clone.
++
+I dettagli dei backup e dei cloni vengono visualizzati in formato tabella.
+
+. Selezionare il backup dalla tabella, quindi fare clic sulle icone di protezione dei dati per eseguire operazioni di ripristino, clonazione, ridenominazione ed eliminazione.
++
+
+NOTE: Non è possibile rinominare o eliminare i backup presenti nello storage secondario.
+
+. Selezionare un clone dalla tabella e fare clic su *Clone Split*.
+. Se si desidera eliminare un clone, selezionarlo dalla tabella, quindi fare clic su image:../media/delete_icon.gif[""].
+

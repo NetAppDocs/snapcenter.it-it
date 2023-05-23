@@ -1,0 +1,130 @@
+---
+permalink: protect-sco/task_restore_and_recover_pluggable_database_using_point_in_time_recovery.html 
+sidebar: sidebar 
+keywords: PDB, pluggable database, restore, CDB, PITR, point-in-time recovery, RMAN 
+summary: 'È possibile ripristinare e ripristinare un database collegabile (PDB) che è stato corrotto o interrotto senza influire sulle altre PDB nel database container (CDB). SnapCenter utilizza RMAN per eseguire il ripristino point-in-time del PDB.' 
+---
+= Ripristino e ripristino di database collegabili mediante ripristino point-in-time
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile ripristinare e ripristinare un database collegabile (PDB) che è stato danneggiato o interrotto senza influire sulle altre PDB nel database container (CDB). SnapCenter utilizza RMAN per eseguire il recovery point-in-time (PITR) del PDB.
+
+*Prima di iniziare*
+
+* I backup necessari per eseguire il PITR di una PDB devono essere catalogati e montati.
++
+
+NOTE: In una configurazione RAC, chiudere manualmente la PDB (cambiando lo stato in MONTATO) su tutti i nodi della configurazione RAC.
+
+* Se il plug-in è stato installato come utente non root, è necessario assegnare manualmente le autorizzazioni di esecuzione alle directory prescrittt e postscript.
+
+
+*A proposito di questa attività*
+
+Durante l'operazione PITR, RMAN crea un'istanza ausiliaria nella destinazione ausiliaria specificata. La destinazione ausiliaria potrebbe essere un punto di montaggio o un gruppo di dischi ASM. Se lo spazio disponibile nella posizione di montaggio è sufficiente, è possibile riutilizzare una delle posizioni di montaggio invece di un punto di montaggio dedicato.
+
+Specificare la data e l'ora o l'SCN per eseguire il PITR del PDB. RMAN è in grado di ripristinare PDB IN LETTURA/SCRITTURA, IN SOLA LETTURA o eliminati, inclusi i file di dati.
+
+È possibile ripristinare e ripristinare solo:
+
+* Un PDB alla volta
+* Un tablespace in una PDB
+* Tablespace multipli dello stesso PDB
+
+
+
+NOTE: In una configurazione RAC, è possibile eseguire PITR di tablespace da qualsiasi nodo del RAC.
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina Resources (risorse), selezionare *Database* o *Resource Group* dall'elenco *View* (Visualizza).
+. Selezionare il database di tipo istanza singola (multi-tenant) dalla vista dei dettagli del database o dalla vista dei dettagli del gruppo di risorse.
++
+Viene visualizzata la pagina della topologia del database.
+
+. Dalla vista Manage Copies (Gestisci copie), selezionare *Backup* dal sistema di storage primario o secondario (mirrorato o replicato).
++
+Se il backup non è catalogato, selezionare il backup e fare clic su *Catalog* (Catalogo).
+
+. Selezionare il backup catalogato, quindi fare clic su *image:../media/restore_icon.gif["icona restore (ripristina)"]*.
+. Nella pagina Restore Scope (ambito ripristino), eseguire le seguenti operazioni:
++
+.. Se è stato selezionato un backup di un database in un ambiente RAC (Real Application Clusters), selezionare il nodo RAC.
+.. A seconda che si desideri ripristinare la PDB o gli spazi delle tabelle in una PDB, eseguire una delle seguenti operazioni:
++
+|===
+
+
+| Se si desidera... | Fasi... 
+
+
+ a| 
+Ripristinare un PDB
+ a| 
+... Selezionare *Pluggable Databases (PDB)*.
+... Specificare il PDB che si desidera ripristinare.
++
+
+NOTE: Non è possibile eseguire PITR sul database DI INIZIALIZZAZIONE PDB.
+
+
+
+
+
+ a| 
+Ripristinare gli spazi delle tabelle in una PDB
+ a| 
+... Selezionare *tablespace Pluggable database (PDB)*.
+... Specificare il PDB.
+... Specificare un singolo tablespace o più tablespace da ripristinare.
++
+
+NOTE: Non è possibile eseguire PITR su SYSAUX, SYSTEM e UNDO tablespace.
+
+
+
+|===
+.. Selezionare *Cambia stato del database se necessario per il ripristino e il ripristino* per impostare lo stato del database sullo stato richiesto per eseguire le operazioni di ripristino e ripristino.
+
+
+. Nella pagina Recovery Scope (ambito ripristino), eseguire una delle seguenti operazioni:
++
+** Se si desidera ripristinare un numero SCN (System Change Number) specifico, selezionare *fino a SCN* e specificare il numero SCN e la destinazione ausiliaria.
+** Se si desidera ripristinare una data e un'ora specifiche, selezionare *Data e ora* e specificare la data e l'ora e la destinazione ausiliaria.
++
+SnapCenter identifica e quindi monta e cataloga il numero ottimale di backup dei dati e dei log necessari per eseguire il PITR in base alla data e all'ora specificate.
+
+
+
+. Nella pagina PreOps, immettere il percorso e gli argomenti della prescrizione che si desidera eseguire prima dell'operazione di ripristino.
++
+Le prescrizioni devono essere memorizzate nel percorso /var/opt/snapcenter/spl/scripts o in qualsiasi cartella all'interno di questo percorso. Per impostazione predefinita, il percorso /var/opt/snapcenter/spl/scripts viene compilato. Se sono state create cartelle all'interno di questo percorso per memorizzare gli script, è necessario specificare tali cartelle nel percorso.
+
++
+È inoltre possibile specificare il valore di timeout dello script. Il valore predefinito è 60 secondi.
+
++
+SnapCenter consente di utilizzare le variabili di ambiente predefinite quando si eseguono prespt e postscript. link:../protect-sco/predefined-environment-variables-prescript-postscript-restore.html["Scopri di più"^]
+
+. Nella pagina PostOps, attenersi alla seguente procedura:
++
+.. Immettere il percorso e gli argomenti del postscript che si desidera eseguire dopo l'operazione di ripristino.
++
+
+NOTE: Se l'operazione di ripristino non riesce, i postscript non vengono eseguiti e le attività di pulizia vengono attivate direttamente.
+
+.. Selezionare questa casella di controllo se si desidera aprire il database dopo il ripristino.
++
+In una configurazione RAC, la PDB viene aperta solo sul nodo in cui è stato ripristinato il database. Aprire manualmente la PDB recuperata su tutti gli altri nodi della configurazione RAC.
+
+
+
+. Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare le notifiche email.
+. Esaminare il riepilogo, quindi fare clic su *fine*.
+. Monitorare l'avanzamento dell'operazione facendo clic su *Monitor* > *Jobs*.
+

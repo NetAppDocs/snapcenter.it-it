@@ -1,0 +1,53 @@
+---
+permalink: protect-scsql/reference_sources_and_destinations_for_a_restore_operation.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile ripristinare un database SQL Server da una copia di backup sullo storage primario o secondario. È inoltre possibile ripristinare il database in diverse destinazioni oltre alla posizione originale, consentendo di scegliere la destinazione che supporta i requisiti. 
+---
+= Origini e destinazioni per un'operazione di ripristino
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile ripristinare un database SQL Server da una copia di backup sullo storage primario o secondario. È inoltre possibile ripristinare il database in diverse destinazioni oltre alla posizione originale, consentendo di scegliere la destinazione che supporta i requisiti.
+
+
+
+== Origini di un'operazione di ripristino
+
+È possibile ripristinare i database dallo storage primario o secondario.
+
+
+
+== Destinazioni per un'operazione di ripristino
+
+È possibile ripristinare i database in diverse destinazioni:
+
+|===
+| Destinazione | Descrizione 
+
+
+ a| 
+La posizione originale
+ a| 
+Per impostazione predefinita, SnapCenter ripristina il database nella stessa posizione della stessa istanza di SQL Server.
+
+
+
+ a| 
+Una posizione diversa
+ a| 
+È possibile ripristinare il database in una posizione diversa su qualsiasi istanza di SQL Server all'interno dello stesso host.
+
+
+
+ a| 
+Posizione originale o diversa utilizzando nomi di database diversi
+ a| 
+È possibile ripristinare il database con un nome diverso in qualsiasi istanza di SQL Server sullo stesso host in cui è stato creato il backup.
+
+|===
+
+NOTE: Il ripristino su host alternativo tra server ESX per database SQL su VMDK (datastore NFS e VMFS) non è supportato.

@@ -1,0 +1,88 @@
+---
+permalink: protect-scw/task_restore_windows_file_system_backups.html 
+sidebar: sidebar 
+keywords: restore 
+summary: È possibile utilizzare SnapCenter per ripristinare i backup del file system. Il ripristino del file system è un processo multifase che copia tutti i dati da un backup specificato nella posizione originale del file system. 
+---
+= Ripristinare i backup del file system di Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare SnapCenter per ripristinare i backup del file system. Il ripristino del file system è un processo multifase che copia tutti i dati da un backup specificato nella posizione originale del file system.
+
+*Cosa ti serve*
+
+* È necessario aver eseguito il backup del file system.
+* Se è in corso un'operazione pianificata, ad esempio un'operazione di backup, per un file system, tale operazione deve essere annullata prima di poter avviare un'operazione di ripristino.
+* È possibile ripristinare solo un backup del file system nella posizione originale e non in un percorso alternativo.
++
+Non è possibile ripristinare un singolo file da un backup perché il file system ripristinato sovrascrive qualsiasi dato nella posizione originale del file system. Per ripristinare un singolo file da un backup del file system, è necessario clonare il backup e accedere al file nel clone.
+
+* Non è possibile ripristinare un volume di sistema o di avvio.
+* SnapCenter può ripristinare i file system in un cluster Windows senza disattivare il gruppo di cluster.
+
+
+*A proposito di questa attività*
+
+* IL PERCORSO_SCRIPT viene definito utilizzando la chiave PredesedWindowsScriptsDirectory situata nel file SMCoreServiceHost.exe.Config dell'host del plug-in.
++
+Se necessario, è possibile modificare questo percorso e riavviare il servizio SMcore. Si consiglia di utilizzare il percorso predefinito per la protezione.
+
++
+Il valore della chiave può essere visualizzato da swagger attraverso l'API: API /4.7/configsettings
+
++
+È possibile utilizzare L'API GET per visualizzare il valore della chiave. L'API SET non è supportata.
+
+
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Per filtrare l'elenco delle risorse, selezionare le opzioni file system (file system) e Resource Group (Gruppo di risorse).
+. Selezionare un gruppo di risorse dall'elenco, quindi fare clic su *Ripristina*.
+. Nella pagina Backup, selezionare se si desidera eseguire il ripristino da sistemi di storage primari o secondari, quindi selezionare un backup da ripristinare.
+. Selezionare le opzioni desiderate nella procedura guidata di ripristino.
+. È possibile immettere il percorso e gli argomenti del prescrittt o del postscript che si desidera eseguire SnapCenter rispettivamente prima o dopo l'operazione di ripristino.
++
+Ad esempio, è possibile eseguire uno script per aggiornare i trap SNMP, automatizzare gli avvisi, inviare i registri e così via.
+
++
+
+NOTE: Il percorso prescripts o postscripts non deve includere dischi o condivisioni. Il percorso deve essere relativo al PERCORSO_SCRIPT.
+
+. Nella pagina Notification (notifica), selezionare una delle seguenti opzioni:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Registrare gli eventi del server SnapCenter nel syslog del sistema di storage
+ a| 
+Selezionare questa opzione per registrare gli eventi del server SnapCenter nel syslog del sistema di storage.
+
+
+
+ a| 
+Invia al sistema di storage la notifica AutoSupport per le operazioni non riuscite
+ a| 
+Selezionare questa opzione per inviare a NetApp informazioni su operazioni non riuscite utilizzando AutoSupport.
+
+
+
+ a| 
+Preferenza e-mail
+ a| 
+Selezionare *Always*, *on Failure* o *on failure or warning* per inviare messaggi e-mail ai destinatari dopo il ripristino dei backup. Immettere il server SMTP, l'oggetto e-mail predefinito e gli indirizzi e-mail a e da.
+
+|===
+. Esaminare il riepilogo, quindi fare clic su *fine*.
+. Monitorare l'avanzamento dell'operazione facendo clic su *Monitor* > *Jobs*.
+
+
+
+IMPORTANT: Se il file system ripristinato contiene un database, è necessario ripristinarlo. Se il database non viene ripristinato, potrebbe essere in uno stato non valido. Per informazioni sul ripristino dei database, consultare la Data Protection Guide relativa al database.

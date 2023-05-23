@@ -1,0 +1,30 @@
+---
+permalink: protect-hana/task_define_a_backup_strategy_for_sap_hana_databases.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: 'La definizione di una strategia di backup prima della creazione dei processi di backup consente di ottenere i backup necessari per ripristinare o clonare correttamente le risorse. Il contratto a livello di servizio (SLA), l"obiettivo del tempo di ripristino (RTO) e l"obiettivo del punto di ripristino (RPO) determinano in gran parte la strategia di backup.' 
+---
+= Definire una strategia di backup per i database SAP HANA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La definizione di una strategia di backup prima della creazione dei processi di backup consente di ottenere i backup necessari per ripristinare o clonare correttamente le risorse. Il tuo SLA (Service-Level Agreement), RTO (Recovery Time Objective) e RPO (Recovery Point Objective) determinano in gran parte la tua strategia di backup.
+
+*A proposito di questa attività*
+
+Uno SLA definisce il livello di servizio previsto e risolve molti problemi relativi al servizio, tra cui la disponibilità e le performance del servizio. RTO è il momento in cui un processo di business deve essere ripristinato dopo un'interruzione del servizio. RPO definisce la strategia per l'età dei file che devono essere ripristinati dallo storage di backup per consentire il ripristino delle normali operazioni dopo un errore. SLA, RTO e RPO contribuiscono alla strategia di protezione dei dati.
+
+*Fasi*
+
+. Stabilire quando eseguire il backup delle risorse.
+. Decidere il numero di processi di backup necessari.
+. Decidere come assegnare un nome ai backup.
+. Decidere se si desidera creare una policy basata su copia Snapshot per eseguire il backup delle copie Snapshot coerenti con l'applicazione del database.
+. Decidere se verificare l'integrità del database.
+. Decidere se utilizzare la tecnologia NetApp SnapMirror per la replica o la tecnologia NetApp SnapVault per la conservazione a lungo termine.
+. Determinare il periodo di conservazione delle copie Snapshot sul sistema di storage di origine e sulla destinazione di SnapMirror.
+. Determinare se si desidera eseguire qualsiasi comando prima o dopo l'operazione di backup e fornire una prescrizione o postscript.
+

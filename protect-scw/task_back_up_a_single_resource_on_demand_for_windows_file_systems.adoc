@@ -1,0 +1,110 @@
+---
+permalink: protect-scw/task_back_up_a_single_resource_on_demand_for_windows_file_systems.html 
+sidebar: sidebar 
+keywords: backing up 
+summary: Se una risorsa non si trova in un gruppo di risorse, è possibile eseguire il backup su richiesta dalla pagina risorse. 
+---
+= Eseguire il backup di una singola risorsa on-demand per i file system Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se una risorsa non si trova in un gruppo di risorse, è possibile eseguire il backup su richiesta dalla pagina risorse.
+
+*A proposito di questa attività*
+
+Se si desidera eseguire il backup di una risorsa che ha una relazione SnapMirror con lo storage secondario, il ruolo assegnato all'utente dello storage deve includere il privilegio "`snapmirror all`". Tuttavia, se si utilizza il ruolo "`vsadmin`", il privilegio "`snapmirror all`" non è richiesto.
+
+
+NOTE: Quando si esegue il backup di un file system, SnapCenter non esegue il backup dei LUN montati su un punto di montaggio del volume (VMP) nel file system di cui si sta eseguendo il backup.
+
+
+IMPORTANT: Se si lavora in un contesto di file system Windows, non eseguire il backup dei file di database. In questo modo si crea un backup incoerente e una possibile perdita di dati durante il ripristino. Per proteggere i file di database, è necessario utilizzare il plug-in SnapCenter appropriato per il database (ad esempio, il plug-in SnapCenter per Microsoft SQL Server, il plug-in SnapCenter per Microsoft Exchange Server o un plug-in personalizzato per i file di database).
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina risorse, selezionare il tipo di risorsa file system, quindi selezionare la risorsa di cui si desidera eseguire il backup.
+. Se la procedura guidata file system - Protect non si avvia automaticamente, fare clic su *Protect* per avviare la procedura guidata.
++
+Specificare le impostazioni di protezione, come descritto nella sezione creazione dei gruppi di risorse.
+
+. Facoltativo: Nella pagina Resource della procedura guidata, immettere un formato nome personalizzato per la copia Snapshot.
++
+Ad esempio, customtext_resourcegroup_policy_hostname o resourcegroup_hostname. Per impostazione predefinita, al nome della copia Snapshot viene aggiunto un indicatore data e ora.
+
+. Nella pagina Criteri, eseguire le seguenti operazioni:
++
+.. Selezionare uno o più criteri dall'elenco a discesa.
++
+È possibile selezionare qualsiasi criterio esistente, quindi fare clic su *Dettagli* per determinare se è possibile utilizzarlo.
+
++
+Se nessuna policy esistente soddisfa i requisiti, è possibile copiare una policy esistente e modificarla oppure creare una nuova policy facendo clic su image:../media/add_policy_from_resourcegroup.gif[""] per avviare la procedura guidata dei criteri.
+
++
+I criteri selezionati sono elencati nella colonna Policy della sezione Configure schedules for selected policies.
+
+.. Nella sezione Configura pianificazioni per criteri selezionati, fare clic su image:../media/add_policy_from_resourcegroup.gif[""] Nella colonna Configura pianificazioni per il criterio per il quale si desidera configurare la pianificazione.
+.. Nella finestra di dialogo Add schedules for policy _policy_name_, configurare la pianificazione specificando la data di inizio, la data di scadenza e la frequenza, quindi fare clic su *fine*.
++
+Le pianificazioni configurate sono elencate nella colonna Applied Schedules (Pianificazioni applicate) della sezione Configure schedules for selected policies (Configura pianificazioni per criteri selezionati).
+
++
+https://["Le operazioni pianificate potrebbero non riuscire"]
+
+
+
+. Nella pagina Notification (notifica), eseguire le seguenti operazioni:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Preferenza e-mail
+ a| 
+Selezionare *Always*, *on Failure*, oppure *on failure or warning*, per inviare e-mail ai destinatari dopo la creazione di gruppi di risorse di backup, l'aggiunta di criteri e la configurazione delle pianificazioni.
+
+Immettere le informazioni sul server SMTP, l'oggetto e-mail predefinito e gli indirizzi e-mail "`a`" e "`da`".
+
+
+
+ a| 
+Da
+ a| 
+Indirizzo e-mail
+
+
+
+ a| 
+A.
+ a| 
+Indirizzo e-mail
+
+
+
+ a| 
+Soggetto
+ a| 
+Oggetto e-mail predefinito
+
+|===
+. Esaminare il riepilogo, quindi fare clic su *fine*.
++
+Viene visualizzata la pagina della topologia del database.
+
+. Fare clic su *Esegui backup ora*.
+. Nella pagina Backup, attenersi alla seguente procedura:
++
+.. Se sono stati applicati più criteri alla risorsa, dall'elenco a discesa Policy (criterio), selezionare il criterio da utilizzare per il backup.
++
+Se il criterio selezionato per il backup on-demand è associato a una pianificazione di backup, i backup on-demand verranno conservati in base alle impostazioni di conservazione specificate per il tipo di pianificazione.
+
+.. Fare clic su *Backup*.
+
+
+. Monitorare l'avanzamento dell'operazione facendo clic su *Monitor* > *Jobs*.
+

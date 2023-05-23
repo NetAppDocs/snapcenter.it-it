@@ -1,0 +1,80 @@
+---
+permalink: protect-hana/task_split_a_clone_for_hana.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile utilizzare SnapCenter per separare una risorsa clonata dalla risorsa principale. Il clone diviso diventa indipendente dalla risorsa padre. 
+---
+= Separare un clone
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare SnapCenter per separare una risorsa clonata dalla risorsa principale. Il clone diviso diventa indipendente dalla risorsa padre.
+
+*A proposito di questa attività*
+
+* Non è possibile eseguire l'operazione di suddivisione del clone su un clone intermedio.
++
+Ad esempio, dopo aver creato il clone1 da un backup del database, è possibile creare un backup del clone1 e clonare il backup (clone2). Dopo aver creato il clone2, il clone1 è un clone intermedio e non è possibile eseguire l'operazione di suddivisione del clone sul clone1. Tuttavia, è possibile eseguire l'operazione di suddivisione dei cloni sul clone2.
+
++
+Dopo aver diviso il clone2, è possibile eseguire l'operazione di divisione del clone sul clone1, poiché il clone1 non è più il clone intermedio.
+
+* Quando si divide un clone, le copie di backup e i lavori di clonazione del clone vengono eliminati.
+* Per informazioni sulle limitazioni delle operazioni di suddivisione dei cloni, vedere http://["Guida alla gestione dello storage logico di ONTAP 9"^].
+* Assicurarsi che il volume o l'aggregato sul sistema di storage sia online.
+
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina risorse, selezionare l'opzione appropriata dall'elenco Visualizza:
++
+|===
+| Opzione | Descrizione 
+
+
+ a| 
+Per applicazioni di database
+ a| 
+Selezionare *Database* dall'elenco View (Visualizza).
+
+
+
+ a| 
+Per file system
+ a| 
+Selezionare *Path* dall'elenco View (Visualizza).
+
+|===
+. Selezionare la risorsa appropriata dall'elenco.
++
+Viene visualizzata la pagina della topologia delle risorse.
+
+. Dalla vista Manage Copies (Gestisci copie), selezionare la risorsa clonata (ad esempio, il database o il LUN), quindi fare clic su *image:../media/split_cone.gif[""]*.
+. Esaminare le dimensioni stimate del clone da dividere e lo spazio richiesto disponibile sull'aggregato, quindi fare clic su *Start*.
+. Monitorare l'avanzamento dell'operazione facendo clic su *Monitor* > *Jobs*.
++
+Se il servizio SMCore viene riavviato, l'operazione di split clone smette di rispondere. Eseguire il cmdlet Stop-SmJob per interrompere l'operazione di suddivisione del clone, quindi riprovare l'operazione di suddivisione del clone.
+
++
+Se si desidera un tempo di polling più lungo o più breve per controllare se il clone è diviso o meno, è possibile modificare il valore del parametro _CloneSplitStatusCheckPollTime_ nel file _SMCoreServiceHost.exe.config_ per impostare l'intervallo di tempo in cui SMCore deve eseguire il polling per lo stato dell'operazione di suddivisione del clone. Il valore è espresso in millisecondi e il valore predefinito è 5 minuti.
+
++
+Ad esempio:
+
++
+[listing]
+----
+<add key="CloneSplitStatusCheckPollTime" value="300000" />
+----
++
+L'operazione di avvio del clone split non riesce se sono in corso operazioni di backup, ripristino o altro clone split. È necessario riavviare l'operazione di suddivisione dei cloni solo al termine delle operazioni in esecuzione.
+
+
+
+*Ulteriori informazioni*
+
+https://["Il clone o la verifica di SnapCenter non riesce e l'aggregato non esiste"]

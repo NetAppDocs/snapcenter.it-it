@@ -1,0 +1,16 @@
+---
+permalink: release-notes.html 
+sidebar: sidebar 
+keywords: release notes, snapcenter 
+summary: Fornisce importanti informazioni su questa versione del server SnapCenter e sui pacchetti di plug-in SnapCenter, inclusi problemi risolti, problemi noti, precauzioni e limitazioni. 
+---
+= Note di rilascio
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Fornisce importanti informazioni su questa versione del server SnapCenter e sui pacchetti di plug-in SnapCenter, inclusi problemi risolti, problemi noti, precauzioni e limitazioni.
+
+Per ulteriori informazioni, consultare https://["Note sulla versione del software SnapCenter 4.8"^].

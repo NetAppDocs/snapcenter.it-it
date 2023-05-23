@@ -1,0 +1,120 @@
+---
+permalink: install/concept_create_and_manage_igroups.html 
+sidebar: sidebar 
+keywords: igroup 
+summary: 'È possibile creare gruppi di iniziatori (igroups) per specificare gli host che possono accedere a una determinata LUN sul sistema di storage. È possibile utilizzare SnapCenter per creare, rinominare, modificare o eliminare un igroup su un host Windows.' 
+---
+= Creare e gestire igroups
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare gruppi di iniziatori (igroups) per specificare gli host che possono accedere a una determinata LUN sul sistema di storage. È possibile utilizzare SnapCenter per creare, rinominare, modificare o eliminare un igroup su un host Windows.
+
+
+
+== Creare un igroup
+
+È possibile utilizzare SnapCenter per creare un igroup su un host Windows. L'igroup sarà disponibile nella procedura guidata Create Disk (Crea disco) o Connect Disk (Connetti disco) quando si esegue la mappatura dell'igroup a un LUN.
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *hosts*.
+. Nella pagina host, fare clic su *iGroup*.
+. Nella pagina Initiator Groups (gruppi iniziatori), fare clic su *New* (nuovo).
+. Nella finestra di dialogo Create iGroup (Crea iGroup), definire il campo igroup:
++
+|===
+| In questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Sistema storage
+ a| 
+Selezionare la SVM per il LUN da mappare all'igroup.
+
+
+
+ a| 
+Host
+ a| 
+Selezionare l'host su cui si desidera creare l'igroup.
+
+
+
+ a| 
+Nome iGroup
+ a| 
+Immettere il nome dell'igroup.
+
+
+
+ a| 
+Iniziatori
+ a| 
+Selezionare l'iniziatore.
+
+
+
+ a| 
+Tipo
+ a| 
+Selezionare il tipo di iniziatore, iSCSI, FCP o misto (FCP e iSCSI).
+
+|===
+. Quando si è soddisfatti delle voci immesse, fare clic su *OK*.
++
+SnapCenter crea l'igroup sul sistema storage.
+
+
+
+
+
+== Rinominare un igroup
+
+È possibile utilizzare SnapCenter per rinominare un igroup esistente.
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *hosts*.
+. Nella pagina host, fare clic su *iGroup*.
+. Nella pagina Initiator Groups (gruppi iniziatori), fare clic nel campo *Storage Virtual Machine* (macchina virtuale di storage) per visualizzare un elenco di SVM disponibili, quindi selezionare la SVM per l'igroup che si desidera rinominare.
+. Nell'elenco di igroups per SVM, selezionare l'igroup che si desidera rinominare e fare clic su *Rename* (Rinomina).
+. Nella finestra di dialogo Rinomina igroup, immettere il nuovo nome per igroup e fare clic su *Rinomina*.
+
+
+
+
+== Modificare un igroup
+
+È possibile utilizzare SnapCenter per aggiungere gli iniziatori igroup a un igroup esistente. Durante la creazione di un igroup è possibile aggiungere un solo host. Se si desidera creare un igroup per un cluster, è possibile modificare il igroup per aggiungere altri nodi a tale igroup.
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *hosts*.
+. Nella pagina host, fare clic su *iGroup*.
+. Nella pagina Initiator Groups (gruppi di iniziatori), fare clic nel campo *Storage Virtual Machine* (macchina virtuale di storage) per visualizzare un elenco a discesa delle SVM disponibili, quindi selezionare la SVM per l'igroup che si desidera modificare.
+. Nell'elenco di igroups, selezionare un igroup e fare clic su *Add Initiator to igroup*.
+. Selezionare un host.
+. Selezionare gli iniziatori e fare clic su *OK*.
+
+
+
+
+== Eliminare un igroup
+
+È possibile utilizzare SnapCenter per eliminare un igroup quando non è più necessario.
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *hosts*.
+. Nella pagina host, fare clic su *iGroup*.
+. Nella pagina Initiator Groups (gruppi iniziatori), fare clic nel campo *Storage Virtual Machine* (macchina virtuale di storage) per visualizzare un elenco a discesa delle SVM disponibili, quindi selezionare la SVM per l'igroup che si desidera eliminare.
+. Nell'elenco di igroups per SVM, selezionare l'igroup che si desidera eliminare e fare clic su *Delete* (Elimina).
+. Nella finestra di dialogo Delete igroup (Elimina igroup), fare clic su *OK*.
++
+SnapCenter elimina l'igroup.
+
+

@@ -1,0 +1,298 @@
+---
+permalink: admin/concept_manage_hosts.html 
+sidebar: sidebar 
+keywords:  
+summary: 'È possibile aggiungere host e installare pacchetti di plug-in SnapCenter, aggiungere un server di verifica, rimuovere host, migrare processi di backup e aggiornare host per aggiornare pacchetti di plug-in o aggiungere nuovi pacchetti di plug-in. A seconda del plug-in in in uso, è inoltre possibile eseguire il provisioning dei dischi, gestire le condivisioni SMB, gestire i gruppi di iniziatori (igroups), gestire le sessioni iSCSI e migrare i dati.' 
+---
+= Gestire gli host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile aggiungere host e installare pacchetti di plug-in SnapCenter, aggiungere un server di verifica, rimuovere host, migrare processi di backup e aggiornare host per aggiornare pacchetti di plug-in o aggiungere nuovi pacchetti di plug-in. A seconda del plug-in utilizzato, è possibile eseguire il provisioning dei dischi, gestire le condivisioni SMB, gestire i gruppi di iniziatori (igroups), gestire le sessioni iSCSI e migrare i dati.
+
+|===
+| È possibile eseguire queste attività... | Per Microsoft Exchange Server | Per Microsoft SQL Server | Per Microsoft Windows | Per database Oracle | Per SAP HANA Database | Per plug-in personalizzati 
+
+
+ a| 
+Aggiungere host e installare il pacchetto plug-in
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Aggiornare le informazioni ESXi per un host
+ a| 
+No
+ a| 
+Sì
+ a| 
+No
+ a| 
+No
+ a| 
+No
+ a| 
+No
+
+
+
+ a| 
+Sospendere le pianificazioni e mettere gli host in modalità di manutenzione
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Modificare gli host aggiungendo, aggiornando o rimuovendo i plug-in
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Rimuovere gli host da SnapCenter
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Avviare i servizi plug-in
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Eseguire il provisioning dei dischi
+ a| 
+No
+ a| 
+No
+ a| 
+Sì
+ a| 
+No
+ a| 
+No
+ a| 
+No
+
+
+
+ a| 
+Gestire le condivisioni SMB
+ a| 
+No
+ a| 
+No
+ a| 
+Sì
+ a| 
+No
+ a| 
+No
+ a| 
+No
+
+
+
+ a| 
+Gestire iGroups
+ a| 
+No
+ a| 
+No
+ a| 
+Sì
+ a| 
+No
+ a| 
+No
+ a| 
+No
+
+
+
+ a| 
+Gestire le sessioni iSCSI
+ a| 
+No
+ a| 
+No
+ a| 
+Sì
+ a| 
+No
+ a| 
+No
+ a| 
+
+|===
+
+
+== Aggiorna le informazioni della macchina virtuale
+
+È necessario aggiornare le informazioni della macchina virtuale quando si modificano le credenziali di VMware vCenter o si riavvia l'host del database o del file system. L'aggiornamento delle informazioni della macchina virtuale in SnapCenter avvia la comunicazione con VMware vSphere vCenter e ottiene le credenziali vCenter.
+
+
+NOTE: I dischi basati su RDM sono gestiti dal plug-in SnapCenter per Microsoft Windows, installato sull'host del database. Per gestire gli RDM, il plug-in SnapCenter per Microsoft Windows comunica con il server vCenter che gestisce l'host del database.
+
+*Fasi*
+
+. Nel riquadro di navigazione sinistro di SnapCenter, fare clic su *hosts*.
+. Nella pagina hosts, fare clic su *Managed hosts*.
+. Nella pagina Managed hosts (host gestiti), selezionare l'host che si desidera aggiornare.
+. Fare clic su *Aggiorna VM*.
+
+
+
+
+== Modificare gli host dei plug-in
+
+Dopo aver installato un plug-in, è possibile modificare i dettagli degli host del plug-in, se necessario. È possibile modificare le credenziali, il percorso di installazione, i plug-in, i dettagli della directory di log per il plug-in SnapCenter per Microsoft SQL Server, l'account di servizio gestito di gruppo (gMSA) e la porta del plug-in.
+
+
+NOTE: Assicurarsi che la versione del plug-in sia la stessa della versione del server SnapCenter.
+
+*A proposito di questa attività*
+
+* È possibile modificare una porta del plug-in solo dopo l'installazione del plug-in.
++
+Non è possibile modificare la porta del plug-in durante le operazioni di aggiornamento.
+
+* Durante la modifica di una porta plug-in, è necessario conoscere i seguenti scenari di rollback delle porte:
++
+** In un'installazione standalone, se SnapCenter non riesce a modificare la porta di uno dei componenti, l'operazione non riesce e la vecchia porta viene conservata per tutti i componenti.
++
+Se la porta è stata modificata per tutti i componenti ma uno dei componenti non inizia con la nuova porta, la vecchia porta viene conservata per tutti i componenti. Ad esempio, se si desidera modificare la porta per due plug-in sull'host standalone e SnapCenter non applica la nuova porta a uno dei plug-in, l'operazione non riesce (con un messaggio di errore appropriato) e la vecchia porta viene conservata per entrambi i plug-in.
+
+** In un'installazione in cluster, se SnapCenter non riesce a modificare la porta del plug-in installato su uno dei nodi, l'operazione non riesce e la vecchia porta viene conservata per tutti i nodi.
++
+Ad esempio, se il plug-in viene installato su quattro nodi in un'installazione in cluster e se la porta non viene modificata per uno dei nodi, la vecchia porta viene mantenuta per tutti i nodi.
+
+
+
+
+
+Quando i plug-in vengono installati con gMSA, è possibile modificarli nelle finestre *altre opzioni*. Quando i plug-in vengono installati senza gMSA, è possibile specificare l'account gMSA da utilizzare come account del servizio plug-in.
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *hosts*.
+. Verificare che l'opzione *Managed hosts* sia selezionata nella parte superiore.
+. Selezionare l'host per il quale si desidera modificare e modificare un campo qualsiasi.
++
+È possibile modificare un solo campo alla volta.
+
+. Fare clic su *Invia*.
+
+
+*Risultati*
+
+L'host viene validato e aggiunto al server SnapCenter.
+
+
+
+== Avviare o riavviare i servizi plug-in
+
+L'avvio dei servizi plug-in di SnapCenter consente di avviare i servizi se non sono in esecuzione o di riavviarli se sono in esecuzione. Potrebbe essere necessario riavviare i servizi dopo aver eseguito la manutenzione.
+
+Al riavvio dei servizi, assicurarsi che non siano in esecuzione processi.
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *hosts*.
+. Nella pagina hosts, fare clic su *Managed hosts*.
+. Nella pagina Managed hosts (host gestiti), selezionare l'host che si desidera avviare.
+. Fare clic su image:../media/more_icon.gif[""] E fare clic su *Avvia servizio* o *Riavvia servizio*.
++
+È possibile avviare o riavviare il servizio di più host contemporaneamente.
+
+
+
+
+
+== Sospendere le pianificazioni per la manutenzione dell'host
+
+Se si desidera impedire all'host di eseguire qualsiasi processo pianificato SnapCenter, è possibile impostare l'host in modalità di manutenzione. Questa operazione deve essere eseguita prima di aggiornare i plug-in o se si eseguono attività di manutenzione sugli host.
+
+
+NOTE: Non è possibile sospendere le pianificazioni su un host inattivo perché SnapCenter non è in grado di comunicare con tale host.
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *hosts*.
+. Nella pagina hosts, fare clic su *Managed hosts*.
+. Nella pagina Managed hosts (host gestiti), selezionare l'host che si desidera sospendere.
+. Fare clic su image:../media/more_icon.gif[""] Quindi fare clic su *Suspend Schedule* per impostare l'host per questo plug-in in modalità di manutenzione.
++
+È possibile sospendere la pianificazione di più host contemporaneamente.
+
++
+
+NOTE: Non è necessario interrompere prima il servizio plug-in. Il servizio plug-in può essere in esecuzione o arrestato.
+
+
+
+*Risultati*
+
+Dopo aver sospeso le pianificazioni sull'host, la pagina Managed hosts (host gestiti) mostra *Suspended* nel campo di stato generale dell'host.
+
+Una volta completata la manutenzione dell'host, è possibile disattivare la modalità di manutenzione dell'host facendo clic su *Activate Schedule* (attiva pianificazione). È possibile attivare la pianificazione di più host contemporaneamente.

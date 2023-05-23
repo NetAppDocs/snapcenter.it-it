@@ -1,0 +1,40 @@
+---
+permalink: protect-scw/task_clean_up_the_secondary_backup_count_using_powershell_cmdlets_for_windows.html 
+sidebar: sidebar 
+keywords: backups 
+summary: 'È possibile utilizzare il cmdlet Remove-SmBackup per eliminare il numero di backup per i backup secondari che non dispongono di copie Snapshot. È possibile utilizzare questo cmdlet quando le copie Snapshot totali visualizzate nella topologia Gestisci copie non corrispondono all"impostazione di conservazione delle copie Snapshot dello storage secondario.' 
+---
+= Ripulire il numero di backup secondari utilizzando i cmdlet PowerShell
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare il cmdlet Remove-SmBackup per eliminare il numero di backup per i backup secondari che non dispongono di copie Snapshot. È possibile utilizzare questo cmdlet quando le copie Snapshot totali visualizzate nella topologia Gestione copie non corrispondono all'impostazione di conservazione delle copie Snapshot dello storage secondario.
+
+È necessario aver preparato l'ambiente PowerShell per eseguire i cmdlet PowerShell.
+
+Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento alla https://["Guida di riferimento al cmdlet del software SnapCenter"^].
+
+*Fasi*
+
+. Avviare una sessione di connessione con il server SnapCenter per un utente specifico utilizzando il cmdlet Open-SmConnection.
++
+[listing]
+----
+Open-SmConnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146/
+----
+. Eliminare il numero di backup secondari utilizzando il parametro -CleanupSecondaryBackups.
++
+Questo esempio elimina il numero di backup per i backup secondari senza copie Snapshot:
+
++
+[listing]
+----
+Remove-SmBackup -CleanupSecondaryBackups
+Remove-SmBackup
+Are you sure want to remove the backup(s).
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
+----
+

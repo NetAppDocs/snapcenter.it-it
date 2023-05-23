@@ -1,0 +1,32 @@
+---
+permalink: protect-hana/task_delete_or_split_sap_hana_database_clones_after_upgrading_snapcenter.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: 'Dopo l"aggiornamento a SnapCenter 4.3, i cloni non verranno più visualizzati. È possibile eliminare il clone o suddividere i cloni dalla pagina topologia della risorsa da cui sono stati creati i cloni.' 
+---
+= Eliminare o separare i cloni del database SAP HANA dopo l'aggiornamento di SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo l'aggiornamento a SnapCenter 4.3, i cloni non verranno più visualizzati. È possibile eliminare il clone o suddividere i cloni dalla pagina topologia della risorsa da cui sono stati creati i cloni.
+
+*A proposito di questa attività*
+
+Se si desidera individuare l'impatto dello storage dei cloni nascosti, eseguire il seguente comando: `Get-SmClone -ListStorageFootprint`
+
+*Fasi*
+
+. Eliminare i backup delle risorse clonate utilizzando il cmdlet remove-smbackup.
+. Eliminare il gruppo di risorse delle risorse clonate utilizzando il cmdlet remove-sresourcegroup.
+. Rimuovere la protezione della risorsa clonata utilizzando il cmdlet remove-smprotectresource.
+. Selezionare la risorsa principale dalla pagina risorse.
++
+Viene visualizzata la pagina della topologia delle risorse.
+
+. Dalla vista Manage Copies (Gestisci copie), selezionare i cloni dai sistemi di storage primario o secondario (mirrorati o replicati).
+. Selezionare i cloni, quindi fare clic su image:../media/delete_icon.gif[""] per eliminare i cloni o fare clic su image:../media/split_cone.gif[""] per separare i cloni.
+. Fare clic su *OK*.
+

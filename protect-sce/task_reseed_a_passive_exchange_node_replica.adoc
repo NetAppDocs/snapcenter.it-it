@@ -1,0 +1,66 @@
+---
+permalink: protect-sce/task_reseed_a_passive_exchange_node_replica.html 
+sidebar: sidebar 
+keywords:  
+summary: Se è necessario eseguire di nuovo il reeed di una copia della replica, ad esempio quando una copia è danneggiata, è possibile eseguire nuovamente il reeed del backup più recente utilizzando la funzione di reeed di SnapCenter. 
+---
+= Eseguire nuovamente la configurazione di una replica passiva del nodo Exchange
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se è necessario eseguire di nuovo il reeed di una copia della replica, ad esempio quando una copia è danneggiata, è possibile eseguire nuovamente il reeed del backup più recente utilizzando la funzione di reeed di SnapCenter.
+
+*Cosa ti serve*
+
+* È necessario utilizzare il server SnapCenter 4.1 o versione successiva e il plug-in per Exchange 4.1 o versione successiva.
++
+Il reseeding di una replica non è supportato nelle versioni di SnapCenter precedenti alla 4.1.
+
+* È necessario aver creato un backup del database che si desidera reconfigurare.
+
+
+|===
+
+
+| *Best practice:* per evitare ritardi tra i nodi, si consiglia di creare un nuovo backup prima di eseguire un'operazione di riseed o di scegliere l'host con il backup più recente. 
+|===
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare *plug-in Microsoft Exchange Server* dall'elenco.
+. Nella pagina risorse, selezionare l'opzione appropriata dall'elenco Visualizza:
++
+|===
+| Opzione | Descrizione 
+
+
+ a| 
+Per eseguire di nuovo la configurazione di un singolo database
+ a| 
+Selezionare *Database* dall'elenco View (Visualizza).
+
+
+
+ a| 
+Per eseguire nuovamente il reeeding dei database in un DAG
+ a| 
+Selezionare *Database Availability Group* (Gruppo disponibilità database) dall'elenco View (Visualizza).
+
+|===
+. Selezionare la risorsa da reconfigurare.
+. Nella pagina Manage Copies (Gestisci copie), fare clic su *Reseed* (Ripristina).
+. Dall'elenco delle copie dei database non integre nella procedura guidata di riseed, selezionare quella che si desidera riseedare, quindi fare clic su *Avanti*.
+. Nella finestra host, selezionare l'host con il backup da cui si desidera eseguire nuovamente il reeed, quindi fare clic su *Avanti*.
+. Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
++
+È inoltre necessario specificare gli indirizzi e-mail del mittente e del destinatario e l'oggetto dell'e-mail.
+
+. Esaminare il riepilogo, quindi fare clic su *fine*.
+. È possibile visualizzare lo stato del lavoro espandendo il pannello attività nella parte inferiore della pagina.
++
+
+NOTE: L'operazione di riseed non è supportata se la copia passiva del database risiede su uno storage non NetApp.
+
+

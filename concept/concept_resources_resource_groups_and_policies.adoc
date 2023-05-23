@@ -1,0 +1,50 @@
+---
+permalink: concept/concept_resources_resource_groups_and_policies.html 
+sidebar: sidebar 
+keywords: reource, resource group, policy 
+summary: Prima di utilizzare SnapCenter, è utile comprendere i concetti di base relativi alle operazioni di backup, clonazione e ripristino che si desidera eseguire. Interagisci con risorse, gruppi di risorse e policy per diverse operazioni. 
+---
+= Risorse, gruppi di risorse e policy
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di utilizzare SnapCenter, è utile comprendere i concetti di base relativi alle operazioni di backup, clonazione e ripristino che si desidera eseguire. Interagisci con risorse, gruppi di risorse e policy per diverse operazioni.
+
+* *Le risorse* sono generalmente database, file system Windows o condivisioni di file di cui si esegue il backup o la clonazione con SnapCenter.
++
+Tuttavia, a seconda dell'ambiente in uso, le risorse potrebbero essere istanze di database, gruppi di disponibilità di Microsoft SQL Server, database Oracle, database Oracle RAC, file system Windows o un gruppo di applicazioni personalizzate.
+
+* Un *gruppo di risorse* è un insieme di risorse su un host o cluster. Il gruppo di risorse può anche contenere risorse provenienti da più host e da più cluster.
++
+Quando si esegue un'operazione su un gruppo di risorse, questa operazione viene eseguita su tutte le risorse definite nel gruppo di risorse in base alla pianificazione specificata per il gruppo di risorse.
+
++
+È possibile eseguire il backup su richiesta di una singola risorsa o di un gruppo di risorse. È inoltre possibile configurare backup pianificati per singole risorse e gruppi di risorse.
+
++
+
+NOTE: Se si attiva la modalità di manutenzione di un host di un gruppo di risorse condiviso e sono presenti pianificazioni associate allo stesso gruppo di risorse condivise, tutte le operazioni pianificate verranno sospese per tutti gli altri host del gruppo di risorse condiviso.
+
++
+È necessario utilizzare un plug-in del database per il backup dei database, un plug-in del file system per il backup dei file system e il plug-in SnapCenter per VMware vSphere per il backup di macchine virtuali e datastore.
+
+* *Policy* specifica la frequenza di backup, la conservazione delle copie, la replica, gli script e altre caratteristiche delle operazioni di protezione dei dati.
++
+Quando si crea un gruppo di risorse, si selezionano uno o più criteri per tale gruppo. È inoltre possibile selezionare un criterio quando si esegue un backup su richiesta.
+
+
+
+Un gruppo di risorse definisce _cosa_ si desidera proteggere e quando si desidera proteggerlo in termini di giorno e ora. Pensa a una policy come a definire _come_ la vuoi proteggere. Ad esempio, se si esegue il backup di tutti i database o di tutti i file system di un host, è possibile creare un gruppo di risorse che includa tutti i database o tutti i file system dell'host. È quindi possibile associare due criteri al gruppo di risorse: Una policy giornaliera e una policy oraria.
+
+Quando si crea il gruppo di risorse e si allegano i criteri, è possibile configurare il gruppo di risorse in modo che esegua un backup completo ogni giorno e un altro programma che esegua i backup del registro ogni ora.
+
+L'immagine seguente illustra la relazione tra risorse, gruppi di risorse e criteri per i database:
+
+image::../media/datasets_and_policies.gif[Diagramma dei set di dati e delle policy]
+
+L'immagine seguente illustra la relazione tra risorse, gruppi di risorse e criteri per i file system Windows:
+
+image::../media/resources_and_policies_for_wfs.gif[risorse e policy per wfs]

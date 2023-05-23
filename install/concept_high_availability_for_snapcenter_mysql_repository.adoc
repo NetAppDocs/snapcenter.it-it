@@ -1,0 +1,38 @@
+---
+permalink: install/concept_high_availability_for_snapcenter_mysql_repository.html 
+sidebar: sidebar 
+keywords: SnapCenter, MySQL high availability 
+summary: 'La replica MySQL è una funzionalità di MySQL Server che consente di replicare i dati da un server database MySQL (master) a un altro server database MySQL (slave). SnapCenter supporta la replica MySQL per l"alta disponibilità solo su due nodi abilitati per il bilanciamento del carico di rete (abilitati per NLB).' 
+---
+= Alta disponibilità per il repository MySQL di SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La replica MySQL è una funzionalità di MySQL Server che consente di replicare i dati da un server database MySQL (master) a un altro server database MySQL (slave). SnapCenter supporta la replica MySQL per l'alta disponibilità solo su due nodi abilitati per il bilanciamento del carico di rete (abilitati per NLB).
+
+SnapCenter esegue operazioni di lettura o scrittura sul repository master e instrada la connessione al repository slave in caso di errore nel repository master. Il repository slave diventa quindi il repository master. SnapCenter supporta inoltre la replica inversa, che viene attivata solo durante il failover.
+
+Se si desidera utilizzare la funzionalità di disponibilità elevata (ha) di MySQL, è necessario configurare Network Load Balancer (NLB) sul primo nodo. Il repository MySQL viene installato su questo nodo come parte dell'installazione. Durante l'installazione di SnapCenter sul secondo nodo, è necessario unirsi alla F5 del primo nodo e creare una copia del repository MySQL sul secondo nodo.
+
+SnapCenter fornisce i cmdlet _Get-SmRepositoryConfig_ e _Set-SmRepositoryConfig_ PowerShell per gestire la replica MySQL.
+
+Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento alla https://["Guida di riferimento al cmdlet del software SnapCenter"^].
+
+È necessario conoscere le limitazioni relative alla funzionalità MySQL ha:
+
+* NLB e MySQL ha non sono supportati oltre due nodi.
+* Il passaggio da un'installazione standalone SnapCenter a un'installazione NLB o viceversa e il passaggio da un'installazione standalone MySQL a MySQL ha non sono supportati.
+* Il failover automatico non è supportato se i dati del repository slave non sono sincronizzati con i dati del repository master.
++
+È possibile avviare un failover forzato utilizzando il cmdlet _set-SmRepositoryConfig_.
+
+* Quando viene avviato il failover, i processi in esecuzione potrebbero non riuscire.
++
+Se il failover si verifica perché il server MySQL o SnapCenter non è attivo, i processi in esecuzione potrebbero non riuscire. Dopo aver eseguito il failover sul secondo nodo, tutti i processi successivi vengono eseguiti correttamente.
+
+
+
+Per informazioni sulla configurazione della disponibilità elevata, vedere https://["Come configurare NLB e ARR con SnapCenter"^].

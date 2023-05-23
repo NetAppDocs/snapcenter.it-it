@@ -1,0 +1,177 @@
+---
+permalink: protect-sce/reference_prerequisites_to_add_hosts_and_install_snapcenter_plug_in_for_microsoft_exchange_server.html 
+sidebar: sidebar 
+keywords:  
+summary: Prima di aggiungere un host e installare i pacchetti plug-in, è necessario completare tutti i requisiti. 
+---
+= Prerequisiti per aggiungere host e installare il plug-in SnapCenter per Microsoft Exchange Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di aggiungere un host e installare i pacchetti plug-in, è necessario completare tutti i requisiti.
+
+* Se si utilizza iSCSI, il servizio iSCSI deve essere in esecuzione.
+* È necessario disporre di un utente di dominio con privilegi di amministratore locale con autorizzazioni di accesso locale sull'host remoto.
+* È necessario utilizzare Microsoft Exchange Server 2013, 2016 o 2019 per le configurazioni standalone e Database Availability Group.
+* Quando si installa un plug-in su un host Windows, se si specifica una credenziale non integrata o se l'utente appartiene a un utente del gruppo di lavoro locale, è necessario disattivare il controllo dell'account utente sull'host.
+* Se si gestiscono i nodi del cluster in SnapCenter, è necessario disporre di un utente con privilegi amministrativi per tutti i nodi del cluster.
+* È necessario disporre di un utente con autorizzazioni amministrative su Exchange Server.
+* Se SnapManager per Microsoft Exchange Server e SnapDrive per Windows sono già installati, è necessario annullare la registrazione del provider hardware VSS utilizzato da SnapDrive per Windows prima di installare il plug-in per Exchange sullo stesso server Exchange per garantire la corretta protezione dei dati utilizzando SnapCenter.
+* Se SnapManager per Microsoft Exchange Server e il plug-in per Exchange sono installati sullo stesso server, è necessario sospendere o eliminare da Windows Scheduler tutte le pianificazioni create da SnapManager per Microsoft Exchange Server.
+* L'host deve essere risolvibile con il nome di dominio completo (FQDN) dal server. Se il file hosts viene modificato in modo da renderlo risolvibile e se nel file hosts sono specificati sia il nome breve che l'FQDN, creare una voce nel file hosts di SnapCenter nel seguente formato: _<ip_address> <host_fqdn> <host_name>_.
+* Assicurarsi che le seguenti porte non siano bloccate nel firewall, altrimenti l'operazione di aggiunta dell'host non riesce. Per risolvere questo problema, è necessario configurare l'intervallo di porte dinamiche. Per ulteriori informazioni, vedere https://["Documentazione Microsoft"^].
++
+** Intervallo di porte 50000 - 51000 per Windows 2016 ed Exchange 2016
+** Intervallo di porte 6000 - 6500 per Windows 2012 R2 ed Exchange 2013
+** Intervallo di porte 49152 - 65536 per Windows 2019
+
+
+
+
+[NOTE]
+====
+Per identificare l'intervallo di porte, eseguire i seguenti comandi:
+
+* netsh int ipv4 mostra il tcp dinamico
+* netsh int ipv4 show dynamicport udp
+* netsh int ipv6 mostra il tcp dinamico
+* netsh int ipv6 mostra l'udp di dinamicport
+
+
+====
+
+
+== Requisiti dell'host per installare il pacchetto di plug-in SnapCenter per Windows
+
+Prima di installare il pacchetto di plug-in SnapCenter per Windows, è necessario conoscere alcuni requisiti di base relativi allo spazio del sistema host e al dimensionamento.
+
+|===
+| Elemento | Requisiti 
+
+
+ a| 
+Sistemi operativi
+ a| 
+Microsoft Windows
+
+Per informazioni aggiornate sulle versioni supportate, consultare https://["Tool di matrice di interoperabilità NetApp"^].
+
+
+
+ a| 
+RAM minima per il plug-in SnapCenter sull'host
+ a| 
+1 GB
+
+
+
+ a| 
+Spazio minimo di installazione e registrazione per il plug-in SnapCenter sull'host
+ a| 
+5 GB
+
+
+NOTE: È necessario allocare spazio su disco sufficiente e monitorare il consumo di storage da parte della cartella dei log. Lo spazio di log richiesto varia in base al numero delle entità da proteggere e alla frequenza delle operazioni di protezione dei dati. Se lo spazio su disco non è sufficiente, i registri non verranno creati per le operazioni eseguite di recente.
+
+
+
+ a| 
+Pacchetti software richiesti
+ a| 
+* Microsoft .NET Framework 4.7.2 o versione successiva
+* Windows Management Framework (WMF) 4.0 o versione successiva
+* PowerShell 4.0 o versione successiva
+
+
+Per informazioni aggiornate sulle versioni supportate, consultare https://["Tool di matrice di interoperabilità NetApp"^].
+
+Per informazioni specifiche sulla risoluzione dei problemi di .NET, vedere https://["L'aggiornamento o l'installazione di SnapCenter non riesce per i sistemi legacy che non dispongono di connettività Internet."]
+
+|===
+
+
+== Privilegi di Exchange Server richiesti
+
+Per consentire a SnapCenter di aggiungere Exchange Server o DAG e installare il plug-in SnapCenter per Microsoft Exchange Server su un host o DAG, è necessario configurare SnapCenter con le credenziali per un utente con un set minimo di privilegi e autorizzazioni.
+
+È necessario disporre di un utente di dominio con privilegi di amministratore locale e con autorizzazioni di accesso locale sull'host Exchange remoto, nonché di autorizzazioni amministrative su tutti i nodi del DAG. L'utente di dominio richiede le seguenti autorizzazioni minime:
+
+* Add-MailboxDatabaseCopy
+* Smontare il database
+* Get-AdServerSettings
+* Get-DatabaseAvailabilitàGroup
+* Get-ExchangeServer
+* Get-MailboxDatabase
+* Get-MailboxDatabaseCopyStatus
+* Get-MailboxServer
+* Get-MailboxStatistics
+* Get-PublicFolderDatabase
+* Move-ActiveMailboxDatabase
+* Move-DatabasePath -ConfigurationOnly: Vero
+* Mount-Database
+* New-MailboxDatabase
+* New-PublicFolderDatabase
+* Remove-MailboxDatabase
+* Remove-MailboxDatabaseCopy
+* Remove-PublicFolderDatabase
+* Resume-MailboxDatabaseCopy
+* Set-AdServerSettings
+* Set-MailboxDatabase -allowfilerestore: Veritiero
+* Set-MailboxDatabaseCopy
+* Set-PublicFolderDatabase
+* Suspend-MailboxDatabaseCopy
+* Update-MailboxDatabaseCopy
+
+
+
+
+== Requisiti dell'host per installare il pacchetto di plug-in SnapCenter per Windows
+
+Prima di installare il pacchetto di plug-in SnapCenter per Windows, è necessario conoscere alcuni requisiti di base relativi allo spazio del sistema host e al dimensionamento.
+
+|===
+| Elemento | Requisiti 
+
+
+ a| 
+Sistemi operativi
+ a| 
+Microsoft Windows
+
+Per informazioni aggiornate sulle versioni supportate, consultare https://["Tool di matrice di interoperabilità NetApp"^].
+
+
+
+ a| 
+RAM minima per il plug-in SnapCenter sull'host
+ a| 
+1 GB
+
+
+
+ a| 
+Spazio minimo di installazione e registrazione per il plug-in SnapCenter sull'host
+ a| 
+5 GB
+
+
+NOTE: È necessario allocare spazio su disco sufficiente e monitorare il consumo di storage da parte della cartella dei log. Lo spazio di log richiesto varia in base al numero delle entità da proteggere e alla frequenza delle operazioni di protezione dei dati. Se lo spazio su disco non è sufficiente, i registri non verranno creati per le operazioni eseguite di recente.
+
+
+
+ a| 
+Pacchetti software richiesti
+ a| 
+* Microsoft .NET Framework 4.7.2 o versione successiva
+* Windows Management Framework (WMF) 4.0 o versione successiva
+* PowerShell 4.0 o versione successiva
+
+
+Per informazioni aggiornate sulle versioni supportate, consultare https://["Tool di matrice di interoperabilità NetApp"^].
+
+Per informazioni specifiche sulla risoluzione dei problemi di .NET, vedere https://["L'aggiornamento o l'installazione di SnapCenter non riesce per i sistemi legacy che non dispongono di connettività Internet."]
+
+|===

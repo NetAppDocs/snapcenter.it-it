@@ -1,0 +1,54 @@
+---
+permalink: protect-scw/task_cancel_backup_operations_for_windows_file_system.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile annullare le operazioni di backup inserite nella coda. 
+---
+= Annullare le operazioni di backup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile annullare le operazioni di backup inserite nella coda.
+
+*Cosa ti serve*
+
+* Per annullare le operazioni, è necessario accedere come amministratore SnapCenter o come proprietario del processo.
+* È possibile annullare un'operazione di backup dalla pagina *Monitor* o dal riquadro *Activity*.
+* Non è possibile annullare un'operazione di backup in esecuzione.
+* Per annullare le operazioni di backup, è possibile utilizzare l'interfaccia grafica utente di SnapCenter, i cmdlet PowerShell o i comandi CLI.
+* Il pulsante *Annulla lavoro* è disattivato per le operazioni che non possono essere annullate.
+* Se si seleziona *tutti i membri di questo ruolo possono visualizzare e operare su altri oggetti membri* nella pagina utenti/gruppi durante la creazione di un ruolo, è possibile annullare le operazioni di backup in coda degli altri membri durante l'utilizzo di tale ruolo.
+
+
+*Fasi*
+
+. Eseguire una delle seguenti operazioni:
++
+|===
+| Dal... | Azione 
+
+
+ a| 
+Pagina Monitor
+ a| 
+.. Nel riquadro di spostamento di sinistra, fare clic su *Monitor* > *Jobs*.
+.. Selezionare l'operazione, quindi fare clic su *Annulla lavoro*.
+
+
+
+
+ a| 
+Riquadro delle attività
+ a| 
+.. Dopo aver avviato l'operazione di backup, fare clic su *image:../media/activity_pane_icon.gif[""]* Nel riquadro attività per visualizzare le cinque operazioni più recenti.
+.. Selezionare l'operazione.
+.. Nella pagina Dettagli processo, fare clic su *Annulla processo*.
+
+
+|===
+
+
+L'operazione viene annullata e la risorsa viene riportata allo stato precedente.

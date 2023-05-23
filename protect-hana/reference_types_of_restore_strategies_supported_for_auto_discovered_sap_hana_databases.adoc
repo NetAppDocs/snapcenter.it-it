@@ -1,0 +1,38 @@
+---
+permalink: protect-hana/reference_types_of_restore_strategies_supported_for_auto_discovered_sap_hana_databases.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Databases 
+summary: È necessario definire una strategia prima di poter eseguire correttamente le operazioni di ripristino utilizzando SnapCenter. Esistono due tipi di strategie di ripristino per i database SAP HANA rilevati automaticamente. 
+---
+= Tipi di strategie di ripristino supportate per i database SAP HANA rilevati automaticamente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario definire una strategia prima di poter eseguire correttamente le operazioni di ripristino utilizzando SnapCenter. Esistono due tipi di strategie di ripristino per i database SAP HANA rilevati automaticamente.
+
+
+
+== Ripristino completo delle risorse
+
+* Ripristina tutti i volumi, le qtree e le LUN di una risorsa
++
+** Per ripristinare l'intero volume, selezionare l'opzione *Volume Revert* (Ripristina volume).
++
+
+NOTE: Se la risorsa contiene volumi o qtree, le copie Snapshot eseguite dopo la copia Snapshot selezionata per il ripristino su tali volumi o qtree vengono eliminate e non possono essere ripristinate. Inoltre, se un'altra risorsa è ospitata sugli stessi volumi o qtree, anche tale risorsa viene eliminata.
+
+
+
+
+
+
+
+== Database tenant
+
+* Ripristina il database tenant
+
+
+Se l'opzione *Database tenant* è selezionata, per eseguire l'operazione di ripristino è necessario utilizzare gli script di ripristino HANA studio o HANA esterni a SnapCenter.

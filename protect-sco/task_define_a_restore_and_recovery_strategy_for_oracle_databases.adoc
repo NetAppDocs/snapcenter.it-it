@@ -1,0 +1,230 @@
+---
+permalink: protect-sco/task_define_a_restore_and_recovery_strategy_for_oracle_databases.html 
+sidebar: sidebar 
+keywords: backup types, restore methods, connect-and-copy restore, full restore, partial restore, in-place restore, recovery type, limitations 
+summary: È necessario definire una strategia prima di ripristinare e ripristinare il database in modo da poter eseguire correttamente le operazioni di ripristino e ripristino. 
+---
+= Definire una strategia di ripristino per i database Oracle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario definire una strategia prima di ripristinare e ripristinare il database in modo da poter eseguire correttamente le operazioni di ripristino e ripristino.
+
+
+
+== Tipi di backup supportati per le operazioni di ripristino e ripristino
+
+SnapCenter supporta il ripristino e il ripristino di diversi tipi di backup dei database Oracle.
+
+* Backup dei dati online
+* Backup dei dati di shutdown offline
+* Backup dei dati di montaggio offline
++
+
+NOTE: Se si sta ripristinando un shutdown offline o un backup dei dati di montaggio offline, SnapCenter lascia il database in stato offline. È necessario ripristinare manualmente il database e i registri.
+
+* Backup completo
+* Backup offline dei database di standby di Data Guard
+* Backup online solo dati dei database di standby di Active Data Guard
++
+
+NOTE: Non è possibile eseguire il ripristino dei database di standby di Active Data Guard.
+
+* Backup dei dati online, backup completi online, backup di montaggio offline e backup di arresto offline in una configurazione RAC (Real Application Clusters)
+* Backup dei dati online, backup completi online, backup di montaggio offline e backup di arresto offline in una configurazione di Automatic Storage Management (ASM)
+
+
+
+
+== Tipi di metodi di ripristino supportati per i database Oracle
+
+SnapCenter supporta il ripristino Connect-and-copy o in-place per i database Oracle. Durante un'operazione di ripristino, SnapCenter determina il metodo di ripristino appropriato per il file system da utilizzare per il ripristino senza alcuna perdita di dati.
+
+
+NOTE: SnapCenter non supporta SnapRestore basato su volume.
+
+
+
+=== Ripristino connessione e copia
+
+Se il layout del database differisce dal backup o se sono presenti nuovi file dopo la creazione del backup, viene eseguito il ripristino della connessione e della copia. Nel metodo di ripristino Connect-and-copy, vengono eseguite le seguenti attività:
+
+*Fasi*
+
+. Il volume viene clonato dalla copia Snapshot e lo stack del file system viene creato sull'host utilizzando i LUN o i volumi clonati.
+. I file vengono copiati dai file system clonati ai file system originali.
+. I file system clonati vengono quindi smontati dall'host e i volumi clonati vengono cancellati da ONTAP.
+
+
+
+NOTE: Per una configurazione di Flex ASM (dove la cardinalità è inferiore al numero di nodi nel cluster RAC) o per i database ASM RAC su VMDK o RDM, è supportato solo il metodo di ripristino Connect-and-copy.
+
+Anche se il ripristino in-place è stato attivato forzatamente, SnapCenter esegue il ripristino della connessione e della copia nei seguenti scenari:
+
+* Eseguire il ripristino dal sistema di storage secondario e se Data ONTAP è precedente alla 8.3
+* Ripristino di gruppi di dischi ASM presenti sui nodi di un'installazione Oracle RAC su cui l'istanza di database non è configurata
+* Nell'installazione di Oracle RAC, su uno qualsiasi dei nodi peer se l'istanza ASM o l'istanza del cluster non è in esecuzione o se il nodo peer non è attivo
+* Ripristino solo dei file di controllo
+* Ripristinare un sottoinsieme di tablespace che risiedono su un gruppo di dischi ASM
+* Il gruppo di dischi è condiviso tra file di dati, file sp e file di password
+* Il servizio caricatore plug-in (SPL) di SnapCenter non è installato o non è in esecuzione sul nodo remoto in un ambiente RAC
+* Vengono aggiunti nuovi nodi al RAC Oracle e il server SnapCenter non è a conoscenza dei nuovi nodi aggiunti
+
+
+
+
+=== Rispristino in-place
+
+Se il layout del database è simile al backup e non ha subito modifiche di configurazione nello stack di storage e database, viene eseguito il ripristino in-place, in cui il ripristino del file o del LUN viene eseguito su ONTAP. SnapCenter supporta solo SFSR (Single file SnapRestore) come parte del metodo di ripristino in-place.
+
+
+NOTE: Data ONTAP 8.3 o versione successiva supporta il ripristino in-place da una posizione secondaria.
+
+Se si desidera eseguire il ripristino in-place sul database, assicurarsi di avere solo i file di dati nel gruppo di dischi ASM. È necessario creare un backup dopo aver apportato modifiche al gruppo di dischi ASM o alla struttura fisica del database. Dopo aver eseguito il ripristino in-place, il gruppo di dischi conterrà lo stesso numero di file di dati al momento del backup.
+
+Il ripristino in-place viene applicato automaticamente quando il gruppo di dischi o il punto di montaggio soddisfano i seguenti criteri:
+
+* Non vengono aggiunti nuovi file dati dopo il backup (controllo dei file esterni)
+* Nessuna aggiunta, eliminazione o ricreazione del disco ASM o del LUN dopo il backup (controllo delle modifiche strutturali del gruppo di dischi ASM)
+* Nessuna aggiunta, eliminazione o ricreazione di LUN al gruppo di dischi LVM (controllo delle modifiche strutturali del gruppo di dischi LVM)
+
+
+
+NOTE: È inoltre possibile attivare il ripristino in-place forzatamente utilizzando GUI, CLI SnapCenter o cmdlet PowerShell per eseguire l'override del controllo dei file esterni e del controllo delle modifiche strutturali del gruppo di dischi LVM.
+
+
+
+==== Esecuzione del ripristino in-place su ASM RAC
+
+In SnapCenter, il nodo su cui si esegue il ripristino viene definito nodo primario e tutti gli altri nodi del RAC su cui risiede il gruppo di dischi ASM sono denominati nodi peer. SnapCenter modifica lo stato del gruppo di dischi ASM in modo che venga dismontato su tutti i nodi in cui il gruppo di dischi ASM si trova in stato di montaggio prima di eseguire l'operazione di ripristino dello storage. Una volta completato il ripristino dello storage, SnapCenter modifica lo stato del gruppo di dischi ASM come prima dell'operazione di ripristino.
+
+Negli ambienti SAN, SnapCenter rimuove i dispositivi da tutti i nodi peer ed esegue l'operazione LUN unmap prima dell'operazione di ripristino dello storage. Dopo l'operazione di ripristino dello storage, SnapCenter esegue l'operazione di mappatura LUN e costruisce i dispositivi su tutti i nodi peer. In un ambiente SAN, se il layout ASM del RAC si trova su LUN, durante il ripristino di SnapCenter vengono eseguite le operazioni di annullamento mappatura LUN, ripristino LUN e mappatura LUN su tutti i nodi del cluster RAC in cui risiede il gruppo di dischi ASM. Prima di eseguire il ripristino, anche se tutti gli iniziatori dei nodi RAC non sono stati utilizzati per le LUN, dopo il ripristino SnapCenter crea un nuovo iGroup con tutti gli iniziatori di tutti i nodi RAC.
+
+* In caso di errore durante l'attività di pre-ripristino sui nodi peer, SnapCenter ripristina automaticamente lo stato del gruppo di dischi ASM così com'era prima di eseguire il ripristino sui nodi peer su cui l'operazione di pre-ripristino ha avuto esito positivo. Il rollback non è supportato per il nodo primario e il nodo peer in cui l'operazione non è riuscita. Prima di tentare un altro ripristino, è necessario risolvere manualmente il problema sul nodo peer e riportare il gruppo di dischi ASM sul nodo primario allo stato di montaggio.
+* Se si verifica un errore durante l'attività di ripristino, l'operazione di ripristino non riesce e non viene eseguito il rollback. Prima di tentare un altro ripristino, è necessario risolvere manualmente il problema di ripristino dello storage e riportare il gruppo di dischi ASM sul nodo primario allo stato di montaggio.
+* In caso di errore durante l'attività di postripristino su uno dei nodi peer, SnapCenter continua con l'operazione di ripristino sugli altri nodi peer. È necessario risolvere manualmente il problema di post-ripristino sul nodo peer.
+
+
+
+
+== Tipi di operazioni di ripristino supportate per i database Oracle
+
+SnapCenter consente di eseguire diversi tipi di operazioni di ripristino per i database Oracle.
+
+Prima di ripristinare il database, i backup vengono validati per identificare se mancano file rispetto ai file di database effettivi.
+
+
+
+=== Ripristino completo
+
+* Ripristina solo i file di dati
+* Ripristina solo i file di controllo
+* Ripristina i file di dati e di controllo
+* Ripristina i file di dati, i file di controllo e i file di log di ripristino nei database di standby Data Guard e Active Data Guard
+
+
+
+
+=== Ripristino parziale
+
+* Ripristina solo gli spazi delle tabelle selezionati
+* Ripristina solo i database collegabili (PDB) selezionati
+* Ripristina solo gli spazi delle tabelle selezionate di una PDB
+
+
+
+
+== Tipi di operazioni di recovery supportati per i database Oracle
+
+SnapCenter consente di eseguire diversi tipi di operazioni di recovery per i database Oracle.
+
+* Il database fino all'ultima transazione (tutti i log)
+* Il database fino a un numero SCN (System Change Number) specifico
+* Il database fino a una data e un'ora specifiche
++
+È necessario specificare la data e l'ora del ripristino in base al fuso orario dell'host del database.
+
++
+SnapCenter offre anche l'opzione No recovery per i database Oracle.
+
+
+
+
+NOTE: Il plug-in per il database Oracle non supporta il ripristino se è stato ripristinato utilizzando un backup creato con il ruolo di standby del database. È sempre necessario eseguire un ripristino manuale per i database fisici di standby.
+
+
+
+== Limitazioni relative al ripristino e al ripristino dei database Oracle
+
+Prima di eseguire le operazioni di ripristino, è necessario essere consapevoli delle limitazioni.
+
+Se si utilizza una qualsiasi versione di Oracle dalla 11.2.0.4 alla 12.1.0.1, l'operazione di ripristino sarà in stato di sospensione quando si esegue il comando _renamedg_. È possibile applicare la patch Oracle 19544733 per risolvere questo problema.
+
+Le seguenti operazioni di ripristino non sono supportate:
+
+* Ripristino e ripristino degli spazi delle tabelle del database dei container root (CDB)
+* Ripristino di tablespace temporanei e tablespace temporanei associati ai PDB
+* Ripristino e ripristino di tablespace da più PDB contemporaneamente
+* Ripristino dei backup dei log
+* Ripristino dei backup in una posizione diversa
+* Ripristino dei file di log di ripristino in qualsiasi configurazione diversa dai database di standby Data Guard o Active Data Guard
+* Ripristino del file SPFILE e Password
+* Quando si esegue un'operazione di ripristino su un database ricreato utilizzando il nome del database preesistente sullo stesso host, gestito da SnapCenter e con backup validi, l'operazione di ripristino sovrascrive i file di database appena creati anche se i DBID sono diversi.
++
+È possibile evitare questo problema eseguendo una delle seguenti operazioni:
+
++
+** Individuare le risorse SnapCenter dopo la creazione del database
+** Creare un backup del database ricreato
+
+
+
+
+
+
+== Limitazioni relative al ripristino point-in-time degli spazi delle tabelle
+
+* Il PITR (Point-in-Time Recovery) di SISTEMA, SYSAUX e TABLESPACE DI ANNULLAMENTO non è supportato
+* Non è possibile eseguire PITR di tablespace insieme ad altri tipi di ripristino
+* Se un tablespace viene rinominato e si desidera ripristinarlo fino a un punto prima che sia stato rinominato, specificare il nome precedente del tablespace
+* Se i vincoli per le tabelle in uno spazio tabella sono contenuti in un altro spazio tabella, è necessario ripristinare entrambi gli spazi tabella
+* Se una tabella e i relativi indici sono memorizzati in spazi tabella diversi, gli indici devono essere ignorati prima di eseguire PITR
+* Non è possibile utilizzare PITR per ripristinare lo spazio tabella predefinito corrente
+* Non è possibile utilizzare PITR per ripristinare gli spazi delle tabelle contenenti uno dei seguenti oggetti:
++
+** Oggetti con oggetti sottostanti (ad esempio viste materializzate) o oggetti contenuti (ad esempio tabelle partizionate), a meno che tutti gli oggetti sottostanti o contenuti non si trovino nel set di ripristino
++
+Inoltre, se le partizioni di una tabella partizionata sono memorizzate in spazi tabella diversi, è necessario rilasciare la tabella prima di eseguire PITR o spostare tutte le partizioni nello stesso spazio tabella prima di eseguire PITR.
+
+** Disfare o eseguire il rollback dei segmenti
+** Code avanzate compatibili con Oracle 8 con più destinatari
+** Oggetti di proprietà dell'utente SYS
++
+Esempi di questi tipi di oggetti sono PL/SQL, classi Java, programmi di richiamo, viste, sinonimi, utenti, privilegi, dimensioni, directory e sequenze.
+
+
+
+
+
+
+
+== Origini e destinazioni per il ripristino dei database Oracle
+
+È possibile ripristinare un database Oracle da una copia di backup sullo storage primario o secondario. È possibile ripristinare i database solo nella stessa posizione della stessa istanza di database. Tuttavia, nella configurazione di Real Application Cluster (RAC), è possibile ripristinare i database in altri nodi.
+
+
+
+=== Fonti per le operazioni di ripristino
+
+È possibile ripristinare i database da un backup sullo storage primario o secondario. Se si desidera eseguire il ripristino da un backup sullo storage secondario in una configurazione con mirroring multiplo, è possibile selezionare il mirror dello storage secondario come origine.
+
+
+
+=== Destinazioni per le operazioni di ripristino
+
+È possibile ripristinare i database solo nella stessa posizione della stessa istanza di database.
+
+In una configurazione RAC, è possibile ripristinare i database RAC da qualsiasi nodo del cluster.

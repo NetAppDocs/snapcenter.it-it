@@ -1,0 +1,55 @@
+---
+permalink: protect-scsql/reference_storage_layout_recommendations_for_snapcenter_plug_in_for_microsoft_sql_server.html 
+sidebar: sidebar 
+keywords:  
+summary: Un layout di storage ben progettato consente al server SnapCenter di eseguire il backup dei database per soddisfare gli obiettivi di recovery. Durante la definizione del layout dello storage, è necessario prendere in considerazione diversi fattori, tra cui la dimensione del database, la velocità di modifica del database e la frequenza con cui vengono eseguiti i backup. 
+---
+= Consigli sul layout dello storage per il plug-in SnapCenter per Microsoft SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un layout di storage ben progettato consente al server SnapCenter di eseguire il backup dei database per soddisfare gli obiettivi di recovery. Durante la definizione del layout dello storage, è necessario prendere in considerazione diversi fattori, tra cui la dimensione del database, la velocità di modifica del database e la frequenza con cui vengono eseguiti i backup.
+
+Le sezioni seguenti definiscono le raccomandazioni e le restrizioni relative al layout dello storage per LUN e dischi di macchine virtuali (VMDK) con il plug-in SnapCenter per Microsoft SQL Server installato nell'ambiente in uso.
+
+In questo caso, le LUN possono includere dischi VMware RDM e LUN iSCSI direct-attached mappati al guest.
+
+
+
+== Requisiti LUN e VMDK
+
+È possibile utilizzare facoltativamente LUN o VMDK dedicati per ottenere performance e gestione ottimali per i seguenti database:
+
+* Database di sistema master e modello
+* Tempdb
+* File di database degli utenti (.mdf e .ndf)
+* File di log delle transazioni del database utenti (.ldf)
+* Directory di log
+
+
+Per ripristinare database di grandi dimensioni, è consigliabile utilizzare LUN o VMDK dedicati. Il tempo necessario per ripristinare un LUN o un VMDK completo è inferiore al tempo necessario per ripristinare i singoli file memorizzati nel LUN o nel VMDK.
+
+Per la directory di log, è necessario creare un LUN o VMDK separato in modo che vi sia spazio libero sufficiente nei dischi dei file di dati o di log.
+
+
+
+== Layout di esempio LUN e VMDK
+
+La seguente figura mostra come configurare il layout dello storage per database di grandi dimensioni su LUN:
+
+image::../media/smsql_storage_layout_mult_vols_snapcenter.gif[Diagramma di LUN multipli]
+
+La seguente figura mostra come configurare il layout dello storage per database di medie o piccole dimensioni su LUN:
+
+image::../media/smsql_storage_layout_mult_dbs_luns_snapcenter.gif[Database multipli per diagramma LUN]
+
+La seguente figura mostra come configurare il layout dello storage per database di grandi dimensioni su VMDK:
+
+image::../media/smsql_storage_layout_large_dbs_vmdk.gif[Layout dello storage per database di grandi dimensioni su VMDK]
+
+La seguente figura mostra come configurare il layout dello storage per database medi o piccoli su VMDK:
+
+image::../media/smsql_storage_layout_med_small_dbs_vmdk.gif[Layout dello storage per database di medie o piccole dimensioni su VMDK]

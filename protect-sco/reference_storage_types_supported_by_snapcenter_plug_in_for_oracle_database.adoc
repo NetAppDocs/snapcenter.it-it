@@ -1,0 +1,79 @@
+---
+permalink: protect-sco/reference_storage_types_supported_by_snapcenter_plug_in_for_oracle_database.html 
+sidebar: sidebar 
+keywords: storage types, iSCSI, NFS, RDM, VMDK, NFS, LVM, ASM, SAN filesystem 
+summary: 'SnapCenter supporta un"ampia gamma di tipi di storage su macchine fisiche e virtuali. Prima di installare il pacchetto plug-in SnapCenter per Linux o il pacchetto plug-in SnapCenter per AIX, è necessario verificare il supporto per il tipo di storage.' 
+---
+= Tipi di storage supportati dal plug-in per database Oracle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter supporta un'ampia gamma di tipi di storage su macchine fisiche e virtuali. Prima di installare il pacchetto plug-in SnapCenter per Linux o il pacchetto plug-in SnapCenter per AIX, è necessario verificare il supporto per il tipo di storage.
+
+SnapCenter non supporta il provisioning dello storage per Linux e AIX.
+
+
+
+== Tipi di storage supportati su Linux
+
+La tabella seguente elenca i tipi di storage supportati su Linux.
+
+|===
+| Macchina | Tipo di storage 
+
+
+ a| 
+Server fisico
+ a| 
+* LUN connessi a FC
+* LUN connessi a iSCSI
+* Volumi connessi a NFS
+
+
+
+
+ a| 
+VMware ESXi
+ a| 
+* Il completamento delle LUN RDM collegate da un HBASCAN ESXi FC o iSCSI degli HBA (host bus adapter) potrebbe richiedere molto tempo, in quanto SnapCenter esegue la scansione di tutti gli adattatori bus host presenti nell'host.
++
+È possibile modificare il file *LinuxConfig.pm* situato in _/opt/NetApp/snapcenter/spl/plugins/scu/scucore/modules/SCU/Config_ per impostare il valore del parametro *SCSI_HOSTS_OPTIMIZED_RESCAN* su 1 per ripetere la scansione solo degli HBA elencati in HBA_DRIVER_NAMES.
+
+* LUN iSCSI collegati direttamente al sistema guest dall'iniziatore iSCSI
+* VMDK su datastore VMFS o NFS
+* Volumi NFS collegati direttamente al sistema guest
+
+
+|===
+
+
+== Tipi di storage supportati su AIX
+
+La tabella seguente elenca i tipi di storage supportati su AIX.
+
+|===
+| Macchina | Tipo di storage 
+
+
+ a| 
+Server fisico
+ a| 
+* LUN connessi a FC e iSCSI.
++
+In un ambiente SAN, sono supportati i file system ASM, LVM e SAN.
+
++
+
+NOTE: NFS su AIX e il filesystem non sono supportati.
+
+* JFS2 (Enhanced Journaled file System)
++
+Supporta la registrazione inline su file system SAN e layout LVM.
+
+
+
+|===
+Il https://["Tool di matrice di interoperabilità NetApp"] contiene le informazioni più recenti sulle versioni supportate.

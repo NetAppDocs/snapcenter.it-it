@@ -1,0 +1,197 @@
+---
+permalink: protect-scsql/task_restore_sql_server_database_backups.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile utilizzare SnapCenter per ripristinare i database di SQL Server di cui è stato eseguito il backup. Il ripristino del database è un processo multifase che copia tutti i dati e le pagine di registro da un backup di SQL Server specificato in un database specifico. 
+---
+= Ripristinare i backup del database di SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare SnapCenter per ripristinare i database di SQL Server di cui è stato eseguito il backup. Il ripristino del database è un processo multifase che copia tutti i dati e le pagine di registro da un backup di SQL Server specificato in un database specifico.
+
+*A proposito di questa attività*
+
+* È possibile ripristinare i database di SQL Server di cui è stato eseguito il backup in un'istanza di SQL Server diversa sullo stesso host in cui è stato creato il backup.
++
+È possibile utilizzare SnapCenter per ripristinare i database di SQL Server di cui è stato eseguito il backup in un percorso alternativo, in modo da non sostituire una versione di produzione.
+
+* SnapCenter può ripristinare i database in un cluster Windows senza disattivare il gruppo di cluster di SQL Server.
+* Se si verifica un errore del cluster (operazione di spostamento di un gruppo di cluster) durante un'operazione di ripristino (ad esempio, se il nodo proprietario delle risorse non funziona), è necessario riconnettersi all'istanza di SQL Server e riavviare l'operazione di ripristino.
+* Non è possibile ripristinare il database quando gli utenti o i processi di SQL Server Agent accedono al database.
+* Non è possibile ripristinare i database di sistema su un percorso alternativo.
+* IL PERCORSO_SCRIPT viene definito utilizzando la chiave PredesedWindowsScriptsDirectory situata nel file SMCoreServiceHost.exe.Config dell'host del plug-in.
++
+Se necessario, è possibile modificare questo percorso e riavviare il servizio SMcore. Si consiglia di utilizzare il percorso predefinito per la protezione.
+
++
+Il valore della chiave può essere visualizzato da swagger attraverso l'API: API /4.7/configsettings
+
++
+È possibile utilizzare L'API GET per visualizzare il valore della chiave. L'API SET non è supportata.
+
+* La maggior parte dei campi delle pagine della procedura guidata di ripristino sono esplicativi. Le seguenti informazioni descrivono i campi per i quali potrebbe essere necessaria una guida.
+
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina Resources (risorse), selezionare *Database* o *Resource Group* dall'elenco *View* (Visualizza).
+. Selezionare il database o il gruppo di risorse dall'elenco.
++
+Viene visualizzata la pagina topologia.
+
+. Dalla vista Manage Copies (Gestisci copie), selezionare *Backup* dal sistema di storage.
+. Selezionare il backup dalla tabella, quindi fare clic su image:../media/restore_icon.gif["icona restore (ripristina)"] icona.
++
+image::../media/restoring_resource.gif[ripristino delle risorse]
+
+. Nella pagina Restore Scope (ambito ripristino), selezionare una delle seguenti opzioni:
++
+|===
+| Opzione | Descrizione 
+
+
+ a| 
+Ripristinare il database sullo stesso host in cui è stato creato il backup
+ a| 
+Selezionare questa opzione se si desidera ripristinare il database sullo stesso server SQL in cui vengono eseguiti i backup.
+
+
+
+ a| 
+Ripristinare il database su un host alternativo
+ a| 
+Selezionare questa opzione se si desidera ripristinare il database in un server SQL diverso nello stesso host o in un altro host in cui vengono eseguiti i backup.
+
+Selezionare un nome host, fornire un nome di database (facoltativo), selezionare un'istanza e specificare i percorsi di ripristino.
+
+
+NOTE: L'estensione del file fornita nel percorso alternativo deve essere uguale all'estensione del file di database originale.
+
+Se l'opzione *Restore the database to an alternate host* (Ripristina database su un host alternativo) non viene visualizzata nella pagina Restore Scope (Ripristina ambito), cancellare la cache del browser.
+
+
+
+ a| 
+Ripristinare il database utilizzando i file di database esistenti
+ a| 
+Selezionare questa opzione se si desidera ripristinare il database in un SQL Server alternativo nello stesso host o in un host diverso in cui vengono eseguiti i backup.
+
+I file di database devono essere già presenti nei percorsi di file esistenti. Selezionare un nome host, fornire un nome di database (facoltativo), selezionare un'istanza e specificare i percorsi di ripristino.
+
+|===
+. Nella pagina Recovery Scope (ambito ripristino), selezionare una delle seguenti opzioni:
++
+|===
+| Opzione | Descrizione 
+
+
+ a| 
+Nessuno
+ a| 
+Selezionare *None* (Nessuno) se si desidera ripristinare solo il backup completo senza alcun registro.
+
+
+
+ a| 
+Tutti i backup dei log
+ a| 
+Selezionare *All log backups* up-to-the-minute backup restore operation per ripristinare tutti i backup dei log disponibili dopo il backup completo.
+
+
+
+ a| 
+In base ai backup dei log fino a.
+ a| 
+Selezionare *by log backups* per eseguire un'operazione di ripristino point-in-time, che ripristina il database in base ai log di backup fino al log di backup con la data selezionata.
+
+
+
+ a| 
+Per data specifica fino al
+ a| 
+Selezionare *per data specifica fino a* per specificare la data e l'ora dopo le quali i registri delle transazioni non vengono applicati al database ripristinato.
+
+Questa operazione di ripristino point-in-time interrompe il ripristino delle voci del log delle transazioni registrate dopo la data e l'ora specificate.
+
+
+
+ a| 
+Utilizzare una directory di log personalizzata
+ a| 
+Se è stato selezionato *All log backups*, *by log backups* o *by specifiche date until* e i log si trovano in una posizione personalizzata, selezionare *Use custom log directory*, quindi specificare la posizione del log.
+
+L'opzione *Usa directory log personalizzata* è disponibile solo se è stato selezionato *Ripristina il database su un host alternativo* o *Ripristina il database utilizzando i file di database esistenti*. È anche possibile utilizzare il percorso condiviso, ma assicurarsi che il percorso sia accessibile dall'utente SQL.
+
+
+NOTE: La directory di log personalizzata non è supportata per il database del gruppo di disponibilità.
+
+|===
+. Nella pagina Pre Ops (operazioni di pre-elaborazione), attenersi alla seguente procedura:
++
+.. Nella pagina Pre Restore Options (Opzioni di pre-ripristino), selezionare una delle seguenti opzioni:
++
+*** Selezionare *sovrascrivere il database con lo stesso nome durante il ripristino* per ripristinare il database con lo stesso nome.
+*** Selezionare *Mantieni impostazioni di replica del database SQL* per ripristinare il database e conservare le impostazioni di replica esistenti.
+*** Selezionare *Crea backup del log delle transazioni prima del ripristino* per creare un log delle transazioni prima dell'inizio dell'operazione di ripristino.
+*** Selezionare *Quit restore if Transaction log backup before restore fails* (Esci dal ripristino se il backup del log delle transazioni non riesce) per interrompere l'operazione di ripristino.
+
+
+.. Specificare gli script opzionali da eseguire prima di eseguire un processo di ripristino.
++
+Ad esempio, è possibile eseguire uno script per aggiornare i trap SNMP, automatizzare gli avvisi, inviare i registri e così via.
+
++
+
+NOTE: Il percorso prescripts o postscripts non deve includere dischi o condivisioni. Il percorso deve essere relativo al PERCORSO_SCRIPT.
+
+
+
+. Nella pagina Post Ops (operazioni successive), attenersi alla seguente procedura:
++
+.. Nella sezione Scegli stato database dopo il completamento del ripristino, selezionare una delle seguenti opzioni:
++
+*** Selezionare *operativo, ma non disponibile per il ripristino di log di transazioni aggiuntivi* se si stanno ripristinando tutti i backup necessari.
++
+Questo è il comportamento predefinito, che lascia il database pronto per l'uso eseguendo il rollback delle transazioni non assegnate. Non è possibile ripristinare ulteriori registri delle transazioni fino a quando non si crea un backup.
+
+*** Selezionare *non operativo, ma disponibile per il ripristino di registri transazionali aggiuntivi* per lasciare il database non operativo senza eseguire il rollback delle transazioni non assegnate.
++
+È possibile ripristinare ulteriori registri delle transazioni. Non è possibile utilizzare il database fino a quando non viene ripristinato.
+
+*** Selezionare *Read-only mode, disponibile per il ripristino di registri transazionali aggiuntivi* per lasciare il database in modalità di sola lettura.
++
+Questa opzione annulla le transazioni non assegnate, ma salva le azioni non riuscite in un file di standby in modo che gli effetti di ripristino possano essere ripristinati.
+
++
+Se l'opzione Undo directory (Annulla directory) è attivata, vengono ripristinati altri log delle transazioni. Se l'operazione di ripristino del log delle transazioni non riesce, è possibile eseguire il rollback delle modifiche. La documentazione di SQL Server contiene ulteriori informazioni.
+
+
+
+.. Specificare gli script opzionali da eseguire dopo l'esecuzione di un processo di ripristino.
++
+Ad esempio, è possibile eseguire uno script per aggiornare i trap SNMP, automatizzare gli avvisi, inviare i registri e così via.
+
++
+
+NOTE: Il percorso prescripts o postscripts non deve includere dischi o condivisioni. Il percorso deve essere relativo al PERCORSO_SCRIPT.
+
+
+
+. Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
++
+È inoltre necessario specificare gli indirizzi e-mail del mittente e del destinatario e l'oggetto dell'e-mail.
+
+. Esaminare il riepilogo, quindi fare clic su *fine*.
+. Monitorare il processo di ripristino utilizzando la pagina *Monitor* > *Jobs*.
+
+
+*Ulteriori informazioni*
+
+link:task_restore_and_recover_resources_using_powershell_cmdlets_for_sql.html["Ripristinare e ripristinare le risorse utilizzando i cmdlet PowerShell"]
+
+link:task_restore_a_sql_server_database_from_secondary_storage.html["Ripristinare un database SQL Server dallo storage secondario"]

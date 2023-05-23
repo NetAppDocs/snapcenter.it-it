@@ -1,0 +1,31 @@
+---
+permalink: protect-sco/task_restore_and_recover_oracle_databases_using_unix_commands.html 
+sidebar: sidebar 
+keywords: restore, recover, CLI 
+summary: 'Il flusso di lavoro di ripristino e ripristino include la pianificazione, l"esecuzione delle operazioni di ripristino e ripristino e il monitoraggio delle operazioni.' 
+---
+= Ripristinare e ripristinare i database Oracle utilizzando i comandi UNIX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il flusso di lavoro di ripristino e ripristino include la pianificazione, l'esecuzione delle operazioni di ripristino e ripristino e il monitoraggio delle operazioni.
+
+*A proposito di questa attività*
+
+Eseguire i seguenti comandi per stabilire la connessione con il server SnapCenter, elencare i backup, recuperare le informazioni e ripristinare il backup.
+
+Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help _command_name_. In alternativa, fare riferimento alla https://["Guida di riferimento al comando software SnapCenter"^].
+
+*Fasi*
+
+. Avviare una sessione di connessione con il server SnapCenter per un utente specifico: _Open-SmConnection_
+. Recuperare le informazioni sui backup che si desidera ripristinare: _Get-SmBackup_
+. Recuperare le informazioni dettagliate sul backup specificato: _Get-SmBackupDetails_
++
+Questo comando recupera le informazioni dettagliate sul backup di una risorsa specificata con un ID di backup specificato. Le informazioni includono nome del database, versione, home, SCN iniziale e finale, tablespace, database collegabili e relativi spazi tabella.
+
+. Ripristinare i dati dal backup: _Restore-SmBackup_
+

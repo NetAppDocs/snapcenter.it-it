@@ -1,0 +1,36 @@
+= 
+:allow-uri-read: 
+
+
+È necessario configurare il certificato CA con i servizi plug-in host di Windows per attivare il certificato digitale installato.
+
+Eseguire le seguenti operazioni sul server SnapCenter e su tutti gli host plug-in in cui sono già implementati i certificati CA.
+
+*Fasi*
+
+. Rimuovere l'associazione del certificato esistente con la porta predefinita SMCore 8145, eseguendo il seguente comando:
++
+`> netsh http delete sslcert ipport=0.0.0.0:_<SMCore Port>`
+
++
+Ad esempio:
+
++
+ > netsh http delete sslcert ipport=0.0.0.0:8145
+. Associare il certificato appena installato ai servizi plug-in dell'host Windows eseguendo i seguenti comandi:
++
+....
+> $cert = “_<certificate thumbprint>_”
+> $guid = [guid]::NewGuid().ToString("B")
+> netsh http add sslcert ipport=0.0.0.0: _<SMCore Port>_ certhash=$cert appid="$guid"
+....
++
+Ad esempio:
+
++
+....
+> $cert = “a909502dd82ae41433e6f83886b00d4277a32a7b”
+> $guid = [guid]::NewGuid().ToString("B")
+> netsh http add sslcert ipport=0.0.0.0: _<SMCore Port>_ certhash=$cert appid="$guid"
+....
+

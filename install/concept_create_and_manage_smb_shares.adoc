@@ -1,0 +1,101 @@
+---
+permalink: install/concept_create_and_manage_smb_shares.html 
+sidebar: sidebar 
+keywords: SMB shares 
+summary: 'Per configurare una condivisione SMB3 su una macchina virtuale di storage (SVM), è possibile utilizzare l"interfaccia utente di SnapCenter o i cmdlet PowerShell.' 
+---
+= Creare e gestire le condivisioni SMB
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per configurare una condivisione SMB3 su una macchina virtuale di storage (SVM), è possibile utilizzare l'interfaccia utente di SnapCenter o i cmdlet PowerShell.
+
+|===
+
+
+| *Procedura consigliata:* l'utilizzo dei cmdlet è consigliato in quanto consente di sfruttare i modelli forniti con SnapCenter per automatizzare la configurazione delle condivisioni. 
+|===
+I modelli incapsulano le Best practice per la configurazione di volumi e condivisioni. I modelli sono disponibili nella cartella modelli della cartella di installazione del pacchetto di plug-in SnapCenter per Windows.
+
+
+TIP: Se ti senti a tuo agio, puoi creare i tuoi modelli seguendo i modelli forniti. Prima di creare un modello personalizzato, esaminare i parametri contenuti nella documentazione del cmdlet.
+
+
+
+== Creare una condivisione SMB
+
+È possibile utilizzare la pagina condivisioni SnapCenter per creare una condivisione SMB3 su una macchina virtuale di storage (SVM).
+
+Non è possibile utilizzare SnapCenter per eseguire il backup dei database sulle condivisioni SMB. Il supporto SMB è limitato solo al provisioning.
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *hosts*.
+. Nella pagina host, fare clic su *shares*.
+. Selezionare la SVM dall'elenco a discesa *Storage Virtual Machine* (macchina virtuale di storage).
+. Fare clic su *nuovo*.
++
+Viene visualizzata la finestra di dialogo Nuova condivisione.
+
+. Nella finestra di dialogo New Share (Nuova condivisione), definire la condivisione:
++
+|===
+| In questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Descrizione
+ a| 
+Inserire un testo descrittivo per la condivisione.
+
+
+
+ a| 
+Nome di condivisione
+ a| 
+Inserire il nome della condivisione, ad esempio test_share.
+
+Il nome immesso per la condivisione verrà utilizzato anche come nome del volume.
+
+Il nome della condivisione:
+
+** Deve essere una stringa UTF-8.
+** Non deve includere i seguenti caratteri: Caratteri di controllo da 0x00 a 0x1F (entrambi inclusi), 0x22 (virgolette doppie) e i caratteri speciali `\ / [ ] : (vertical bar) < > + = ; , ?`
+
+
+
+
+ a| 
+Percorso di condivisione
+ a| 
+** Fare clic nel campo per immettere un nuovo percorso del file system, ad esempio /.
+** Fare doppio clic nel campo per selezionare da un elenco di percorsi del file system esistenti.
+
+
+|===
+. Quando si è soddisfatti delle voci immesse, fare clic su *OK*.
++
+SnapCenter crea la condivisione SMB sulla SVM.
+
+
+
+
+
+== Eliminare una condivisione SMB
+
+È possibile eliminare una condivisione SMB quando non è più necessaria.
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *hosts*.
+. Nella pagina host, fare clic su *shares*.
+. Nella pagina Shares (condivisioni), fare clic nel campo *Storage Virtual Machine* (macchina virtuale di storage) per visualizzare un elenco a discesa con un elenco di macchine virtuali di storage disponibili (SVM), quindi selezionare la SVM per la condivisione che si desidera eliminare.
+. Dall'elenco delle condivisioni di SVM, selezionare la condivisione che si desidera eliminare e fare clic su *Delete* (Elimina).
+. Nella finestra di dialogo Elimina condivisione, fare clic su *OK*.
++
+SnapCenter elimina la condivisione SMB dalla SVM.
+
+

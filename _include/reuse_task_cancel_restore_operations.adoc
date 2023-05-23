@@ -1,0 +1,43 @@
+= 
+:allow-uri-read: 
+
+
+È possibile annullare i processi di ripristino in coda.
+
+Per annullare le operazioni di ripristino, è necessario accedere come amministratore SnapCenter o come proprietario del processo.
+
+*A proposito di questa attività*
+
+* È possibile annullare un'operazione di ripristino in coda dalla pagina *Monitor* o dal riquadro *Activity*.
+* Non è possibile annullare un'operazione di ripristino in corso.
+* È possibile utilizzare l'interfaccia grafica di SnapCenter, i cmdlet PowerShell o i comandi CLI per annullare le operazioni di ripristino in coda.
+* Il pulsante *Annulla lavoro* è disattivato per le operazioni di ripristino che non possono essere annullate.
+* Se si seleziona *tutti i membri di questo ruolo possono visualizzare e operare su altri oggetti membri* nella pagina utenti/gruppi durante la creazione di un ruolo, è possibile annullare le operazioni di ripristino in coda degli altri membri durante l'utilizzo di tale ruolo.
+
+
+*Passo*
+
+Eseguire una delle seguenti operazioni:
+
+|===
+| Dal... | Azione 
+
+
+ a| 
+Pagina Monitor
+ a| 
+. Nel riquadro di spostamento di sinistra, fare clic su *Monitor* > *Jobs*.
+. Selezionare il lavoro e fare clic su *Annulla lavoro*.
+
+
+
+
+ a| 
+Riquadro delle attività
+ a| 
+. Dopo aver avviato l'operazione di ripristino, fare clic su image:../media/activity_pane_icon.gif[""] Nel riquadro Activity (attività) per visualizzare le cinque operazioni più recenti.
+. Selezionare l'operazione.
+. Nella pagina Dettagli processo, fare clic su *Annulla processo*.
+
+
+|===

@@ -1,0 +1,35 @@
+---
+permalink: sc-automation/task_how to_access_rest_apis_using_the_swagger_api_web_page.html 
+sidebar: sidebar 
+keywords: REST API, Swagger 
+summary: Le API REST sono esposte attraverso la pagina web di Swagger. È possibile accedere alla pagina Web Swagger per visualizzare le API REST del server SnapCenter e per eseguire manualmente una chiamata API. È possibile utilizzare le API REST per gestire il server SnapCenter o per eseguire operazioni di protezione dei dati. 
+---
+= Come accedere alle API REST utilizzando la pagina Web API di Swagger
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le API REST sono esposte attraverso la pagina web di Swagger. È possibile accedere alla pagina Web Swagger per visualizzare le API REST del server SnapCenter e per eseguire manualmente una chiamata API. È possibile utilizzare le API REST per gestire il server SnapCenter o per eseguire operazioni di protezione dei dati.
+
+È necessario conoscere l'indirizzo IP di gestione o il nome di dominio del server SnapCenter su cui si desidera eseguire le API REST.
+
+Non sono necessarie autorizzazioni speciali per eseguire il client API REST. Qualsiasi utente può accedere alla pagina Web di Swagger. Le rispettive autorizzazioni sugli oggetti a cui si accede tramite l'API REST si basano sull'utente che genera il token per accedere all'API REST.
+
+*Fasi*
+
+. Da un browser, immettere l'URL per accedere alla pagina Web Swagger nel formato _ https://<SnapCenter_IP_address_or_name>:<SnapCenter_port>/swagger/_.
++
+
+NOTE: Assicurarsi che l'URL API REST non contenga i seguenti caratteri: +, ., % e &.
+
+. Nel campo *Esplora Swagger*, se la documentazione API Swagger non viene visualizzata automaticamente, digitare: _/https://<SnapCenter_IP_address_or_name>:<SnapCenter_port>/contenuto/swagger/SnapCenter.yaml_
+. Fare clic su *Esplora*.
++
+Viene visualizzato un elenco di tipi o categorie di risorse API.
+
+. Fare clic su un tipo di risorsa API per visualizzare le API in quel tipo di risorsa.
+
+
+Se si verificano comportamenti imprevisti durante l'esecuzione delle API REST di SnapCenter, è possibile utilizzare i file di log per identificare la causa e risolvere il problema. È possibile scaricare i file di log dall'interfaccia utente di SnapCenter facendo clic su *Monitor* > *Log* > *Download*.

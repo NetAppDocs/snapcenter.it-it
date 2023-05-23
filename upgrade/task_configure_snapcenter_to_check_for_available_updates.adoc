@@ -1,0 +1,30 @@
+---
+permalink: upgrade/task_configure_snapcenter_to_check_for_available_updates.html 
+sidebar: sidebar 
+keywords: configure, snapcenter server, updates, software updates 
+summary: 'SnapCenter comunica periodicamente con il sito di supporto NetApp per notificare gli aggiornamenti software disponibili. È inoltre possibile creare una pianificazione per specificare l"intervallo in cui si desidera ricevere informazioni sugli aggiornamenti disponibili.' 
+---
+= Configurare SnapCenter per verificare la disponibilità di aggiornamenti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter comunica periodicamente con il sito di supporto NetApp per notificare gli aggiornamenti software disponibili. È inoltre possibile creare una pianificazione per specificare l'intervallo in cui si desidera ricevere informazioni sugli aggiornamenti disponibili.
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *Impostazioni*.
+. Nella pagina Impostazioni, fare clic su *Software*.
++
+La pagina Software disponibile visualizza i pacchetti plug-in disponibili, le versioni disponibili e il relativo stato di installazione.
+
+. Fare clic su *Controlla aggiornamenti* per verificare se sono disponibili versioni più recenti dei pacchetti plug-in.
+. Fare clic su *Schedule Updates* (Pianifica aggiornamenti) per creare una pianificazione in cui specificare l'intervallo in cui si desidera ricevere informazioni sugli aggiornamenti disponibili:
++
+.. Selezionare l'intervallo in *Controlla aggiornamenti*.
+.. Selezionare la credenziale di amministrazione del server SnapCenter e fare clic su *OK*.
+
+
+

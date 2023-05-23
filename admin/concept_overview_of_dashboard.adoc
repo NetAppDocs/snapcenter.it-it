@@ -1,0 +1,298 @@
+---
+permalink: admin/concept_overview_of_dashboard.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Dal riquadro di navigazione a sinistra di SnapCenter, la dashboard offre una prima panoramica dello stato del sistema, tra cui attività di processo recenti, avvisi, riepilogo della protezione, efficienza e utilizzo dello storage, stato dei processi SnapCenter (backup, clonazione, ripristino), stato della configurazione per host cluster standalone e Windows, Numero di macchine virtuali di storage gestite da SnapCenter e capacità di licenza.' 
+---
+= Panoramica della dashboard
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dal riquadro di navigazione a sinistra di SnapCenter, la dashboard offre una prima panoramica dello stato del sistema, tra cui attività di lavoro recenti, avvisi, riepilogo della protezione, efficienza e utilizzo dello storage, stato dei processi SnapCenter (backup, clonazione, ripristino), stato della configurazione per host standalone e cluster Windows, Numero di macchine virtuali di storage (SVM) gestite da SnapCenter e capacità di licenza.
+
+Le informazioni visualizzate nella vista Dashboard dipendono dal ruolo assegnato all'utente che ha attualmente effettuato l'accesso a SnapCenter. Alcuni contenuti potrebbero non essere visualizzati se l'utente non dispone dell'autorizzazione per visualizzare tali informazioni.
+
+In molti casi, è possibile visualizzare ulteriori informazioni su un display passando il mouse su *i*. In alcuni casi, le informazioni contenute nella dashboard vengono collegate alle informazioni dettagliate sulla fonte nelle pagine della GUI di SnapCenter, ad esempio risorse, Monitor e Report.
+
+
+
+== Attività lavorative recenti
+
+Il riquadro attività recenti visualizza l'ultima attività di processo da qualsiasi processo di backup, ripristino e clonazione a cui si dispone dell'accesso. I job in questa schermata presentano uno dei seguenti stati: Completato, Avviso, non riuscito, in esecuzione, in coda, E annullato.
+
+Passando il mouse su un lavoro si ottiene una maggiore quantità di informazioni. È possibile visualizzare ulteriori informazioni sul lavoro facendo clic su un numero di lavoro specifico, che reindirizza l'utente alla pagina Monitor. Da qui, è possibile ottenere dettagli sul lavoro o informazioni di log e generare un report specifico per quel lavoro.
+
+Fare clic su *Visualizza tutto* per visualizzare la cronologia di tutti i job SnapCenter.
+
+
+
+== Avvisi
+
+Il riquadro Avvisi visualizza gli ultimi avvisi critici e di avviso non risolti per gli host e il server SnapCenter.
+
+Il numero totale di avvisi critici e di categoria di avviso viene visualizzato nella parte superiore del display. Facendo clic sui totali critici o di avviso, viene visualizzata nuovamente la pagina Avvisi con il filtro specifico applicato nella pagina Avvisi.
+
+Facendo clic su un avviso specifico, viene visualizzata nuovamente la pagina Avvisi per ulteriori informazioni sull'avviso. Facendo clic su *Visualizza tutto* nella parte inferiore del display, si viene reindirizzati alla pagina Avvisi per un elenco di tutti gli avvisi.
+
+
+
+== Riepilogo della protezione più recente
+
+La sezione Riepilogo protezione più recente fornisce lo stato di protezione per tutte le entità a cui si ha accesso. Per impostazione predefinita, il display fornisce lo stato di tutti i plug-in. Le informazioni sullo stato vengono fornite per le risorse di cui viene eseguito il backup sullo storage primario come copie Snapshot e sullo storage secondario utilizzando le tecnologie SnapMirror e SnapVault. La disponibilità delle informazioni sullo stato di protezione per lo storage secondario si basa sul tipo di plug-in selezionato.
+
+
+NOTE: Se si utilizza un criterio di protezione del vault mirror, i contatori del riepilogo della protezione vengono visualizzati nel grafico di riepilogo di SnapVault e non nel grafico di SnapMirror.
+
+Lo stato di protezione dei singoli plug-in è disponibile selezionando un plug-in dal menu a discesa. Un grafico a ciambelle mostra la percentuale di risorse protette per il plug-in selezionato. Facendo clic su una sezione, viene visualizzata la pagina *Report* > *Plug-in*, che fornisce un report dettagliato di tutte le attività di storage primario e secondario per il plug-in specificato.
+
+
+IMPORTANT: I report sullo storage secondario sono validi solo per SnapVault; i report SnapMirror non sono supportati.
+
+
+NOTE: SAP HANA fornisce informazioni sullo stato di protezione per lo storage primario e secondario per le copie Snapshot. Per i backup basati su file è disponibile solo lo stato di protezione dello storage primario.
+
+|===
+| Stato di protezione | Storage primario | Storage secondario 
+
+
+ a| 
+Non riuscito
+ a| 
+Numero di entità che fanno parte di un gruppo di risorse, in cui il gruppo di risorse ha eseguito un backup, ma il backup non è riuscito.
+ a| 
+Numero di entità con backup che non sono riusciti a trasferire a una destinazione secondaria.
+
+
+
+ a| 
+Riuscito
+ a| 
+Numero di entità in un gruppo di risorse, in cui è stato eseguito correttamente il backup del gruppo di risorse.
+ a| 
+Numero di entità con backup che sono stati trasferiti correttamente a una destinazione secondaria.
+
+
+
+ a| 
+Non configurato
+ a| 
+Numero di entità che non fanno parte di alcun gruppo di risorse e che non sono state sottoposte a backup.
+ a| 
+Numero di entità che fanno parte di uno o più gruppi di risorse non configurati per i backup da trasferire a una destinazione secondaria.
+
+
+
+ a| 
+Non avviato
+ a| 
+Numero di entità che fanno parte di un gruppo di risorse, ma non è stato eseguito alcun backup.
+ a| 
+Non applicabile.
+
+|===
+
+NOTE: Se si utilizza SnapCenter Server 4.2 e una versione precedente del plug-in (precedente alla 4.2) per creare i backup, la sezione *Riepilogo protezione più recente* non visualizza lo stato di protezione di questi backup.
+
+
+
+== Lavori
+
+La sezione lavori fornisce un riepilogo dei processi di backup, ripristino e clonazione a cui si ha accesso. È possibile personalizzare l'intervallo di tempo per qualsiasi report utilizzando il menu a discesa. Le opzioni relative all'intervallo di tempo sono fisse alle ultime 24 ore, agli ultimi 7 giorni e agli ultimi 30 giorni. Il report predefinito mostra i processi di protezione dei dati eseguiti negli ultimi 7 giorni.
+
+Le informazioni sul processo di backup, ripristino e clonazione vengono visualizzate nei grafici a nastro. Facendo clic su una sezione ciambella si viene reindirizzati alla pagina Monitor con i filtri dei job pre-applicati alla selezione.
+
+|===
+| Stato del lavoro | Descrizione 
+
+
+ a| 
+Non riuscito
+ a| 
+Numero di lavori non riusciti.
+
+
+
+ a| 
+Attenzione
+ a| 
+Numero di lavori che hanno riscontrato un errore.
+
+
+
+ a| 
+Riuscito
+ a| 
+Numero di lavori completati correttamente.
+
+
+
+ a| 
+In esecuzione
+ a| 
+Numero di processi attualmente in esecuzione.
+
+|===
+
+
+== Storage
+
+Il riquadro Storage visualizza lo storage primario e secondario consumato dai processi di protezione in un periodo di 90 giorni, illustra graficamente le tendenze di consumo e calcola i risparmi dello storage primario. Le informazioni sullo storage vengono aggiornate ogni 24 ore alle 12
+
+Il consumo totale giornaliero, che comprende il numero totale di backup disponibili in SnapCenter e le dimensioni occupate da questi backup, viene visualizzato nella parte superiore del display. A un backup potrebbero essere associate più copie Snapshot e il numero di copie rifletterà lo stesso. Applicabile sia alle copie Snapshot primarie che a quelle secondarie. Ad esempio, sono stati creati 10 backup, di cui 2 eliminati a causa della conservazione dei backup basata su policy e 1 eliminato esplicitamente dall'utente. In questo modo, viene visualizzato il numero di 7 backup insieme alle dimensioni occupate da questi 7 backup.
+
+Il fattore di risparmio dello storage per lo storage primario è il rapporto tra capacità logica (risparmi di copia di cloni e Snapshot più storage consumato) e capacità fisica dello storage primario. Un grafico a barre illustra i risparmi in termini di storage.
+
+Il grafico a linee traccia separatamente il consumo di storage primario e secondario su base giornaliera in un periodo di 90 giorni. Passando il mouse sui grafici si ottengono risultati dettagliati, giorno per giorno.
+
+
+NOTE: Se si utilizza SnapCenter Server 4.2 e una versione precedente del plug-in (precedente alla 4.2) per creare i backup, il riquadro *Storage* non visualizza il numero di backup, lo storage utilizzato da questi backup, i risparmi Snapshot, i risparmi sui cloni e le dimensioni di Snapshot.
+
+
+
+== Configurazione
+
+Il riquadro Configurazione fornisce informazioni consolidate sullo stato di tutti gli host cluster Windows e standalone attivi gestiti da SnapCenter e a cui si dispone dell'accesso. Sono incluse le informazioni sullo stato del plug-in associato a tali host.
+
+Facendo clic sul numero accanto agli host, si viene reindirizzati alla sezione Managed hosts della pagina hosts. Da qui, è possibile ottenere informazioni dettagliate per un host selezionato.
+
+Inoltre, questa schermata mostra la somma delle SVM standalone di ONTAP e delle SVM di Cluster ONTAP gestite da SnapCenter e a cui si dispone dell'accesso. Facendo clic sul numero accanto a SVM si accede nuovamente alla pagina Storage Systems (sistemi storage). Da qui, è possibile ottenere informazioni dettagliate per una SVM selezionata.
+
+Lo stato di configurazione dell'host viene visualizzato come rosso (critico), giallo (avviso) e verde (attivo), insieme al numero di host in ogni stato. I messaggi di stato vengono forniti per ogni stato.
+
+|===
+| Stato della configurazione | Descrizione 
+
+
+ a| 
+Aggiornamento obbligatorio
+ a| 
+Numero di host che eseguono plug-in non supportati e che necessitano di un aggiornamento. Un plug-in non supportato non è compatibile con questa versione di SnapCenter.
+
+
+
+ a| 
+Migrazione obbligatoria
+ a| 
+Numero di host che eseguono plug-in non supportati e che necessitano di migrazione. Un plug-in non supportato non è compatibile con questa versione di SnapCenter.
+
+
+
+ a| 
+Nessun plug-in installato
+ a| 
+Numero di host aggiunti correttamente, ma i plug-in devono essere installati o l'installazione dei plug-in non è riuscita.
+
+
+
+ a| 
+Sospeso
+ a| 
+Numero di host le cui pianificazioni sono sospese e in manutenzione.
+
+
+
+ a| 
+Interrotto
+ a| 
+Numero di host attivi, ma i servizi plug-in non sono in esecuzione.
+
+
+
+ a| 
+Host inattivo
+ a| 
+Numero di host non disponibili o non raggiungibili.
+
+
+
+ a| 
+Aggiornamento disponibile (opzionale)
+ a| 
+Numero di host in cui è disponibile una versione più recente del pacchetto plug-in per l'aggiornamento.
+
+
+
+ a| 
+Migrazione disponibile (opzionale)
+ a| 
+Numero di host in cui è disponibile una versione più recente del plug-in per la migrazione.
+
+
+
+ a| 
+Configurare la directory del registro
+ a| 
+Numero di host in cui è necessario configurare la directory di log per consentire a SCSQL di eseguire il backup del log delle transazioni.
+
+
+
+ a| 
+Configurare i plug-in VMware
+ a| 
+Numero di host in cui è necessario aggiungere il plug-in SnapCenter per VMware vSphere.
+
+
+
+ a| 
+Sconosciuto
+ a| 
+Numero di host che sono stati registrati ma l'installazione non è stata ancora attivata.
+
+
+
+ a| 
+In esecuzione
+ a| 
+Numero di host attivi e plug-in in esecuzione. Inoltre, nel caso dei plug-in SCSQL, vengono configurate directory di log e hypervisor.
+
+
+
+ a| 
+Installazione/disinstallazione dei plug-in
+ a| 
+Numero di host in cui è in corso l'installazione o la disinstallazione del plug-in.
+
+|===
+
+
+== Capacità concessa in licenza
+
+Il riquadro capacità concessa in licenza visualizza informazioni sulla capacità totale concessa in licenza, sulla capacità utilizzata, sugli avvisi di soglia della capacità e sugli avvisi di scadenza della licenza per le licenze basate sulla capacità standard di SnapCenter.
+
+
+NOTE: Questa schermata viene visualizzata solo se si utilizzano licenze basate sulla capacità standard di SnapCenter su piattaforme Cloud Volumes ONTAP o ONTAP Select. Per le piattaforme FAS o AFF, la licenza SnapCenter è basata su controller e concessa in licenza per capacità illimitata, senza richiedere alcuna licenza per capacità.
+
+|===
+| Stato della licenza | Descrizione 
+
+
+ a| 
+In uso
+ a| 
+Quantità di capacità attualmente in uso.
+
+
+
+ a| 
+Notifica
+ a| 
+Soglia di capacità alla quale vengono visualizzate le notifiche sul Dashboard e, se configurata, all'invio delle notifiche via email.
+
+
+
+ a| 
+Concesso in licenza
+ a| 
+Quantità di capacità concessa in licenza.
+
+
+
+ a| 
+Finito
+ a| 
+Quantità di capacità che ha superato la capacità concessa in licenza.
+
+|===

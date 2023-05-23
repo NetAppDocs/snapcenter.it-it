@@ -1,0 +1,58 @@
+---
+permalink: protect-hana/reference_prerequisites_to_adding_hosts_and_installing_snapcenter_plug_in_for_sap_hana_database.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: Prima di aggiungere un host e installare i pacchetti plug-in, è necessario completare tutti i requisiti. Il plug-in SnapCenter per database SAP HANA è disponibile sia in ambienti Windows che Linux. 
+---
+= Prerequisiti per l'aggiunta di host e l'installazione del plug-in SnapCenter per il database SAP HANA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di aggiungere un host e installare i pacchetti plug-in, è necessario completare tutti i requisiti. Il plug-in SnapCenter per database SAP HANA è disponibile sia in ambienti Windows che Linux.
+
+* È necessario aver installato Java a 1.8 64 bit sull'host.
++
+
+NOTE: IBM Java non è supportato.
+
+* È necessario aver installato il terminale interattivo del database SAP HANA (client HDBSQL) sull'host.
+* Per Windows, il servizio di creazione del plug-in deve essere eseguito utilizzando l'utente di Windows "`LocalSystem`", che è il comportamento predefinito quando il plug-in per il database SAP HANA viene installato come amministratore di dominio.
+* Per Windows, le chiavi dell'archivio utente devono essere create come utente DI SISTEMA.
+* Quando si installa un plug-in su un host Windows, se si specifica una credenziale non integrata o se l'utente appartiene a un utente del gruppo di lavoro locale, è necessario disattivare il controllo dell'account utente sull'host. Il plug-in SnapCenter per Microsoft Windows verrà implementato per impostazione predefinita con il plug-in SAP HANA sugli host Windows.
+* Per l'host Linux, le chiavi HDB Secure User Store sono accessibili come utente del sistema operativo HDBSQL.
+* Il server SnapCenter deve avere accesso alla porta 8145 o alla porta personalizzata del plug-in per l'host del database SAP HANA.
+
+
+
+
+== Host Windows
+
+* È necessario disporre di un utente di dominio con privilegi di amministratore locale con autorizzazioni di accesso locale sull'host remoto.
+* Durante l'installazione del plug-in per database SAP HANA su un host Windows, il plug-in SnapCenter per Microsoft Windows viene installato automaticamente.
+* È necessario aver attivato la connessione SSH basata su password per l'utente root o non root.
+* È necessario aver installato Java a 1.8 64 bit sull'host Windows.
++
+http://["Download Java per tutti i sistemi operativi"]
+
++
+https://["Tool di matrice di interoperabilità NetApp"]
+
+
+
+
+
+== Host Linux
+
+* È necessario aver attivato la connessione SSH basata su password per l'utente root o non root.
+* È necessario aver installato Java a 1.8 64 bit sull'host Linux.
++
+http://["Download Java per tutti i sistemi operativi"]
+
++
+https://["Tool di matrice di interoperabilità NetApp"]
+
+* Per i database SAP HANA in esecuzione su un host Linux, durante l'installazione del plug-in per il database SAP HANA, il plug-in SnapCenter per UNIX viene installato automaticamente.
+

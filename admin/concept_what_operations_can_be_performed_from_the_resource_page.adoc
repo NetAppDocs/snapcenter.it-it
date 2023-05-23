@@ -1,0 +1,207 @@
+---
+permalink: admin/concept_what_operations_can_be_performed_from_the_resource_page.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile individuare le risorse ed eseguire operazioni di protezione dei dati dalla pagina risorse. Le operazioni che è possibile eseguire variano in base al plug-in utilizzato per gestire le risorse. 
+---
+= Operazioni supportate dalla pagina risorse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile individuare le risorse ed eseguire operazioni di protezione dei dati dalla pagina risorse. Le operazioni che è possibile eseguire variano in base al plug-in utilizzato per gestire le risorse.
+
+Dalla pagina risorse, è possibile eseguire le seguenti operazioni:
+
+|===
+| È possibile eseguire queste attività... | Per Microsoft Exchange Server | Per Microsoft SQL Server | Per Microsoft Windows | Per database Oracle | Per SAP HANA Database | Per plug-in personalizzati 
+
+
+ a| 
+Determinare se le risorse sono disponibili per il backup
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Eseguire il backup on-demand di una risorsa
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Ripristinare dai backup
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Clonare i backup
+ a| 
+No
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Gestire i backup
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Gestire i cloni
+ a| 
+No
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Gestire le policy
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Gestire le connessioni storage
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+
+
+
+ a| 
+Montare i backup
+ a| 
+No
+ a| 
+No
+ a| 
+No
+ a| 
+Sì
+ a| 
+No
+ a| 
+No
+
+
+
+ a| 
+Smontare i backup
+ a| 
+No
+ a| 
+No
+ a| 
+No
+ a| 
+Sì
+ a| 
+No
+ a| 
+No
+
+
+
+ a| 
+Visualizza i dettagli
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
+
+|===

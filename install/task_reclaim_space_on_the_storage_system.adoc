@@ -1,0 +1,44 @@
+---
+permalink: install/task_reclaim_space_on_the_storage_system.html 
+sidebar: sidebar 
+keywords: space 
+summary: 'Sebbene NTFS rilevi lo spazio disponibile su un LUN quando i file vengono cancellati o modificati, non riporta le nuove informazioni al sistema di storage. È possibile eseguire il cmdlet PowerShell per la rigenerazione dello spazio nel plug-in per l"host Windows per assicurarsi che i blocchi appena liberati siano contrassegnati come disponibili nello storage.' 
+---
+= Recuperare spazio sul sistema storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sebbene NTFS rilevi lo spazio disponibile su un LUN quando i file vengono cancellati o modificati, non riporta le nuove informazioni al sistema di storage. È possibile eseguire il cmdlet PowerShell per la rigenerazione dello spazio nel plug-in per l'host Windows per assicurarsi che i blocchi appena liberati siano contrassegnati come disponibili nello storage.
+
+Se si esegue il cmdlet su un host plug-in remoto, è necessario eseguire il cmdlet SnapCenterOpen-SMConnection per aprire una connessione al server SnapCenter.
+
+*Cosa ti serve*
+
+* Prima di eseguire un'operazione di ripristino, assicurarsi che il processo di recupero dello spazio sia stato completato.
+* Se il LUN è condiviso da host in un cluster di failover di Windows Server, è necessario eseguire la rigenerazione dello spazio sull'host proprietario del gruppo di cluster.
+* Per ottenere performance di storage ottimali, è necessario eseguire il recupero dello spazio il più spesso possibile.
++
+Assicurarsi che sia stata eseguita la scansione dell'intero file system NTFS.
+
+
+
+*A proposito di questa attività*
+
+* Il recupero di spazio richiede tempo e richiede molta CPU, quindi è consigliabile eseguire l'operazione quando l'utilizzo del sistema storage e dell'host Windows è basso.
+* La bonifica dello spazio recupera quasi tutto lo spazio disponibile, ma non il 100%.
+* Non eseguire la deframmentazione del disco contemporaneamente alla rigenerazione dello spazio.
++
+In questo modo, il processo di recupero può rallentare.
+
+
+
+*Passo*
+
+Dal prompt dei comandi PowerShell del server applicativo, immettere il seguente comando:
+
+`Invoke-SdHostVolumeSpaceReclaim -Path drive_path`
+
+Drive_path è il percorso del disco mappato al LUN.
