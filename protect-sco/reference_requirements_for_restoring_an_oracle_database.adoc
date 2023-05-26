@@ -31,4 +31,5 @@ NOTE: Per informazioni su come modificare il parametro asm_diskstring, vedere ht
 +
 Se le licenze non sono installate o aggiornate, viene visualizzato un messaggio di avviso. Se si ignora l'avviso e si procede, il ripristino da RDM non riesce.
 
+* Assicurarsi che il LUN non sia mappato all'host AIX utilizzando iGroup costituito da protocolli misti iSCSI e FC. Per ulteriori informazioni, vedere https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_Plug-in_for_Oracle_operations_fail_with_error_Unable_to_discover_the_device_for_LUN_LUN_PATH["Operazione non riuscita con errore Impossibile rilevare il dispositivo per il LUN"^].
 

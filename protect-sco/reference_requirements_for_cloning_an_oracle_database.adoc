@@ -86,4 +86,5 @@ nn-0x<target_node_name_1>:pn-0x<target_port_name_1>
 nn-0x<target_node_name_2>:pn-0x<target_port_name_2>
 }
 ....
+* Assicurarsi che il LUN non sia mappato all'host AIX utilizzando iGroup costituito da protocolli misti iSCSI e FC. Per ulteriori informazioni, vedere https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_Plug-in_for_Oracle_operations_fail_with_error_Unable_to_discover_the_device_for_LUN_LUN_PATH["Operazione non riuscita con errore Impossibile rilevare il dispositivo per il LUN"^].
 
