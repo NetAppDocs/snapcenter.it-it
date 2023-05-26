@@ -4359,11 +4359,9 @@
   <block id="521d29d37f5561d4922ece42dc92cb07" category="cell">Se si utilizza la versione del server SnapCenter...</block>
   <block id="7676f59833cee6720de923cfeef21ede" category="cell">È possibile aggiornare direttamente il server SnapCenter a...</block>
   <block id="8d0f374d6bbbe36aead49222bc8c909f" category="cell">Versioni plug-in supportate</block>
-  <block id="fef826a349ca99b933042ba1dfa73260" category="cell">4.4.x</block>
   <block id="4b1f6cbbab8f5d76a3e1d1b2c562722e" category="cell">4.5.x</block>
   <block id="955d0e9747f65e6a6a1963edce3fa678" category="cell">4.6.x</block>
   <block id="820341dc67dd887805f2620efabe6669" category="cell">4.7</block>
-  <block id="e581eab69cb147759b9dbeb0af1e93f2" category="admonition">Ad esempio, se si utilizza SnapCenter versione 4.4.x e si desidera eseguire l'aggiornamento alla versione 4.7, eseguire prima l'aggiornamento alla versione 4.6.x, quindi l'aggiornamento alla versione 4.7.</block>
   <block id="dd9f485e72f96875e028693823f26e70" category="inline-link">Upgrade del plug-in SnapCenter per VMware vSphere</block>
   <block id="25878f69131b31b18aeda7ba36139c1b" category="admonition">Per informazioni sull'aggiornamento del plug-in SnapCenter per VMware vSphere, vedere<block ref="9fa07c2f7a59d2185d48077e327b705e" category="inline-link-rx"></block>.</block>
   <block id="a7e402a09cf33c2060ecbdb749dd7977" category="summary">SnapCenter comunica periodicamente con il sito di supporto NetApp per notificare gli aggiornamenti software disponibili. È inoltre possibile creare una pianificazione per specificare l'intervallo in cui si desidera ricevere informazioni sugli aggiornamenti disponibili.</block>
@@ -8126,4 +8124,6 @@
   <block id="392e651b70e91641288713738f526ce0" category="section-title">Fase 6: Rimuovere la licenza di prova</block>
   <block id="46d55a8aefdec15a8ce44087c8123826" category="inline-link">Operazione non riuscita con errore Impossibile rilevare il dispositivo per il LUN</block>
   <block id="24642a08e354f43168ca4f1178850f84" category="list-text">Assicurarsi che il LUN non sia mappato all'host AIX utilizzando iGroup costituito da protocolli misti iSCSI e FC. Per ulteriori informazioni, vedere<block ref="94f247529a6b6f563b3a8d4772877431" category="inline-link-rx"></block>.</block>
+  <block id="4fb437564892944d73f87c822342e2bb" category="cell">4.8</block>
+  <block id="7d9be6a6877ece66779a3e8834d493df" category="admonition">Ad esempio, se si utilizza SnapCenter versione 4.5.x e si desidera eseguire l'aggiornamento alla versione 4.8, eseguire prima l'aggiornamento alla versione 4.6.x, quindi l'aggiornamento alla versione 4.8.</block>
 </blocks>

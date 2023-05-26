@@ -25,19 +25,6 @@ image::../media/upgrade_workflow.png[workflow di upgrade]
 | Se si utilizza la versione del server SnapCenter... | È possibile aggiornare direttamente il server SnapCenter a... | Versioni plug-in supportate 
 
 
-.2+| 4.4.x | 4.5.x  a| 
-* 4.4.x
-* 4.5.x
-
-
-
-
-| 4.6.x  a| 
-* 4.6.x
-
-
-
-
 .2+| 4.5.x | 4.6.x  a| 
 * 4.5.x
 * 4.6.x
@@ -51,18 +38,29 @@ image::../media/upgrade_workflow.png[workflow di upgrade]
 
 
 
- a| 
-4.6.x
- a| 
-4.7
- a| 
+.2+| 4.6.x | 4.7  a| 
 * 4.6.x
 * 4.7
 
 
+
+
+| 4.8  a| 
+* 4.8
+
+
+
+
+| 4.7  a| 
+4.8
+ a| 
+* 4.7
+* 4.8
+
+
 |===
 
-IMPORTANT: Ad esempio, se si utilizza SnapCenter versione 4.4.x e si desidera eseguire l'aggiornamento alla versione 4.7, eseguire prima l'aggiornamento alla versione 4.6.x, quindi l'aggiornamento alla versione 4.7.
+IMPORTANT: Ad esempio, se si utilizza SnapCenter versione 4.5.x e si desidera eseguire l'aggiornamento alla versione 4.8, eseguire prima l'aggiornamento alla versione 4.6.x, quindi l'aggiornamento alla versione 4.8.
 
 
 NOTE: Per informazioni sull'aggiornamento del plug-in SnapCenter per VMware vSphere, vedere https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_upgrade.html["Upgrade del plug-in SnapCenter per VMware vSphere"^].
