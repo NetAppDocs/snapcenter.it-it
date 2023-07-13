@@ -1,0 +1,56 @@
+---
+permalink: install/task_configure_root_or_intermediate_certificates_to_trust_store.html 
+sidebar: sidebar 
+keywords: enable certificate-based authentication,configure CA signed key pair,configure root, configure intermediate certificates 
+summary: È necessario configurare i certificati root o intermedi in SPL trust-store. 
+---
+= Configurare i certificati root o intermedi per l'archivio di trust SPL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario configurare i certificati root o intermedi in SPL trust-store. Aggiungere il certificato CA principale e i certificati CA intermedi.
+
+*Fasi*
+
+. Accedere alla cartella contenente il keystore SPL: `/var/opt/snapcenter/spl/etc`.
+. Individuare il file `keystore.jks`.
+. Elencare i certificati aggiunti nel keystore:
+`$ keytool -list -v -keystore keystore.jks`
+. Aggiungere un certificato root o intermedio:
+`$ keytool -import -trustcacerts -alias <AliasNameForCerticateToBeImported> -file /<CertificatePath> -keystore` `keystore.jks`
+. Riavviare il servizio dopo aver configurato i certificati root o intermedi in SPL trust-store.
+
+
+
+
+== Configurare la coppia di chiavi con firma CA nell'archivio di trust SPL
+
+È necessario configurare la coppia di chiavi firmate della CA in SPL trust-store.
+
+*Fasi*
+
+. Accedere alla cartella contenente il keystore della SPL `/var/opt/snapcenter/spl/etc`.
+. Individuare il file `keystore.jks``.
+. Elencare i certificati aggiunti nel keystore:
+`$ keytool -list -v -keystore keystore.jks`
+. Aggiungere il certificato CA con chiave pubblica e privata.
+`$ keytool -importkeystore -srckeystore <CertificatePathToImport> -srcstoretype pkcs12 -destkeystore keystore.jks` `-deststoretype JKS`
+. Elencare i certificati aggiunti nel keystore.
+`$ keytool -list -v -keystore keystore.jks`
+. Verificare che il keystore contenga l'alias corrispondente al nuovo certificato CA aggiunto al keystore.
+. Modificare la password della chiave privata aggiunta per il certificato CA in password archivio chiavi.
++
+Default SPL keystore password è il valore della chiave SPL_KEYSTORE_PASS-in `spl.properties` file.
+
++
+`$ keytool -keypasswd -alias "<aliasNameOfAddedCertInKeystore>" -keystore keystore.jks``
+
+. Se il nome alias nel certificato CA è lungo e contiene spazi o caratteri speciali ("*",","), modificare il nome alias con un nome semplice:
+`$ keytool -changealias -alias "<OrignalAliasName>" -destalias "<NewAliasName>" -keystore keystore.jks``
+. Configurare il nome alias dal keystore in `spl.properties` file.
+Aggiornare questo valore con la chiave SPL_CERTIFICATE_ALIAS.
+. Riavviare il servizio dopo aver configurato la coppia di chiavi firmate della CA in SPL trust-store.
+

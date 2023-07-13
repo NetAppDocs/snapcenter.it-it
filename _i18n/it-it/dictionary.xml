@@ -63,7 +63,6 @@
   <block id="8804fc7cd8650f0fe7f3181b69a373af" category="list-text">Nell'host del server SnapCenter, immettere il comando: _Open-SMConnection -SMSbaseUrl https://SNAPCENTER_SERVER_NAME/DOMAIN_NAME_, quindi immettere le credenziali.</block>
   <block id="0262b115df575f2dc8bf11b8e4a86e10" category="list-text">Disinstallare i plug-in di Windows utilizzando il cmdlet _Uninstall-SmHostPackage_ e i parametri richiesti.</block>
   <block id="186767ddfa4a5b30e2b4a7d5eb5fce25" category="inline-link">Guida di riferimento al cmdlet del software SnapCenter</block>
-  <block id="e125da4cc0e5138fb35b5f0e2a1ba201" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, è possibile consultare anche<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>.</block>
   <block id="1f3416d24aa4604f3bf013f7b5ba6d0f" category="summary">Quando si decide di non richiedere più un singolo plug-in o un pacchetto plug-in, è possibile disinstallarlo utilizzando l'interfaccia di SnapCenter.</block>
   <block id="76af7718f89458bae85fc299897539a1" category="doc">Disinstallare i plug-in utilizzando l'interfaccia grafica di SnapCenter</block>
   <block id="59c6427d777966a59438a00364121a39" category="list-text">Dovrebbero essere stati rimossi i gruppi di risorse per il pacchetto plug-in che si sta disinstallando.</block>
@@ -73,7 +72,6 @@
   <block id="fee0bec9fecb6576229640dcf9eec620" category="paragraph">Quando si rimuove un host da SnapCenter, SnapCenter disinstalla tutti i pacchetti plug-in sull'host prima di rimuoverlo.</block>
   <block id="cd9cae3233179ab0aa5b93a449869d50" category="list-text">L'interfaccia grafica di SnapCenter rimuove i plug-in da un host alla volta.</block>
   <block id="e4b51b04ea7a4e9b027ffb18024a9938" category="paragraph">Quando si utilizza l'interfaccia grafica di SnapCenter, è possibile disinstallare i plug-in su un solo host alla volta. Tuttavia, è possibile eseguire diverse operazioni di disinstallazione contemporaneamente.</block>
-  <block id="517b39b6edfcd923dff2604ce021f723" category="paragraph">È inoltre possibile disinstallare un plug-in da più host utilizzando il cmdlet _Uninstall-SmHostPackage_ e i parametri richiesti. Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento alla<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>.</block>
   <block id="a4ad00e40c8d026de37f699c1cdc43f2" category="admonition">La disinstallazione del pacchetto di plug-in SnapCenter per Windows da un host su cui è installato il server SnapCenter danneggerà l'installazione del server SnapCenter. Non disinstallare il pacchetto di plug-in SnapCenter per Windows, a meno che non si sia certi di non aver più bisogno del server SnapCenter.</block>
   <block id="e3496f6d2696003cd08139c96386cc45" category="list-text">Nel riquadro di spostamento di sinistra, fare clic su *hosts*.</block>
   <block id="1fb1c7da13751553d9822a326bcffe06" category="list-text">Nella pagina hosts, fare clic su *Managed hosts*.</block>
@@ -88,7 +86,6 @@
   <block id="c1fb7c552ac7beaf17dc346fda22eff6" category="list-text">Quando si rimuovono i gruppi di risorse, vengono rimosse anche tutte le pianificazioni associate.</block>
   <block id="622c9e28dad13fa5c04d47d33d343831" category="list-text">Se l'host dispone di un gruppo di risorse condiviso con un altro host ed è stato eliminato l'host, anche il gruppo di risorse viene eliminato.</block>
   <block id="759ef57c3be2a273728558ce141e699a" category="list-text">Utilizzare il cmdlet _Remove-SmHost_ per rimuovere gli host plug-in decommissionati o irraggiungibili.</block>
-  <block id="7d5e98342223338218f7d96b6f09048c" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento alla<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block></block>
   <block id="40b2be8df06289f2b15c3ba4ee7adb9d" category="list-text">Il tempo necessario per rimuovere un host dipende dal numero di backup e dalle impostazioni di conservazione. Questo perché le copie Snapshot vengono eliminate da ciascun controller e i metadati vengono puliti.</block>
   <block id="5d892beace7b1624b071044ece982dcc" category="list-text">Selezionare l'host che si desidera rimuovere, quindi fare clic su *Remove* (Rimuovi).</block>
   <block id="19355742858cf70570e1a01c80a490ab" category="list-text">Per i cluster Oracle RAC, per rimuovere il software SnapCenter da tutti gli host del cluster, selezionare *include all the hosts of cluster* (Includi tutti gli host del cluster).</block>
@@ -159,7 +156,6 @@
   <block id="2aa8b416a2f876e9cf8c5050ccf69e30" category="paragraph">Questo esempio mostra come ripristinare il database dallo storage primario:</block>
   <block id="08fb7677c629e186e2ce0a37ba408715" category="paragraph">Questo esempio mostra come ripristinare il database dallo storage secondario:</block>
   <block id="1dbedac9aa8fb16b0d7e3f4c912759fc" category="paragraph">I backup saranno disponibili in HANA Studio per il recovery.</block>
-  <block id="5f3dbd65abc0c8e09475825857078de8" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento alla<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>.</block>
   <block id="384ecb62d880a9048cd6ee500f8ffcdb" category="summary">Installare il plug-in SnapCenter per il database SAP HANA utilizzando l'interfaccia utente (UI) di SnapCenter. Se l'ambiente in uso non consente l'installazione remota del plug-in dall'interfaccia utente di SnapCenter, è possibile installare il plug-in per il database SAP HANA in modalità console o in modalità silent utilizzando l'interfaccia della riga di comando (CLI1).</block>
   <block id="2577ba74b42ec952e03432cac7d57a04" category="doc">Installare il plug-in SnapCenter per il database SAP HANA su host Linux utilizzando l'interfaccia della riga di comando</block>
   <block id="d444fb67779b9c8a26850d1ce6c0e031" category="paragraph">Installare il plug-in SnapCenter per il database SAP HANA utilizzando l'interfaccia utente (UI) di SnapCenter. Se l'ambiente in uso non consente l'installazione remota del plug-in dall'interfaccia utente di SnapCenter, è possibile installare il plug-in per il database SAP HANA in modalità console o silent utilizzando l'interfaccia a riga di comando (CLI).</block>
@@ -167,7 +163,6 @@
   <block id="9638dcdc640dbf6662834e293cbc12b3" category="list-text">L'host Linux su cui si installa il plug-in SnapCenter per il database SAP HANA deve soddisfare i requisiti di software, database e sistema operativo dipendenti.</block>
   <block id="9e8c841a17bd4c0ec7d85ab94b954bca" category="paragraph">Lo strumento matrice di interoperabilità (IMT) contiene le informazioni più recenti sulle configurazioni supportate.</block>
   <block id="9ed4a475dd3705157a9fed8811f63ce2" category="inline-link">Tool di matrice di interoperabilità NetApp</block>
-  <block id="23760d8f892e346ebd63fac3623b2dc5" category="paragraph"><block ref="2fc9f2abb842b420f8ecb28df62e8563" category="inline-link-rx"></block></block>
   <block id="33a8f9c4fe2c0cd8ae505b8d4831fe28" category="list-text">Il plug-in SnapCenter per il database SAP HANA fa parte del pacchetto di plug-in SnapCenter per Linux. Prima di installare il pacchetto di plug-in SnapCenter per Linux, è necessario aver già installato SnapCenter su un host Windows.</block>
   <block id="14121664b691a3085947fb503ee4883e" category="list-text">Copiare il file di installazione del pacchetto plug-in SnapCenter per Linux (Snapcenter_linux_host_plugin.bin) da C: ProgramData/NetApp SnapCenter/Package Repository all'host in cui si desidera installare il plug-in per il database SAP HANA.</block>
   <block id="992f38bde8f2d7155c3cdabe41a08043" category="paragraph">È possibile accedere a questo percorso dall'host in cui è installato il server SnapCenter.</block>
@@ -180,7 +175,6 @@
   <block id="294b56a283e4d5bb64865a3cf0a721fa" category="list-text">DINSTALL_LOG_NAME specifica il nome del file di log.</block>
   <block id="b3f72639442ac8dbec9806a234d5e8db" category="list-text">Modificare il file /&lt;installation directory&gt;/NetApp/snapcenter/scc/etc/SC_SMS_Services.properties, quindi aggiungere IL parametro PLUGINS_ENABLED = hana:3.0.</block>
   <block id="550b8e3545b2126ab5138fd027e787fa" category="list-text">Aggiungere l'host al server SnapCenter utilizzando il cmdlet Add-Smhost e i parametri richiesti.</block>
-  <block id="9e9b8895f32adb6f730895bc11f2874a" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento alla<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>.</block>
   <block id="395cb45f84a87f78c742de279b13d230" category="summary">Le risorse sono database SAP HANA e volumi non dati sull'host Linux gestiti da SnapCenter. Dopo aver installato il plug-in SnapCenter per il database SAP HANA, i database SAP HANA su quell'host vengono automaticamente rilevati e visualizzati nella pagina risorse.</block>
   <block id="d63d0f9078f63941d9f67771c5293aac" category="doc">Rilevamento automatico delle risorse sull'host Linux</block>
   <block id="916fc195781ef467aa61050483fa1044" category="paragraph">Il rilevamento automatico è supportato per le seguenti risorse SAP HANA:</block>
@@ -692,12 +686,10 @@
   <block id="15fda0d23b806181f091668c1c1e55bf" category="paragraph">È possibile creare un backup di una risorsa (database) o di un gruppo di risorse. Il workflow di backup include la pianificazione, l'identificazione dei database per il backup, la gestione delle policy di backup, la creazione di gruppi di risorse e l'aggiunta di policy, la creazione di backup e il monitoraggio delle operazioni.</block>
   <block id="b9721a35a6c374ded595576ccbd2f789" category="paragraph">Il seguente flusso di lavoro mostra la sequenza in cui è necessario eseguire l'operazione di backup:</block>
   <block id="6a9192ab011aeeddc22793310691a1e4" category="image-alt">Workflow di backup SAP_HANA</block>
-  <block id="0001160fa843faa4e5294c286bd2a184" category="paragraph">È inoltre possibile utilizzare i cmdlet PowerShell manualmente o negli script per eseguire operazioni di backup, ripristino e clonazione. La guida in linea del cmdlet di SnapCenter e le informazioni di riferimento del cmdlet contengono ulteriori informazioni sui cmdlet di PowerShell.<block ref="0a3e2ef7f51b42a7ddee804547031be0" category="inline-link-rx"></block>.</block>
   <block id="dd5f630f41cdfc02249f05e881feeef5" category="summary">Il flusso di lavoro di ripristino e ripristino include la pianificazione, l'esecuzione delle operazioni di ripristino e il monitoraggio delle operazioni.</block>
   <block id="e30c3d908a4ed515e16791b672cc0709" category="doc">Ripristinare il flusso di lavoro</block>
   <block id="f221802dd348fa7fec376c674a7bceda" category="paragraph">Il seguente flusso di lavoro mostra la sequenza in cui è necessario eseguire l'operazione di ripristino:</block>
   <block id="515099a9db2d69620b1bbc080fe5200a" category="paragraph">È inoltre possibile utilizzare i cmdlet PowerShell manualmente o negli script per eseguire operazioni di backup, ripristino e clonazione. La guida in linea del cmdlet di SnapCenter e le informazioni di riferimento del cmdlet contengono informazioni dettagliate sui cmdlet di PowerShell.</block>
-  <block id="5efaab231bdeaf77ed795fa0e9d5b3e4" category="paragraph"><block ref="0a3e2ef7f51b42a7ddee804547031be0" category="inline-link-rx"></block>.</block>
   <block id="e72e41b6444b5d653a8ae41192189e01" category="summary">Prima di utilizzare SnapCenter, è utile comprendere i concetti di base relativi alle operazioni di backup, clonazione e ripristino che si desidera eseguire. Interagisci con risorse, gruppi di risorse e policy per diverse operazioni.</block>
   <block id="b3b5361b491a028013fc3043e9bbf7a7" category="doc">Utilizzo di risorse, gruppi di risorse e policy per la protezione dei database SAP HANA</block>
   <block id="6bbc1cc2d778155e34c6c797ed0dee3f" category="list-text">In genere, le risorse sono database SAP HANA di cui si esegue il backup o la clonazione con SnapCenter.</block>
@@ -985,7 +977,6 @@
   <block id="8f0e9744b1000b3672d2bdcf50a74d27" category="list-text">Per le operazioni di backup basate su copia Snapshot, assicurarsi che tutti i database del tenant siano validi e attivi.</block>
   <block id="ae75553103cbeaaaa3b0e4002805ae6f" category="paragraph"><block ref="ae75553103cbeaaaa3b0e4002805ae6f" category="inline-link-macro-rx"></block></block>
   <block id="961e6abd0c7a72786d3641390a4dea5f" category="list-text">Se si desidera creare un backup basato su file quando uno o più database tenant sono inattivi, impostare IL parametro ALLOW_FILE_BASED_BACKUP_IFINATTIVO_TENANTS_PRESENT su *YES* nel file di proprietà HANA utilizzando<block ref="c49971dbd0f66cf4e6b62fc441967947" prefix=" " category="inline-code"></block> cmdlet.</block>
-  <block id="c6bac95430dac4e5070788ce23acefc4" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo Get-Help _command_name_. In alternativa, fare riferimento alla<block ref="3f0d4c4b3a1c9cfa1189bb7484d60c1b" category="inline-link-rx"></block></block>
   <block id="d5d9a4c4e51c27e556fb89bfdd11f0b0" category="list-text">Per i comandi pre e post per le operazioni quiesce, Snapshot copy e unquiesce, controllare se i comandi esistono nell'elenco dei comandi disponibile sull'host plug-in dai seguenti percorsi:</block>
   <block id="a2286f0c6fbfecb0501c43aa965242b6" category="list-text">Nella pagina Resource, filtrare le risorse dall'elenco a discesa *View* in base al tipo di risorsa.</block>
   <block id="127c10f681ffba1b9fa91c9bf92bcbc8" category="paragraph">Fare clic su *<block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>*, quindi selezionare il nome host e il tipo di risorsa per filtrare le risorse. Quindi fare clic su <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> per chiudere il riquadro del filtro.</block>
@@ -1200,7 +1191,6 @@
   <block id="43574ab73a6cbc674506ff003387dcb1" category="paragraph">Sistemi operativi</block>
   <block id="c73bbd3786350b0a8d3577d82afdf489" category="list-text">Red Hat Enterprise Linux</block>
   <block id="a51e41e4cd7b03dd48ce2e65ed3e1736" category="list-text">SUSE Linux Enterprise Server (SLES)</block>
-  <block id="775fcd440db131b498769960f53ac310" category="paragraph">Per informazioni aggiornate sulle versioni supportate, consultare<block ref="9b2c9c657bf3e52183d3c1f767265001" category="inline-link-rx"></block>.</block>
   <block id="083ad21990802d20fc5fdefdb7255565" category="paragraph">2 GB</block>
   <block id="1ec72ff98c807b748e55dd0ff1dbf757" category="admonition">È necessario allocare spazio su disco sufficiente e monitorare il consumo di storage da parte della cartella dei log. Lo spazio di log richiesto varia in base al numero delle entità da proteggere e alla frequenza delle operazioni di protezione dei dati. Se lo spazio su disco non è sufficiente, i registri non verranno creati per le operazioni eseguite di recente.</block>
   <block id="3a955e6f54e73fa288537f456087e118" category="paragraph">Java 1.8.x (64-bit)Oracle Java e OpenJDK Flavors</block>
@@ -1270,8 +1260,6 @@
   <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">Open source</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">I file di avviso forniscono informazioni sul copyright e sulle licenze di terze parti utilizzate nel software NetApp.</block>
-  <block id="7a29c89d8f76feea0ca358fb1edb3864" category="inline-link">Avviso per SnapCenter 4.8</block>
-  <block id="87cf8ed19692a681dacb14a050a89217" category="paragraph"><block ref="87cf8ed19692a681dacb14a050a89217" category="inline-link-rx"></block></block>
   <block id="5a4e7986bae0a2c894ba99a3277fcf98" category="paragraph">È possibile utilizzare il cmdlet Remove-SmBackup per eliminare i backup se non sono più necessari per altre operazioni di protezione dei dati.</block>
   <block id="a9961b834480ea5a82aff5c0e9cf0da8" category="list-text">Eliminare uno o più backup utilizzando il cmdlet Remove-SmBackup.</block>
   <block id="ea2acdbc1a4fb35cdfb9da7003b18901" category="paragraph">Questo esempio elimina due backup utilizzando i relativi ID di backup:</block>
@@ -1547,8 +1535,6 @@
   <block id="d49c54f6a3e8fbb1a5ae389fb2b4aafd" category="summary">È possibile utilizzare SnapCenter per ripristinare i database di SQL Server ripristinando i dati da uno o più backup nel file system attivo e ripristinando il database. È inoltre possibile ripristinare i database presenti nei gruppi di disponibilità e aggiungere i database ripristinati al gruppo di disponibilità. Prima di ripristinare un database SQL Server, è necessario eseguire diverse attività preparatorie.</block>
   <block id="72fab2a5b70ae095deeddf26f2a52793" category="paragraph">Il seguente flusso di lavoro mostra la sequenza in cui è necessario eseguire le operazioni di ripristino del database:</block>
   <block id="92c488cfa68af6221db7fffbf4243861" category="image-alt">all_plug-in_restore_workflow</block>
-  <block id="c51260ad550d9397370682d73d446602" category="inline-link">Guida di riferimento per il software SnapCenter 4.4 cmdlet</block>
-  <block id="4a45b99dc57bfa145ace46e1fd9baa9d" category="paragraph">È inoltre possibile utilizzare i cmdlet PowerShell manualmente o negli script per eseguire operazioni di backup, ripristino, ripristino, verifica e clonazione. Per informazioni dettagliate sui cmdlet di PowerShell, consultare la guida in linea del cmdlet di SnapCenter o la<block ref="22d4c47c8368759c58ff9ac05ffd0e13" category="inline-link-rx"></block></block>
   <block id="86cc84259391356d6bc58883c4b14046" category="inline-link-macro">Ripristinare un database SQL Server dallo storage secondario</block>
   <block id="69bb12bd720ba41593c0fadfa768b82e" category="paragraph"><block ref="69bb12bd720ba41593c0fadfa768b82e" category="inline-link-macro-rx"></block></block>
   <block id="6924edabeae66398839af50da876447a" category="inline-link-macro">Ripristinare e ripristinare le risorse utilizzando i cmdlet PowerShell</block>
@@ -1704,7 +1690,6 @@
   <block id="a1a0f86f12eb6f7b0a51545fae87d6ed" category="paragraph">Il seguente flusso di lavoro mostra la sequenza in cui è necessario eseguire le operazioni di backup:</block>
   <block id="a9a36931adb350bdf3480cb9845a8fc8" category="image-alt">Workflow di backup SCSQL</block>
   <block id="780c1b490607a3963a4db9b069dbf1e2" category="admonition">Le opzioni Backup Now (Backup ora), Restore (Ripristina), Manage Backup (Gestisci backup) e Clone (Clona) nella pagina Resources (risorse) sono disattivate se si seleziona un LUN non NetApp, un database danneggiato o un database da ripristinare.</block>
-  <block id="551a33d207af23d33dc7ae8b0fcc767e" category="paragraph">È inoltre possibile utilizzare i cmdlet PowerShell manualmente o negli script per eseguire operazioni di backup, ripristino, ripristino, verifica e clonazione. Per informazioni dettagliate sui cmdlet di PowerShell, consultare la guida in linea del cmdlet di SnapCenter o la<block ref="3f0d4c4b3a1c9cfa1189bb7484d60c1b" category="inline-link-rx"></block></block>
   <block id="70a3b8963fff53a1f81a125297906687" category="section-title">Come SnapCenter esegue il backup dei database</block>
   <block id="fe38a38405ced1973299d2b175c66a79" category="paragraph">SnapCenter utilizza la tecnologia di copia Snapshot per eseguire il backup dei database SQL Server che risiedono su LUN o VMDK. SnapCenter crea il backup creando copie Snapshot dei database.</block>
   <block id="05e0444569b01c1a835c376c06e5d120" category="paragraph">Quando si seleziona un database per un backup completo del database dalla pagina risorse, SnapCenter seleziona automaticamente tutti gli altri database che risiedono nello stesso volume di storage. Se il LUN o VMDK memorizza solo un singolo database, è possibile cancellare o riselezionare il database singolarmente. Se il LUN o il VMDK ospita più database, è necessario cancellare o riselezionare i database come gruppo.</block>
@@ -1754,7 +1739,6 @@
   <block id="200173e810f24d588054234ea90379a4" category="paragraph">Accanto ai nuovi backup viene visualizzata l'icona "i" per indicare che questi backup sono stati creati durante la modalità DR.</block>
   <block id="5e7078fc2c5f11497c9f2a56ffd9b736" category="list-text">È possibile eliminare il plug-in SnapCenter per i backup di SQL Server creati durante il failover utilizzando l'interfaccia utente o il seguente cmdlet:<block ref="deedcb4a01370ff7adf6a8a79cd7d1e0" prefix=" " category="inline-code"></block></block>
   <block id="b46fdb28b1bf03616f61fcda6f266b96" category="list-text">Dopo il failover, se si desidera che alcune risorse siano in modalità non DR, utilizzare il seguente cmdlet:<block ref="c15a3d6bef369bbee5b5a45642d3de86" prefix=" " category="inline-code"></block></block>
-  <block id="36b5bc8569a0d58f30345b63446499e3" category="paragraph">Per ulteriori informazioni, fare riferimento a.<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>.</block>
   <block id="7ccaeb1e46c3ede7b5c8c6431b09266a" category="list-text">Il server SnapCenter gestirà le singole risorse di storage (database SQL) in modalità DR o non DR, ma non il gruppo di risorse con risorse di storage in modalità DR o non DR.</block>
   <block id="2c7601a19492319211a48972b06186ec" category="summary">Prima di eseguire il backup di una risorsa SQL, è necessario assicurarsi che siano soddisfatti diversi requisiti.</block>
   <block id="fb84146353d16d3119b204fb3e1ae3c5" category="doc">Requisiti per il backup delle risorse SQL</block>
@@ -2140,7 +2124,6 @@
   <block id="020883c1843059deced1a2bddac4e0ce" category="admonition">SnapCenter non supporta più SVM con lo stesso nome su cluster diversi. Ogni SVM supportata da SnapCenter deve avere un nome univoco.</block>
   <block id="42e20be165e590208778cbb0b28a11ce" category="list-text">Aggiungere host, installare i plug-in, individuare (aggiornare) le risorse e configurare i plug-in.</block>
   <block id="b3721954b25a4acdb3a4229ac3e0b5f8" category="list-text">Spostare un database Microsoft SQL Server esistente da un disco locale a un LUN NetApp o viceversa eseguendo Invoke-SmConfigureResources.</block>
-  <block id="2dfd0f9f208059d0a9543cb1558cea8f" category="paragraph">Per informazioni sull'esecuzione del cmdlet, consultare<block ref="3f0d4c4b3a1c9cfa1189bb7484d60c1b" category="inline-link-rx"></block></block>
   <block id="eefa922509507f72bc1a8ad3abe353fd" category="list-text">Se si utilizza il server SnapCenter per proteggere i database SQL che risiedono su LUN o VMDM VMware, è necessario implementare il plug-in SnapCenter per VMware vSphere e registrare il plug-in con SnapCenter. Il plug-in SnapCenter per la documentazione di VMware vSphere contiene ulteriori informazioni.</block>
   <block id="8c3d0c00ea667e3e0723e5cdc6473a09" category="inline-link">Plug-in SnapCenter per la documentazione di VMware vSphere</block>
   <block id="2d3786cce4bbee81c9852997cc1bef39" category="paragraph"><block ref="2d3786cce4bbee81c9852997cc1bef39" category="inline-link-rx"></block></block>
@@ -2306,8 +2289,6 @@
   <block id="005967742046b2c05fd77c1710d06376" category="list-text">Ignora controlli di preinstallazione: Selezionare questa casella di controllo se i plug-in sono già stati installati manualmente o non si desidera verificare se l'host soddisfa i requisiti per l'installazione del plug-in.</block>
   <block id="4507e0d1a42287b926181e4cb9fda1cf" category="summary">Fornisce importanti informazioni su questa versione del server SnapCenter e sui pacchetti di plug-in SnapCenter, inclusi problemi risolti, problemi noti, precauzioni e limitazioni.</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="doc">Note di rilascio</block>
-  <block id="a79368498522acef202a75204e93905e" category="inline-link">Note sulla versione del software SnapCenter 4.8</block>
-  <block id="c9d12743ca0ae0d66da7b9ce9795a0e8" category="paragraph">Per ulteriori informazioni, consultare<block ref="9b9dacb6ec864e8f90c589c7a3a6bf3e" category="inline-link-rx"></block>.</block>
   <block id="8c1af9a95c5ff9086ee5697a78397ae5" category="summary">Il server SnapCenter consente di implementare e gestire le applicazioni come plug-in per SnapCenter.</block>
   <block id="3b878279a04dc47d60932cb294d96259" category="doc">Panoramica</block>
   <block id="72631a8144cabf57a431e307c720be4b" category="paragraph">Il server SnapCenter consente di implementare e gestire le applicazioni come plug-in per SnapCenter. È possibile collegare al server SnapCenter applicazioni di vostra scelta per la protezione e la gestione dei dati.</block>
@@ -2376,7 +2357,6 @@
   <block id="6af1ebe4d54e4d359cfda12fdfc23a05" category="doc">Preparazione dei sistemi storage per la replica di SnapMirror e SnapVault per plug-in personalizzati</block>
   <block id="fab91412eb5d45bdeeca565417bd43bb" category="summary">Il workflow di backup include la pianificazione, l'identificazione delle risorse per il backup, la gestione delle policy di backup, la creazione di gruppi di risorse e l'aggiunta di policy, la creazione di backup e il monitoraggio delle operazioni.</block>
   <block id="33e8da2f20646df222fc0acf35201fe4" category="doc">Eseguire il backup delle risorse plug-in personalizzate</block>
-  <block id="b6a1d5caea1f8fdc446d41a31f9cfe3e" category="paragraph">È inoltre possibile utilizzare i cmdlet PowerShell manualmente o negli script per eseguire operazioni di backup, ripristino e clonazione. Per informazioni dettagliate sui cmdlet di PowerShell, consultare la guida in linea del cmdlet di SnapCenter o la<block ref="3f0d4c4b3a1c9cfa1189bb7484d60c1b" category="inline-link-rx"></block></block>
   <block id="8e32ba498833f4c1f43c700f327ec8bd" category="summary">Prima di utilizzare i plug-in personalizzati di SnapCenter, l'amministratore di SnapCenter deve installare e configurare il server SnapCenter ed eseguire le attività necessarie.</block>
   <block id="2f2b7315a3ee2bd24ebcb2968f2d7471" category="doc">Prerequisiti per l'utilizzo dei plug-in personalizzati di SnapCenter</block>
   <block id="0b6e81623d0567d25f80dc022436e00c" category="list-text">Aggiungere host e installare e caricare i plug-in.</block>
@@ -2384,7 +2364,6 @@
   <block id="48b0f0fb43e0a3e1a7bac0922b6b61c9" category="list-text">Se si dispone di più percorsi dati (LIF) o di una configurazione DNFS, è possibile eseguire le seguenti operazioni utilizzando l'interfaccia utente di SnapCenter sull'host del database:</block>
   <block id="d3af75b5ec004883495ea045fb886b21" category="list-text">Per impostazione predefinita, tutti gli indirizzi IP dell'host del database vengono aggiunti alla policy di esportazione dello storage NFS in SVM (Storage Virtual Machine) per i volumi clonati. Se si desidera avere un indirizzo IP specifico o limitare un sottoinsieme di indirizzi IP, eseguire la CLI Set-PreferredHostIPsInStorageExportPolicy.</block>
   <block id="34b88b9f409afc7274c8a769ee450883" category="inline-link">Guida di riferimento al comando software SnapCenter</block>
-  <block id="1ef6040ccf2cfe6eabc18de550769a4f" category="list-text">Se si dispone di più percorsi di dati (LIF) in SVM, SnapCenter sceglie il percorso di dati appropriato per il montaggio del volume clonato NFS. Tuttavia, se si desidera specificare un percorso dati specifico (LIF), è necessario eseguire la CLI Set-SvmPreferredDataPath. Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento alla<block ref="868bc9c3fbc71eae2d899862af6d942e" category="inline-link-rx"></block>.</block>
   <block id="17f9957a5b4dff4ca41989ac66b4057b" category="list-text">Assicurarsi che la porta 9090 non sia utilizzata da altre applicazioni sull'host.</block>
   <block id="4163f599bc524b1d234745caf9826a63" category="paragraph">La porta 9090 deve essere riservata per l'utilizzo da parte dei plug-in personalizzati SnapCenter oltre alle altre porte richieste da SnapCenter.</block>
   <block id="6aba9ab9639862100a3f951f105883b5" category="summary">La definizione di una strategia di backup prima della creazione dei processi di backup garantisce la disponibilità dei backup necessari per ripristinare o clonare correttamente le risorse. Il contratto a livello di servizio (SLA), l'obiettivo del tempo di ripristino (RTO) e l'obiettivo del punto di ripristino (RPO) determinano in gran parte la strategia di backup.</block>
@@ -2444,7 +2423,6 @@
   <block id="c2230088d27abaa2d470e15431fe93b5" category="list-text">Eseguire il backup delle applicazioni personalizzate utilizzando il framework pre e post-scripting integrato</block>
   <block id="b7ef57ec0d80db01d4596e446c5f7c1f" category="paragraph">È possibile eseguire il backup di un volume ONTAP, di un LUN o di un Qtree.</block>
   <block id="2ba3d313a9f79b9a7c6749bf2e99acfa" category="list-text">Aggiornare le copie Snapshot eseguite sul primario su un ONTAP secondario, sfruttando la relazione di replica esistente (SnapVault/SnapMirror/replica unificata) utilizzando la policy SnapCenter</block>
-  <block id="df7badec77400518a80c3c1b8ba12ab8" category="paragraph">ONTAP primario e secondario possono essere ONTAP FAS, AFF, Select o Cloud ONTAP.</block>
   <block id="0930cbd774389ffda4b953dfada42944" category="list-text">Ripristinare il volume, il LUN o i file ONTAP completi.</block>
   <block id="01416c60ab0c357d59811f108a67d5bd" category="paragraph">È necessario specificare manualmente il percorso del file corrispondente, poiché le funzioni di ricerca o indicizzazione non sono integrate nel prodotto.</block>
   <block id="17f0138477115892c87d600e535c1ed0" category="paragraph">Il ripristino di qtree o directory non è supportato, ma è possibile clonare ed esportare solo il Qtree se l'ambito di backup è definito a livello di Qtree.</block>
@@ -2590,7 +2568,6 @@
   <block id="a26531ddd22c342a5bd9860ea919b50d" category="paragraph">Selezionare *Nessuno*.</block>
   <block id="53582adf49551bf81650e7c9447e3a03" category="paragraph">È inoltre necessario specificare gli indirizzi e-mail del mittente e del destinatario e l'oggetto dell'e-mail. SMTP deve essere configurato anche nella pagina *Impostazioni* &gt; *Impostazioni globali*.</block>
   <block id="e734e6e2e702d38ebab6ed3c050a5e72" category="doc">Clonare i backup personalizzati delle risorse plug-in</block>
-  <block id="3c408f97e0a21affc59c011044498f97" category="paragraph">È inoltre possibile utilizzare i cmdlet PowerShell manualmente o negli script per eseguire operazioni di backup, ripristino e clonazione. Per informazioni dettagliate sui cmdlet di PowerShell, consultare la guida in linea del cmdlet di SnapCenter o la<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>.</block>
   <block id="05095cde7f504457949712770df49d6a" category="summary">Il fattore più critico per determinare una pianificazione di backup è il tasso di cambiamento per la risorsa. Più spesso si esegue il backup delle risorse, minore è il numero di log di archiviazione che SnapCenter deve utilizzare per il ripristino, che può comportare operazioni di ripristino più rapide.</block>
   <block id="e4e0cadac57fe2f7fc1d76c019a73967" category="doc">Pianificazioni di backup di risorse plug-in personalizzate</block>
   <block id="79139b45bc29d9b98f5be057df1482cd" category="paragraph">È possibile eseguire il backup di una risorsa utilizzata in modo pesante ogni ora, mentre è possibile eseguire il backup di una risorsa utilizzata raramente una volta al giorno. Altri fattori includono l'importanza della risorsa per la tua organizzazione, il tuo SLA (Service Level Agreement) e l'RPO (Recovery Point Objective).</block>
@@ -2627,7 +2604,6 @@
   <block id="09b368e7a40c6562c6eb5235c4eda0ba" category="summary">Assicurarsi che l'host soddisfi i requisiti prima di installare il pacchetto di plug-in SnapCenter per Linux.</block>
   <block id="fdcd362ac5f5f9817e70642dd2a48bfd" category="list-text">Oracle Linux</block>
   <block id="e1c05a94a3712659051eb07eafa04bd4" category="paragraph">Java 1.8 (64 bit) Oracle Java o OpenJDK Flavors</block>
-  <block id="07a646d112ec3924e97a5c5bd588d4c2" category="paragraph">Per informazioni aggiornate sulle versioni supportate, consultare<block ref="b7a3cb4f690df02dff49048f9cc465b2" category="inline-link-rx"></block></block>
   <block id="6ad653f84eed0c76647686ab11205da7" category="doc">Utilizzo di risorse, gruppi di risorse e policy per la protezione delle risorse plug-in personalizzate</block>
   <block id="fa195f3aeab33bc32aac81731432394a" category="list-text">In genere, le risorse sono database, file system Windows o macchine virtuali di cui si esegue il backup o la clonazione con SnapCenter.</block>
   <block id="82975dfa27b0a20ad62378df0b7a4c08" category="paragraph">Un gruppo di risorse definisce _cosa_ si desidera proteggere e quando si desidera proteggerlo in termini di giorno e ora. Pensa a una policy come a definire _come_ la vuoi proteggere. Ad esempio, se si esegue il backup di tutti i database o di tutti i file system di un host, è possibile creare un gruppo di risorse che includa tutti i database o tutti i file system dell'host. È quindi possibile associare due criteri al gruppo di risorse: Una policy giornaliera e una policy oraria. Quando si crea il gruppo di risorse e si allegano i criteri, è possibile configurare il gruppo di risorse in modo che esegua un backup basato su file ogni giorno e un altro programma che esegua il backup basato su Snapshot ogni ora.</block>
@@ -2767,7 +2743,6 @@
   <block id="6041b17ee877813c3440ee714e48b911" category="paragraph">Le pianificazioni configurate sono elencate nella colonna Applied Schedules (Pianificazioni applicate). Le pianificazioni di backup di terze parti non sono supportate quando si sovrappongono alle pianificazioni di backup di SnapCenter.</block>
   <block id="83aeb7b594481ad598eb0b519836777b" category="summary">SnapCenter supporta un'ampia gamma di tipi di storage su macchine fisiche e virtuali. Prima di installare i plug-in personalizzati di SnapCenter, è necessario verificare il supporto per il tipo di storage in uso.</block>
   <block id="c48a2f5430d3aff55420b834363bcc46" category="doc">Tipi di storage supportati dai plug-in personalizzati di SnapCenter</block>
-  <block id="6da41a50505a00272cd3a44cfd33c736" category="paragraph">Server fisici e virtuali (VMDK e LUN RDM non sono supportati).</block>
   <block id="edc25de414c7fe73d241458dab7bca2b" category="summary">Se una singola risorsa plug-in personalizzata non fa parte di alcun gruppo di risorse, è possibile eseguire il backup della risorsa dalla pagina risorse. È possibile eseguire il backup della risorsa on-demand oppure, se la risorsa dispone di un criterio allegato e di una pianificazione configurata, i backup vengono eseguiti automaticamente in base alla pianificazione.</block>
   <block id="8ffa4ba0dd2df5995fd397c72a149679" category="doc">Eseguire il backup di singole risorse plug-in personalizzate</block>
   <block id="d9519d94a3a4c5d7cfd38a6562e76409" category="paragraph">Fare clic su <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>, quindi selezionare il nome host e il tipo di risorsa per filtrare le risorse. Quindi fare clic su <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> per chiudere il riquadro del filtro.</block>
@@ -2803,7 +2778,6 @@
   <block id="7867996900fccc9a8502aad8682cccfe" category="paragraph">Di seguito è riportato un esempio di una voce di hash SHA512 nel file checksum:</block>
   <block id="ac9f8e08e831f7c1b56f125cc171d3e4" category="list-text">È necessario aver installato Java 1.8 o Java 11 (64 bit) sull'host Linux.</block>
   <block id="c4dff45b697890d0a8ca7ca9f815fee6" category="paragraph">Se si utilizza Windows Server 2019 o Windows Server 2016 per l'host del server SnapCenter, è necessario installare Java 1.8 o Java 11 (64 bit). Lo strumento matrice di interoperabilità (IMT) contiene le informazioni più recenti sui requisiti.</block>
-  <block id="f779fc9eb5facb1b4cb7f109a2d58be2" category="paragraph"><block ref="063c6867f0d5dcf21978239569098f3b" category="inline-link-rx"></block></block>
   <block id="8cab0b64f941cd66c63c70f6dcc91d69" category="list-text">Per consentire l'accesso a diversi percorsi, è necessario configurare i privilegi sudo per l'utente non root. Aggiungere le seguenti righe al file /etc/sudoers usando l'utility visudo Linux.</block>
   <block id="2cae85768532ad729badbc9d82df69b0" category="admonition">Assicurarsi di utilizzare sudo versione 1.8.7 o successiva.</block>
   <block id="656c356e64e4c0be274c5c901e543686" category="paragraph">_LINUX_USER_ è il nome dell'utente non root creato.</block>
@@ -2866,7 +2840,6 @@
   <block id="e17cc09362fa60a61b045f3553620d2c" category="paragraph">Le risorse vengono visualizzate insieme a informazioni quali tipo, nome host o cluster, criteri e gruppi di risorse associati e stato generale.</block>
   <block id="3ccbcc5da83c6d1a88dc8bcc16bad81b" category="paragraph">Se si desidera fornire l'accesso alle risorse ad altri utenti, l'amministratore di SnapCenter deve assegnare le risorse a tali utenti. In questo modo, gli utenti possono eseguire le azioni per le quali dispongono delle autorizzazioni per le risorse ad essi assegnate.</block>
   <block id="cc6d690e073824b8326c599c6b544c1f" category="paragraph">Dopo aver aggiunto le risorse, è possibile modificarne i dettagli. Se a una risorsa plug-in personalizzata sono associati backup, non è possibile modificare i seguenti campi: Nome risorsa, tipo di risorsa e nome host.</block>
-  <block id="7c17a5f75782af4f820b286a07f51777" category="paragraph">Per informazioni sui cmdlet PowerShell, consultare la guida in linea del cmdlet di SnapCenter o la<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>.</block>
   <block id="e8afddd41cf3a716324442f7a4538460" category="list-text">Elencare i backup che possono essere clonati utilizzando il cmdlet Get-SmBackup o Get-SmResourceGroup.</block>
   <block id="b92d70c39b6e5b77f828b04b1f8cf2e7" category="paragraph">Nell'esempio riportato di seguito vengono visualizzate le informazioni relative a un gruppo di risorse specificato:</block>
   <block id="490bfe5ade57157a35bf58b686acb1cf" category="list-text">Avviare un'operazione di clonazione da un gruppo di risorse clone o da un backup esistente utilizzando il cmdlet New-SmClone.</block>
@@ -2877,7 +2850,6 @@
   <block id="fee335c3c26419e1b2971157844984a7" category="doc">Numero di processi di backup necessari</block>
   <block id="b55afd5b52f01e281bc890c6adab0b29" category="paragraph">Il numero di processi di backup scelti dipende in genere dal numero di volumi da cui sono state collocate le risorse. Ad esempio, se si dispone un gruppo di piccole risorse su un volume e una grande risorsa su un altro volume, è possibile creare un processo di backup per le piccole risorse e un processo di backup per le grandi risorse.</block>
   <block id="d586cfbb655ff9a83e5820c52931584f" category="doc">Ripristinare risorse plug-in personalizzate</block>
-  <block id="87dee260ac24c847f6318306d701cdaf" category="paragraph">È inoltre possibile utilizzare i cmdlet PowerShell manualmente o negli script per eseguire operazioni di backup, ripristino e clonazione. Per informazioni sui cmdlet PowerShell, consultare la guida in linea del cmdlet di SnapCenter o la<block ref="3f0d4c4b3a1c9cfa1189bb7484d60c1b" category="inline-link-rx"></block>.</block>
   <block id="e0fbca907db95ebcd8e259b32ff0c736" category="summary">SnapCenter si integra con l'applicazione plug-in e con le tecnologie NetApp del sistema storage. Per utilizzare i plug-in personalizzati, utilizzare l'interfaccia grafica utente di SnapCenter.</block>
   <block id="7e2dbe0ceba88df5406b9c6925b9b55b" category="doc">Funzionalità dei plug-in personalizzati di SnapCenter</block>
   <block id="7140c9ed643472273949574e79ba9b60" category="paragraph">L'interfaccia SnapCenter offre standardizzazione e coerenza tra plug-in e ambienti. L'interfaccia di SnapCenter consente di completare operazioni di backup, ripristino, ripristino e clonazione coerenti tra i plug-in, utilizzare report centralizzati, utilizzare visualizzazioni dashboard a colpo d'occhio, impostare RBAC (role-based access control) e monitorare i processi in tutti i plug-in.</block>
@@ -3446,7 +3418,6 @@
   <block id="750b10574c7c5ac05afa7817be89a63e" category="list-text">Oracle ASM Filter driver (ASMFD)</block>
   <block id="da02aa1448f6bd34e97b4d20a7b5bdcf" category="admonition">Le operazioni di migrazione PDB e clonazione PDB non sono supportate.</block>
   <block id="0483f292b9712b967df26187e876eb45" category="list-text">Oracle Flex ASM</block>
-  <block id="b10fc427c86b36d441f4bfabc9179bfd" category="paragraph">Per informazioni aggiornate sulle versioni di Oracle supportate, consultare<block ref="6acebae1875d0d6142cdf2d6c44ca5c9" category="inline-link-rx"></block>.</block>
   <block id="2e00e783f5f2412a8f09c782c23524f4" category="section-title">Tipi di backup supportati per i database Oracle</block>
   <block id="63a9fc894d971ef7a1fef2e8bafbd8d4" category="paragraph">Il tipo di backup specifica il tipo di backup che si desidera creare. SnapCenter supporta i tipi di backup online e offline per i database Oracle.</block>
   <block id="cd9177f3a112508cd1d4ef7ec5499433" category="section-title">Backup online</block>
@@ -3512,7 +3483,6 @@
   <block id="8d966b8b205c32c6438a2938fdfb039e" category="paragraph"><block ref="7c2d477bf0b1be0667978cccbcd46d25" prefix="" category="inline-code"></block></block>
   <block id="7a5e7be0933e3148df8c1083de81b020" category="paragraph">Dopo aver modificato il valore del parametro, riavviare il servizio caricatore plug-in (SPL) di SnapCenter eseguendo il seguente comando:</block>
   <block id="b2db2a6d191f5b90f084ac27e053d277" category="paragraph"><block ref="36f2d43624c91c43be48d881c1118e2e" prefix="" category="inline-code"></block></block>
-  <block id="12e41bdd9444d355c65f1b199c10bb5f" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help command_name. In alternativa, fare riferimento alla<block ref="868bc9c3fbc71eae2d899862af6d942e" category="inline-link-rx"></block>.</block>
   <block id="b45046fe84c0ce347f0d9ea08f2991c3" category="section-title">Convenzioni di denominazione del backup</block>
   <block id="28a662775b78f4741fea31f1633fb63f" category="section-title">Opzioni di conservazione del backup</block>
   <block id="7004c590f0cedfca0304271af0b72b63" category="section-title">Verificare la copia di backup utilizzando il volume di storage primario o secondario</block>
@@ -3530,10 +3500,6 @@
   <block id="5cfa1ed5b7279fa5a9a9f892a69f175f" category="list-text">Il plug-in SnapCenter per database Oracle deve essere installato sull'host alternativo.</block>
   <block id="b1815397269c524f0557a5562899d82b" category="list-text">L'host clone deve essere in grado di rilevare LUN dallo storage primario o secondario.</block>
   <block id="2d4350dba1907fc52580a8f201e6340e" category="list-text">Se si esegue la clonazione dallo storage primario o secondario (Vault o Mirror) a un host alternativo, assicurarsi che sia stata stabilita una sessione iSCSI tra lo storage secondario e l'host alternativo o che sia stata inserita correttamente la zoning per FC.</block>
-  <block id="3e30bf9ff6c5058456cc15f4812939ca" category="inline-link">Guida all'installazione e all'installazione delle utility host Linux</block>
-  <block id="a13c407c281871b27c7c646287cfb88e" category="list-text"><block ref="a13c407c281871b27c7c646287cfb88e" category="inline-link-rx"></block></block>
-  <block id="99d5e9e8be050afa5c8c0151d7a00740" category="inline-link">Guida all'installazione e all'installazione delle utility host DI AIX</block>
-  <block id="cc1ac40238dd772ed5975e72e877a936" category="list-text"><block ref="cc1ac40238dd772ed5975e72e877a936" category="inline-link-rx"></block></block>
   <block id="7ab56a931702e0e68323bba5f9744b17" category="list-text">Se si esegue la clonazione dallo storage Vault o Mirror allo stesso host, assicurarsi che sia stata stabilita una sessione iSCSI tra lo storage Vault o Mirror e l'host oppure che sia stata creata una zoning corretta per FC.</block>
   <block id="0bfae4ea7762d7ebae116652014f4cd5" category="list-text">Se si esegue la clonazione in un ambiente virtualizzato, assicurarsi che venga stabilita una sessione iSCSI tra lo storage primario o secondario e il server ESX che ospita l'host alternativo o che venga eseguita la zoning appropriata per FC.</block>
   <block id="b6002df6af7fac27dc362f546398ad42" category="list-text">Se il database di origine è un database ASM:</block>
@@ -3627,7 +3593,6 @@
   <block id="ba09c94fed381b580a726fc94531b160" category="list-text">Se si dispone di database Oracle su LVM nei sistemi operativi Oracle Linux o RHEL, installare la versione più recente di Logical Volume Management (LVM).</block>
   <block id="8770246977269a639c8c2818412dc3ac" category="list-text">Se si utilizza SnapManager per Oracle e si desidera migrare al plug-in SnapCenter per database Oracle, è possibile migrare i profili in policy e gruppi di risorse di SnapCenter utilizzando il comando sccli sc-migra.</block>
   <block id="4c893189fecc8b6e5c41ae931ffd7f89" category="list-text">Configurare SnapMirror e SnapVault su ONTAP, se si desidera eseguire la replica del backup</block>
-  <block id="5a796427718586fb90b0404a63c79380" category="list-text"><block ref="fabd53b99023376bd3ff2670d534d874" category="inline-link-rx"></block></block>
   <block id="50295902d444d01e41805e9bc1b0598e" category="list-text"><block ref="50295902d444d01e41805e9bc1b0598e" category="inline-link-rx"></block></block>
   <block id="a909d5db254f7262bb93275a07812330" category="inline-link">L'operazione di protezione dei dati non riesce in un ambiente non multipath in RHEL 7 e versioni successive</block>
   <block id="637e979b90ef1f6ab2dd922a7436fbec" category="list-text"><block ref="637e979b90ef1f6ab2dd922a7436fbec" category="inline-link-rx"></block></block>
@@ -3638,7 +3603,6 @@
   <block id="d832fec799a3a70760ed7fe13bef388d" category="list-text">Se il backup è stato catalogato utilizzando Oracle Recovery Manager (RMAN), non è possibile rinominare i backup catalogati.</block>
   <block id="123f58b5f6c3fc41829ae40b968fcda4" category="paragraph">Se il valore assegnato a SnapmirrorStatusUpdateWaitTime è inferiore, le copie di backup Mirror e Vault non vengono elencate nella pagina della topologia anche se i volumi di dati e log sono protetti correttamente. È necessario aumentare il valore assegnato a SnapmirrorStatusUpdateWaitTime utilizzando il cmdlet _set-SmConfigSettings_ PowerShell.</block>
   <block id="11dbb257c91d345a6a0cee430763b610" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help _command_name_.</block>
-  <block id="c2e2989cd34de9d2b93fbc71f60ffe4e" category="paragraph">In alternativa, fare riferimento alla<block ref="868bc9c3fbc71eae2d899862af6d942e" category="inline-link-rx"></block> oppure<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>.</block>
   <block id="454e699fa041f9821976d47dd2a40f29" category="summary">Il workflow di backup include la pianificazione, l'identificazione delle risorse per il backup, la creazione di policy di backup, la creazione di gruppi di risorse e l'aggiunta di policy, la creazione di backup e il monitoraggio delle operazioni.</block>
   <block id="53e22ac130cec9f2bd2e54b1627191a8" category="doc">Eseguire il backup dei database Oracle utilizzando i comandi UNIX</block>
   <block id="e9d8403548e7864e8c8cd3cc46b790f0" category="list-text">È necessario aggiungere le connessioni del sistema di storage e creare la credenziale utilizzando i comandi _Add-SmStorageConnection_ e _Add-SmCredential_.</block>
@@ -3646,7 +3610,6 @@
   <block id="6ad2ce3e86cc5cb973fc58ac689e7da9" category="paragraph">È possibile avere una sola sessione di accesso all'account SnapCenter e il token viene memorizzato nella home directory dell'utente.</block>
   <block id="e116415b72f3d645af9ae9ed88b2ca8e" category="admonition">La sessione di connessione è valida solo per 24 ore. Tuttavia, è possibile creare un token con l'opzione TokenNeverExpires per creare un token che non scade mai e la sessione sarà sempre valida.</block>
   <block id="7e914e26f4d0379973fb7bcf833e2e78" category="paragraph">Eseguire i seguenti comandi per stabilire la connessione con il server SnapCenter, individuare le istanze del database Oracle, aggiungere criteri e gruppi di risorse, eseguire il backup e verificare il backup.</block>
-  <block id="7377c325bca0c913abf66d3359e41873" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help _command_name_. In alternativa, fare riferimento alla<block ref="868bc9c3fbc71eae2d899862af6d942e" category="inline-link-rx"></block>.</block>
   <block id="0f7d3f55b83a8ace70fddcd69afec394" category="list-text">Avviare una sessione di connessione con il server SnapCenter per un utente specifico: _Open-SmConnection_</block>
   <block id="5f5aa2c43f2c9d5fc9897a8474705e9e" category="list-text">Eseguire l'operazione di rilevamento delle risorse host: _Get-SmResources_</block>
   <block id="cc13eead3ad12f772f02d5464a4dcd46" category="list-text">Configurare le credenziali del database Oracle e i nodi preferiti per le operazioni di backup di un database Real Application Cluster (RAC): _Configure-SmOracleDatabase_</block>
@@ -3933,7 +3896,6 @@
   <block id="69e42ea21f7ea24c6b6f4e546e5fd834" category="paragraph"><block ref="f274dc93ba0b848fb70350d03f8cd1a0" prefix="" category="inline-code"></block></block>
   <block id="bc22dd302511c4acf4836040c65325d5" category="list-text">Per recuperare l'ID di backup, eseguire il seguente comando:</block>
   <block id="a00ce87c37f466b173bc4525b9e62be8" category="paragraph"><block ref="458d83fc2eecf23329f81a7d3ab0b722" prefix="" category="inline-code"></block></block>
-  <block id="0711b76cd7e563341c756717999a670c" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help _command_name_. In alternativa, fare riferimento alla<block ref="868bc9c3fbc71eae2d899862af6d942e" category="inline-link-rx"></block>.</block>
   <block id="9637bf398b0d618db1f07c6ac29233d8" category="section-title">Smontare un backup del database</block>
   <block id="c4b42b6394982de365aef2dea04b7478" category="paragraph">È possibile smontare manualmente un backup del database montato quando non si desidera più accedere ai file sul backup.</block>
   <block id="5bdcda8fa398715c0e816de58d9f6f32" category="inline-image-macro">icona di disinstallazione</block>
@@ -3955,7 +3917,6 @@
   <block id="db92e82cf9323a4bf5e79b2df0216f85" category="admonition">NFS su AIX e il filesystem non sono supportati.</block>
   <block id="e2b3d28069205cc6f75b17751511da77" category="list-text">JFS2 (Enhanced Journaled file System)</block>
   <block id="41732556fe47d0ec2b02e18e88410f6b" category="paragraph">Supporta la registrazione inline su file system SAN e layout LVM.</block>
-  <block id="8c23b286e970d7aba3f0ba4cac55a3ce" category="paragraph">Il<block ref="1bc5f97517692552b0fc613a6280d44d" category="inline-link-rx"></block> contiene le informazioni più recenti sulle versioni supportate.</block>
   <block id="9349160e3cfa891f6e3eab62e5e808aa" category="summary">È possibile utilizzare SnapCenter per clonare i backup del volume dell'applicazione, suddividere il clone ed eliminare il clone.</block>
   <block id="bfea201e67b6d8c8dfeba47e522016aa" category="doc">Clonare il backup del volume dell'applicazione</block>
   <block id="32b6ce3b4c07da5c7a5e9de96444b2c2" category="paragraph">È possibile utilizzare SnapCenter per clonare i backup dei volumi dell'applicazione.</block>
@@ -4035,7 +3996,6 @@
   <block id="c2d742e2aecdede3243c86015a588b10" category="admonition">Se si utilizza un database Oracle su LVM nei sistemi operativi Oracle Linux o Red Hat Enterprise Linux 6.6 o 7.0, è necessario installare la versione più recente di Logical Volume Manager (LVM).</block>
   <block id="959d1796c42866efcf2433173a31c265" category="list-text">Java 1.8.x (64 bit) Oracle Java e OpenJDK Flavors</block>
   <block id="9cc285535dae9f8a4e5b6b210f8e838e" category="list-text">Java 11 (64 bit) Oracle Java e OpenJDK Flavors</block>
-  <block id="11b0f8f84dad84d83f62b94ccfa1b29c" category="paragraph">Per informazioni aggiornate sulle versioni supportate, consultare<block ref="6acebae1875d0d6142cdf2d6c44ca5c9" category="inline-link-rx"></block>.</block>
   <block id="b8be58329edfa59d774ce8216f3afcfe" category="section-title">Configurare i privilegi sudo per gli utenti non root per l'host Linux</block>
   <block id="f9c6e2752992927f2c51ce2a85236ca9" category="paragraph">SnapCenter 2.0 e versioni successive consentono a un utente non root di installare il pacchetto di plug-in SnapCenter per Linux e avviare il processo di plug-in. I processi di plug-in verranno eseguiti come utenti non root. È necessario configurare i privilegi sudo per l'utente non root per fornire l'accesso a diversi percorsi.</block>
   <block id="e3f6dee76e478bb44341e47d36be0f01" category="list-text">Sudo versione 1.8.7 o successiva.</block>
@@ -4111,7 +4071,6 @@
   <block id="d7e2fe8d57177433ec8525953525ce2b" category="list-text">Se viene specificato il file di specifica del clone primario e non è stata selezionata l'opzione di aggiornamento secondario per il criterio, il backup verrà creato sul primario e il clone verrà creato dal primario.</block>
   <block id="eebf4dbc30cb79473f44b0746798f0d8" category="list-text">Eseguire _Refresh-SmClone_.</block>
   <block id="2dca23ddca1615e63d449ef4dd543431" category="paragraph">Se l'operazione non riesce con i messaggi di errore "PL-SCO-20032: Operazione CanExecute non riuscita con l'errore: PL-SCO-30031: File di log di ripristino +SC_2959770772_clmdb/clmdb/redolog/redo01_01.log esiste", specificare un valore più alto per _-WaitToTriggerClone_.</block>
-  <block id="11e64631478998d0abd8d43e9b74d6a6" category="paragraph">Per informazioni dettagliate sui comandi UNIX, consultare<block ref="868bc9c3fbc71eae2d899862af6d942e" category="inline-link-rx"></block>.</block>
   <block id="a79101df6f2655709b2aa6b2ec32c488" category="doc">Crea gruppi di risorse e allega policy per database Oracle</block>
   <block id="b311986e61e20df74cfba5511a5bdf33" category="list-text">Nella pagina Resources (risorse), selezionare un nome host di database Oracle dall'elenco a discesa *host* (host*).</block>
   <block id="dea54623aa643ec856baf8abb4233177" category="admonition">Le risorse vengono elencate nella sezione risorse disponibili solo se la risorsa viene rilevata correttamente. Le risorse aggiunte di recente vengono visualizzate nell'elenco delle risorse disponibili solo dopo l'aggiornamento dell'elenco delle risorse.</block>
@@ -4217,7 +4176,6 @@
   <block id="06efaedb12cf6d7a7aa6bcea7d53a166" category="paragraph">SnapCenter non supporta Data ONTAP in 7-Mode. È possibile utilizzare lo strumento di transizione 7-Mode per migrare i dati e le configurazioni memorizzati in un sistema che esegue Data ONTAP in 7-Mode a un sistema ONTAP.</block>
   <block id="91048ee9b28431a0b8417fc6aca22a53" category="section-title">Configurazioni supportate per l'importazione dei dati</block>
   <block id="b136948fc75470b29a82776a9d289413" category="paragraph">Prima di importare i dati da SnapManager 3.4.x per Oracle e SnapManager 3.4.x per SAP a SnapCenter, è necessario conoscere le configurazioni supportate dal plug-in SnapCenter per database Oracle.</block>
-  <block id="d02b4aec015712043efb147f73173ce0" category="paragraph">Le configurazioni supportate con il plug-in SnapCenter per database Oracle sono elencate nella<block ref="6acebae1875d0d6142cdf2d6c44ca5c9" category="inline-link-rx"></block>.</block>
   <block id="c11806b444e73d136144652a83923eba" category="section-title">Cosa viene importato in SnapCenter</block>
   <block id="d80d91babef4edbe3aa5ac78f57b8cbc" category="paragraph">È possibile importare profili, pianificazioni e operazioni eseguite utilizzando i profili.</block>
   <block id="e3fde9f3aff3294492c93c044790a79f" category="cell">Da SnapManager per Oracle e SnapManager per SAP</block>
@@ -4359,7 +4317,6 @@
   <block id="521d29d37f5561d4922ece42dc92cb07" category="cell">Se si utilizza la versione del server SnapCenter...</block>
   <block id="7676f59833cee6720de923cfeef21ede" category="cell">È possibile aggiornare direttamente il server SnapCenter a...</block>
   <block id="8d0f374d6bbbe36aead49222bc8c909f" category="cell">Versioni plug-in supportate</block>
-  <block id="4b1f6cbbab8f5d76a3e1d1b2c562722e" category="cell">4.5.x</block>
   <block id="955d0e9747f65e6a6a1963edce3fa678" category="cell">4.6.x</block>
   <block id="820341dc67dd887805f2620efabe6669" category="cell">4.7</block>
   <block id="dd9f485e72f96875e028693823f26e70" category="inline-link">Upgrade del plug-in SnapCenter per VMware vSphere</block>
@@ -4461,12 +4418,8 @@
   <block id="28cff6abd4b7b43406436e547f34789e" category="paragraph">SnapCenter include sia il server SnapCenter che singoli plug-in leggeri. È possibile automatizzare la distribuzione dei plug-in agli host delle applicazioni remote, pianificare le operazioni di backup, verifica e clonazione e monitorare tutte le operazioni di protezione dei dati.</block>
   <block id="66f12d94976f038895bab4372ee87640" category="paragraph">SnapCenter può essere implementato nei seguenti modi:</block>
   <block id="ad5726653853fba2b5d98515c638da77" category="list-text">On-premise per proteggere:</block>
-  <block id="3b5d218d734c41cfe8d9efd5e6fc8373" category="list-text">Dati presenti nei sistemi primari ONTAP FAS o AFF e replicati nei sistemi secondari ONTAP FAS o AFF</block>
   <block id="7deab53ede49d0d1a58c65f2e25ff259" category="list-text">Dati sui sistemi primari ONTAP Select</block>
-  <block id="6c27677d6e913bc79948a8f54acbd25c" category="list-text">Dati su sistemi primari e secondari ONTAP FAS o AFF e protetti dallo storage a oggetti StorageGRID locale (utilizzando l'integrazione del backup cloud NetApp BlueXP)</block>
   <block id="bc549d53e5e7a7aeb8a41511751a99f2" category="list-text">On-premise in un cloud ibrido per proteggere:</block>
-  <block id="88ff864aa61d80e2b8a79a0f91b36f3b" category="list-text">Dati presenti nei sistemi primari ONTAP FAS o AFF e replicati in Cloud Volumes ONTAP</block>
-  <block id="4715420841b96150a5fff8e31c55eeb2" category="list-text">Dati che si trovano su sistemi primari e secondari ONTAP FAS o AFF e protetti per lo storage di oggetti e archivi nel cloud (utilizzando l'integrazione di NetApp BlueXP Cloud Backup)</block>
   <block id="ca5570a253e3c0a27562c65c06bb6125" category="list-text">In un cloud pubblico per proteggere:</block>
   <block id="b340c2b4a7a978a510c8ebb351622143" category="list-text">Dati presenti nei sistemi primari Cloud Volumes ONTAP (in precedenza cloud ONTAP)</block>
   <block id="b380e442ff5c6e48e283af8b6f99806f" category="list-text">Dati presenti su Amazon FSX per ONTAP</block>
@@ -4489,8 +4442,6 @@
   <block id="7ef2193aefa38af010eb09987c5e35ec" category="paragraph">SnapCenter include API REST per la maggior parte delle funzionalità per l'integrazione con qualsiasi software di orchestrazione e l'utilizzo di cmdlet e interfaccia a riga di comando di Windows PowerShell.</block>
   <block id="66ee30700091538587a27acf4ecad692" category="inline-link">Panoramica delle API REST</block>
   <block id="9a9a51f1993f5461829d8466a8fb013e" category="paragraph">Per ulteriori informazioni sulle API REST, vedere<block ref="ea5c19f623f4ce0e4a3a37a512890f94" category="inline-link-rx"></block>.</block>
-  <block id="bb9b211047ca9fd3aa94d088f95891ee" category="paragraph">Per ulteriori informazioni sui cmdlet di Windows, vedere<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>.</block>
-  <block id="491d379e6629985a2ada1aa1be5dbaff" category="paragraph">Per ulteriori informazioni sui comandi UNIX, vedere<block ref="868bc9c3fbc71eae2d899862af6d942e" category="inline-link-rx"></block>.</block>
   <block id="44764ea524336d8792197315c021bc65" category="list-text">Data Protection centralizzata Dashboard e reporting</block>
   <block id="36fbf00d5877eca259aff6ad5fc25b19" category="list-text">RBAC (Role-Based Access Control) per la sicurezza e la delega.</block>
   <block id="571dae8a7f248327dfd110856b096a06" category="list-text">Database di repository con disponibilità elevata</block>
@@ -5195,7 +5146,6 @@
   <block id="059fe1123e48629ed1d6514462f294b2" category="doc">Abilitare i certificati CA per SnapCenter</block>
   <block id="07d333070d0435446600383ad0be9b41" category="list-text">È possibile attivare o disattivare i certificati CA utilizzando il cmdlet Set-SmCertificateSettings.</block>
   <block id="1962fbbcfa72e74639e8c071188af514" category="list-text">È possibile visualizzare lo stato del certificato per il server SnapCenter utilizzando il cmdlet Get-SmCertificateSettings.</block>
-  <block id="4e8d1223f4ffd73f23495af28c3c7669" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento a.<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>.</block>
   <block id="1240073aadeb78a3e72b1cedfb5cec2f" category="list-text">Nella pagina Settings (Impostazioni), selezionare *Settings* (Impostazioni) &gt; *Global Settings* (Impostazioni globali) &gt; *CA Certificate Settings* (Impostazioni certificato CA).</block>
   <block id="a6e94fec2cfcadd0e75ac025786feb7f" category="list-text">*<block ref="ce7f8fe6cf825357e942960470acb5bc" category="inline-image-macro-rx" type="image"></block>* Indica che all'host del plug-in non è abilitato o assegnato alcun certificato CA.</block>
   <block id="4ce9ef971363d62abcf2c6d2b1234486" category="summary">Esportare i certificati SnapCenter.</block>
@@ -5215,7 +5165,6 @@
   <block id="5fd3d0b8e71c4f64cfbad31e3fde1863" category="summary">Prima di installare il server SnapCenter, è necessario conoscere i requisiti di spazio e dimensionamento. È inoltre necessario applicare gli aggiornamenti di sicurezza e di sistema disponibili.</block>
   <block id="18cd7192921dd5ac27a1a7c5ef795c20" category="doc">Requisiti di spazio e dimensionamento</block>
   <block id="3dbe205a1db3f8f677f2e971edc8976d" category="paragraph">Sono supportate solo le versioni in inglese, tedesco, giapponese e cinese semplificato dei sistemi operativi.</block>
-  <block id="62daf6a07ef62b5f47d64602451886c4" category="paragraph">Per informazioni aggiornate sulle versioni supportate, vedere<block ref="78bb88f9abe535c4182359f981c4d0d5" category="inline-link-rx"></block>.</block>
   <block id="44e5a606cb3fbfaed79ce8eb853ed886" category="paragraph">Numero minimo di CPU</block>
   <block id="39d305d656d2efca941f50ce8253a426" category="paragraph">4 core</block>
   <block id="a88605ea0ad2e6919ae06fa5bb9e26d2" category="paragraph">RAM minima</block>
@@ -5284,7 +5233,6 @@
   <block id="1f351ed7a1738376fcd9632d3db7e0dd" category="paragraph">L'URL GUI predefinito è una connessione sicura alla porta predefinita 8146 sul server in cui è installato il server SnapCenter (_ https://server:8146_). Se durante l'installazione di SnapCenter è stata fornita una porta server diversa, viene utilizzata tale porta.</block>
   <block id="e559ce2499d2c5cb24993b681f9f514b" category="inline-link">Impossibile accedere all'indirizzo IP del cluster dall'esterno della rete</block>
   <block id="59985d4c0ad9df334fed4d44ff0991fa" category="paragraph">Per l'implementazione ad alta disponibilità (ha), è necessario accedere a SnapCenter utilizzando l'IP del cluster virtuale _ https://Virtual_Cluster_IP_or_FQDN:8146_. Se l'interfaccia utente di SnapCenter non viene visualizzata quando si passa a _ https://Virtual_Cluster_IP_or_FQDN:8146_ in Internet Explorer (IE), è necessario aggiungere l'indirizzo IP del cluster virtuale o l'FQDN come sito attendibile in IE su ciascun host plug-in oppure disattivare la protezione avanzata IE su ciascun host plug-in. Per ulteriori informazioni, vedere<block ref="f89494b555e2d92920e0ac70f10ea089" category="inline-link-rx"></block>.</block>
-  <block id="b2079ecc7149f6a09b8dd46c38e9fbe6" category="paragraph">Oltre a utilizzare l'interfaccia grafica di SnapCenter, è possibile utilizzare i cmdlet PowerShell per creare script per eseguire operazioni di configurazione, backup e ripristino. Alcuni cmdlet potrebbero essere stati modificati con ogni release di SnapCenter. Il<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block> contiene i dettagli.</block>
   <block id="d6b96565adbb70c53ae14b5070be8651" category="admonition">Se si effettua l'accesso a SnapCenter per la prima volta, è necessario effettuare l'accesso utilizzando le credenziali fornite durante il processo di installazione.</block>
   <block id="31a7d97d557b06d288bae46db80c8d67" category="list-text">Avviare SnapCenter dal collegamento situato sul desktop host locale, dall'URL fornito al termine dell'installazione o dall'URL fornito dall'amministratore di SnapCenter.</block>
   <block id="578cd680813c62df612b39c490acb2bc" category="list-text">Immettere le credenziali dell'utente.</block>
@@ -5557,7 +5505,6 @@
   <block id="d9ea666bfbe8444fa88062f4874d0b22" category="list-text">Add-SmServerCluster</block>
   <block id="b8313647a63a15fb0ab7d46b778ba618" category="list-text">Add-SmServer</block>
   <block id="cd8ca61b82992f73c74f955bf0f47f20" category="list-text">Remove-SmServerCluster</block>
-  <block id="1e0e854d46f7fdae75748f42803b83f4" category="paragraph">Per ulteriori informazioni, vedere<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>.</block>
   <block id="e79efa970901c1191fca1b278b2ff2d9" category="section-title">Ulteriori informazioni sulla configurazione di F5</block>
   <block id="ed9ff4b1a617150f86eae1035449f732" category="list-text">Dopo aver installato e configurato SnapCenter per la disponibilità elevata, modificare il collegamento al desktop di SnapCenter in modo che punti all'IP del cluster F5.</block>
   <block id="d04228e20798411b28cae6cb653df92c" category="list-text">Se si verifica un failover tra i server SnapCenter e se esiste anche una sessione SnapCenter, chiudere il browser e accedere nuovamente a SnapCenter.</block>
@@ -5573,7 +5520,6 @@
   <block id="cc788b7e72b2a734dd0985bd1e0e9fe3" category="inline-link">Documentazione di Amazon FSX per NetApp ONTAP</block>
   <block id="6ae4072dd3f83211384c8e5499a7935c" category="paragraph">Per informazioni su Amazon FSX per NetApp ONTAP, vedere<block ref="6acd76e3ffef3be13d939109e0593e26" category="inline-link-rx"></block>.</block>
   <block id="cf12f1baaed2b3c195374322d8d857bc" category="list-text">SnapCenter supporta la protezione di diverse applicazioni e database.</block>
-  <block id="8b64c44e24e9cf1c59554cf2c41479bf" category="paragraph">Per informazioni dettagliate sulle applicazioni e i database supportati, vedere<block ref="78bb88f9abe535c4182359f981c4d0d5" category="inline-link-rx"></block>.</block>
   <block id="8871af3db2b33c68b1e7799897970dbb" category="summary">È possibile generare certificati SSL (Secure Sockets Layer) e file di chiavi se si desidera proteggere la comunicazione tra server SnapCenter e MySQL Server in configurazioni standalone o configurazioni di bilanciamento del carico di rete.</block>
   <block id="2c83e33769333482559e227de9729593" category="doc">Configura connessioni MySQL protette con il server SnapCenter</block>
   <block id="073e8e92522cf9a79fe89d146dc9c6e4" category="paragraph">È possibile generare certificati SSL (Secure Sockets Layer) e file di chiavi se si desidera proteggere la comunicazione tra server SnapCenter e MySQL in configurazioni standalone o di bilanciamento del carico di rete (NLB).</block>
@@ -5643,12 +5589,9 @@
   <block id="2d53ac4b2f7dd507d18382cf3cca3671" category="inline-link">I cmdlet di SnapCenter sono guasti quando SnapDrive per Windows viene disinstallato</block>
   <block id="25403061ef41cef7c0c9b5e298b66714" category="paragraph">Se i cmdlet PowerShell di SnapCenter vengono danneggiati a causa della rimozione di SnapDrive per Windows dal server, fare riferimento a.<block ref="9ab458ce85939c44b152f89d9d3aa42d" category="inline-link-rx"></block>.</block>
   <block id="d4dbc002513d2615e9e9009874835b86" category="doc">Gestire l'autenticazione a più fattori (MFA)</block>
-  <block id="eba5e183c4f404bb057076dc4ea10e64" category="paragraph">In questo argomento viene descritto come gestire la funzionalità di autenticazione a più fattori (MFA) nel server Active Directory Federation Service (ad FS) e nel server SnapCenter.</block>
   <block id="8e5ca8947d2ccd889e10c25276502da0" category="section-title">Attiva autenticazione a più fattori (MFA)</block>
-  <block id="cf9e251e098e2f47bcb8e04e9e5ff28a" category="paragraph">In questo argomento viene descritto come attivare la funzionalità MFA nel server Active Directory Federation Service (ad FS) e nel server SnapCenter.</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="list-title">A proposito di questa attività</block>
   <block id="c746671a4c0cb7e7a37abe538fe2107e" category="list-text">SnapCenter supporta gli accessi basati su SSO quando altre applicazioni sono configurate nello stesso ad FS. In alcune configurazioni di ad FS, SnapCenter potrebbe richiedere l'autenticazione dell'utente per motivi di sicurezza, a seconda della persistenza della sessione di ad FS.</block>
-  <block id="1f6600010f63592c168af66c387c499f" category="list-text">Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo<block ref="b306feeed6ddda97d08ef1f2a0ba62d9" prefix=" " category="inline-code"></block>. In alternativa, è possibile vedere anche<block ref="5df59c30e631270dc31bf843919ab849" category="inline-link-rx"></block>.</block>
   <block id="b2f9ddbfbf0bb6739ee75e8c2a6ac138" category="list-text">Windows Active Directory Federation Service (ad FS) deve essere attivo e in esecuzione nel rispettivo dominio.</block>
   <block id="4ceb1d36799251586ba061a0c2b9a7a8" category="list-text">È necessario disporre di un servizio di autenticazione multifattore supportato da ad FS, ad esempio Azure MFA, Cisco Duo e così via.</block>
   <block id="cb7f79bbeb52e82fa7926e0724dba11e" category="list-text">L'indicatore di data e ora del server SnapCenter e ad FS deve essere lo stesso indipendentemente dal fuso orario.</block>
@@ -5665,8 +5608,6 @@
   <block id="696ac2aea44e94108d138faca1e6061a" category="list-text">Utilizzando la sessione PowerShell, generare il file di metadati MFA di SnapCenter utilizzando il cmdlet _New-SmMultifactorAuthenticationMetadata -path_.</block>
   <block id="c82bb0422af1b29a8b9694bbfe3ebe9e" category="paragraph">Il parametro path specifica il percorso per salvare il file di metadati MFA nell'host del server SnapCenter.</block>
   <block id="56fcee91de3134d2db0d32a05335e432" category="list-text">Copiare il file generato nell'host ad FS per configurare SnapCenter come entità client.</block>
-  <block id="aae311364aff04070e63a86b4fe0296f" category="list-text">Attivare MFA per il server SnapCenter utilizzando<block ref="1254f269a5dd80690678b4df201e88a5" prefix=" " category="inline-code"></block> cmdlet.</block>
-  <block id="588a899e5cfd7ee10458176f79204605" category="paragraph">Il parametro path specifica la posizione del file xml di metadati MFA di ad FS, che è stato copiato nel server SnapCenter nel passaggio 3.</block>
   <block id="13cb11c142fa4483919ae32dd2a04113" category="list-text">(Facoltativo) controllare lo stato e le impostazioni della configurazione MFA utilizzando<block ref="d99b90475295700e9775deadcb723ac6" prefix=" " category="inline-code"></block> cmdlet.</block>
   <block id="9e93c22d2a1e4426ec1fd94bd4ac31b3" category="list-text">Accedere alla console di gestione Microsoft (MMC) ed effettuare le seguenti operazioni:</block>
   <block id="9bcb5adfefb899867ed5b11f042b98db" category="list-text">Fare clic su *file* &gt; *Aggiungi/Rimuovi Snapin*.</block>
@@ -5698,8 +5639,6 @@
   <block id="35602ea96136092b8b885fe1ef749873" category="list-text">Assicurarsi che i campi Endpoint, Identifier e Firma siano compilati.</block>
   <block id="e5111e1a8d09cf3b9cc87da0144221fb" category="list-text">Chiudere tutte le schede del browser e riaprire un browser per eliminare i cookie di sessione esistenti o attivi, quindi eseguire nuovamente l'accesso.</block>
   <block id="907fe6bfcd498fe3e561f7fb3ee67c89" category="paragraph">La funzionalità MFA di SnapCenter può anche essere attivata utilizzando API REST.</block>
-  <block id="442ed19a31ac1f651ba7bf07effe122c" category="inline-link-macro">L'accesso a SnapCenter in più schede mostra un errore MFA</block>
-  <block id="4df2c26ea6368491393f05baf8841e6d" category="paragraph">Per informazioni sulla risoluzione dei problemi. vedere <block ref="46642a8ad62fd1a061e94d6b7bf62dc5" category="inline-link-macro-rx"></block>.</block>
   <block id="aeb89440d41f10fd9cc43ab75d800138" category="section-title">Aggiornare i metadati di ad FS MFA</block>
   <block id="19b3ff63dd3f3b6c1e3e48e8b3be6141" category="paragraph">È necessario aggiornare i metadati MFA di ad FS in SnapCenter ogni volta che si verifica una modifica nel server di ad FS, ad esempio aggiornamento, rinnovo del certificato CA, DR e così via.</block>
   <block id="6ef1300bebff7801c85a1789a6c0790a" category="list-text">Scaricare il file di metadati della federazione ad FS da <block ref="a9571343becbc81f25857902551c1e72" category="inline-link-rx"></block> FQDN&gt;/FederationMetadata/2007-06/FederationMetadata.xml"</block>
@@ -5714,7 +5653,6 @@
   <block id="18231d11def74e66e747d2eb30fc1c50" category="list-text">Attivare l'autenticazione a più fattori (MFA).</block>
   <block id="0f5b112cebb37022dbfe2c80e388d605" category="paragraph">Vedere <block ref="5ec6b0ec41fc91e8184fa478c63adb14" category="inline-link-macro-rx"></block>.</block>
   <block id="a606674f3f6a9cee6f0ddf2eef03b07b" category="section-title">Disattiva autenticazione a più fattori (MFA)</block>
-  <block id="a8d67928879d7cbd7d3c5d1b6d797736" category="list-text">Disattivare l'MFA e pulire i file di configurazione creati al momento dell'attivazione dell'MFA utilizzando<block ref="3f459b2c524cc44ef57664fd75d5c093" prefix=" " category="inline-code"></block> cmdlet.</block>
   <block id="e50267850b333a2a2c47f0cee7337818" category="summary">Prima di installare il server SnapCenter e i plug-in dell'applicazione o del database, assicurarsi che i requisiti di connessione e porte siano soddisfatti.</block>
   <block id="9a0980e2d2a75eb076f41f7a4d439162" category="doc">Requisiti di connessione e porta</block>
   <block id="3b6aba921e77b08934dcdcdab274466d" category="list-text">Le applicazioni non possono condividere una porta.</block>
@@ -5786,7 +5724,6 @@
   <block id="d907195077a50076f92791c10bb76a87" category="list-text">Nella pagina Storage Systems (sistemi storage), fare clic su *New* (nuovo).</block>
   <block id="7e3e16c1661e45c7df525db25b2af547" category="list-text">Nella pagina Add Storage System (Aggiungi sistema di storage), fornire le seguenti informazioni:</block>
   <block id="681b332726128e95467bac25b794e99b" category="paragraph">Inserire il nome del sistema di storage o l'indirizzo IP.</block>
-  <block id="64be74dcae05b8d33310254d7deb4567" category="admonition">I nomi dei sistemi di storage, che non includono il nome di dominio, devono avere un massimo di 15 caratteri e i nomi devono essere risolvibili. Per creare connessioni al sistema di storage con nomi che hanno più di 15 caratteri, è possibile utilizzare il cmdlet Add-SmStorageConnectionPowerShell.</block>
   <block id="5ef6092750c7671199206d0245a76865" category="admonition">Per i sistemi storage con configurazione MetroCluster (MCC), si consiglia di registrare cluster locali e peer per operazioni senza interruzioni.</block>
   <block id="9463624cf85844c6d1cc19e6bba9da4e" category="paragraph">SnapCenter non supporta più SVM con lo stesso nome su cluster diversi. Ogni SVM supportata da SnapCenter deve avere un nome univoco.</block>
   <block id="705dab32556bf86451bf893a05e5e68e" category="admonition">Dopo aver aggiunto la connessione allo storage a SnapCenter, non rinominare la SVM o il cluster utilizzando ONTAP.</block>
@@ -6007,15 +5944,12 @@
   <block id="a70a5bbea3c1a0732c3b119e34ac958c" category="list-text">Indirizzo e-mail del destinatario</block>
   <block id="d97e109d66d82a3998e928297ea76bdc" category="list-text">Facoltativo: Consente di modificare la riga dell'oggetto predefinita</block>
   <block id="fb929cc1541d57b8296794b2a588840d" category="paragraph">Il soggetto predefinito è il seguente: "Notifica della capacità della licenza SnapCenter".</block>
-  <block id="91f32543aa28b785a5495845a7fb8cec" category="summary">Se si utilizzano i controller di storage FAS o AFF, è necessaria una licenza basata su controller standard SnapCenter.</block>
   <block id="f011a01ebc3350e546311efaf71140bc" category="doc">Aggiunta di licenze SnapCenter basate su controller standard</block>
   <block id="b1c23ca4e9e67a158bfb24299743d88f" category="paragraph">La licenza basata su controller ha le seguenti caratteristiche:</block>
   <block id="5300768d44eab29e62cfac966d22baea" category="list-text">Diritto standard SnapCenter incluso con l'acquisto di bundle premium o flash (non con il pacchetto base)</block>
   <block id="c55c867b9e6458f61ad9c49c7535bfab" category="list-text">Utilizzo illimitato dello storage</block>
-  <block id="b867b5a0cc0e8c022da3fb526dbf2e0d" category="list-text">È possibile aggiungerlo direttamente al controller di storage FAS o AFF utilizzando Gestione di sistema ONTAP o la riga di comando del cluster di storage</block>
   <block id="c0919ecf5802c65bf773794b7af70540" category="admonition">Non inserire alcuna informazione di licenza nell'interfaccia grafica di SnapCenter per le licenze basate su controller SnapCenter.</block>
   <block id="17449a90a0d7161db56cba83fa4f2728" category="list-text">Bloccato sul numero di serie del controller</block>
-  <block id="b7bbc11caf1a65c77460de0469d40f7d" category="paragraph">È possibile utilizzare l'interfaccia grafica di SnapCenter per verificare se una licenza della suite SnapManager è installata su sistemi di storage primari FAS o AFF e per identificare i sistemi di storage che potrebbero richiedere le licenze della suite SnapManager. Le licenze della suite SnapManager si applicano solo alle SVM FAS e AFF o ai cluster sui sistemi storage primari.</block>
   <block id="6aa5717c99b34de9980debfbe3c6fa76" category="admonition">Se si dispone già di una licenza della suite SnapManager sul controller, il diritto alla licenza basata su controller standard SnapCenter viene fornito automaticamente. I nomi licenza SnapManagerSuite e licenza basata su controller standard SnapCenter vengono utilizzati in modo intercambiabile, ma si riferiscono alla stessa licenza.</block>
   <block id="05f4bbedc7296e63af5610bfc33574b5" category="list-text">Nella pagina Storage Systems (sistemi storage), dal menu a discesa *Type* (tipo), selezionare se visualizzare tutte le SVM o i cluster aggiunti:</block>
   <block id="9ba45610f0250c3f3d93d968194d341c" category="list-text">Per visualizzare tutte le SVM aggiunte, selezionare *ONTAP SVM*.</block>
@@ -6023,11 +5957,9 @@
   <block id="98670eb8cc95dd053ed921df2975cefe" category="list-text">Nell'elenco Storage Connections (connessioni storage), individuare la colonna Controller License (licenza controller).</block>
   <block id="56ea331cb0dea9dc3bddc3e0e2f3ef88" category="paragraph">La colonna Controller License (licenza controller) visualizza il seguente stato:</block>
   <block id="a909f2df296012a51dc7da77f9e20dc6" category="list-text">Non applicabile indica che una licenza della suite SnapManager non è applicabile perché lo storage controller si trova su piattaforme di storage Cloud Volumes ONTAP, ONTAP Select o secondarie.</block>
-  <block id="6709a231567d24784eb3e160f2720365" category="paragraph">È possibile utilizzare la riga di comando ONTAP per visualizzare tutte le licenze installate sul controller. L'utente deve essere un amministratore del cluster nel sistema FAS o AFF.</block>
   <block id="e7590fb47d0f1f083a0a8a323aa643a0" category="admonition">La licenza basata su controller standard SnapCenter viene visualizzata come licenza SnapManagerSuite sul controller.</block>
   <block id="9865599458fea2a88fc4f94d29ab5c4e" category="list-text">Immettere il comando License show, quindi visualizzare l'output per determinare se la licenza SnapManagerSuite è installata.</block>
   <block id="5b12cbd18ef5bbd432e4411b45e422ad" category="paragraph">Nell'esempio, la licenza SnapManagerSuite è installata, pertanto non sono richieste ulteriori azioni di licenza SnapCenter.</block>
-  <block id="aa9f3e3dd8188fb5cf1d9979b4a7a787" category="paragraph">Per recuperare il numero di serie della licenza basata su controller, è necessario disporre del numero di serie del controller. È possibile recuperare il numero di serie del controller utilizzando la riga di comando ONTAP. L'utente deve essere un amministratore del cluster nel sistema FAS o AFF.</block>
   <block id="ed996e97427b9382e039c0a5dde5d493" category="list-text">Accedere al controller utilizzando la riga di comando ONTAP.</block>
   <block id="1220394f5402b4332338e11150062d91" category="list-text">Immettere il comando show -instance del sistema, quindi esaminare l'output per individuare il numero di serie del controller.</block>
   <block id="065b83de49a875bb4bd71dbe16fad428" category="list-text">Annotare i numeri di serie.</block>
@@ -6036,10 +5968,7 @@
   <block id="253fa4a7008b4934e4b20001065ef254" category="list-text">Il numero di serie del controller dovrebbe essere disponibile.</block>
   <block id="b5ddaee766816307a016e7736f50313d" category="paragraph">Viene visualizzato un elenco di licenze per il controller specificato.</block>
   <block id="5da6f07d19afc1937b1b5b064152d98e" category="list-text">Individuare e registrare la licenza di SnapCenter o SnapManagerSuite.</block>
-  <block id="9c53e7ba342b700373ad570a7701ac93" category="paragraph">È possibile utilizzare la riga di comando di ONTAP per aggiungere una licenza basata su controller SnapCenter quando si utilizzano sistemi FAS o AFF e si dispone di una licenza standard o SnapManagerSuite di SnapCenter.</block>
-  <block id="8109f2b1a2b4fcb7f972be2b07c29c46" category="list-text">L'utente deve essere un amministratore del cluster nel sistema FAS o AFF.</block>
   <block id="9a935baf19dae6c50cae12b831745abd" category="list-text">È necessario disporre della licenza standard o SnapManagerSuite di SnapCenter.</block>
-  <block id="f749923aaf47a5a4e633b49ccf2873c5" category="paragraph">Se si desidera installare SnapCenter in prova con lo storage FAS o AFF, è possibile ottenere una licenza di valutazione Premium Bundle da installare sul controller.</block>
   <block id="77284acb8b512806e32e2236346e084c" category="paragraph">Se si desidera installare SnapCenter in prova, contattare il rappresentante commerciale per ottenere una licenza di valutazione del bundle Premium da installare sul controller.</block>
   <block id="62749f76fbc0b3c54c0e9340e012798d" category="list-text">Accedere al cluster NetApp utilizzando la riga di comando ONTAP.</block>
   <block id="62162d6c154980e72f9774396cd832cc" category="list-text">Aggiungere la chiave di licenza SnapManagerSuite:</block>
@@ -6051,7 +5980,6 @@
   <block id="68dae2573ac7874d6dd234af4fa4c752" category="list-text">Sul server SnapCenter, aprire una finestra PowerShell per reimpostare la password MySQL.</block>
   <block id="aa5c2438bb48bc6f9fc91294d9f5f2c1" category="list-text">Eseguire il cmdlet Open-SmConnection per avviare una sessione di connessione con il server SnapCenter per un account SnapCenterAdmin.</block>
   <block id="677b5668995b5d565b03294fb7b16727" category="list-text">Eseguire Set-SmRepositoryPassword per reimpostare la password MySQL.</block>
-  <block id="b1d0f68016df3655c241c0884e44b7fb" category="paragraph">Per informazioni sui cmdlet, vedere<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>.</block>
   <block id="bdc5e2c886d9f1d7c2db87ea0140c771" category="list-text">Aprire il prompt dei comandi ed eseguire mysql -u root -p per accedere a MySQL.</block>
   <block id="4c6cef07724f31f81802bd1558b3066b" category="paragraph">MySQL richiede la password. Immettere le credenziali fornite durante la reimpostazione della password.</block>
   <block id="730761cf69bd21652f5f5b9dc5170f63" category="list-text">Rimuovere la licenza di prova dal database:</block>
@@ -6290,7 +6218,6 @@
   <block id="3c15d7a6541e416f0d13373ee63fd0c0" category="paragraph">I dischi condivisi o montati in rete non sono supportati.</block>
   <block id="d90e9077285809de90243e91ed3a10bc" category="list-text">Se nelle impostazioni del server Syslog viene utilizzato il protocollo UDP, gli errori dovuti alla porta non sono attivi o non disponibili non possono essere acquisiti come errore o avviso in SnapCenter.</block>
   <block id="b398a3651d49f0eb14349eff9cfdec58" category="list-text">È possibile utilizzare i comandi Set-SmAuditSettings e Get-SmAuditSettings per configurare i registri di controllo.</block>
-  <block id="28e97aa2b5ca929ab9bd2ef8535b4f26" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo Get-Help command_name. In alternativa, è possibile consultare anche<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>.</block>
   <block id="b081c433d361cfcb39c391b352a6f526" category="list-text">Nella pagina *Impostazioni*, selezionare *Impostazioni* &gt; *Impostazioni globali* &gt; *Impostazioni registro di controllo*.</block>
   <block id="f3645e45f905156003cb2bb7741a86f3" category="list-text">Nella sezione Registro di controllo, immettere i dettagli.</block>
   <block id="bc622cdadddc54b812b2df6bb7115372" category="list-text">Inserire la directory *Registro audit* e la directory *Registro checksum audit*</block>
@@ -6381,8 +6308,6 @@
   <block id="293616622aeda675821b42e39b4d4e7b" category="paragraph">API di configurazione</block>
   <block id="c939b5dd7dddc4f1908d7f58a2ab351d" category="summary">SnapCenter richiede diverse licenze per abilitare le operazioni di protezione dei dati. Il tipo di licenze SnapCenter installate dipende dall'ambiente di storage e dalle funzionalità che si desidera utilizzare.</block>
   <block id="03d6fc6f0007d8c1e15a56f0a4522686" category="paragraph">SnapCenter richiede diverse licenze per consentire la protezione dei dati di applicazioni, database, file system e macchine virtuali. Il tipo di licenze SnapCenter installate dipende dall'ambiente di storage e dalle funzionalità che si desidera utilizzare.</block>
-  <block id="bd259d74a88fa9ae4cdb9c027643d76a" category="paragraph">Richiesto per FAS e AFF</block>
-  <block id="fd1eaac7fcf946084f0e116a9bbd7697" category="paragraph">La licenza standard di SnapCenter è una licenza basata su controller ed è inclusa nel pacchetto premium. Se si dispone della licenza della suite SnapManager, si ottiene anche il diritto di licenza standard SnapCenter. Se si desidera installare SnapCenter in prova con lo storage FAS o AFF, è possibile ottenere una licenza di valutazione Premium Bundle contattando il rappresentante commerciale.</block>
   <block id="54e6e66bc0a69ef86d9bb0b63900793e" category="admonition">SnapCenter è anche offerto come parte del bundle per la protezione dei dati. Se hai acquistato A400 o versioni successive, devi acquistare il bundle per la protezione dei dati.</block>
   <block id="7e83a2b4de6d5d07b3058e247d247d8a" category="paragraph">Se sei un cliente Cloud Volumes ONTAP o ONTAP Select, devi procurarti una licenza per TB basata sulla capacità in base ai dati gestiti da SnapCenter. Per impostazione predefinita, SnapCenter fornisce una licenza di prova integrata per SnapCenter standard da 100 TB, valida 90 giorni. Per ulteriori informazioni, contattare il rappresentante commerciale.</block>
   <block id="82ef718f4ebe0c276814ee3d51e33361" category="paragraph">SnapRestore</block>
@@ -6405,9 +6330,6 @@
   <block id="b6b7e7973fe70256b1b775baf8ac7261" category="paragraph">Installare una o più licenze SnapCenter. Per informazioni su come aggiungere licenze, vedere <block ref="978050eb868e07441781781da059ebc5" category="inline-link-macro-rx"></block> oppure <block ref="47cf8583fc17afccfc8268b2830ab680" category="inline-link-macro-rx"></block>.</block>
   <block id="59746a4c33021bdc9cb716ea91eadbb0" category="section-title">Licenze SMBR (Single Mailbox Recovery)</block>
   <block id="8119a3fca1d141f0d7a8e7156604c296" category="paragraph">Se si utilizza il plug-in SnapCenter per Exchange per gestire i database e il ripristino di una singola casella postale (SMBR), è necessaria una licenza aggiuntiva per SMBR che deve essere acquistata separatamente in base alla casella postale dell'utente.</block>
-  <block id="0d5e6d352f8f3217e51e0df5fe981349" category="inline-link">Note di rilascio di SMBR</block>
-  <block id="3305eb9373205972a06c6092007cad70" category="paragraph">Contatta il tuo commerciale NetApp per acquistare le licenze SMBR disponibili come unità di bundle di 1000, 5000, 15000 e 25000 caselle postali. Una volta acquistato lo SKU, è possibile ottenere la licenza seguendo le istruzioni riportate in<block ref="26f9ebf6b2beedaef61522277c7c5b3d" category="inline-link-rx"></block>.</block>
-  <block id="e641334b8b39e850790bd4b25b2e3cec" category="paragraph">Quando si invia la richiesta di chiave di licenza, Kroll Ontrack emetterà 50 chiavi di licenza per la mailbox. In base ai tuoi diritti, Kroll Ontrack aggiornerà le licenze per la mailbox dopo la verifica.</block>
   <block id="4132caaeec30f6b487cec84f7d869518" category="summary">È necessario configurare il certificato del client CA per LDAPS sul server SnapCenter quando quest'ultimo è configurato con i certificati CA.</block>
   <block id="c9f3f49f993cbb32ca86319abe11e4c0" category="paragraph">Nella seconda pagina della procedura guidata</block>
   <block id="0ee122a05d856cc276dc5ced92d00f89" category="paragraph">Fare clic su *Browse* (Sfoglia), selezionare _Root Certificate_ (certificato principale) e fare clic su *Next* (Avanti).</block>
@@ -6681,7 +6603,6 @@
   <block id="c41e777bd921bd5fc9079273c0ed35db" category="doc">Panoramica del plug-in SnapCenter per il server Microsoft Exchange</block>
   <block id="e126a0dff251b10008436e2bf2a5dd06" category="paragraph">Il plug-in SnapCenter per Microsoft Exchange Server è un componente sul lato host del software NetApp SnapCenter che consente la gestione della protezione dei dati basata sulle applicazioni dei database Exchange. Il plug-in per Exchange automatizza il backup e il ripristino dei database Exchange nell'ambiente SnapCenter.</block>
   <block id="94bf62b5661b3bf71e7b277fd3572bb1" category="paragraph">Una volta installato il plug-in per Exchange, è possibile utilizzare SnapCenter con la tecnologia NetApp SnapMirror per creare copie mirror dei set di backup su un altro volume e con la tecnologia NetApp SnapVault per eseguire la replica del backup disk-to-disk a scopo di conformità agli standard o di archiviazione.</block>
-  <block id="7af37c4476756504b6f4b3b595f4e558" category="paragraph">Se si desidera ripristinare e ripristinare i messaggi e-mail o le caselle postali al posto del database Exchange completo, è possibile utilizzare il software SMBR (Single Mailbox Recovery).</block>
   <block id="50d4934279cff62c1929dc7c0c7c715d" category="summary">Quando si installa il plug-in SnapCenter per Microsoft Exchange Server nell'ambiente in uso, è possibile utilizzare SnapCenter per eseguire il backup delle risorse Exchange.</block>
   <block id="6a9a694fbb40be17e9c2dd832436bce8" category="paragraph">È possibile pianificare più backup per l'esecuzione simultanea tra i server. Le operazioni di backup e ripristino non possono essere eseguite contemporaneamente sulla stessa risorsa. Le copie di backup attive e passive sullo stesso volume non sono supportate.</block>
   <block id="58f286cbafd33e30ed9fd4a95a26e0f7" category="paragraph"><block ref="58f286cbafd33e30ed9fd4a95a26e0f7" category="inline-image-macro-rx" type="image"></block></block>
@@ -6723,7 +6644,6 @@
   <block id="c7f88523eb9618512db4280fed17383f" category="paragraph">In questo esempio viene creato un nuovo gruppo di risorse di backup di Exchange Database Availability Group (DAG) con i criteri e le risorse specificati:</block>
   <block id="16cb514584e7d79dbe2308dbbf4bbf37" category="paragraph">Questo esempio crea un nuovo backup sullo storage secondario:</block>
   <block id="691fa56b0f1b19ab3099a9a59ce15434" category="paragraph">Questo esempio visualizza un report di riepilogo del lavoro per un ID lavoro specifico:</block>
-  <block id="c6f3b6a232739129385caa78e571328f" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, vedere<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>.</block>
   <block id="c700cc27f0a1d981ce1c0af8b5364daa" category="summary">È possibile utilizzare SnapCenter per ripristinare i database Exchange di cui è stato eseguito il backup.</block>
   <block id="aa14e187b593d2a11c1d14cbbec8aadc" category="doc">Ripristinare i database Exchange</block>
   <block id="b016fed9d8e76be8e2b8327a19c79e1c" category="list-text">È necessario aver eseguito il backup dei gruppi di risorse, del database o dei DAG (Database Availability Group).</block>
@@ -6793,7 +6713,6 @@
   <block id="0f14951f7fd1d656890413b5b92b9059" category="summary">È possibile utilizzare SnapCenter per ripristinare i database Exchange ripristinando uno o più backup nel file system attivo.</block>
   <block id="c37b0bdb3c7a24db287508745921aed4" category="paragraph">Il seguente flusso di lavoro mostra la sequenza in cui è necessario eseguire le operazioni di ripristino del database di Exchange:</block>
   <block id="2d1eae8ec36b7998c11e835920d1606c" category="paragraph"><block ref="2d1eae8ec36b7998c11e835920d1606c" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="2d68b9458c6165a5eeeb8d311718b600" category="paragraph">È inoltre possibile utilizzare i cmdlet PowerShell manualmente o negli script per eseguire operazioni di backup e ripristino. Per informazioni dettagliate sui cmdlet di PowerShell, consultare la guida in linea del cmdlet di SnapCenter o consultare<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>.</block>
   <block id="5cadf224e1549f29dbdfca4d8a3c3c75" category="summary">Il plug-in SnapCenter per Microsoft Exchange Server non fornisce la verifica del backup; tuttavia, è possibile utilizzare lo strumento Eseutil fornito con Exchange per verificare i database e i backup di Exchange.</block>
   <block id="fd28a24d64e009870115aaf8c946e67a" category="doc">Verifica del database e del backup di Exchange</block>
   <block id="8068a252ff6fb4ddaf1368f594532571" category="paragraph">Lo strumento Microsoft Exchange Eseutil è un'utilità della riga di comando inclusa nel server Exchange. L'utility consente di eseguire controlli di coerenza per verificare l'integrità dei database e dei backup di Exchange.</block>
@@ -6810,10 +6729,6 @@
   <block id="2807319f8bd59affef72f0158525b495" category="doc">Ripristino granulare di e-mail e mailbox</block>
   <block id="504c76abf7209921081fe0b281166c22" category="inline-link">Guida all'amministrazione di SMBR</block>
   <block id="21816c8bcee290d4ecb4e3f7274ead69" category="paragraph">Il ripristino di un database completo solo per recuperare un singolo messaggio di posta consumerà molto tempo e risorse. SMBR consente di recuperare rapidamente i messaggi di posta creando una copia clone di Snapshot e utilizzando le API Microsoft per montare la casella di posta in SMBR. Per informazioni su come utilizzare SMBR, vedere<block ref="ec4bbb4517dd2ded0cc504f8d58977d4" category="inline-link-rx"></block>.</block>
-  <block id="7028749c09c12f8bb923863ce2b0cebe" category="inline-link-macro">Licenze SMBR</block>
-  <block id="e2452ab679d04cfb5a81dfcf28af1c7d" category="list-text"><block ref="e2452ab679d04cfb5a81dfcf28af1c7d" category="inline-link-macro-rx"></block></block>
-  <block id="439c7150753e853ca177cd0e1ef12492" category="inline-link">Libreria di documentazione SMBR</block>
-  <block id="a586bd7e9166c5253992bcdf4d8b115e" category="list-text"><block ref="a586bd7e9166c5253992bcdf4d8b115e" category="inline-link-rx"></block></block>
   <block id="f367d650e57088caf7b808e01235016d" category="inline-link">Come eseguire il ripristino dallo storage secondario in SMBR con SnapCenter</block>
   <block id="41b4c689a8b0e3ba8bfecb2a1e608e46" category="list-text"><block ref="41b4c689a8b0e3ba8bfecb2a1e608e46" category="inline-link-rx"></block></block>
   <block id="f004280f6db6ea5f9302c9851388d751" category="inline-link">Ripristino della posta di Microsoft Exchange da SnapVault utilizzando SMBR</block>
@@ -7091,7 +7006,6 @@
   <block id="a6a03f085aaa031834153004299da2fc" category="paragraph">Montare i backup</block>
   <block id="1da1857cca539dd747c6db31168b879b" category="paragraph">Smontare i backup</block>
   <block id="6e9783376d951cfd780e9fdb67a0f02c" category="paragraph">Visualizza i dettagli</block>
-  <block id="49076cf727b0227582a4747208b25f26" category="summary">Dal riquadro di navigazione a sinistra di SnapCenter, la dashboard offre una prima panoramica dello stato del sistema, tra cui attività di processo recenti, avvisi, riepilogo della protezione, efficienza e utilizzo dello storage, stato dei processi SnapCenter (backup, clonazione, ripristino), stato della configurazione per host cluster standalone e Windows, Numero di macchine virtuali di storage gestite da SnapCenter e capacità di licenza.</block>
   <block id="1842816347041f3868bc9706c9a9e69b" category="doc">Panoramica della dashboard</block>
   <block id="784e370a7c51736fcc92afb2efec1327" category="paragraph">Dal riquadro di navigazione a sinistra di SnapCenter, la dashboard offre una prima panoramica dello stato del sistema, tra cui attività di lavoro recenti, avvisi, riepilogo della protezione, efficienza e utilizzo dello storage, stato dei processi SnapCenter (backup, clonazione, ripristino), stato della configurazione per host standalone e cluster Windows, Numero di macchine virtuali di storage (SVM) gestite da SnapCenter e capacità di licenza.</block>
   <block id="ddfe3037f5fe958abe596df4766dd448" category="paragraph">Le informazioni visualizzate nella vista Dashboard dipendono dal ruolo assegnato all'utente che ha attualmente effettuato l'accesso a SnapCenter. Alcuni contenuti potrebbero non essere visualizzati se l'utente non dispone dell'autorizzazione per visualizzare tali informazioni.</block>
@@ -7170,7 +7084,6 @@
   <block id="e447dfc12dc0465fe7abb875acc701ec" category="paragraph">Numero di host in cui è in corso l'installazione o la disinstallazione del plug-in.</block>
   <block id="5f576237a840d1af41718f5e4d14e1ff" category="section-title">Capacità concessa in licenza</block>
   <block id="0b7df058ba8c5977c997774a2124405b" category="paragraph">Il riquadro capacità concessa in licenza visualizza informazioni sulla capacità totale concessa in licenza, sulla capacità utilizzata, sugli avvisi di soglia della capacità e sugli avvisi di scadenza della licenza per le licenze basate sulla capacità standard di SnapCenter.</block>
-  <block id="bf764a2caa0380621bd4b4ebe7b2f86c" category="admonition">Questa schermata viene visualizzata solo se si utilizzano licenze basate sulla capacità standard di SnapCenter su piattaforme Cloud Volumes ONTAP o ONTAP Select. Per le piattaforme FAS o AFF, la licenza SnapCenter è basata su controller e concessa in licenza per capacità illimitata, senza richiedere alcuna licenza per capacità.</block>
   <block id="5e33a12bc16d66724cc09b67c72dbf73" category="cell">Stato della licenza</block>
   <block id="fb13b06128391d01035d684dfb9b511b" category="paragraph">In uso</block>
   <block id="cb3ff299fc7b6fb6d55514f087e601ce" category="paragraph">Quantità di capacità attualmente in uso.</block>
@@ -7708,7 +7621,6 @@
   <block id="039222161d01f984ede1d0056c724389" category="doc">Eseguire il backup dei file system Windows</block>
   <block id="6213c4aa6c3d759b708f391038b515e2" category="paragraph">È possibile pianificare più backup per l'esecuzione simultanea tra i server. Le operazioni di backup e ripristino non possono essere eseguite contemporaneamente sulla stessa risorsa.</block>
   <block id="0d267aa6a5980521c50d3bb9b62d9419" category="image-alt">workflow di backup di sce</block>
-  <block id="7ed3417ce7f529178e5bb25b31b39fc6" category="paragraph">È inoltre possibile utilizzare i cmdlet PowerShell manualmente o negli script per eseguire operazioni di backup, ripristino e clonazione. La guida in linea del cmdlet di SnapCenter o il<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block> Contiene informazioni dettagliate sui cmdlet PowerShell.</block>
   <block id="8796317ad8b32fb8aef870b01b6167d3" category="summary">Il plug-in SnapCenter per Microsoft Windows è un componente sul lato host del software NetApp SnapCenter che consente la gestione della protezione dei dati applicativa delle risorse del file system Microsoft. Inoltre, offre provisioning dello storage, coerenza delle copie Snapshot e recupero dello spazio per i file system Windows. Il plug-in per Windows automatizza le operazioni di backup, ripristino e clonazione del file system nell'ambiente SnapCenter.</block>
   <block id="a9a17ec2f387b7172d4f7e035744dc4b" category="doc">Panoramica del plug-in SnapCenter per Microsoft Windows</block>
   <block id="da729e684f85b2f6417b12711de4813b" category="paragraph">Una volta installato il plug-in per Windows, è possibile utilizzare SnapCenter con la tecnologia NetApp SnapMirror per creare copie mirror dei set di backup su un altro volume e con la tecnologia NetApp SnapVault per eseguire la replica del backup disk-to-disk per l'archiviazione o la conformità agli standard.</block>
@@ -7773,7 +7685,6 @@
   <block id="bf27fad69812da8f1ea6b50d511517e0" category="list-text">Se un gruppo di risorse dispone di più database di host diversi, l'operazione di backup su alcuni host potrebbe attivarsi in ritardo a causa di problemi di rete. È necessario configurare il valore di MaxRetryForUninitializedHosts in web.config utilizzando il cmdlet Set-SmConfigSettings PowerShell</block>
   <block id="757701cec0ed310dbf31948edd1073df" category="admonition">Per il plug-in SnapCenter per database Oracle, se si dispone di un gruppo di risorse federate con due database e uno di essi dispone di un file di dati su uno storage non NetApp, l'operazione di backup viene interrotta anche se l'altro database si trova su uno storage NetApp.</block>
   <block id="54f5c477b691c07c69aae1e40705b234" category="list-text">Se si esegue il backup dei dati delle applicazioni su VMDK e la dimensione dell'heap Java per il plug-in SnapCenter per VMware vSphere non è sufficiente, il backup potrebbe non riuscire. Per aumentare la dimensione dell'heap Java, individuare il file script<block ref="0c5aef8a69e938d29ad61fb314d26972" prefix=" " category="inline-code"></block>. In questo script, il<block ref="f751567fc5d2c300402db2d50de19910" prefix=" " category="inline-code"></block> Avvia il servizio plug-in VMware di SnapCenter. Aggiornare il comando ai seguenti valori:<block ref="d66632e2d1ccce4227411d877d93c152" prefix=" " category="inline-code"></block>.</block>
-  <block id="026ab5d2853d1f0c92bc7f3703d62e90" category="sidebar">Il software SnapCenter è una piattaforma semplice, centralizzata e scalabile che offre una protezione dei dati coerente per applicazioni, database, file system host e macchine virtuali in esecuzione su sistemi ONTAP in qualsiasi punto del cloud ibrido. Questa libreria di documentazione contiene informazioni relative alla versione 4.8.</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Inizia subito</block>
   <block id="4b09ab22f471832d6728b6e5b9a09aa8" category="sidebar">Scopri di più su SnapCenter</block>
   <block id="f13fe3401f6969cdc9233f418f92df1f" category="sidebar">Guida di riferimento rapido per proteggere i database di SQL Server</block>
@@ -7803,8 +7714,6 @@
   <block id="832ab315e74cc6d95c21009b0c52cb2b" category="sidebar">Guida di riferimento ai comandi</block>
   <block id="cd04e5d32cbb18b14141238ca9a7ea20" category="sidebar">Documentazione per le versioni precedenti di SnapCenter</block>
   <block id="66bdd10c104f52b4f8519b652bc8e084" category="sidebar">Knowledge base di NetApp - SnapCenter</block>
-  <block id="d251696f5e122ef9209620841c14e519" category="sidebar">Documentazione del software SnapCenter 4.8</block>
-  <block id="bbbbcb8f41827abddd8ec6151fdf9e99" category="sidebar">Software SnapCenter</block>
   <block id="76eb854ee139a484003d75645a214f2b" category="sidebar">Disinstallare il server SnapCenter e i plug-in</block>
   <block id="60bea4969590084ae9e74b765b209fad" category="sidebar">Disinstallare i pacchetti di plug-in di SnapCenter</block>
   <block id="e62a99d48b4d9b1ce6eb1be8cdf44cca" category="sidebar">Plug-in SnapCenter per database SAP HANA</block>
@@ -7889,7 +7798,6 @@
   <block id="8e03216fb8576194a8567507d59c56b7" category="paragraph">È possibile eseguire controlli incrociati per aggiornare le informazioni obsolete del repository RMAN sui backup i cui record del repository non corrispondono al loro stato fisico. Ad esempio, se un utente rimuove i log archiviati dal disco con un comando del sistema operativo, il file di controllo indica ancora che i log sono su disco, mentre di fatto non lo sono.</block>
   <block id="7944aae88fbc469a9edfc7d9ae22e633" category="paragraph">L'operazione di crosscheck consente di aggiornare il file di controllo con le informazioni. È possibile attivare il crosscheck eseguendo il comando set-SmConfigSettings e assegnando il valore TRUE al parametro ENABLE_CROSSCHECK. Il valore predefinito è FALSE.</block>
   <block id="14fbb4ba3858c107f2599916d3b51cbb" category="section-title">Rimuovere le informazioni sul catalogo</block>
-  <block id="3fc370e9504ca2ebb69ee1e9030a971f" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help command_name. In alternativa, fare riferimento a.<block ref="f0a304dd5eda28bc5cad0e10ba143e0a" category="inline-link-rx"></block>.</block>
   <block id="4c4d4c133d15d97bf3bef74ffeeeb66a" category="list-text">Nel riquadro di navigazione a sinistra, selezionare *risorse* e il plug-in appropriato dall'elenco.</block>
   <block id="ba4484b740822363967ef7dbb090de6a" category="inline-image-macro">Icona del filtro</block>
   <block id="bdf18e1416fb037a66cb2e8b6bf34e50" category="list-text">Fare clic su <block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block>, quindi selezionare il nome host e il tipo di database per filtrare le risorse.</block>
@@ -7969,7 +7877,6 @@
   <block id="1a48e10f2aae9eca9186a1b6176fb05a" category="list-text">Se il file non è accessibile e il punto di montaggio non è disponibile durante il processo di verifica, l'operazione potrebbe non riuscire e il file specificato con il codice di errore DBV-00100. È necessario modificare i valori dei parametri VERIFY_DELAY_ e VERIFY_RETRY_COUNT in sco.properties.</block>
   <block id="510a95fea4bba025da5889c50cbbd219" category="summary">Opzioni di conservazione del backup.</block>
   <block id="47360f25b760514cfd5222ea8efb3fca" category="list-text">ASM standalone e ASM RAC on Raw Device Mapping (RDM) + è possibile eseguire operazioni di backup, ripristino e clonazione sui database Oracle su ASM, con o senza ASMLib.</block>
-  <block id="d9f5c0652a9a0f5a632c2b39950788b1" category="paragraph">Per informazioni aggiornate sulle versioni di Oracle supportate, consultare<block ref="ad50fcde58174eb161421bebd1f28ec8" category="inline-link-rx"></block>.</block>
   <block id="a725ff47fefe45fbde2b714b9bee12db" category="summary">Un gruppo di risorse è un container in cui vengono aggiunte le risorse di cui si desidera eseguire il backup e la protezione. Un gruppo di risorse consente di eseguire contemporaneamente il backup di tutti i dati associati a una determinata applicazione.</block>
   <block id="75d10fc733cbe6199ca2e7cebf31fe9c" category="paragraph">Un database con file in gruppi di dischi ASM deve essere in stato "MOUNT" o "OPEN" per verificare i propri backup utilizzando l'utility Oracle DBVERIFY.</block>
   <block id="471e47d90bffd9838cf1d00548360b40" category="paragraph">Collegare uno o più criteri al gruppo di risorse per definire il tipo di lavoro di protezione dei dati che si desidera eseguire.</block>
@@ -8111,9 +8018,7 @@
   <block id="cc9c449ada243c7f7945df60c3bb511a" category="list-text">Nel riquadro di navigazione a sinistra, selezionare *Storage Systems*.</block>
   <block id="d232915b5e459729c2ebb05cce4351c3" category="paragraph">Quando si seleziona il nome del cluster, tutte le SVM che fanno parte del cluster vengono visualizzate nella sezione Storage Virtual Machines (macchine virtuali di storage).</block>
   <block id="b334c2fd16b2dbb1653525b0da09940d" category="inline-image-macro">Icona di un segno di spunta</block>
-  <block id="b708e8602f17540d711c077ef6ce5bb6" category="list-text"><block ref="1b6b7d2df953b943aed63061cd428e2b" category="inline-image-macro-rx" type="image"></block> Indica che una licenza della suite SnapManager è installata su un sistema di storage primario FAS o AFF.</block>
   <block id="8e9f59a7ba19ac78a77252b5cc8530f6" category="inline-image-macro">Icona di annullamento</block>
-  <block id="72acec0d06c1d26aeb0b87907c970c31" category="list-text"><block ref="1ca20f925112adf63235e58f0e4483cd" category="inline-image-macro-rx" type="image"></block> Indica che la licenza della suite SnapManager non è installata su un sistema di storage primario FAS o AFF.</block>
   <block id="778623bf565f3d8f537019c7e81b0948" category="section-title">Fase 2: Identificare le licenze installate sul controller</block>
   <block id="587b796170a9abac4701cd8aa1bb38cb" category="example-title">Output di esempio</block>
   <block id="09bfdac33144afac4f96f313740dc959" category="section-title">Fase 3: Recuperare il numero di serie del controller</block>
@@ -8125,5 +8030,417 @@
   <block id="46d55a8aefdec15a8ce44087c8123826" category="inline-link">Operazione non riuscita con errore Impossibile rilevare il dispositivo per il LUN</block>
   <block id="24642a08e354f43168ca4f1178850f84" category="list-text">Assicurarsi che il LUN non sia mappato all'host AIX utilizzando iGroup costituito da protocolli misti iSCSI e FC. Per ulteriori informazioni, vedere<block ref="94f247529a6b6f563b3a8d4772877431" category="inline-link-rx"></block>.</block>
   <block id="4fb437564892944d73f87c822342e2bb" category="cell">4.8</block>
-  <block id="7d9be6a6877ece66779a3e8834d493df" category="admonition">Ad esempio, se si utilizza SnapCenter versione 4.5.x e si desidera eseguire l'aggiornamento alla versione 4.8, eseguire prima l'aggiornamento alla versione 4.6.x, quindi l'aggiornamento alla versione 4.8.</block>
+  <block id="7c6508384d2ec7e90c0bc1fc6822f767" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento alla<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>.</block>
+  <block id="028a3c414b2f36abce9baa1df750ef89" category="admonition">La lunghezza della chiave RSA del certificato CA deve essere di almeno 3072 bit.</block>
+  <block id="3f22331bd76f7085da3a93a57ab3fb56" category="paragraph">Il provisioning SnapCenter e il supporto per la protezione dei dati sono disponibili su Windows Server. Per informazioni aggiornate sulle versioni supportate, consultare
+<block ref="efe4f421015684342bb5b0bd0175a5d9" category="inline-link-rx"></block>.</block>
+  <block id="728312abb176d22bc268d1d6b543873b" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo Get-Help _command_name_. In alternativa, fare riferimento alla<block ref="0d220534fc77832a0dbc95366d6cfa0d" category="inline-link-rx"></block></block>
+  <block id="2c9ac50929ec7977214fdf241525d00e" category="paragraph"><block ref="17e4ab70f92d63f82ca1960c750c9db9" category="inline-link-rx"></block></block>
+  <block id="4d77d623d198675df7c3111f7300dabc" category="paragraph">È inoltre possibile utilizzare i cmdlet PowerShell manualmente o negli script per eseguire operazioni di backup, ripristino e clonazione. La guida in linea del cmdlet di SnapCenter e le informazioni di riferimento del cmdlet contengono ulteriori informazioni sui cmdlet di PowerShell.
+<block ref="e34908225859e3fb9e8c1d7692e49df3" category="inline-link-rx"></block>.</block>
+  <block id="deea3f8b34edb1c0cdb33001b691b29b" category="paragraph">Per informazioni aggiornate sulle versioni supportate, consultare<block ref="b04e67b184528fc82164b880a0386a24" category="inline-link-rx"></block>.</block>
+  <block id="d0362d418472880a09debe390d09b150" category="paragraph"><block ref="e34908225859e3fb9e8c1d7692e49df3" category="inline-link-rx"></block>.</block>
+  <block id="468e24409a12d90dcf3099fc521ce383" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento alla<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>.</block>
+  <block id="36fecb1daf18c8eeaacbcc8cdc70f4a6" category="paragraph">ONTAP primario e secondario possono essere ONTAP FAS, AFF, All SAN Array (ASA), Select o Cloud ONTAP.</block>
+  <block id="235699c86ac4c8ad554d546bd794dded" category="paragraph">È inoltre possibile utilizzare i cmdlet PowerShell manualmente o negli script per eseguire operazioni di backup, ripristino e clonazione. Per informazioni sui cmdlet PowerShell, consultare la guida in linea del cmdlet di SnapCenter o la<block ref="0d220534fc77832a0dbc95366d6cfa0d" category="inline-link-rx"></block>.</block>
+  <block id="d21fbb2a5ce79a2a4ef0780b73023b2e" category="paragraph">Montaggi fisici e diretti NFS sugli host VM (VMDK e LUN RDM non sono supportati).</block>
+  <block id="f2fcd44a44d752e71147a39c9d5bd5e2" category="paragraph">Per informazioni sui cmdlet PowerShell, consultare la guida in linea del cmdlet di SnapCenter o la<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>.</block>
+  <block id="c2cc28b9a0f8ea19459be2208861b131" category="paragraph">È inoltre possibile utilizzare i cmdlet PowerShell manualmente o negli script per eseguire operazioni di backup, ripristino e clonazione. Per informazioni dettagliate sui cmdlet di PowerShell, consultare la guida in linea del cmdlet di SnapCenter o la<block ref="0d220534fc77832a0dbc95366d6cfa0d" category="inline-link-rx"></block></block>
+  <block id="191773f827b84a4a9d371b4ed6cf534a" category="paragraph">È inoltre possibile utilizzare i cmdlet PowerShell manualmente o negli script per eseguire operazioni di backup, ripristino e clonazione. Per informazioni dettagliate sui cmdlet di PowerShell, consultare la guida in linea del cmdlet di SnapCenter o la<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>.</block>
+  <block id="baad7b08eca760643b82b6a1c403e309" category="paragraph">Per informazioni aggiornate sulle versioni supportate, consultare<block ref="ceb473307a1c9c0409c57cc2f1dd9093" category="inline-link-rx"></block></block>
+  <block id="cb1432f64c959f89ac29353e0b97ded4" category="list-text">Se si dispone di più percorsi di dati (LIF) in SVM, SnapCenter sceglie il percorso di dati appropriato per il montaggio del volume clonato NFS. Tuttavia, se si desidera specificare un percorso dati specifico (LIF), è necessario eseguire la CLI Set-SvmPreferredDataPath.
+Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento alla<block ref="1f7a49a613b7c2dfb834cc80b3b923ce" category="inline-link-rx"></block>.</block>
+  <block id="042ef6776c0d6409f8be7afe4398f4ca" category="paragraph"><block ref="46f8644173515685cc9cd1cd5e53cb71" category="inline-link-rx"></block></block>
+  <block id="1e68684d559313b8a3db92f82d929882" category="inline-link">Avviso per SnapCenter 4.9</block>
+  <block id="7277604123451bdf3a1dab65cf93a8e7" category="paragraph"><block ref="7277604123451bdf3a1dab65cf93a8e7" category="inline-link-rx"></block></block>
+  <block id="2d1b96641aa035d797928097e07311af" category="list-text"><block ref="9db717dffc69a74b6e5198a07d217cdd" category="inline-link-rx"></block></block>
+  <block id="fdcc8adf4ca5af52ee6a896d6c06e4bc" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help _command_name_.
+In alternativa, fare riferimento alla<block ref="1f7a49a613b7c2dfb834cc80b3b923ce" category="inline-link-rx"></block>.</block>
+  <block id="9fd1d0d4c3ca44cdb6c7913ed654bee3" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help _command_name_. In alternativa, fare riferimento alla<block ref="1f7a49a613b7c2dfb834cc80b3b923ce" category="inline-link-rx"></block>.</block>
+  <block id="fd494449112b9d26ea6f4cc5792824e6" category="paragraph">Per informazioni dettagliate sui comandi UNIX, consultare<block ref="1f7a49a613b7c2dfb834cc80b3b923ce" category="inline-link-rx"></block>.</block>
+  <block id="c2d3eecc8222902d64ee2cd0f82b86d1" category="paragraph">Per informazioni aggiornate sulle versioni supportate, consultare<block ref="edf4e33682eb2c881f774af1b8b72d07" category="inline-link-rx"></block>.</block>
+  <block id="da9056355018035981c35b88e97789cd" category="paragraph">In alternativa, fare riferimento alla<block ref="1f7a49a613b7c2dfb834cc80b3b923ce" category="inline-link-rx"></block> oppure<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>.</block>
+  <block id="f2688d5a483bee7fcbd80a4e666fc088" category="inline-link">documentazione delle utility host</block>
+  <block id="8fefbd4e8dfd1fb79f89bc04af5e8001" category="paragraph">Per ulteriori informazioni, fare riferimento a.<block ref="ab48d7186c8a78dfaf0e19af923f0daf" category="inline-link-rx"></block>.</block>
+  <block id="b2ca50333c8f16c1c44e7305b05988cc" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help command_name. In alternativa, fare riferimento a.<block ref="1f7a49a613b7c2dfb834cc80b3b923ce" category="inline-link-rx"></block>.</block>
+  <block id="9e14d7c7dd3ab3786a37e704d1da780d" category="paragraph">Le configurazioni supportate con il plug-in SnapCenter per database Oracle sono elencate nella<block ref="edf4e33682eb2c881f774af1b8b72d07" category="inline-link-rx"></block>.</block>
+  <block id="95400b8283a4e34792161ec452edf43d" category="paragraph">Per informazioni aggiornate sulle versioni di Oracle supportate, consultare<block ref="edf4e33682eb2c881f774af1b8b72d07" category="inline-link-rx"></block>.</block>
+  <block id="3e377f2849c50954b22817e97f4be5ed" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help command_name. In alternativa, fare riferimento alla<block ref="1f7a49a613b7c2dfb834cc80b3b923ce" category="inline-link-rx"></block>.</block>
+  <block id="b28d9f1ff5db2142fa45bea6f649b117" category="paragraph">Il<block ref="b4ff4342b2a4373cb1c8fb0cc58e4e08" category="inline-link-rx"></block> contiene le informazioni più recenti sulle versioni supportate.</block>
+  <block id="e1dd6c35c29a524103aa4629a282857e" category="paragraph">È inoltre possibile utilizzare i cmdlet PowerShell manualmente o negli script per eseguire operazioni di backup, ripristino, ripristino, verifica e clonazione. Per informazioni dettagliate sui cmdlet di PowerShell, consultare la guida in linea del cmdlet di SnapCenter o la<block ref="0d220534fc77832a0dbc95366d6cfa0d" category="inline-link-rx"></block></block>
+  <block id="08bb62da8c2fc3e9658022558d277993" category="paragraph">Richiesto per i controller di storage FAS, AFF o All SAN Array (ASA)</block>
+  <block id="f0d7edda487dadb54e43cde1120715ec" category="paragraph">La licenza standard di SnapCenter è una licenza basata su controller ed è inclusa nel pacchetto premium. Se si dispone della licenza della suite SnapManager, si ottiene anche il diritto di licenza standard SnapCenter.
+Se si desidera installare SnapCenter in prova con storage FAS, AFF o ASA, è possibile ottenere una licenza di valutazione Premium Bundle contattando il rappresentante commerciale.</block>
+  <block id="1dd60316135a653731118d7a0c5bf3d3" category="paragraph">Per i requisiti minimi di ONTAP e del plug-in dell'applicazione, vedere<block ref="487550db215c46367b60756354cd5f0b" category="inline-link-rx"></block>.</block>
+  <block id="05c0241d0b040b2d7c0c12396071c859" category="paragraph">Per ulteriori informazioni, fare riferimento a.<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>.</block>
+  <block id="167dbde87d69902272fcb39c558cea84" category="paragraph">Per informazioni sull'esecuzione del cmdlet, consultare<block ref="0d220534fc77832a0dbc95366d6cfa0d" category="inline-link-rx"></block></block>
+  <block id="422b2423bfd889c78d7995009091684d" category="inline-link">Note sulla versione del software SnapCenter 4.9</block>
+  <block id="9dd36551629022e364cb0a7aff336059" category="paragraph">Per ulteriori informazioni, consultare<block ref="9507fa8602312b348e22d515dda17733" category="inline-link-rx"></block>.</block>
+  <block id="855469e68aebe957582edeb7405529e1" category="section-title">Comunicazione SSL bidirezionale</block>
+  <block id="b4cbac9ded897ac6c04027b59ec07fad" category="paragraph">La comunicazione SSL bidirezionale protegge la comunicazione reciproca tra il server SnapCenter e i plug-in.</block>
+  <block id="48462a95fd8685081e58f7c123971e5b" category="section-title">Panoramica dell'autenticazione basata su certificato</block>
+  <block id="dbb44863e91bacd01eafa49136b071d2" category="paragraph">L'autenticazione basata su certificato verifica l'autenticità dei rispettivi utenti che tentano di accedere all'host del plug-in SnapCenter. L'utente deve esportare il certificato del server SnapCenter senza chiave privata e importarlo nell'archivio attendibile dell'host del plug-in. L'autenticazione basata su certificato funziona solo se è attivata la funzione SSL bidirezionale.</block>
+  <block id="f6ce44442588fc16e1d7cc2d3995eff2" category="list-text">Dati presenti nei sistemi primari ONTAP FAS, AFF o All SAN Array (ASA) e replicati nei sistemi secondari ONTAP FAS, AFF o ASA</block>
+  <block id="616472bd1da01c2fe1a46ec002e57f2b" category="list-text">Dati su sistemi primari e secondari ONTAP FAS, AFF o ASA e protetti sullo storage a oggetti StorageGRID locale (utilizzando l'integrazione del backup cloud NetApp BlueXP)</block>
+  <block id="f5c37d824040662f50cbb8a32d77182d" category="list-text">Dati presenti nei sistemi primari ONTAP FAS, AFF o ASA e replicati in Cloud Volumes ONTAP</block>
+  <block id="394619b29d62ebea0cecaad9129df0ea" category="list-text">Dati su sistemi primari e secondari ONTAP FAS, AFF o ASA e protetti per lo storage di oggetti e archivi nel cloud (utilizzando l'integrazione di NetApp BlueXP Cloud Backup)</block>
+  <block id="b250098e069eb54d9e5d847baeeca541" category="paragraph">Per ulteriori informazioni sui cmdlet di Windows, vedere<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>.</block>
+  <block id="c10c466f5857ce0ebc5a5f9e3130411a" category="paragraph">Per ulteriori informazioni sui comandi UNIX, vedere<block ref="1f7a49a613b7c2dfb834cc80b3b923ce" category="inline-link-rx"></block>.</block>
+  <block id="0dfbdfeadf3f1f407a28e4f77517f070" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento alla<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block></block>
+  <block id="c4345f5845efed993a9a9299f860c4bc" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, è possibile consultare anche<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>.</block>
+  <block id="ae12fa2fb03894fe02b3d2fbdca1beb0" category="paragraph">È inoltre possibile disinstallare un plug-in da più host utilizzando il cmdlet _Uninstall-SmHostPackage_ e i parametri richiesti. Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento alla<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>.</block>
+  <block id="90969e9b7bcd66fedcf0339db7d5e13e" category="admonition">Se le DLL sono corrotte, provare a riparare il server SnapCenter o a correggere l'installazione errata.</block>
+  <block id="936de455e68556a0f0c7a945031aded0" category="admonition">Se i file NSM o di configurazione sono corrotti, è possibile disinstallare e reinstallare il server SnapCenter con la stessa versione.</block>
+  <block id="743e97989091f05772e454accc001020" category="admonition">Se la macchina virtuale è danneggiata, avviare un'altra macchina virtuale o un computer con lo stesso nome e installare il server SnapCenter con la stessa versione.</block>
+  <block id="622fbbcf746903b903f2af5462c8550a" category="cell">4.9</block>
+  <block id="f489bbbdc2405361afaf6f7380c7b943" category="admonition">Ad esempio, se si utilizza SnapCenter versione 4.6.x e si desidera eseguire l'aggiornamento alla versione 4.9, è necessario prima eseguire l'aggiornamento alla versione 4.7, quindi eseguire un aggiornamento alla versione 4.9.</block>
+  <block id="42324a0900df941e87541a0b972b834f" category="admonition">SnapCenter non supporta l'aggiunta dello stesso host (host plug-in) a SnapCenter se l'host fa già parte di un gruppo di lavoro e viene modificato in un altro dominio o viceversa.
+Se si desidera aggiungere lo stesso host, rimuovere l'host da SnapCenter e aggiungerlo di nuovo.</block>
+  <block id="ad142a8f7de376b271d4e105dbe01a9f" category="paragraph">È inoltre possibile utilizzare i cmdlet PowerShell manualmente o negli script per eseguire operazioni di backup, ripristino e clonazione. La guida in linea del cmdlet di SnapCenter o il<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block> Contiene informazioni dettagliate sui cmdlet PowerShell.</block>
+  <block id="be2aa64f1b64fb075f7467ccc849a45f" category="summary">Dal riquadro di navigazione a sinistra di SnapCenter, la dashboard offre una prima panoramica dello stato del sistema, tra cui attività di processo recenti, avvisi, riepilogo della protezione, efficienza e utilizzo dello storage, stato dei processi SnapCenter (backup, clonazione, ripristino), stato della configurazione per host cluster standalone e Windows, Numero di macchine virtuali di storage (SVM) gestite da SnapCenter e capacità di licenza.</block>
+  <block id="d688c9cc9aebf4dff18182f9dc1db990" category="admonition">Questa schermata viene visualizzata solo se si utilizzano licenze basate sulla capacità standard di SnapCenter su piattaforme Cloud Volumes ONTAP o ONTAP Select. Per le piattaforme FAS, AFF o All SAN Array (ASA), la licenza SnapCenter è basata su controller e concessa in licenza per capacità illimitata e non è richiesta alcuna licenza per capacità.</block>
+  <block id="c90d9871b4b86a10a62cd2bf2c1ea688" category="inline-link">Installare il server SnapCenter utilizzando l'installazione guidata.</block>
+  <block id="1d72d65109e6906ab81717720199491b" category="paragraph">Per personalizzare la porta, vedere<block ref="724cb62a2271057d0541cdb8153d9260" category="inline-link-rx"></block></block>
+  <block id="60f072866c2d325a151d990670aa5b4c" category="inline-link">Aggiungere host e installare il pacchetto di plug-in SnapCenter per Linux o AIX.</block>
+  <block id="ac01fd33e160c622162b42b1f7e4fe18" category="paragraph">Per personalizzare la porta, vedere<block ref="32882cfc4755cb17eefc59506f087a6f" category="inline-link-rx"></block> oppure<block ref="477bb7222f583d223b46c2b591c18bd9" category="inline-link-rx"></block></block>
+  <block id="97e62e758724ab080cbfe2799c388822" category="paragraph">Per personalizzare la porta, vedere<block ref="477bb7222f583d223b46c2b591c18bd9" category="inline-link-rx"></block></block>
+  <block id="fa9e479c30699c2d65f7d1107b28b62a" category="paragraph">Per personalizzare la porta, vedere<block ref="6bb20f223531bd59e001c776ffe35812" category="inline-link-rx"></block></block>
+  <block id="86f05f2519ccd51165ec12fde362a9fc" category="paragraph">Per informazioni dettagliate sulle applicazioni e i database supportati, vedere<block ref="0cf85a116af1f28ac715e95564ad65ab" category="inline-link-rx"></block>.</block>
+  <block id="25348d43ecb7bf51733c0d315817588a" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento a.<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>.</block>
+  <block id="fcd1a470cb019cf887869a0d9ab7787c" category="paragraph">Per ulteriori informazioni, vedere<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>.</block>
+  <block id="9e7f34933c1af065309071fd01a6cf3e" category="summary">È necessario importare il certificato CA negli host plug-in UNIX.</block>
+  <block id="cd4c2aff8d03392b1feec1e4027d56c6" category="doc">Importa certificato CA negli host plug-in UNIX</block>
+  <block id="4fb85b60b1716c8666aada43c544f696" category="list-text">È possibile gestire la password per l'archivio chiavi SPL e l'alias della coppia di chiavi firmate CA in uso.</block>
+  <block id="f251b877a40d36cc78e6fbcb8b75fe8d" category="list-text">La password per l'archivio chiavi SPL e per tutte le password alias associate della chiave privata deve essere la stessa.</block>
+  <block id="39fed6edcd2ad80043d51eea4ac3fb3d" category="list-text">È possibile recuperare la password predefinita del keystore SPL dal file di proprietà SPL. È il valore corrispondente alla chiave<block ref="6686cedf7caf3fa23512302b51634d1d" prefix=" " category="inline-code"></block>.</block>
+  <block id="cd6f5ef691756f2a57d26714b0ad1b43" category="list-text">Modificare la password del keystore:<block ref="5cc4cde4421282ffdf9f287ec3199d1f" prefix=" " category="inline-code"></block></block>
+  <block id="1655ea4e2f205b3033fbe9b39f935c1f" category="list-text">Modificare la password per tutti gli alias delle chiavi private nel keystore con la stessa password utilizzata per il keystore:<block ref="0f214e413ff651807ab38f567542e4a7" prefix=" " category="inline-code"></block></block>
+  <block id="924399f641b3ebc78e566f9306e9ea11" category="list-text">Aggiornare lo stesso per la chiave SPL_KEYSTORE_PASS-in<block ref="bffe39d676ca31b01c3709313bdb4068" prefix=" " category="inline-code"></block> file.</block>
+  <block id="818dec89e3a9e95800116c863c7f3257" category="summary">È possibile utilizzare le interfacce REST API, PowerShell e SCCLI per gestire l'MFA.</block>
+  <block id="89c22ebd87fec289f6c2e160fd092b95" category="doc">Gestisci l'autenticazione a più fattori (MFA) utilizzando REST API, PowerShell e SCCLI</block>
+  <block id="1581a31f6beda086b728beb7d06862d3" category="paragraph">L'accesso MFA è supportato da browser, REST API, PowerShell e SCCLI. MFA è supportato da un Identity Manager di ad FS. È possibile attivare MFA, disattivare MFA e configurare MFA da GUI, REST API, PowerShell e SCCLI.</block>
+  <block id="3a73e3981a7ba8d32fc8aab6930f0784" category="section-title">Impostare ad FS come OAuth/OIDC</block>
+  <block id="71e7a2b45aaeeffe8901bf0adb8f231f" category="paragraph">*Configurare ad FS utilizzando la GUI di Windows*</block>
+  <block id="e3276efb3b868c379fb1297daa582955" category="list-text">Accedere a *Server Manager Dashboard* &gt; *Tools* &gt; *ADFS Management*.</block>
+  <block id="3dde84be8e608e3cca1657d1a4a61aa8" category="list-text">Accedere a *ADFS* &gt; *gruppi di applicazioni*.</block>
+  <block id="0c63e379dc3480ef19214393710473c1" category="list-text">Fare clic con il pulsante destro del mouse su *gruppi di applicazioni*.</block>
+  <block id="7c2801a528f61a4a76655d2ae916672b" category="list-text">Selezionare *Add Application group* (Aggiungi gruppo di applicazioni) e immettere *Application Name* (Nome applicazione).</block>
+  <block id="a1774f1ec3d45594ce40159a52f20fcf" category="list-text">Selezionare *applicazione server*.</block>
+  <block id="ae830e1b94332b2a2967e3df9b29efd6" category="list-text">Copia *identificatore del client*.</block>
+  <block id="73b204993a37943caa2529c0b73708ca" category="paragraph">ID client.
+.. Aggiungere l'URL di richiamata (URL del server SnapCenter) nell'URL di reindirizzamento.
+.. Fare clic su *Avanti*.</block>
+  <block id="0b516833d66244c2a18f5a28ecd8a8d2" category="list-text">Selezionare *generate shared secret*.</block>
+  <block id="01d45a9643746b2a11be98170b561bcd" category="paragraph">Copiare il valore segreto. Questo è il segreto del cliente.
+.. Fare clic su *Avanti*.</block>
+  <block id="d7d2642eade3542b40b1bc22eb60a72b" category="list-text">Nella pagina *Riepilogo*, fare clic su *Avanti*.</block>
+  <block id="c0b429f2081a916279944b141ca665e4" category="list-text">Nella pagina *complete*, fare clic su *Close* (Chiudi).</block>
+  <block id="7079f5bc6b8601b73407e7f2c70097c9" category="list-text">Fare clic con il pulsante destro del mouse sul nuovo *Application Group* e selezionare *Properties*.</block>
+  <block id="2d0b96f166b36488970002f63a96e14b" category="list-text">Selezionare *Aggiungi applicazione* da Proprietà applicazione.</block>
+  <block id="14ddbfceec0144d23c9b11b9cddeeab2" category="list-text">Fare clic su *Aggiungi applicazione*.</block>
+  <block id="ccf372d8c65a94b93927c1ab0a3f30bf" category="paragraph">Selezionare API Web e fare clic su *Avanti*.</block>
+  <block id="538a0f9b41c92cee5a81630cc29cb755" category="list-text">Nella pagina Configura API web, inserire l'URL del server SnapCenter e l'identificativo client creati nel passaggio precedente nella sezione identificativo.</block>
+  <block id="6c0e9c32a8ddba2764de93ea7e5dda11" category="list-text">Nella pagina *Choose Access Control Policy* (Scegli policy di controllo dell'accesso), selezionare la policy di controllo in base ai requisiti (ad esempio, Permit Everyone and Request MFA) e fare clic su *Next* (Avanti).</block>
+  <block id="6a81abdd8b066670310eff04cd351332" category="list-text">Nella pagina *Configure Application Permission* (Configura autorizzazione applicazione), per impostazione predefinita openid è selezionato come ambito, fare clic su *Next* (Avanti).</block>
+  <block id="8c67633e48c25a85b4941ab78ebef0a8" category="list-text">Nella pagina *Proprietà applicazione di esempio*, fare clic su *OK*.</block>
+  <block id="d514c3e3b1721e76833491b2bb66d66a" category="list-text">Token JWT emesso da un server di autorizzazione (ad FS) e destinato ad essere utilizzato dalla risorsa.</block>
+  <block id="52ee8e0018503df9e255a46d05fb2de1" category="paragraph">La richiesta "aud" o di pubblico di questo token deve corrispondere all'identificatore della risorsa o dell'API Web.</block>
+  <block id="fc37d7cd447d26f5bccc8469a726135b" category="list-text">Modificare l'API Web selezionata e verificare che l'URL di richiamata (URL del server SnapCenter) e l'identificatore del client siano stati aggiunti correttamente.</block>
+  <block id="6ba622874fc69e389e6e7eb8da931219" category="paragraph">Configurare OpenID Connect in modo da fornire un nome utente come rivendicato.</block>
+  <block id="efcf248cf2c6ef224b807f91ad3bce35" category="list-text">Aprire lo strumento *ad FS Management* situato nel menu *Tools* in alto a destra di Server Manager.</block>
+  <block id="65d4579366befa38c489e286f3e6c120" category="list-text">Selezionare la cartella *Application Groups* dalla barra laterale sinistra.</block>
+  <block id="7fa6ebaaed8eb7dabef10f70b8870e4a" category="list-text">Selezionare l'API Web e fare clic su *EDIT*.</block>
+  <block id="338c7b898d012ef61847ef911c567c65" category="list-text">Accedere alla scheda Issuance Transform Rules (regole di trasformazione emissione)</block>
+  <block id="541b410bf2e70562e4ae98527a156f68" category="list-text">Fare clic su *Add Rule* (Aggiungi regola).</block>
+  <block id="f8661b90f0926221c21e8263cee02aa1" category="list-text">Selezionare *Send LDAP Attributes as Claims* (Invia attributi LDAP come richieste di rimborso) nell'elenco a discesa Claim Rule template (</block>
+  <block id="4a6c05eca54a33a0a5a13fb3cf9204a3" category="list-text">Inserire il nome *Claim rule*.</block>
+  <block id="3b5ff64a54de1e14def777dd1d257ac2" category="list-text">Selezionare *Active Directory* nell'elenco a discesa dell'archivio degli attributi.</block>
+  <block id="bd749a86c6bf05ad26d14efd170dd0d7" category="list-text">Selezionare *User-Principal-Name* nel menu a discesa *LDAP Attribute* e *UPN* nel menu a discesa o*utgoing Claim Type*.</block>
+  <block id="a302e49d30b6db61b854ec9e6bf3b677" category="section-title">Creare un gruppo di applicazioni utilizzando i comandi PowerShell</block>
+  <block id="f9dddf9377938c22618b3003017321a2" category="paragraph">È possibile creare il gruppo di applicazioni, l'API Web e aggiungere l'ambito e le attestazioni utilizzando i comandi PowerShell. Questi comandi sono disponibili in formato script automatizzato. Per ulteriori informazioni, vedere &lt;link to KB article&gt;.</block>
+  <block id="71a5f427ba89ee55d0435f8396248cf7" category="list-text">Creare il nuovo gruppo di applicazioni in ad FS utilizzando la seguente comand.</block>
+  <block id="effd4fe85d3069af0461ff92b80cec0f" category="paragraph"><block ref="2452e7f7dff2cd0747cc69895bbba59b" prefix="" category="inline-code"></block></block>
+  <block id="76dfdc79cb75841a2fafd4c4ac13efb0" category="paragraph"><block ref="f7df16f07ada041b6e1cd993b03d9b3d" prefix="" category="inline-code"></block> nome del gruppo di applicazioni</block>
+  <block id="1c5f35f56484784533e57eb07d402ca2" category="paragraph"><block ref="fd6382465093c54720456ca25383ed9f" prefix="" category="inline-code"></block> URL valido per il reindirizzamento dopo l'autorizzazione</block>
+  <block id="81ab980f6f637737c82cee958b22f73e" category="list-text">Creare l'applicazione server di ad FS e generare il segreto del client.</block>
+  <block id="93bd5e5b0aafcf9c06cdbb828d4b39f5" category="paragraph"><block ref="230e538f596ac4db272e7babda982bbb" prefix="" category="inline-code"></block><block ref="6571edfee1d554a182330ca623062726" prefix=" " category="inline-code"></block></block>
+  <block id="7ffd9420d466164e018e6e571aceaebf" category="list-text">Creare l'applicazione API Web ADFS e configurare il nome del criterio da utilizzare.</block>
+  <block id="506ba68b6a028c1fa69a31f7a8a60cca" category="paragraph"><block ref="de3afa7e1b73a57c50b139616b3e1320" prefix="" category="inline-code"></block></block>
+  <block id="c2df0a8e3b0d86082c88ad09b82c16af" category="paragraph"><block ref="f2c84752348998fd5ac3a333e8ed2998" prefix="" category="inline-code"></block></block>
+  <block id="167f6c3d677f4e1f0f35886b5fc2dcc5" category="paragraph"><block ref="5494219b5c16e27caf245311e5158a66" prefix="" category="inline-code"></block></block>
+  <block id="cf7d693e17060c9c86638e2e5bdc5ece" category="list-text">Ottenere l'ID client e il client secret dall'output dei seguenti comandi perché vengono visualizzati una sola volta.</block>
+  <block id="aba679a144169ad02eb938628e9ef054" category="paragraph"><block ref="d22c6b58e4e2a4c21c6f2635b9d8ba1f" prefix="" category="inline-code"></block></block>
+  <block id="47169aa5ecb2645e6777910d587d3d09" category="paragraph"><block ref="ad037804ee8c2b64ca62c113e891ece3" prefix="" category="inline-code"></block></block>
+  <block id="06a4a40bf160f305c779e798d79a7f24" category="list-text">Concedere all'applicazione ad FS le autorizzazioni Allatclaims e openid.</block>
+  <block id="ead5bce8c2e4ca84f09904c8c14f0ec4" category="paragraph"><block ref="f8c4321e386b47717c4dc96429e72bde" prefix="" category="inline-code"></block></block>
+  <block id="6be47c54d059f36a8695ca30fa7673bc" category="paragraph"><block ref="0a2f8b60bb6ffaced5ed595bf6a348ba" prefix="" category="inline-code"></block></block>
+  <block id="39849480e39a3265d94d614c2e08e714" category="paragraph"><block ref="580fa2ab4abdeac5824a58ebdef19a0e" prefix="" category="inline-code"></block></block>
+  <block id="c2fb63f161c79290aed78fb3759ef10c" category="paragraph"><block ref="003bdce8b7faf45821c5545774f258f2" prefix="" category="inline-code"></block></block>
+  <block id="9013f46d3c2288e8f6106c8e187d4f15" category="paragraph"><block ref="26fd17c1b3e90d79cfb2af09c0fe649b" prefix="" category="inline-code"></block></block>
+  <block id="ecd894c11de9ae0f0d7db8499de582f9" category="paragraph"><block ref="7cecdc877899bed7b874640295b9784b" prefix="" category="inline-code"></block></block>
+  <block id="88e581eef891e2ab0c422bd3fb755dd8" category="paragraph"><block ref="790f99d7b76f5dd0ac3f2da85b31133f" prefix="" category="inline-code"></block></block>
+  <block id="6ac6b2573a0afaa294abca3b56833026" category="paragraph"><block ref="9caec2fbe7b449449a799e62c9180439" prefix="" category="inline-code"></block></block>
+  <block id="1b7306494632f5ff50e7cc2d79905203" category="list-text">Annotare il file di regole di trasformazione.</block>
+  <block id="b6f3adc060604bd1cc4487943c7a11c2" category="paragraph"><block ref="1ad0d7e8948f1cad46a4bbe106c6129a" prefix="" category="inline-code"></block><block ref="b8f1e5545d792f3b10a5af5ca827cc38" prefix=" " category="inline-code"></block></block>
+  <block id="ab67837984a949e88c043906e7b25fd2" category="list-text">Assegnare un nome all'applicazione API Web e definirne le regole di conversione mediante un file esterno.</block>
+  <block id="b92fb7230c859b37ee03fa8d3684c33b" category="paragraph"><block ref="edb2f36eb96cad8825e3fe8e00086c5f" prefix="" category="inline-code"></block></block>
+  <block id="6a245b371c7859f21feabc3f632f1621" category="paragraph"><block ref="9edf8b0f6280adcda6151863ad826c0c" prefix="" category="inline-code"></block></block>
+  <block id="5d4629dd80b41db061655deffff008eb" category="paragraph"><block ref="b293cd0c99a2fa48a3e3ee3748ec5051" prefix="" category="inline-code"></block></block>
+  <block id="579b93366a2829fd18732da04d0fdbe1" category="section-title">Aggiornare il tempo di scadenza del token di accesso</block>
+  <block id="3b9de17278be2458e181a55e8c1eb515" category="paragraph">È possibile aggiornare il tempo di scadenza del token di accesso utilizzando il comando PowerShell.</block>
+  <block id="35c8f31cfd0b6cd8740d3cb81c489245" category="list-text">Un token di accesso può essere utilizzato solo per una combinazione specifica di utente, client e risorsa. I token di accesso non possono essere revocati e sono validi fino alla scadenza.</block>
+  <block id="2312767c66781a9bdc701b9c7b82df17" category="list-text">Per impostazione predefinita, la scadenza di un token di accesso è di 60 minuti.  Questo tempo di scadenza minimo è sufficiente e scalabile. Devi fornire un valore sufficiente per evitare qualsiasi lavoro business-critical in corso.</block>
+  <block id="2c46b8d9261f648b8c453ac85f992aac" category="paragraph">Per aggiornare il tempo di scadenza del token di accesso per un gruppo di applicazioni WebAPI, utilizzare il seguente comando nel server ad FS.</block>
+  <block id="48277654df4a7d06db502d9ee3441eab" category="paragraph">+<block ref="25a85a835bbab6ed91f289f8fab49d58" prefix=" " category="inline-code"></block></block>
+  <block id="e0db9ccb1d549e7d636b1618bdf3b366" category="section-title">Ottenere il token del bearer da ad FS</block>
+  <block id="eaaf070da77a2d2b6e6cc5d8be749e4a" category="paragraph">Inserire i parametri indicati di seguito in qualsiasi client REST (come Postman) e richiedere di inserire le credenziali dell'utente. Inoltre, per ottenere il token del bearer, è necessario immettere l'autenticazione del secondo fattore (qualcosa che si possiede e qualcosa che si è).</block>
+  <block id="23d1bef67f8eea088878b8454d14770a" category="paragraph">+
+La validità del token bearer è configurabile dal server ad FS per ogni applicazione e il periodo di validità predefinito è di 60 minuti.</block>
+  <block id="6f16a5f8ff5d75ab84c018adacdfcbb7" category="cell">Campo</block>
+  <block id="47eeda83b3a3efa0c20275db90a00ecc" category="paragraph">Tipo di concessione</block>
+  <block id="980ee3bcda7f62fa056fb579ec70fb93" category="paragraph">Codice di autorizzazione</block>
+  <block id="971aa940ab12731eefcaf9864ea239c4" category="paragraph">URL di richiamata</block>
+  <block id="6ef0a7cb774733424019553bf5903d98" category="paragraph">Se non si dispone di un URL di richiamata, immettere l'URL di base dell'applicazione.</block>
+  <block id="8f08428f87205cf8cd9ff4f01fe27e33" category="paragraph">URL di autenticazione</block>
+  <block id="0d0e80190e0b96ec315641c03a6cbdbe" category="paragraph">[adfs-domain-name]/adfs/oauth2/authorize</block>
+  <block id="e51f2159e645644f251ff8a8b0d07894" category="paragraph">URL token di accesso</block>
+  <block id="7453cd43827b5e2bd7d599fbf9ea3f26" category="paragraph">[adfs-domain-name]/adfs/oauth2/token</block>
+  <block id="76525f0f34b48475e5ca33f71d296f3b" category="paragraph">ID client</block>
+  <block id="da511a650288cfb795194e8d04b28033" category="paragraph">Inserire l'ID del client ad FS</block>
+  <block id="1b4739e491387ef5d8a546854308e5fe" category="paragraph">Segreto del client</block>
+  <block id="6b076b0a62325697a1417b84176a704a" category="paragraph">Inserire il segreto del client ad FS</block>
+  <block id="5d113f2038d289f391614c39043629e8" category="paragraph">Scopo</block>
+  <block id="10d822cbb5b2266b331cdefd7410c831" category="paragraph">OpenID</block>
+  <block id="d9eee0506c2495d733480dc1fc801993" category="paragraph">Autenticazione del client</block>
+  <block id="b76827cae3bbfa9b3f16f50aaeeb8b94" category="paragraph">Invia come intestazione AUTH di base</block>
+  <block id="5cd6f358fe0cd7802054f95932163e71" category="paragraph">Nella scheda *Opzioni avanzate*, aggiungere il campo risorsa con lo stesso valore dell'URL di richiamata, che viene fornito come valore "aud" nel token JWT.</block>
+  <block id="434b0b2d4791e06ef2ec9797163c03cc" category="paragraph">Per informazioni aggiornate sulle versioni supportate, vedere
+<block ref="efe4f421015684342bb5b0bd0175a5d9" category="inline-link-rx"></block>.</block>
+  <block id="28f9c2d1c67ea659588c7bfc2680e96d" category="summary">Se si utilizzano i controller di storage FAS, AFF o ASA, è necessaria una licenza basata su controller standard SnapCenter.</block>
+  <block id="e6c51d0ec467f9742ef4d9ed2bfd5390" category="paragraph">È necessaria una licenza basata su controller standard SnapCenter se si utilizzano controller di storage FAS, AFF o All SAN Array (ASA).</block>
+  <block id="6b22646455acfe9efc53d4f10b58a5fe" category="list-text">È possibile aggiungerlo direttamente al controller di storage FAS, AFF o ASA utilizzando Gestione di sistema di ONTAP o la riga di comando del cluster di storage</block>
+  <block id="4675b365d16842b130752bb3fa27614d" category="paragraph">È possibile utilizzare l'interfaccia grafica di SnapCenter per verificare se una licenza della suite SnapManager è installata su sistemi di storage primari FAS, AFF o ASA e per identificare i sistemi di storage che potrebbero richiedere licenze della suite SnapManager. Le licenze della suite SnapManager sono valide solo per SVM FAS, AFF e ASA o per cluster su sistemi storage primari.</block>
+  <block id="bf8a4dfe438069855e34bbd2f8ec59d7" category="list-text"><block ref="1b6b7d2df953b943aed63061cd428e2b" category="inline-image-macro-rx" type="image"></block> Indica che una licenza della suite SnapManager è installata su un sistema di storage primario FAS, AFF o ASA.</block>
+  <block id="982c80480700680b3b8dc4d7d03053af" category="list-text"><block ref="1ca20f925112adf63235e58f0e4483cd" category="inline-image-macro-rx" type="image"></block> Indica che la licenza della suite SnapManager non è installata su un sistema di storage primario FAS, AFF o ASA.</block>
+  <block id="3585befdeb665365a6ab248a97882128" category="paragraph">È possibile utilizzare la riga di comando ONTAP per visualizzare tutte le licenze installate sul controller. È necessario essere un amministratore del cluster nel sistema FAS, AFF o ASA.</block>
+  <block id="aad4d9def4b52672ae7f25a26b4f8fde" category="paragraph">Per recuperare il numero di serie della licenza basata su controller, è necessario disporre del numero di serie del controller. È possibile recuperare il numero di serie del controller utilizzando la riga di comando ONTAP. È necessario essere un amministratore del cluster nel sistema FAS, AFF o ASA.</block>
+  <block id="c15b837a96c2882e6964418dadf776c1" category="paragraph">È possibile utilizzare la riga di comando ONTAP per aggiungere una licenza basata su controller SnapCenter quando si utilizzano sistemi FAS, AFF o ASA e si dispone di una licenza SnapCenter o SnapManagerSuite.</block>
+  <block id="a2e17d154f1b1314694615de5b51003c" category="list-text">È necessario essere un amministratore del cluster nel sistema FAS, AFF o ASA.</block>
+  <block id="37ee5b6fcdef2d12a533711b6917c5d7" category="paragraph">Se si desidera installare SnapCenter in prova con storage FAS, AFF o ASA, è possibile ottenere una licenza di valutazione Premium Bundle da installare sul controller.</block>
+  <block id="de07b96d6e0726ed58c0b7506fed6a37" category="paragraph">Per informazioni sui cmdlet, vedere<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>.</block>
+  <block id="cfee889da941f2dce080477db87781ff" category="summary">Per utilizzare il certificato CA del server SnapCenter esportato, è necessario importare il certificato correlato negli host dei plug-in di SnapCenter</block>
+  <block id="79f05475f093d2d51a688c417ae60fbe" category="doc">Importa certificato CA (Certificate Authority) negli host plug-in di Windows</block>
+  <block id="670f279a24f028c7742ed1c370d5c72e" category="paragraph">Per utilizzare il certificato della CA del server SnapCenter esportato, è necessario importare il certificato correlato negli host dei plug-in di SnapCenter utilizzando la console di gestione Microsoft (MMC).</block>
+  <block id="fa8730c22e61e95ad832838dc73fe14a" category="list-text">Nella finestra Snap-in certificati, selezionare l'opzione *computer account*, quindi fare clic su *fine*.</block>
+  <block id="cd8d705b0f06c8e8e3aa612c41c7f61c" category="list-text">Fare clic su *Console root* &gt; *certificati - computer locale* &gt; *personale* &gt; *certificati*.</block>
+  <block id="a3116b0cbdcd0490e1b76e0b508654c0" category="list-text">Fare clic con il pulsante destro del mouse sulla cartella "Personal", quindi selezionare *All Tasks* &gt; *Import* per avviare l'importazione guidata.</block>
+  <block id="a2aa1e8ade9f7ad4c7098c0604405e40" category="list-text">Eseguire le seguenti operazioni nella procedura guidata.</block>
+  <block id="7fbc991c0cd78ec9e53ea32a7f734edc" category="cell">Per questa opzione...</block>
+  <block id="4337f2520c18528cac9f46239191f22b" category="paragraph">Ubicazione del negozio</block>
+  <block id="87816aec71397bdd3b7be882c2d5cce9" category="paragraph">File da importare</block>
+  <block id="eb42cceb0a1f665d63e0befaa87d431d" category="paragraph">Selezionare il certificato del server SnapCenter che termina con l'estensione .cer.</block>
+  <block id="7089d514c1aad028e72fc82813e3f577" category="paragraph">Archivio certificati</block>
+  <block id="84319e08c219b24c0aea4c8ffe018f51" category="summary">È necessario configurare i certificati root o intermedi in SPL trust-store.</block>
+  <block id="0cfab792315db1ad2f463e132e69b4a6" category="paragraph">È necessario configurare i certificati root o intermedi in SPL trust-store. Aggiungere il certificato CA principale e i certificati CA intermedi.</block>
+  <block id="905ef8ad10bb90ea340ba32bba988377" category="list-text">Accedere alla cartella contenente il keystore SPL:<block ref="0dc0b955539cf9119a9695bb3312c8cb" prefix=" " category="inline-code"></block>.</block>
+  <block id="27ee396e4bda631c1af9dc588058bf56" category="list-text">Individuare il file<block ref="6115b18a91e4ff7f210d8477232e1265" prefix=" " category="inline-code"></block>.</block>
+  <block id="4e499dabbe17315495b9e3a0f5b1738c" category="list-text">Elencare i certificati aggiunti nel keystore:<block ref="b259dcec4646370e1cccb265b20280d5" prefix=" " category="inline-code"></block></block>
+  <block id="addc6c4da947a2faf3346483c36cc20f" category="list-text">Aggiungere un certificato root o intermedio:<block ref="8d0582b8c424b58d9c8f51cc38658f37" prefix=" " category="inline-code"></block><block ref="6115b18a91e4ff7f210d8477232e1265" prefix=" " category="inline-code"></block></block>
+  <block id="461dcbe77c235d4b349951a40a48663d" category="paragraph">È necessario configurare la coppia di chiavi firmate della CA in SPL trust-store.</block>
+  <block id="b4251f71507d4095c0a9cfff762ad0ca" category="list-text">Accedere alla cartella contenente il keystore della SPL<block ref="0dc0b955539cf9119a9695bb3312c8cb" prefix=" " category="inline-code"></block>.</block>
+  <block id="d6b1eec98d8406c6651f4a58367c256d" category="list-text">Individuare il file<block ref="caf10a822a90445db9bea66b4e029b45" prefix=" " category="inline-code"></block>.</block>
+  <block id="96dc8b7d0a4c6b5bd41944fe5663bf60" category="list-text">Aggiungere il certificato CA con chiave pubblica e privata.<block ref="e9b69c6ce232cd969a1de69b5b7ad771" prefix=" " category="inline-code"></block><block ref="a65f672bcb7e0253084a7b9ff079afe1" prefix=" " category="inline-code"></block></block>
+  <block id="e6a1638efd12b26203266a3703ea43b9" category="list-text">Elencare i certificati aggiunti nel keystore.<block ref="b259dcec4646370e1cccb265b20280d5" prefix=" " category="inline-code"></block></block>
+  <block id="700c0e3cd805b39f38500709f167c71d" category="paragraph">Default SPL keystore password è il valore della chiave SPL_KEYSTORE_PASS-in<block ref="052018eb7dd6b65a045cb7f85e1780e6" prefix=" " category="inline-code"></block> file.</block>
+  <block id="d761fb7307cbc2f607e4758bcd00ec1b" category="paragraph"><block ref="4d2ec0329a8188b155850e1ab0ca438a" prefix="" category="inline-code"></block></block>
+  <block id="45c7dee3ac562bb759cb41672ab95f30" category="list-text">Se il nome alias nel certificato CA è lungo e contiene spazi o caratteri speciali ("*",","), modificare il nome alias con un nome semplice:<block ref="f5d8ae119d7dc66fee2b1cca4d124984" prefix=" " category="inline-code"></block></block>
+  <block id="b1cbd0b7f209604aeb80671e8db6bd88" category="list-text">Configurare il nome alias dal keystore in<block ref="052018eb7dd6b65a045cb7f85e1780e6" prefix=" " category="inline-code"></block> file.
+Aggiornare questo valore con la chiave SPL_CERTIFICATE_ALIAS.</block>
+  <block id="29d2af31d571b8f6cfb156d1bb0ae3dd" category="paragraph">Oltre a utilizzare l'interfaccia grafica di SnapCenter, è possibile utilizzare i cmdlet PowerShell per creare script per eseguire operazioni di configurazione, backup e ripristino. Alcuni cmdlet potrebbero essere stati modificati con ogni release di SnapCenter. Il<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block> contiene i dettagli.</block>
+  <block id="9764e4439aa058bff629704e2e23fd7b" category="paragraph">Per informazioni aggiornate sulle versioni supportate, vedere<block ref="afaa5c2ff662f28d0c8c3429effcad87" category="inline-link-rx"></block>.</block>
+  <block id="9d31f93b6415c6dc4d47047067008551" category="summary">È necessario esportare i certificati CA dal server SnapCenter agli host plug-in.</block>
+  <block id="5bdc9dfe0790a57a6fe905d1fb1e3eae" category="doc">Esportare i certificati dell'autorità di certificazione (CA) dal server SnapCenter</block>
+  <block id="d061d73c2d594c5f93d58cd0750abfd2" category="paragraph">È necessario esportare i certificati CA dal server SnapCenter agli host plug-in utilizzando la console di gestione Microsoft.</block>
+  <block id="ebbc012954ef860bf051c32d8c46da93" category="paragraph">Il protocollo SSL bidirezionale dovrebbe essere stato configurato.</block>
+  <block id="5060f5f92f4ce202b37a1124cf8e909e" category="list-text">Fare clic con il pulsante destro del mouse sul certificato CA procurato, utilizzato per il server SnapCenter, quindi selezionare *tutte le attività* &gt; *Esporta* per avviare l'esportazione guidata.</block>
+  <block id="da6ac4c12f48438b90c09b8262c1207e" category="paragraph">Selezionare *No, non esportare la chiave privata*, quindi fare clic su *Avanti*.</block>
+  <block id="76348cf9ddb92acc65440418b185db2d" category="paragraph">Nome file</block>
+  <block id="00d7eaf591094c1fc261342becc7f305" category="paragraph">Fare clic su *Browse* (Sfoglia) e specificare il percorso del file per il salvataggio del certificato, quindi fare clic su *Next* (Avanti).</block>
+  <block id="6071c6433af7f31e998f8d748728b519" category="admonition">L'autenticazione basata su certificato non è supportata per le configurazioni SnapCenter ha e il plug-in SnapCenter per VMware vSphere.</block>
+  <block id="e9f8485c0c52ec084887222481b5cb66" category="paragraph">Richiesto per FAS, AFF, All SAN Array (ASA)</block>
+  <block id="8b0745c430b04c61ef3867818f227301" category="paragraph">La licenza standard di SnapCenter è una licenza basata su controller ed è inclusa nel pacchetto premium. Se si dispone della licenza della suite SnapManager, si ottiene anche il diritto di licenza standard SnapCenter. Se si desidera installare SnapCenter in prova con storage FAS, AFF o ASA, è possibile ottenere una licenza di valutazione Premium Bundle contattando il rappresentante commerciale.</block>
+  <block id="8db273592868b7d940261fe8347b32b4" category="inline-link-macro">CPC-00507</block>
+  <block id="802a2285a60e079b52f32ba2c3140d0d" category="paragraph">Il ripristino di una singola casella postale di NetApp® è giunto alla fine della disponibilità (EOA) il 12 maggio 2023. Per ulteriori informazioni, fare riferimento a. <block ref="5a98ce97c5b40ecef6f220dc57d4f14a" category="inline-link-macro-rx"></block>. NetApp continuerà a supportare i clienti che hanno acquistato capacità, manutenzione e supporto della casella postale attraverso i codici marketing introdotti il 24 giugno 2020, per tutta la durata del diritto al supporto.</block>
+  <block id="03da3b5726a1efd6df1fc511966c89a6" category="paragraph">Il servizio di ripristino di una singola casella postale di NetApp è un prodotto partner fornito da Ontrack. Ontrack PowerControl offre funzionalità simili a quelle del ripristino di una singola casella postale di NetApp. I clienti possono acquistare nuove licenze software Ontrack PowerControls e rinnovi di assistenza e manutenzione Ontrack PowerControls da Ontrack (fino al licensingteam@ontrack.com) per il ripristino granulare della mailbox dopo la data EOA del 12 maggio 2023.</block>
+  <block id="00555be23f4d41375bb46107e09eb1cb" category="paragraph">Per informazioni aggiornate sulle versioni supportate, vedere<block ref="0cf85a116af1f28ac715e95564ad65ab" category="inline-link-rx"></block>.</block>
+  <block id="f58587d65108da4c76429348beba1493" category="summary">È necessario attivare l'autenticazione basata su certificato per il server SnapCenter e gli host plug-in Windows.</block>
+  <block id="ac91c641781bd7c7379113e123abc706" category="doc">Abilitare l'autenticazione basata su certificato</block>
+  <block id="2deb2b431122c2428813248c5cc7e3cf" category="paragraph">Per abilitare l'autenticazione basata su certificato per il server SnapCenter e gli host plug-in Windows, eseguire il seguente cmdlet PowerShell.  Per gli host plug-in Linux, l'autenticazione basata su certificato viene attivata quando si attiva il protocollo SSL bidirezionale.</block>
+  <block id="012d451c2966c8058914f66afd3ff9be" category="list-text">Per attivare l'autenticazione basata su certificati client:</block>
+  <block id="c7414a7d4890863a34509bebe1bd9225" category="paragraph"><block ref="a578dd94961bb2b0ce287d29a112740b" prefix="" category="inline-code"></block><block ref="e685e5103f8306754d61ec1a0da15686" prefix=" " category="inline-code"></block><block ref="a71cdd4660400fab236be52b25300411" prefix=" " category="inline-code"></block></block>
+  <block id="8b5db05d124326542535790d2a1a0411" category="list-text">Per disattivare l'autenticazione basata su certificato del client:</block>
+  <block id="b5cfca9930b60b6f87f38ad0e8d31765" category="paragraph"><block ref="ee29fb805334372351c3e459eaf40ac3" prefix="" category="inline-code"></block><block ref="e685e5103f8306754d61ec1a0da15686" prefix=" " category="inline-code"></block><block ref="b1b73520f4b4ea4d2583cc59029bbe0d" prefix=" " category="inline-code"></block></block>
+  <block id="1a415d60c0654233b8e03281525e6b18" category="admonition">I nomi dei sistemi di storage, che non includono il nome di dominio, devono contenere un massimo di 15 caratteri e devono essere risolutibili. Per creare connessioni al sistema di storage con nomi che hanno più di 15 caratteri, è possibile utilizzare il cmdlet Add-SmStorageConnectionPowerShell.</block>
+  <block id="542082ddc576a51ede49e11ac68a28ff" category="paragraph">Se è stata aggiunta una SVM in SnapCenter, l'utente deve selezionare manualmente il tipo di piattaforma dal menu a discesa.</block>
+  <block id="cff41786c5502cd7deaf78557f919f0f" category="admonition">Se i sistemi di storage FAS o AFF sono stati aggiornati a tutti gli array SAN (ASA), è necessario aggiornare la connessione di storage nel server SnapCenter in modo che rifletta il nuovo tipo di storage in SnapCenter.</block>
+  <block id="440355fc57f515aab537d229da6473e3" category="paragraph">È possibile gestire la funzionalità di autenticazione multifattore (MFA) nel server del servizio di federazione Active Directory (ad FS) e nel server SnapCenter.</block>
+  <block id="c8010626798701f4dd6505ffd8c7bab3" category="paragraph">È possibile attivare la funzionalità MFA per il server SnapCenter utilizzando i comandi PowerShell.</block>
+  <block id="e99272ccf624910f1086824371019fac" category="list-text">Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo<block ref="b306feeed6ddda97d08ef1f2a0ba62d9" prefix=" " category="inline-code"></block>. In alternativa, è possibile vedere anche<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>.</block>
+  <block id="65b2ac31e28fbe23df3871ad716e40c2" category="list-text">Attivare MFA per il server SnapCenter utilizzando<block ref="2eb01e8a95b53a60b13860ce5cac5104" prefix=" " category="inline-code"></block> cmdlet.</block>
+  <block id="b73f485c1067e4b3168b292142131855" category="inline-link">I tentativi di accesso simultanei in più schede mostrano un errore MFA</block>
+  <block id="9e4f9470d66f1730ad7525f9043126be" category="paragraph">Per informazioni sulla risoluzione dei problemi, fare riferimento a.<block ref="361c774ee5cb22be42ef8ea152ed45ad" category="inline-link-rx"></block>.</block>
+  <block id="b3844eddf099b8f80b95a7c68ca22ae5" category="list-text">Disattivare l'MFA e pulire i file di configurazione creati al momento dell'attivazione dell'MFA utilizzando<block ref="2eb01e8a95b53a60b13860ce5cac5104" prefix=" " category="inline-code"></block> cmdlet.</block>
+  <block id="b31ad42cda3bd1bc7787fd71d2a175bf" category="summary">È possibile utilizzare le interfacce REST API, PowerShell e SCCLI per configurare MFA.</block>
+  <block id="0699cec0b36b38a01a2c7453df793209" category="doc">Configurare MFA nel server SnapCenter utilizzando PowerShell, SCCLI e REST API</block>
+  <block id="c8fc2d751bc403a1f589d18155e0a550" category="paragraph">È possibile configurare MFA nel server SnapCenter utilizzando PowerShell, SCCLI e REST API.</block>
+  <block id="cb3e4d60610a204d94495a98c6ffac79" category="section-title">Autenticazione SnapCenter MFA CLI</block>
+  <block id="7edc1c8e2fdc93487750d1362b410b6c" category="paragraph">In PowerShell e SCCLI, il cmdlet esistente (Open-SmConnection) viene esteso con un altro campo chiamato "AccessToken" per utilizzare il token bearer per autenticare l'utente.</block>
+  <block id="1d9604a44c9689bb1bcf34e2ce47c37b" category="paragraph"><block ref="d20b3e5a41b2760d316550ac141b3e0e" prefix="" category="inline-code"></block></block>
+  <block id="023966dffc4c30c1f952b6637d58f857" category="paragraph">Una volta eseguito il cmdlet sopra indicato, viene creata una sessione per consentire al rispettivo utente di eseguire ulteriori cmdlet SnapCenter.</block>
+  <block id="6c62d38fcd95d5bf89665ae6b17139b8" category="section-title">Autenticazione API REST MFA SnapCenter</block>
+  <block id="67eceb5481c462d5924546f299b0a1c1" category="paragraph">Utilizzare il token bearer nel formato _Authorization=bearer &lt;access token&gt;_ nel client API REST (come Postman o swagger) e citare il nome del ruolo dell'utente nell'intestazione per ottenere una risposta corretta da SnapCenter.</block>
+  <block id="55798c01a43f2906324acf8c55ac7c10" category="section-title">Flusso di lavoro API REST MFA</block>
+  <block id="610e0c006ec739e832da1290f901d415" category="paragraph">Quando MFA è configurato con ad FS, è necessario eseguire l'autenticazione utilizzando un token di accesso (bearer) per accedere all'applicazione SnapCenter da qualsiasi API REST.</block>
+  <block id="1ec4b028e69b0809aad6ae07d23f81a8" category="list-text">Puoi utilizzare qualsiasi client REST come Postman, Swagger UI o FireCamp.</block>
+  <block id="085753aa54b53249d94c1b70253908ea" category="list-text">Ottenere un token di accesso e utilizzarlo per autenticare le richieste successive (API REST SnapCenter) per eseguire qualsiasi operazione.</block>
+  <block id="30402026ecb92d997eb633513cf165c7" category="paragraph">*Per l'autenticazione tramite ad FS MFA*</block>
+  <block id="b4caeeef0442908fa1e6bc7dc8e948d3" category="list-text">Configurare il client REST per chiamare l'endpoint ad FS per ottenere il token di accesso.</block>
+  <block id="8b7413f8fc2ebb7eb068106e7dba6c41" category="paragraph">Quando si preme il pulsante per ottenere un token di accesso per un'applicazione, si viene reindirizzati alla pagina SSO di ad FS, dove è necessario fornire le credenziali ad e autenticare con MFA.
+1. Nella pagina ad FS SSO, digitare il nome utente o l'indirizzo e-mail nella casella di testo Nome utente.</block>
+  <block id="84ad1465ceaf30e69cd9ad61924379dc" category="paragraph">+
+I nomi utente devono essere formattati come utente@dominio o dominio utente.</block>
+  <block id="677cc1d6cbf8c114fd23938f25b7bdd6" category="list-text">Digitare la password nella casella di testo Password.</block>
+  <block id="52352d978b8e538f26067965a59f6fc7" category="list-text">Fare clic su *Log in* (Accedi).</block>
+  <block id="ea89b06186ff53b6b9cb9238b1001fc1" category="list-text">Nella sezione *Opzioni di accesso*, selezionare un'opzione di autenticazione e autenticare (a seconda della configurazione).</block>
+  <block id="83d0c0b26a7eb1649c6119a685864eae" category="list-text">Push: Consente di approvare la notifica push inviata al telefono.</block>
+  <block id="798212b7335c7a4d26f0138f9079a95e" category="list-text">Codice QR: Utilizza l'app mobile AUTH Point per eseguire la scansione del codice QR, quindi digita il codice di verifica visualizzato nell'app</block>
+  <block id="a316b5fd0e81148fffa951463fd77df0" category="list-text">Password monouso: Digitare la password monouso per il token.</block>
+  <block id="0ddda96c3272042acb4be0a7963229ec" category="list-text">Una volta completata l'autenticazione, viene visualizzata una finestra a comparsa contenente Access, ID e Refresh Token.</block>
+  <block id="2aaa5e58823e537a854f3793f31b7148" category="paragraph">Copiare il token di accesso e utilizzarlo nell'API REST di SnapCenter per eseguire l'operazione.</block>
+  <block id="f7c6df20834ef72448c5f49671a77c96" category="list-text">Nell'API REST, passare il token di accesso e il nome del ruolo nella sezione dell'intestazione.</block>
+  <block id="db90bb350026eba7289048cec0d22858" category="list-text">SnapCenter convalida questo token di accesso da ad FS.</block>
+  <block id="5d371ebca081571ee838c91f2b3b8eda" category="paragraph">Se si tratta di un token valido, SnapCenter lo decodifica e ottiene il nome utente.</block>
+  <block id="2c62b617ee38c02d7111543084b0b09e" category="list-text">Utilizzando il nome utente e il nome ruolo, SnapCenter autentica l'utente per un'esecuzione API.</block>
+  <block id="9f94ebee44e4c5f90ddbb7381fb57111" category="paragraph">Se l'autenticazione ha esito positivo, SnapCenter restituisce il risultato, altrimenti viene visualizzato un messaggio di errore.</block>
+  <block id="bbd93b6370e78df975451775d22d34ed" category="section-title">Attivare o disattivare la funzionalità MFA di SnapCenter per API REST, CLI e GUI</block>
+  <block id="e0c356209d0172c9793fc3d3ed347a32" category="paragraph">*GUI*</block>
+  <block id="fcd1c1c483a974a0432e89881b9c1008" category="list-text">Accedere al server SnapCenter come amministratore SnapCenter.</block>
+  <block id="ef86f63b7951661a91c550234bac80c5" category="list-text">Fare clic su *Impostazioni* &gt; *Impostazioni globali* &gt; *Impostazioni MultiFactorAuthentication(MFA)*</block>
+  <block id="66804bc5856f84fff5c4c9e9b39f7b6d" category="list-text">Selezionare l'interfaccia (GUI/RST API/CLI) per attivare o disattivare l'accesso MFA.</block>
+  <block id="989b27ad86f053d3822c0f7bbcab5684" category="paragraph">*Interfaccia PowerShell*</block>
+  <block id="67a453e2bf25e9b2939d5a76773bd4e1" category="list-text">Eseguire i comandi PowerShell o CLI per abilitare MFA per GUI, REST API, PowerShell e SCCLI.</block>
+  <block id="29661a5be1500e885abc9f1385dcab2f" category="paragraph"><block ref="c6a4b1d35f298a094cb651f5e0dcecbe" prefix="" category="inline-code"></block><block ref="dd25d075292f9fe56a03fbe443c83eee" prefix=" " category="inline-code"></block></block>
+  <block id="aff22f1d675aba740b0eea5cc900f4f1" category="paragraph">Il parametro path specifica la posizione del file xml di metadati di ad FS MFA.</block>
+  <block id="34d51518bd337510d5a57880f46f8745" category="paragraph">Abilita MFA per GUI SnapCenter, API REST, PowerShell e SCCLI configurati con il percorso file di metadati ad FS specificato.</block>
+  <block id="e84faa3dab6fec9caed1af21fab38e42" category="list-text">Controllare lo stato e le impostazioni della configurazione MFA utilizzando<block ref="d99b90475295700e9775deadcb723ac6" prefix=" " category="inline-code"></block> cmdlet.</block>
+  <block id="0b97fd01ab8976f9b7367861bbc67f96" category="paragraph">*INTERFACCIA SCCLI*</block>
+  <block id="40ee035a048bf31e962cca88cbda2585" category="list-text"><block ref="70f9cdeabb0c1dc9714ea84eaf70ed21" prefix="" category="inline-code"></block></block>
+  <block id="d50f29f5527b7374e9015b618aeb7dff" category="list-text"><block ref="f3eb70856b0166d88b8f84e996dbbc0f" prefix="" category="inline-code"></block></block>
+  <block id="6ad47f25209d248f2819960d8d230e1f" category="paragraph">*API REST*</block>
+  <block id="6e0cd09ffb36f6906f7262ee34696fee" category="list-text">Eseguire la seguente API post per abilitare MFA per GUI, REST API, PowerShell e SCCLI.</block>
+  <block id="6465e52eccd6901d06660c8d9f4cbcf4" category="paragraph">URL richiesto</block>
+  <block id="0bf53544f7d41d17d800289b552512b6" category="paragraph">/api/4.9/settings/autenticazione multifattoriale</block>
+  <block id="03d947a2158373c3b9d74325850cb8b9" category="paragraph">Post</block>
+  <block id="ef1845aa2c5377425ac03316124d29ba" category="paragraph">Corpo della richiesta</block>
+  <block id="40512f67baf3b1ed3eee621bc87adc5c" category="paragraph">{
+  "IsGuiMFAEnabled": Falso,
+  "IsRestApiMFAEnabled": Vero,
+  "IsCliMFAEnabled": Falso,
+  "ADFSConfigFilePath": "C: ADFS_metadata.abc.xml"
+}</block>
+  <block id="b6bb6515f92dd63588798a290288f8e7" category="paragraph">Corpo di risposta</block>
+  <block id="5babbc456e7d500f0f3a5f71a48a5391" category="paragraph">{
+  "MFAConfiguration": {
+    "IsGuiMFAEnabled": Falso,
+    "ADFSConfigFilePath": "C: ADFS_metadata abc.xml",
+    "SCConfigFilePath": Null,
+    "IsRestApiMFAEnabled": Vero,
+    "IsCliMFAEnabled": Falso,
+    "ADFSHostName": "win-adfs-sc49.winscedom2.com"
+  }
+}</block>
+  <block id="a13c4b270e124c298207b35e4319dd32" category="list-text">Controllare lo stato e le impostazioni della configurazione MFA utilizzando la seguente API.</block>
+  <block id="c55582518cba2c464f29f5bae1c68def" category="paragraph">Ottieni</block>
+  <block id="b19a37df92859f602a1d598b09095dde" category="summary">È possibile abilitare la comunicazione SSL bidirezionale per proteggere la comunicazione reciproca tra il server SnapCenter e i plug-in utilizzando i comandi PowerShell.</block>
+  <block id="a22dc7783d83428bc5853a688adbaa99" category="doc">Abilitare la comunicazione SSL bidirezionale</block>
+  <block id="e087a1e7d63b58aa401ef5206b4045df" category="paragraph">Eseguire i comandi per tutti i plug-in e l'agente SMCore prima e poi per il server.</block>
+  <block id="2658e2d3875fa3587a2eef6c24310953" category="list-text">Per attivare la comunicazione SSL bidirezionale, eseguire i seguenti comandi sul server SnapCenter per i plug-in, il server e per ciascuno degli agenti per i quali è richiesta la comunicazione SSL bidirezionale.</block>
+  <block id="6f1f834a8acf28858818fa0fd54b35a6" category="paragraph"><block ref="5ba37b5b52435dfa4dfd88ef055ac07d" prefix="" category="inline-code"></block></block>
+  <block id="754765745d416ab50bfdd8ffdf886427" category="paragraph"><block ref="167daacd6d47aace4fc354e8fa84a970" prefix="" category="inline-code"></block></block>
+  <block id="b7cbce0775ee05b5664db4795fa4f37d" category="paragraph"><block ref="bc5badf312d3de216c86e4291b576eab" prefix="" category="inline-code"></block></block>
+  <block id="78ed6c04942aa45356cf982f1588da37" category="list-text">Eseguire l'operazione di riciclo del pool di applicazioni IIS SnapCenter utilizzando il seguente comando.<block ref="541fcad914e41c6e8aca986da472fe2d" prefix=" " category="inline-code"></block></block>
+  <block id="f0bcea4f3a2bdac9d1c7f6881b8c07a8" category="list-text">Per i plug-in di Windows, riavviare il servizio SMCore eseguendo il seguente comando PowerShell:</block>
+  <block id="f2bd7da53d1a6515e52a739da4329afd" category="paragraph"><block ref="bb7886a32c232f144658587951d187d2" prefix="" category="inline-code"></block></block>
+  <block id="6d5d3fb7ac098fbdd1cfb8dd29674b84" category="section-title">Disattiva la comunicazione SSL bidirezionale</block>
+  <block id="b317f6b7cf8e9cf3d99664032fea50ea" category="paragraph">È possibile disattivare la comunicazione SSL bidirezionale utilizzando i comandi PowerShell.</block>
+  <block id="82af86af05970c039df6936d16c3de24" category="list-text">Quando si disattiva la comunicazione SSL bidirezionale, il certificato CA e la relativa configurazione non vengono rimossi.</block>
+  <block id="ab9d69b140b979d1163a8258231bf681" category="list-text">Per aggiungere un nuovo host al server SnapCenter, è necessario disattivare il protocollo SSL bidirezionale per tutti gli host plug-in.</block>
+  <block id="5f46aeecc86380dbcfb9ea81a41ed89b" category="list-text">NLB e F5 non sono supportati.</block>
+  <block id="8067bb3f892da888a20f7c51b6b320fe" category="list-text">Per disattivare la comunicazione SSL bidirezionale, eseguire i seguenti comandi sul server SnapCenter per tutti gli host plug-in e l'host SnapCenter.</block>
+  <block id="106698fceaabfa22dd610a165379d87d" category="paragraph"><block ref="1ebd6e5581ae643c2c863d185c892fad" prefix="" category="inline-code"></block></block>
+  <block id="7f3467967f060a8b06e188bb59a79254" category="paragraph"><block ref="d28571296a1f592ea7dd6b4421121c3c" prefix="" category="inline-code"></block></block>
+  <block id="2562d957f23a407afadd9f495ac65558" category="paragraph"><block ref="92d8827b891332d9cc9603a4d78c8184" prefix="" category="inline-code"></block></block>
+  <block id="4ac49dffc286da5ccbd944165dd8bd7f" category="summary">È necessario configurare la comunicazione SSL bidirezionale per proteggere la comunicazione reciproca tra il server SnapCenter e i plug-in.  </block>
+  <block id="cafd3024d70c4714a92f3bbaf4965b57" category="doc">Configurare la comunicazione SSL bidirezionale</block>
+  <block id="2da979e2cf96908affb6191327c911d5" category="paragraph">È necessario configurare la comunicazione SSL bidirezionale per proteggere la comunicazione reciproca tra il server SnapCenter e i plug-in.</block>
+  <block id="81397d9ad77b3a9e2e2df364665c61c9" category="list-text">Il file CSR del certificato CA dovrebbe essere stato generato con la lunghezza minima supportata della chiave di 3072.</block>
+  <block id="1257518a1b9c77f82d1169f7393e91e8" category="list-text">Il certificato CA deve supportare l'autenticazione del server e l'autenticazione del client.</block>
+  <block id="a41d1ede8efbf13047677109637f3dec" category="list-text">È necessario disporre di un certificato CA con chiave privata e dettagli di identificazione personale.</block>
+  <block id="b083fe6f5cfad10b990d548c633e8a65" category="list-text">La configurazione SSL unidirezionale dovrebbe essere stata attivata.</block>
+  <block id="0d595ff380766dc1d8c09ec358747cae" category="inline-link">Sezione Configure CA certificate (Configura certificato CA).</block>
+  <block id="a7ba3ddee0a16312a2e13195df4b2433" category="paragraph">Per ulteriori informazioni, vedere<block ref="6dfa2c41e53d5b3205d5fed50f7d3301" category="inline-link-rx"></block></block>
+  <block id="94c0fab32e0110a096cb4ef750e06c9d" category="list-text">È necessario attivare la comunicazione SSL bidirezionale su tutti gli host plug-in e sul server SnapCenter.</block>
+  <block id="3a38d21be8e1d4ceb97784398a831b8d" category="paragraph">L'ambiente con alcuni host o server non abilitati per la comunicazione SSL bidirezionale non è supportato.</block>
+  <block id="f1e698233e97bf3ae5cad2316d711986" category="list-text">Per eseguire il binding della porta, attenersi alla seguente procedura sull'host del server SnapCenter per la porta 8146 del server Web IIS SnapCenter (impostazione predefinita) e ancora per la porta 8145 SMCore (impostazione predefinita) utilizzando i comandi PowerShell.</block>
+  <block id="82cfdc00c004e07552d47137bbf16a9c" category="list-text">Rimuovere il binding della porta del certificato autofirmato SnapCenter esistente utilizzando il seguente comando PowerShell.</block>
+  <block id="0a0f1f3043ba3e1acc34a5b2ebac984c" category="paragraph"><block ref="7c54acf15a03e67078abd57b41f8c478" prefix="" category="inline-code"></block></block>
+  <block id="97945939d2d565d14af017b8fc6a848b" category="paragraph"><block ref="ec9d16bf504724fb7ff951cb8d5ac569" prefix="" category="inline-code"></block></block>
+  <block id="cf2f17e8228cf9f504d9ef093339cf29" category="paragraph"><block ref="184d0a373b28cdb51093745aacc96f13" prefix="" category="inline-code"></block></block>
+  <block id="eccc78428042da4779f8953d81058bc0" category="list-text">Associare il certificato CA appena procurato al server SnapCenter e alla porta SMCore.</block>
+  <block id="f872a2f883b5319b48280c72563c5890" category="paragraph"><block ref="d893ce8aba8d7e0e799d3e6e565643bc" prefix="" category="inline-code"></block></block>
+  <block id="20fb30dfe9f1ec90bb124da18ae04452" category="paragraph"><block ref="c3eb69d5eb724e65ce64a58b3ed4f27a" prefix="" category="inline-code"></block></block>
+  <block id="472a2399b71957c9b52b506602e17135" category="paragraph"><block ref="f81bead81ffd81a83e72c726dcfeeeff" prefix="" category="inline-code"></block><block ref="80a2dd1060539c016ac1756b39e97974" prefix=" " category="inline-code"></block></block>
+  <block id="ecadde849f231229501c8ac9e26131fa" category="paragraph"><block ref="b08e65278d7ff10dc370262f9df141be" prefix="" category="inline-code"></block></block>
+  <block id="387826bb06a8ec006a32ea30847a7e4b" category="paragraph"><block ref="882ed2cb3e73b4db768f6098812c1136" prefix="" category="inline-code"></block></block>
+  <block id="9d4c7c0e25a6f0e0bceeffcd0091ec50" category="paragraph"><block ref="508ecc9875937125b3358540fa1fe69a" prefix="" category="inline-code"></block><block ref="80a2dd1060539c016ac1756b39e97974" prefix=" " category="inline-code"></block></block>
+  <block id="c4922065c73447187fb2dac12bfe56bc" category="paragraph"><block ref="b99b0337ef99ff2bbaa5028079ce2442" prefix="" category="inline-code"></block><block ref="80a2dd1060539c016ac1756b39e97974" prefix=" " category="inline-code"></block></block>
+  <block id="5fc94028d8c4f33296999ba45bbb387b" category="paragraph"><block ref="6b624e4f4ca6a04ec11b463d9814f0c9" prefix="" category="inline-code"></block></block>
+  <block id="9357843797bfd65b1948d6382b2a5034" category="paragraph"><block ref="14209511d46ba0d7d50930c2861a9367" prefix="" category="inline-code"></block></block>
+  <block id="06f3954dc9edecda0cb728ddafd9e61e" category="list-text">Per accedere all'autorizzazione al certificato CA, aggiungere l'utente predefinito del server Web IIS di SnapCenter "*IIS AppPool/SnapCenter*" nell'elenco delle autorizzazioni del certificato eseguendo la procedura seguente per accedere al certificato CA appena procurato.</block>
+  <block id="f090de938a3fae12191e592f63ae2510" category="list-text">Accedere alla console di gestione Microsoft (MMC), quindi fare clic su *file* &gt; *Aggiungi/Rimuovi SnapIn*.</block>
+  <block id="85ce851bf311abdfa58feb58c1f150a9" category="list-text">Selezionare il certificato SnapCenter.</block>
+  <block id="c41510e2be28a02aa28d3cc1f97d5a19" category="list-text">Per avviare l'aggiunta guidata autorizzazioni utente, fare clic con il pulsante destro del mouse sul certificato CA e selezionare *tutte le attività* &gt; *Gestisci chiavi private*.</block>
+  <block id="169bb55bf062357c42b0cf57c4649ee0" category="list-text">Fare clic su *Add* (Aggiungi), selezionare Users and groups wizard (Seleziona utenti e gruppi) per modificare la posizione in Local computer name (nome computer locale) (in cima alla gerarchia)</block>
+  <block id="7c1c131d337993bffc308150942912de" category="list-text">Aggiungere l'utente di IIS AppPool/SnapCenter, assegnare autorizzazioni di controllo complete.</block>
+  <block id="df576eecac2ec87a972715a2e331f729" category="list-text">Per l'autorizzazione IIS * del certificato CA, aggiungere la nuova voce delle chiavi di registro DWORD nel server SnapCenter dal seguente percorso:</block>
+  <block id="ad0e742bbde69b45fb45a7627f4707a7" category="paragraph">Nell'editor del Registro di sistema di Windows, passare al percorso indicato di seguito,</block>
+  <block id="ba50ff32299ded9b005b93add237e37f" category="paragraph"><block ref="c20bcd425aa0dfde5b21e954c408550c" prefix="" category="inline-code"></block></block>
+  <block id="77e901d3c61bf70a2d72d789e44f7415" category="list-text">Creare una nuova voce della chiave del Registro di sistema DWORD nel contesto della configurazione DEL Registro DI sistema SCHANNEL.</block>
+  <block id="63dc4f7c1d9e61adbf929691b56d5072" category="paragraph"><block ref="e2b1a9261db7ce54c6ea11f85adf9cdb" prefix="" category="inline-code"></block></block>
+  <block id="8d50ba258bc153f2531cc4e43e94a373" category="paragraph"><block ref="da6a8876f4c591ea79413a09c1c8044b" prefix="" category="inline-code"></block></block>
+  <block id="29fe5acdafb008f0c4029b36efaaa699" category="section-title">Configurare il plug-in Windows di SnapCenter per la comunicazione SSL bidirezionale</block>
+  <block id="241a76d30cc3e9addfc9a28d9266415b" category="paragraph">È necessario configurare il plug-in Windows di SnapCenter per la comunicazione SSL bidirezionale utilizzando i comandi PowerShell.</block>
+  <block id="457d0c1616661bbea1a67f35fdf372af" category="paragraph">Assicurarsi che il thumbprint del certificato CA sia disponibile.</block>
+  <block id="c0f2e9f742b3d6f99ba8ef845fc0562c" category="list-text">Per collegare la porta, eseguire le seguenti operazioni sull'host plug-in di Windows per la porta SMCore 8145 (impostazione predefinita).</block>
+  <block id="815da53dabe3865804ff4ba1e6665935" category="paragraph"><block ref="847e78c9ee7d14eb51b49fb024cd7d05" prefix="" category="inline-code"></block></block>
+  <block id="f4aedf5f7064779b42e2ae682e73ea48" category="list-text">Associare il certificato CA appena procurato alla porta SMCore.</block>
+  <block id="66a57f0083912acf6a2b65f426431c80" category="paragraph"><block ref="26b46a359f43b44dbb3ec36ca91d42ee" prefix="" category="inline-code"></block><block ref="80a2dd1060539c016ac1756b39e97974" prefix=" " category="inline-code"></block></block>
+  <block id="c611b0ac75619f5722f4d1aaf8bf4b5e" category="paragraph"><block ref="4179f87929a415ac782e2ec707eef9bd" prefix="" category="inline-code"></block></block>
+  <block id="c09eb9c06939676b5a9c04bd9bc0b777" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo Get-Help command_name. In alternativa, è possibile consultare anche<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>.</block>
+  <block id="245360450ea9845b00af24cc4009b53f" category="paragraph">Se si desidera ripristinare e ripristinare i messaggi e-mail o le caselle postali al posto del database Exchange completo, è possibile utilizzare il software SMBR (Single Mailbox Recovery).
+Il ripristino di una singola casella postale di NetApp® è giunto alla fine della disponibilità (EOA) il 12 maggio 2023. NetApp continuerà a supportare i clienti che hanno acquistato capacità, manutenzione e supporto della casella postale attraverso i codici marketing introdotti il 24 giugno 2020, per tutta la durata del diritto al supporto.</block>
+  <block id="01a1924558b81160b570c09fe8a4203c" category="paragraph">Il servizio di ripristino di una singola casella postale di NetApp è un prodotto partner fornito da Ontrack. Ontrack PowerControl offre funzionalità simili a quelle del ripristino di una singola casella postale di NetApp. I clienti possono acquistare nuove licenze software Ontrack PowerControls e rinnovi di assistenza e manutenzione Ontrack PowerControls da Ontrack (fino a licensingteam@ontrack.com) per il ripristino granulare della mailbox.</block>
+  <block id="07c049db30ed73f0d52cca0a50220fcd" category="paragraph">Per ulteriori informazioni su SMBR, fare riferimento a quanto segue:</block>
+  <block id="81845e1ca99f532dc90bd83c62202fc0" category="inline-link">Come ripristinare manualmente un singolo elemento con SMBR (applicabile anche per i ripristini Ontrack Power Control)</block>
+  <block id="db0c2525f5f13ece537a8604a4046d7c" category="list-text"><block ref="db0c2525f5f13ece537a8604a4046d7c" category="inline-link-rx"></block></block>
+  <block id="bc4a9c7196005c449654d5ad1b755323" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, vedere<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>.</block>
+  <block id="2a29f869f54ca0c1b591922fb759c598" category="paragraph">È inoltre possibile utilizzare i cmdlet PowerShell manualmente o negli script per eseguire operazioni di backup e ripristino. Per informazioni dettagliate sui cmdlet di PowerShell, consultare la guida in linea del cmdlet di SnapCenter o consultare<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>.</block>
+  <block id="5f1fb39cebd4e3f57a9da37cc25b94d2" category="sidebar">Il software SnapCenter è una piattaforma semplice, centralizzata e scalabile che offre una protezione dei dati coerente per applicazioni, database, file system host e macchine virtuali in esecuzione su sistemi ONTAP in qualsiasi punto del cloud ibrido. Questa libreria di documentazione contiene informazioni relative alla versione 4.9.</block>
+  <block id="427325bcff5242696543a47f175dc4bb" category="sidebar">Documentazione del software SnapCenter 4.9</block>
+  <block id="93c0abda4c86365a68e2f0cef08f0d88" category="sidebar">Configurare e abilitare la comunicazione SSL bidirezionale</block>
+  <block id="3e918b1551870a1f28fd26d82364a6de" category="sidebar">Configurare l'autenticazione basata su certificato</block>
+  <block id="61341920d3259181ac6dce8912b43711" category="sidebar">Importa certificato CA nei plug-in host di Windows</block>
+  <block id="dc085c0453f245659c31e067671c65b0" category="sidebar">Importare il certificato CA nei plug-in host UNIX e configurare i certificati root o intermedi nell'archivio di fiducia SPL</block>
+  <block id="78a044d413487b3c49b37567f8df9e4f" category="sidebar">Importa certificato CA nei plug-in host UNIX</block>
+  <block id="7fbe6e40125b7d1b2f5c5c05044e7526" category="sidebar">Abilitare l'autenticazione basata su certificato</block>
 </blocks>

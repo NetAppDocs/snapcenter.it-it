@@ -68,4 +68,4 @@ Dopo aver modificato il valore del parametro, riavviare il servizio caricatore p
 
 `/opt/NetApp/snapcenter/spl/bin/spl restart`
 
-Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help command_name. In alternativa, fare riferimento a. https://library.netapp.com/ecm/ecm_download_file/ECMLP2883301["Guida di riferimento al comando software SnapCenter"^].
+Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help command_name. In alternativa, fare riferimento a. https://library.netapp.com/ecm/ecm_download_file/ECMLP2886206["Guida di riferimento al comando software SnapCenter"^].

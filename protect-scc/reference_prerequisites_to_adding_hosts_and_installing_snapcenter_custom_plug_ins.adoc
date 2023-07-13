@@ -88,7 +88,7 @@ Se si utilizza Windows Server 2019 o Windows Server 2016 per l'host del server S
 http://www.java.com/en/download/manual.jsp["Download Java per tutti i sistemi operativi"]
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=108393;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"]
+https://imt.netapp.com/matrix/imt.jsp?components=112392;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"]
 
 * Per consentire l'accesso a diversi percorsi, è necessario configurare i privilegi sudo per l'utente non root. Aggiungere le seguenti righe al file /etc/sudoers usando l'utility visudo Linux.
 +

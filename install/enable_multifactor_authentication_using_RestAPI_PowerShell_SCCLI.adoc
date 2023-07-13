@@ -1,0 +1,270 @@
+---
+permalink: install/enable_multifactor_authentication_using_RestAPI_PowerShell_SCCLI.html 
+sidebar: sidebar 
+keywords: mfa, authentication, multifactor authentication 
+summary: 'È possibile utilizzare le interfacce REST API, PowerShell e SCCLI per gestire l"MFA.' 
+---
+= Gestisci l'autenticazione a più fattori (MFA) utilizzando REST API, PowerShell e SCCLI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'accesso MFA è supportato da browser, REST API, PowerShell e SCCLI. MFA è supportato da un Identity Manager di ad FS. È possibile attivare MFA, disattivare MFA e configurare MFA da GUI, REST API, PowerShell e SCCLI.
+
+
+
+== Impostare ad FS come OAuth/OIDC
+
+*Configurare ad FS utilizzando la GUI di Windows*
+
+. Accedere a *Server Manager Dashboard* > *Tools* > *ADFS Management*.
+. Accedere a *ADFS* > *gruppi di applicazioni*.
++
+.. Fare clic con il pulsante destro del mouse su *gruppi di applicazioni*.
+.. Selezionare *Add Application group* (Aggiungi gruppo di applicazioni) e immettere *Application Name* (Nome applicazione).
+.. Selezionare *applicazione server*.
+.. Fare clic su *Avanti*.
+
+
+. Copia *identificatore del client*.
++
+ID client.
+.. Aggiungere l'URL di richiamata (URL del server SnapCenter) nell'URL di reindirizzamento.
+.. Fare clic su *Avanti*.
+
+. Selezionare *generate shared secret*.
++
+Copiare il valore segreto. Questo è il segreto del cliente.
+.. Fare clic su *Avanti*.
+
+. Nella pagina *Riepilogo*, fare clic su *Avanti*.
++
+.. Nella pagina *complete*, fare clic su *Close* (Chiudi).
+
+
+. Fare clic con il pulsante destro del mouse sul nuovo *Application Group* e selezionare *Properties*.
+. Selezionare *Aggiungi applicazione* da Proprietà applicazione.
+. Fare clic su *Aggiungi applicazione*.
++
+Selezionare API Web e fare clic su *Avanti*.
+
+. Nella pagina Configura API web, inserire l'URL del server SnapCenter e l'identificativo client creati nel passaggio precedente nella sezione identificativo.
++
+.. Fare clic su *Aggiungi*.
+.. Fare clic su *Avanti*.
+
+
+. Nella pagina *Choose Access Control Policy* (Scegli policy di controllo dell'accesso), selezionare la policy di controllo in base ai requisiti (ad esempio, Permit Everyone and Request MFA) e fare clic su *Next* (Avanti).
+. Nella pagina *Configure Application Permission* (Configura autorizzazione applicazione), per impostazione predefinita openid è selezionato come ambito, fare clic su *Next* (Avanti).
+. Nella pagina *Riepilogo*, fare clic su *Avanti*.
++
+Nella pagina *complete*, fare clic su *Close* (Chiudi).
+
+. Nella pagina *Proprietà applicazione di esempio*, fare clic su *OK*.
+. Token JWT emesso da un server di autorizzazione (ad FS) e destinato ad essere utilizzato dalla risorsa.
++
+La richiesta "aud" o di pubblico di questo token deve corrispondere all'identificatore della risorsa o dell'API Web.
+
+. Modificare l'API Web selezionata e verificare che l'URL di richiamata (URL del server SnapCenter) e l'identificatore del client siano stati aggiunti correttamente.
++
+Configurare OpenID Connect in modo da fornire un nome utente come rivendicato.
+
+. Aprire lo strumento *ad FS Management* situato nel menu *Tools* in alto a destra di Server Manager.
++
+.. Selezionare la cartella *Application Groups* dalla barra laterale sinistra.
+.. Selezionare l'API Web e fare clic su *EDIT*.
+.. Accedere alla scheda Issuance Transform Rules (regole di trasformazione emissione)
+
+
+. Fare clic su *Add Rule* (Aggiungi regola).
++
+.. Selezionare *Send LDAP Attributes as Claims* (Invia attributi LDAP come richieste di rimborso) nell'elenco a discesa Claim Rule template (
+.. Fare clic su *Avanti*.
+
+
+. Inserire il nome *Claim rule*.
++
+.. Selezionare *Active Directory* nell'elenco a discesa dell'archivio degli attributi.
+.. Selezionare *User-Principal-Name* nel menu a discesa *LDAP Attribute* e *UPN* nel menu a discesa o*utgoing Claim Type*.
+.. Fare clic su *fine*.
+
+
+
+
+
+
+== Creare un gruppo di applicazioni utilizzando i comandi PowerShell
+
+È possibile creare il gruppo di applicazioni, l'API Web e aggiungere l'ambito e le attestazioni utilizzando i comandi PowerShell. Questi comandi sono disponibili in formato script automatizzato. Per ulteriori informazioni, vedere <link to KB article>.
+
+. Creare il nuovo gruppo di applicazioni in ad FS utilizzando la seguente comand.
++
+`New-AdfsApplicationGroup -Name $ClientRoleIdentifier -ApplicationGroupIdentifier $ClientRoleIdentifier`
+
++
+`ClientRoleIdentifier` nome del gruppo di applicazioni
+
++
+`redirectURL` URL valido per il reindirizzamento dopo l'autorizzazione
+
+. Creare l'applicazione server di ad FS e generare il segreto del client.
++
+`Add-AdfsServerApplication -Name "$ClientRoleIdentifier - Server app" -ApplicationGroupIdentifier` `$ClientRoleIdentifier -RedirectUri $redirectURL  -Identifier $identifier -GenerateClientSecret`
+
+. Creare l'applicazione API Web ADFS e configurare il nome del criterio da utilizzare.
++
+`$identifier = (New-Guid).Guid`
+
++
+`Add-AdfsWebApiApplication -ApplicationGroupIdentifier $ClientRoleIdentifier  -Name "App Web API"`
+
++
+`-Identifier $identifier -AccessControlPolicyName "Permit everyone"`
+
+. Ottenere l'ID client e il client secret dall'output dei seguenti comandi perché vengono visualizzati una sola volta.
++
+`"client_id = $identifier"`
+
++
+`"client_secret: "$($ADFSApp.ClientSecret)`
+
+. Concedere all'applicazione ad FS le autorizzazioni Allatclaims e openid.
++
+`Grant-AdfsApplicationPermission -ClientRoleIdentifier $identifier -ServerRoleIdentifier $identifier -ScopeNames @('openid')`
+
++
+`$transformrule = @"`
+
++
+`@RuleTemplate = "LdapClaims"`
+
++
+`@RuleName = "AD User properties and Groups"`
+
++
+`c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname", Issuer ==`
+
++
+`"AD AUTHORITY"]`
+
++
+`=> issue(store = "Active Directory", types = ("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn"), query = ";userPrincipalName;{0}", param = c.Value);`
+
++
+`"@`
+
+. Annotare il file di regole di trasformazione.
++
+`$transformrule |Out-File -FilePath .\issueancetransformrules.tmp -force -Encoding ascii`
+`$relativePath = Get-Item .\issueancetransformrules.tmp`
+
+. Assegnare un nome all'applicazione API Web e definirne le regole di conversione mediante un file esterno.
++
+`Set-AdfsWebApiApplication -Name "$ClientRoleIdentifier - Web API" -TargetIdentifier`
+
++
+`$identifier -Identifier $identifier,$redirectURL -IssuanceTransformRulesFile`
+
++
+`$relativePath`
+
+
+
+
+
+== Aggiornare il tempo di scadenza del token di accesso
+
+È possibile aggiornare il tempo di scadenza del token di accesso utilizzando il comando PowerShell.
+
+*A proposito di questa attività*
+
+* Un token di accesso può essere utilizzato solo per una combinazione specifica di utente, client e risorsa. I token di accesso non possono essere revocati e sono validi fino alla scadenza.
+* Per impostazione predefinita, la scadenza di un token di accesso è di 60 minuti.  Questo tempo di scadenza minimo è sufficiente e scalabile. Devi fornire un valore sufficiente per evitare qualsiasi lavoro business-critical in corso.
+
+
+*Passo*
+
+Per aggiornare il tempo di scadenza del token di accesso per un gruppo di applicazioni WebAPI, utilizzare il seguente comando nel server ad FS.
+
++
+`Set-AdfsWebApiApplication -TokenLifetime 3600 -TargetName "<Web API>"`
+
+
+
+== Ottenere il token del bearer da ad FS
+
+Inserire i parametri indicati di seguito in qualsiasi client REST (come Postman) e richiedere di inserire le credenziali dell'utente. Inoltre, per ottenere il token del bearer, è necessario immettere l'autenticazione del secondo fattore (qualcosa che si possiede e qualcosa che si è).
+
++
+La validità del token bearer è configurabile dal server ad FS per ogni applicazione e il periodo di validità predefinito è di 60 minuti.
+
+|===
+
+
+| Campo | Valore 
+
+
+ a| 
+Tipo di concessione
+ a| 
+Codice di autorizzazione
+
+
+
+ a| 
+URL di richiamata
+ a| 
+Se non si dispone di un URL di richiamata, immettere l'URL di base dell'applicazione.
+
+
+
+ a| 
+URL di autenticazione
+ a| 
+[adfs-domain-name]/adfs/oauth2/authorize
+
+
+
+ a| 
+URL token di accesso
+ a| 
+[adfs-domain-name]/adfs/oauth2/token
+
+
+
+ a| 
+ID client
+ a| 
+Inserire l'ID del client ad FS
+
+
+
+ a| 
+Segreto del client
+ a| 
+Inserire il segreto del client ad FS
+
+
+
+ a| 
+Scopo
+ a| 
+OpenID
+
+
+
+ a| 
+Autenticazione del client
+ a| 
+Invia come intestazione AUTH di base
+
+
+
+ a| 
+Risorsa
+ a| 
+Nella scheda *Opzioni avanzate*, aggiungere il campo risorsa con lo stesso valore dell'URL di richiamata, che viene fornito come valore "aud" nel token JWT.
+
+|===

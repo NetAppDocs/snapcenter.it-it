@@ -43,6 +43,8 @@ Porta SnapCenter
 
 Utilizzato per la comunicazione tra il client SnapCenter (l'utente SnapCenter) e il server SnapCenter. Utilizzato anche per la comunicazione dagli host plug-in al server SnapCenter.
 
+Per personalizzare la porta, vedere https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["Installare il server SnapCenter utilizzando l'installazione guidata."]
+
 
 
  a| 
@@ -51,6 +53,8 @@ Porta di comunicazione SMCore SnapCenter
 8145 (HTTPS), bidirezionale, personalizzabile
 
 La porta viene utilizzata per la comunicazione tra il server SnapCenter e gli host in cui sono installati i plug-in SnapCenter.
+
+Per personalizzare la porta, vedere https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["Installare il server SnapCenter utilizzando l'installazione guidata."]
 
 
 
@@ -62,6 +66,8 @@ Porta MySQL
 La porta viene utilizzata per la comunicazione tra SnapCenter e il database del repository MySQL.
 
 È possibile creare connessioni sicure dal server SnapCenter al server MySQL. link:../install/concept_configure_secured_mysql_connections_with_snapcenter_server.html["Scopri di più"]
+
+Per personalizzare la porta, vedere https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["Installare il server SnapCenter utilizzando l'installazione guidata."]
 
 
 
@@ -96,6 +102,8 @@ La porta viene utilizzata per la comunicazione tra SMCore e gli host in cui è i
 
 Il percorso di comunicazione deve essere aperto anche tra la LIF di gestione SVM e il server SnapCenter.
 
+Per personalizzare la porta, vedere https://docs.netapp.com/us-en/snapcenter/protect-scw/task_add_hosts_and_install_snapcenter_plug_in_for_microsoft_windows.html["Aggiungere host e installare il plug-in SnapCenter per Microsoft Windows"] oppure https://docs.netapp.com/us-en/snapcenter/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html["Aggiungere host e installare il pacchetto di plug-in SnapCenter per Linux o AIX."]
+
 
 
  a| 
@@ -104,6 +112,8 @@ Plug-in SnapCenter per database Oracle
 27216, personalizzabile
 
 La porta JDBC predefinita viene utilizzata dal plug-in per Oracle per la connessione al database Oracle.
+
+Per personalizzare la porta, vedere https://docs.netapp.com/us-en/snapcenter/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html["Aggiungere host e installare il pacchetto di plug-in SnapCenter per Linux o AIX."]
 
 
 
@@ -135,6 +145,8 @@ Plug-in SnapCenter per database SAP HANA vCode controllo ortografico
 Per un singolo tenant MDC (Multitenant Database Container), il numero di porta termina con 13; per i non MDC, il numero di porta termina con 15.
 
 Ad esempio, 32013 è il numero della porta, ad esempio 20 e 31015 è il numero della porta, ad esempio 10.
+
+Per personalizzare la porta, vedere https://docs.netapp.com/us-en/snapcenter/protect-hana/task_add_hosts_and_install_plug_in_packages_on_remote_hosts_sap_hana.html["Aggiungere host e installare pacchetti plug-in su host remoti."]
 
 
 

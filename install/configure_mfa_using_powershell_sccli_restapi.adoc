@@ -1,0 +1,208 @@
+---
+permalink: install/configure_mfa_using_powershell_sccli_restapi.html 
+sidebar: sidebar 
+keywords: mfa, authentication, multifactor authentication 
+summary: È possibile utilizzare le interfacce REST API, PowerShell e SCCLI per configurare MFA. 
+---
+= Configurare MFA nel server SnapCenter utilizzando PowerShell, SCCLI e REST API
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile configurare MFA nel server SnapCenter utilizzando PowerShell, SCCLI e REST API.
+
+
+
+== Autenticazione SnapCenter MFA CLI
+
+In PowerShell e SCCLI, il cmdlet esistente (Open-SmConnection) viene esteso con un altro campo chiamato "AccessToken" per utilizzare il token bearer per autenticare l'utente.
+
+`Open-SmConnection -Credential <PSCredential> [-SMSbaseUrl <String>] [-Port <String>] [-RoleName <String>] [ -AccessToken <string>]`
+
+Una volta eseguito il cmdlet sopra indicato, viene creata una sessione per consentire al rispettivo utente di eseguire ulteriori cmdlet SnapCenter.
+
+
+
+== Autenticazione API REST MFA SnapCenter
+
+Utilizzare il token bearer nel formato _Authorization=bearer <access token>_ nel client API REST (come Postman o swagger) e citare il nome del ruolo dell'utente nell'intestazione per ottenere una risposta corretta da SnapCenter.
+
+
+
+== Flusso di lavoro API REST MFA
+
+Quando MFA è configurato con ad FS, è necessario eseguire l'autenticazione utilizzando un token di accesso (bearer) per accedere all'applicazione SnapCenter da qualsiasi API REST.
+
+*A proposito di questa attività*
+
+* Puoi utilizzare qualsiasi client REST come Postman, Swagger UI o FireCamp.
+* Ottenere un token di accesso e utilizzarlo per autenticare le richieste successive (API REST SnapCenter) per eseguire qualsiasi operazione.
+
+
+*Fasi*
+
+*Per l'autenticazione tramite ad FS MFA*
+
+. Configurare il client REST per chiamare l'endpoint ad FS per ottenere il token di accesso.
++
+Quando si preme il pulsante per ottenere un token di accesso per un'applicazione, si viene reindirizzati alla pagina SSO di ad FS, dove è necessario fornire le credenziali ad e autenticare con MFA.
+1. Nella pagina ad FS SSO, digitare il nome utente o l'indirizzo e-mail nella casella di testo Nome utente.
+
++
++
+I nomi utente devono essere formattati come utente@dominio o dominio utente.
+
+. Digitare la password nella casella di testo Password.
+. Fare clic su *Log in* (Accedi).
+. Nella sezione *Opzioni di accesso*, selezionare un'opzione di autenticazione e autenticare (a seconda della configurazione).
++
+** Push: Consente di approvare la notifica push inviata al telefono.
+** Codice QR: Utilizza l'app mobile AUTH Point per eseguire la scansione del codice QR, quindi digita il codice di verifica visualizzato nell'app
+** Password monouso: Digitare la password monouso per il token.
+
+
+. Una volta completata l'autenticazione, viene visualizzata una finestra a comparsa contenente Access, ID e Refresh Token.
++
+Copiare il token di accesso e utilizzarlo nell'API REST di SnapCenter per eseguire l'operazione.
+
+. Nell'API REST, passare il token di accesso e il nome del ruolo nella sezione dell'intestazione.
+. SnapCenter convalida questo token di accesso da ad FS.
++
+Se si tratta di un token valido, SnapCenter lo decodifica e ottiene il nome utente.
+
+. Utilizzando il nome utente e il nome ruolo, SnapCenter autentica l'utente per un'esecuzione API.
++
+Se l'autenticazione ha esito positivo, SnapCenter restituisce il risultato, altrimenti viene visualizzato un messaggio di errore.
+
+
+
+
+
+== Attivare o disattivare la funzionalità MFA di SnapCenter per API REST, CLI e GUI
+
+*GUI*
+
+*Fasi*
+
+. Accedere al server SnapCenter come amministratore SnapCenter.
+. Fare clic su *Impostazioni* > *Impostazioni globali* > *Impostazioni MultiFactorAuthentication(MFA)*
+. Selezionare l'interfaccia (GUI/RST API/CLI) per attivare o disattivare l'accesso MFA.
+
+
+*Interfaccia PowerShell*
+
+*Fasi*
+
+. Eseguire i comandi PowerShell o CLI per abilitare MFA per GUI, REST API, PowerShell e SCCLI.
++
+`Set-SmMultiFactorAuthentication -IsGuiMFAEnabled -IsRestApiMFAEnabled`
+`-IsCliMFAEnabled -Path`
+
++
+Il parametro path specifica la posizione del file xml di metadati di ad FS MFA.
+
++
+Abilita MFA per GUI SnapCenter, API REST, PowerShell e SCCLI configurati con il percorso file di metadati ad FS specificato.
+
+. Controllare lo stato e le impostazioni della configurazione MFA utilizzando `Get-SmMultiFactorAuthentication` cmdlet.
+
+
+*INTERFACCIA SCCLI*
+
+*Fasi*
+
+. `# sccli Set-SmMultiFactorAuthentication -IsGuiMFAEnabled true -IsRESTAPIMFAEnabled true -IsCliMFAEnabled true  -Path "C:\ADFS_metadata\abc.xml"`
+. `# sccli Get-SmMultiFactorAuthentication`
+
+
+*API REST*
+
+. Eseguire la seguente API post per abilitare MFA per GUI, REST API, PowerShell e SCCLI.
++
+|===
+
+
+| Parametro | Valore 
+
+
+ a| 
+URL richiesto
+ a| 
+/api/4.9/settings/autenticazione multifattoriale
+
+
+
+ a| 
+Metodo HTTP
+ a| 
+Post
+
+
+
+ a| 
+Corpo della richiesta
+ a| 
+{
+  "IsGuiMFAEnabled": Falso,
+  "IsRestApiMFAEnabled": Vero,
+  "IsCliMFAEnabled": Falso,
+  "ADFSConfigFilePath": "C: ADFS_metadata.abc.xml"
+}
+
+
+
+ a| 
+Corpo di risposta
+ a| 
+{
+  "MFAConfiguration": {
+    "IsGuiMFAEnabled": Falso,
+    "ADFSConfigFilePath": "C: ADFS_metadata abc.xml",
+    "SCConfigFilePath": Null,
+    "IsRestApiMFAEnabled": Vero,
+    "IsCliMFAEnabled": Falso,
+    "ADFSHostName": "win-adfs-sc49.winscedom2.com"
+  }
+}
+
+|===
+. Controllare lo stato e le impostazioni della configurazione MFA utilizzando la seguente API.
++
+|===
+
+
+| Parametro | Valore 
+
+
+ a| 
+URL richiesto
+ a| 
+/api/4.9/settings/autenticazione multifattoriale
+
+
+
+ a| 
+Metodo HTTP
+ a| 
+Ottieni
+
+
+
+ a| 
+Corpo di risposta
+ a| 
+{
+  "MFAConfiguration": {
+    "IsGuiMFAEnabled": Falso,
+    "ADFSConfigFilePath": "C: ADFS_metadata abc.xml",
+    "SCConfigFilePath": Null,
+    "IsRestApiMFAEnabled": Vero,
+    "IsCliMFAEnabled": Falso,
+    "ADFSHostName": "win-adfs-sc49.winscedom2.com"
+  }
+}
+
+|===
+

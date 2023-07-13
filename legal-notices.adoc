@@ -50,4 +50,4 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[]
 
 I file di avviso forniscono informazioni sul copyright e sulle licenze di terze parti utilizzate nel software NetApp.
 
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2884814["Avviso per SnapCenter 4.8"^]
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2886209["Avviso per SnapCenter 4.9"^]

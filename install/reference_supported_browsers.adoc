@@ -32,4 +32,4 @@ Le modifiche apportate alle impostazioni di protezione di Internet Explorer comp
 * Microsoft Edge
 
 
-Per informazioni aggiornate sulle versioni supportate, vedere https://imt.netapp.com/matrix/imt.jsp?components=108380;&solution=1257&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^].
+Per informazioni aggiornate sulle versioni supportate, vedere https://imt.netapp.com/matrix/imt.jsp?components=112389;&solution=1257&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^].

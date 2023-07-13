@@ -188,7 +188,7 @@ Per informazioni dettagliate sui cmdlet PowerShell, consultare la guida in linea
 
 
 
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["Guida di riferimento al cmdlet del software SnapCenter"^].
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["Guida di riferimento al cmdlet del software SnapCenter"^].
 
 
 

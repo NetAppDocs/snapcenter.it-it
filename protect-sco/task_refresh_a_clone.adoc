@@ -59,6 +59,6 @@ NOTE: Il file di specifica del clone viene creato in _/var/opt/snapcenter/sco/cl
 Se l'operazione non riesce con i messaggi di errore "PL-SCO-20032: Operazione CanExecute non riuscita con l'errore: PL-SCO-30031: File di log di ripristino +SC_2959770772_clmdb/clmdb/redolog/redo01_01.log esiste", specificare un valore più alto per _-WaitToTriggerClone_.
 
 +
-Per informazioni dettagliate sui comandi UNIX, consultare https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486["Guida di riferimento al comando software SnapCenter"^].
+Per informazioni dettagliate sui comandi UNIX, consultare https://library.netapp.com/ecm/ecm_download_file/ECMLP2886206["Guida di riferimento al comando software SnapCenter"^].
 
 

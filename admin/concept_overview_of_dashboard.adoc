@@ -2,7 +2,7 @@
 permalink: admin/concept_overview_of_dashboard.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Dal riquadro di navigazione a sinistra di SnapCenter, la dashboard offre una prima panoramica dello stato del sistema, tra cui attività di processo recenti, avvisi, riepilogo della protezione, efficienza e utilizzo dello storage, stato dei processi SnapCenter (backup, clonazione, ripristino), stato della configurazione per host cluster standalone e Windows, Numero di macchine virtuali di storage gestite da SnapCenter e capacità di licenza.' 
+summary: 'Dal riquadro di navigazione a sinistra di SnapCenter, la dashboard offre una prima panoramica dello stato del sistema, tra cui attività di processo recenti, avvisi, riepilogo della protezione, efficienza e utilizzo dello storage, stato dei processi SnapCenter (backup, clonazione, ripristino), stato della configurazione per host cluster standalone e Windows, Numero di macchine virtuali di storage (SVM) gestite da SnapCenter e capacità di licenza.' 
 ---
 = Panoramica della dashboard
 :allow-uri-read: 
@@ -263,7 +263,7 @@ Numero di host in cui è in corso l'installazione o la disinstallazione del plug
 Il riquadro capacità concessa in licenza visualizza informazioni sulla capacità totale concessa in licenza, sulla capacità utilizzata, sugli avvisi di soglia della capacità e sugli avvisi di scadenza della licenza per le licenze basate sulla capacità standard di SnapCenter.
 
 
-NOTE: Questa schermata viene visualizzata solo se si utilizzano licenze basate sulla capacità standard di SnapCenter su piattaforme Cloud Volumes ONTAP o ONTAP Select. Per le piattaforme FAS o AFF, la licenza SnapCenter è basata su controller e concessa in licenza per capacità illimitata, senza richiedere alcuna licenza per capacità.
+NOTE: Questa schermata viene visualizzata solo se si utilizzano licenze basate sulla capacità standard di SnapCenter su piattaforme Cloud Volumes ONTAP o ONTAP Select. Per le piattaforme FAS, AFF o All SAN Array (ASA), la licenza SnapCenter è basata su controller e concessa in licenza per capacità illimitata e non è richiesta alcuna licenza per capacità.
 
 |===
 | Stato della licenza | Descrizione 

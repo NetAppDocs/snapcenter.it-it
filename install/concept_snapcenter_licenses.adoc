@@ -1,7 +1,7 @@
 ---
 permalink: install/concept_snapcenter_licenses.html 
 sidebar: sidebar 
-keywords: licenses, FAS, AFF, SnapMirror, SnapVault, SnapRestore, FlexClone, SMBR, Single Mailbox Recovery 
+keywords: licenses, FAS, AFF, ASA, SnapMirror, SnapVault, SnapRestore, FlexClone, SMBR, Single Mailbox Recovery 
 summary: 'SnapCenter richiede diverse licenze per abilitare le operazioni di protezione dei dati. Il tipo di licenze SnapCenter installate dipende dall"ambiente di storage e dalle funzionalità che si desidera utilizzare.' 
 ---
 = Licenze SnapCenter
@@ -20,9 +20,9 @@ SnapCenter richiede diverse licenze per consentire la protezione dei dati di app
  a| 
 Basato su controller standard SnapCenter
  a| 
-Richiesto per FAS e AFF
+Richiesto per FAS, AFF, All SAN Array (ASA)
 
-La licenza standard di SnapCenter è una licenza basata su controller ed è inclusa nel pacchetto premium. Se si dispone della licenza della suite SnapManager, si ottiene anche il diritto di licenza standard SnapCenter. Se si desidera installare SnapCenter in prova con lo storage FAS o AFF, è possibile ottenere una licenza di valutazione Premium Bundle contattando il rappresentante commerciale.
+La licenza standard di SnapCenter è una licenza basata su controller ed è inclusa nel pacchetto premium. Se si dispone della licenza della suite SnapManager, si ottiene anche il diritto di licenza standard SnapCenter. Se si desidera installare SnapCenter in prova con storage FAS, AFF o ASA, è possibile ottenere una licenza di valutazione Premium Bundle contattando il rappresentante commerciale.
 
 
 NOTE: SnapCenter è anche offerto come parte del bundle per la protezione dei dati. Se hai acquistato A400 o versioni successive, devi acquistare il bundle per la protezione dei dati.
@@ -106,6 +106,6 @@ Installare una o più licenze SnapCenter. Per informazioni su come aggiungere li
 
 Se si utilizza il plug-in SnapCenter per Exchange per gestire i database e il ripristino di una singola casella postale (SMBR), è necessaria una licenza aggiuntiva per SMBR che deve essere acquistata separatamente in base alla casella postale dell'utente.
 
-Contatta il tuo commerciale NetApp per acquistare le licenze SMBR disponibili come unità di bundle di 1000, 5000, 15000 e 25000 caselle postali. Una volta acquistato lo SKU, è possibile ottenere la licenza seguendo le istruzioni riportate in https://library.netapp.com/ecm/ecm_download_file/ECMLP2863893["Note di rilascio di SMBR"^].
+Il ripristino di una singola casella postale di NetApp® è giunto alla fine della disponibilità (EOA) il 12 maggio 2023. Per ulteriori informazioni, fare riferimento a. link:https://mysupport.netapp.com/info/communications/ECMLP2885729.html["CPC-00507"]. NetApp continuerà a supportare i clienti che hanno acquistato capacità, manutenzione e supporto della casella postale attraverso i codici marketing introdotti il 24 giugno 2020, per tutta la durata del diritto al supporto.
 
-Quando si invia la richiesta di chiave di licenza, Kroll Ontrack emetterà 50 chiavi di licenza per la mailbox. In base ai tuoi diritti, Kroll Ontrack aggiornerà le licenze per la mailbox dopo la verifica.
+Il servizio di ripristino di una singola casella postale di NetApp è un prodotto partner fornito da Ontrack. Ontrack PowerControl offre funzionalità simili a quelle del ripristino di una singola casella postale di NetApp. I clienti possono acquistare nuove licenze software Ontrack PowerControls e rinnovi di assistenza e manutenzione Ontrack PowerControls da Ontrack (fino al licensingteam@ontrack.com) per il ripristino granulare della mailbox dopo la data EOA del 12 maggio 2023.

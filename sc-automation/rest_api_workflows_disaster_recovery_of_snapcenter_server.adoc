@@ -60,6 +60,15 @@ NOTE: Dopo il ripristino di DR, l'host viene aggiunto, ma è necessario installa
 NOTE: La pianificazione del backup del repository verrà ripristinata solo se si installa il plug-in SnapCenter per Windows e si collega il LUN NetApp alla macchina server.
 
 
+NOTE: Se le DLL sono corrotte, provare a riparare il server SnapCenter o a correggere l'installazione errata.
+
+
+NOTE: Se i file NSM o di configurazione sono corrotti, è possibile disinstallare e reinstallare il server SnapCenter con la stessa versione.
+
+
+NOTE: Se la macchina virtuale è danneggiata, avviare un'altra macchina virtuale o un computer con lo stesso nome e installare il server SnapCenter con la stessa versione.
+
+
 
 == API REST supportata per il disaster recovery del server SnapCenter
 

@@ -26,15 +26,15 @@ SnapCenter può essere implementato nei seguenti modi:
 
 * On-premise per proteggere:
 +
-** Dati presenti nei sistemi primari ONTAP FAS o AFF e replicati nei sistemi secondari ONTAP FAS o AFF
+** Dati presenti nei sistemi primari ONTAP FAS, AFF o All SAN Array (ASA) e replicati nei sistemi secondari ONTAP FAS, AFF o ASA
 ** Dati sui sistemi primari ONTAP Select
-** Dati su sistemi primari e secondari ONTAP FAS o AFF e protetti dallo storage a oggetti StorageGRID locale (utilizzando l'integrazione del backup cloud NetApp BlueXP)
+** Dati su sistemi primari e secondari ONTAP FAS, AFF o ASA e protetti sullo storage a oggetti StorageGRID locale (utilizzando l'integrazione del backup cloud NetApp BlueXP)
 
 
 * On-premise in un cloud ibrido per proteggere:
 +
-** Dati presenti nei sistemi primari ONTAP FAS o AFF e replicati in Cloud Volumes ONTAP
-** Dati che si trovano su sistemi primari e secondari ONTAP FAS o AFF e protetti per lo storage di oggetti e archivi nel cloud (utilizzando l'integrazione di NetApp BlueXP Cloud Backup)
+** Dati presenti nei sistemi primari ONTAP FAS, AFF o ASA e replicati in Cloud Volumes ONTAP
+** Dati su sistemi primari e secondari ONTAP FAS, AFF o ASA e protetti per lo storage di oggetti e archivi nel cloud (utilizzando l'integrazione di NetApp BlueXP Cloud Backup)
 
 
 * In un cloud pubblico per proteggere:
@@ -85,10 +85,10 @@ SnapCenter include API REST per la maggior parte delle funzionalità per l'integ
 Per ulteriori informazioni sulle API REST, vedere https://docs.netapp.com/us-en/snapcenter/sc-automation/overview_rest_apis.html["Panoramica delle API REST"].
 
 +
-Per ulteriori informazioni sui cmdlet di Windows, vedere https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["Guida di riferimento al cmdlet del software SnapCenter"^].
+Per ulteriori informazioni sui cmdlet di Windows, vedere https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["Guida di riferimento al cmdlet del software SnapCenter"^].
 
 +
-Per ulteriori informazioni sui comandi UNIX, vedere https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486["Guida di riferimento al comando software SnapCenter"^].
+Per ulteriori informazioni sui comandi UNIX, vedere https://library.netapp.com/ecm/ecm_download_file/ECMLP2886206["Guida di riferimento al comando software SnapCenter"^].
 
 * Data Protection centralizzata Dashboard e reporting
 * RBAC (Role-Based Access Control) per la sicurezza e la delega.

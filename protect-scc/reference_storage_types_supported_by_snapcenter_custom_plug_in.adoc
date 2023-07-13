@@ -18,21 +18,21 @@ SnapCenter supporta un'ampia gamma di tipi di storage su macchine fisiche e virt
 
 
  a| 
-Server fisici e virtuali (VMDK e LUN RDM non sono supportati).
+Montaggi fisici e diretti NFS sugli host VM (VMDK e LUN RDM non sono supportati).
  a| 
 LUN connessi a FC
 
 
 
  a| 
-Server fisici e virtuali (VMDK e LUN RDM non sono supportati).
+Montaggi fisici e diretti NFS sugli host VM (VMDK e LUN RDM non sono supportati).
  a| 
 LUN connessi a iSCSI
 
 
 
  a| 
-Server fisici e virtuali (VMDK e LUN RDM non sono supportati).
+Montaggi fisici e diretti NFS sugli host VM (VMDK e LUN RDM non sono supportati).
  a| 
 Volumi connessi a NFS
 

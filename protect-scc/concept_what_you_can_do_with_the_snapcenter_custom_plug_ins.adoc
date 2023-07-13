@@ -35,7 +35,7 @@ summary: È possibile utilizzare i plug-in personalizzati di SnapCenter per le o
 
 * Aggiornare le copie Snapshot eseguite sul primario su un ONTAP secondario, sfruttando la relazione di replica esistente (SnapVault/SnapMirror/replica unificata) utilizzando la policy SnapCenter
 +
-ONTAP primario e secondario possono essere ONTAP FAS, AFF, Select o Cloud ONTAP.
+ONTAP primario e secondario possono essere ONTAP FAS, AFF, All SAN Array (ASA), Select o Cloud ONTAP.
 
 * Ripristinare il volume, il LUN o i file ONTAP completi.
 +

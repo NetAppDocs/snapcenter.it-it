@@ -56,7 +56,7 @@ Sistema storage
 Inserire il nome del sistema di storage o l'indirizzo IP.
 
 
-NOTE: I nomi dei sistemi di storage, che non includono il nome di dominio, devono avere un massimo di 15 caratteri e i nomi devono essere risolvibili. Per creare connessioni al sistema di storage con nomi che hanno più di 15 caratteri, è possibile utilizzare il cmdlet Add-SmStorageConnectionPowerShell.
+NOTE: I nomi dei sistemi di storage, che non includono il nome di dominio, devono contenere un massimo di 15 caratteri e devono essere risolutibili. Per creare connessioni al sistema di storage con nomi che hanno più di 15 caratteri, è possibile utilizzare il cmdlet Add-SmStorageConnectionPowerShell.
 
 
 NOTE: Per i sistemi storage con configurazione MetroCluster (MCC), si consiglia di registrare cluster locali e peer per operazioni senza interruzioni.
@@ -91,6 +91,9 @@ Quando si seleziona la casella di controllo *Invia notifica AutoSupport per oper
 .. In Platform (piattaforma), selezionare una delle opzioni dall'elenco a discesa.
 +
 Se SVM è il sistema di storage secondario in una relazione di backup, selezionare la casella di controllo *secondario*. Quando si seleziona l'opzione *secondario*, SnapCenter non esegue immediatamente un controllo della licenza.
+
++
+Se è stata aggiunta una SVM in SnapCenter, l'utente deve selezionare manualmente il tipo di piattaforma dal menu a discesa.
 
 .. In Protocol (protocollo), selezionare il protocollo configurato durante l'installazione di SVM o Cluster, in genere HTTPS.
 .. Inserire la porta accettata dal sistema di storage.
@@ -127,6 +130,9 @@ Quando si fa clic sul nome del cluster, tutte le SVM che fanno parte del cluster
 Se una nuova SVM viene aggiunta al cluster ONTAP utilizzando l'interfaccia grafica di ONTAP, fare clic su *riscopri* per visualizzare la nuova SVM aggiunta.
 
 
+
+
+NOTE: Se i sistemi di storage FAS o AFF sono stati aggiornati a tutti gli array SAN (ASA), è necessario aggiornare la connessione di storage nel server SnapCenter in modo che rifletta il nuovo tipo di storage in SnapCenter.
 
 *Al termine*
 

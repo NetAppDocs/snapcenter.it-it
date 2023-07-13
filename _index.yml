@@ -4,12 +4,12 @@ indexpage:
     che offre una protezione dei dati coerente per applicazioni, database, file system
     host e macchine virtuali in esecuzione su sistemi ONTAP in qualsiasi punto del
     cloud ibrido. Questa libreria di documentazione contiene informazioni relative
-    alla versione 4.8.
+    alla versione 4.9.
   tiles:
   - title: Inizia subito
     links:
     - title: Note di rilascio
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2885481
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886204
     - title: Scopri di più su SnapCenter
       url: "/concept/concept_snapcenter_overview.html"
     - title: Guida di riferimento rapido per proteggere i database di SQL Server

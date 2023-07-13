@@ -1,0 +1,62 @@
+---
+permalink: install/task_export_ca_certificates_from_snapcenter_server.html 
+sidebar: sidebar 
+keywords: security,authentication, export CA certificates 
+summary: È necessario esportare i certificati CA dal server SnapCenter agli host plug-in. 
+---
+= Esportare i certificati dell'autorità di certificazione (CA) dal server SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario esportare i certificati CA dal server SnapCenter agli host plug-in utilizzando la console di gestione Microsoft.
+
+*Cosa ti serve*
+
+Il protocollo SSL bidirezionale dovrebbe essere stato configurato.
+
+*Fasi*
+
+. Accedere alla console di gestione Microsoft (MMC), quindi fare clic su *file* > *Aggiungi/Rimuovi Snapin*.
+. Nella finestra Aggiungi o Rimuovi snap-in, selezionare *certificati*, quindi fare clic su *Aggiungi*.
+. Nella finestra Snap-in certificati, selezionare l'opzione *computer account*, quindi fare clic su *fine*.
+. Fare clic su *Console root* > *certificati - computer locale* > *personale* > *certificati*.
+. Fare clic con il pulsante destro del mouse sul certificato CA procurato, utilizzato per il server SnapCenter, quindi selezionare *tutte le attività* > *Esporta* per avviare l'esportazione guidata.
+. Eseguire le seguenti operazioni nella procedura guidata.
+
+
+|===
+| Per questa opzione... | Effettuare le seguenti operazioni... 
+
+
+ a| 
+Esporta chiave privata
+ a| 
+Selezionare *No, non esportare la chiave privata*, quindi fare clic su *Avanti*.
+
+
+
+ a| 
+Formato file di esportazione
+ a| 
+Fare clic su *Avanti*.
+
+
+
+ a| 
+Nome file
+ a| 
+Fare clic su *Browse* (Sfoglia) e specificare il percorso del file per il salvataggio del certificato, quindi fare clic su *Next* (Avanti).
+
+
+
+ a| 
+Completamento dell'esportazione guidata certificati
+ a| 
+Esaminare il riepilogo, quindi fare clic su *fine* per avviare l'esportazione.
+
+|===
+
+NOTE: L'autenticazione basata su certificato non è supportata per le configurazioni SnapCenter ha e il plug-in SnapCenter per VMware vSphere.

@@ -32,13 +32,11 @@ Per informazioni su come modificare il parametro asm_diskstring, vedere https://
 ** L'host clone deve essere in grado di rilevare LUN dallo storage primario o secondario.
 +
 *** Se si esegue la clonazione dallo storage primario o secondario (Vault o Mirror) a un host alternativo, assicurarsi che sia stata stabilita una sessione iSCSI tra lo storage secondario e l'host alternativo o che sia stata inserita correttamente la zoning per FC.
-+
-**** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547936["Guida all'installazione e all'installazione delle utility host Linux"^]
-**** https://library.netapp.com/ecm/ecm_download_file/ECMP1119223["Guida all'installazione e all'installazione delle utility host DI AIX"^]
-
-
 *** Se si esegue la clonazione dallo storage Vault o Mirror allo stesso host, assicurarsi che sia stata stabilita una sessione iSCSI tra lo storage Vault o Mirror e l'host oppure che sia stata creata una zoning corretta per FC.
 *** Se si esegue la clonazione in un ambiente virtualizzato, assicurarsi che venga stabilita una sessione iSCSI tra lo storage primario o secondario e il server ESX che ospita l'host alternativo o che venga eseguita la zoning appropriata per FC.
++
+Per ulteriori informazioni, fare riferimento a. https://docs.netapp.com/us-en/ontap-sanhost/["documentazione delle utility host"].
+
 
 
 ** Se il database di origine è un database ASM:

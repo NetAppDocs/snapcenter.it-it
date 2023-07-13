@@ -47,6 +47,18 @@ Il programma di installazione del server SnapCenter abilita il supporto centrali
 
 
 
+== Comunicazione SSL bidirezionale
+
+La comunicazione SSL bidirezionale protegge la comunicazione reciproca tra il server SnapCenter e i plug-in.
+
+
+
+== Panoramica dell'autenticazione basata su certificato
+
+L'autenticazione basata su certificato verifica l'autenticità dei rispettivi utenti che tentano di accedere all'host del plug-in SnapCenter. L'utente deve esportare il certificato del server SnapCenter senza chiave privata e importarlo nell'archivio attendibile dell'host del plug-in. L'autenticazione basata su certificato funziona solo se è attivata la funzione SSL bidirezionale.
+
+
+
 == Autenticazione a più fattori (MFA)
 
 MFA utilizza un provider di identità (IdP) di terze parti tramite SAML (Security Assertion Markup Language) per gestire le sessioni degli utenti. Questa funzionalità migliora la sicurezza dell'autenticazione grazie alla possibilità di utilizzare diversi fattori come TOTP, biometria, notifiche push e così via, oltre al nome utente e alla password esistenti. Inoltre, consente al cliente di utilizzare i propri provider di identità utente per ottenere un accesso utente unificato (SSO) nel proprio portfolio.

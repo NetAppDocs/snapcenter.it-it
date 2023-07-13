@@ -47,6 +47,10 @@ Non è possibile installare il plug-in per Windows su un host Windows connesso a
 
 
 
+
+NOTE: SnapCenter non supporta l'aggiunta dello stesso host (host plug-in) a SnapCenter se l'host fa già parte di un gruppo di lavoro e viene modificato in un altro dominio o viceversa.
+Se si desidera aggiungere lo stesso host, rimuovere l'host da SnapCenter e aggiungerlo di nuovo.
+
 *Fasi*
 
 . Nel riquadro di spostamento di sinistra, fare clic su *hosts*.
