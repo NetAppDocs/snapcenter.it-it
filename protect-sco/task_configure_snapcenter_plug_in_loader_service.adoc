@@ -32,7 +32,7 @@ LOG_LEVEL
  a| 
 Visualizza i livelli di registro supportati.
 
-I valori possibili sono INFO, DEBUG, TRACE, ERROR, FATALE, E AVVISARE.
+I valori possibili sono TRACE, DEBUG, INFO, WARN, ERROR, E FATALE.
 
 
 

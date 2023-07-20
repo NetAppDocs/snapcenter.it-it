@@ -3681,7 +3681,6 @@
   <block id="03101d2d05b95aa8395d372be971ceec" category="cell">Nome del parametro</block>
   <block id="e2072f9dd36121658dfb70db997cac48" category="paragraph">LOG_LEVEL</block>
   <block id="27ef522d71e1457c1d75f1a9fbdffdb9" category="paragraph">Visualizza i livelli di registro supportati.</block>
-  <block id="9dec2839914c450a2eba38fd6ed0037d" category="paragraph">I valori possibili sono INFO, DEBUG, TRACE, ERROR, FATALE, E AVVISARE.</block>
   <block id="54e3ff300a85eed4faafba9e929fcc68" category="paragraph">PROTOCOLLO_SPL</block>
   <block id="7af9608cb14f57495b1335e877ee3b0e" category="paragraph">Visualizza il protocollo supportato dal caricatore plug-in SnapCenter.</block>
   <block id="36c24cffc745e8682deaec9e2c0960f8" category="paragraph">È supportato solo il protocollo HTTPS. È possibile aggiungere il valore se manca il valore predefinito.</block>
@@ -8443,4 +8442,5 @@ Il ripristino di una singola casella postale di NetApp® è giunto alla fine del
   <block id="dc085c0453f245659c31e067671c65b0" category="sidebar">Importare il certificato CA nei plug-in host UNIX e configurare i certificati root o intermedi nell'archivio di fiducia SPL</block>
   <block id="78a044d413487b3c49b37567f8df9e4f" category="sidebar">Importa certificato CA nei plug-in host UNIX</block>
   <block id="7fbe6e40125b7d1b2f5c5c05044e7526" category="sidebar">Abilitare l'autenticazione basata su certificato</block>
+  <block id="20c5c92c0148a7ebef737c442e93b7ec" category="paragraph">I valori possibili sono TRACE, DEBUG, INFO, WARN, ERROR, E FATALE.</block>
 </blocks>
