@@ -1,7 +1,7 @@
 ---
 permalink: protect-hana/task_create_resource_groups_and_attach_policies.html 
 sidebar: sidebar 
-keywords: run as 
+keywords: resource groups, attach policies, snapcenter 
 summary: Un gruppo di risorse è il container al quale è necessario aggiungere risorse di cui si desidera eseguire il backup e la protezione. Un gruppo di risorse consente di eseguire contemporaneamente il backup di tutti i dati associati a una determinata applicazione. Per qualsiasi lavoro di protezione dei dati è necessario un gruppo di risorse. È inoltre necessario associare uno o più criteri al gruppo di risorse per definire il tipo di lavoro di protezione dei dati che si desidera eseguire. 
 ---
 = Creare gruppi di risorse e allegare policy
@@ -13,12 +13,10 @@ summary: Un gruppo di risorse è il container al quale è necessario aggiungere 
 [role="lead"]
 Un gruppo di risorse è il container al quale è necessario aggiungere risorse di cui si desidera eseguire il backup e la protezione. Un gruppo di risorse consente di eseguire contemporaneamente il backup di tutti i dati associati a una determinata applicazione. Per qualsiasi lavoro di protezione dei dati è necessario un gruppo di risorse. È inoltre necessario associare uno o più criteri al gruppo di risorse per definire il tipo di lavoro di protezione dei dati che si desidera eseguire.
 
-*A proposito di questa attività*
-
+.A proposito di questa attività
 Per creare backup di replica del sistema SAP HANA, si consiglia di aggiungere tutte le risorse del sistema SAP HANA in un unico gruppo di risorse. Ciò garantisce un backup perfetto durante la modalità takeover-failback.
 
-*Fasi*
-
+.Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina Resources (risorse), fare clic su *New Resource Group* (nuovo gruppo di risorse).
 . Nella pagina Name (Nome), eseguire le seguenti operazioni:

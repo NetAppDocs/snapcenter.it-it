@@ -13,16 +13,14 @@ summary: Il rilevamento automatico non è supportato per alcune istanze di HANA.
 [role="lead"]
 Il rilevamento automatico non è supportato per alcune istanze di HANA. È necessario aggiungere queste risorse manualmente.
 
-*Cosa ti serve*
-
+.Di cosa hai bisogno
 * È necessario completare attività come l'installazione del server SnapCenter, l'aggiunta di host, la configurazione delle connessioni del sistema di storage e l'aggiunta della chiave di archiviazione utente HDB.
 * Per la replica del sistema SAP HANA, si consiglia di aggiungere tutte le risorse del sistema HANA in un unico gruppo di risorse e di eseguire il backup di un gruppo di risorse. Ciò garantisce un backup perfetto durante la modalità takeover-failback.
 
 
 link:task_create_resource_groups_and_attach_policies.html["Creare gruppi di risorse e allegare policy"].
 
-*A proposito di questa attività*
-
+.A proposito di questa attività
 Il rilevamento automatico non è supportato per le seguenti configurazioni:
 
 * Layout RDM e VMDK
@@ -36,8 +34,7 @@ NOTE: Nel caso in cui vengano rilevate le suddette risorse, le operazioni di pro
 * Ambiente di replica a cascata in modalità di replica del sistema
 
 
-*Fasi*
-
+.Fasi
 . Nel riquadro di spostamento di sinistra, selezionare il plug-in SnapCenter per il database SAP HANA dall'elenco a discesa, quindi fare clic su *risorse*.
 . Nella pagina Resources (risorse), fare clic su *Add SAP HANA Database* (Aggiungi database SAP HANA).
 . Nella pagina fornire dettagli sulle risorse, eseguire le seguenti operazioni:

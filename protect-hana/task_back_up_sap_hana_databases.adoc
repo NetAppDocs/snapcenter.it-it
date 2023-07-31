@@ -13,8 +13,7 @@ summary: Se una risorsa non fa ancora parte di un gruppo di risorse, è possibil
 [role="lead"]
 Se una risorsa non fa ancora parte di un gruppo di risorse, è possibile eseguire il backup della risorsa dalla pagina risorse.
 
-*Cosa ti serve*
-
+.Di cosa hai bisogno
 * È necessario aver creato una policy di backup.
 * Se si desidera eseguire il backup di una risorsa che ha una relazione SnapMirror con uno storage secondario, il ruolo ONTAP assegnato all'utente dello storage deve includere il privilegio "`snapmirror all`". Tuttavia, se si utilizza il ruolo "`vsadmin`", il privilegio "`snapmirror all`" non è richiesto.
 * Per le operazioni di backup basate su copia Snapshot, assicurarsi che tutti i database del tenant siano validi e attivi.
@@ -41,8 +40,7 @@ Per Linux: _/var/opt/snapcenter/scc/allowed_comands_list.txt_
 
 NOTE: Se i comandi non sono presenti nell'elenco dei comandi, l'operazione avrà esito negativo.
 
-*Fasi*
-
+.Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina Resource, filtrare le risorse dall'elenco a discesa *View* in base al tipo di risorsa.
 +

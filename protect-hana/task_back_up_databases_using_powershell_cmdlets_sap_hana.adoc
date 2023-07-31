@@ -13,14 +13,12 @@ summary: 'Il backup di un database include la connessione con il server SnapCent
 [role="lead"]
 Il backup di un database include la connessione con il server SnapCenter, l'aggiunta di risorse, l'aggiunta di un criterio, la creazione di un gruppo di risorse di backup e il backup.
 
-*Cosa ti serve*
-
+.Di cosa hai bisogno
 * È necessario aver preparato l'ambiente PowerShell per eseguire i cmdlet PowerShell.
 * È necessario aver aggiunto la connessione al sistema di storage e creato una credenziale.
 
 
-*Fasi*
-
+.Fasi
 . Avviare una sessione di connessione con il server SnapCenter per un utente specifico utilizzando il cmdlet Open-SmConnection.
 +
 [listing]

@@ -43,10 +43,10 @@ Il valore della chiave può essere visualizzato da swagger attraverso l'API: API
 
 == Fase 1: Creazione del nome della policy
 
-. Nel riquadro di spostamento di sinistra, fare clic su *Impostazioni*.
-. Nella pagina Impostazioni, fare clic su *Criteri*.
-. Fare clic su *nuovo*.
-. Nella pagina Name (Nome), immettere il nome e la descrizione della policy.
+. Nel riquadro di navigazione a sinistra, selezionare *Impostazioni*.
+. Nella pagina Impostazioni, selezionare *Criteri*.
+. Selezionare *nuovo*.
+. Nella pagina *Nome*, inserire il nome e la descrizione della policy.
 
 
 
@@ -336,5 +336,5 @@ NOTE: Il percorso prescripts o postscripts non deve includere dischi o condivisi
 
 == Fase 7: Riepilogo
 
-. Esaminare il riepilogo, quindi fare clic su *fine*.
+. Esaminare il riepilogo, quindi selezionare *fine*.
 

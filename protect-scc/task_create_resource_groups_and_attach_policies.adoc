@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_create_resource_groups_and_attach_policies.html 
 sidebar: sidebar 
-keywords:  
+keywords: resource groups, attach policies, snapcenter 
 summary: Un gruppo di risorse è il container al quale è necessario aggiungere risorse di cui si desidera eseguire il backup e la protezione. 
 ---
 = Creare gruppi di risorse e allegare policy in SnapCenter
@@ -10,7 +10,7 @@ summary: Un gruppo di risorse è il container al quale è necessario aggiungere 
 :imagesdir: ../media/
 
 
-Un gruppo di risorse è il container al quale è necessario aggiungere risorse di cui si desidera eseguire il backup e la protezione. Consente di eseguire contemporaneamente il backup di tutti i dati associati a una determinata applicazione e necessari per qualsiasi lavoro di protezione dei dati. È inoltre necessario associare uno o più criteri al gruppo di risorse per definire il tipo di lavoro di protezione dei dati che si desidera eseguire.
+Un gruppo di risorse è il container al quale è necessario aggiungere risorse di cui si desidera eseguire il backup e la protezione. Consente di eseguire contemporaneamente il backup di tutti i dati associati a una determinata applicazione. È inoltre necessario associare uno o più criteri al gruppo di risorse per definire il tipo di lavoro di protezione dei dati che si desidera eseguire.
 
 .Fasi
 . Nel riquadro di spostamento di sinistra, selezionare *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
@@ -52,7 +52,7 @@ Ad esempio, _customtext_resource group_policy_hostname o resource group_hostname
 In questo modo è possibile filtrare le informazioni sullo schermo.
 
 . Selezionare le risorse dalla sezione *risorse disponibili*, quindi selezionare la freccia destra per spostarle nella sezione *risorse selezionate*.
-. Facoltativo: Nella pagina Impostazioni applicazione, effettuare le seguenti operazioni:
+. Facoltativo: Nella pagina *Impostazioni applicazione*, effettuare le seguenti operazioni:
 +
 .. Selezionare la freccia Backup per impostare opzioni di backup aggiuntive:
 +
@@ -188,7 +188,7 @@ Le pianificazioni configurate sono elencate nella colonna Applied Schedules (Pia
 
 
 
-. Dall'elenco a discesa *Email preference* (Preferenze email) della pagina Notification (notifica), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
+. Dall'elenco a discesa *Email preference* (Preferenze email) della pagina *Notification* (notifica), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
 +
 È inoltre necessario specificare gli indirizzi e-mail del mittente e del destinatario e l'oggetto dell'e-mail. Il server SMTP deve essere configurato in *Impostazioni* > *Impostazioni globali*.
 

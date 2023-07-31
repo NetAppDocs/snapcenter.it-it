@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_add_resources_to_snapcenter_custom_plug_ins.html 
 sidebar: sidebar 
-keywords:  
+keywords: custom plug-in, resources, snapcenter 
 summary: 'È necessario aggiungere le risorse di cui si desidera eseguire il backup o la clonazione. A seconda dell"ambiente in uso, le risorse possono essere istanze di database o raccolte di cui si desidera eseguire il backup o la clonazione.' 
 ---
 = Aggiungere risorse ai plug-in personalizzati di SnapCenter
@@ -13,7 +13,7 @@ summary: 'È necessario aggiungere le risorse di cui si desidera eseguire il bac
 [role="lead"]
 È necessario aggiungere le risorse di cui si desidera eseguire il backup o la clonazione. A seconda dell'ambiente in uso, le risorse possono essere istanze di database o raccolte di cui si desidera eseguire il backup o la clonazione.
 
-.Prima di iniziare
+.Di cosa hai bisogno
 * È necessario completare attività come l'installazione del server SnapCenter, l'aggiunta di host, la creazione di connessioni al sistema di storage e l'aggiunta di credenziali.
 * Devi avere link:concept_develop_a_plug_in_for_your_application.html["creazione di un plug-in personalizzato per l'applicazione"].
 * I plug-in devono essere stati caricati sul server SnapCenter.
@@ -73,7 +73,7 @@ Facoltativo: Selezionare image:../media/add_policy_from_resourcegroup.gif["Icona
 
 +
 
-NOTE: I plug-in personalizzati di SnapCenter non supportano il rilevamento automatico delle risorse e dei dettagli dello storage per ambienti fisici e virtuali. Durante la creazione delle risorse, è necessario fornire le informazioni di storage per gli ambienti fisici e virtuali.
+NOTE: I plug-in personalizzati di SnapCenter non supportano il rilevamento automatico delle risorse. Anche i dettagli dello storage degli ambienti fisici e virtuali non vengono rilevati automaticamente. Durante la creazione delle risorse, è necessario fornire le informazioni di storage per gli ambienti fisici e virtuali.
 
 +
 image::../media/storage_footprint.gif[Impatto dello storage]

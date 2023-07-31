@@ -11,7 +11,7 @@ summary: Quando il plug-in SnapCenter per SQL Server non è disponibile, attener
 
 
 [role="lead"]
-Quando il plug-in SnapCenter per SQL Server non è attivo, attenersi alla seguente procedura per passare a un host SQL diverso e ripristinare i dati.
+Quando il plug-in SnapCenter per SQL Server non è disponibile, attenersi alla seguente procedura per passare a un host SQL diverso e ripristinare i dati.
 
 .Di cosa hai bisogno
 * L'host secondario deve avere lo stesso sistema operativo, l'applicazione e il nome host dell'host primario.

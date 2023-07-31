@@ -1,7 +1,7 @@
 ---
 permalink: protect-hana/task_configure_hdb_user_store_key_and_hdbsql_os_user_for_the_sap_hana_database.html 
 sidebar: sidebar 
-keywords:  
+keywords: HDB User Store Key, HDBSQL OS User, SAP HANA database 
 summary: È necessario configurare HDB User Store Key e HDBSQL OS User per eseguire operazioni di protezione dei dati sui database SAP HANA. 
 ---
 = Configurare HDB User Store Key e HDBSQL OS User per il database SAP HANA
@@ -13,15 +13,13 @@ summary: È necessario configurare HDB User Store Key e HDBSQL OS User per esegu
 [role="lead"]
 È necessario configurare HDB User Store Key e HDBSQL OS User per eseguire operazioni di protezione dei dati sui database SAP HANA.
 
-*Cosa ti serve*
-
+.Di cosa hai bisogno
 * Se il database SAP HANA non dispone della chiave HDB Secure User Store e dell'utente HDB SQL OS, viene visualizzata un'icona a forma di lucchetto rosso solo per le risorse rilevate automaticamente. Se durante un'operazione di rilevamento successiva, la chiave di memorizzazione utente sicura HDB configurata non è corretta o non ha consentito l'accesso al database stesso, viene visualizzata nuovamente l'icona del lucchetto rosso.
 * È necessario configurare la chiave di archiviazione utente sicura HDB e l'utente SQL OS HDB per proteggere il database o aggiungerlo a un gruppo di risorse per eseguire operazioni di protezione dei dati.
 * È necessario configurare HDB SQL OS User per accedere al database di sistema. Se HDB SQL OS User è configurato per accedere solo al database tenant, l'operazione di rilevamento non riesce.
 
 
-*Fasi*
-
+.Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in SnapCenter per il database SAP HANA dall'elenco.
 . Nella pagina risorse, selezionare il tipo di risorsa dall'elenco *Visualizza*.
 . (Facoltativo) fare clic su image:../media/filter_icon.gif[""] e selezionare il nome host.

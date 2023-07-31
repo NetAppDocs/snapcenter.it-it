@@ -1,7 +1,7 @@
 ---
 permalink: protect-hana/task_monitor_hana_databases_restore_operations.html 
 sidebar: sidebar 
-keywords: restore 
+keywords: monitor, SAP HANA databases, restore operations 
 summary: 'È possibile monitorare l"avanzamento delle diverse operazioni di ripristino di SnapCenter utilizzando la pagina lavori. Potrebbe essere necessario controllare lo stato di avanzamento di un"operazione per determinare quando è completa o se si verifica un problema.' 
 ---
 = Monitorare le operazioni di ripristino dei database SAP HANA

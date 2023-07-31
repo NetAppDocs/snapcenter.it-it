@@ -1,7 +1,7 @@
 ---
 permalink: protect-hana/task_split_a_clone_for_hana.html 
 sidebar: sidebar 
-keywords:  
+keywords: split clone, snapcenter 
 summary: È possibile utilizzare SnapCenter per separare una risorsa clonata dalla risorsa principale. Il clone diviso diventa indipendente dalla risorsa padre. 
 ---
 = Separare un clone

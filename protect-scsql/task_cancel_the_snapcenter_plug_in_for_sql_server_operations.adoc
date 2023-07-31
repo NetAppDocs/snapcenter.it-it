@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_cancel_the_snapcenter_plug_in_for_sql_server_operations.html 
 sidebar: sidebar 
-keywords:  
+keywords: cancel, backup 
 summary: 'È possibile annullare le operazioni di backup in esecuzione, in coda o che non rispondono. Quando si annulla un"operazione di backup, il server SnapCenter interrompe l"operazione e rimuove tutte le copie Snapshot dallo storage se il backup creato non è registrato con il server SnapCenter. Se il backup è già registrato con il server SnapCenter, non verrà eseguito il rollback della copia Snapshot già creata anche dopo l"attivazione dell"annullamento.' 
 ---
 = Annullare il plug-in SnapCenter per le operazioni di backup di Microsoft SQL Server
@@ -13,8 +13,7 @@ summary: 'È possibile annullare le operazioni di backup in esecuzione, in coda 
 [role="lead"]
 È possibile annullare le operazioni di backup in esecuzione, in coda o che non rispondono. Quando si annulla un'operazione di backup, il server SnapCenter interrompe l'operazione e rimuove tutte le copie Snapshot dallo storage se il backup creato non è registrato con il server SnapCenter. Se il backup è già registrato con il server SnapCenter, non verrà eseguito il rollback della copia Snapshot già creata anche dopo l'attivazione dell'annullamento.
 
-*Cosa ti serve*
-
+.Di cosa hai bisogno
 * Per annullare le operazioni di ripristino, è necessario accedere come amministratore SnapCenter o come proprietario del processo.
 * È possibile annullare solo il log o le operazioni di backup complete in coda o in esecuzione.
 * Non è possibile annullare l'operazione dopo l'avvio della verifica.
@@ -27,8 +26,7 @@ Se si annulla l'operazione prima della verifica, l'operazione viene annullata e 
 * Se si seleziona *tutti i membri di questo ruolo possono visualizzare e operare su altri oggetti membri* nella pagina utenti/gruppi durante la creazione di un ruolo, è possibile annullare le operazioni di backup in coda degli altri membri durante l'utilizzo di tale ruolo.
 
 
-*Passo*
-
+.Fasi
 Eseguire una delle seguenti operazioni:
 
 |===
@@ -38,8 +36,8 @@ Eseguire una delle seguenti operazioni:
  a| 
 Pagina Monitor
  a| 
-. Nel riquadro di spostamento di sinistra, fare clic su *Monitor* > *Jobs*.
-. Selezionare il lavoro e fare clic su *Annulla lavoro* .
+. Nel riquadro di spostamento a sinistra, selezionare *Monitor* > *Jobs*.
+. Selezionare il lavoro e selezionare *Annulla lavoro* .
 
 
 
@@ -47,12 +45,11 @@ Pagina Monitor
  a| 
 Riquadro delle attività
  a| 
-. Dopo aver avviato il processo di backup, fare clic su image:../media/activity_pane_icon.gif[""] Nel riquadro Activity (attività) per visualizzare le cinque operazioni più recenti.
+. Dopo aver avviato il processo di backup, selezionare image:../media/activity_pane_icon.gif["icona del riquadro attività"] Nel riquadro Activity (attività) per visualizzare le cinque operazioni più recenti.
 . Selezionare l'operazione.
-. Nella pagina Dettagli processo, fare clic su *Annulla processo*.
+. Nella pagina Dettagli lavoro, selezionare *Annulla lavoro*.
 
 
 |===
-*Risultato*
-
+.Risultato
 L'operazione viene annullata e la risorsa viene riportata allo stato precedente. Se l'operazione annullata non risponde nello stato di annullamento o esecuzione, eseguire `Cancel-SmJob -JobID <int> -Force` cmdlet per interrompere forzatamente l'operazione di backup.

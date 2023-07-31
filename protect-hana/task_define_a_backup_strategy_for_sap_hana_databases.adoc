@@ -13,12 +13,10 @@ summary: 'La definizione di una strategia di backup prima della creazione dei pr
 [role="lead"]
 La definizione di una strategia di backup prima della creazione dei processi di backup consente di ottenere i backup necessari per ripristinare o clonare correttamente le risorse. Il tuo SLA (Service-Level Agreement), RTO (Recovery Time Objective) e RPO (Recovery Point Objective) determinano in gran parte la tua strategia di backup.
 
-*A proposito di questa attività*
-
+.A proposito di questa attività
 Uno SLA definisce il livello di servizio previsto e risolve molti problemi relativi al servizio, tra cui la disponibilità e le performance del servizio. RTO è il momento in cui un processo di business deve essere ripristinato dopo un'interruzione del servizio. RPO definisce la strategia per l'età dei file che devono essere ripristinati dallo storage di backup per consentire il ripristino delle normali operazioni dopo un errore. SLA, RTO e RPO contribuiscono alla strategia di protezione dei dati.
 
-*Fasi*
-
+.Fasi
 . Stabilire quando eseguire il backup delle risorse.
 . Decidere il numero di processi di backup necessari.
 . Decidere come assegnare un nome ai backup.

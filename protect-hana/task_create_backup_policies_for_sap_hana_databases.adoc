@@ -13,8 +13,7 @@ summary: Prima di utilizzare SnapCenter per eseguire il backup delle risorse di 
 [role="lead"]
 Prima di utilizzare SnapCenter per eseguire il backup delle risorse di database SAP HANA, è necessario creare una policy di backup per la risorsa o il gruppo di risorse di cui si desidera eseguire il backup. Un criterio di backup è un insieme di regole che regolano la gestione, la pianificazione e la conservazione dei backup.
 
-*Cosa ti serve*
-
+.Di cosa hai bisogno
 * È necessario aver definito la strategia di backup.
 +
 Per ulteriori informazioni, consulta le informazioni sulla definizione di una strategia di protezione dei dati per i database SAP HANA.
@@ -26,8 +25,7 @@ Inoltre, è possibile specificare le impostazioni di replica, script e applicazi
 
 
 
-*A proposito di questa attività*
-
+.A proposito di questa attività
 * Replica di sistema SAP HANA
 +
 ** È possibile proteggere il sistema SAP HANA primario ed eseguire tutte le operazioni di protezione dei dati.
@@ -42,8 +40,7 @@ Non è possibile creare un backup per il volume di dati SAP HANA, ma SnapCenter 
 
 
 
-*Fasi*
-
+.Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *Impostazioni*.
 . Nella pagina Impostazioni, fare clic su *Criteri*.
 . Fare clic su *nuovo*.

@@ -31,9 +31,9 @@ Se si installano plug-in su un cluster (WSFC), i plug-in vengono installati su t
 
 *Fasi*
 
-. Nel riquadro di spostamento di sinistra, fare clic su *hosts*.
+. Nel riquadro di navigazione a sinistra, selezionare *hosts*.
 . Verificare che la scheda *Managed hosts* sia selezionata nella parte superiore.
-. Fare clic su *Aggiungi*.
+. Selezionare *Aggiungi*.
 . Nella pagina host, eseguire le seguenti operazioni:
 +
 |===
@@ -83,7 +83,7 @@ NOTE: La modalità di autenticazione delle credenziali è determinata dal tipo d
 
 |===
 . Nella sezione *Seleziona plug-in da installare*, selezionare i plug-in da installare.
-. (Facoltativo) fare clic su *altre opzioni*.
+. (Facoltativo) selezionare *altre opzioni*.
 +
 |===
 | Per questo campo... | Eseguire questa operazione... 
@@ -116,14 +116,14 @@ In alternativa, è possibile personalizzare il percorso.
 
 ** Per i plug-in personalizzati di SnapCenter:
 +
-... Nella sezione Custom Plug-in (Plug-in personalizzati), fare clic su *Browse* (Sfoglia) e selezionare la cartella dei plug-in personalizzati compressi.
+... Nella sezione Custom Plug-in (Plug-in personalizzati), selezionare *Browse* (Sfoglia) e selezionare la cartella dei plug-in personalizzati compressi.
 +
 La cartella zippata contiene il codice del plug-in personalizzato e il file .xml descrittore.
 
 +
 Per Storage Plug-in, accedere a _C:/ProgramData/NetApp/SnapCenter/Package Repository_ e selezionare `Storage.zip` cartella.
 
-... Fare clic su *carica*.
+... Selezionare *Upload*.
 +
 Il file .xml descrittore nella cartella dei plug-in personalizzati compressi viene validato prima del caricamento del pacchetto.
 
@@ -158,7 +158,7 @@ IMPORTANT: Fornire il nome gMSA nel seguente formato: Nome dominio/nome account.
 NOTE: GMSA verrà utilizzato come account del servizio di accesso solo per il servizio del plug-in SnapCenter per Windows.
 
 |===
-. Fare clic su *Invia*.
+. Selezionare *Invia*.
 +
 Se non è stata selezionata la casella di controllo *Salta precheck*, l'host viene validato per verificare se l'host soddisfa i requisiti per l'installazione del plug-in. Lo spazio su disco, la RAM, la versione di PowerShell, la versione di .NET, la posizione (per i plug-in Windows) e la versione di Java (per i plug-in Linux) sono validati in base ai requisiti minimi. Se i requisiti minimi non vengono soddisfatti, vengono visualizzati messaggi di errore o di avviso appropriati.
 
@@ -169,7 +169,7 @@ Se l'errore riguarda lo spazio su disco o la RAM, è possibile aggiornare il fil
 
 NOTE: In una configurazione ha, se si aggiorna il file web.config, è necessario aggiornare il file su entrambi i nodi.
 
-. Se il tipo di host è Linux, verificare l'impronta digitale, quindi fare clic su *Confirm and Submit* (Conferma e invia).
+. Se il tipo di host è Linux, verificare l'impronta digitale, quindi selezionare *Confirm and Submit* (Conferma e invia).
 +
 
 NOTE: La verifica dell'impronta digitale è obbligatoria anche se lo stesso host è stato aggiunto in precedenza a SnapCenter e l'impronta digitale è stata confermata.

@@ -13,8 +13,7 @@ summary: È possibile utilizzare SnapCenter per ripristinare e ripristinare i da
 [role="lead"]
 È possibile utilizzare SnapCenter per ripristinare e ripristinare i dati da uno o più backup.
 
-*Cosa ti serve*
-
+.Di cosa hai bisogno
 * È necessario aver eseguito il backup delle risorse o dei gruppi di risorse.
 * È necessario annullare qualsiasi operazione di backup attualmente in corso per la risorsa o il gruppo di risorse che si desidera ripristinare.
 * Per i comandi di pre-restore, post-restore, mount e unmount, controllare se i comandi esistono nell'elenco dei comandi disponibile sull'host del plug-in dai seguenti percorsi:
@@ -30,14 +29,12 @@ NOTE: Se i comandi non sono presenti nell'elenco dei comandi, l'operazione avrà
 
 
 
-*A proposito di questa attività*
-
+.A proposito di questa attività
 * Le copie di backup basate su file non possono essere ripristinate da SnapCenter.
 * Dopo l'aggiornamento a SnapCenter 4.3, i backup eseguiti in SnapCenter 4.2 possono essere ripristinati ma non ripristinati. Per ripristinare i backup eseguiti in SnapCenter 4.2, è necessario utilizzare script di ripristino HANA Studio o HANA esterni a SnapCenter.
 
 
-*Fasi*
-
+.Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina risorse, filtrare le risorse dall'elenco a discesa *Visualizza* in base al tipo di risorsa.
 +

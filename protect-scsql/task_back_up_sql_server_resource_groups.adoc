@@ -13,14 +13,13 @@ summary: È possibile eseguire il backup di un gruppo di risorse su richiesta da
 [role="lead"]
 È possibile eseguire il backup di un gruppo di risorse su richiesta dalla pagina risorse. Se un gruppo di risorse dispone di un criterio associato e di una pianificazione configurata, i backup vengono eseguiti automaticamente in base alla pianificazione.
 
-*Fasi*
-
-. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+.Fasi
+. Nel riquadro di spostamento di sinistra, selezionare *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina Resources (risorse), selezionare *Resource Group* (Gruppo di risorse) dall'elenco *View* (Visualizza).
 +
-È possibile cercare il gruppo di risorse inserendo il nome del gruppo di risorse nella casella di ricerca oppure facendo clic su *image:../media/filter_icon.gif[""]*, quindi selezionare il tag. Quindi fare clic su *image:../media/filter_icon.gif[""]* per chiudere il riquadro del filtro.
+È possibile cercare il gruppo di risorse inserendo il nome del gruppo di risorse nella casella di ricerca oppure selezionando *image:../media/filter_icon.gif["Icona del filtro"]*, quindi selezionare il tag. Quindi selezionare *image:../media/filter_icon.gif["Icona del filtro"]* per chiudere il riquadro del filtro.
 
-. Nella pagina gruppi di risorse, selezionare il gruppo di risorse di cui si desidera eseguire il backup, quindi fare clic su *Esegui backup ora*.
+. Nella pagina gruppi di risorse, selezionare il gruppo di risorse di cui si desidera eseguire il backup, quindi selezionare *Esegui backup ora*.
 . Nella pagina Backup, attenersi alla seguente procedura:
 +
 .. Se sono stati associati più criteri al gruppo di risorse, selezionare il criterio da utilizzare per il backup dall'elenco a discesa *Policy*.
@@ -31,14 +30,13 @@ Se il criterio selezionato per il backup on-demand è associato a una pianificaz
 +
 L'opzione *verify* del criterio si applica solo ai processi pianificati.
 
-.. Fare clic su *Backup*.
+.. Selezionare *Backup*.
 
 
-. Monitorare l'avanzamento dell'operazione facendo clic su *Monitor* > *Jobs*.
+. Monitorare l'avanzamento dell'operazione selezionando *Monitor* > *Jobs*.
 
 
-*Ulteriori informazioni*
-
+.Cosa succederà?
 link:task_create_backup_policies_for_sql_server_databases.html["Creare criteri di backup per i database di SQL Server"]
 
 link:task_create_resource_groups_and_attach_policies_for_sql_server.html["Creare gruppi di risorse e allegare criteri per SQL Server"]

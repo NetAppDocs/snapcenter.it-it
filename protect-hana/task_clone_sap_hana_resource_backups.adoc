@@ -13,8 +13,7 @@ summary: 'Il flusso di lavoro dei cloni include l"esecuzione dell"operazione di 
 [role="lead"]
 Il flusso di lavoro dei cloni include l'esecuzione dell'operazione di cloni e il monitoraggio dell'operazione.
 
-*A proposito di questa attività*
-
+.A proposito di questa attività
 * È possibile clonare sul server SAP HANA di origine.
 * È possibile clonare i backup delle risorse per i seguenti motivi:
 +
