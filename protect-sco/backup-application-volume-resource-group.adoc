@@ -24,7 +24,7 @@ Per impostazione predefinita, vengono creati i backup del gruppo di coerenza (CG
 . Nel riquadro di navigazione a sinistra, fare clic su *Resources*, quindi selezionare il plug-in Oracle Database dall'elenco.
 . Nella pagina Resources (risorse), selezionare *Resource Group* (Gruppo di risorse) dall'elenco *View* (Visualizza).
 +
-È possibile cercare il gruppo di risorse inserendo il nome del gruppo di risorse nella casella di ricerca oppure facendo clic su *image:../media/filter_icon.gif[""]*, quindi selezionare il tag. Quindi fare clic su *image:../media/filter_icon.gif[""]* per chiudere il riquadro del filtro.
+È possibile cercare il gruppo di risorse inserendo il nome del gruppo di risorse nella casella di ricerca oppure facendo clic su *image:../media/filter_icon.png[""]*, quindi selezionare il tag. Quindi fare clic su *image:../media/filter_icon.png[""]* per chiudere il riquadro del filtro.
 
 . Nella pagina gruppi di risorse, selezionare il gruppo di risorse di cui si desidera eseguire il backup, quindi fare clic su *Esegui backup ora*.
 . Nella pagina Backup, attenersi alla seguente procedura:

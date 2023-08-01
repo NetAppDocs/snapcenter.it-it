@@ -31,7 +31,7 @@ IMPORTANT: Se si lavora in un contesto di file system Windows, non eseguire il b
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina Resources (risorse), selezionare *Resource Group* (Gruppo di risorse) dall'elenco *View* (Visualizza).
 +
-È possibile cercare il gruppo di risorse inserendo il nome del gruppo di risorse nella casella di ricerca o facendo clic su image:../media/filter_icon.gif[""] e selezionando il tag. Quindi fare clic su image:../media/filter_icon.gif[""] per chiudere il riquadro del filtro.
+È possibile cercare il gruppo di risorse inserendo il nome del gruppo di risorse nella casella di ricerca o facendo clic su image:../media/filter_icon.png[""] e selezionando il tag. Quindi fare clic su image:../media/filter_icon.png[""] per chiudere il riquadro del filtro.
 
 . Nella pagina gruppi di risorse, selezionare il gruppo di risorse di cui si desidera eseguire il backup, quindi fare clic su *Esegui backup ora*.
 +

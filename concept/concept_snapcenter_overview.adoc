@@ -28,13 +28,13 @@ SnapCenter può essere implementato nei seguenti modi:
 +
 ** Dati presenti nei sistemi primari ONTAP FAS, AFF o All SAN Array (ASA) e replicati nei sistemi secondari ONTAP FAS, AFF o ASA
 ** Dati sui sistemi primari ONTAP Select
-** Dati su sistemi primari e secondari ONTAP FAS, AFF o ASA e protetti sullo storage a oggetti StorageGRID locale (utilizzando l'integrazione del backup cloud NetApp BlueXP)
+** Dati presenti nei sistemi primari e secondari ONTAP FAS, AFF o ASA e protetti nello storage a oggetti StorageGRID locale
 
 
 * On-premise in un cloud ibrido per proteggere:
 +
 ** Dati presenti nei sistemi primari ONTAP FAS, AFF o ASA e replicati in Cloud Volumes ONTAP
-** Dati su sistemi primari e secondari ONTAP FAS, AFF o ASA e protetti per lo storage di oggetti e archivi nel cloud (utilizzando l'integrazione di NetApp BlueXP Cloud Backup)
+** Dati su sistemi primari e secondari ONTAP FAS, AFF o ASA e protetti per lo storage di oggetti e archivi nel cloud (utilizzando l'integrazione di backup e ripristino BlueXP)
 
 
 * In un cloud pubblico per proteggere:
@@ -184,9 +184,10 @@ Il server SnapCenter comunica con i plug-in di Windows tramite l'agente host.
 
 
 
-Il server SnapCenter e i plug-in comunicano con l'agente host utilizzando HTTPS.
+Il server SnapCenter e i plug-in comunicano con l'agente host utilizzando HTTPS. Le informazioni sulle operazioni SnapCenter vengono memorizzate nel repository SnapCenter.
 
-Le informazioni sulle operazioni SnapCenter vengono memorizzate nel repository SnapCenter.
+
+NOTE: SnapCenter supporta lo spazio dei nomi disgiunto per gli host Windows. Se si verificano problemi durante l'utilizzo di uno spazio dei nomi discongiunto, fare riferimento a. https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_is_unable_to_discover_resources_when_using_disjoint_namespace["SnapCenter non è in grado di rilevare le risorse quando si utilizza uno spazio dei nomi discongiunto"].
 
 
 

@@ -81,7 +81,7 @@ Se è stato eliminato un database Oracle sull'host, il server SnapCenter non sar
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina Resources (risorse), selezionare *Database* dall'elenco *View* (Visualizza).
 +
-Fare clic su image:../media/filter_icon.gif[""], quindi selezionare il nome host e il tipo di database per filtrare le risorse. Quindi, fare clic su image:../media/filter_icon.gif[""] per chiudere il pannello dei filtri.
+Fare clic su image:../media/filter_icon.png[""], quindi selezionare il nome host e il tipo di database per filtrare le risorse. Quindi, fare clic su image:../media/filter_icon.png[""] per chiudere il pannello dei filtri.
 
 . Fare clic su *Aggiorna risorse*.
 +

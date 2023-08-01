@@ -21,9 +21,9 @@ Per impostazione predefinita, vengono creati i backup del gruppo di coerenza (CG
 
 . Nel riquadro di navigazione a sinistra, fare clic su *Resources*, quindi selezionare il plug-in Oracle Database dall'elenco.
 . Nella pagina Resources (risorse), selezionare *Application Volume* (Volume applicazione) dall'elenco *View* (Visualizza).
-. Fare clic su *image:../media/filter_icon.gif[""]*, quindi selezionare il nome host e il tipo di database per filtrare le risorse.
+. Fare clic su *image:../media/filter_icon.png[""]*, quindi selezionare il nome host e il tipo di database per filtrare le risorse.
 +
-Quindi fare clic su *image:../media/filter_icon.gif[""]* per chiudere il riquadro del filtro.
+Quindi fare clic su *image:../media/filter_icon.png[""]* per chiudere il riquadro del filtro.
 
 . Selezionare il volume dell'applicazione di cui si desidera eseguire il backup.
 +

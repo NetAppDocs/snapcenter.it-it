@@ -41,19 +41,19 @@ Per Linux: _/var/opt/snapcenter/scc/allowed_comands_list.txt_
 NOTE: Se i comandi non sono presenti nell'elenco dei comandi, l'operazione avrà esito negativo.
 
 .Fasi
-. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nel riquadro di spostamento di sinistra, selezionare *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina Resource, filtrare le risorse dall'elenco a discesa *View* in base al tipo di risorsa.
 +
-Fare clic su *image:../media/filter_icon.gif[""]*, quindi selezionare il nome host e il tipo di risorsa per filtrare le risorse. Quindi fare clic su image:../media/filter_icon.gif[""] per chiudere il riquadro del filtro.
+Selezionare *image:../media/filter_icon.png[""]*, quindi selezionare il nome host e il tipo di risorsa per filtrare le risorse. Quindi selezionare image:../media/filter_icon.png[""] per chiudere il riquadro del filtro.
 
-. Fare clic sulla risorsa di cui si desidera eseguire il backup.
+. Selezionare la risorsa di cui si desidera eseguire il backup.
 . Nella pagina Resource, selezionare *Use customed name format for Snapshot copy* (Usa formato nome personalizzato per la copia Snapshot), quindi immettere un formato nome personalizzato da utilizzare per il nome della copia Snapshot.
 +
 Ad esempio, _customtext_policy_hostname_ o _resource_hostname_. Per impostazione predefinita, al nome della copia Snapshot viene aggiunto un indicatore data e ora.
 
 . Nella pagina Impostazioni applicazione, effettuare le seguenti operazioni:
 +
-** Fare clic sulla freccia *Backup* per impostare opzioni di backup aggiuntive:
+** Selezionare la freccia *Backup* per impostare opzioni di backup aggiuntive:
 +
 Attivare il backup dei gruppi di coerenza, se necessario, ed eseguire le seguenti attività:
 
@@ -75,12 +75,12 @@ Disattiva sincronizzazione WAFL
 Selezionare questa opzione per evitare di forzare un punto di coerenza WAFL.
 
 |===
-** Fare clic sulla freccia *Scripts* per eseguire i comandi pre e post per le operazioni di quiesce, copia Snapshot e senza richieste.
+** Selezionare la freccia *Scripts* per eseguire i comandi pre e post per le operazioni quiesce, copia Snapshot e senza richieste.
 +
 È inoltre possibile eseguire i comandi preliminari prima di uscire dall'operazione di backup. Le prescrizioni e i postscript vengono eseguiti nel server SnapCenter.
 
-** Fare clic sulla freccia **configurazioni personalizzate**, quindi immettere le coppie di valori personalizzate richieste per tutti i lavori che utilizzano questa risorsa.
-** Fare clic sulla freccia *Snapshot Copy Tool* per selezionare lo strumento per creare le copie Snapshot:
+** Selezionare la freccia **configurazioni personalizzate**, quindi immettere le coppie di valori personalizzati richieste per tutti i lavori che utilizzano questa risorsa.
+** Selezionare la freccia *Snapshot Copy Tool* per selezionare lo strumento per creare le copie Snapshot:
 +
 |===
 | Se vuoi... | Quindi... 
@@ -121,8 +121,8 @@ NOTE: Puoi anche creare una policy facendo clic su *image:../media/add_policy_fr
 +
 Nella sezione Configure schedules for selected policies (Configura pianificazioni per policy selezionate), vengono elencati i criteri selezionati.
 
-.. Fare clic su *image:../media/add_policy_from_resourcegroup.gif[""]* Nella colonna Configure Schedules (Configura pianificazioni) per il criterio per il quale si desidera configurare una pianificazione.
-.. Nella finestra di dialogo Add schedules for policy _policy_name_, configurare la pianificazione, quindi fare clic su *OK*.
+.. Selezionare *image:../media/add_policy_from_resourcegroup.gif[""]* Nella colonna Configure Schedules (Configura pianificazioni) per il criterio per il quale si desidera configurare una pianificazione.
+.. Nella finestra di dialogo Add schedules for policy _policy_name_, configurare la pianificazione, quindi selezionare *OK*.
 +
 _policy_name_ è il nome del criterio selezionato.
 
@@ -135,18 +135,18 @@ Le pianificazioni configurate sono elencate nella colonna Applied Schedules (Pia
 +
 È inoltre necessario specificare gli indirizzi e-mail del mittente e del destinatario e l'oggetto dell'e-mail. SMTP deve essere configurato anche in *Impostazioni* > *Impostazioni globali*.
 
-. Esaminare il riepilogo, quindi fare clic su *fine*.
+. Esaminare il riepilogo, quindi selezionare *fine*.
 +
 Viene visualizzata la pagina della topologia delle risorse.
 
-. Fare clic su *Esegui backup ora*.
+. Selezionare *Esegui backup ora*.
 . Nella pagina Backup, attenersi alla seguente procedura:
 +
 .. Se sono stati applicati più criteri alla risorsa, selezionare il criterio da utilizzare per il backup dall'elenco a discesa *Policy*.
 +
 Se il criterio selezionato per il backup on-demand è associato a una pianificazione di backup, i backup on-demand verranno conservati in base alle impostazioni di conservazione specificate per il tipo di pianificazione.
 
-.. Fare clic su *Backup*.
+.. Selezionare *Backup*.
 
 
 . Monitorare l'avanzamento dell'operazione facendo clic su *Monitor* > *Jobs*.

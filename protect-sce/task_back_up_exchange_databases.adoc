@@ -39,7 +39,7 @@ Nella pagina risorse, la image:../media/not_supported_icon.png[""] Indica che il
 NOTE: In un DAG, se una copia del database attiva si trova su uno storage non NetApp e almeno una copia passiva del database risiede su uno storage NetApp, è possibile proteggere il database.
 
 +
-Fare clic su *image:../media/filter_icon.gif[""]*, quindi selezionare il nome host e il tipo di database per filtrare le risorse. Quindi fare clic su *image:../media/filter_icon.gif[""]* per chiudere il riquadro del filtro.
+Fare clic su *image:../media/filter_icon.png[""]*, quindi selezionare il nome host e il tipo di database per filtrare le risorse. Quindi fare clic su *image:../media/filter_icon.png[""]* per chiudere il riquadro del filtro.
 
 +
 ** Se si desidera eseguire il backup di un database, fare clic sul nome del database.

@@ -42,7 +42,7 @@ I database non sono in stato normale quando sono in stato di mount, unmount, res
 Tutti i database e i DAG vengono visualizzati con i relativi nomi host o DAG in formato FQDN, in modo da poter distinguere tra più database.
 
 +
-Fare clic su image:../media/filter_icon.gif[""] E selezionare il nome host e il server Exchange per filtrare le risorse. Quindi fare clic su image:../media/filter_icon.gif[""] per chiudere il riquadro del filtro.
+Fare clic su image:../media/filter_icon.png[""] E selezionare il nome host e il server Exchange per filtrare le risorse. Quindi fare clic su image:../media/filter_icon.png[""] per chiudere il riquadro del filtro.
 
 . Fare clic su *Aggiorna risorse*.
 +
