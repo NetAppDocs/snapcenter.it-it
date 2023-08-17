@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/task_split_a_clone_for_windows.html 
 sidebar: sidebar 
-keywords:  
+keywords: split clone 
 summary: È possibile utilizzare SnapCenter per separare una risorsa clonata dalla risorsa principale. Il clone diviso diventa indipendente dalla risorsa padre. 
 ---
 = Separare un clone
@@ -13,8 +13,7 @@ summary: È possibile utilizzare SnapCenter per separare una risorsa clonata dal
 [role="lead"]
 È possibile utilizzare SnapCenter per separare una risorsa clonata dalla risorsa principale. Il clone diviso diventa indipendente dalla risorsa padre.
 
-*A proposito di questa attività*
-
+.A proposito di questa attività
 * Non è possibile eseguire l'operazione di suddivisione del clone su un clone intermedio.
 +
 Ad esempio, dopo aver creato il clone1 da un backup del database, è possibile creare un backup del clone1 e clonare il backup (clone2). Dopo aver creato il clone2, il clone1 è un clone intermedio e non è possibile eseguire l'operazione di suddivisione del clone sul clone1. Tuttavia, è possibile eseguire l'operazione di suddivisione dei cloni sul clone2.
@@ -27,10 +26,9 @@ Dopo aver diviso il clone2, è possibile eseguire l'operazione di divisione del 
 * Assicurarsi che il volume o l'aggregato sul sistema di storage sia online.
 
 
-*Fasi*
-
+.Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
-. Nella pagina risorse, selezionare l'opzione appropriata dall'elenco Visualizza:
+. Nella pagina *risorse*, selezionare l'opzione appropriata dall'elenco Visualizza:
 +
 |===
 | Opzione | Descrizione 
@@ -53,7 +51,7 @@ Selezionare *Path* dall'elenco View (Visualizza).
 +
 Viene visualizzata la pagina della topologia delle risorse.
 
-. Dalla vista Manage Copies (Gestisci copie), selezionare la risorsa clonata (ad esempio, il database o il LUN), quindi fare clic su *image:../media/split_cone.gif[""]*.
+. Nella vista *Gestisci copie*, selezionare la risorsa clonata (ad esempio, il database o il LUN), quindi fare clic su *image:../media/split_cone.gif["Icona del clone split"]*.
 . Esaminare le dimensioni stimate del clone da dividere e lo spazio richiesto disponibile sull'aggregato, quindi fare clic su *Start*.
 . Monitorare l'avanzamento dell'operazione facendo clic su *Monitor* > *Jobs*.
 +
@@ -75,6 +73,5 @@ L'operazione di avvio del clone split non riesce se sono in corso operazioni di 
 
 
 
-*Ulteriori informazioni*
-
+.Informazioni correlate
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_clone_or_verfication_fails_with_aggregate_does_not_exist["Il clone o la verifica di SnapCenter non riesce e l'aggregato non esiste"]

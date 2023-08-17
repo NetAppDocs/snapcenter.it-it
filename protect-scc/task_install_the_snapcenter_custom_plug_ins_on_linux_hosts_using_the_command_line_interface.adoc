@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_install_the_snapcenter_custom_plug_ins_on_linux_hosts_using_the_command_line_interface.html 
 sidebar: sidebar 
-keywords:  
+keywords: install, custom plug-in 
 summary: 'Installare i plug-in personalizzati di SnapCenter utilizzando l"interfaccia utente di SnapCenter. Se l"ambiente in uso non consente l"installazione remota del plug-in dall"interfaccia utente di SnapCenter, è possibile installare il plug-in personalizzato in modalità console o in modalità silenziosa utilizzando l"interfaccia della riga di comando (CLI).' 
 ---
 = Installare i plug-in personalizzati di SnapCenter sugli host Linux utilizzando l'interfaccia della riga di comando
@@ -13,8 +13,7 @@ summary: 'Installare i plug-in personalizzati di SnapCenter utilizzando l"interf
 [role="lead"]
 Installare i plug-in personalizzati di SnapCenter utilizzando l'interfaccia utente di SnapCenter. Se l'ambiente in uso non consente l'installazione remota del plug-in dall'interfaccia utente di SnapCenter, è possibile installare i plug-in personalizzati in modalità console o in modalità silenziosa utilizzando l'interfaccia a riga di comando (CLI).
 
-*Fasi*
-
+.Fasi
 . Copiare il file di installazione del pacchetto plug-in SnapCenter per Linux (Snapcenter_linux_host_plugin.bin) da C: ProgramData/NetApp SnapCenter/Package Repository all'host in cui si desidera installare i plug-in personalizzati.
 +
 È possibile accedere a questo percorso dall'host in cui è installato il server SnapCenter.

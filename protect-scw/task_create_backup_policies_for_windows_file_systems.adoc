@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/task_create_backup_policies_for_windows_file_systems.html 
 sidebar: sidebar 
-keywords:  
+keywords: backup policy 
 summary: È possibile creare un nuovo criterio di backup per le risorse prima di utilizzare SnapCenter per eseguire il backup dei file system Windows oppure creare un nuovo criterio di backup al momento della creazione di un gruppo di risorse o del backup di una risorsa. 
 ---
 = Creare criteri di backup per i file system Windows
@@ -13,8 +13,7 @@ summary: È possibile creare un nuovo criterio di backup per le risorse prima di
 [role="lead"]
 È possibile creare un nuovo criterio di backup per le risorse prima di utilizzare SnapCenter per eseguire il backup dei file system Windows oppure creare un nuovo criterio di backup al momento della creazione di un gruppo di risorse o del backup di una risorsa.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 * È necessario aver definito la strategia di backup. link:task_define_a_backup_strategy_for_windows_file_systems.html["Scopri di più"^]
 * Devi essere preparato per la protezione dei dati.
 +
@@ -27,8 +26,7 @@ Il valore predefinito è false
 
 
 
-*A proposito di questa attività*
-
+.A proposito di questa attività
 * IL PERCORSO_SCRIPT viene definito utilizzando la chiave PredesedWindowsScriptsDirectory situata nel file SMCoreServiceHost.exe.Config dell'host del plug-in.
 +
 Se necessario, è possibile modificare questo percorso e riavviare il servizio SMcore. Si consiglia di utilizzare il percorso predefinito per la protezione.
@@ -41,8 +39,7 @@ Il valore della chiave può essere visualizzato da swagger attraverso l'API: API
 
 
 
-*Fasi*
-
+.Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *Impostazioni*.
 . Nella pagina Impostazioni, fare clic su *Criteri*.
 . Per determinare se è possibile utilizzare un criterio esistente, selezionare il nome del criterio e fare clic su *Dettagli*.

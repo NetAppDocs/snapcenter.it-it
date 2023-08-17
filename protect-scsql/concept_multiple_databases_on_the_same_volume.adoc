@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/concept_multiple_databases_on_the_same_volume.html 
 sidebar: sidebar 
-keywords:  
+keywords: Multiple databases 
 summary: 'È possibile inserire tutti i database nello stesso volume, poiché il criterio di backup dispone di un"opzione per impostare il numero massimo di database per ogni backup (il valore predefinito è 100).' 
 ---
 = Database multipli sullo stesso volume

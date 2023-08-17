@@ -13,8 +13,7 @@ summary: È possibile utilizzare il file eseguibile del programma di installazio
 [role="lead"]
 È possibile utilizzare il file eseguibile del programma di installazione del server SnapCenter per aggiornare il server SnapCenter.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 * L'host del server SnapCenter deve essere aggiornato con gli aggiornamenti di Windows, senza riavvii del sistema in sospeso.
 * Prima di iniziare l'operazione di aggiornamento, assicurarsi che non siano in esecuzione altre operazioni.
 * È necessario eseguire il backup del database del repository SnapCenter (MySQL) dopo aver eseguito tutti i processi. Si consiglia di eseguire l'aggiornamento del server SnapCenter e del plug-in Exchange.
@@ -27,8 +26,7 @@ Esempi di file di configurazione di SnapCenter: SnapDriveService.exe.config, SMC
 
 
 
-*A proposito di questa attività*
-
+.A proposito di questa attività
 * Durante l'aggiornamento, l'host viene automaticamente messo in modalità di manutenzione che impedisce all'host di eseguire qualsiasi processo pianificato. Dopo l'aggiornamento, l'host viene automaticamente disattivato dalla modalità di manutenzione.
 * Durante l'aggiornamento, viene eseguito uno script SQL per aggiornare i dati di Exchange nel database NSM, che converte il DAG e il shortname host in FQDN. Questa opzione è applicabile solo se si utilizza il server SnapCenter con il plug-in Exchange.
 * Prima di iniziare l'operazione di aggiornamento, se l'host è stato impostato manualmente in modalità di manutenzione, dopo l'aggiornamento è necessario disattivare manualmente la modalità di manutenzione dell'host facendo clic su *host* > *attiva pianificazione*.
@@ -41,8 +39,7 @@ Nella pagina *Dettagli lavoro*, un messaggio di avviso consiglia al cliente di c
 
 
 
-*Fasi*
-
+.Fasi
 . Scaricare il pacchetto di installazione del server SnapCenter dal sito del supporto NetApp.
 +
 https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab[]
@@ -79,8 +76,7 @@ In qualsiasi momento, facendo clic sul pulsante *Annulla*, il flusso di lavoro d
 |===
 
 
-*Al termine*
-
+.Al termine
 * Se il plug-in viene installato utilizzando un utente sudo, copiare le chiavi sha224 disponibili in _C: ProgramData/NetApp/SnapCenter/Package Repository/oracle_checksum.txt_ per aggiornare il file _/etc/sudoers_.
 * È necessario eseguire un nuovo rilevamento delle risorse sugli host.
 +

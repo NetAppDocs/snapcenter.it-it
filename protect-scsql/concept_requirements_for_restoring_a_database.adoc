@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/concept_requirements_for_restoring_a_database.html 
 sidebar: sidebar 
-keywords:  
+keywords: Requirements 
 summary: Prima di ripristinare un database SQL Server da un plug-in SnapCenter per il backup di Microsoft SQL Server, è necessario assicurarsi che siano soddisfatti diversi requisiti. 
 ---
 = Requisiti per il ripristino di un database

@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_manage_hosts.html 
 sidebar: sidebar 
-keywords:  
+keywords: Manage hosts 
 summary: 'È possibile aggiungere host e installare pacchetti di plug-in SnapCenter, aggiungere un server di verifica, rimuovere host, migrare processi di backup e aggiornare host per aggiornare pacchetti di plug-in o aggiungere nuovi pacchetti di plug-in. A seconda del plug-in in in uso, è inoltre possibile eseguire il provisioning dei dischi, gestire le condivisioni SMB, gestire i gruppi di iniziatori (igroups), gestire le sessioni iSCSI e migrare i dati.' 
 ---
 = Gestire gli host
@@ -244,7 +244,7 @@ Quando i plug-in vengono installati con gMSA, è possibile modificarli nelle fin
 . Fare clic su *Invia*.
 
 
-*Risultati*
+*Risultato*
 
 L'host viene validato e aggiunto al server SnapCenter.
 
@@ -291,7 +291,7 @@ NOTE: Non è necessario interrompere prima il servizio plug-in. Il servizio plug
 
 
 
-*Risultati*
+*Risultato*
 
 Dopo aver sospeso le pianificazioni sull'host, la pagina Managed hosts (host gestiti) mostra *Suspended* nel campo di stato generale dell'host.
 

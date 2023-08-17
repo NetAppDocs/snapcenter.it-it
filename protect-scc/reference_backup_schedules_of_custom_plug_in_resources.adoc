@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/reference_backup_schedules_of_custom_plug_in_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: custom plug-in 
 summary: Il fattore più critico per determinare una pianificazione di backup è il tasso di cambiamento per la risorsa. Più spesso si esegue il backup delle risorse, minore è il numero di log di archiviazione che SnapCenter deve utilizzare per il ripristino, che può comportare operazioni di ripristino più rapide. 
 ---
 = Pianificazioni di backup di risorse plug-in personalizzate

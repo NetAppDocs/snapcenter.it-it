@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/concept_backup_retention_options_for_plugin_for_sql.html 
 sidebar: sidebar 
-keywords:  
+keywords: Backup retention options 
 summary: 'È possibile scegliere il numero di giorni per i quali conservare le copie di backup o specificare il numero di copie di backup che si desidera conservare, fino a un massimo di 255 copie ONTAP. Ad esempio, l"organizzazione potrebbe richiedere di conservare 10 giorni di copie di backup o 130 copie di backup.' 
 ---
 = Opzioni di conservazione del backup per il plug-in per SQL Server

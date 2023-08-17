@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_create_backup_policies_for_sql_server_databases.html 
 sidebar: sidebar 
-keywords:  
+keywords: backup policy 
 summary: È possibile creare un criterio di backup per la risorsa o il gruppo di risorse prima di utilizzare SnapCenter per eseguire il backup delle risorse di SQL Server oppure creare un criterio di backup al momento della creazione di un gruppo di risorse o del backup di una singola risorsa. 
 ---
 = Creare criteri di backup per i database di SQL Server
@@ -13,7 +13,7 @@ summary: È possibile creare un criterio di backup per la risorsa o il gruppo di
 [role="lead"]
 È possibile creare un criterio di backup per la risorsa o il gruppo di risorse prima di utilizzare SnapCenter per eseguire il backup delle risorse di SQL Server oppure creare un criterio di backup al momento della creazione di un gruppo di risorse o del backup di una singola risorsa.
 
-.Di cosa hai bisogno
+.Prima di iniziare
 * Devi aver definito la tua strategia di protezione dei dati.
 * Devi essere preparato per la protezione dei dati completando attività come l'installazione di SnapCenter, l'aggiunta di host, l'identificazione delle risorse e la creazione di connessioni al sistema di storage.
 * È necessario aver configurato la directory del registro host per il backup del registro.

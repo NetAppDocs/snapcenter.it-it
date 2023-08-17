@@ -13,8 +13,7 @@ summary: Ottenere il thumbprint del certificato CA.
 [role="lead"]
 Un'identificazione personale del certificato è una stringa esadecimale che identifica un certificato. Un'identificazione personale viene calcolata dal contenuto del certificato utilizzando un algoritmo di identificazione personale.
 
-*Fasi*
-
+.Fasi
 . Eseguire le seguenti operazioni sulla GUI:
 +
 .. Fare doppio clic sul certificato.

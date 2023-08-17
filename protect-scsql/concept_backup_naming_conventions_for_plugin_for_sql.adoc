@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/concept_backup_naming_conventions_for_plugin_for_sql.html 
 sidebar: sidebar 
-keywords:  
+keywords: Backup naming conventions 
 summary: È possibile utilizzare la convenzione di denominazione predefinita per la copia Snapshot o una convenzione di denominazione personalizzata. La convenzione di denominazione predefinita per il backup aggiunge un indicatore data e ora ai nomi delle copie Snapshot che consente di identificare quando sono state create le copie. 
 ---
 = Convenzioni di denominazione del backup per il plug-in per SQL Server

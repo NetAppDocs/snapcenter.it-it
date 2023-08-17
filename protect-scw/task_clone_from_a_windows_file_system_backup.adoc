@@ -13,8 +13,7 @@ summary: È possibile utilizzare SnapCenter per clonare un backup del file syste
 [role="lead"]
 È possibile utilizzare SnapCenter per clonare un backup del file system Windows. Se si desidera una copia di un singolo file che è stata erroneamente eliminata o modificata, è possibile clonare un backup e accedere a tale file nel clone.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 * Dovresti aver preparato per la protezione dei dati completando attività come l'aggiunta di host, l'identificazione delle risorse e la creazione di connessioni alle macchine virtuali di storage (SVM).
 * Si dovrebbe disporre di un backup del file system.
 * Assicurarsi che gli aggregati che ospitano i volumi siano inclusi nell'elenco degli aggregati assegnati della macchina virtuale di storage (SVM).
@@ -28,8 +27,7 @@ summary: È possibile utilizzare SnapCenter per clonare un backup del file syste
 * Non è possibile clonare in più ambienti. Ad esempio, la clonazione da un disco fisico a un disco virtuale o viceversa.
 
 
-*A proposito di questa attività*
-
+.A proposito di questa attività
 * IL PERCORSO_SCRIPT viene definito utilizzando la chiave PredesedWindowsScriptsDirectory situata nel file SMCoreServiceHost.exe.Config dell'host del plug-in.
 +
 Se necessario, è possibile modificare questo percorso e riavviare il servizio SMcore. Si consiglia di utilizzare il percorso predefinito per la protezione.
@@ -42,8 +40,7 @@ Il valore della chiave può essere visualizzato da swagger attraverso l'API: API
 
 
 
-*Fasi*
-
+.Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina Resources (risorse), selezionare *file Systems* dall'elenco.
 . Selezionare l'host.

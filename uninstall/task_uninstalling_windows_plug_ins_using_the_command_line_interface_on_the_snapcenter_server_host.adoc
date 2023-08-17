@@ -15,8 +15,7 @@ summary: 'È possibile disinstallare singoli plug-in o disinstallare pacchetti d
 
 È necessario aver effettuato l'accesso a SnapCenter come utente di dominio con diritti di amministratore locale su ciascun host su cui si desidera disinstallare i plug-in.
 
-*Fasi*
-
+.Fasi
 . Avviare PowerShell.
 . Nell'host del server SnapCenter, immettere il comando: _Open-SMConnection -SMSbaseUrl https://SNAPCENTER_SERVER_NAME/DOMAIN_NAME_, quindi immettere le credenziali.
 . Disinstallare i plug-in di Windows utilizzando il cmdlet _Uninstall-SmHostPackage_ e i parametri richiesti.

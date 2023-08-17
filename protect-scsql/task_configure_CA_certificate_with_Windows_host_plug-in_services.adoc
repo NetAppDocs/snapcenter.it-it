@@ -15,8 +15,7 @@ summary: Configurare il certificato CA con i servizi plug-in host di Windows
 
 Eseguire le seguenti operazioni sul server SnapCenter e su tutti gli host plug-in in cui sono già implementati i certificati CA.
 
-*Fasi*
-
+.Fasi
 . Rimuovere l'associazione del certificato esistente con la porta predefinita SMCore 8145, eseguendo il seguente comando:
 +
 `> netsh http delete sslcert ipport=0.0.0.0:_<SMCore Port>`

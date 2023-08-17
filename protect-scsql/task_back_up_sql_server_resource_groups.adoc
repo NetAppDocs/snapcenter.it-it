@@ -36,7 +36,7 @@ L'opzione *verify* del criterio si applica solo ai processi pianificati.
 . Monitorare l'avanzamento dell'operazione selezionando *Monitor* > *Jobs*.
 
 
-.Cosa succederà?
+.Informazioni correlate
 link:task_create_backup_policies_for_sql_server_databases.html["Creare criteri di backup per i database di SQL Server"]
 
 link:task_create_resource_groups_and_attach_policies_for_sql_server.html["Creare gruppi di risorse e allegare criteri per SQL Server"]

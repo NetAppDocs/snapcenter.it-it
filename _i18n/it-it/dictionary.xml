@@ -107,7 +107,6 @@
   <block id="18dd8bff286ad496b3933c00b69968bc" category="inline-image-macro">Processo di verifica in coda</block>
   <block id="d208aa08a03da9a8a8e5bd96ad0fedae" category="list-text"><block ref="ef6f1c216f28d7814323778090034017" category="inline-image-macro-rx" type="image"></block> In coda</block>
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="inline-image-macro"></block>
-  <block id="cc9dbc9fb7810be481501a3376208520" category="list-text"><block ref="c646c5e33fd3a6c1e32ebcb9f24cc88e" category="inline-image-macro-rx" type="image"></block> Annullato</block>
   <block id="b40a6c0b08ac99c86eb676e2689c6996" category="list-text">Nel riquadro di spostamento di sinistra, fare clic su *Monitor*.</block>
   <block id="c0a63413cafa6a465f587d5835701c87" category="list-text">Nella pagina Monitor, fare clic su *Jobs*.</block>
   <block id="3160f4991d365988a865df5567f2147f" category="list-text">Nella pagina lavori, attenersi alla seguente procedura:</block>
@@ -512,7 +511,6 @@
   <block id="f6886255755dd305e56a1cf9fcf3c5ee" category="paragraph">Per file system</block>
   <block id="efcc8219675b74be2ea4ec68fc2b81f2" category="paragraph">Selezionare *Path* dall'elenco View (Visualizza).</block>
   <block id="c0a1b33f51c24ec7a0237c45c3a450f8" category="list-text">Selezionare la risorsa appropriata dall'elenco.</block>
-  <block id="e3bd3cf6b34ce0697d272736f31e2591" category="list-text">Dalla vista Manage Copies (Gestisci copie), selezionare la risorsa clonata (ad esempio, il database o il LUN), quindi fare clic su *<block ref="4e76ccc6d666f337d0615fe61d91903b" category="inline-image-macro-rx" type="image"></block>*.</block>
   <block id="f5cfd65b6cd03934d8269e3f878035d8" category="list-text">Esaminare le dimensioni stimate del clone da dividere e lo spazio richiesto disponibile sull'aggregato, quindi fare clic su *Start*.</block>
   <block id="ff09e99880e5a1ea7500cf09b4e8de2a" category="paragraph">Se il servizio SMCore viene riavviato, l'operazione di split clone smette di rispondere. Eseguire il cmdlet Stop-SmJob per interrompere l'operazione di suddivisione del clone, quindi riprovare l'operazione di suddivisione del clone.</block>
   <block id="a1f1e133a5541124ced1ecc394830a0e" category="paragraph">Se si desidera un tempo di polling più lungo o più breve per controllare se il clone è diviso o meno, è possibile modificare il valore del parametro _CloneSplitStatusCheckPollTime_ nel file _SMCoreServiceHost.exe.config_ per impostare l'intervallo di tempo in cui SMCore deve eseguire il polling per lo stato dell'operazione di suddivisione del clone. Il valore è espresso in millisecondi e il valore predefinito è 5 minuti.</block>
@@ -553,7 +551,6 @@
   <block id="b72c1a4ab7bb6fc983db42dc53c66195" category="list-text">Fare clic su *altre opzioni*.</block>
   <block id="375a181d7ebb0615169d54c45e53d2bc" category="list-text">Selezionare *attiva convalida certificato*.</block>
   <block id="b4d0227107743ec31d2715eb9e3909db" category="paragraph">L'host della scheda host gestiti visualizza un lucchetto e il colore del lucchetto indica lo stato della connessione tra il server SnapCenter e l'host del plug-in.</block>
-  <block id="fb9cec4fab86d7df85120c1b74ee0864" category="list-text">*<block ref="ce7f8fe6cf825357e942960470acb5bc" category="inline-image-macro-rx" type="image"></block>* Indica che il certificato CA non è né abilitato né assegnato all'host del plug-in.</block>
   <block id="7e3928e5fbab66336d372237e4cbdf9e" category="list-text">*<block ref="8a3d7884daddd17bfb2b09432e2ce305" category="inline-image-macro-rx" type="image"></block>* Indica che il certificato CA è stato validato correttamente.</block>
   <block id="8258ae56901671cb007addfc10304189" category="list-text">*<block ref="06e27aa71e40b6b132770e924873ea71" category="inline-image-macro-rx" type="image"></block>* Indica che non è stato possibile validare il certificato CA.</block>
   <block id="68a38243967848fa994f49b48322e472" category="list-text">*<block ref="8f76bb3096524e73151026384cb04044" category="inline-image-macro-rx" type="image"></block>* indica che non è stato possibile recuperare le informazioni di connessione.</block>
@@ -715,7 +712,6 @@
   <block id="8decbf1aae0caf98d11e0d7812d18fa5" category="list-text">Selezionare il backup dalla tabella, quindi fare clic sulle icone di protezione dei dati per eseguire operazioni di ripristino, clonazione ed eliminazione.</block>
   <block id="54473c2cfe1570548e51b95d5d44628f" category="admonition">Non è possibile rinominare o eliminare i backup presenti nello storage secondario.</block>
   <block id="80720ca63de6ce126b5aefa74149e369" category="list-text">Se si desidera eliminare un clone, selezionarlo dalla tabella, quindi fare clic su <block ref="097a6d0ab39a212263c3129e9214fa08" category="inline-image-macro-rx" type="image"></block>.</block>
-  <block id="f5236905507f722bdfe8fab4cdd4de2b" category="list-text">Se si desidera suddividere un clone, selezionarlo dalla tabella, quindi fare clic su <block ref="4e76ccc6d666f337d0615fe61d91903b" category="inline-image-macro-rx" type="image"></block>.</block>
   <block id="bb24de3098becb559d31066692208382" category="summary">Prima di utilizzare SnapCenter per eseguire il backup delle risorse di database SAP HANA, è necessario creare una policy di backup per la risorsa o il gruppo di risorse di cui si desidera eseguire il backup. Un criterio di backup è un insieme di regole che regolano la gestione, la pianificazione e la conservazione dei backup.</block>
   <block id="2dad511118029c962a70a1aac4b16b52" category="doc">Creare policy di backup per i database SAP HANA</block>
   <block id="ed740a0593e2888b4f41c0fd5c5e3ca9" category="list-text">È necessario aver definito la strategia di backup.</block>
@@ -1138,7 +1134,6 @@
   <block id="6caa4afe72478c59bf8ac3860bb47274" category="doc">Monitorate le operazioni di protezione dei dati sui database SAP HANA nel riquadro attività</block>
   <block id="07c32e173146fec37a6631a5839e7295" category="paragraph">Il riquadro Activity (attività) visualizza informazioni relative alle operazioni di backup, ripristino, clonazione e backup pianificati. Se si utilizza il plug-in per SQL Server o il plug-in per Exchange Server, nel riquadro attività vengono visualizzate anche le informazioni relative all'operazione di riseeding.</block>
   <block id="9db06cff1e8eb604a482b82e3fc0ca83" category="list-text">Fare clic su <block ref="f176a951032bbb2fc179630a5e58fad8" category="inline-image-macro-rx" type="image"></block> Nel riquadro Activity (attività) per visualizzare le cinque operazioni più recenti.</block>
-  <block id="1bda1d3d1b1aa30c230856d37acc2121" category="paragraph">Quando si fa clic su una delle operazioni, i dettagli dell'operazione vengono elencati nella pagina Dettagli lavoro.</block>
   <block id="e53ba889508b719f73b0223755d7a145" category="summary">È possibile utilizzare SnapCenter per clonare un backup. È possibile clonare dal backup primario o secondario.</block>
   <block id="cc9ec1117ac60bf06e35d58497993679" category="doc">Clonare un backup del database SAP HANA</block>
   <block id="ff9ea1d5d9e34a2e53ae21ce93b5318b" category="list-text">È necessario aver eseguito il backup delle risorse o del gruppo di risorse.</block>
@@ -1206,7 +1201,6 @@
   <block id="d61e736bc78dc6b6bef444a82078d1f7" category="summary">È possibile monitorare lo stato di avanzamento dell'installazione del pacchetto plug-in di SnapCenter utilizzando la pagina lavori. Potrebbe essere necessario controllare lo stato di avanzamento dell'installazione per determinare quando è completa o se si è verificato un problema.</block>
   <block id="e1eb2f8f1b503096778da6fef42f7902" category="doc">Monitorare lo stato dell'installazione del plug-in per SAP HANA</block>
   <block id="85d5aeaf07c5de74b3bb67fa1aa2989a" category="paragraph">Nella pagina lavori vengono visualizzate le seguenti icone che indicano lo stato dell'operazione:</block>
-  <block id="242bcc86f62f0d46e4d2e051c2d27552" category="list-text">Nella pagina lavori, per filtrare l'elenco in modo che siano elencate solo le operazioni di installazione del plug-in, attenersi alla seguente procedura:</block>
   <block id="8e6dd3fc1948fff834e92e1bc58be40a" category="list-text">Fare clic su *Filter* (filtro).</block>
   <block id="108130668c07a2242712d2ed44b07d84" category="list-text">Facoltativo: Specificare la data di inizio e di fine.</block>
   <block id="8256a7aa0926979fc59c75e9490c7f04" category="list-text">Dal menu a discesa Type (tipo), selezionare *Plug-in installation* (Installazione plug-in).</block>
@@ -1237,15 +1231,11 @@
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">Le note legali forniscono l'accesso a dichiarazioni di copyright, marchi, brevetti e altro ancora.</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">Note legali</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">Copyright</block>
-  <block id="09e95b77ffe81fe465a83ba99efad5c8" category="paragraph"><block ref="09e95b77ffe81fe465a83ba99efad5c8" category="inline-link-rx"></block></block>
   <block id="126a02652da6de02962cf1b654fd6376" category="section-title">Marchi</block>
   <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NETAPP, il logo NETAPP e i marchi elencati nella pagina dei marchi NetApp sono marchi di NetApp, Inc. Altri nomi di società e prodotti potrebbero essere marchi dei rispettivi proprietari.</block>
-  <block id="7aa531e9acfe2b98e34d2c92fe9846ff" category="paragraph"><block ref="7aa531e9acfe2b98e34d2c92fe9846ff" category="inline-link-rx"></block></block>
   <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">Brevetti</block>
   <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">Un elenco aggiornato dei brevetti di proprietà di NetApp è disponibile all'indirizzo:</block>
-  <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
   <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">Direttiva sulla privacy</block>
-  <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">Open source</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">I file di avviso forniscono informazioni sul copyright e sulle licenze di terze parti utilizzate nel software NetApp.</block>
   <block id="5a4e7986bae0a2c894ba99a3277fcf98" category="paragraph">È possibile utilizzare il cmdlet Remove-SmBackup per eliminare i backup se non sono più necessari per altre operazioni di protezione dei dati.</block>
@@ -1832,7 +1822,6 @@
   <block id="5781848b1bb331dfcd7f6752d3ffd373" category="list-text">È possibile eliminare il plug-in SnapCenter per i backup di SQL Server creati durante il failover utilizzando l'interfaccia utente o il seguente cmdlet:<block ref="b31489ae99ae0edeb08e3c0657314a98" prefix=" " category="inline-code"></block></block>
   <block id="a8d03bc12fa704a66e02c6802c0766f8" category="summary">Quando il plug-in SnapCenter per SQL Server non è disponibile, attenersi alla procedura descritta di seguito per ripristinare il plug-in.</block>
   <block id="dc894d281805d8d1c222c04f94404928" category="doc">Disaster recovery del plug-in SnapCenter per SQL Server</block>
-  <block id="d59db7846bd10b6d60d21543df9faa9e" category="list-title">Di cosa hai bisogno</block>
   <block id="7a1a91fe74f7d2f66d8eabb50e547d5f" category="list-text">L'host secondario deve avere lo stesso sistema operativo, l'applicazione e il nome host dell'host primario.</block>
   <block id="51929aa5ac08be2aca8dda46b9a095b1" category="inline-link-macro">Gestire gli host</block>
   <block id="112fa4c1243fe1af31b4cf57c26ced23" category="list-text">Trasferire il plug-in SnapCenter per SQL Server a un host alternativo utilizzando la pagina *Aggiungi host* o *Modifica host*. Vedere <block ref="fc11fadbfb2b2b87f8c260a133d75ad2" category="inline-link-macro-rx"></block> per ulteriori informazioni.</block>
@@ -1840,7 +1829,6 @@
   <block id="8bcdd66a940ad127d312a11316df6669" category="list-text">Selezionare l'host dalla pagina *hosts* per modificare e installare il plug-in SnapCenter per SQL Server.</block>
   <block id="2a1a78f96ec6b03f3ccdd06b708e6f1a" category="list-text">(Facoltativo) sostituire il plug-in SnapCenter per i file di configurazione di SQL Server dal backup di disaster recovery (DR) al nuovo computer.</block>
   <block id="9f2c74676fb5b339a2fd4a0ccd75bd1e" category="list-text">Importare pianificazioni Windows e SQL dalla cartella del plug-in SnapCenter per SQL Server dal backup DR.</block>
-  <block id="d13de4a83d7b44c2e65495def8ef1c7b" category="paragraph-title">Per ulteriori informazioni</block>
   <block id="27e7993c4841ae5fd670cdd945ccb96d" category="inline-link-macro">API di disaster recovery</block>
   <block id="ab9238ca6f628634f6f6f2cf63502cdb" category="paragraph">Vedere <block ref="44de5c9fafab2e4e76e19e3717abc2e2" category="inline-link-macro-rx"></block> video.</block>
   <block id="ed23594fb532cf4eb57e0617ea972d01" category="summary">È possibile utilizzare SnapCenter per ripristinare i database di SQL Server di cui è stato eseguito il backup. Il ripristino del database è un processo multifase che copia tutti i dati e le pagine di registro da un backup di SQL Server specificato in un database specifico.</block>
@@ -2529,7 +2517,6 @@
   <block id="de21de4104bb03728916aa887ea228d0" category="paragraph">Se la risorsa contiene volumi o qtree come Storage Footprint, le copie Snapshot più recenti su tali volumi o qtree vengono eliminate e non possono essere ripristinate. Inoltre, se un'altra risorsa è ospitata sugli stessi volumi o qtree, anche tale risorsa viene eliminata.</block>
   <block id="15390094a70f6891fc6b5bf032f36c29" category="list-text">Se è stato selezionato *file Level*, è possibile selezionare *All* (tutto) oppure selezionare Volumes (volumi) o qtree (qtree), quindi immettere il percorso relativo ai volumi o alle qtree selezionati separati da virgole.</block>
   <block id="5778b765a422af2fc3146858308856d0" category="list-text">Se il tipo di risorsa è LUN, viene ripristinato l'intero LUN. È possibile selezionare più LUN. + NOTA: Se si seleziona *All*, vengono ripristinati tutti i file presenti nei volumi, nei qtree o nei LUN.</block>
-  <block id="726980167284c65abff52d65b5d3232b" category="list-text">Nella pagina Recovery Type (tipo di ripristino), attenersi alla seguente procedura: Selezionare l'opzione per applicare i registri. Assicurarsi che il plug-in supporti tutti i log e i log fino al tipo di ripristino prima di selezionarlo.</block>
   <block id="31bd137fb863f9fc2588f7a75e79de3d" category="paragraph">Ripristinare tutti i log</block>
   <block id="01da5e1585a74fa37fdee1650bdc225a" category="paragraph">Selezionare *tutti i log*. Assicurarsi che il plug-in supporti *tutti i log*.</block>
   <block id="bd73969c8c1402300a71f51cd84a5581" category="paragraph">Ripristinare tutti i log fino all'ora specificata</block>
@@ -2559,7 +2546,6 @@
   <block id="0533c8fb80b8d3787108152ecf7ed2fb" category="paragraph">Inserire un suffisso che verrà aggiunto al nome della risorsa appena clonata. Il suffisso garantisce che la risorsa clonata sia univoca sull'host.</block>
   <block id="1caca09a5d2ecb11bb528e8d11e891fd" category="paragraph">ad esempio, rs1_clone. Se si esegue la clonazione sullo stesso host della risorsa originale, è necessario fornire un suffisso per differenziare la risorsa clonata dalla risorsa originale; in caso contrario, l'operazione non riesce.</block>
   <block id="d45659570339304d92b272e6f147a29e" category="paragraph">Se la risorsa selezionata è un LUN e si esegue la clonazione da un backup secondario, vengono elencati i volumi di destinazione. Una singola origine può avere più volumi di destinazione.</block>
-  <block id="3b1aa43ebee12f3a0512b18010894a41" category="list-text">Nella pagina Impostazioni, eseguire le seguenti operazioni:</block>
   <block id="104ca2920cf6d8ff50457af3ba1b6650" category="paragraph">Nome dell'iniziatore</block>
   <block id="ab34841ca39ae1fe134cc677cfc650ef" category="paragraph">Immettere il nome dell'iniziatore host, ovvero un IQDN o WWPN.</block>
   <block id="fbc3c18d30cdcf55c959421811aa3c15" category="paragraph">Protocollo iGroup</block>
@@ -2718,7 +2704,6 @@
   <block id="b6b1826c899350995a39684ee19f8c7d" category="list-text">Fare clic sulla freccia *Custom Configurations* (configurazioni personalizzate), quindi immettere le coppie di valori personalizzate richieste per tutti i lavori che utilizzano questa risorsa.</block>
   <block id="f02ae06c15b2bac3b80b81485cd916ce" category="paragraph">SnapCenter per eseguire una copia Snapshot a livello di storage</block>
   <block id="e668102d5b8a83e66e31f5c42dcbb239" category="paragraph">SnapCenter utilizza il plug-in per Windows per mettere il file system in uno stato coerente e quindi eseguire una copia Snapshot</block>
-  <block id="be00178f4e91d4901871234d117ca9d0" category="admonition">È anche possibile creare un criterio facendo clic su <block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>.</block>
   <block id="99b0a37a3e506683141bfd2275a4beb2" category="list-text">Fare clic su <block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block> Nella colonna Configure Schedules (Configura pianificazioni) per il criterio per il quale si desidera configurare una pianificazione.</block>
   <block id="d89a925c7347eda26320229d83214fd3" category="paragraph">Dove _policy_name_ è il nome del criterio selezionato.</block>
   <block id="af0b5aed7941c6f843b87c68b201035e" category="summary">Prima di aggiungere un host e installare i pacchetti plug-in, è necessario completare tutti i requisiti. I plug-in personalizzati possono essere utilizzati in ambienti Windows e Linux.</block>
@@ -2774,10 +2759,8 @@
   <block id="3032ffc63deef50a539e9e2dc62d92c1" category="paragraph">I plug-in personalizzati possono essere installati su un sistema Windows o Linux.</block>
   <block id="379d6944e6fc810a2d3e6719a4897b18" category="list-text">Per il pacchetto di plug-in SnapCenter per Windows, il percorso predefinito è C:</block>
   <block id="d71af843d2746ce96eb5d7b9a854feec" category="paragraph">In alternativa, è possibile personalizzare il percorso.</block>
-  <block id="62347d4194e2615853e43f2ff2f58f2f" category="list-text">Per il pacchetto di plug-in SnapCenter per Linux, il percorso predefinito è /opt/NetApp/snapcenter.</block>
   <block id="dbd5f1a081ee2b60f9256f0d615c8572" category="list-text">Per i plug-in personalizzati di SnapCenter:</block>
   <block id="908b8e036ea9ce39ce7b1ef72289d440" category="paragraph">La cartella zippata contiene il codice del plug-in personalizzato e il file .xml descrittore.</block>
-  <block id="8f535444470b871cb3339061c5c490aa" category="paragraph">Per Storage Plug-in, accedere a _C:/ProgramData/NetApp/SnapCenter/Package Repository_ e selezionare<block ref="1ae0ec02713418737a2965bdbb97e689" prefix=" " category="inline-code"></block> cartella.</block>
   <block id="14c63a85dc0d2eb17d6a4de481e630f9" category="paragraph">Il file .xml descrittore nella cartella dei plug-in personalizzati compressi viene validato prima del caricamento del pacchetto.</block>
   <block id="22b9c22ece0544103d4ef5fde3f3591c" category="paragraph">Vengono elencati i plug-in personalizzati caricati sul server SnapCenter.</block>
   <block id="00ebf5cec061915cd0462d73602dcad8" category="inline-link">NetApp Automation Store</block>
@@ -2809,7 +2792,6 @@
   <block id="36c1f2ec62294c41aad60383fd84873d" category="doc">Monitorare lo stato di installazione dei plug-in personalizzati</block>
   <block id="caef6d3f9e7cdd9ed1d3eaabe29db549" category="summary">Se si desidera proteggere le risorse dei plug-in personalizzati, è necessario installare e configurare i plug-in personalizzati di SnapCenter.</block>
   <block id="d9ac41630ae6a20177466403e2d328d8" category="doc">Workflow di installazione dei plug-in personalizzati di SnapCenter</block>
-  <block id="86f7f637d3819a7b4814644b7f8d8972" category="image-alt">workflow di configurazione dell'installazione di scc</block>
   <block id="fee335c3c26419e1b2971157844984a7" category="doc">Numero di processi di backup necessari</block>
   <block id="b55afd5b52f01e281bc890c6adab0b29" category="paragraph">Il numero di processi di backup scelti dipende in genere dal numero di volumi da cui sono state collocate le risorse. Ad esempio, se si dispone un gruppo di piccole risorse su un volume e una grande risorsa su un altro volume, è possibile creare un processo di backup per le piccole risorse e un processo di backup per le grandi risorse.</block>
   <block id="d586cfbb655ff9a83e5820c52931584f" category="doc">Ripristinare risorse plug-in personalizzate</block>
@@ -4282,7 +4264,6 @@
   <block id="25878f69131b31b18aeda7ba36139c1b" category="admonition">Per informazioni sull'aggiornamento del plug-in SnapCenter per VMware vSphere, vedere<block ref="9fa07c2f7a59d2185d48077e327b705e" category="inline-link-rx"></block>.</block>
   <block id="a7e402a09cf33c2060ecbdb749dd7977" category="summary">SnapCenter comunica periodicamente con il sito di supporto NetApp per notificare gli aggiornamenti software disponibili. È inoltre possibile creare una pianificazione per specificare l'intervallo in cui si desidera ricevere informazioni sugli aggiornamenti disponibili.</block>
   <block id="243fa8b3087ff5e0b8de4d51c71aa24c" category="doc">Configurare SnapCenter per verificare la disponibilità di aggiornamenti</block>
-  <block id="20788a45506cca03e1c2a88f6259baa6" category="list-text">Nella pagina Impostazioni, fare clic su *Software*.</block>
   <block id="677b4f66c084ede8f48394ab8ce8969c" category="paragraph">La pagina Software disponibile visualizza i pacchetti plug-in disponibili, le versioni disponibili e il relativo stato di installazione.</block>
   <block id="79f9ba8457e2aeaced209e98800790ef" category="list-text">Fare clic su *Controlla aggiornamenti* per verificare se sono disponibili versioni più recenti dei pacchetti plug-in.</block>
   <block id="55f0dab8010fdb26ffb7d3d63275f2bd" category="list-text">Fare clic su *Schedule Updates* (Pianifica aggiornamenti) per creare una pianificazione in cui specificare l'intervallo in cui si desidera ricevere informazioni sugli aggiornamenti disponibili:</block>
@@ -5704,7 +5685,6 @@
   <block id="33369003833687837d9530cf914920b1" category="paragraph">Quando si fa clic sul nome del cluster, tutte le SVM che fanno parte del cluster vengono visualizzate nella sezione Storage Virtual Machines (macchine virtuali di storage).</block>
   <block id="0386bdeabfbeabf10a27e1684fb9871a" category="paragraph">Se una nuova SVM viene aggiunta al cluster ONTAP utilizzando l'interfaccia grafica di ONTAP, fare clic su *riscopri* per visualizzare la nuova SVM aggiunta.</block>
   <block id="cca118bc594fa4e8713e94b8b6656358" category="paragraph">Un amministratore del cluster deve abilitare AutoSupport su ciascun nodo del sistema di storage per inviare notifiche e-mail da tutti i sistemi di storage a cui SnapCenter ha accesso, eseguendo il seguente comando dalla riga di comando del sistema di storage:</block>
-  <block id="1430098b7911778071713dcd17b4dc57" category="paragraph"><block ref="e0485bdf93edca10823834ead47e0cd6" prefix="" category="inline-code"></block></block>
   <block id="90ad471fa77b40e816901adea8426b02" category="admonition">L'amministratore della macchina virtuale per lo storage (SVM) non ha accesso a AutoSupport.</block>
   <block id="b822295e51d5429c426ab9c2787523da" category="summary">È necessario creare ruoli SVM se si configurano le SVM in ONTAP per l'utilizzo con SanpCenter e non si desidera utilizzare il ruolo vsadmin.</block>
   <block id="56e14ee5960cfe37cfc3964b6597babb" category="doc">Creare ruoli SVM con privilegi minimi</block>
@@ -6666,7 +6646,6 @@
   <block id="5e312685e47c74b5ee2a4102a18ee03f" category="doc">Privilegi minimi di ONTAP richiesti per il plug-in Exchange</block>
   <block id="0f14951f7fd1d656890413b5b92b9059" category="summary">È possibile utilizzare SnapCenter per ripristinare i database Exchange ripristinando uno o più backup nel file system attivo.</block>
   <block id="c37b0bdb3c7a24db287508745921aed4" category="paragraph">Il seguente flusso di lavoro mostra la sequenza in cui è necessario eseguire le operazioni di ripristino del database di Exchange:</block>
-  <block id="2d1eae8ec36b7998c11e835920d1606c" category="paragraph"><block ref="2d1eae8ec36b7998c11e835920d1606c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5cadf224e1549f29dbdfca4d8a3c3c75" category="summary">Il plug-in SnapCenter per Microsoft Exchange Server non fornisce la verifica del backup; tuttavia, è possibile utilizzare lo strumento Eseutil fornito con Exchange per verificare i database e i backup di Exchange.</block>
   <block id="fd28a24d64e009870115aaf8c946e67a" category="doc">Verifica del database e del backup di Exchange</block>
   <block id="8068a252ff6fb4ddaf1368f594532571" category="paragraph">Lo strumento Microsoft Exchange Eseutil è un'utilità della riga di comando inclusa nel server Exchange. L'utility consente di eseguire controlli di coerenza per verificare l'integrità dei database e dei backup di Exchange.</block>
@@ -6752,7 +6731,6 @@
   <block id="7cb4d9086d6c1cf01b806f319a85cc63" category="list-text">Selezionare le risorse dalla sezione risorse disponibili, quindi fare clic sulla freccia destra per spostarle nella sezione risorse selezionate.</block>
   <block id="40d8f5c9b7ab33a156de7775f928f1c6" category="paragraph">I gruppi di risorse di SnapCenter per Microsoft Exchange Server non possono avere più di 30 database per copia Snapshot. Se in un gruppo di risorse sono presenti più di 30 database, viene creata una seconda copia Snapshot per i database aggiuntivi. Pertanto, vengono creati 2 job secondari nel processo di backup principale. Per i backup con replica secondaria, mentre è in corso l'aggiornamento di SnapMirror o SnapVault, potrebbero esserci scenari in cui l'aggiornamento per entrambi i lavori secondari si sovrappone. Il processo di backup principale rimane in esecuzione per sempre anche se i registri indicano che il processo è stato completato.</block>
   <block id="615d8aed25e6e033e2c4a35b84715c0e" category="admonition">Se un criterio contiene l'opzione *Backup delle copie sui server da selezionare al momento della creazione del processo di backup*, viene visualizzata un'opzione di selezione del server per selezionare uno o più server. L'opzione di selezione del server elenca solo il server in cui il database selezionato si trova sullo storage NetApp.</block>
-  <block id="325c8572dc9de1be94418b7cc6a7a127" category="list-text">Nella sezione Configure schedules for selected policy (Configura pianificazioni per policy selezionate), fare clic su *<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>* Nella colonna *Configura pianificazioni* per il criterio per il quale si desidera configurare la pianificazione.</block>
   <block id="13d62cafc9cfc5929565224152d9294b" category="paragraph">È necessario eseguire questa operazione per ciascuna frequenza elencata nella policy. I piani di lavoro configurati sono elencati nella colonna *piani di lavoro applicati* della sezione Configura piani di lavoro per i criteri selezionati.</block>
   <block id="632e8f771f2b94f3016767f9170f82e3" category="paragraph">Per la notifica via email, è necessario aver specificato i dettagli del server SMTP utilizzando il comando GUI o PowerShell<block ref="997c102f406bdf4b18d046c49ffaa8f9" prefix=" " category="inline-code"></block>.</block>
   <block id="b2589f75fce91547cb20c051fa1935d2" category="summary">Il ripristino di un database Exchange include l'avvio di una sessione di connessione con il server SnapCenter, l'elenco dei backup, il recupero delle informazioni di backup e il ripristino di un backup.</block>
@@ -6793,7 +6771,6 @@
   <block id="dd120ab3ab1d158cb796d4df28443c51" category="list-text">Eliminare uno o più backup utilizzando<block ref="deedcb4a01370ff7adf6a8a79cd7d1e0" prefix=" " category="inline-code"></block> cmdlet.</block>
   <block id="5060fe17eb15393a38b634cfabf7122a" category="summary">Se si desidera proteggere i database di SnapCenter, è necessario installare e configurare il plug-in di Exchange.</block>
   <block id="31db120ce3e7f7d5198a060e87905d01" category="doc">Workflow di installazione del plug-in SnapCenter per Microsoft Exchange Server</block>
-  <block id="de378859031a77aae5e0ad69c312f9d6" category="image-alt">workflow di configurazione dell'installazione sce</block>
   <block id="504403a18a6f866f203ea7aac8f10d40" category="summary">Quando si prepara il backup di una risorsa, potrebbe essere utile visualizzare una rappresentazione grafica di tutti i backup sullo storage primario e secondario.</block>
   <block id="baf51638fcd69f7ad248b14cc9899660" category="doc">Visualizzare i backup di Exchange nella pagina topologia</block>
   <block id="49586cbe3592d1c0d3aa8eb60491a444" category="paragraph">Nella pagina topologia, è possibile visualizzare tutti i backup disponibili per la risorsa o il gruppo di risorse selezionato. È possibile visualizzare i dettagli di tali backup e selezionarli per eseguire le operazioni di protezione dei dati.</block>
@@ -6855,7 +6832,6 @@
   <block id="448b0d01720485ec0d184f399054ce73" category="list-text">I criteri specificano la frequenza di backup, la conservazione delle copie, gli script e altre caratteristiche delle operazioni di protezione dei dati.</block>
   <block id="64cf55b1d943bb337c4bb23fe8c989a1" category="paragraph">Quando si crea un gruppo di risorse, si selezionano uno o più criteri per tale gruppo. È inoltre possibile selezionare uno o più criteri quando si esegue un backup su richiesta per una singola risorsa.</block>
   <block id="c4b19e703264203b67174f98dbbef807" category="paragraph">Un gruppo di risorse definisce _cosa_ si desidera proteggere e quando si desidera proteggerlo in termini di giorno e ora. Pensa a una policy come a definire _come_ la vuoi proteggere. Ad esempio, se si esegue il backup di tutti i database di un host, è possibile creare un gruppo di risorse che includa tutti i database dell'host. È quindi possibile associare due criteri al gruppo di risorse: Una policy giornaliera e una policy oraria. Quando si crea il gruppo di risorse e si allegano i criteri, è possibile configurare il gruppo di risorse in modo che esegua un backup completo ogni giorno e un altro programma che esegua i backup del registro ogni ora. L'immagine seguente illustra la relazione tra risorse, gruppi di risorse e criteri per i database:</block>
-  <block id="5ed949ae3a23443793622ef5e2bb8e86" category="image-alt">policy del resourcegroup di sce</block>
   <block id="ba8cc99b4cfaa3f9d3c3f0a8380082c0" category="doc">Annulla le operazioni di ripristino per il database Exchange</block>
   <block id="9bcf17f4427582cfbb783f46971b1eb0" category="summary">La definizione di una strategia di backup prima di creare i processi di backup consente di garantire la presenza dei backup necessari per ripristinare correttamente i database. Il contratto SLA (Service Level Agreement), l'RTO (Recovery Time Objective) e l'RPO (Recovery Point Objective) determinano in gran parte la strategia di backup.</block>
   <block id="7fc686e60d66e170f709548904c946f0" category="doc">Definire una strategia di backup per le risorse di Exchange Server</block>
@@ -7382,7 +7358,6 @@
   <block id="4265601c87361a7cd62256734c1f899a" category="paragraph">Se si seleziona l'opzione *selezione automatica di tutte le risorse sullo stesso volume di storage*, vengono selezionate tutte le risorse dello stesso volume. Quando vengono spostate nella sezione aggiunta, tutte le risorse del volume vengono spostate insieme.</block>
   <block id="d0bb923d5452aed249e5dd3106e8b581" category="paragraph">Per aggiungere un singolo file system, deselezionare l'opzione *selezione automatica di tutte le risorse sullo stesso volume di storage* e selezionare i file system da spostare nella sezione aggiunta.</block>
   <block id="06b7a35647423a613441508027476181" category="paragraph">È possibile selezionare qualsiasi policy esistente e fare clic su *Dettagli* per determinare se è possibile utilizzare tale policy.</block>
-  <block id="cca9f37b92847fd5d373bfe5fd03eb96" category="paragraph">Se nessuna policy esistente soddisfa i tuoi requisiti, puoi creare una nuova policy facendo clic su *<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>* per avviare la procedura guidata delle policy.</block>
   <block id="ab549fb31447afed81e3fd9e890b0394" category="paragraph">I criteri selezionati sono elencati nella colonna Policy della sezione Configure schedules for selected policies.</block>
   <block id="35d29b40e80e1e7a9a337b582db6df91" category="list-text">Se il criterio è associato a più tipi di pianificazione (frequenze), selezionare la frequenza che si desidera configurare.</block>
   <block id="e44e5d659314ff509ecc4d0c16427d88" category="list-text">Nella finestra di dialogo Add schedules for policy _policy_name_, configurare la pianificazione specificando la data di inizio, la data di scadenza e la frequenza, quindi fare clic su *fine*.</block>
@@ -7621,7 +7596,6 @@
   <block id="adf9a5640ab82a2bf0053b3ea4bbe129" category="list-text">Se si seleziona un backup di una risorsa o di un gruppo di risorse Oracle, è anche possibile eseguire operazioni di montaggio e smontaggio.</block>
   <block id="7cb08a2fb71fff0015ab81ca4242cb3b" category="list-text">Se è stato selezionato un backup del registro di una risorsa o di un gruppo di risorse Oracle, è possibile eseguire operazioni di ridenominazione, montaggio, disinstallazione ed eliminazione.</block>
   <block id="ea044269bf8c976de9625dd66de7604b" category="list-text">Se si utilizza il pacchetto di plug-in SnapCenter per Linux e il backup è stato catalogato utilizzando Gestione ripristino Oracle (RMAN), non è possibile rinominare i backup catalogati.</block>
-  <block id="ae73a51250a46e35a8b765915ef7763a" category="paragraph">*Esempio di backup e cloni sullo storage primario*</block>
   <block id="890d45c40e49f2dabb2c7635de46d483" category="inline-image-macro">Vista della topologia di backup e cloni nello storage primario.</block>
   <block id="1a8413b6d25d17625bc85e11bb87aaa7" category="paragraph"><block ref="1a8413b6d25d17625bc85e11bb87aaa7" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6c713d56e86f927e1bd66c7de2ed52c1" category="summary">Se si desidera installare il plug-in SnapCenter per Microsoft Windows su più host contemporaneamente, è possibile farlo utilizzando il cmdlet Install-SmHostPackage PowerShell.</block>
@@ -8418,7 +8392,6 @@ Il ripristino di una singola casella postale di NetApp® è giunto alla fine del
   <block id="0f3c122791256078177582e458c97afc" category="list-text">Nella pagina *script*, immettere il timeout dello script, il percorso e gli argomenti del prescrittt o del postscript che devono essere eseguiti rispettivamente prima o dopo l'operazione di clone.</block>
   <block id="b723e46bf782113e1476771841c2a253" category="list-text">Nella pagina *Notification*, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.</block>
   <block id="4a3f04f42ebeabccfad7128de3983c4a" category="list-text">Monitorare l'avanzamento dell'operazione selezionando *Monitor* &gt; *Jobs*.</block>
-  <block id="01e12de62fa77fda2815719aed8ff892" category="paragraph-title">Cosa succederà</block>
   <block id="30f60d67f457bb040dffde52197a54da" category="paragraph-title">Informazioni correlate</block>
   <block id="4e8e38544f2984e4fb0264f8624f3ff3" category="list-text">Nel riquadro di spostamento a sinistra, selezionare *Monitor* &gt; *Jobs*.</block>
   <block id="31c92bb27ecf43c83829e1d2d3504819" category="list-text">Selezionare il lavoro e selezionare *Annulla lavoro* .</block>
@@ -8427,7 +8400,6 @@ Il ripristino di una singola casella postale di NetApp® è giunto alla fine del
   <block id="8467b6fc978e958889122b3f0f4500ef" category="list-text">Nella pagina Dettagli lavoro, selezionare *Annulla lavoro*.</block>
   <block id="7adb9efc9727efcae1dc90797b6d14b7" category="paragraph">È possibile cercare il gruppo di risorse inserendo il nome del gruppo di risorse nella casella di ricerca oppure selezionando *<block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block>*, quindi selezionare il tag. Quindi selezionare *<block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block>* per chiudere il riquadro del filtro.</block>
   <block id="8689f97c3da81b19465f71f756e66bdf" category="list-text">Nella pagina gruppi di risorse, selezionare il gruppo di risorse di cui si desidera eseguire il backup, quindi selezionare *Esegui backup ora*.</block>
-  <block id="3f297ef15cde0668e93b35f2752fd4fd" category="paragraph-title">Cosa succederà?</block>
   <block id="527845dfb36351f269fc0788cbb25f31" category="list-text">Nella pagina Impostazioni, selezionare *Criteri*.</block>
   <block id="35f738c979f3c37836b8abb8e955fca3" category="list-text">Selezionare *nuovo*.</block>
   <block id="f8c86cc4b1c8e607fa2e36ce41958b14" category="list-text">Nella pagina *Nome*, inserire il nome e la descrizione della policy.</block>
@@ -8442,11 +8414,8 @@ Il ripristino di una singola casella postale di NetApp® è giunto alla fine del
   <block id="28d224f5fce20ca21cc66cf83832a2b1" category="list-text">Selezionare il criterio per il quale si desidera configurare la pianificazione di verifica, quindi selezionare *<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>*.</block>
   <block id="3d1c64d2c8b1e4058225a78c3ef09fa6" category="list-text">Selezionare *OK*.</block>
   <block id="5477ea177e290e8ac1c03a7ee8f2a92b" category="list-text">Selezionare *Esegui backup ora*.</block>
-  <block id="e871dec81bbb55999bfb71a61279d374" category="paragraph">Fare clic su <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>, quindi selezionare il nome host e il tipo di risorsa per filtrare le risorse. Quindi fare clic su <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> per chiudere il riquadro del filtro.</block>
   <block id="7b467581fdc2f1a9bc98397eaf9411b4" category="list-text">Fare clic su <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> filtrare l'elenco in modo che vengano elencate solo le operazioni di backup.</block>
   <block id="8e5cdb93ac42ad2c2b35814060435396" category="paragraph">È possibile cercare il gruppo di risorse inserendo il nome del gruppo di risorse nella casella di ricerca o facendo clic su <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> e selezionando il tag. Quindi fare clic su <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> per chiudere il riquadro del filtro.</block>
-  <block id="748e365a5533cec3628919b992bc25fa" category="list-text">Fare clic su <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> per filtrare l'elenco in modo che vengano elencate solo le operazioni di ripristino.</block>
-  <block id="f5cb0104f9d25cac663152187398a069" category="list-text">Fare clic su <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> per filtrare l'elenco in modo che vengano elencate solo le operazioni di clonazione.</block>
   <block id="5968d7d6aa7eca121c1a6ecc9d1f9bd1" category="paragraph">Fare clic su <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> E selezionare il nome host e l'istanza di SQL Server per filtrare le risorse. Quindi fare clic su <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> per chiudere il riquadro del filtro.</block>
   <block id="3f897d901d24f02777ff0994b7823d1a" category="list-text">Dati presenti nei sistemi primari e secondari ONTAP FAS, AFF o ASA e protetti nello storage a oggetti StorageGRID locale</block>
   <block id="f7b38c62b0e74d318a255bc3094cf531" category="list-text">Dati su sistemi primari e secondari ONTAP FAS, AFF o ASA e protetti per lo storage di oggetti e archivi nel cloud (utilizzando l'integrazione di backup e ripristino BlueXP)</block>
@@ -8466,10 +8435,8 @@ Il ripristino di una singola casella postale di NetApp® è giunto alla fine del
   <block id="b2ad47c7842f5e26da4387acfcdb5046" category="list-text">Inserire il nome del gruppo di risorse nella casella di ricerca oppure fare clic su <block ref="2df6cc2e237d722aa6244879c70fd2d2" category="inline-image-macro-rx" type="image"></block>e selezionare il tag.</block>
   <block id="313b973ed20ae0f32242d787d703216d" category="paragraph">Fare clic su <block ref="2df6cc2e237d722aa6244879c70fd2d2" category="inline-image-macro-rx" type="image"></block> per chiudere il riquadro del filtro.</block>
   <block id="8ec049c5812d131f3e960eb36acfe281" category="paragraph">Fare clic su *<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>*, quindi selezionare il nome host e il tipo di database per filtrare le risorse. Quindi fare clic su *<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>* per chiudere il riquadro del filtro.</block>
-  <block id="a4da2725fd201053d7a850500b404971" category="paragraph">Fare clic su <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> E selezionare il nome host e il server Exchange per filtrare le risorse. Quindi fare clic su <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> per chiudere il riquadro del filtro.</block>
   <block id="3a16a5fe7a351d2059010bdd627dffd9" category="paragraph">È possibile cercare il gruppo di risorse inserendo il nome del gruppo di risorse nella casella di ricerca o facendo clic su *<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>*, quindi selezionare il tag. Quindi fare clic su *<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>* per chiudere il riquadro del filtro.</block>
   <block id="90e14cd7255b5121e0c223d30a2cd3b7" category="list-text">(Facoltativo) fare clic su <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> e selezionare il nome host.</block>
-  <block id="f2ae288f937b356dff24c08f0c1a6ec3" category="list-text">(Facoltativo) fare clic su *<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>*, quindi selezionare il nome host.</block>
   <block id="9eb8278143c5b25686cc1b6c525a9b8d" category="paragraph">Selezionare *<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>*, quindi selezionare il nome host e il tipo di risorsa per filtrare le risorse. Quindi selezionare <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> per chiudere il riquadro del filtro.</block>
   <block id="45b6721b8137bd82de1f2497a525d57a" category="list-text">Selezionare la risorsa di cui si desidera eseguire il backup.</block>
   <block id="0666d07a296860de6e0a6f6e4fd0425e" category="list-text">Selezionare la freccia *Backup* per impostare opzioni di backup aggiuntive:</block>
@@ -8478,4 +8445,98 @@ Il ripristino di una singola casella postale di NetApp® è giunto alla fine del
   <block id="0644babb03e5024dbc898ead17e21f90" category="list-text">Selezionare la freccia **configurazioni personalizzate**, quindi immettere le coppie di valori personalizzati richieste per tutti i lavori che utilizzano questa risorsa.</block>
   <block id="100eb4bb64628d6bc8890851c8173103" category="list-text">Nella finestra di dialogo Add schedules for policy _policy_name_, configurare la pianificazione, quindi selezionare *OK*.</block>
   <block id="7dd7da1b07a05d1000eeeecb05ce4ee5" category="paragraph">È possibile cercare il gruppo di risorse inserendo il nome del gruppo di risorse nella casella di ricerca o selezionando <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>, quindi selezionare il tag. Quindi selezionare <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> per chiudere il riquadro del filtro.</block>
+  <block id="7f3e84692f24d61327601751bb201dc8" category="list-text">Nella pagina *Monitor*, fare clic su *Jobs*.</block>
+  <block id="61d2a317fbe90dabcd1359e8623a031a" category="list-text">Nella pagina *lavori*, per filtrare l'elenco in modo che siano elencate solo le operazioni di installazione dei plug-in, procedere come segue:</block>
+  <block id="b69ca9a37b35f7d7f9d83f9069243f8e" category="list-text">Nella pagina *Dettagli lavoro*, fare clic su *Visualizza registri*.</block>
+  <block id="48c7c41b72e1d678923ce3571aa65b2d" category="paragraph-title">Fase</block>
+  <block id="c33b3d8ad6a964521bb672dfd09ff061" category="inline-image-macro">Icona Annulla</block>
+  <block id="596771a00ab2893deb5c8fa7fe5873f5" category="list-text"><block ref="60af77e2e4baf6eebf052ec8174b7f4d" category="inline-image-macro-rx" type="image"></block> Annullato</block>
+  <block id="7ece64d8d9ea3a89221dea21761b07d9" category="list-text">Nella pagina *lavori*, attenersi alla seguente procedura:</block>
+  <block id="069fa852337561671b88be2afd1ea4ef" category="list-text">Fare clic su <block ref="2df6cc2e237d722aa6244879c70fd2d2" category="inline-image-macro-rx" type="image"></block> per filtrare l'elenco in modo che vengano elencate solo le operazioni di ripristino.</block>
+  <block id="d06e7be1435119c38a6e18459688059c" category="image-alt">Schermata dei criteri del gruppo di risorse</block>
+  <block id="0fd0a1bed09809e7995f02a71e5790a2" category="admonition">Puoi anche creare una policy facendo clic su *<block ref="0f5cf3219ae11ea795d8e8abf4dbc7f0" category="inline-image-macro-rx" type="image"></block>*.</block>
+  <block id="bf745612a9d3d6acf90e0caa7a7cbd1f" category="list-text">Nella sezione Configure schedules for selected policy (Configura pianificazioni per policy selezionate), fare clic su *<block ref="0f5cf3219ae11ea795d8e8abf4dbc7f0" category="inline-image-macro-rx" type="image"></block>* Nella colonna *Configura pianificazioni* per il criterio per il quale si desidera configurare la pianificazione.</block>
+  <block id="d67212a409942028d92b1df9ab4f35be" category="paragraph">Fare clic su <block ref="2df6cc2e237d722aa6244879c70fd2d2" category="inline-image-macro-rx" type="image"></block> E selezionare il nome host e il server Exchange per filtrare le risorse. Quindi fare clic su <block ref="2df6cc2e237d722aa6244879c70fd2d2" category="inline-image-macro-rx" type="image"></block> per chiudere il riquadro del filtro.</block>
+  <block id="c5b4990f8ae878fb8402d7252a8784c6" category="paragraph">Quando si fa clic su una delle operazioni, i dettagli dell'operazione vengono elencati nella pagina *Dettagli commessa*.</block>
+  <block id="1c4f599026df28977750d0858e212020" category="inline-image-macro">Il certificato CA non è né abilitato né assegnato all'icona host del plug-in</block>
+  <block id="ffc839a5ed37506f26d40259e5180d52" category="list-text">*<block ref="c45864b6ad2e336d8a45dd8d7a03e2a4" category="inline-image-macro-rx" type="image"></block>* Indica che il certificato CA non è né abilitato né assegnato all'host del plug-in.</block>
+  <block id="db628760d1e08f108c59b4368554df19" category="inline-image-macro">Icona certificato CA convalidato correttamente</block>
+  <block id="f4d2a8ee22f7ebf26708847214f1290c" category="list-text">*<block ref="5959638688f296ff31b3a5183c606637" category="inline-image-macro-rx" type="image"></block>* Indica che il certificato CA è stato validato correttamente.</block>
+  <block id="8f0476018bf06181bfb1c0c415fc920b" category="inline-image-macro">Impossibile convalidare l'icona del certificato CA</block>
+  <block id="02274517129f27aa0fbb69db1bb0df55" category="list-text">*<block ref="6b0a173c575d92a1500747dfbe9cc0d7" category="inline-image-macro-rx" type="image"></block>* Indica che non è stato possibile validare il certificato CA.</block>
+  <block id="47b58c5227526bf6723c3e253ff99651" category="inline-image-macro">impossibile recuperare le informazioni di connessione</block>
+  <block id="add2fda0c68eeaa23272704fcb107013" category="list-text">*<block ref="eb65effe91d0e7f3c1d052da89438911" category="inline-image-macro-rx" type="image"></block>* indica che non è stato possibile recuperare le informazioni di connessione.</block>
+  <block id="aa6ca9252fe71f2526184035732777e9" category="paragraph"><block ref="aa6ca9252fe71f2526184035732777e9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2a41146d1eea3c93eec15e8eb831797f" category="paragraph"><block ref="8f230e9ca65c4719bd75e249d2c0deac" prefix="" category="inline-code"></block></block>
+  <block id="e513bb233ea5be3f5a949deebfe7811f" category="list-text">Fare clic su <block ref="2df6cc2e237d722aa6244879c70fd2d2" category="inline-image-macro-rx" type="image"></block> per filtrare l'elenco in modo che vengano elencate solo le operazioni di clonazione.</block>
+  <block id="86eb9ff3b1258c5256ef2856ba475c9b" category="list-text">Se le DLL sono danneggiate, riparare l'installazione del server SnapCenter.</block>
+  <block id="98e2eb23b0ae3df57378c7761662c007" category="list-text">Se NSM è danneggiato o i file di configurazione sono danneggiati, disinstallare e reinstallare il server SnapCenter con la stessa versione.</block>
+  <block id="85ddb45cc385b3c21d962377a76a096b" category="list-text">Se la VM è danneggiata, richiamare un'altra VM con lo stesso nome e installare il server SnapCenter con la stessa versione.</block>
+  <block id="539da50c1cfbe2a04bb6b229f1dd0ee9" category="list-text">(Facoltativo) fare clic su *<block ref="6baddd7f5b485bce282661b4e4579f17" category="inline-image-macro-rx" type="image"></block>*, quindi selezionare il nome host.</block>
+  <block id="dc56c1ed4d6e6f9e0b65bd544aa90f17" category="paragraph">Quindi fare clic su *<block ref="6baddd7f5b485bce282661b4e4579f17" category="inline-image-macro-rx" type="image"></block>* per chiudere il riquadro del filtro.</block>
+  <block id="e55db253bb52984bdf3db79b9f583b21" category="list-text">Nella pagina *risorse*, selezionare l'opzione appropriata dall'elenco Visualizza:</block>
+  <block id="5abc1a8dd70429d4e480ae097bb0e53a" category="inline-image-macro">Icona del clone split</block>
+  <block id="29f4a82ad48601f6358f85c39f7e717c" category="list-text">Nella vista *Gestisci copie*, selezionare la risorsa clonata (ad esempio, il database o il LUN), quindi fare clic su *<block ref="617082709f2853987bafcbc3d4381f40" category="inline-image-macro-rx" type="image"></block>*.</block>
+  <block id="c1c3f7f413cbbea9483f5bb44d108a05" category="section-title">Comandi supplementari</block>
+  <block id="181d94b371cac820d4a5cb6b937f2a2d" category="paragraph">Per eseguire un comando supplementare sul plug-in SnapCenter per SAP HANA, è necessario includerlo in<block ref="0a9b5c73cddb05a7d044503a2f2874fb" prefix=" " category="inline-code"></block> file.</block>
+  <block id="d4ca0088b9ea3ac58559ca038f491750" category="paragraph"><block ref="0a9b5c73cddb05a7d044503a2f2874fb" prefix="" category="inline-code"></block> Il file si trova nella sottodirectory "etc" della directory SnapCenter Plug-in for SAP HANA.</block>
+  <block id="e9f586ce563376114ff135842f727168" category="paragraph">Predefinito:<block ref="2145a5a942ea9f880dbe88d3ac615ab3" prefix=" " category="inline-code"></block></block>
+  <block id="dd66365112c4ceb674b385656f6a112e" category="paragraph">Percorso personalizzato:<block ref="e351d01fa9a38c2ffa585e5dbdcb94aa" prefix=" " category="inline-code"></block>
+Host Windows:</block>
+  <block id="774e75f6a92e8ce03eae50224bd05ba6" category="paragraph">Predefinito:<block ref="91d372f85b001dba79ebc4129e5acd32" prefix=" " category="inline-code"></block></block>
+  <block id="95195429ca43c35246ae63fae7c824d9" category="paragraph">Percorso personalizzato:<block ref="771a2a42f8cc5de6a7bb7e502fb14742" prefix=" " category="inline-code"></block></block>
+  <block id="41e74f60c5f3f06b8573c9cea4d7bab4" category="paragraph">Per consentire comandi supplementari sull'host del plug-in, aprire<block ref="0a9b5c73cddb05a7d044503a2f2874fb" prefix=" " category="inline-code"></block> in un editor. Immettere ciascun comando su una riga separata. Non rileva la distinzione tra maiuscole e minuscole.
+Ad esempio,</block>
+  <block id="b5ae206d8cc918377a24fe4f421f1df6" category="paragraph">comando: mount</block>
+  <block id="ec2ddb7f6d7bd8ee6c1859f58f04e543" category="paragraph">comando: umount</block>
+  <block id="2f71d67b0d47e188626ac45f66b1bdb9" category="paragraph">Assicurarsi di specificare il nome del percorso completo. Racchiudere il percorso tra virgolette (") se contiene spazi.
+Ad esempio,</block>
+  <block id="bb9358c22dd46f6320560b712e3f01b1" category="paragraph">Comando: "C:\Program Files\NetApp\SnapCreator Commands\sdcli.exe"</block>
+  <block id="ee9daf1566bf315f7653952b044f6dad" category="paragraph">comando: myscript.bat</block>
+  <block id="caac2bb3479b413da9fbcd502a30e7b6" category="paragraph">Se il<block ref="0a9b5c73cddb05a7d044503a2f2874fb" prefix=" " category="inline-code"></block> il file non è presente, i comandi o l'esecuzione dello script vengono bloccati e il flusso di lavoro non riesce e viene visualizzato il seguente errore:</block>
+  <block id="fa85be9f75b57a1177464bcfbf682501" category="paragraph">"[/mnt/mount -a] esecuzione non consentita. Autorizzare aggiungendo il comando nel file %s sull'host del plugin."</block>
+  <block id="58b5d0a2d25a0f5bc44c92a94090d1ea" category="paragraph">Se il comando o lo script non è presente in<block ref="0a9b5c73cddb05a7d044503a2f2874fb" prefix=" " category="inline-code"></block>, l'esecuzione del comando o dello script viene bloccata e il flusso di lavoro non riesce e viene visualizzato il seguente errore:</block>
+  <block id="0d97f66d4b1a95477e15aa1423a18629" category="admonition">Non utilizzare un carattere jolly (*) per consentire tutti i comandi.</block>
+  <block id="3923067f4ce9be3fa5f505420591ee38" category="inline-image-macro">Icona Elimina</block>
+  <block id="a6ea6a770733073de3f90cdf4e56ebe4" category="list-text">Se si desidera eliminare un clone, selezionarlo dalla tabella, quindi fare clic su <block ref="c2bbcd7602467a0298801d314b839a50" category="inline-image-macro-rx" type="image"></block>.</block>
+  <block id="6fa0c9d6ea713436f9f94730ad807a6e" category="inline-image-macro">Icona Clona divisione</block>
+  <block id="707e7244678c886a17fce7971b0d7f8f" category="list-text">Se si desidera suddividere un clone, selezionarlo dalla tabella, quindi fare clic su <block ref="dbe4426598190620d33a8464bcc14686" category="inline-image-macro-rx" type="image"></block>.</block>
+  <block id="86d9a4e53238020341a7cca7bbe68ff8" category="list-text">Nella pagina *Impostazioni*, fare clic su *Software*.</block>
+  <block id="a960d38d305c44a6a4717655aace3dd7" category="list-text">Nella pagina *Dettagli processo*, fare clic su *Annulla processo*.</block>
+  <block id="768d18144454e6cec5a96d61cb09fd9c" category="inline-image-macro">icona più</block>
+  <block id="8e806db608c82eb62efdb0eb9f5cfc6b" category="paragraph">Se nessuna policy esistente soddisfa i tuoi requisiti, puoi creare una nuova policy facendo clic su *<block ref="b45fdb91c5c7d010bf6dc162ec4fd533" category="inline-image-macro-rx" type="image"></block>* per avviare la procedura guidata delle policy.</block>
+  <block id="1343db4284f9e4d2640bb43d96c2b68b" category="list-text">Nella sezione Configure schedules for selected policy (Configura pianificazioni per policy selezionate), fare clic su *<block ref="b45fdb91c5c7d010bf6dc162ec4fd533" category="inline-image-macro-rx" type="image"></block>* Nella colonna Configure Schedules (Configura pianificazioni) per il criterio per il quale si desidera configurare la pianificazione.</block>
+  <block id="82df92bf63205eb90f0513c131abc2dd" category="list-text">Se si desidera eliminare un clone, selezionarlo dalla tabella e fare clic su <block ref="f790bf9188cee374d2bb1f3790c6a393" category="inline-image-macro-rx" type="image"></block> per eliminare il clone.</block>
+  <block id="8d0f784440712961abfe38c36944b52a" category="paragraph-title">Esempio di visualizzazione di backup e cloni sullo storage primario</block>
+  <block id="81c16fb186449755e5295df30b1def81" category="image-alt">Pagina di backup delle impostazioni</block>
+  <block id="73a585528f834ea371b34dbbb981d2fc" category="list-text">Nella pagina *retention*, specificare le impostazioni di conservazione per il tipo di backup e il tipo di pianificazione selezionato nella pagina *Backup Type*:</block>
+  <block id="7a81b88ed3ac8ca5e67c201e36eca211" category="list-text">Nella pagina *Replica*, specificare le impostazioni di replica:</block>
+  <block id="1737705dbef82bb547572b98803f1837" category="list-text">Per il pacchetto di plug-in SnapCenter per Linux, il percorso predefinito è<block ref="ad6569b575c0a3830082f4336038186a" prefix=" " category="inline-code"></block>.</block>
+  <block id="f32c4686d8ce92964750c998b8d606a6" category="paragraph">Per il plug-in di archiviazione, selezionare<block ref="b674835168d7ff13979b400c993ce08f" prefix=" " category="inline-code"></block> e selezionare<block ref="1ae0ec02713418737a2965bdbb97e689" prefix=" " category="inline-code"></block> cartella.</block>
+  <block id="31b463f293ed77bac56a34d46826de49" category="paragraph">I file di registro specifici dell'installazione si trovano in<block ref="beb5ec5a83e557b91eccba92e6ac85e2" prefix=" " category="inline-code"></block> registri.</block>
+  <block id="24bd2a51bea1471986ab3ac20960699e" category="summary">È necessario creare una connessione al sistema storage e una credenziale prima di utilizzare i cmdlet PowerShell per eseguire operazioni di protezione dei dati.</block>
+  <block id="2b88427244b62aacd4debde72476dcb0" category="paragraph">Fare clic su <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>, quindi selezionare il nome host e il tipo di risorsa per filtrare le risorse. Quindi fare clic su <block ref="2df6cc2e237d722aa6244879c70fd2d2" category="inline-image-macro-rx" type="image"></block> per chiudere il riquadro del filtro.</block>
+  <block id="ee5dc0e4ad2a255f15e5b8206b5f42e1" category="inline-image-macro">Pagina delle impostazioni dell'applicazione</block>
+  <block id="bed9b64da70ed7a9d6e9838df1b96480" category="paragraph"><block ref="bed9b64da70ed7a9d6e9838df1b96480" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c742c2b2ed01c0f1e79d77c9eeebbfd3" category="inline-image-macro">Icona Add (Aggiungi)</block>
+  <block id="901da624a5b9547471d5b2ebcff75a6c" category="admonition">È anche possibile creare un criterio facendo clic su <block ref="9f109e3478c3fd80fb4b7e5ed4c5e686" category="inline-image-macro-rx" type="image"></block>.</block>
+  <block id="cf9800ba5a90d33a4476b420a3aab833" category="list-text">Fare clic su <block ref="9f109e3478c3fd80fb4b7e5ed4c5e686" category="inline-image-macro-rx" type="image"></block> Nella colonna Configure Schedules (Configura pianificazioni) per il criterio per il quale si desidera configurare una pianificazione.</block>
+  <block id="8f328255df3c97c90d7cfcc63b284018" category="image-alt">Flusso di lavoro dei plug-in personalizzati SnapCenter</block>
+  <block id="30a67a946d29a3e673f6bc6ed240d621" category="paragraph">È possibile cercare il gruppo di risorse inserendo il nome del gruppo di risorse nella casella di ricerca o facendo clic su <block ref="6baddd7f5b485bce282661b4e4579f17" category="inline-image-macro-rx" type="image"></block> e selezionando il tag. Quindi fare clic su <block ref="6baddd7f5b485bce282661b4e4579f17" category="inline-image-macro-rx" type="image"></block> per chiudere il riquadro del filtro.</block>
+  <block id="a4e58d1baefb0f03cb85834acc7e5b87" category="image-alt">Schermata per installare ESEGUI COME account</block>
+  <block id="2044194eda6e0d4c9f0008e40a881dcc" category="list-text">Nella pagina *credenziale*, specificare le informazioni necessarie per la configurazione delle credenziali:</block>
+  <block id="ff48fff5b9628fa0fba10705ef9f5e19" category="list-text">Nella pagina *risorse*, filtrare le risorse dall'elenco a discesa *Visualizza* in base al tipo di risorsa.</block>
+  <block id="d2bea44e3d1628098957452728baa152" category="list-text">Nella pagina *Impostazioni*, eseguire le seguenti operazioni:</block>
+  <block id="e0f9b86a9688fc173074916a91b12ea9" category="list-text">Nella pagina *Recovery Type*, eseguire le seguenti operazioni: Selezionare l'opzione per applicare i registri. Assicurarsi che il plug-in supporti tutti i log e i log fino al tipo di ripristino prima di selezionarlo.</block>
+  <block id="9e904b59c4a3eb80247cfe28d96c2653" category="list-text">Nella pagina *operazioni preliminari*, immettere i comandi di pre-ripristino e disinstallazione da eseguire prima di eseguire un processo di ripristino.</block>
+  <block id="6a2ca7ed888feb82f4f0e5778ca2b209" category="list-text">Nella pagina *Post Ops*, immettere i comandi di mount e post restore da eseguire dopo l'esecuzione di un processo di ripristino.</block>
+  <block id="7d86ca24490dce77097f6dbeb74b96fc" category="list-text">Nella pagina *hosts*, fare clic su *Managed hosts*.</block>
+  <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
+  <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
+  <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
+  <block id="5d545fe5152641e2ebe654e336e520e5" category="paragraph"><block ref="5d545fe5152641e2ebe654e336e520e5" category="inline-link-macro-rx"></block></block>
+  <block id="88e5eabd3917048b6927c42496b98f86" category="inline-link-macro"><block ref="88e5eabd3917048b6927c42496b98f86" category="inline-link-rx"></block></block>
+  <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
+  <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
+  <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
 </blocks>

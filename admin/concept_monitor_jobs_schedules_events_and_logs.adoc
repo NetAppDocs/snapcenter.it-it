@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_monitor_jobs_schedules_events_and_logs.html 
 sidebar: sidebar 
-keywords:  
+keywords: Monitor jobs, schedules, events, logs 
 summary: 'È possibile monitorare l"avanzamento dei lavori, ottenere informazioni sui lavori pianificati e rivedere eventi e registri dalla pagina Monitor.' 
 ---
 = Monitoraggio di processi, pianificazioni, eventi e registri
@@ -135,6 +135,5 @@ Non è necessario impostare l'host in modalità di manutenzione per rimuovere i 
 . Nella pagina lavori, controllare lo stato del lavoro.
 
 
-*Ulteriori informazioni*
-
+.Informazioni correlate
 Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento alla https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["Guida di riferimento al cmdlet del software SnapCenter"^].

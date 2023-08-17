@@ -15,8 +15,7 @@ Sebbene NTFS rilevi lo spazio disponibile su un LUN quando i file vengono cancel
 
 Se si esegue il cmdlet su un host plug-in remoto, è necessario eseguire il cmdlet SnapCenterOpen-SMConnection per aprire una connessione al server SnapCenter.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 * Prima di eseguire un'operazione di ripristino, assicurarsi che il processo di recupero dello spazio sia stato completato.
 * Se il LUN è condiviso da host in un cluster di failover di Windows Server, è necessario eseguire la rigenerazione dello spazio sull'host proprietario del gruppo di cluster.
 * Per ottenere performance di storage ottimali, è necessario eseguire il recupero dello spazio il più spesso possibile.

@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_restore_and_recover_resources_using_powershell_cmdlets_for_sql.html 
 sidebar: sidebar 
-keywords:  
+keywords: restore resources 
 summary: 'Il ripristino di un backup delle risorse include l"avvio di una sessione di connessione con il server SnapCenter, l"elenco dei backup, il recupero delle informazioni di backup e il ripristino di un backup.' 
 ---
 = Ripristinare le risorse utilizzando i cmdlet PowerShell
@@ -15,8 +15,7 @@ Il ripristino di un backup delle risorse include l'avvio di una sessione di conn
 
 È necessario aver preparato l'ambiente PowerShell per eseguire i cmdlet PowerShell.
 
-*Fasi*
-
+.Fasi
 . Avviare una sessione di connessione con il server SnapCenter per un utente specifico utilizzando il cmdlet Open-SmConnection.
 +
 [listing]

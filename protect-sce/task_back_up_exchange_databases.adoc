@@ -13,8 +13,7 @@ summary: Se un database non fa parte di alcun gruppo di risorse, è possibile es
 [role="lead"]
 Se un database non fa parte di alcun gruppo di risorse, è possibile eseguire il backup del database o del gruppo disponibilità database dalla pagina risorse.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 * È necessario aver creato una policy di backup.
 * È necessario assegnare l'aggregato utilizzato dall'operazione di backup alla SVM utilizzata dal database.
 * Se si desidera eseguire il backup di una risorsa che ha una relazione SnapMirror con uno storage secondario, il ruolo assegnato all'utente dello storage deve includere il privilegio "`snapmirror all`". Tuttavia, se si utilizza il ruolo "`vsadmin`", il privilegio "`snapmirror all`" non è richiesto.
@@ -27,8 +26,7 @@ Se un database non fa parte di alcun gruppo di risorse, è possibile eseguire il
 |===
 
 
-*Fasi*
-
+.Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare *plug-in Microsoft Exchange Server* dall'elenco.
 . Nella pagina risorse, selezionare *Database* o *Database Availability Group* dall'elenco *View*.
 +

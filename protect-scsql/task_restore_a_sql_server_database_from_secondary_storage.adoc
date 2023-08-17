@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_restore_a_sql_server_database_from_secondary_storage.html 
 sidebar: sidebar 
-keywords:  
+keywords: restore operation 
 summary: 'È possibile ripristinare i database di SQL Server di cui è stato eseguito il backup dai LUN fisici (RDM, iSCSI o FCP) su un sistema di storage secondario. La funzionalità di ripristino è un processo multifase che copia tutti i dati e le pagine di registro da un backup SQL Server specificato che risiede nel sistema di storage secondario in un database specifico.' 
 ---
 = Ripristinare un database SQL Server dallo storage secondario
@@ -13,15 +13,13 @@ summary: 'È possibile ripristinare i database di SQL Server di cui è stato ese
 [role="lead"]
 È possibile ripristinare i database di SQL Server di cui è stato eseguito il backup dalle LUN fisiche (RDM, iSCSI o FCP) su un sistema di storage secondario. La funzionalità di ripristino è un processo multifase che copia tutti i dati e le pagine di registro da un backup SQL Server specificato che risiede nel sistema di storage secondario in un database specifico.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 * È necessario replicare le copie Snapshot dal sistema di storage primario a quello secondario.
 * È necessario assicurarsi che il server SnapCenter e l'host del plug-in siano in grado di connettersi al sistema di storage secondario.
 * La maggior parte dei campi delle pagine della procedura guidata di ripristino viene spiegata nel processo di ripristino di base. Le seguenti informazioni descrivono alcuni dei campi per i quali potrebbe essere necessaria una guida.
 
 
-*Fasi*
-
+.Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare *plug-in SnapCenter per SQL Server* dall'elenco.
 . Nella pagina Resources (risorse), selezionare *Database* o *Resource Group* dall'elenco a discesa *View* (Visualizza).
 . Selezionare il database o il gruppo di risorse.

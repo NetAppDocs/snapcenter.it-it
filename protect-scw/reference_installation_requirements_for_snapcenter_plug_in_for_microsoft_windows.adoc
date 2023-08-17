@@ -148,14 +148,12 @@ Al termine dell'impostazione delle credenziali, è possibile assegnare la manute
 
 Windows Server 2012 o versione successiva consente di creare un account di servizio gestito di gruppo (gMSA) che fornisce la gestione automatica delle password dell'account di servizio da un account di dominio gestito.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 * È necessario disporre di un controller di dominio Windows Server 2012 o versione successiva.
 * È necessario disporre di un host Windows Server 2012 o versione successiva, membro del dominio.
 
 
-*Fasi*
-
+.Fasi
 . Creare una chiave root KDS per generare password univoche per ogni oggetto in gMSA.
 . Per ciascun dominio, eseguire il seguente comando dal controller di dominio Windows: Add-KDSRootKey -EffectiveImmediately
 . Creare e configurare gMSA:

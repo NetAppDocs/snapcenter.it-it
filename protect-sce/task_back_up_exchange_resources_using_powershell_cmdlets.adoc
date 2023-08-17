@@ -13,8 +13,7 @@ summary: 'Il backup di un database di Exchange Server include la connessione con
 [role="lead"]
 Il backup di un database di Exchange Server include la connessione con il server SnapCenter, il rilevamento del database, l'aggiunta di un criterio, la creazione di un gruppo di risorse di backup, il backup e la visualizzazione dello stato del backup.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 * È necessario aver preparato l'ambiente PowerShell per eseguire i cmdlet PowerShell.
 * È necessario aver aggiunto la connessione al sistema di storage e creato una credenziale.
 * È necessario aggiungere host e rilevare risorse.
@@ -23,8 +22,7 @@ Il backup di un database di Exchange Server include la connessione con il server
 
 NOTE: Il plug-in per Exchange non supporta le operazioni di cloni, pertanto il parametro CloneType per il cmdlet Add-SmPolicy non è supportato per il plug-in per Exchange
 
-*Fasi*
-
+.Fasi
 . Avviare una sessione di connessione con il server SnapCenter per un utente specifico utilizzando il cmdlet Open-SmConnection.
 +
 [listing]

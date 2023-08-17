@@ -134,7 +134,7 @@ Viene creato un gruppo di risorse implicito. È possibile visualizzare questa op
 . Monitorare l'avanzamento dell'operazione selezionando *Monitor* > *Jobs*.
 
 
-.Cosa succederà?
+.Al termine
 * Nelle configurazioni MetroCluster, SnapCenter potrebbe non essere in grado di rilevare una relazione di protezione dopo un failover.
 +
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["Impossibile rilevare la relazione SnapMirror o SnapVault dopo il failover di MetroCluster"]

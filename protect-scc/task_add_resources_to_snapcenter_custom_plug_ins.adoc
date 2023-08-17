@@ -13,7 +13,7 @@ summary: 'È necessario aggiungere le risorse di cui si desidera eseguire il bac
 [role="lead"]
 È necessario aggiungere le risorse di cui si desidera eseguire il backup o la clonazione. A seconda dell'ambiente in uso, le risorse possono essere istanze di database o raccolte di cui si desidera eseguire il backup o la clonazione.
 
-.Di cosa hai bisogno
+.Prima di iniziare
 * È necessario completare attività come l'installazione del server SnapCenter, l'aggiunta di host, la creazione di connessioni al sistema di storage e l'aggiunta di credenziali.
 * Devi avere link:concept_develop_a_plug_in_for_your_application.html["creazione di un plug-in personalizzato per l'applicazione"].
 * I plug-in devono essere stati caricati sul server SnapCenter.

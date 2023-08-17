@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/reference_storage_types_supported_by_snapcenter_plug_ins_for_microsoft_windows.html 
 sidebar: sidebar 
-keywords:  
+keywords: Storage types 
 summary: 'SnapCenter supporta un"ampia gamma di tipi di storage su macchine fisiche e virtuali. Prima di installare il pacchetto per l"host, è necessario verificare se il supporto è disponibile per il tipo di storage in uso.' 
 ---
 = Tipi di storage supportati dai plug-in SnapCenter per Microsoft Windows

@@ -13,14 +13,12 @@ summary: 'Le risorse sono le LUN e i componenti simili nel file system gestiti d
 [role="lead"]
 Le risorse sono le LUN e i componenti simili nel file system gestiti dai plug-in installati. È possibile aggiungere tali risorse ai gruppi di risorse in modo da poter eseguire lavori di protezione dei dati su più risorse, ma prima è necessario identificare le risorse disponibili. La ricerca delle risorse disponibili verifica inoltre che l'installazione del plug-in sia stata completata correttamente.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 * È necessario aver già completato attività come l'installazione del server SnapCenter, l'aggiunta di host, la creazione di connessioni alle macchine virtuali di storage (SVM) e l'aggiunta di credenziali.
 * Se i file risiedono su LUN o VMDK VMware RDM, è necessario implementare il plug-in SnapCenter per VMware vSphere e registrare il plug-in con SnapCenter. Per ulteriori informazioni, vedere https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/["Plug-in SnapCenter per la documentazione di VMware vSphere"^].
 
 
-*Fasi*
-
+.Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina Resources (risorse), selezionare *file Systems* dall'elenco.
 . Selezionare l'host per filtrare l'elenco di risorse, quindi fare clic su *Refresh Resources* (Aggiorna risorse).

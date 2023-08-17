@@ -13,8 +13,7 @@ summary: 'Un gruppo di risorse è un insieme di risorse su un host o cluster. Un
 [role="lead"]
 Un gruppo di risorse è un insieme di risorse su un host o cluster. Un'operazione di backup sul gruppo di risorse viene eseguita su tutte le risorse definite nel gruppo di risorse. È possibile eseguire il backup di un gruppo di risorse su richiesta dalla pagina risorse. Se un gruppo di risorse dispone di un criterio associato e di una pianificazione configurata, i backup vengono eseguiti automaticamente in base alla pianificazione.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 * È necessario aver creato un gruppo di risorse con un criterio allegato.
 * Se si desidera eseguire il backup di una risorsa che ha una relazione SnapMirror con lo storage secondario, il ruolo assegnato all'utente dello storage deve includere il privilegio "`snapmirror all`". Tuttavia, se si utilizza il ruolo "`vsadmin`", il privilegio "`snapmirror all`" non è richiesto.
 * Se un gruppo di risorse dispone di più database di host diversi, l'operazione di backup su alcuni host potrebbe attivarsi in ritardo a causa di problemi di rete. È necessario configurare il valore di MaxRetryForUninitializedHosts in web.config utilizzando il cmdlet Set-SmConfigSettings PowerShell
@@ -26,8 +25,7 @@ NOTE: Quando si esegue il backup di un file system, SnapCenter non esegue il bac
 
 IMPORTANT: Se si lavora in un contesto di file system Windows, non eseguire il backup dei file di database. In questo modo si crea un backup incoerente e una possibile perdita di dati durante il ripristino. Per proteggere i file di database, è necessario utilizzare il plug-in SnapCenter appropriato per il database (ad esempio, il plug-in SnapCenter per Microsoft SQL Server, il plug-in SnapCenter per Microsoft Exchange Server o un plug-in personalizzato per i file di database).
 
-*Fasi*
-
+.Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina Resources (risorse), selezionare *Resource Group* (Gruppo di risorse) dall'elenco *View* (Visualizza).
 +

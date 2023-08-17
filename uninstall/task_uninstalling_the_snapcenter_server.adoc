@@ -13,8 +13,7 @@ summary: 'Se non si desidera più utilizzare il server SnapCenter per gestire i 
 [role="lead"]
 Se non si desidera più utilizzare il server SnapCenter per gestire i processi di protezione dei dati, è possibile disinstallare il server SnapCenter utilizzando il pannello di controllo programmi e funzionalità dell'host del server SnapCenter. La disinstallazione del server SnapCenter rimuove tutti i suoi componenti.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 * Assicurarsi di disporre di almeno 2 GB di spazio libero sul disco in cui è installato il server SnapCenter.
 * Assicurarsi che il dominio in cui è installato il server SnapCenter non sia stato rimosso.
 +
@@ -23,8 +22,7 @@ Se si rimuove il dominio in cui è stato installato il server SnapCenter e si te
 * Il backup del database del repository dovrebbe essere stato eseguito perché il database del repository verrà pulito e disinstallato.
 
 
-*Fasi*
-
+.Fasi
 . Sull'host del server SnapCenter, accedere al pannello di controllo.
 . Assicurarsi di essere nella vista *Categoria*.
 . In programmi, fare clic su *Disinstalla un programma*.

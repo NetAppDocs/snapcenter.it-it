@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/reference_sources_and_destinations_for_a_restore_operation.html 
 sidebar: sidebar 
-keywords:  
+keywords: restore operation 
 summary: È possibile ripristinare un database SQL Server da una copia di backup sullo storage primario o secondario. È inoltre possibile ripristinare il database in diverse destinazioni oltre alla posizione originale, consentendo di scegliere la destinazione che supporta i requisiti. 
 ---
 = Origini e destinazioni per un'operazione di ripristino

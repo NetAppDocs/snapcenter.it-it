@@ -1,7 +1,7 @@
 ---
 permalink: install/reference_provision_storage_using_powershell_cmdlets.html 
 sidebar: sidebar 
-keywords:  
+keywords: Provision storage, snapcenter 
 summary: 'Se non si desidera utilizzare l"interfaccia grafica di SnapCenter per eseguire il provisioning host e i processi di recupero dello spazio, è possibile utilizzare i cmdlet PowerShell forniti dal plug-in SnapCenter per Microsoft Windows. È possibile utilizzare i cmdlet direttamente o aggiungerli agli script.' 
 ---
 = Eseguire il provisioning dello storage utilizzando i cmdlet PowerShell

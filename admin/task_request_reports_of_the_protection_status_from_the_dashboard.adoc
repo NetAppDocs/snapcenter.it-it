@@ -1,7 +1,7 @@
 ---
 permalink: admin/task_request_reports_of_the_protection_status_from_the_dashboard.html 
 sidebar: sidebar 
-keywords:  
+keywords: dashboard 
 summary: È possibile richiedere dettagli di protezione per le risorse gestite da plug-in specifici utilizzando la dashboard. 
 ---
 = Richiedere report sullo stato della protezione dalla dashboard

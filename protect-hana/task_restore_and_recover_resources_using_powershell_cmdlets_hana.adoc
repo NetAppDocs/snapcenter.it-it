@@ -15,8 +15,7 @@ Il ripristino di un backup delle risorse include l'avvio di una sessione di conn
 
 È necessario aver preparato l'ambiente PowerShell per eseguire i cmdlet PowerShell.
 
-*Fasi*
-
+.Fasi
 . Avviare una sessione di connessione con il server SnapCenter per un utente specifico utilizzando il cmdlet Open-SmConnection.
 +
 [listing]

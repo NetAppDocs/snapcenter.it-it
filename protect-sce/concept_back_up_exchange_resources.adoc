@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/concept_back_up_exchange_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: Backup workflow 
 summary: 'Quando si installa il plug-in SnapCenter per Microsoft Exchange Server nell"ambiente in uso, è possibile utilizzare SnapCenter per eseguire il backup delle risorse Exchange.' 
 ---
 = Workflow di backup

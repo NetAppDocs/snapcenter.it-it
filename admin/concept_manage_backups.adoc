@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_manage_backups.html 
 sidebar: sidebar 
-keywords:  
+keywords: Manage backups 
 summary: È possibile rinominare ed eliminare i backup. È inoltre possibile eliminare più backup contemporaneamente. 
 ---
 = Gestire i backup
@@ -44,8 +44,7 @@ Se i backup dei database Oracle sono stati catalogati utilizzando Oracle Recover
 
 È possibile eliminare i backup se non è più necessario eseguire il backup per altre operazioni di protezione dei dati.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 È necessario eliminare i cloni associati prima di eliminare un backup.
 
 

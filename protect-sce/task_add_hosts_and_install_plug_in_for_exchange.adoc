@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_add_hosts_and_install_plug_in_for_exchange.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter Plug-in for Microsoft Exchange Server 
 summary: 'È possibile utilizzare la pagina SnapCenterAdd host per aggiungere host Windows. Il plug-in per Exchange viene installato automaticamente sull"host specificato. Questo è il metodo consigliato per installare i plug-in. È possibile aggiungere un host e installare un plug-in per un singolo host o per un cluster.' 
 ---
 = Aggiungere host e installare il plug-in per Exchange
@@ -13,16 +13,14 @@ summary: 'È possibile utilizzare la pagina SnapCenterAdd host per aggiungere ho
 [role="lead"]
 È possibile utilizzare la pagina Aggiungi host di SnapCenter per aggiungere host Windows. Il plug-in per Exchange viene installato automaticamente sull'host specificato. Questo è il metodo consigliato per installare i plug-in. È possibile aggiungere un host e installare un plug-in per un singolo host o per un cluster.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 * È necessario essere un utente assegnato a un ruolo che disponga delle autorizzazioni di installazione e disinstallazione del plug-in, ad esempio SnapCenter Admin
 * Quando si installa un plug-in su un host Windows, se si specifica una credenziale non integrata o se l'utente appartiene a un utente del gruppo di lavoro locale, è necessario disattivare il controllo dell'account utente sull'host.
 * Il servizio di accodamento dei messaggi deve essere in esecuzione.
 * Se si utilizza un account di servizio gestito di gruppo (gMSA), è necessario configurare gMSA con privilegi amministrativi. Per ulteriori informazioni, vederelink:task_configure_gMSA_on_windows_server_2012_or_later.html["Configurare account di servizio gestito di gruppo su Windows Server 2012 o versione successiva per Microsoft Exchange Server"^].
 
 
-*A proposito di questa attività*
-
+.A proposito di questa attività
 * Non è possibile aggiungere un server SnapCenter come host plug-in a un altro server SnapCenter.
 * È possibile aggiungere un host e installare pacchetti plug-in per un singolo host o per un cluster.
 * Se un nodo Exchange fa parte di un DAG, non è possibile aggiungere un solo nodo al server SnapCenter.
@@ -53,8 +51,7 @@ Il plug-in per Exchange dipende dal pacchetto di plug-in SnapCenter per Windows 
 
 Se SnapManager per Microsoft Exchange Server e SnapDrive per Windows sono già installati, Se si desidera installare il plug-in per Exchange sullo stesso server Exchange, è necessario annullare la registrazione del provider hardware VSS utilizzato da SnapDrive per Windows, poiché non è compatibile con il provider hardware VSS installato con il plug-in per Exchange e il pacchetto plug-in SnapCenter per Windows. Per ulteriori informazioni, vedere https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_manually_register_the_Data_ONTAP_VSS_Hardware_Provider["Come registrare manualmente il provider hardware VSS di Data ONTAP"].
 
-*Fasi*
-
+.Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *hosts*.
 . Verificare che l'opzione *Managed hosts* sia selezionata nella parte superiore.
 . Fare clic su *Aggiungi*.

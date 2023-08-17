@@ -15,11 +15,10 @@ Il riquadro Activity (attività) visualizza le cinque operazioni più recenti es
 
 Il riquadro Activity (attività) visualizza informazioni relative alle operazioni di backup, ripristino, clonazione e backup pianificati. Se si utilizza il plug-in per SQL Server o il plug-in per Exchange Server, nel riquadro attività vengono visualizzate anche le informazioni relative all'operazione di riseeding.
 
-*Fasi*
-
+.Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Fare clic su image:../media/activity_pane_icon.gif[""] Nel riquadro Activity (attività) per visualizzare le cinque operazioni più recenti.
 +
-Quando si fa clic su una delle operazioni, i dettagli dell'operazione vengono elencati nella pagina Dettagli lavoro.
+Quando si fa clic su una delle operazioni, i dettagli dell'operazione vengono elencati nella pagina *Dettagli commessa*.
 
 

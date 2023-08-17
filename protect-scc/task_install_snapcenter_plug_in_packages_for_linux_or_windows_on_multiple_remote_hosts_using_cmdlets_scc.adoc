@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_install_snapcenter_plug_in_packages_for_linux_or_windows_on_multiple_remote_hosts_using_cmdlets_scc.html 
 sidebar: sidebar 
-keywords: credentials 
+keywords: install, snapcenter 
 summary: È possibile installare i pacchetti plug-in SnapCenter per Linux o Windows su più host contemporaneamente utilizzando il cmdlet Install-SmHostPackage PowerShell. 
 ---
 = Installare i pacchetti plug-in SnapCenter per Linux o Windows su più host remoti utilizzando i cmdlet
@@ -13,12 +13,10 @@ summary: È possibile installare i pacchetti plug-in SnapCenter per Linux o Wind
 [role="lead"]
 È possibile installare i pacchetti plug-in SnapCenter per Linux o Windows su più host contemporaneamente utilizzando il cmdlet Install-SmHostPackage PowerShell.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 L'utente che aggiunge un host deve disporre dei diritti amministrativi sull'host.
 
-*Fasi*
-
+.Fasi
 . Avviare PowerShell.
 . Sull'host del server SnapCenter, stabilire una sessione utilizzando il cmdlet Open-SmConnection, quindi immettere le credenziali.
 . Installare il plug-in su più host utilizzando il cmdlet Install-SmHostPackage e i parametri richiesti.

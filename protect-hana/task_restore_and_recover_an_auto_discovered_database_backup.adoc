@@ -13,7 +13,7 @@ summary: È possibile utilizzare SnapCenter per ripristinare e ripristinare i da
 [role="lead"]
 È possibile utilizzare SnapCenter per ripristinare e ripristinare i dati da uno o più backup.
 
-.Di cosa hai bisogno
+.Prima di iniziare
 * È necessario aver eseguito il backup delle risorse o dei gruppi di risorse.
 * È necessario annullare qualsiasi operazione di backup attualmente in corso per la risorsa o il gruppo di risorse che si desidera ripristinare.
 * Per i comandi di pre-restore, post-restore, mount e unmount, controllare se i comandi esistono nell'elenco dei comandi disponibile sull'host del plug-in dai seguenti percorsi:

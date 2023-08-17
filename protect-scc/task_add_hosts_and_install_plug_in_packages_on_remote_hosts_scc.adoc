@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_add_hosts_and_install_plug_in_packages_on_remote_hosts_scc.html 
 sidebar: sidebar 
-keywords: credentials 
+keywords: add hosts 
 summary: Utilizzare la pagina SnapCenterAdd host per aggiungere host e installare i pacchetti plug-in. I plug-in vengono installati automaticamente sugli host remoti. È possibile aggiungere un host e installare i pacchetti plug-in per un singolo host o per un cluster. 
 ---
 = Aggiungere host e installare pacchetti plug-in su host remoti
@@ -13,8 +13,7 @@ summary: Utilizzare la pagina SnapCenterAdd host per aggiungere host e installar
 [role="lead"]
 Utilizzare la pagina SnapCenterAdd host per aggiungere host e installare i pacchetti plug-in. I plug-in vengono installati automaticamente sugli host remoti. È possibile aggiungere un host e installare i pacchetti plug-in per un singolo host o per un cluster.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 * Si dovrebbe essere un utente assegnato a un ruolo che dispone delle autorizzazioni di installazione e disinstallazione del plug-in, ad esempio il ruolo di amministratore di SnapCenter.
 * Assicurarsi che il servizio di accodamento dei messaggi sia in esecuzione.
 * Se si utilizza un account di servizio gestito di gruppo (gMSA), è necessario configurare gMSA con privilegi amministrativi.
@@ -23,14 +22,12 @@ link:task_configure_gMSA_on_windows_server_2012_or_later.html["Configurare l'acc
 
 
 
-*A proposito di questa attività*
-
+.A proposito di questa attività
 Non è possibile aggiungere un server SnapCenter come host plug-in a un altro server SnapCenter.
 
 Se si installano plug-in su un cluster (WSFC), i plug-in vengono installati su tutti i nodi del cluster.
 
-*Fasi*
-
+.Fasi
 . Nel riquadro di navigazione a sinistra, selezionare *hosts*.
 . Verificare che la scheda *Managed hosts* sia selezionata nella parte superiore.
 . Selezionare *Aggiungi*.
@@ -110,7 +107,7 @@ I plug-in personalizzati possono essere installati su un sistema Windows o Linux
 +
 In alternativa, è possibile personalizzare il percorso.
 
-** Per il pacchetto di plug-in SnapCenter per Linux, il percorso predefinito è /opt/NetApp/snapcenter.
+** Per il pacchetto di plug-in SnapCenter per Linux, il percorso predefinito è `/opt/NetApp/snapcenter`.
 +
 In alternativa, è possibile personalizzare il percorso.
 
@@ -121,7 +118,7 @@ In alternativa, è possibile personalizzare il percorso.
 La cartella zippata contiene il codice del plug-in personalizzato e il file .xml descrittore.
 
 +
-Per Storage Plug-in, accedere a _C:/ProgramData/NetApp/SnapCenter/Package Repository_ e selezionare `Storage.zip` cartella.
+Per il plug-in di archiviazione, selezionare `_C:\ProgramData\NetApp\SnapCenter\Package Repository_` e selezionare `Storage.zip` cartella.
 
 ... Selezionare *Upload*.
 +
@@ -176,6 +173,6 @@ NOTE: La verifica dell'impronta digitale è obbligatoria anche se lo stesso host
 
 . Monitorare l'avanzamento dell'installazione.
 +
-I file di log specifici dell'installazione si trovano in /custom_location/snapcenter/logs.
+I file di registro specifici dell'installazione si trovano in `/custom_location/snapcenter/` registri.
 
 

@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_migrate_resources_to_netapp_storage.html 
 sidebar: sidebar 
-keywords:  
+keywords: migrate resources 
 summary: 'Dopo aver eseguito il provisioning del sistema storage NetApp utilizzando il plug-in SnapCenter per Microsoft Windows, è possibile migrare le risorse al sistema storage NetApp o da un LUN NetApp a un altro LUN NetApp utilizzando l"interfaccia grafica utente SnapCenter o i cmdlet PowerShell.' 
 ---
 = Migrazione delle risorse al sistema storage NetApp
@@ -13,16 +13,14 @@ summary: 'Dopo aver eseguito il provisioning del sistema storage NetApp utilizza
 [role="lead"]
 Dopo aver eseguito il provisioning del sistema storage NetApp utilizzando il plug-in SnapCenter per Microsoft Windows, è possibile migrare le risorse al sistema storage NetApp o da un LUN NetApp a un altro LUN NetApp utilizzando l'interfaccia grafica utente (GUI) SnapCenter o i cmdlet PowerShell.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 * È necessario aggiungere sistemi storage al server SnapCenter.
 * È necessario aggiornare (rilevare) le risorse di SQL Server.
 
 
 La maggior parte dei campi presenti in queste pagine della procedura guidata sono esplicativi. Le seguenti informazioni descrivono alcuni dei campi per i quali potrebbe essere necessaria una guida.
 
-*Fasi*
-
+.Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina Resources (risorse), selezionare *Database* o *Instance* dall'elenco a discesa *View* (Visualizza).
 . Selezionare il database o l'istanza dall'elenco e fare clic su *Migra*.

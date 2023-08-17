@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/concept_develop_a_plug_in_for_your_application.html 
 sidebar: sidebar 
-keywords:  
+keywords: overview snapcenter 
 summary: Il server SnapCenter consente di implementare e gestire le applicazioni come plug-in per SnapCenter. 
 ---
 = Panoramica

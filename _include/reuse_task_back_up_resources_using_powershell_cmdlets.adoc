@@ -4,15 +4,13 @@
 
 È possibile utilizzare i cmdlet PowerShell per eseguire il backup dei database SQL Server o dei file system Windows. Il backup di un database o di un file system di SQL Server include la connessione con il server SnapCenter, il rilevamento delle istanze o dei file system di SQL Server, l'aggiunta di un criterio, la creazione di un gruppo di risorse di backup, il backup e la verifica del backup.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 * È necessario aver preparato l'ambiente PowerShell per eseguire i cmdlet PowerShell.
 * È necessario aver aggiunto la connessione al sistema di storage e creato una credenziale.
 * È necessario aggiungere host e rilevare risorse.
 
 
-*Fasi*
-
+.Fasi
 . Avviare una sessione di connessione con il server SnapCenter per un utente specifico utilizzando il cmdlet Open-SmConnection.
 +
 [listing]

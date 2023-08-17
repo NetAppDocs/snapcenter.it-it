@@ -13,8 +13,7 @@ summary: Un gruppo di risorse è il container a cui è possibile aggiungere più
 [role="lead"]
 Un gruppo di risorse è il container a cui è possibile aggiungere più file system che si desidera proteggere. È inoltre necessario associare uno o più criteri al gruppo di risorse per definire il tipo di lavoro di protezione dei dati che si desidera eseguire, quindi specificare la pianificazione del backup.
 
-*Fasi*
-
+.Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina Resources (risorse), selezionare *file Systems* dall'elenco.
 +
@@ -75,12 +74,12 @@ Per aggiungere un singolo file system, deselezionare l'opzione *selezione automa
 È possibile selezionare qualsiasi policy esistente e fare clic su *Dettagli* per determinare se è possibile utilizzare tale policy.
 
 +
-Se nessuna policy esistente soddisfa i tuoi requisiti, puoi creare una nuova policy facendo clic su *image:../media/add_policy_from_resourcegroup.gif[""]* per avviare la procedura guidata delle policy.
+Se nessuna policy esistente soddisfa i tuoi requisiti, puoi creare una nuova policy facendo clic su *image:../media/add_policy_from_resourcegroup.gif["icona più"]* per avviare la procedura guidata delle policy.
 
 +
 I criteri selezionati sono elencati nella colonna Policy della sezione Configure schedules for selected policies.
 
-.. Nella sezione Configure schedules for selected policy (Configura pianificazioni per policy selezionate), fare clic su *image:../media/add_policy_from_resourcegroup.gif[""]* Nella colonna Configure Schedules (Configura pianificazioni) per il criterio per il quale si desidera configurare la pianificazione.
+.. Nella sezione Configure schedules for selected policy (Configura pianificazioni per policy selezionate), fare clic su *image:../media/add_policy_from_resourcegroup.gif["icona più"]* Nella colonna Configure Schedules (Configura pianificazioni) per il criterio per il quale si desidera configurare la pianificazione.
 .. Se il criterio è associato a più tipi di pianificazione (frequenze), selezionare la frequenza che si desidera configurare.
 .. Nella finestra di dialogo Add schedules for policy _policy_name_, configurare la pianificazione specificando la data di inizio, la data di scadenza e la frequenza, quindi fare clic su *fine*.
 +

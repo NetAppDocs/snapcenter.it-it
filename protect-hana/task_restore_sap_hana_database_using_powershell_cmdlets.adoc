@@ -13,7 +13,7 @@ summary: 'Il ripristino di un backup del database SAP HANA include l"avvio di un
 [role="lead"]
 Il ripristino di un backup del database SAP HANA include l'avvio di una sessione di connessione con il server SnapCenter, l'elenco dei backup e il recupero delle informazioni di backup e il ripristino di un backup.
 
-.Di cosa hai bisogno
+.Prima di iniziare
 È necessario aver preparato l'ambiente PowerShell per eseguire i cmdlet PowerShell.
 
 .Fasi

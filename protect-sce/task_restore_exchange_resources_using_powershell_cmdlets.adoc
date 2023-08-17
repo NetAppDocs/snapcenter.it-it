@@ -15,8 +15,7 @@ Il ripristino di un database Exchange include l'avvio di una sessione di conness
 
 È necessario aver preparato l'ambiente PowerShell per eseguire i cmdlet PowerShell.
 
-*Fasi*
-
+.Fasi
 . Avviare una sessione di connessione con il server SnapCenter per un utente specifico utilizzando `Open-SmConnection` cmdlet.
 +
 [listing]

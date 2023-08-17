@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/reference_restore_sql_server_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: Restore workflow 
 summary: È possibile utilizzare SnapCenter per ripristinare i database di SQL Server ripristinando i dati da uno o più backup nel file system attivo e ripristinando il database. È inoltre possibile ripristinare i database presenti nei gruppi di disponibilità e aggiungere i database ripristinati al gruppo di disponibilità. Prima di ripristinare un database SQL Server, è necessario eseguire diverse attività preparatorie. 
 ---
 = Ripristinare il flusso di lavoro

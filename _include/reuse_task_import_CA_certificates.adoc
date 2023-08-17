@@ -4,8 +4,7 @@
 
 È necessario importare i certificati CA nel server SnapCenter e nei plug-in host di Windows utilizzando la console di gestione Microsoft (MMC).
 
-*Fasi*
-
+.Fasi
 . Accedere alla console di gestione Microsoft (MMC), quindi fare clic su *file* > *Aggiungi/Rimuovi Snapin*.
 . Nella finestra Aggiungi o Rimuovi snap-in, selezionare *certificati*, quindi fare clic su *Aggiungi*.
 . Nella finestra dello snap-in certificati, selezionare l'opzione *account computer*, quindi fare clic su *fine*.

@@ -1,7 +1,7 @@
 ---
 permalink: protect-hana/concept_how_resources_resource_groups_and_policies_are_used_for_protecting_sap_hana_databases.html 
 sidebar: sidebar 
-keywords:  
+keywords: SAP HANA databases 
 summary: Prima di utilizzare SnapCenter, è utile comprendere i concetti di base relativi alle operazioni di backup, clonazione e ripristino che si desidera eseguire. Interagisci con risorse, gruppi di risorse e policy per diverse operazioni. 
 ---
 = Utilizzo di risorse, gruppi di risorse e policy per la protezione dei database SAP HANA

@@ -13,7 +13,7 @@ summary: È necessario configurare HDB User Store Key e HDBSQL OS User per esegu
 [role="lead"]
 È necessario configurare HDB User Store Key e HDBSQL OS User per eseguire operazioni di protezione dei dati sui database SAP HANA.
 
-.Di cosa hai bisogno
+.Prima di iniziare
 * Se il database SAP HANA non dispone della chiave HDB Secure User Store e dell'utente HDB SQL OS, viene visualizzata un'icona a forma di lucchetto rosso solo per le risorse rilevate automaticamente. Se durante un'operazione di rilevamento successiva, la chiave di memorizzazione utente sicura HDB configurata non è corretta o non ha consentito l'accesso al database stesso, viene visualizzata nuovamente l'icona del lucchetto rosso.
 * È necessario configurare la chiave di archiviazione utente sicura HDB e l'utente SQL OS HDB per proteggere il database o aggiungerlo a un gruppo di risorse per eseguire operazioni di protezione dei dati.
 * È necessario configurare HDB SQL OS User per accedere al database di sistema. Se HDB SQL OS User è configurato per accedere solo al database tenant, l'operazione di rilevamento non riesce.

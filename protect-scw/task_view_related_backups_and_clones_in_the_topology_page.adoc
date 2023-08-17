@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/task_view_related_backups_and_clones_in_the_topology_page.html 
 sidebar: sidebar 
-keywords:  
+keywords: view backups, view clones 
 summary: Quando si prepara il backup o la clonazione di una risorsa, è possibile visualizzare una rappresentazione grafica di tutti i backup e cloni sullo storage primario e secondario. Nella pagina topologia, è possibile visualizzare tutti i backup e i cloni disponibili per la risorsa o il gruppo di risorse selezionato. È possibile visualizzare i dettagli di tali backup e cloni e selezionarli per eseguire le operazioni di protezione dei dati. 
 ---
 = Visualizzare i backup e i cloni correlati nella pagina topologia
@@ -13,8 +13,7 @@ summary: Quando si prepara il backup o la clonazione di una risorsa, è possibil
 [role="lead"]
 Quando si prepara il backup o la clonazione di una risorsa, è possibile visualizzare una rappresentazione grafica di tutti i backup e cloni sullo storage primario e secondario. Nella pagina topologia, è possibile visualizzare tutti i backup e i cloni disponibili per la risorsa o il gruppo di risorse selezionato. È possibile visualizzare i dettagli di tali backup e cloni e selezionarli per eseguire le operazioni di protezione dei dati.
 
-*A proposito di questa attività*
-
+.A proposito di questa attività
 È possibile esaminare le seguenti icone nella vista Manage Copies (Gestisci copie) per determinare se i backup e i cloni sono disponibili sullo storage primario o secondario (copie Mirror o copie Vault).
 
 * image:../media/topology_primary_storage.gif["icona dello storage primario"] visualizza il numero di backup e cloni disponibili sullo storage primario.
@@ -34,8 +33,7 @@ NOTE: I cloni di un backup di un mirror flessibile della versione su un volume d
 
 NOTE: I cloni di un backup di un mirror flessibile della versione su un volume di tipo mirror-vault vengono visualizzati nella vista della topologia, ma il numero di backup mirror nella vista della topologia non include il backup flessibile della versione.
 
-*Fasi*
-
+.Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina risorse, selezionare la risorsa o il gruppo di risorse dall'elenco a discesa *Visualizza*.
 . Selezionare la risorsa dalla vista dei dettagli della risorsa o dalla vista dei dettagli del gruppo di risorse.
@@ -67,9 +65,8 @@ Se si utilizzano plug-in personalizzati di SnapCenter, non è possibile rinomina
 ** Se si utilizza il pacchetto di plug-in SnapCenter per Linux e il backup è stato catalogato utilizzando Gestione ripristino Oracle (RMAN), non è possibile rinominare i backup catalogati.
 
 
-. Se si desidera eliminare un clone, selezionarlo dalla tabella e fare clic su image:../media/delete_icon.gif[""] per eliminare il clone.
+. Se si desidera eliminare un clone, selezionarlo dalla tabella e fare clic su image:../media/delete_icon.gif["icona elimina"] per eliminare il clone.
 
 
-*Esempio di backup e cloni sullo storage primario*
-
+.Esempio di visualizzazione di backup e cloni sullo storage primario
 image:../media/topology_backups_and_clones_primary_storage.gif["Vista della topologia di backup e cloni nello storage primario."]

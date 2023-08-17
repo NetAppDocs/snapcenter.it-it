@@ -6,8 +6,7 @@ Il flusso di lavoro dei cloni include la pianificazione, l'esecuzione dell'opera
 
 È necessario aver preparato l'ambiente PowerShell per eseguire i cmdlet PowerShell.
 
-*Fasi*
-
+.Fasi
 . Avviare una sessione di connessione con il server SnapCenter per un utente specifico utilizzando il cmdlet Open-SmConnection.
 +
 [listing]

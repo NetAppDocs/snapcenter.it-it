@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_create_policies_for_custom_plug_in_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: create policies, custom plug-in 
 summary: Prima di utilizzare SnapCenter per eseguire il backup di risorse specifiche del plug-in personalizzato, è necessario creare un criterio di backup per la risorsa o il gruppo di risorse di cui si desidera eseguire il backup. 
 ---
 = Creare policy per risorse plug-in personalizzate
@@ -13,8 +13,7 @@ summary: Prima di utilizzare SnapCenter per eseguire il backup di risorse specif
 [role="lead"]
 Prima di utilizzare SnapCenter per eseguire il backup di risorse specifiche del plug-in personalizzato, è necessario creare un criterio di backup per la risorsa o il gruppo di risorse di cui si desidera eseguire il backup.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 * Dovresti aver definito la tua strategia di backup.
 +
 Per ulteriori informazioni, consulta le informazioni sulla definizione di una strategia di protezione dei dati per i plug-in personalizzati.
@@ -30,14 +29,12 @@ L'amministratore di SnapCenter deve aver assegnato all'utente le SVM per i volum
 * Dovrebbero essere state aggiunte manualmente le risorse che si desidera proteggere.
 
 
-*A proposito di questa attività*
-
+.A proposito di questa attività
 * Un criterio di backup è un insieme di regole che regolano la gestione, la pianificazione e la conservazione dei backup. Inoltre, è possibile specificare le impostazioni di replica, script e applicazione.
 * La specifica delle opzioni in un criterio consente di risparmiare tempo quando si desidera riutilizzare il criterio per un altro gruppo di risorse.
 
 
-*Fasi*
-
+.Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *Impostazioni*.
 . Nella pagina Impostazioni, fare clic su *Criteri*.
 . Fare clic su *nuovo*.
@@ -50,7 +47,7 @@ L'amministratore di SnapCenter deve aver assegnato all'utente le SVM per i volum
 NOTE: È possibile specificare la pianificazione (data di inizio, data di fine e frequenza) per l'operazione di backup durante la creazione di un gruppo di risorse. Ciò consente di creare gruppi di risorse che condividono la stessa policy e frequenza di backup, ma consente di assegnare diverse pianificazioni di backup a ciascun criterio.
 
 +
-image::../media/backup_settings.gif[impostazioni di backup]
+image::../media/backup_settings.gif[Pagina di backup delle impostazioni]
 
 +
 
@@ -59,7 +56,7 @@ NOTE: Se sono previste le 2:00, la programmazione non verrà attivata durante l'
 ** Nella sezione Custom backup settings (Impostazioni di backup personalizzate), fornire le impostazioni di backup specifiche che devono essere passate al plug-in in formato key-value. È possibile fornire più valori chiave da passare al plug-in.
 
 
-. Nella pagina conservazione, specificare le impostazioni di conservazione per il tipo di backup e il tipo di pianificazione selezionati nella pagina tipo di backup:
+. Nella pagina *retention*, specificare le impostazioni di conservazione per il tipo di backup e il tipo di pianificazione selezionato nella pagina *Backup Type*:
 +
 |===
 | Se si desidera... | Quindi... 
@@ -86,7 +83,7 @@ Conservare le copie Snapshot per un certo numero di giorni
 Selezionare *Mantieni copie Snapshot per*, quindi specificare il numero di giorni per i quali si desidera conservare le copie Snapshot prima di eliminarle.
 
 |===
-. Nella pagina Replication, specificare le impostazioni di replica:
+. Nella pagina *Replica*, specificare le impostazioni di replica:
 +
 |===
 | Per questo campo... | Eseguire questa operazione... 

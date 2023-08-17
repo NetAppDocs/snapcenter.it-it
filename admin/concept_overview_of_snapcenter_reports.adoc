@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_overview_of_snapcenter_reports.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter reports 
 summary: SnapCenter offre una vasta gamma di opzioni di reporting che consentono di monitorare e gestire lo stato di salute del sistema e il successo delle operazioni. 
 ---
 = Panoramica delle funzionalità di reporting di SnapCenter
@@ -130,8 +130,7 @@ Questa opzione consente di configurare il server SMTP per l'invio di tutti i rep
 
 Se si desidera che i normali aggiornamenti dei processi di protezione dei dati di SnapCenter vengano inviati a se stessi o ad altri utenti in modo da poter monitorare lo stato di tali aggiornamenti, è possibile configurare l'opzione per inviare tramite email i report di SnapCenter quando si crea un gruppo di risorse.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 È necessario aver configurato il server SMTP nella pagina Global Settings (Impostazioni globali) in Settings (Impostazioni).
 
 *Fasi*

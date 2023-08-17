@@ -15,8 +15,7 @@ summary: È necessario configurare il sistema storage che consente a SnapCenter 
 
 È possibile aggiungere una SVM standalone o un cluster composto da più SVM. Se si utilizza Amazon FSX per NetApp ONTAP, è possibile aggiungere FSX admin LIF composto da più SVM utilizzando l'account fsxadmin o aggiungere FSX SVM in SnapCenter.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 * Per creare le connessioni storage, è necessario disporre delle autorizzazioni necessarie nel ruolo Infrastructure Admin.
 * Assicurarsi che le installazioni dei plug-in non siano in corso.
 +
@@ -111,7 +110,7 @@ Il valore predefinito è 60 secondi.
 . Fare clic su *Invia*.
 
 
-*Risultati*
+*Risultato*
 
 Nella pagina Storage Systems (sistemi storage), dal menu a discesa *Type* (tipo), eseguire una delle seguenti operazioni:
 
@@ -138,7 +137,7 @@ NOTE: Se i sistemi di storage FAS o AFF sono stati aggiornati a tutti gli array 
 
 Un amministratore del cluster deve abilitare AutoSupport su ciascun nodo del sistema di storage per inviare notifiche e-mail da tutti i sistemi di storage a cui SnapCenter ha accesso, eseguendo il seguente comando dalla riga di comando del sistema di storage:
 
-`autosupport trigger modify -node nodename -autosupport-message client.app.info enable -noteto enable`
+`autosupport trigger modify -node nodename -autosupport-message client.app.info -to enable -noteto enable`
 
 
 NOTE: L'amministratore della macchina virtuale per lo storage (SVM) non ha accesso a AutoSupport.

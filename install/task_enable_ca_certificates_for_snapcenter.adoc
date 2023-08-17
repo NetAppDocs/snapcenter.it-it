@@ -13,8 +13,7 @@ summary: È necessario configurare i certificati CA e attivare la convalida del 
 [role="lead"]
 È necessario configurare i certificati CA e attivare la convalida del certificato CA per il server SnapCenter.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 * È possibile attivare o disattivare i certificati CA utilizzando il cmdlet Set-SmCertificateSettings.
 * È possibile visualizzare lo stato del certificato per il server SnapCenter utilizzando il cmdlet Get-SmCertificateSettings.
 

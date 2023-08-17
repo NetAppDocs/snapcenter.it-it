@@ -13,7 +13,7 @@ summary: È possibile installare i pacchetti plug-in SnapCenter per Linux o Wind
 [role="lead"]
 È possibile installare i pacchetti plug-in SnapCenter per Linux o Windows su più host contemporaneamente utilizzando il cmdlet Install-SmHostPackage PowerShell.
 
-.Di cosa hai bisogno
+.Prima di iniziare
 È necessario aver effettuato l'accesso a SnapCenter come utente di dominio con diritti di amministratore locale su ciascun host su cui si desidera installare il pacchetto del plug-in.
 
 .Fasi

@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_cancel_backup_operations_for_exchange_database.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: È possibile annullare le operazioni di backup inserite nella coda. 
 ---
 = Annullare le operazioni di backup per il database Exchange

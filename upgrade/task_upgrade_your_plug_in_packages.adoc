@@ -15,8 +15,7 @@ I pacchetti plug-in vengono distribuiti come parte dell'aggiornamento di SnapCen
 
 La procedura di aggiornamento posiziona l'host Windows, Linux o AIX in modalità "`maintenance`", impedendo all'host di eseguire qualsiasi processo pianificato.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 * Se si è utenti non root con accesso alle macchine Linux, aggiornare il file _/etc/sudoers_ con i valori checksum più recenti prima di eseguire l'operazione di aggiornamento.
 * Per impostazione predefinita, SnapCenter rileva JAVA_HOME dall'ambiente. Se si desidera utilizzare UNA JAVA_HOME fissa e si stanno aggiornando i plug-in su un host Linux, aggiungere manualmente IL parametro SKIP_JAVAHOME_UPDATE nel file _spl.properties_ che si trova in _/var/opt/snapcenter/spl/etc/_ e impostare il valore su TRUE.
 +
@@ -28,8 +27,7 @@ Esempi di file di configurazione di SnapCenter: SnapDriveService.exe.config, SMC
 
 
 
-*A proposito di questa attività*
-
+.A proposito di questa attività
 * La procedura di aggiornamento posiziona l'host Windows, Linux o AIX in modalità "`maintenance`", impedendo all'host di eseguire qualsiasi processo pianificato.
 * Per il plug-in SnapCenter per Microsoft SQL Server, il plug-in SnapCenter per Microsoft Exchange Server e il plug-in SnapCenter per Microsoft Windows, si consiglia di aggiornare sia il server che gli host plug-in alla versione più recente per l'esecuzione DI SCRIPTS_PATH.
 +
@@ -40,8 +38,7 @@ Nella pagina *Dettagli lavoro*, un messaggio di avviso consiglia al cliente di c
 
 
 
-*Fasi*
-
+.Fasi
 . Nel riquadro di navigazione a sinistra, fare clic su *hosts* > *Managed hosts*.
 . Aggiornare gli host eseguendo una delle seguenti operazioni:
 +

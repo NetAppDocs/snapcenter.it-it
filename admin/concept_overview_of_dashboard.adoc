@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_overview_of_dashboard.html 
 sidebar: sidebar 
-keywords:  
+keywords: dashboard 
 summary: 'Dal riquadro di navigazione a sinistra di SnapCenter, la dashboard offre una prima panoramica dello stato del sistema, tra cui attività di processo recenti, avvisi, riepilogo della protezione, efficienza e utilizzo dello storage, stato dei processi SnapCenter (backup, clonazione, ripristino), stato della configurazione per host cluster standalone e Windows, Numero di macchine virtuali di storage (SVM) gestite da SnapCenter e capacità di licenza.' 
 ---
 = Panoramica della dashboard

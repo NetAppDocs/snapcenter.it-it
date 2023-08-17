@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_back_up_resource_groups_of_custom_plug_in_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: backup, custom plug-in 
 summary: È possibile eseguire il backup di un gruppo di risorse su richiesta dalla pagina risorse. Se un gruppo di risorse dispone di un criterio associato e di una pianificazione configurata, i backup vengono eseguiti automaticamente in base alla pianificazione. 
 ---
 = Eseguire il backup di gruppi di risorse di plug-in personalizzati
@@ -13,18 +13,16 @@ summary: È possibile eseguire il backup di un gruppo di risorse su richiesta da
 [role="lead"]
 È possibile eseguire il backup di un gruppo di risorse su richiesta dalla pagina risorse. Se un gruppo di risorse dispone di un criterio associato e di una pianificazione configurata, i backup vengono eseguiti automaticamente in base alla pianificazione.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 * È necessario aver creato un gruppo di risorse con un criterio allegato.
 * Se si desidera eseguire il backup di una risorsa che ha una relazione SnapMirror con lo storage secondario, il ruolo ONTAP assegnato all'utente dello storage deve includere il privilegio "`snapmirror all`". Tuttavia, se si utilizza il ruolo "`vsadmin`", il privilegio "`snapmirror all`" non è richiesto.
 
 
-*Fasi*
-
+.Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina Resources (risorse), selezionare *Resource Group* (Gruppo di risorse) dall'elenco *View* (Visualizza).
 +
-È possibile cercare il gruppo di risorse inserendo il nome del gruppo di risorse nella casella di ricerca o facendo clic su image:../media/filter_icon.png[""] e selezionando il tag. Quindi fare clic su image:../media/filter_icon.png[""] per chiudere il riquadro del filtro.
+È possibile cercare il gruppo di risorse inserendo il nome del gruppo di risorse nella casella di ricerca o facendo clic su image:../media/filter_icon.png["icona del filtro"] e selezionando il tag. Quindi fare clic su image:../media/filter_icon.png["icona del filtro"] per chiudere il riquadro del filtro.
 
 . Nella pagina gruppi di risorse, selezionare il gruppo di risorse di cui si desidera eseguire il backup, quindi fare clic su *Esegui backup ora*.
 . Nella pagina Backup, attenersi alla seguente procedura:

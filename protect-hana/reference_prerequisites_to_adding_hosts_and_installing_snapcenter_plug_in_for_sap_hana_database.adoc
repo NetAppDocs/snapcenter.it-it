@@ -57,3 +57,47 @@ https://imt.netapp.com/matrix/imt.jsp?components=112393;&solution=1259&isHWU&src
 * Per i database SAP HANA in esecuzione su un host Linux, durante l'installazione del plug-in per il database SAP HANA, il plug-in SnapCenter per UNIX viene installato automaticamente.
 * Si dovrebbe avere *bash* come shell predefinita per l'installazione del plug-in.
 
+
+
+
+== Comandi supplementari
+
+Per eseguire un comando supplementare sul plug-in SnapCenter per SAP HANA, è necessario includerlo in `allowed_commands.config` file.
+
+`allowed_commands.config` Il file si trova nella sottodirectory "etc" della directory SnapCenter Plug-in for SAP HANA.
+
+.Host Windows
+Predefinito: `C:\Program Files\NetApp\SnapCenter\HANA\etc\allowed_commands.config`
+
+Percorso personalizzato: `<Custome_Directory>\NetApp\SnapCenter\HANA\etc\allowed_commands.config`
+Host Windows:
+
+.Host Linux
+Predefinito: `/opt/NetApp/snapcenter/scc/etc/allowed_commands.config`
+
+Percorso personalizzato: `<Custome_Directory>/NetApp/snapcenter/scc/etc/allowed_commands.config`
+
+Per consentire comandi supplementari sull'host del plug-in, aprire `allowed_commands.config` in un editor. Immettere ciascun comando su una riga separata. Non rileva la distinzione tra maiuscole e minuscole.
+Ad esempio,
+
+comando: mount
+
+comando: umount
+
+Assicurarsi di specificare il nome del percorso completo. Racchiudere il percorso tra virgolette (") se contiene spazi.
+Ad esempio,
+
+Comando: "C:\Program Files\NetApp\SnapCreator Commands\sdcli.exe"
+
+comando: myscript.bat
+
+Se il `allowed_commands.config` il file non è presente, i comandi o l'esecuzione dello script vengono bloccati e il flusso di lavoro non riesce e viene visualizzato il seguente errore:
+
+"[/mnt/mount -a] esecuzione non consentita. Autorizzare aggiungendo il comando nel file %s sull'host del plugin."
+
+Se il comando o lo script non è presente in `allowed_commands.config`, l'esecuzione del comando o dello script viene bloccata e il flusso di lavoro non riesce e viene visualizzato il seguente errore:
+
+"[/mnt/mount -a] esecuzione non consentita. Autorizzare aggiungendo il comando nel file %s sull'host del plugin."
+
+
+NOTE: Non utilizzare un carattere jolly (*) per consentire tutti i comandi.

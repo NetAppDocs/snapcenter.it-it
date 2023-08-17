@@ -13,8 +13,7 @@ summary: Se una risorsa non si trova in un gruppo di risorse, è possibile esegu
 [role="lead"]
 Se una risorsa non si trova in un gruppo di risorse, è possibile eseguire il backup su richiesta dalla pagina risorse.
 
-*A proposito di questa attività*
-
+.A proposito di questa attività
 Se si desidera eseguire il backup di una risorsa che ha una relazione SnapMirror con lo storage secondario, il ruolo assegnato all'utente dello storage deve includere il privilegio "`snapmirror all`". Tuttavia, se si utilizza il ruolo "`vsadmin`", il privilegio "`snapmirror all`" non è richiesto.
 
 
@@ -23,8 +22,7 @@ NOTE: Quando si esegue il backup di un file system, SnapCenter non esegue il bac
 
 IMPORTANT: Se si lavora in un contesto di file system Windows, non eseguire il backup dei file di database. In questo modo si crea un backup incoerente e una possibile perdita di dati durante il ripristino. Per proteggere i file di database, è necessario utilizzare il plug-in SnapCenter appropriato per il database (ad esempio, il plug-in SnapCenter per Microsoft SQL Server, il plug-in SnapCenter per Microsoft Exchange Server o un plug-in personalizzato per i file di database).
 
-*Fasi*
-
+.Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina risorse, selezionare il tipo di risorsa file system, quindi selezionare la risorsa di cui si desidera eseguire il backup.
 . Se la procedura guidata file system - Protect non si avvia automaticamente, fare clic su *Protect* per avviare la procedura guidata.

@@ -13,7 +13,7 @@ summary: Utilizzare la pagina Aggiungi host di SnapCenter per aggiungere host e 
 [role="lead"]
 Utilizzare la pagina Aggiungi host di SnapCenter per aggiungere host e installare i pacchetti dei plug-in. I plug-in vengono installati automaticamente sugli host remoti. È possibile aggiungere un host e installare pacchetti plug-in per un singolo host o per un cluster.
 
-.Di cosa hai bisogno
+.Prima di iniziare
 * È necessario essere un utente assegnato a un ruolo che disponga delle autorizzazioni di installazione e disinstallazione del plug-in, ad esempio il ruolo di amministratore di SnapCenter.
 * Quando si installa un plug-in su un host Windows, se si specifica una credenziale non integrata o se l'utente appartiene a un utente del gruppo di lavoro locale, è necessario disattivare il controllo dell'account utente sull'host.
 * Assicurarsi che il servizio di accodamento dei messaggi sia in esecuzione.

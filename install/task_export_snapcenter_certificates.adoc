@@ -60,6 +60,6 @@ Esaminare il riepilogo, quindi fare clic su *fine* per avviare l'esportazione.
 |===
 
 
-*Risultati*
+*Risultato*
 
 I certificati vengono esportati in formato .pfx.

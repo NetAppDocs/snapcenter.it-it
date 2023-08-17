@@ -13,8 +13,7 @@ summary: È necessario esportare i certificati CA dal server SnapCenter agli hos
 [role="lead"]
 È necessario esportare i certificati CA dal server SnapCenter agli host plug-in utilizzando la console di gestione Microsoft.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 Il protocollo SSL bidirezionale dovrebbe essere stato configurato.
 
 *Fasi*

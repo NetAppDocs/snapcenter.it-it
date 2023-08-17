@@ -13,8 +13,7 @@ summary: Un gruppo di risorse è una raccolta di risorse su un host o su un DAG 
 [role="lead"]
 Un gruppo di risorse è una raccolta di risorse su un host o su un DAG Exchange e il gruppo di risorse può includere un intero DAG o singoli database. È possibile eseguire il backup dei gruppi di risorse dalla pagina risorse.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 * È necessario aver creato un gruppo di risorse con un criterio allegato.
 * È necessario assegnare l'aggregato utilizzato dall'operazione di backup alla SVM (Storage Virtual Machine) utilizzata dal database.
 * Se si desidera eseguire il backup di una risorsa che ha una relazione SnapMirror con uno storage secondario, il ruolo assegnato all'utente dello storage deve includere il privilegio "`snapmirror all`". Tuttavia, se si utilizza il ruolo "`vsadmin`", il privilegio "`snapmirror all`" non è richiesto.
@@ -25,12 +24,10 @@ Il backup avrà esito positivo per la copia del database attiva/passiva sullo st
 
 
 
-*A proposito di questa attività*
-
+.A proposito di questa attività
 È possibile eseguire il backup di un gruppo di risorse su richiesta dalla pagina risorse. Se un gruppo di risorse dispone di un criterio associato e di una pianificazione configurata, i backup vengono eseguiti automaticamente in base alla pianificazione.
 
-*Fasi*
-
+.Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare *plug-in Microsoft Exchange Server* dall'elenco.
 . Nella pagina Resources (risorse), selezionare *Resource Group* (Gruppo di risorse) dall'elenco *View* (Visualizza).
 +

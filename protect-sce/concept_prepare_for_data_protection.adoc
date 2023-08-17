@@ -72,4 +72,4 @@ Quando si crea un gruppo di risorse, si selezionano uno o più criteri per tale 
 
 Un gruppo di risorse definisce _cosa_ si desidera proteggere e quando si desidera proteggerlo in termini di giorno e ora. Pensa a una policy come a definire _come_ la vuoi proteggere. Ad esempio, se si esegue il backup di tutti i database di un host, è possibile creare un gruppo di risorse che includa tutti i database dell'host. È quindi possibile associare due criteri al gruppo di risorse: Una policy giornaliera e una policy oraria. Quando si crea il gruppo di risorse e si allegano i criteri, è possibile configurare il gruppo di risorse in modo che esegua un backup completo ogni giorno e un altro programma che esegua i backup del registro ogni ora. L'immagine seguente illustra la relazione tra risorse, gruppi di risorse e criteri per i database:
 
-image::../media/sce_resourcegroup_policy.gif[policy del resourcegroup di sce]
+image::../media/sce_resourcegroup_policy.gif[Schermata dei criteri del gruppo di risorse]

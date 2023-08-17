@@ -13,7 +13,7 @@ summary: 'Un gruppo di risorse è un insieme di risorse su un host. Un"operazion
 [role="lead"]
 Un gruppo di risorse è un insieme di risorse su un host. Un'operazione di backup sul gruppo di risorse viene eseguita su tutte le risorse definite nel gruppo di risorse.
 
-.Di cosa hai bisogno
+.Prima di iniziare
 * È necessario aver creato un gruppo di risorse con un criterio allegato.
 * Se si desidera eseguire il backup di una risorsa che ha una relazione SnapMirror con uno storage secondario, il ruolo ONTAP assegnato all'utente dello storage deve includere il privilegio "`snapmirror all`". Tuttavia, se si utilizza il ruolo "`vsadmin`", il privilegio "`snapmirror all`" non è richiesto.
 

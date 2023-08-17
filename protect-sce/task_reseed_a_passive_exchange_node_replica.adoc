@@ -13,8 +13,7 @@ summary: Se è necessario eseguire di nuovo il reeed di una copia della replica,
 [role="lead"]
 Se è necessario eseguire di nuovo il reeed di una copia della replica, ad esempio quando una copia è danneggiata, è possibile eseguire nuovamente il reeed del backup più recente utilizzando la funzione di reeed di SnapCenter.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 * È necessario utilizzare il server SnapCenter 4.1 o versione successiva e il plug-in per Exchange 4.1 o versione successiva.
 +
 Il reseeding di una replica non è supportato nelle versioni di SnapCenter precedenti alla 4.1.
@@ -27,8 +26,7 @@ Il reseeding di una replica non è supportato nelle versioni di SnapCenter prece
 
 | *Best practice:* per evitare ritardi tra i nodi, si consiglia di creare un nuovo backup prima di eseguire un'operazione di riseed o di scegliere l'host con il backup più recente. 
 |===
-*Fasi*
-
+.Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare *plug-in Microsoft Exchange Server* dall'elenco.
 . Nella pagina risorse, selezionare l'opzione appropriata dall'elenco Visualizza:
 +

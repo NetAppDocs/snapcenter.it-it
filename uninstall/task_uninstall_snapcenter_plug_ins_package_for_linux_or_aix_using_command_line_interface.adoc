@@ -13,12 +13,10 @@ summary: 'È possibile disinstallare il pacchetto di plug-in SnapCenter per Linu
 [role="lead"]
 È possibile disinstallare il pacchetto di plug-in SnapCenter per Linux o il pacchetto di plug-in SnapCenter per AIX utilizzando l'interfaccia della riga di comando.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 * Assicurarsi di aver eliminato i processi pianificati
 * Assicurarsi che tutti i lavori in esecuzione siano stati completati.
 
 
-*Passo*
-
+.Fase
 Eseguire _/custom_location/NetApp/snapcenter/spl/installation/plugins/uninstall_ per disinstallare.

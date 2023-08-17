@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_define_a_restoration_strategy_for_sql_server.html 
 sidebar: sidebar 
-keywords:  
+keywords: restoration strategy 
 summary: La definizione di una strategia di ripristino per SQL Server consente di ripristinare correttamente il database. 
 ---
 = Definire una strategia di ripristino per SQL Server

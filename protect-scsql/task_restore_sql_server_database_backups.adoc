@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_restore_sql_server_database_backups.html 
 sidebar: sidebar 
-keywords:  
+keywords: restore operation 
 summary: È possibile utilizzare SnapCenter per ripristinare i database di SQL Server di cui è stato eseguito il backup. Il ripristino del database è un processo multifase che copia tutti i dati e le pagine di registro da un backup di SQL Server specificato in un database specifico. 
 ---
 = Ripristinare i backup del database di SQL Server
@@ -13,8 +13,7 @@ summary: È possibile utilizzare SnapCenter per ripristinare i database di SQL S
 [role="lead"]
 È possibile utilizzare SnapCenter per ripristinare i database di SQL Server di cui è stato eseguito il backup. Il ripristino del database è un processo multifase che copia tutti i dati e le pagine di registro da un backup di SQL Server specificato in un database specifico.
 
-*A proposito di questa attività*
-
+.A proposito di questa attività
 * È possibile ripristinare i database di SQL Server di cui è stato eseguito il backup in un'istanza di SQL Server diversa sullo stesso host in cui è stato creato il backup.
 +
 È possibile utilizzare SnapCenter per ripristinare i database di SQL Server di cui è stato eseguito il backup in un percorso alternativo, in modo da non sostituire una versione di produzione.
@@ -36,8 +35,7 @@ Il valore della chiave può essere visualizzato da swagger attraverso l'API: API
 * La maggior parte dei campi delle pagine della procedura guidata di ripristino sono esplicativi. Le seguenti informazioni descrivono i campi per i quali potrebbe essere necessaria una guida.
 
 
-*Fasi*
-
+.Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina Resources (risorse), selezionare *Database* o *Resource Group* dall'elenco *View* (Visualizza).
 . Selezionare il database o il gruppo di risorse dall'elenco.
@@ -190,8 +188,7 @@ NOTE: Il percorso prescripts o postscripts non deve includere dischi o condivisi
 . Monitorare il processo di ripristino utilizzando la pagina *Monitor* > *Jobs*.
 
 
-*Ulteriori informazioni*
-
+.Informazioni correlate
 link:task_restore_and_recover_resources_using_powershell_cmdlets_for_sql.html["Ripristinare e ripristinare le risorse utilizzando i cmdlet PowerShell"]
 
 link:task_restore_a_sql_server_database_from_secondary_storage.html["Ripristinare un database SQL Server dallo storage secondario"]

@@ -10,8 +10,7 @@ I plug-in personalizzati utilizzano il file _keystore.jks_, che si trova in _C: 
 
 == Gestire la password per l'archivio chiavi del plug-in personalizzato e l'alias della coppia di chiavi firmate CA in uso
 
-*Fasi*
-
+.Fasi
 . È possibile recuperare la password predefinita del keystore del plug-in personalizzato dal file di proprietà dell'agente del plug-in personalizzato.
 +
 È il valore corrispondente alla chiave _KEYSTORE_PASS_.
@@ -47,8 +46,7 @@ NOTE: La password per il keystore del plug-in personalizzato e per tutte le pass
 
 È necessario configurare i certificati root o intermedi senza la chiave privata per l'archivio di trust del plug-in personalizzato.
 
-*Fasi*
-
+.Fasi
 . Accedere alla cartella contenente il keystore del plug-in personalizzato _C: File di programma/NetApp/SnapCenter/Snapcenter Plug-in Creator
 . Individuare il file 'keystore.jks'.
 . Elencare i certificati aggiunti nel keystore:
@@ -71,8 +69,7 @@ NOTE: Aggiungere il certificato CA principale e i certificati CA intermedi.
 
 È necessario configurare la coppia di chiavi firmate della CA nell'archivio di trust del plug-in personalizzato.
 
-*Fasi*
-
+.Fasi
 . Accedere alla cartella contenente il keystore del plug-in personalizzato _C: File di programma/NetApp/SnapCenter/Snapcenter Plug-in Creator
 . Individuare il file _keystore.jks_.
 . Elencare i certificati aggiunti nel keystore:
@@ -106,15 +103,13 @@ Aggiornare questo valore con la chiave SCC_CERTIFICATE_ALIAS.
 
 == Configurare l'elenco CRL (Certificate Revocation List) per i plug-in personalizzati di SnapCenter
 
-*A proposito di questa attività*
-
+.A proposito di questa attività
 * Per scaricare il file CRL più recente per il certificato CA correlato, vedere https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_update_certificate_revocation_list_file_in_SnapCenter_CA_Certificate["Come aggiornare il file dell'elenco di revoca dei certificati nel certificato CA di SnapCenter"].
 * I plug-in personalizzati di SnapCenter cercheranno i file CRL in una directory preconfigurata.
 * La directory predefinita per i file CRL per i plug-in personalizzati di SnapCenter è _'C: File di programma, NetApp, SnapCenter, SnapCenter Plug-in Creator, ecc.
 
 
-*Fasi*
-
+.Fasi
 . È possibile modificare e aggiornare la directory predefinita nel file _agent.properties_ in base alla chiave CRL_PATH.
 . È possibile inserire più file CRL in questa directory.
 +

@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/reference_back_up_sql_server_database_or_instance_or_availability_group.html 
 sidebar: sidebar 
-keywords:  
+keywords: Backup workflow 
 summary: 'Quando si installa il plug-in SnapCenter per Microsoft SQL Server nell"ambiente in uso, è possibile utilizzare SnapCenter per eseguire il backup delle risorse di SQL Server.' 
 ---
 = Workflow di backup

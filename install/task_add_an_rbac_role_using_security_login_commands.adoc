@@ -13,8 +13,7 @@ summary: È possibile utilizzare i comandi di accesso di sicurezza per aggiunger
 [role="lead"]
 È possibile utilizzare i comandi di accesso di sicurezza per aggiungere un ruolo RBAC ONTAP quando i sistemi storage eseguono Clustered ONTAP.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 * Prima di creare un ruolo RBAC ONTAP per i sistemi storage che eseguono Clustered ONTAP, è necessario identificare quanto segue:
 +
 ** L'attività (o le attività) che si desidera eseguire

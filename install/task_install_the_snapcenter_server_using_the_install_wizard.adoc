@@ -18,8 +18,7 @@ summary: È possibile eseguire il programma di installazione del server SnapCent
 
 NOTE: L'installazione automatica del server SnapCenter dalla riga di comando non è supportata.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 * L'host del server SnapCenter deve essere aggiornato con gli aggiornamenti di Windows senza riavvii di sistema in sospeso.
 * È necessario assicurarsi che MySQL Server non sia installato sull'host in cui si intende installare il server SnapCenter.
 * Dovrebbe essere stato attivato il debug del programma di installazione di Windows.

@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_view_custom_plug_in_resource_backups_and_clones_in_the_topology_page.html 
 sidebar: sidebar 
-keywords:  
+keywords: view custom plug-in resource 
 summary: Quando si prepara il backup o la clonazione di una risorsa, potrebbe essere utile visualizzare una rappresentazione grafica di tutti i backup e cloni sullo storage primario e secondario. Nella pagina topologia, è possibile visualizzare tutti i backup e i cloni disponibili per la risorsa o il gruppo di risorse selezionato. È possibile visualizzare i dettagli di tali backup e cloni e selezionarli per eseguire le operazioni di protezione dei dati. 
 ---
 = Visualizza i backup e i cloni personalizzati relativi alle risorse plug-in nella pagina topologia
@@ -13,8 +13,7 @@ summary: Quando si prepara il backup o la clonazione di una risorsa, potrebbe es
 [role="lead"]
 Quando si prepara il backup o la clonazione di una risorsa, potrebbe essere utile visualizzare una rappresentazione grafica di tutti i backup e cloni sullo storage primario e secondario. Nella pagina topologia, è possibile visualizzare tutti i backup e i cloni disponibili per la risorsa o il gruppo di risorse selezionato. È possibile visualizzare i dettagli di tali backup e cloni e selezionarli per eseguire le operazioni di protezione dei dati.
 
-*A proposito di questa attività*
-
+.A proposito di questa attività
 È possibile esaminare le seguenti icone nella vista Manage Copies (Gestisci copie) per determinare se i backup e i cloni sono disponibili sullo storage primario o secondario (copie Mirror o copie Vault).
 
 * image:../media/topology_primary_storage.gif["icona dello storage primario"] visualizza il numero di backup e cloni disponibili sullo storage primario.
@@ -33,8 +32,7 @@ NOTE: I cloni di un backup di un mirror flessibile della versione su un volume d
 
 
 
-*Fasi*
-
+.Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina risorse, selezionare la risorsa o il gruppo di risorse dall'elenco a discesa *Visualizza*.
 . Selezionare la risorsa dalla vista dei dettagli della risorsa o dalla vista dei dettagli del gruppo di risorse.

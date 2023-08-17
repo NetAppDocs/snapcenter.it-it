@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/reference_back_up_windows_file_systems.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter 
 summary: 'Quando si installa il plug-in SnapCenter per Microsoft Windows nell"ambiente in uso, è possibile utilizzare SnapCenter per eseguire il backup dei file system Windows. È possibile eseguire il backup di un singolo file system o di un gruppo di risorse che contiene più file system. È possibile eseguire il backup on-demand o in base a un programma di protezione definito.' 
 ---
 = Eseguire il backup dei file system Windows

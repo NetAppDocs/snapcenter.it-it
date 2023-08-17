@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_reseed_a_replica_using_powershell_cmdlets_for_exchange_database.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: È possibile utilizzare i cmdlet PowerShell per ripristinare una replica non sana utilizzando la copia più recente sullo stesso host o la copia più recente da un host alternativo. 
 ---
 = Eseguire di nuovo il reeeding di una replica utilizzando i cmdlet PowerShell per il database Exchange
@@ -15,8 +15,7 @@ summary: È possibile utilizzare i cmdlet PowerShell per ripristinare una replic
 
 Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento alla https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["Guida di riferimento al cmdlet del software SnapCenter"^].
 
-*Fasi*
-
+.Fasi
 . Avviare una sessione di connessione con il server SnapCenter per un utente specifico utilizzando `Open-SmConnection` cmdlet.
 +
 [listing]

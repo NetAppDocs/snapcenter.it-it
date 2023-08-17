@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_restore_an_exchange_server_database_from_secondary_storage.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: 'È possibile ripristinare un database Exchange Server di cui è stato eseguito il backup dallo storage secondario (mirror o vault).' 
 ---
 = Ripristinare un database Exchange Server dallo storage secondario
@@ -15,8 +15,7 @@ summary: 'È possibile ripristinare un database Exchange Server di cui è stato 
 
 È necessario replicare le copie Snapshot dallo storage primario a uno storage secondario.
 
-*Fasi*
-
+.Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare *plug-in Microsoft Exchange Server* dall'elenco.
 . Nella pagina Resources (risorse), selezionare *Database* o *Resource Group* dall'elenco a discesa *View* (Visualizza).
 . Selezionare il database o il gruppo di risorse.

@@ -17,8 +17,7 @@ Le API REST sono esposte attraverso la pagina web di Swagger. È possibile acced
 
 Non sono necessarie autorizzazioni speciali per eseguire il client API REST. Qualsiasi utente può accedere alla pagina Web di Swagger. Le rispettive autorizzazioni sugli oggetti a cui si accede tramite l'API REST si basano sull'utente che genera il token per accedere all'API REST.
 
-*Fasi*
-
+.Fasi
 . Da un browser, immettere l'URL per accedere alla pagina Web Swagger nel formato _ https://<SnapCenter_IP_address_or_name>:<SnapCenter_port>/swagger/_.
 +
 

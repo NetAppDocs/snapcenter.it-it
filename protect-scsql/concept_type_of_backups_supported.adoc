@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/concept_type_of_backups_supported.html 
 sidebar: sidebar 
-keywords:  
+keywords: Type of backups 
 summary: Il backup dei database di sistema e utente di SQL Server mediante SnapCenter richiede la scelta del tipo di risorsa, ad esempio database, istanze di SQL Server e gruppi di disponibilità. La tecnologia di copia Snapshot consente di creare copie online di sola lettura dei volumi su cui risiedono le risorse. 
 ---
 = Tipo di backup supportati

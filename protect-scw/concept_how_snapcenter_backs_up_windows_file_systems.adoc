@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/concept_how_snapcenter_backs_up_windows_file_systems.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter 
 summary: 'SnapCenter utilizza la tecnologia di copia Snapshot per eseguire il backup delle risorse del file system Windows che risiedono su LUN, volumi CSV (cluster shared), volumi RDM (raw device mapping), ALM (Asymmetric LUN mapping) nei cluster Windows e VMDK basati su VMFS/NFS (VMware Virtual Machine file System con NFS).' 
 ---
 = Come SnapCenter esegue il backup dei file system Windows

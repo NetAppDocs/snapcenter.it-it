@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/concept_snapcenter_plug_in_for_microsoft_sql_server_features.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter Plug-in for Microsoft SQL Server 
 summary: 'Il plug-in per SQL Server si integra con Microsoft SQL Server sull"host Windows e con la tecnologia di copia Snapshot di NetApp sul sistema storage. Per utilizzare il plug-in per SQL Server, utilizzare l"interfaccia SnapCenter.' 
 ---
 = Plug-in SnapCenter per le funzionalità di Microsoft SQL Server

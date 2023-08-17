@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_restore_exchange_databases.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: È possibile utilizzare SnapCenter per ripristinare i database Exchange di cui è stato eseguito il backup. 
 ---
 = Ripristinare i database Exchange
@@ -13,8 +13,7 @@ summary: È possibile utilizzare SnapCenter per ripristinare i database Exchange
 [role="lead"]
 È possibile utilizzare SnapCenter per ripristinare i database Exchange di cui è stato eseguito il backup.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 * È necessario aver eseguito il backup dei gruppi di risorse, del database o dei DAG (Database Availability Group).
 * Quando il database Exchange viene migrato in un'altra posizione, l'operazione di ripristino non funziona per i backup precedenti.
 * Se si stanno replicando le copie Snapshot in un mirror o vault, l'amministratore di SnapCenter deve aver assegnato le SVM sia per i volumi di origine che per i volumi di destinazione.
@@ -27,8 +26,7 @@ Il https://docs.microsoft.com/en-us/powershell/module/exchange/move-activemailbo
 
 
 
-*A proposito di questa attività*
-
+.A proposito di questa attività
 * Quando si esegue un'operazione di ripristino su un database, il database viene montato nuovamente sullo stesso host e non viene creato alcun nuovo volume.
 * I backup a livello DI DAG devono essere ripristinati da singoli database.
 * Il ripristino completo del disco non è supportato quando esistono file diversi dal file di database Exchange (.edb).
@@ -48,8 +46,7 @@ Il valore della chiave può essere visualizzato da swagger attraverso l'API: API
 
 
 
-*Fasi*
-
+.Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *Resources* nell'angolo superiore sinistro della pagina Resource.
 . Selezionare il plug-in di Exchange Server dall'elenco a discesa.
 . Nella pagina Resources (risorse), selezionare *Database* dall'elenco View (Visualizza).

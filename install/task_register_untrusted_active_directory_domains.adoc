@@ -1,7 +1,7 @@
 ---
 permalink: install/task_register_untrusted_active_directory_domains.html 
 sidebar: sidebar 
-keywords:  
+keywords: Active Directory 
 summary: È necessario registrare Active Directory con il server SnapCenter per gestire host, utenti e gruppi di più domini Active Directory non attendibili. 
 ---
 = Registrare domini Active Directory non attendibili
@@ -13,8 +13,7 @@ summary: È necessario registrare Active Directory con il server SnapCenter per 
 [role="lead"]
 È necessario registrare Active Directory con il server SnapCenter per gestire host, utenti e gruppi di più domini Active Directory non attendibili.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 *Protocolli LDAP e LDAPS*
 
 * È possibile registrare i domini Active Directory non attendibili utilizzando il protocollo LDAP o LDAPS.

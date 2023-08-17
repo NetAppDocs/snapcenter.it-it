@@ -13,8 +13,7 @@ summary: Per qualsiasi lavoro di protezione dei dati è necessario un gruppo di 
 [role="lead"]
 Per qualsiasi lavoro di protezione dei dati è necessario un gruppo di risorse. È inoltre necessario associare uno o più criteri al gruppo di risorse per definire il tipo di lavoro di protezione dei dati che si desidera eseguire e la pianificazione della protezione.
 
-*A proposito di questa attività*
-
+.A proposito di questa attività
 * IL PERCORSO_SCRIPT viene definito utilizzando la chiave PredesedWindowsScriptsDirectory situata nel file SMCoreServiceHost.exe.Config dell'host del plug-in.
 +
 Se necessario, è possibile modificare questo percorso e riavviare il servizio SMcore. Si consiglia di utilizzare il percorso predefinito per la protezione.
@@ -27,8 +26,7 @@ Il valore della chiave può essere visualizzato da swagger attraverso l'API: API
 
 
 
-*Fasi*
-
+.Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in Microsoft Exchange Server dall'elenco.
 . Nella pagina Resources (risorse), selezionare *Database* dall'elenco *View* (Visualizza).
 +
@@ -99,7 +97,7 @@ I gruppi di risorse di SnapCenter per Microsoft Exchange Server non possono aver
 .. Selezionare uno o più criteri dall'elenco a discesa.
 +
 
-NOTE: Puoi anche creare una policy facendo clic su *image:../media/add_policy_from_resourcegroup.gif[""]*.
+NOTE: Puoi anche creare una policy facendo clic su *image:../media/add_policy_from_resourcegroup.gif["Icona più"]*.
 
 +
 
@@ -108,7 +106,7 @@ NOTE: Se un criterio contiene l'opzione *Backup delle copie sui server da selezi
 +
 Nella sezione Configure schedules for selected policies (Configura pianificazioni per policy selezionate), vengono elencati i criteri selezionati.
 
-.. Nella sezione Configure schedules for selected policy (Configura pianificazioni per policy selezionate), fare clic su *image:../media/add_policy_from_resourcegroup.gif[""]* Nella colonna *Configura pianificazioni* per il criterio per il quale si desidera configurare la pianificazione.
+.. Nella sezione Configure schedules for selected policy (Configura pianificazioni per policy selezionate), fare clic su *image:../media/add_policy_from_resourcegroup.gif["Icona più"]* Nella colonna *Configura pianificazioni* per il criterio per il quale si desidera configurare la pianificazione.
 .. Nella finestra di dialogo Add schedules for policy _policy_name_, configurare la pianificazione specificando la data di inizio, la data di scadenza e la frequenza, quindi fare clic su *OK*.
 +
 È necessario eseguire questa operazione per ciascuna frequenza elencata nella policy. I piani di lavoro configurati sono elencati nella colonna *piani di lavoro applicati* della sezione Configura piani di lavoro per i criteri selezionati.

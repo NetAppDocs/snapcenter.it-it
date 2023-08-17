@@ -15,8 +15,7 @@ Un gruppo di risorse è un container al quale si aggiungono risorse che si desid
 
 È possibile proteggere le risorse singolarmente senza creare un nuovo gruppo di risorse. È possibile eseguire backup sulla risorsa protetta.
 
-*Fasi*
-
+.Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina Resources (risorse), selezionare *Database* dall'elenco *View* (Visualizza).
 +
@@ -143,6 +142,5 @@ NOTE: Per la notifica via email, è necessario aver specificato i dettagli del s
 . Esaminare il riepilogo, quindi fare clic su *fine*.
 
 
-*Ulteriori informazioni*
-
+.Informazioni correlate
 link:task_create_backup_policies_for_sql_server_databases.html["Creare criteri di backup per i database di SQL Server"]

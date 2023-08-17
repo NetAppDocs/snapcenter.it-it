@@ -13,7 +13,7 @@ summary: 'Le risorse sono i database, le istanze dell"applicazione, i gruppi di 
 [role="lead"]
 Le risorse sono i database, le istanze dell'applicazione, i gruppi di disponibilità e i componenti simili gestiti dai plug-in installati. È possibile aggiungere tali risorse ai gruppi di risorse in modo da poter eseguire lavori di protezione dei dati, ma prima occorre identificare le risorse disponibili. La determinazione delle risorse disponibili verifica inoltre che l'installazione del plug-in sia stata completata correttamente.
 
-.Di cosa hai bisogno
+.Prima di iniziare
 * È necessario aver già completato attività come l'installazione del server SnapCenter, l'aggiunta di host, la creazione di connessioni al sistema di storage e l'aggiunta di credenziali.
 * Per rilevare i database Microsoft SQL, è necessario soddisfare una delle seguenti condizioni.
 +

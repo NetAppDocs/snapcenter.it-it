@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/reference_clone_sql_server_database_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: Clone workflow 
 summary: Prima di clonare le risorse di database da un backup, è necessario eseguire diverse attività utilizzando il server SnapCenter. La clonazione del database è il processo di creazione di una copia point-in-time di un database di produzione o del relativo set di backup. È possibile clonare i database per testare le funzionalità che devono essere implementate utilizzando la struttura e il contenuto del database corrente durante i cicli di sviluppo delle applicazioni, per utilizzare gli strumenti di estrazione e manipolazione dei dati durante il popolamento dei data warehouse o per ripristinare i dati cancellati o modificati erroneamente. 
 ---
 = Clonare il flusso di lavoro
