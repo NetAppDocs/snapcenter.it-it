@@ -77,7 +77,7 @@ NOTE: Se si utilizza un database Oracle su LVM nei sistemi operativi Oracle Linu
  a| 
 RAM minima per il plug-in SnapCenter sull'host
  a| 
-1 GB
+2 GB
 
 
 
@@ -211,7 +211,7 @@ RAM minima per il plug-in SnapCenter sull'host
  a| 
 Spazio minimo di installazione e registrazione per il plug-in SnapCenter sull'host
  a| 
-1 GB
+2 GB
 
 
 NOTE: È necessario allocare spazio su disco sufficiente e monitorare il consumo di storage da parte della cartella dei log. Lo spazio di log richiesto varia in base al numero delle entità da proteggere e alla frequenza delle operazioni di protezione dei dati. Se lo spazio su disco non è sufficiente, i registri non verranno creati per le operazioni eseguite di recente.
