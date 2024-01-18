@@ -24,6 +24,7 @@ Il valore della chiave può essere visualizzato da swagger attraverso l'API: API
 +
 È possibile utilizzare L'API GET per visualizzare il valore della chiave. L'API SET non è supportata.
 
+* Per le policy abilitate per SnapLock, per ONTAP 9.12.1 e versioni successive, se si specifica un periodo di blocco delle copie Snapshot, i cloni creati dalle copie Snapshot a prova di manomissione come parte del ripristino ereditano il tempo di scadenza SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
 
 
 .Fasi
@@ -124,7 +125,7 @@ Le pianificazioni di backup di terze parti non sono supportate quando si sovrapp
 Per la notifica via email, è necessario aver specificato i dettagli del server SMTP utilizzando il comando GUI o PowerShell `Set-SmSmtpServer`.
 
 +
-Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento alla https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["Guida di riferimento al cmdlet del software SnapCenter"^].
+Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento alla https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["Guida di riferimento al cmdlet del software SnapCenter"^].
 
 . Esaminare il riepilogo, quindi fare clic su *fine*.
 

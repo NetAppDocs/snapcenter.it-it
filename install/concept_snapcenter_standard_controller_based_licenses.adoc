@@ -231,7 +231,7 @@ NOTE: La rimozione manuale di una licenza di prova è necessaria solo se si util
 .. Eseguire il cmdlet Open-SmConnection per avviare una sessione di connessione con il server SnapCenter per un account SnapCenterAdmin.
 .. Eseguire Set-SmRepositoryPassword per reimpostare la password MySQL.
 +
-Per informazioni sui cmdlet, vedere https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["Guida di riferimento al cmdlet del software SnapCenter"^].
+Per informazioni sui cmdlet, vedere https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["Guida di riferimento al cmdlet del software SnapCenter"^].
 
 
 

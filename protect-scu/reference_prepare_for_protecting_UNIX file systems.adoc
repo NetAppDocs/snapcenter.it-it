@@ -1,0 +1,30 @@
+---
+permalink: protect-scu/reference_prepare_for_protecting_UNIX file systems.html 
+sidebar: sidebar 
+keywords: unix file systems, preparation for protection, prerequisites 
+summary: 'Prima di eseguire qualsiasi operazione di protezione dei dati, ad esempio operazioni di backup, cloning o ripristino, occorre configurare l"ambiente.' 
+---
+= Prepararsi per la protezione dei file system Unix
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di eseguire qualsiasi operazione di protezione dei dati, ad esempio operazioni di backup, cloning o ripristino, occorre configurare l'ambiente. È inoltre possibile configurare il server SnapCenter in modo che utilizzi le tecnologie SnapMirror e SnapVault.
+
+Per sfruttare i vantaggi delle tecnologie SnapVault e SnapMirror, è necessario configurare e inizializzare una relazione di protezione dei dati tra i volumi di origine e di destinazione sul dispositivo di storage. È possibile utilizzare NetAppSystem Manager oppure la riga di comando della console di storage per eseguire queste attività.
+
+Prima di utilizzare il plug-in per i file system Unix, l'amministratore di SnapCenter deve installare e configurare il server SnapCenter ed eseguire le attività dei prerequisiti.
+
+* Installare e configurare il server SnapCenter. link:../install/task_install_the_snapcenter_server_using_the_install_wizard.html["Scopri di più"^]
+* Configurare l'ambiente SnapCenter aggiungendo connessioni al sistema di storage. link:../install/task_add_storage_systems.html["Scopri di più"^]
++
+
+NOTE: SnapCenter non supporta più SVM con lo stesso nome su cluster diversi. Ogni SVM registrato con SnapCenter utilizzando la registrazione SVM o la registrazione del cluster deve essere univoco.
+
+* Aggiungi host, installa i plug-in e scopri le risorse.
+* Se si utilizza SnapCenter Server per proteggere i file system Unix che risiedono su LUN RDM VMware o VMDK, è necessario implementare il plug-in SnapCenter per VMware vSphere e registrare il plug-in con SnapCenter.
+* Installare Java sull'host Linux.
+* Configurare SnapMirror e SnapVault su ONTAP, se si desidera una replica di backup.
+

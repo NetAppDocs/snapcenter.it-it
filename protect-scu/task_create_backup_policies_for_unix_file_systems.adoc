@@ -1,0 +1,112 @@
+---
+permalink: protect-scu/task_create_backup_policies_for_unix_file_systems.html 
+sidebar: sidebar 
+keywords: backup policies, policies, unix file systems, file systems 
+summary: Creare un criterio di backup per i file system Unix di cui si desidera eseguire il backup. 
+---
+= Creare criteri di backup per i file system Unix
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di utilizzare SnapCenter per eseguire il backup dei file system Unix, è necessario creare un criterio di backup per la risorsa o il gruppo di risorse di cui si desidera eseguire il backup. Un criterio di backup è un insieme di regole che regolano la gestione, la pianificazione e la conservazione dei backup. È inoltre possibile specificare le impostazioni di replica, script e tipo di backup. La creazione di una policy consente di risparmiare tempo quando si desidera riutilizzare la policy su un'altra risorsa o gruppo di risorse.
+
+.Prima di iniziare
+* Devi essere pronto per la protezione dei dati completando attività come l'installazione di SnapCenter, l'aggiunta di host, il rilevamento dei file system e la creazione di connessioni al sistema di storage.
+* Se si stanno replicando le copie Snapshot su uno storage secondario mirror o vault, l'amministratore di SnapCenter deve aver assegnato le SVM per i volumi di origine e di destinazione.
+
+
+.Fasi
+. Nel riquadro di spostamento di sinistra, fare clic su *Impostazioni*.
+. Nella pagina Impostazioni, fare clic su *Criteri*.
+. Selezionare *Unix file Systems* dall'elenco a discesa.
+. Fare clic su *nuovo*.
+. Nella pagina Name (Nome), immettere il nome e la descrizione della policy.
+. Specificare la frequenza del programma selezionando *on demand*, *Hourly*, *Daily*, *Weekly* o *Monthly*.
+. Nella pagina conservazione, specificare le impostazioni di conservazione per il tipo di backup e il tipo di pianificazione selezionati nella pagina tipo di backup:
++
+|===
+
+
+| Se si desidera... | Quindi... 
+
+
+ a| 
+Conservare un certo numero di copie Snapshot
+ a| 
+Selezionare *copie Snapshot totali da conservare*, quindi specificare il numero di copie Snapshot che si desidera conservare.
+
+Se il numero di copie Snapshot supera il numero specificato, le copie Snapshot vengono eliminate prima con le copie meno recenti.
+
+
+NOTE: Il valore massimo di conservazione è 1018 per le risorse su ONTAP 9.4 o versioni successive e 254 per le risorse su ONTAP 9.3 o versioni precedenti. I backup non avranno esito positivo se la conservazione viene impostata su un valore superiore a quello supportato dalla versione di ONTAP sottostante.
+
+
+IMPORTANT: Se si intende attivare la replica SnapVault, è necessario impostare il numero di conservazione su 2 o superiore. Se si imposta il conteggio di conservazione su 1, l'operazione di conservazione potrebbe non riuscire perché la prima copia Snapshot è la copia Snapshot di riferimento per la relazione SnapVault fino a quando una copia Snapshot più recente non viene replicata nella destinazione.
+
+
+
+ a| 
+Conservare le copie Snapshot per un certo numero di giorni
+ a| 
+Selezionare *Mantieni copie Snapshot per*, quindi specificare il numero di giorni per i quali si desidera conservare le copie Snapshot prima di eliminarle.
+
+|===
++
+
+NOTE: È possibile conservare i backup dei log di archiviazione solo se sono stati selezionati i file di log di archiviazione come parte del backup.
+
+. Nella pagina Replication, specificare le impostazioni di replica:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Aggiornare SnapMirror dopo aver creato una copia Snapshot locale
+ a| 
+Selezionare questo campo per creare copie mirror dei set di backup su un altro volume (replica SnapMirror).
+
+
+
+ a| 
+Aggiornare SnapVault dopo aver creato una copia Snapshot locale
+ a| 
+Selezionare questa opzione per eseguire la replica del backup disk-to-disk (backup SnapVault).
+
+
+
+ a| 
+Etichetta del criterio secondario
+ a| 
+Selezionare un'etichetta Snapshot.
+
+A seconda dell'etichetta della copia Snapshot selezionata, ONTAP applica la policy di conservazione della copia Snapshot secondaria corrispondente all'etichetta.
+
+
+NOTE: Se è stato selezionato *Update SnapMirror dopo la creazione di una copia Snapshot locale*, è possibile specificare l'etichetta del criterio secondario. Tuttavia, se è stato selezionato *Aggiorna SnapVault dopo la creazione di una copia Snapshot locale*, è necessario specificare l'etichetta del criterio secondario.
+
+
+
+ a| 
+Numero tentativi di errore
+ a| 
+Immettere il numero massimo di tentativi di replica consentiti prima dell'interruzione dell'operazione.
+
+|===
++
+
+NOTE: È necessario configurare il criterio di conservazione di SnapMirror in ONTAP per lo storage secondario per evitare di raggiungere il limite massimo di copie Snapshot sullo storage secondario.
+
+. Nella pagina script, immettere il percorso e gli argomenti del prespt o del postscript che si desidera eseguire rispettivamente prima o dopo l'operazione di backup.
++
+
+NOTE: Controllare se i comandi sono presenti nell'elenco dei comandi disponibili sull'host plug-in dal percorso _/opt/NetApp/snapcenter/scc/etc/allowed_command.config_.
+
++
+È inoltre possibile specificare il valore di timeout dello script. Il valore predefinito è 60 secondi.
+
+. Esaminare il riepilogo, quindi fare clic su *fine*.
+

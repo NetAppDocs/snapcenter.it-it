@@ -1,0 +1,83 @@
+---
+permalink: protect-scu/task_back_up_unix_file_systems.html 
+sidebar: sidebar 
+keywords: backup, Unix file system, policy, schedule, resources 
+summary: Se una risorsa non fa parte di un gruppo di risorse, è possibile eseguarne il backup dalla pagina risorse. 
+---
+= Eseguire il backup dei file system Unix
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se una risorsa non fa parte di un gruppo di risorse, è possibile eseguarne il backup dalla pagina risorse.
+
+.Fasi
+. Nel riquadro di navigazione a sinistra, selezionare *risorse* e il plug-in appropriato dall'elenco.
+. Nella pagina risorse, selezionare *percorso* dall'elenco Visualizza.
+. Fare clic su image:../media/filter_icon.png["Icona del filtro"], Quindi selezionare il nome host e il file system Unix per filtrare le risorse.
+. Selezionare il file system di cui si desidera eseguire il backup.
+. Nella pagina Resources (risorse), è possibile effettuare le seguenti operazioni:
++
+.. Selezionare la casella di controllo e immettere un formato nome personalizzato da utilizzare per il nome della copia Snapshot.
++
+Ad esempio, `customtext_policy_hostname` oppure `resource_hostname`. Per impostazione predefinita, al nome della copia Snapshot viene aggiunto un indicatore data e ora.
+
+
+
+. Nella pagina Impostazioni applicazione, effettuare le seguenti operazioni:
++
+** Selezionare la freccia script e immettere i comandi pre e post per le operazioni di quiete, copia Snapshot e senza richieste. In caso di errore, è anche possibile inserire i pre-comandi da eseguire prima di uscire.
+** Selezionare una delle opzioni di coerenza del backup:
++
+*** Selezionare *file System coerenti* se si desidera assicurarsi che i dati memorizzati nella cache dei file system vengano scaricati prima di creare il backup e che non vengano eseguite operazioni sul file system durante la creazione del backup.
+*** Selezionare *Crash coerente* se si desidera assicurarsi che i dati memorizzati nella cache dei file system vengano eliminati prima di creare il backup.
+
+
+
+
+. Nella pagina Criteri, attenersi alla seguente procedura:
++
+.. Selezionare uno o più criteri dall'elenco a discesa.
++
+
+NOTE: È possibile creare un criterio facendo clic su image:../media/add_policy_from_resourcegroup.gif["aggiungi simbolo"].
+
++
+Nella sezione Configure schedules for selected policies (Configura pianificazioni per policy selezionate), vengono elencati i criteri selezionati.
+
+.. Fare clic su image:../media/add_policy_from_resourcegroup.gif["aggiungi simbolo"] Nella colonna Configura pianificazioni per configurare una pianificazione per il criterio desiderato.
+.. Nella finestra Add schedules for policy _policy_name_, configurare la pianificazione, quindi selezionare `OK`.
++
+_policy_name_ è il nome del criterio selezionato.
+
++
+Le pianificazioni configurate sono elencate nella colonna Applied Schedules (Pianificazioni applicate).
+
+
+
+. Nella pagina Notification (notifica), selezionare gli scenari in cui si desidera inviare i messaggi di posta elettronica dall'elenco a discesa *Email preference* (Preferenze email).
++
+Specificare gli indirizzi e-mail del mittente e del destinatario e l'oggetto del messaggio. Se si desidera allegare il report dell'operazione di backup eseguita sulla risorsa, selezionare *Attach Job Report*.
+
++
+
+NOTE: Per la notifica via email, è necessario aver specificato i dettagli del server SMTP utilizzando il comando GUI o PowerShell `Set-SmSmtpServer`.
+
+. Esaminare il riepilogo, quindi fare clic su *fine*.
++
+Viene visualizzata la pagina topologia.
+
+. Fare clic su *Esegui backup ora*.
+. Nella pagina Backup, attenersi alla seguente procedura:
++
+.. Se sono stati applicati più criteri alla risorsa, dall'elenco a discesa Policy (criterio), selezionare il criterio da utilizzare per il backup.
++
+Se il criterio selezionato per il backup on-demand è associato a una pianificazione di backup, i backup on-demand verranno conservati in base alle impostazioni di conservazione specificate per il tipo di pianificazione.
+
+.. Fare clic su *Backup*.
+
+
+. Monitorare l'avanzamento dell'operazione facendo clic su *Monitor* > *Jobs*.
+

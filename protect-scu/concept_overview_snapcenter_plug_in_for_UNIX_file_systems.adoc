@@ -1,0 +1,95 @@
+---
+permalink: protect-scu/concept_overview_snapcenter_plug_in_for_UNIX_file_systems.html 
+sidebar: sidebar 
+keywords: overview, unix file system, plug-in for unix file system, backup, restore, clone 
+summary: Il plug-in per file system Unix supporta il backup, il ripristino e la clonazione dei file system tof Unix. 
+---
+= Cosa puoi fare con il plug-in SnapCenter per file system Unix
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando il plug-in per i file system Unix è installato nel proprio ambiente, è possibile utilizzare SnapCenter per eseguire il backup, il ripristino e la clonazione dei file system Unix. È inoltre possibile eseguire attività a supporto di tali operazioni.
+
+* Scopri le risorse
+* Eseguire il backup dei file system Unix
+* Pianificare le operazioni di backup
+* Ripristinare i backup del file system
+* Clonare i backup del file system
+* Monitorare le operazioni di backup, ripristino e clonazione
+
+
+
+
+== Configurazioni supportate
+
+|===
+| Elemento | Configurazione supportata 
+
+
+ a| 
+Ambienti
+ a| 
+* Server fisico
+* Server virtuale
+
+
+
+
+ a| 
+Sistemi operativi
+ a| 
+* Red Hat Enterprise Linux
+* Oracle Linux
+* SUSE Linux Enterprise Server (SLES)
+
+
+
+
+ a| 
+File system
+ a| 
+* SAN:
++
+** File system basati su LVM e non LVM
+** LVM su VMDK ext3, ext4 e xfs
+
+
+* NFS: NFS v3, NFS v4.x
+
+
+
+
+ a| 
+Protocolli
+ a| 
+* FC
+* FCoE
+* ISCSI
+* NFS
+
+
+
+
+ a| 
+Multipath
+ a| 
+sì
+
+|===
+
+
+== Limitazioni
+
+* La combinazione di RDM e dischi virtuali in un gruppo di volumi non è supportata.
+* Il ripristino a livello di file non è supportato.
++
+Tuttavia, è possibile eseguire manualmente il ripristino a livello di file clonando il backup e copiando i file manualmente.
+
+* La combinazione di file system distribuita tra VMDK provenienti dal datastore NFS e VMFS non è supportata.
+* NVMe non è supportato.
+* SnapMirror Business Continuity (SM-BC) non è supportato.
+* Il provisioning non è supportato.
+

@@ -35,6 +35,8 @@ Il valore della chiave può essere visualizzato da swagger attraverso l'API: API
 +
 È possibile utilizzare L'API GET per visualizzare il valore della chiave. L'API SET non è supportata.
 
+* Per l'operazione di ripristino SnapMirror Business Continuity (SM-BC), devi selezionare il backup dalla posizione principale.
+* Per le policy abilitate per SnapLock, per ONTAP 9.12.1 e versioni successive, se si specifica un periodo di blocco delle copie Snapshot, i cloni creati dalle copie Snapshot a prova di manomissione come parte del ripristino ereditano il tempo di scadenza SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
 
 
 .Fasi

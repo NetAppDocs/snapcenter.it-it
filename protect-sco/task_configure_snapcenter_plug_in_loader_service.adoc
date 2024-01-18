@@ -156,25 +156,40 @@ Se uno di questi parametri non è assegnato al valore predefinito o se si deside
 
 . Eseguire una delle seguenti operazioni, secondo necessità:
 +
-** Avviare il servizio caricatore plug-in di SnapCenter come utente root:
+** Avviare il servizio caricatore plug-in SnapCenter:
 +
- `/custom_location/NetApp/snapcenter/spl/bin/spl start`
+*** Come utente root, eseguire: `/custom_location/NetApp/snapcenter/spl/bin/spl start`
+*** Come utente non root, eseguire: `sudo /custom_location/NetApp/snapcenter/spl/bin/spl start`
+
+
 ** Arrestare il servizio caricatore plug-in di SnapCenter:
 +
- `/custom_location/NetApp/snapcenter/spl/bin/spl stop`
+*** Come utente root, eseguire: `/custom_location/NetApp/snapcenter/spl/bin/spl stop`
+*** Come utente non root, eseguire: `sudo /custom_location/NetApp/snapcenter/spl/bin/spl stop`
 +
 
 NOTE: È possibile utilizzare l'opzione -force con il comando stop per arrestare con forza il servizio caricatore plug-in di SnapCenter. Tuttavia, prima di eseguire questa operazione, è necessario prestare attenzione, in quanto termina anche le operazioni esistenti.
 
+
+
 ** Riavviare il servizio caricatore plug-in di SnapCenter:
 +
- `/custom_location/NetApp/snapcenter/spl/bin/spl restart`
+*** Come utente root, eseguire: `/custom_location/NetApp/snapcenter/spl/bin/spl restart`
+*** Come utente non root, eseguire: `sudo /custom_location/NetApp/snapcenter/spl/bin/spl restart`
+
+
 ** Individuare lo stato del servizio caricatore plug-in di SnapCenter:
 +
- `/custom_location/NetApp/snapcenter/spl/bin/spl status`
+*** Come utente root, eseguire: `/custom_location/NetApp/snapcenter/spl/bin/spl status`
+*** Come utente non root, eseguire: `sudo /custom_location/NetApp/snapcenter/spl/bin/spl status`
+
+
 ** Individuare la modifica nel servizio caricatore plug-in di SnapCenter:
 +
- `/custom_location/NetApp/snapcenter/spl/bin/spl change`
+*** Come utente root, eseguire: `/custom_location/NetApp/snapcenter/spl/bin/spl change`
+*** Come utente non root, eseguire: `sudo /custom_location/NetApp/snapcenter/spl/bin/spl change`
+
+
 
 
 

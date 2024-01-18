@@ -20,6 +20,6 @@ summary: 'È possibile disinstallare singoli plug-in o disinstallare pacchetti d
 . Nell'host del server SnapCenter, immettere il comando: _Open-SMConnection -SMSbaseUrl https://SNAPCENTER_SERVER_NAME/DOMAIN_NAME_, quindi immettere le credenziali.
 . Disinstallare i plug-in di Windows utilizzando il cmdlet _Uninstall-SmHostPackage_ e i parametri richiesti.
 +
-Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, è possibile consultare anche https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["Guida di riferimento al cmdlet del software SnapCenter"^].
+Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, è possibile consultare anche https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["Guida di riferimento al cmdlet del software SnapCenter"^].
 
 

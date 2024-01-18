@@ -3,13 +3,13 @@ indexpage:
   lead: Il software SnapCenter è una piattaforma semplice, centralizzata e scalabile
     che offre una protezione dei dati coerente per applicazioni, database, file system
     host e macchine virtuali in esecuzione su sistemi ONTAP in qualsiasi punto del
-    cloud ibrido. Questa libreria di documentazione contiene informazioni relative
-    alla versione 4.9.
+    cloud ibrido. Questa libreria di documentazione include informazioni sulla versione
+    5,0.
   tiles:
   - title: Inizia subito
     links:
     - title: Note di rilascio
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886204
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886893
     - title: Scopri di più su SnapCenter
       url: "/concept/concept_snapcenter_overview.html"
     - title: Guida di riferimento rapido per proteggere i database di SQL Server
@@ -27,7 +27,7 @@ indexpage:
     - title: Configurare la disponibilità elevata utilizzando F5
       url: "/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html"
     - title: Disaster recovery del server SnapCenter
-      url: "/sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html"
+      url: "/tech-refresh/task_tech_refresh_server_host.html"
   - title: Proteggere i database Microsoft SQL Server
     links:
     - title: Installare il plug-in SnapCenter per il database Microsoft SQL Server
@@ -69,9 +69,9 @@ indexpage:
   - title: Più risorse
     links:
     - title: Guida di riferimento per cmdlet
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895
     - title: Guida di riferimento ai comandi
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886206
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886896
     - title: Documentazione per le versioni precedenti di SnapCenter
       url: https://www.netapp.com/data-protection/backup-recovery/snapcenter-backup-management/documentation/#ProseArticleLinkList13
     - title: Knowledge base di NetApp - SnapCenter

@@ -30,6 +30,13 @@ Il numero di backup visualizzati include i backup eliminati dallo storage second
 
 NOTE: I cloni di un backup di un mirror flessibile della versione su un volume di tipo mirror-vault vengono visualizzati nella vista della topologia, ma il numero di backup mirror nella vista della topologia non include il backup flessibile della versione.
 
+Se disponi di una relazione secondaria come SnapMirror Business Continuity (SM-BC), puoi visualizzare le seguenti icone aggiuntive:
+
+* image:../media/topology_replica_site_up.png["replica sito up"] implica che il sito di replica è attivo.
+* image:../media/topology_replica_site_down.png["sito di replica inattivo"]  implica che il sito di replica non è attivo.
+* image:../media/topology_reestablished.png["la relazione viene ristabilita"] implica che la relazione del mirror secondario o del vault non è stata ristabilita.
+
+
 *Fasi*
 
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
@@ -44,6 +51,20 @@ La sezione Summary Card (scheda di riepilogo) visualizza il numero totale di bac
 
 +
 Facendo clic sul pulsante *Refresh* viene avviata una query dello storage per visualizzare un conteggio accurato.
+
++
+Se viene eseguito il backup abilitato SnapLock, facendo clic sul pulsante *Aggiorna* si aggiornano i tempi di scadenza SnapLock primari e secondari recuperati da ONTAP. Inoltre, una pianificazione settimanale aggiorna il tempo di scadenza SnapLock primario e secondario recuperato da ONTAP.
+
++
+Quando la risorsa dell'applicazione è distribuita su più volumi, il tempo di scadenza del SnapLock per il backup sarà il tempo di scadenza del SnapLock più lungo impostato per una copia Snapshot in un volume. Il tempo di scadenza SnapLock più lungo viene recuperato da ONTAP.
+
++
+Per SnapMirror Business Continuity (SM-BC), facendo clic sul pulsante *Refresh* (Aggiorna) viene aggiornato l'inventario di backup di SnapCenter eseguendo una query su ONTAP per i siti principali e di replica. Una pianificazione settimanale esegue questa attività anche per tutti i database contenenti relazioni SM-BC.
+
++
+** Per le relazioni SM-BC, Async Mirror, Vault o MirrorVault con la nuova destinazione primaria deve essere configurato manualmente dopo il failover.
+** Dopo il failover, è necessario creare un backup affinché SnapCenter sia consapevole del failover. È possibile fare clic su *Aggiorna* solo dopo aver creato un backup.
+
 
 . Nella vista Gestisci copie, fare clic su *backup* o *cloni* dallo storage primario o secondario per visualizzare i dettagli di un backup o clone.
 +
@@ -66,4 +87,4 @@ Se il valore assegnato a SnapmirrorStatusUpdateWaitTime è inferiore, le copie d
 
 Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help _command_name_.
 
-In alternativa, fare riferimento alla https://library.netapp.com/ecm/ecm_download_file/ECMLP2886206["Guida di riferimento al comando software SnapCenter"^] oppure https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["Guida di riferimento al cmdlet del software SnapCenter"^].
+In alternativa, fare riferimento alla https://library.netapp.com/ecm/ecm_download_file/ECMLP2886896["Guida di riferimento al comando software SnapCenter"^] oppure https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["Guida di riferimento al cmdlet del software SnapCenter"^].

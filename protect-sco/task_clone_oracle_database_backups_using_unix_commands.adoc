@@ -17,7 +17,7 @@ Il flusso di lavoro dei cloni include la pianificazione, l'esecuzione dell'opera
 
 Eseguire i seguenti comandi per creare il file di specifica del clone del database Oracle e avviare l'operazione di clone.
 
-Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help _command_name_. In alternativa, fare riferimento alla https://library.netapp.com/ecm/ecm_download_file/ECMLP2886206["Guida di riferimento al comando software SnapCenter"^].
+Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help _command_name_. In alternativa, fare riferimento alla https://library.netapp.com/ecm/ecm_download_file/ECMLP2886896["Guida di riferimento al comando software SnapCenter"^].
 
 *Fasi*
 

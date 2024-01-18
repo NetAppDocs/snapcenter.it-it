@@ -1,0 +1,34 @@
+---
+permalink: protect-scu/task_back_up_unix_file_systems_resource_groups.html 
+sidebar: sidebar 
+keywords: backup, resource group 
+summary: 'Un"operazione di backup sul gruppo di risorse viene eseguita su tutte le risorse definite nel gruppo di risorse.' 
+---
+= Eseguire il backup dei gruppi di risorse dei file system Unix
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eseguire il backup dei file system Unix definiti nel gruppo di risorse. È possibile eseguire il backup di un gruppo di risorse su richiesta dalla pagina risorse. Se un gruppo di risorse dispone di un criterio allegato e di una pianificazione configurata, i backup vengono creati in base alla pianificazione.
+
+.Fasi
+. Nel riquadro di navigazione a sinistra, selezionare *risorse* e il plug-in appropriato dall'elenco.
+. Nella pagina Resources (risorse), selezionare *Resource Group* (Gruppo di risorse) dall'elenco *View* (Visualizza).
+. Inserire il nome del gruppo di risorse nella casella di ricerca oppure fare clic su image:../media/filter_icon.png["Icona del filtro"]e selezionare il tag.
++
+Fare clic su image:../media/filter_icon.png["Icona del filtro"] per chiudere il riquadro del filtro.
+
+. Nella pagina Resource Group (Gruppo di risorse), selezionare il gruppo di risorse di cui eseguire il backup.
+. Nella pagina Backup, attenersi alla seguente procedura:
++
+.. Se al gruppo di risorse sono associati più criteri, selezionare il criterio di backup che si desidera utilizzare dall'elenco a discesa *Policy*.
++
+Se il criterio selezionato per il backup on-demand è associato a una pianificazione di backup, i backup on-demand verranno conservati in base alle impostazioni di conservazione specificate per il tipo di pianificazione.
+
+.. Selezionare *Backup*.
+
+
+. Monitorare l'avanzamento selezionando *Monitor > processi*.
+

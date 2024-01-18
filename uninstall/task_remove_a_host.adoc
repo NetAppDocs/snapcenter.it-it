@@ -19,7 +19,7 @@ Quando il server SnapCenter rimuove un host, rimuove prima il backup, i cloni, i
 * Se l'host dispone di un gruppo di risorse condiviso con un altro host ed è stato eliminato l'host, anche il gruppo di risorse viene eliminato.
 * Utilizzare il cmdlet _Remove-SmHost_ per rimuovere gli host plug-in decommissionati o irraggiungibili.
 +
-Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento alla https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["Guida di riferimento al cmdlet del software SnapCenter"^]
+Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento alla https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["Guida di riferimento al cmdlet del software SnapCenter"^]
 
 * Il tempo necessario per rimuovere un host dipende dal numero di backup e dalle impostazioni di conservazione. Questo perché le copie Snapshot vengono eliminate da ciascun controller e i metadati vengono puliti.
 

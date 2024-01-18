@@ -32,6 +32,7 @@ NOTE: Se i comandi non sono presenti nell'elenco dei comandi, l'operazione avrà
 .A proposito di questa attività
 * Le copie di backup basate su file non possono essere ripristinate da SnapCenter.
 * Dopo l'aggiornamento a SnapCenter 4.3, i backup eseguiti in SnapCenter 4.2 possono essere ripristinati ma non ripristinati. Per ripristinare i backup eseguiti in SnapCenter 4.2, è necessario utilizzare script di ripristino HANA Studio o HANA esterni a SnapCenter.
+* Per le policy abilitate per SnapLock, per ONTAP 9.12.1 e versioni successive, se si specifica un periodo di blocco delle copie Snapshot, i cloni creati dalle copie Snapshot a prova di manomissione come parte del ripristino ereditano il tempo di scadenza SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
 
 
 .Fasi
@@ -156,6 +157,10 @@ I comandi di disinstallazione non sono disponibili per le risorse rilevate autom
 . Nella pagina Post Ops (operazioni post), immettere i comandi di montaggio e post ripristino da eseguire dopo l'esecuzione di un processo di ripristino.
 +
 I comandi di montaggio non sono disponibili per le risorse rilevate automaticamente.
+
++
+
+NOTE: Per i comandi pre e post per le operazioni quiescenza, copia snapshot e inquiescenza, controllare se i comandi sono presenti nell'elenco dei comandi disponibili sull'host plug-in dal percorso _/opt/snapcenter/snapcenter/scc/allowed_command.config_ per Linux e _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_Commands_list.txt_ per Windows.
 
 . Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
 +

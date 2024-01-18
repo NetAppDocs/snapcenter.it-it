@@ -26,7 +26,7 @@ Per aggiungere e rimuovere i cluster F5, è necessario essere membri del gruppo 
 * Add-SmServer
 * Remove-SmServerCluster
 +
-Per ulteriori informazioni, vedere https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["Guida di riferimento al cmdlet del software SnapCenter"^].
+Per ulteriori informazioni, vedere https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["Guida di riferimento al cmdlet del software SnapCenter"^].
 
 
 

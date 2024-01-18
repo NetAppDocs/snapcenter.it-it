@@ -1,0 +1,58 @@
+---
+permalink: protect-scu/task_restore_unix_file_systems.html 
+sidebar: sidebar 
+keywords: restore, recover, Unix file systems 
+summary: In caso di perdita di dati, è possibile utilizzare SnapCenter per ripristinare i dati. 
+---
+= Ripristinare i file system Unix
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In caso di perdita di dati, è possibile utilizzare SnapCenter per ripristinare i file system Unix.
+
+.Fasi
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina risorse, selezionare *percorso* o *Gruppo risorse* dall'elenco *Visualizza*.
+. Selezionare il file system dalla vista dettagli o dalla vista dettagli gruppo di risorse.
++
+Viene visualizzata la pagina topologia.
+
+. Dalla vista Manage Copies (Gestisci copie), selezionare *Backup* dal sistema di storage primario o secondario (mirrorato o replicato).
+. Selezionare il backup dalla tabella, quindi fare clic su *image:../media/restore_icon.gif["icona restore (ripristina)"]*.
+. Nella pagina ambito di ripristino:
++
+** Per i file system NFS, per impostazione predefinita è selezionato il ripristino *Connect and Copy*. È inoltre possibile selezionare *Ripristino volume* o *Ripristino rapido*.
+** Per i file system non NFS, l'ambito di ripristino viene selezionato in base al layout.
++
+I nuovi file creati dopo il backup potrebbero non essere disponibili dopo il ripristino a seconda del tipo e del layout del file system.
+
+
+
+. Nella pagina PreOps, immettere i comandi di pre-ripristino da eseguire prima di eseguire un processo di ripristino.
+. Nella pagina PostOps, immettere i comandi di ripristino post da eseguire dopo aver eseguito un processo di ripristino.
++
+
+NOTE: Controllare se i comandi sono presenti nell'elenco dei comandi disponibili sull'host plug-in dal percorso _/opt/NetApp/snapcenter/scc/etc/allowed_command.config_.
+
+. Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare le notifiche email.
++
+È inoltre necessario specificare gli indirizzi e-mail del mittente e del destinatario e l'oggetto dell'e-mail. Se si desidera allegare il report dell'operazione di ripristino eseguita, selezionare *Allega report*.
+
++
+
+NOTE: Per la notifica via email, è necessario specificare i dettagli del server SMTP utilizzando la GUI o il comando PowerShell Set-SmtpServer.
+
+. Esaminare il riepilogo, quindi fare clic su *fine*.
++
+
+IMPORTANT: Se l'operazione di ripristino non riesce, il rollback non è supportato.
+
++
+
+NOTE: In caso di ripristino di un filesystem residente sul gruppo di volumi, i vecchi contenuti del filesystem non vengono cancellati. Solo il contenuto del filesystem clonato verrà copiato nel filesystem di origine. Ciò è applicabile in presenza di più file system sul gruppo di volumi e ripristini del file system NFS predefiniti.
+
+. Monitorare l'avanzamento dell'operazione facendo clic su *Monitor* > *Jobs*.
+

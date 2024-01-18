@@ -34,8 +34,4 @@ Nella pagina lavori vengono visualizzate le seguenti icone che indicano lo stato
 +
 Il pulsante *View logs* (Visualizza registri) visualizza i registri dettagliati per l'operazione selezionata.
 
-+
-
-IMPORTANT: Dopo l'operazione di ripristino basata sul volume, i metadati di backup vengono cancellati dal repository SnapCenter, ma le voci del catalogo di backup rimangono nel catalogo SAP HANA. Sebbene venga visualizzato lo stato del processo di ripristino image:../media/success_icon.gif["Completato"], fare clic sui dettagli del lavoro per visualizzare il segnale di avviso relativo ad alcune attività secondarie. Fare clic sul simbolo di avviso ed eliminare le voci del catalogo di backup indicate.
-
 

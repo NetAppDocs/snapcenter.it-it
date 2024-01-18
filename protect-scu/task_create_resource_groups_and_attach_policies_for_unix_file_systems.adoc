@@ -1,0 +1,93 @@
+---
+permalink: protect-scu/task_create_resource_groups_and_attach_policies_for_unix_file_systems.html 
+sidebar: sidebar 
+keywords: unix file systems, resource group, policy 
+summary: Un gruppo di risorse è un container in cui vengono aggiunte le risorse di cui si desidera eseguire il backup e la protezione. 
+---
+= Creare gruppi di risorse e allegare criteri per i file system Unix
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un gruppo di risorse è un container in cui vengono aggiunte le risorse di cui si desidera eseguire il backup e la protezione. Un gruppo di risorse consente di eseguire il backup di tutti i dati associati ai file system.
+
+.Fasi
+. Nel riquadro di navigazione a sinistra, selezionare *risorse* e il plug-in appropriato dall'elenco.
+. Nella pagina Resources (risorse), fare clic su *New Resource Group* (nuovo gruppo di risorse).
+. Nella pagina Name (Nome), eseguire le seguenti operazioni:
++
+.. Immettere un nome per il gruppo di risorse nel campo Nome.
++
+
+NOTE: Il nome del gruppo di risorse non deve superare i 250 caratteri.
+
+.. Inserire una o più etichette nel campo Tag per facilitare la ricerca del gruppo di risorse in un secondo momento.
++
+Ad esempio, se si aggiunge HR come tag a più gruppi di risorse, è possibile trovare in seguito tutti i gruppi di risorse associati al tag HR.
+
+.. Selezionare la casella di controllo e immettere un formato nome personalizzato da utilizzare per il nome della copia Snapshot.
++
+Ad esempio, customtext_resource group_policy_hostname o resource group_hostname. Per impostazione predefinita, al nome della copia Snapshot viene aggiunto un indicatore data e ora.
+
+
+
+. Nella pagina risorse, selezionare un nome host di file system Unix dall'elenco a discesa *host*.
++
+
+NOTE: Le risorse vengono elencate nella sezione risorse disponibili solo se la risorsa viene rilevata correttamente. Le risorse aggiunte di recente vengono visualizzate nell'elenco delle risorse disponibili solo dopo l'aggiornamento dell'elenco delle risorse.
+
+. Selezionare le risorse dalla sezione risorse disponibili e spostarle nella sezione risorse selezionate.
+. Nella pagina Impostazioni applicazione, effettuare le seguenti operazioni:
++
+** Selezionare la freccia script e immettere i comandi pre e post per le operazioni di quiete, copia Snapshot e senza richieste. In caso di errore, è anche possibile inserire i pre-comandi da eseguire prima di uscire.
+** Selezionare una delle opzioni di coerenza del backup:
++
+*** Selezionare *file System coerenti* se si desidera assicurarsi che i dati memorizzati nella cache dei file system vengano scaricati prima di creare il backup e che non siano consentite operazioni di input o output sul file system durante la creazione del backup.
++
+
+NOTE: Se coerenti con il file system, verranno create snapshot del gruppo di coerenza per i LUN coinvolti nel gruppo di volumi.
+
+*** Selezionare *Crash coerente* se si desidera assicurarsi che i dati memorizzati nella cache dei file system vengano eliminati prima di creare il backup.
++
+
+NOTE: Se sono stati aggiunti file system diversi nel gruppo di risorse, tutti i volumi di file system diversi nel gruppo di risorse verranno inseriti in un gruppo di coerenza.
+
+
+
+
+
+. Nella pagina Criteri, attenersi alla seguente procedura:
++
+.. Selezionare uno o più criteri dall'elenco a discesa.
++
+
+NOTE: È anche possibile creare un criterio facendo clic su image:../media/add_policy_from_resourcegroup.gif["aggiungi simbolo"].
+
++
+Nella sezione Configure schedules for selected policies (Configura pianificazioni per policy selezionate), vengono elencati i criteri selezionati.
+
+.. Fare clic su image:../media/add_policy_from_resourcegroup.gif["aggiungi simbolo"] Nella colonna Configure Schedules (Configura pianificazioni) per il criterio per il quale si desidera configurare una pianificazione.
+.. Nella finestra Add schedules for policy _policy_name_, configurare la pianificazione, quindi fare clic su *OK*.
++
+Dove _policy_name_ è il nome del criterio selezionato.
+
++
+Le pianificazioni configurate sono elencate nella colonna Applied Schedules (Pianificazioni applicate).
+
+
+
++
+Le pianificazioni di backup di terze parti non sono supportate quando si sovrappongono alle pianificazioni di backup di SnapCenter.
+
+. Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
++
+È inoltre necessario specificare gli indirizzi e-mail del mittente e del destinatario e l'oggetto dell'e-mail. Se si desidera allegare il report dell'operazione eseguita sul gruppo di risorse, selezionare *Allega report*.
+
++
+
+NOTE: Per la notifica via email, è necessario aver specificato i dettagli del server SMTP utilizzando la GUI o il comando PowerShell Set-SmtpServer.
+
+. Esaminare il riepilogo, quindi fare clic su *fine*.
+

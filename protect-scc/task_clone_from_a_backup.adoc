@@ -19,6 +19,9 @@ summary: È possibile utilizzare SnapCenter per clonare un backup. È possibile 
 * Assicurarsi che gli aggregati che ospitano i volumi siano inclusi nell'elenco degli aggregati assegnati della macchina virtuale di storage (SVM).
 
 
+.A proposito di questa attività
+Per le policy abilitate per SnapLock, per ONTAP 9.12.1 e versioni successive, se si specifica un periodo di blocco delle copie Snapshot, i cloni creati dalle copie Snapshot a prova di manomissione come parte del ripristino ereditano il tempo di scadenza SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
+
 .Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina *risorse*, filtrare le risorse dall'elenco a discesa *Visualizza* in base al tipo di risorsa.

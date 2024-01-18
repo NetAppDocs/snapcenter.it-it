@@ -41,13 +41,29 @@ Il valore della chiave può essere visualizzato da swagger attraverso l'API: API
 +
 È possibile utilizzare L'API GET per visualizzare il valore della chiave. L'API SET non è supportata.
 
-
-
++
 |===
 
 
 | *Best practice:* è meglio configurare il criterio di conservazione secondario in base al numero di backup completi e di log che si desidera conservare. Quando si configurano i criteri di conservazione secondari, tenere presente che quando i database e i log che si trovano in volumi diversi, ciascun backup può avere tre copie Snapshot e quando i database e i log si trovano nello stesso volume, ciascun backup può avere due copie Snapshot. 
 |===
+* SnapLock
++
+** Se è selezionata l'opzione "conserva le copie di backup per un numero specifico di giorni", il periodo di conservazione SnapLock deve essere minore o uguale ai giorni di conservazione menzionati.
++
+La specifica di un periodo di blocco delle copie Snapshot impedisce la cancellazione delle copie Snapshot fino alla scadenza del periodo di conservazione.  In questo modo, si potrebbe conservare un numero di copie Snapshot superiore al numero specificato nella policy.
+
++
+Per ONTAP 9.12.1 e versioni precedenti, se si specifica un periodo di blocco delle copie Snapshot, i cloni creati dalle copie Snapshot a prova di manomissione ereditano il tempo di scadenza SnapLock.  Si consiglia di pulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
+
++
+
+NOTE: Le impostazioni SnapLock primarie vengono gestite nel criterio di backup SnapCenter e le impostazioni SnapLock secondarie vengono gestite da ONTAP.
+
+
+
+
+
 .Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *Impostazioni*.
 . Nella pagina Impostazioni, fare clic su *Criteri*.
@@ -190,6 +206,15 @@ Selezionare l'opzione *Mantieni backup registro per ultimo* e specificare il num
 
 I backup del registro vengono conservati fino al numero di giorni di backup completi.
 
+
+
+ a| 
+Periodo di blocco della copia snapshot
+ a| 
+Selezionare *periodo blocco copia istantanea*, quindi giorni, mesi o anni.
+
+Il periodo di conservazione di SnapLock deve essere inferiore a 100 anni.
+
 |===
 +
 Se è stato selezionato *Log backup* come tipo di backup, i backup dei log vengono conservati come parte delle impostazioni di conservazione aggiornate al minuto per i backup completi.
@@ -213,6 +238,15 @@ Se il numero di backup completi supera il numero specificato, i backup completi 
 Conserva backup completi per un numero specifico di giorni
  a| 
 Selezionare l'opzione *Mantieni copie Snapshot per* e specificare il numero di giorni in cui conservare le copie Snapshot (backup completi).
+
+
+
+ a| 
+Periodo di blocco della copia snapshot
+ a| 
+Selezionare *periodo blocco copia istantanea*, quindi giorni, mesi o anni.
+
+Il periodo di conservazione di SnapLock deve essere inferiore a 100 anni.
 
 |===
 +
@@ -239,6 +273,12 @@ Nell'esempio, il valore 10 significa che si mantengono fino a 10 backup del log 
 
  a| 
 Aggiornare SnapMirror dopo aver creato una copia Snapshot locale
+
+Durante la replica secondaria, il tempo di scadenza del SnapLock carica il tempo di scadenza del SnapLock primario.
+
+Fare clic sul pulsante *Aggiorna* nella pagina topologia per aggiornare il tempo di scadenza SnapLock secondario e primario recuperato da ONTAP.
+
+Vedere link:..protect-sce/task_view_exchange_backups_in_the_topology_page.html["Visualizzare i backup di Exchange nella pagina topologia"].
  a| 
 Selezionare questa opzione per conservare le copie mirror dei set di backup su un altro volume (SnapMirror).
 

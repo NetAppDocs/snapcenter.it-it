@@ -13,6 +13,12 @@ summary: Un gruppo di risorse è il container a cui è possibile aggiungere più
 [role="lead"]
 Un gruppo di risorse è il container a cui è possibile aggiungere più file system che si desidera proteggere. È inoltre necessario associare uno o più criteri al gruppo di risorse per definire il tipo di lavoro di protezione dei dati che si desidera eseguire, quindi specificare la pianificazione del backup.
 
+.A proposito di questa attività
+* Per le policy abilitate per SnapLock, per ONTAP 9.12.1 e versioni successive, se si specifica un periodo di blocco delle copie Snapshot, i cloni creati dalle copie Snapshot a prova di manomissione come parte del ripristino ereditano il tempo di scadenza SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
+* L'aggiunta di nuovi file system senza SM-BC a un gruppo di risorse esistente che contiene risorse con SM-BC non è supportata.
+* L'aggiunta di nuovi file system a un gruppo di risorse esistente in modalità di failover di SM-BC non è supportata. È possibile aggiungere risorse al gruppo di risorse solo in stato normale o di failback.
+
+
 .Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina Resources (risorse), selezionare *file Systems* dall'elenco.

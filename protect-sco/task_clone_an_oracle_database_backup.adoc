@@ -19,19 +19,26 @@ Se il plug-in è stato installato come utente non root, è necessario assegnare 
 
 *A proposito di questa attività*
 
-L'operazione di cloning crea una copia dei file di dati del database e crea nuovi file di log di ripristino e file di controllo online. Il database può essere ripristinato a un orario specifico, in base alle opzioni di ripristino specificate.
-
+* L'operazione di cloning crea una copia dei file di dati del database e crea nuovi file di log di ripristino e file di controllo online. Il database può essere ripristinato a un orario specifico, in base alle opzioni di ripristino specificate.
++
 
 NOTE: La clonazione non riesce se si tenta di clonare un backup creato su un host Linux su un host AIX o viceversa.
 
++
 SnapCenter crea un database standalone quando viene clonato da un backup di database Oracle RAC. SnapCenter supporta la creazione di cloni dal backup di database di standby Data Guard e Active Data Guard.
 
++
 Durante la clonazione, SnapCenter monta il numero ottimale di backup dei log in base a SCN o dat e il tempo necessario per le operazioni di recovery. Dopo il ripristino, il backup del registro viene disinstallato. Tutti questi cloni sono montati sotto _/var/opt/snapcenter/scu/cloni/_. Se si utilizza ASM su NFS, aggiungere _/var/opt/snapcenter/scu/cloni/*/*_ al percorso esistente definito nel parametro asm_diskstring.
 
++
 Durante la clonazione di un backup di un database ASM in un ambiente SAN, le regole udev per i dispositivi host clonati vengono create in _/etc/udev/rules.d/999-scu-netapp.rules_. Queste regole udev associate ai dispositivi host clonati vengono eliminate quando si elimina il clone.
 
++
 
 NOTE: In una configurazione di Flex ASM, non è possibile eseguire l'operazione di cloni sui nodi Leaf se la cardinalità è inferiore al numero di nodi nel cluster RAC.
+
+* Per le policy abilitate per SnapLock, per ONTAP 9.12.1 e versioni successive, se si specifica un periodo di blocco delle copie Snapshot, i cloni creati dalle copie Snapshot a prova di manomissione come parte del ripristino ereditano il tempo di scadenza SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
+
 
 *Fasi*
 
