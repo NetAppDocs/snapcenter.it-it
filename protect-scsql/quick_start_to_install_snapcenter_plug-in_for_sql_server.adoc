@@ -86,7 +86,7 @@ NOTE: Si consiglia, ma non è necessario, di aggiungere le licenze standard di S
 
 === Requisiti di host e porte
 
-Per i requisiti minimi di ONTAP e del plug-in dell'applicazione, vedere https://imt.netapp.com/matrix/imt.jsp?components=112389;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità"^].
+Per i requisiti minimi di ONTAP e del plug-in dell'applicazione, vedere https://imt.netapp.com/matrix/imt.jsp?components=117008;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità"^].
 
 [cols="1,3"]
 |===
@@ -96,7 +96,7 @@ Per i requisiti minimi di ONTAP e del plug-in dell'applicazione, vedere https://
  a| 
 Sistema operativo (64 bit)
  a| 
-Vedere https://imt.netapp.com/matrix/imt.jsp?components=108408;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità"^]
+Vedere https://imt.netapp.com/matrix/imt.jsp?components=117008;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità"^]
 
 
 

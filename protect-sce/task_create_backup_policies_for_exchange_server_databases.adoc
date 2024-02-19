@@ -54,7 +54,7 @@ Il valore della chiave può essere visualizzato da swagger attraverso l'API: API
 La specifica di un periodo di blocco delle copie Snapshot impedisce la cancellazione delle copie Snapshot fino alla scadenza del periodo di conservazione.  In questo modo, si potrebbe conservare un numero di copie Snapshot superiore al numero specificato nella policy.
 
 +
-Per ONTAP 9.12.1 e versioni precedenti, se si specifica un periodo di blocco delle copie Snapshot, i cloni creati dalle copie Snapshot a prova di manomissione ereditano il tempo di scadenza SnapLock.  Si consiglia di pulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
+Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dalle copie Snapshot del vault di SnapLock ereditano il tempo di scadenza del vault di SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
 
 +
 

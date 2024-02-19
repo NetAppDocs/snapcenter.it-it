@@ -54,7 +54,7 @@ Per gli utenti di SnapCenter 4.1.1, la documentazione del plug-in SnapCenter per
 
 *Ulteriori informazioni*
 
-* https://imt.netapp.com/matrix/imt.jsp?components=112391;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità"^]
+* https://imt.netapp.com/matrix/imt.jsp?components=117016;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità"^]
 * https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/index.html["Plug-in SnapCenter per la documentazione di VMware vSphere"^]
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Data_protection_operation_fails_in_a_non-multipath_environment_in_RHEL_7_and_later["L'operazione di protezione dei dati non riesce in un ambiente non multipath in RHEL 7 e versioni successive"^]
 

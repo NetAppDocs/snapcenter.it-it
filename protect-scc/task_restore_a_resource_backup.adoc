@@ -21,7 +21,7 @@ summary: È possibile utilizzare SnapCenter per ripristinare le risorse. Le funz
 
 .A proposito di questa attività
 * L'operazione di ripristino predefinita ripristina solo gli oggetti di storage. Le operazioni di ripristino a livello di applicazione possono essere eseguite solo se il plug-in personalizzato fornisce tale funzionalità.
-* Per le policy abilitate per SnapLock, per ONTAP 9.12.1 e versioni successive, se si specifica un periodo di blocco delle copie Snapshot, i cloni creati dalle copie Snapshot a prova di manomissione come parte del ripristino ereditano il tempo di scadenza SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
+* Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dalle copie Snapshot del vault di SnapLock come parte del ripristino ereditano il tempo di scadenza del vault di SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
 
 
 .Fasi

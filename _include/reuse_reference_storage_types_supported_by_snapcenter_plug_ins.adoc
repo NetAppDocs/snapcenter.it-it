@@ -5,7 +5,7 @@
 SnapCenter supporta un'ampia gamma di tipi di storage su macchine fisiche e virtuali. Prima di installare il pacchetto per l'host, è necessario verificare se il supporto è disponibile per il tipo di storage in uso.
 
 Il provisioning SnapCenter e il supporto per la protezione dei dati sono disponibili su Windows Server. Per informazioni aggiornate sulle versioni supportate, consultare
-https://imt.netapp.com/matrix/imt.jsp?components=112389;&solution=1257&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^].
+https://imt.netapp.com/matrix/imt.jsp?components=116859;&solution=1257&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^].
 
 |===
 | Macchina | Tipo di storage | Eseguire il provisioning utilizzando | Note di supporto 
