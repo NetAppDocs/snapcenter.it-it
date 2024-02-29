@@ -1,0 +1,69 @@
+---
+permalink: protect-azure/create-backup-policies-sql.html 
+sidebar: sidebar 
+keywords: create policies, sql, backup policies 
+summary: Creare un criterio di backup per la risorsa o il gruppo di risorse di cui si desidera eseguire il backup. 
+---
+= Creare criteri di backup per i database di SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare un criterio di backup per la risorsa o il gruppo di risorse prima di utilizzare SnapCenter per eseguire il backup delle risorse di SQL Server oppure creare un criterio di backup al momento della creazione di un gruppo di risorse o del backup di una singola risorsa.
+
+.Fasi
+. Nel riquadro di spostamento di sinistra, fare clic su *Impostazioni*.
+. Nella pagina Impostazioni, fare clic su *Criteri*.
+. Fare clic su *nuovo*.
+. Nella pagina Name (Nome), immettere il nome e la descrizione della policy.
+. Nella pagina Impostazioni, attenersi alla seguente procedura:
++
+.. Selezionare il tipo di backup.
++
+... Selezionare *Backup completo e Backup registro* se si desidera eseguire il backup dei file di database e dei registri delle transazioni.
+... Selezionare *Backup completo* se si desidera eseguire il backup solo dei file di database.
+... Selezionare *Log Backup* se si desidera eseguire il backup solo dei registri delle transazioni.
+... Selezionare *Copia solo backup* se si desidera eseguire il backup delle risorse utilizzando un'altra applicazione.
+
+
+.. Nella sezione Availability Group Settings (Impostazioni gruppo di disponibilità), eseguire le seguenti operazioni:
++
+... Selezionare Backup sulla replica di backup preferita se si desidera eseguire il backup solo sulla replica.
+... Selezionare la replica AG primaria o la replica AG secondaria per il backup.
+... Selezionare la priorità di backup.
+
+
+.. Specificare il tipo di pianificazione.
+
+
+. Nella pagina di conservazione, in base al tipo di backup selezionato, specificare le impostazioni di conservazione.
++
+
+NOTE: La replica su storage secondario non è supportata.
+
+. Nella pagina verifica, attenersi alla seguente procedura:
++
+.. Nella sezione Esegui verifica per le seguenti pianificazioni di backup, selezionare la frequenza di pianificazione.
+.. Nella sezione Opzioni di verifica della coerenza del database, eseguire le seguenti operazioni:
++
+... Selezionare *Limit the Integrity Structure to Physical Structure of the database (PHYSICAL_ONLY)* (limita la struttura di integrità alla struttura fisica del database) per limitare il controllo dell'integrità alla struttura fisica del database e rilevare pagine lacerate, errori di checksum e guasti hardware comuni che influiscono sul database.
+... Selezionare *Sospendi tutti i messaggi informativi (NO_INFOMSGS)* per eliminare tutti i messaggi informativi.
++
+Selezionato per impostazione predefinita.
+
+... Selezionare *Visualizza tutti i messaggi di errore riportati per oggetto (ALL_ERRORMSGS)* per visualizzare tutti gli errori segnalati per oggetto.
+... Selezionare *non selezionare gli indici non cluster (NOINDEX)* se non si desidera controllare gli indici non cluster.
++
+Il database SQL Server utilizza Microsoft SQL Server Database Consistency Checker (DBCC) per verificare l'integrità fisica e logica degli oggetti nel database.
+
+... Selezionare *limita i controlli e ottieni i blocchi invece di utilizzare una copia Snapshot del database interno (TABLOCK)* per limitare i controlli e ottenere i blocchi invece di utilizzare una copia Snapshot del database interno.
+
+
+.. Nella sezione *Log Backup*, selezionare *Verify log backup upon completed* (verifica backup registro al completamento) per verificare il backup del registro al completamento.
+.. Nella sezione *Verification script settings* (Impostazioni script di verifica), immettere il percorso e gli argomenti del prescrittt o del postscript che devono essere eseguiti rispettivamente prima o dopo l'operazione di verifica.
+
+
+. Esaminare il riepilogo e fare clic su *fine*.
+

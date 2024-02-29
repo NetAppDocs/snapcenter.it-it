@@ -1,0 +1,39 @@
+---
+permalink: protect-azure/add-hosts-install-plugin-for-sql.html 
+sidebar: sidebar 
+keywords: add host, install, install plug-in, SQL 
+summary: Aggiungere gli host e quindi installare i pacchetti dei plug-in. 
+---
+= Aggiungere host e installare il plug-in SnapCenter per il database SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter supporta la data Protection delle istanze SQL sulle condivisioni SMB su Azure NetApp Files. Sono supportate le configurazioni standalone e gruppo di disponibilità (AG, Availability Group).
+
+È necessario utilizzare la pagina Aggiungi host di SnapCenter per aggiungere host, quindi installare il pacchetto dei plug-in. I plug-in vengono installati automaticamente sugli host remoti.
+
+.Prima di iniziare
+* È necessario essere un utente assegnato a un ruolo che disponga delle autorizzazioni di installazione e disinstallazione del plug-in, ad esempio il ruolo di amministratore di SnapCenter.
+* Quando si installa un plug-in su un host Windows, se si specifica una credenziale non integrata o se l'utente appartiene a un utente del gruppo di lavoro locale, è necessario disattivare il controllo dell'account utente sull'host.
+
+
+.Fasi
+. Nel riquadro di navigazione a sinistra, selezionare *hosts*.
+. Verificare che la scheda *Managed hosts* sia selezionata nella parte superiore.
+. Selezionare *Aggiungi*.
+. Nella pagina hosts:
++
+.. Nel campo host Type (tipo host), selezionare il tipo di host.
+.. Nel campo host name (Nome host), immettere il nome di dominio completo (FQDN) o l'indirizzo IP dell'host.
+.. Nel campo credenziali, immettere la credenziale creata.
+
+
+. Nella sezione *Seleziona plug-in da installare*, selezionare i plug-in da installare.
+. (Facoltativo) fate clic su *altre opzioni* e specificate i dettagli.
+. Selezionare *Invia*.
+. Selezionare *Configure log directory* e nella pagina Configure host log directory, immettere il percorso SMB della directory del log host, quindi fare clic su *Save*.
+. Fare clic su *Invia* e controllare l'avanzamento dell'installazione.
+

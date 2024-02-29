@@ -1,0 +1,45 @@
+---
+permalink: protect-azure/backup-oracle-databases.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for Oracle Database, back up, databases, Azure NetApp Files 
+summary: Eseguire il backup della risorsa dalla pagina risorse. 
+---
+= Eseguire il backup dei database Oracle in esecuzione su Azure NetApp Files
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se una risorsa non fa ancora parte di un gruppo di risorse, è possibile eseguire il backup della risorsa dalla pagina risorse.
+
+.Fasi
+. Nel riquadro di spostamento di sinistra, selezionare *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina risorsa, selezionare *Database* dall'elenco a discesa Visualizza.
+. Nella pagina Resource, selezionare *Use customed name format for Snapshot copy* (Usa formato nome personalizzato per la copia Snapshot), quindi immettere un formato nome personalizzato da utilizzare per il nome della copia Snapshot.
+. Nella pagina Criteri, attenersi alla seguente procedura:
++
+.. Selezionare uno o più criteri dall'elenco a discesa.
+.. Selezionare *image:../media/add_policy_from_resourcegroup.gif[""]* Nella colonna Configure Schedules (Configura pianificazioni) per il criterio per il quale si desidera configurare una pianificazione.
+.. Nella finestra di dialogo Add schedules for policy _policy_name_, configurare la pianificazione, quindi selezionare *OK*.
+
+
+. Nella pagina verifica, attenersi alla seguente procedura:
++
+.. Selezionare il server di verifica.
+.. Selezionare il criterio per il quale si desidera configurare la pianificazione di verifica, quindi fare clic su *image:../media/add_policy_from_resourcegroup.gif[""]*.
+.. Selezionare *Esegui verifica dopo il backup* o *Esegui verifica pianificata*.
+.. Fare clic su OK.
+
+
+. Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
+. Esaminare il riepilogo, quindi fare clic su *fine*.
+. Selezionare *Esegui backup ora*.
+. Nella pagina Backup, attenersi alla seguente procedura:
++
+.. Se alla risorsa sono associati più criteri, nell'elenco a discesa *criterio* selezionare il criterio che si desidera utilizzare per il backup.
+.. Fare clic su *Backup*.
+
+
+. Monitorare l'avanzamento dell'operazione facendo clic su *Monitor* > *Jobs*.
+

@@ -1,0 +1,41 @@
+---
+permalink: protect-azure/add-hosts-install-plugin-for-sap-hana.html 
+sidebar: sidebar 
+keywords: add host, install, install plug-in, SAP HANA 
+summary: Aggiungere gli host e quindi installare i pacchetti dei plug-in. 
+---
+= Aggiungi host e installa il plug-in SnapCenter per il database SAP HANA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilizzare la pagina Aggiungi host di SnapCenter per aggiungere host e installare i pacchetti dei plug-in. I plug-in vengono installati automaticamente sugli host remoti.
+
+.Prima di iniziare
+* È necessario essere un utente assegnato a un ruolo che disponga delle autorizzazioni di installazione e disinstallazione del plug-in, ad esempio il ruolo di amministratore di SnapCenter.
+* Quando si installa un plug-in su un host Windows, se si specifica una credenziale non integrata o se l'utente appartiene a un utente del gruppo di lavoro locale, è necessario disattivare il controllo dell'account utente sull'host.
+* Se si sta installando sull'host centralizzato, assicurarsi che il software client SAP HANA sia installato su quell'host e aprire le porte richieste sull'host del database SAP HANA per eseguire le query HDB SQL in remoto.
+
+
+.Fasi
+. Nel riquadro di spostamento di sinistra, fare clic su *hosts*.
+. Verificare che la scheda *Managed hosts* sia selezionata.
+. Fare clic su *Aggiungi*.
+. Nella pagina host, eseguire le seguenti operazioni:
++
+.. Nel campo host Type (tipo host), selezionare il tipo di host.
+.. Nel campo host name (Nome host), immettere il nome di dominio completo (FQDN) o l'indirizzo IP dell'host.
+.. Nel campo credenziali, immettere la credenziale creata.
+
+
+. Nella sezione Select Plug-in to Install (Seleziona plug-in da installare), selezionare i plug-in da installare.
+. (Facoltativo) fate clic su *altre opzioni* e specificate i dettagli.
+. Fare clic su *Invia*.
+. Se il tipo di host è Linux, verificare l'impronta digitale, quindi fare clic su *Confirm and Submit* (Conferma e invia).
++
+In una configurazione del cluster, verificare l'impronta digitale di ciascuno dei nodi del cluster.
+
+. Monitorare l'avanzamento dell'installazione.
+

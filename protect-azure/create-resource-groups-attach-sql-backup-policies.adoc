@@ -1,0 +1,67 @@
+---
+permalink: protect-azure/create-resource-groups-attach-sql-backup-policies.html 
+sidebar: sidebar 
+keywords: resource groups, attach policies, snapcenter, sql, backup polices, schedule 
+summary: Un gruppo di risorse è il container al quale è necessario aggiungere risorse di cui si desidera eseguire il backup e la protezione. 
+---
+= Creare gruppi di risorse e allegare criteri di backup SQL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un gruppo di risorse è il container al quale è necessario aggiungere risorse di cui si desidera eseguire il backup e la protezione.
+
+Un gruppo di risorse consente di eseguire contemporaneamente il backup di tutti i dati associati a una determinata applicazione. Per qualsiasi lavoro di protezione dei dati è necessario un gruppo di risorse. È inoltre necessario associare uno o più criteri al gruppo di risorse per definire il tipo di lavoro di protezione dei dati che si desidera eseguire.
+
+.Fasi
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina Resources (risorse), fare clic su *New Resource Group* (nuovo gruppo di risorse).
+. Nella pagina Name (Nome), eseguire le seguenti operazioni:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Nome
+ a| 
+Immettere un nome per il gruppo di risorse.
+
+
+
+ a| 
+Tag
+ a| 
+Inserire una o più etichette per facilitare la ricerca del gruppo di risorse in un secondo momento.
+
+
+
+ a| 
+USA il formato nome personalizzato per la copia Snapshot
+ a| 
+Selezionare questa casella di controllo e immettere un formato nome personalizzato da utilizzare per il nome della copia Snapshot.
+
+|===
+. Nella pagina risorse, selezionare un nome host dall'elenco a discesa *host* e il tipo di risorsa dall'elenco a discesa *tipo di risorsa*.
+. Selezionare le risorse dalla sezione *risorse disponibili*, quindi fare clic sulla freccia destra per spostarle nella sezione *risorse selezionate*.
+. Nella pagina Criteri, attenersi alla seguente procedura:
++
+.. Selezionare uno o più criteri dall'elenco a discesa.
+.. Nella colonna Configure Schedules (Configura pianificazioni), fare clic su *image:../media/add_policy_from_resourcegroup.gif[""]* per la policy che si desidera configurare.
+.. Nella finestra di dialogo Add schedules for policy _policy_name_, configurare la pianificazione, quindi fare clic su *OK*.
+.. Selezionare lo scheduler di Microsoft SQL Server.
+
+
+. Nella pagina verifica, attenersi alla seguente procedura:
++
+.. Selezionare il server di verifica.
+.. Selezionare il criterio per il quale si desidera configurare la pianificazione di verifica, quindi fare clic su *image:../media/add_policy_from_resourcegroup.gif[""]*.
+.. Selezionare *Esegui verifica dopo il backup* o *Esegui verifica pianificata*.
+.. Fare clic su *OK*.
+
+
+. Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
+. Esaminare il riepilogo, quindi fare clic su *fine*.
+

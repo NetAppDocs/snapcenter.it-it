@@ -1,0 +1,58 @@
+---
+permalink: protect-azure/backup-sap-hana-databases.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database, back up, databases, Azure NetApp Files 
+summary: Eseguire il backup della risorsa dalla pagina risorse. 
+---
+= Eseguire il backup dei database SAP HANA in esecuzione su Azure NetApp Files
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se una risorsa non fa ancora parte di un gruppo di risorse, è possibile eseguire il backup della risorsa dalla pagina risorse.
+
+.Fasi
+. Nel riquadro di spostamento di sinistra, selezionare *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina Resource, filtrare le risorse dall'elenco a discesa *View* in base al tipo di risorsa.
+. Selezionare la risorsa di cui si desidera eseguire il backup.
+. Nella pagina Resource, selezionare *Use customed name format for Snapshot copy* (Usa formato nome personalizzato per la copia Snapshot), quindi immettere un formato nome personalizzato da utilizzare per il nome della copia Snapshot.
+. Nella pagina Impostazioni applicazione, effettuare le seguenti operazioni:
++
+.. Selezionare la freccia *backup* per impostare opzioni di backup aggiuntive.
+.. Selezionare la freccia *Scripts* per eseguire i comandi pre e post per le operazioni quiesce, copia Snapshot e senza richieste.
+.. Selezionare la freccia *configurazioni personalizzate*, quindi immettere le coppie di valori personalizzati richieste per tutti i lavori che utilizzano questa risorsa.
+.. Selezionare *strumento di copia snapshot > SnapCenter senza coerenza file system* per creare copie snapshot.
++
+L'opzione *coerenza file system* è applicabile solo alle applicazioni in esecuzione su host Windows.
+
+
+
+. Nella pagina Criteri, attenersi alla seguente procedura:
++
+.. Selezionare uno o più criteri dall'elenco a discesa.
+.. Selezionare *image:../media/add_policy_from_resourcegroup.gif[""]* Nella colonna Configure Schedules (Configura pianificazioni) per il criterio per il quale si desidera configurare una pianificazione.
+.. Nella finestra di dialogo Add schedules for policy _policy_name_, configurare la pianificazione, quindi selezionare *OK*.
++
+_policy_name_ è il nome del criterio selezionato.
+
+
+
+. Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
++
+È inoltre necessario specificare gli indirizzi e-mail del mittente e del destinatario e l'oggetto dell'e-mail. SMTP deve essere configurato anche in *Impostazioni* > *Impostazioni globali*.
+
+. Esaminare il riepilogo, quindi selezionare *fine*.
+. Selezionare *Esegui backup ora*.
+. Nella pagina Backup, attenersi alla seguente procedura:
++
+.. Se alla risorsa sono associati più criteri, nell'elenco a discesa *criterio* selezionare il criterio che si desidera utilizzare per il backup.
++
+Se il criterio selezionato per il backup on-demand è associato a una pianificazione di backup, i backup on-demand verranno conservati in base alle impostazioni di conservazione specificate per il tipo di pianificazione.
+
+
+
+. Selezionare *Backup*.
+. Monitorare l'avanzamento dell'operazione facendo clic su *Monitor* > *Jobs*.
+

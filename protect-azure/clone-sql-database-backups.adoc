@@ -1,0 +1,74 @@
+---
+permalink: protect-azure/clone-sql-database-backups.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SQL Server Database, clone, database, backups 
+summary: È possibile utilizzare SnapCenter per clonare un backup. 
+---
+= Clona il backup del database SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare SnapCenter per clonare un backup del database SQL Server. Se si desidera accedere o ripristinare una versione precedente dei dati, è possibile clonare i backup del database su richiesta.
+
+.Fasi
+. Nel riquadro di spostamento di sinistra, selezionare *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina Resources (risorse), selezionare *Database* o *Resource Group* dall'elenco *View* (Visualizza).
+. Selezionare il database o il gruppo di risorse.
+. Nella pagina di visualizzazione *Gestisci copie*, selezionare il backup dal sistema di archiviazione primario.
+. Selezionare il backup, quindi *image:../media/clone_icon.gif["icona clona"]*.
+. Nella pagina *Clone Options* (Opzioni di clonazione), fornire tutti i dettagli richiesti.
+. Nella pagina Location (posizione), selezionare una posizione di storage per creare un clone.
++
+Se i volumi ANF del database SQL Server sono configurati in un pool di capacità QOS manuale, specificare la QOS per i volumi clonati.
+
++
+Se non viene specificata la QOS per i volumi clonati, verrà utilizzata la QOS del volume di origine. Se viene utilizzato il pool di capacità QOS automatico, il valore QOS specificato verrà ignorato.
+
+. Nella pagina registri, selezionare una delle seguenti opzioni:
++
+.. Selezionare *Nessuno* se si desidera clonare solo il backup completo senza alcun registro.
+.. Selezionare *tutti i backup dei log* se si desidera clonare tutti i backup dei log disponibili datati dopo il backup completo.
+.. Selezionare *per backup del registro fino a* se si desidera clonare il database in base ai registri di backup creati fino al log di backup con la data selezionata.
+.. Selezionare *per data specifica fino a* se non si desidera applicare i registri delle transazioni dopo la data e l'ora specificate.
+
+
+. Nella pagina *script*, immettere il timeout dello script, il percorso e gli argomenti del prescrittt o del postscript che devono essere eseguiti rispettivamente prima o dopo l'operazione di clone.
+. Nella pagina *Notification*, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
+. Esaminare il riepilogo, quindi selezionare *fine*.
+. Monitorare l'avanzamento dell'operazione selezionando *Monitor* > *Jobs*.
+
+
+
+
+== Eseguire il ciclo di vita del clone
+
+Utilizzando SnapCenter, è possibile creare cloni da un gruppo di risorse o da un database. È possibile eseguire cloni on-demand o pianificare operazioni ricorrenti di cloni di un gruppo di risorse o di un database. Se si clonano periodicamente un backup, è possibile utilizzare il clone per sviluppare applicazioni, popolare i dati o ripristinare i dati.
+
+.Fasi
+. Nel riquadro di spostamento di sinistra, selezionare *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina Resources (risorse), selezionare *Database* o *Resource Group* dall'elenco *View* (Visualizza).
+. Selezionare il database o il gruppo di risorse.
+. Nella pagina di visualizzazione *Gestisci copie*, selezionare il backup dal sistema di archiviazione primario.
+. Selezionare il backup, quindi *image:../media/clone_icon.gif["icona clona"]*.
+. Nella pagina *Clone Options* (Opzioni di clonazione), fornire tutti i dettagli richiesti.
+. Nella pagina Location (posizione), selezionare una posizione di storage per creare un clone.
++
+Se i volumi ANF del database SQL Server sono configurati in un pool di capacità QOS manuale, specificare la QOS per i volumi clonati.
+
++
+Se non viene specificata la QOS per i volumi clonati, verrà utilizzata la QOS del volume di origine. Se viene utilizzato il pool di capacità QOS automatico, il valore QOS specificato verrà ignorato.
+
+. Nella pagina *script*, immettere il timeout dello script, il percorso e gli argomenti del prescrittt o del postscript che devono essere eseguiti rispettivamente prima o dopo l'operazione di clone.
+. Nella pagina Schedule (Pianificazione), eseguire una delle seguenti operazioni:
++
+** Selezionare *Esegui ora* se si desidera eseguire il processo di clonazione immediatamente.
+** Selezionare *Configure Schedule* (Configura pianificazione) quando si desidera determinare con quale frequenza deve avvenire l'operazione di clonazione, quando deve iniziare la pianificazione di clonazione, in quale giorno deve avvenire l'operazione di clonazione, quando deve scadere la pianificazione e se i cloni devono essere eliminati dopo la scadenza della pianificazione.
+
+
+. Nella pagina *Notification*, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
+. Esaminare il riepilogo, quindi selezionare *fine*.
+. Monitorare l'avanzamento dell'operazione selezionando *Monitor* > *Jobs*.
+

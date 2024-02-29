@@ -1,0 +1,38 @@
+---
+permalink: protect-azure/create-backup-policies-sap-hana.html 
+sidebar: sidebar 
+keywords: create policies, SAP HANA, backup policies 
+summary: Creare un criterio di backup per la risorsa o il gruppo di risorse di cui si desidera eseguire il backup. 
+---
+= Creare policy di backup per i database SAP HANA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di utilizzare SnapCenter per eseguire il backup delle risorse di database SAP HANA, è necessario creare una policy di backup per la risorsa o il gruppo di risorse di cui si desidera eseguire il backup.
+
+.Fasi
+. Nel riquadro di spostamento di sinistra, fare clic su *Impostazioni*.
+. Nella pagina Impostazioni, fare clic su *Criteri*.
+. Fare clic su *nuovo*.
+. Nella pagina Name (Nome), immettere il nome e la descrizione della policy.
+. Nella pagina Impostazioni, attenersi alla seguente procedura:
++
+.. Selezionare il tipo di backup.
++
+... Selezionare *Backup basato su file* se si desidera eseguire un controllo di integrità del database.
+... Selezionare *basato su snapshot* se si desidera creare un backup utilizzando la tecnologia di copia Snapshot.
+
+
+.. Specificare il tipo di pianificazione.
+
+
+. Nella pagina di conservazione, specificare le impostazioni di conservazione per il tipo di backup e il tipo di pianificazione selezionato.
++
+
+NOTE: La replica su storage secondario non è supportata.
+
+. Esaminare il riepilogo e fare clic su *fine*.
+

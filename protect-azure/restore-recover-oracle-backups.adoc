@@ -1,0 +1,125 @@
+---
+permalink: protect-azure/restore-recover-oracle-backups.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for Oracle Database, restore, recover, tablespaces, pluggable databases, point-in-time 
+summary: È possibile utilizzare SnapCenter per ripristinare e ripristinare i dati da uno o più backup. 
+---
+= Ripristinare e ripristinare i database Oracle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In caso di perdita di dati, è possibile utilizzare SnapCenter per ripristinare i dati da uno o più backup nel file system attivo e quindi ripristinare il database.
+
+.Fasi
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina risorse, selezionare *Database* o *Gruppo risorse* dall'elenco Visualizza.
+. Selezionare il database o il gruppo di risorse dall'elenco.
+. Nella vista Gestione copie, selezionare *backup* dal sistema di archiviazione primario.
+. Selezionare il backup dalla tabella, quindi fare clic su *image:../media/restore_icon.gif["icona restore (ripristina)"]*.
+. Nella pagina Restore Scope (ambito ripristino), eseguire le seguenti operazioni:
++
+.. Selezionare RAC se è stato selezionato un backup di un database in ambiente RAC.
+.. Eseguire le seguenti operazioni:
++
+... Selezionare *tutti i file di dati* se si desidera ripristinare solo i file di database.
+... Selezionare *tablespace* se si desidera ripristinare solo gli spazi di tabella.
+... Selezionare *Ripristina file di registro* se si desidera ripristinare i file di registro di ripristino dei database di standby di Data Guard o di standby di Active Data Guard.
+... Selezionare *Database collegabili* e specificare i PDB che si desidera ripristinare.
+... Selezionare *tablespace del database Pluggable (PDB)*, quindi specificare il PDB e gli spazi delle tabelle del PDB che si desidera ripristinare.
+... Selezionare *Ripristina il database nello stesso host in cui è stato creato il backup* se si desidera ripristinare il database nello stesso server SQL in cui vengono eseguiti i backup.
+... Selezionare *Ripristina il database in un host alternativo* se si desidera che il database venga ripristinato in un server SQL diverso nello stesso host o in un host diverso in cui vengono eseguiti i backup.
+... Selezionare *Cambia stato del database se necessario per il ripristino e il ripristino* per impostare lo stato del database sullo stato richiesto per eseguire le operazioni di ripristino e ripristino.
+... Selezionare *Imponi ripristino* se si desidera eseguire il ripristino in-place negli scenari in cui vengono aggiunti nuovi file di dati dopo il backup o quando i LUN vengono aggiunti, cancellati o ricreati in un gruppo di dischi LVM.
+
+
+
+
+. Nella pagina Recovery Scope (ambito ripristino), selezionare una delle seguenti opzioni:
++
+.. Selezionare *All Logs* (tutti i registri) se si desidera ripristinare l'ultima transazione.
+.. Selezionare *fino a SCN (System Change Number)* se si desidera ripristinare un SCN specifico.
+.. Selezionare *Data e ora* se si desidera ripristinare una data e un'ora specifiche.
+.. Selezionare *No recovery* se non si desidera eseguire il ripristino.
+.. Selezionare *specifica ubicazioni log archivio esterno* se si desidera specificare la posizione dei file log archivio esterno.
+
+
+. Nella pagina Pre-Ops e Post Ops, specificare i dettagli richiesti.
+. Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
+. Esaminare il riepilogo, quindi fare clic su *fine*.
+. Monitorare l'avanzamento dell'operazione facendo clic su *Monitor* > *Jobs*.
+
+
+
+
+== Ripristinare e ripristinare gli spazi delle tabelle utilizzando il ripristino point-in-time
+
+È possibile ripristinare un sottoinsieme di tablespace che sono state danneggiate o rilasciate senza influire sugli altri tablespace nel database. SnapCenter utilizza RMAN per eseguire il recovery point-in-time (PITR) dei tablespace.
+
+.Fasi
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina risorse, selezionare *Database* o *Gruppo risorse* dall'elenco Visualizza.
+. Selezionare il database di tipo istanza singola (multitenant).
+. Dalla vista Manage Copies (Gestisci copie), selezionare *Backup* dal sistema di storage.
++
+Se il backup non è catalogato, selezionare il backup e fare clic su *Catalog* (Catalogo).
+
+. Selezionare il backup catalogato, quindi fare clic su *image:../media/restore_icon.gif["icona restore (ripristina)"]*.
+. Nella pagina Restore Scope (ambito ripristino), eseguire le seguenti operazioni:
++
+.. Selezionare *RAC* se è stato selezionato un backup di un database in ambiente RAC.
+.. Selezionare *tablespace* se si desidera ripristinare solo gli spazi di tabella.
+.. Selezionare *Cambia stato del database se necessario per il ripristino e il ripristino* per impostare lo stato del database sullo stato richiesto per eseguire le operazioni di ripristino e ripristino.
+
+
+. Nella pagina Recovery Scope (ambito ripristino), selezionare una delle seguenti opzioni:
++
+.. Selezionare *fino a SCN (System Change Number)* se si desidera ripristinare un SCN specifico.
+.. Selezionare *Data e ora* se si desidera ripristinare una data e un'ora specifiche.
+
+
+. Nella pagina Pre-Ops e Post Ops, specificare i dettagli richiesti.
+. Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
+. Esaminare il riepilogo, quindi fare clic su *fine*.
+. Monitorare il processo di ripristino utilizzando la pagina *Monitor* > *Jobs*.
+
+
+
+
+== Ripristino e ripristino di database collegabili mediante ripristino point-in-time
+
+È possibile ripristinare e ripristinare un database collegabile (PDB) che è stato danneggiato o interrotto senza influire sulle altre PDB nel database container (CDB). SnapCenter utilizza RMAN per eseguire il recovery point-in-time (PITR) del PDB.
+
+.Fasi
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina risorse, selezionare *Database* o *Gruppo risorse* dall'elenco Visualizza.
+. Selezionare il database di tipo istanza singola (multitenant).
+. Dalla vista Manage Copies (Gestisci copie), selezionare *Backup* dal sistema di storage.
++
+Se il backup non è catalogato, selezionare il backup e fare clic su *Catalog* (Catalogo).
+
+. Selezionare il backup catalogato, quindi fare clic su *image:../media/restore_icon.gif["icona restore (ripristina)"]*.
+. Nella pagina Restore Scope (ambito ripristino), eseguire le seguenti operazioni:
++
+.. Selezionare *RAC* se è stato selezionato un backup di un database in ambiente RAC.
+.. A seconda che si desideri ripristinare la PDB o gli spazi delle tabelle in una PDB, eseguire una delle seguenti operazioni:
++
+*** Selezionare *Pluggable Databases (PDB)* se si desidera ripristinare un PDB.
+*** Selezionare *spazi di tabella del database Pluggable (PDB)* se si desidera ripristinare spazi di tabella in un PDB.
+
+
+
+
+. Nella pagina Recovery Scope (ambito ripristino), selezionare una delle seguenti opzioni:
++
+.. Selezionare *fino a SCN (System Change Number)* se si desidera ripristinare un SCN specifico.
+.. Selezionare *Data e ora* se si desidera ripristinare una data e un'ora specifiche.
+
+
+. Nella pagina Pre-Ops e Post Ops, specificare i dettagli richiesti.
+. Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
+. Esaminare il riepilogo, quindi fare clic su *fine*.
+. Monitorare il processo di ripristino utilizzando la pagina *Monitor* > *Jobs*.
+

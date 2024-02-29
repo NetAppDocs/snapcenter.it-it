@@ -1,0 +1,41 @@
+---
+permalink: protect-azure/restore-recover-sql-backups.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SQL Server Database, restore, recover 
+summary: È possibile utilizzare SnapCenter per ripristinare e ripristinare i dati da uno o più backup. 
+---
+= Ripristinare e ripristinare i database SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare SnapCenter per ripristinare i database di SQL Server di cui è stato eseguito il backup. Il ripristino del database è un processo multifase che copia tutti i dati e le pagine di registro da un backup SQL Server specificato in un database specificato.
+
+.Fasi
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina risorse, selezionare *Database* o *Gruppo risorse* dall'elenco Visualizza.
+. Selezionare il database o il gruppo di risorse dall'elenco.
+. Nella vista Gestione copie, selezionare *backup* dal sistema di archiviazione.
+. Selezionare il backup dalla tabella, quindi fare clic su image:../media/restore_icon.gif["icona restore (ripristina)"] icona.
+. Nella pagina Restore Scope (ambito ripristino), selezionare una delle seguenti opzioni:
++
+.. Selezionare *Ripristina il database nello stesso host in cui è stato creato il backup* se si desidera ripristinare il database nello stesso server SQL in cui vengono eseguiti i backup.
+.. Selezionare *Ripristina il database in un host alternativo* se si desidera che il database venga ripristinato in un server SQL diverso nello stesso host o in un host diverso in cui vengono eseguiti i backup.
+
+
+. Nella pagina Recovery Scope (ambito ripristino), selezionare una delle seguenti opzioni:
++
+.. Selezionare *None* (Nessuno) se si desidera ripristinare solo il backup completo senza alcun registro.
+.. Selezionare *tutti i backup dei registri* operazione di ripristino di backup fino al minuto per ripristinare tutti i backup dei registri disponibili dopo il backup completo.
+.. Selezionare *by log backups* per eseguire un'operazione di ripristino point-in-time, che ripristina il database in base ai log di backup fino al log di backup con la data selezionata.
+.. Selezionare *per data specifica fino a* per specificare la data e l'ora dopo le quali i registri delle transazioni non vengono applicati al database ripristinato.
+.. Se è stato selezionato *All log backups*, *by log backups* o *by specifiche date until* e i log si trovano in una posizione personalizzata, selezionare *Use custom log directory*, quindi specificare la posizione del log.
+
+
+. Nella pagina Pre-Ops e Post Ops, specificare i dettagli richiesti.
+. Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
+. Esaminare il riepilogo, quindi fare clic su *fine*.
+. Monitorare il processo di ripristino utilizzando la pagina *Monitor* > *Jobs*.
+
