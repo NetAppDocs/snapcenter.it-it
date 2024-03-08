@@ -19,8 +19,10 @@ SnapCenter include le seguenti funzioni di sicurezza:
 * Tutte le credenziali in SnapCenter sono protette mediante la crittografia AES (Advanced Encryption Standard).
 * SnapCenter utilizza algoritmi di sicurezza conformi allo standard FIPS (Federal Information Processing Standard).
 * SnapCenter supporta l'utilizzo dei certificati CA autorizzati forniti dal cliente.
-* SnapCenter 4.1.1 o versione successiva supporta la comunicazione TLS (Transport Layer Security) 1.2 con ONTAP. È inoltre possibile utilizzare la comunicazione TLS 1.2 tra client e server.
-* SnapCenter 5,0 supporta la comunicazione TLS (Transport Layer Security) 1,3 con ONTAP.
+* SnapCenter 4.1.1 o versioni successive supporta TLS (Transport Layer Security) 1,2 per la comunicazione con ONTAP. È inoltre possibile utilizzare TLS 1,2 per le comunicazioni tra client e server.
++
+A partire da 5,0, SnapCenter supporta (TLS) 1,3 per le comunicazioni con ONTAP.
+
 * SnapCenter supporta un determinato set di suite di crittografia SSL per garantire la sicurezza delle comunicazioni di rete.
 +
 Per ulteriori informazioni, vedere https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_the_supported_SSL_Cipher_Suite["Come configurare la suite di crittografia SSL supportata"].
