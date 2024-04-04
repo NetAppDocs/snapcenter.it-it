@@ -19,7 +19,7 @@ summary: È possibile creare un nuovo criterio di backup per le risorse prima di
 +
 Per prepararsi alla protezione dei dati, è necessario completare attività come l'installazione di SnapCenter, l'aggiunta di host, il rilevamento delle risorse e la creazione di connessioni di storage virtual machine (SVM).
 
-* Se si stanno replicando le copie Snapshot su uno storage secondario mirror o vault, l'amministratore di SnapCenter deve aver assegnato le SVM per i volumi di origine e di destinazione.
+* Se si stanno replicando Snapshot in uno storage secondario mirror o vault, l'amministratore di SnapCenter deve aver assegnato le SVM per i volumi di origine e di destinazione.
 * Se si desidera eseguire gli script PowerShell in prescripts e postscripts, impostare il valore del parametro usePowershellProcessforScripts su true nel file web.config.
 +
 Il valore predefinito è false
@@ -41,8 +41,8 @@ Il valore della chiave può essere visualizzato da swagger attraverso l'API: API
 * SnapLock
 +
 ** Se è selezionata l'opzione "conserva le copie di backup per un numero specifico di giorni", il periodo di conservazione SnapLock deve essere minore o uguale ai giorni di conservazione menzionati.
-** La specifica di un periodo di blocco delle copie Snapshot impedisce la cancellazione delle copie Snapshot fino alla scadenza del periodo di conservazione. In questo modo, si potrebbe conservare un numero di copie Snapshot superiore al numero specificato nella policy.
-** Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dalle copie Snapshot del vault di SnapLock come parte del ripristino ereditano il tempo di scadenza del vault di SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
+** La specifica di un periodo di blocco snapshot impedisce l'eliminazione delle istantanee fino alla scadenza del periodo di conservazione. Questo potrebbe portare a mantenere un numero di Snapshot maggiore del conteggio specificato nel criterio.
+** Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dagli Snapshot del vault di SnapLock come parte del ripristino ereditano il tempo di scadenza del vault di SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
 
 
 
@@ -105,7 +105,7 @@ NOTE: Se sono previste le 2:00, la programmazione non verrà attivata durante l'
  a| 
 Copie Snapshot totali da conservare
  a| 
-Scegliere questa opzione se si desidera specificare il numero di copie Snapshot memorizzate da SnapCenter prima di eliminarle automaticamente.
+Scegliere questa opzione se si desidera specificare il numero di archivi SnapCenter istantanee prima di eliminarli automaticamente.
 
 
 
@@ -119,7 +119,7 @@ Scegliere questa opzione se si desidera specificare il numero di giorni in cui S
  a| 
 Periodo di blocco della copia snapshot
  a| 
-Selezionare periodo di blocco della copia Snapshot e selezionare giorni, mesi o anni.
+Selezionare periodo di blocco istantanea e selezionare giorni, mesi o anni.
 
 Il periodo di conservazione di SnapLock deve essere inferiore a 100 anni.
 
@@ -169,7 +169,7 @@ Etichetta del criterio secondario
  a| 
 Selezionare un'etichetta Snapshot.
 
-A seconda dell'etichetta della copia Snapshot selezionata, ONTAP applica la policy di conservazione della copia Snapshot secondaria corrispondente all'etichetta.
+A seconda dell'etichetta Snapshot selezionata, ONTAP applica la politica di conservazione Snapshot secondaria corrispondente all'etichetta.
 
 
 NOTE: Se è stato selezionato *Update SnapMirror dopo la creazione di una copia Snapshot locale*, è possibile specificare l'etichetta del criterio secondario. Tuttavia, se è stato selezionato *Aggiorna SnapVault dopo la creazione di una copia Snapshot locale*, è necessario specificare l'etichetta del criterio secondario.
@@ -184,7 +184,7 @@ Immettere il numero di tentativi di replica che devono verificarsi prima dell'ar
 |===
 +
 
-NOTE: È necessario configurare il criterio di conservazione di SnapMirror in ONTAP per lo storage secondario per evitare di raggiungere il limite massimo di copie Snapshot sullo storage secondario.
+NOTE: È necessario configurare il criterio di conservazione SnapMirror in ONTAP per lo storage secondario, in modo da evitare di raggiungere il limite massimo di Snapshot sullo storage secondario.
 
 . Nella pagina script, immettere il percorso del prescrittore o del postscript che si desidera venga eseguito dal server SnapCenter rispettivamente prima o dopo l'operazione di backup e un limite di tempo che SnapCenter attende l'esecuzione dello script prima del timeout.
 +

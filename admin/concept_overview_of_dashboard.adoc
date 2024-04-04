@@ -41,7 +41,7 @@ Facendo clic su un avviso specifico, viene visualizzata nuovamente la pagina Avv
 
 == Riepilogo della protezione più recente
 
-La sezione Riepilogo protezione più recente fornisce lo stato di protezione per tutte le entità a cui si ha accesso. Per impostazione predefinita, il display fornisce lo stato di tutti i plug-in. Le informazioni sullo stato vengono fornite per le risorse di cui viene eseguito il backup sullo storage primario come copie Snapshot e sullo storage secondario utilizzando le tecnologie SnapMirror e SnapVault. La disponibilità delle informazioni sullo stato di protezione per lo storage secondario si basa sul tipo di plug-in selezionato.
+La sezione Riepilogo protezione più recente fornisce lo stato di protezione per tutte le entità a cui si ha accesso. Per impostazione predefinita, il display fornisce lo stato di tutti i plug-in. Vengono fornite informazioni sullo stato delle risorse di cui è stato eseguito il backup sullo storage primario come Snapshot e sullo storage secondario mediante le tecnologie SnapMirror e SnapVault. La disponibilità delle informazioni sullo stato di protezione per lo storage secondario si basa sul tipo di plug-in selezionato.
 
 
 NOTE: Se si utilizza un criterio di protezione del vault mirror, i contatori del riepilogo della protezione vengono visualizzati nel grafico di riepilogo di SnapVault e non nel grafico di SnapMirror.
@@ -52,7 +52,7 @@ Lo stato di protezione dei singoli plug-in è disponibile selezionando un plug-i
 IMPORTANT: I report sullo storage secondario sono validi solo per SnapVault; i report SnapMirror non sono supportati.
 
 
-NOTE: SAP HANA fornisce informazioni sullo stato di protezione per lo storage primario e secondario per le copie Snapshot. Per i backup basati su file è disponibile solo lo stato di protezione dello storage primario.
+NOTE: SAP HANA fornisce informazioni sullo stato di protezione per lo storage primario e secondario per le Snapshot. Per i backup basati su file è disponibile solo lo stato di protezione dello storage primario.
 
 |===
 | Stato di protezione | Storage primario | Storage secondario 
@@ -141,9 +141,9 @@ Numero di processi attualmente in esecuzione.
 
 Il riquadro Storage visualizza lo storage primario e secondario consumato dai processi di protezione in un periodo di 90 giorni, illustra graficamente le tendenze di consumo e calcola i risparmi dello storage primario. Le informazioni sullo storage vengono aggiornate ogni 24 ore alle 12
 
-Il consumo totale giornaliero, che comprende il numero totale di backup disponibili in SnapCenter e le dimensioni occupate da questi backup, viene visualizzato nella parte superiore del display. A un backup potrebbero essere associate più copie Snapshot e il numero di copie rifletterà lo stesso. Applicabile sia alle copie Snapshot primarie che a quelle secondarie. Ad esempio, sono stati creati 10 backup, di cui 2 eliminati a causa della conservazione dei backup basata su policy e 1 eliminato esplicitamente dall'utente. In questo modo, viene visualizzato il numero di 7 backup insieme alle dimensioni occupate da questi 7 backup.
+Il consumo totale giornaliero, che comprende il numero totale di backup disponibili in SnapCenter e le dimensioni occupate da questi backup, viene visualizzato nella parte superiore del display. A un backup possono essere associati più snapshot, il conteggio rifletterà lo stesso. Ciò è applicabile agli snapshot primari e secondari. Ad esempio, sono stati creati 10 backup, di cui 2 eliminati a causa della conservazione dei backup basata su policy e 1 eliminato esplicitamente dall'utente. In questo modo, viene visualizzato il numero di 7 backup insieme alle dimensioni occupate da questi 7 backup.
 
-Il fattore di risparmio dello storage per lo storage primario è il rapporto tra capacità logica (risparmi di copia di cloni e Snapshot più storage consumato) e capacità fisica dello storage primario. Un grafico a barre illustra i risparmi in termini di storage.
+Il fattore di risparmio dello storage per lo storage primario è il rapporto tra la capacità logica (risparmi di cloni e Snapshot, più lo storage consumato) e la capacità fisica dello storage primario. Un grafico a barre illustra i risparmi in termini di storage.
 
 Il grafico a linee traccia separatamente il consumo di storage primario e secondario su base giornaliera in un periodo di 90 giorni. Passando il mouse sui grafici si ottengono risultati dettagliati, giorno per giorno.
 

@@ -17,7 +17,7 @@ summary: È possibile scollegare i criteri da una risorsa o da un gruppo di riso
 
 == Modificare i criteri
 
-È possibile modificare le opzioni di replica, le impostazioni di conservazione delle copie Snapshot, il numero di tentativi di errore o le informazioni sugli script mentre un criterio è collegato a una risorsa o a un gruppo di risorse. È possibile modificare il tipo di pianificazione (frequenza) solo dopo aver disaccoppiato un criterio.
+È possibile modificare le opzioni di replica, le impostazioni di conservazione di Snapshot, il conteggio dei tentativi di errore o le informazioni sugli script mentre un criterio è collegato a una risorsa o a un gruppo di risorse. È possibile modificare il tipo di pianificazione (frequenza) solo dopo aver disaccoppiato un criterio.
 
 *A proposito di questa attività*
 

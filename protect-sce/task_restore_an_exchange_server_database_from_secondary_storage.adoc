@@ -13,10 +13,10 @@ summary: 'È possibile ripristinare un database Exchange Server di cui è stato 
 [role="lead"]
 È possibile ripristinare un database Exchange Server di cui è stato eseguito il backup dallo storage secondario (mirror o vault).
 
-È necessario replicare le copie Snapshot dallo storage primario a uno storage secondario.
+È necessario aver replicato le istantanee dallo storage primario a uno secondario.
 
 .A proposito di questa attività
-* Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dalle copie Snapshot del vault di SnapLock come parte del ripristino ereditano il tempo di scadenza del vault di SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
+* Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dagli Snapshot del vault di SnapLock come parte del ripristino ereditano il tempo di scadenza del vault di SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
 
 
 .Fasi

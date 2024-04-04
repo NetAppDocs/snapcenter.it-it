@@ -16,7 +16,7 @@ Se una risorsa non fa ancora parte di un gruppo di risorse, è possibile eseguir
 .Prima di iniziare
 * È necessario aver creato una policy di backup.
 * Se si desidera eseguire il backup di una risorsa che ha una relazione SnapMirror con uno storage secondario, il ruolo ONTAP assegnato all'utente dello storage deve includere il privilegio "`snapmirror all`". Tuttavia, se si utilizza il ruolo "`vsadmin`", il privilegio "`snapmirror all`" non è richiesto.
-* Per le operazioni di backup basate su copia Snapshot, assicurarsi che tutti i database del tenant siano validi e attivi.
+* Per le operazioni di backup basate su copie Snapshot, assicurarsi che tutti i database tenant siano validi e attivi.
 * Per creare backup di replica del sistema SAP HANA, si consiglia di aggiungere tutte le risorse del sistema SAP HANA in un unico gruppo di risorse. Ciò garantisce un backup perfetto durante la modalità takeover-failback.
 +
 link:task_create_resource_groups_and_attach_policies.html["Creare gruppi di risorse e allegare policy"].
@@ -28,7 +28,7 @@ link:task_back_up_resource_groups_sap_hana.html["Eseguire il backup dei gruppi d
 +
 Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo Get-Help _command_name_. In alternativa, fare riferimento alla https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["Guida di riferimento al cmdlet del software SnapCenter"]
 
-* Per i comandi pre e post per le operazioni quiesce, Snapshot copy e unquiesce, controllare se i comandi esistono nell'elenco dei comandi disponibile sull'host plug-in dai seguenti percorsi:
+* Per i comandi pre e post per le operazioni quiescenza, Snapshot e Unquiesce, è necessario controllare se i comandi sono presenti nell'elenco dei comandi disponibile sull'host del plug-in dai seguenti percorsi:
 +
 Per Windows: _C: File di programma NetApp, SnapCenter, Snapcenter Plug-in Creator, ecc., allowed_comands_list.txt_
 
@@ -47,9 +47,9 @@ NOTE: Se i comandi non sono presenti nell'elenco dei comandi, l'operazione avrà
 Selezionare *image:../media/filter_icon.png[""]*, quindi selezionare il nome host e il tipo di risorsa per filtrare le risorse. Quindi selezionare image:../media/filter_icon.png[""] per chiudere il riquadro del filtro.
 
 . Selezionare la risorsa di cui si desidera eseguire il backup.
-. Nella pagina Resource, selezionare *Use customed name format for Snapshot copy* (Usa formato nome personalizzato per la copia Snapshot), quindi immettere un formato nome personalizzato da utilizzare per il nome della copia Snapshot.
+. Nella pagina risorsa, selezionare *Usa formato nome personalizzato per copia istantanea*, quindi immettere un formato nome personalizzato che si desidera utilizzare per il nome istantanea.
 +
-Ad esempio, _customtext_policy_hostname_ o _resource_hostname_. Per impostazione predefinita, al nome della copia Snapshot viene aggiunto un indicatore data e ora.
+Ad esempio, _customtext_policy_hostname_ o _resource_hostname_. Per impostazione predefinita, al nome dell'istantanea viene aggiunto un indicatore data e ora.
 
 . Nella pagina Impostazioni applicazione, effettuare le seguenti operazioni:
 +
@@ -65,7 +65,7 @@ Attivare il backup dei gruppi di coerenza, se necessario, ed eseguire le seguent
  a| 
 Attendere il completamento dell'operazione "Consistency Group Snapshot"
  a| 
-Selezionare *urgente*, *Medio* o *rilassato* per specificare il tempo di attesa per il completamento dell'operazione di copia Snapshot. Urgente = 5 secondi, Medio = 7 secondi e rilassato = 20 secondi.
+Selezionare *urgente*, *Medio* o *rilassato* per specificare il tempo di attesa per il completamento dell'operazione istantanea. Urgente = 5 secondi, Medio = 7 secondi e rilassato = 20 secondi.
 
 
 
@@ -75,35 +75,35 @@ Disattiva sincronizzazione WAFL
 Selezionare questa opzione per evitare di forzare un punto di coerenza WAFL.
 
 |===
-** Selezionare la freccia *Scripts* per eseguire i comandi pre e post per le operazioni quiesce, copia Snapshot e senza richieste.
+** Selezionare la freccia *Scripts* per eseguire i comandi pre e post per le operazioni quiescenza, istantanea e inquiescenza.
 +
 È inoltre possibile eseguire i comandi preliminari prima di uscire dall'operazione di backup. Le prescrizioni e i postscript vengono eseguiti nel server SnapCenter.
 
 ** Selezionare la freccia **configurazioni personalizzate**, quindi immettere le coppie di valori personalizzati richieste per tutti i lavori che utilizzano questa risorsa.
-** Selezionare la freccia *Snapshot Copy Tool* per selezionare lo strumento per creare le copie Snapshot:
+** Selezionare la freccia *Snapshot Copy Tool* (strumento di copia istantanea) per selezionare lo strumento per creare le istantanee:
 +
 |===
 | Se vuoi... | Quindi... 
 
 
  a| 
-SnapCenter per creare una copia Snapshot a livello di storage
+SnapCenter per creare una Snapshot a livello di storage
  a| 
 Selezionare *SnapCenter senza coerenza del file system*.
 
 
 
  a| 
-SnapCenter utilizza il plug-in per Windows per mettere il file system in uno stato coerente e quindi creare una copia Snapshot
+SnapCenter utilizzare il plug-in per Windows per impostare lo stato coerente del file system e quindi creare una Snapshot
  a| 
 Selezionare *SnapCenter with file system Consistency*.
 
 
 
  a| 
-Per immettere il comando per creare una copia Snapshot
+Per immettere il comando per creare un'istantanea
  a| 
-Selezionare *Altro*, quindi immettere il comando per creare una copia Snapshot.
+Selezionare *Altro*, quindi immettere il comando per creare un'istantanea.
 
 |===
 +

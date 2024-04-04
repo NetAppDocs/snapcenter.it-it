@@ -19,7 +19,7 @@ Uno SLA definisce il livello di servizio previsto e risolve molti problemi relat
 
 == Tipi di backup supportati per il database Exchange
 
-Il backup delle cassette postali Exchange mediante SnapCenter richiede la scelta del tipo di risorsa, ad esempio database e gruppi di disponibilità database (DAG). La tecnologia di copia Snapshot consente di creare copie online di sola lettura dei volumi su cui risiedono le risorse.
+Il backup delle cassette postali Exchange mediante SnapCenter richiede la scelta del tipo di risorsa, ad esempio database e gruppi di disponibilità database (DAG). La tecnologia Snapshot viene sfruttata per creare copie online di sola lettura dei volumi in cui risiedono le risorse.
 
 |===
 | Tipo di backup | Descrizione 
@@ -85,9 +85,9 @@ I fattori che determinano il numero di processi di backup necessari includono la
 
 == Convenzioni di denominazione del backup
 
-È possibile utilizzare la convenzione di denominazione predefinita per la copia Snapshot o una convenzione di denominazione personalizzata. La convenzione di denominazione predefinita per il backup aggiunge un indicatore data e ora ai nomi delle copie Snapshot che consente di identificare quando sono state create le copie.
+È possibile utilizzare la convenzione di naming predefinita di Snapshot o una convenzione di naming personalizzata. La convenzione di denominazione predefinita dei backup aggiunge un indicatore data e ora ai nomi Snapshot che consente di identificare quando le copie sono state create.
 
-La copia Snapshot utilizza la seguente convenzione di denominazione predefinita:
+L'istantanea utilizza la seguente convenzione di denominazione predefinita:
 
 `resourcegroupname_hostname_timestamp`
 
@@ -104,7 +104,7 @@ In questo esempio, gli elementi di sintassi hanno i seguenti significati:
 * _03-12-2015_23.17.26_ indica data e ora.
 
 
-In alternativa, è possibile specificare il formato del nome della copia Snapshot proteggendo le risorse o i gruppi di risorse selezionando *Usa il formato del nome personalizzato per la copia Snapshot*. Ad esempio, customtext_resourcegroup_policy_hostname o resourcegroup_hostname. Per impostazione predefinita, il suffisso dell'indicatore orario viene aggiunto al nome della copia Snapshot.
+In alternativa, è possibile specificare il formato del nome dell'istantanea mentre si proteggono le risorse o i gruppi di risorse selezionando *Usa il formato del nome personalizzato per la copia dell'istantanea*. Ad esempio, customtext_resourcegroup_policy_hostname o resourcegroup_hostname. Per impostazione predefinita, il suffisso dell'indicatore data e ora viene aggiunto al nome dell'istantanea.
 
 
 

@@ -54,7 +54,7 @@ Se il layout del database differisce dal backup o se sono presenti nuovi file do
 
 *Fasi*
 
-. Il volume viene clonato dalla copia Snapshot e lo stack del file system viene creato sull'host utilizzando i LUN o i volumi clonati.
+. Il volume viene clonato dalla Snapshot e lo stack del file system viene creato sull'host utilizzando i LUN o i volumi clonati.
 . I file vengono copiati dai file system clonati ai file system originali.
 . I file system clonati vengono quindi smontati dall'host e i volumi clonati vengono cancellati da ONTAP.
 

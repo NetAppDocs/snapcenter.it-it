@@ -47,6 +47,6 @@ Se il sistema HANA di origine viene rilevato automaticamente e il plug-in dell'h
 . Monitorare l'avanzamento dell'operazione facendo clic su *Monitor* > *Jobs*.
 +
 
-NOTE: Clone split è disattivato per i cloni ANF perché il clone ANF è già un volume indipendente creato dalla copia Snapshot selezionata.
+NOTE: Clone split è disattivato per i cloni ANF perché il clone ANF è già un volume indipendente creato dall'istantanea selezionata.
 
 

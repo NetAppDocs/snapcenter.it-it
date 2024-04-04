@@ -2,7 +2,7 @@
 permalink: protect-scsql/task_cancel_the_snapcenter_plug_in_for_sql_server_operations.html 
 sidebar: sidebar 
 keywords: cancel, backup 
-summary: 'È possibile annullare le operazioni di backup in esecuzione, in coda o che non rispondono. Quando si annulla un"operazione di backup, il server SnapCenter interrompe l"operazione e rimuove tutte le copie Snapshot dallo storage se il backup creato non è registrato con il server SnapCenter. Se il backup è già registrato con il server SnapCenter, non verrà eseguito il rollback della copia Snapshot già creata anche dopo l"attivazione dell"annullamento.' 
+summary: 'È possibile annullare le operazioni di backup in esecuzione, in coda o che non rispondono. Quando si annulla un"operazione di backup, il server SnapCenter interrompe l"operazione e rimuove tutte le istantanee dall"archivio se il backup creato non è registrato con il server SnapCenter. Se il backup è già registrato con il server SnapCenter, non verrà eseguito il rollback dell"istantanea già creata anche dopo l"attivazione dell"annullamento.' 
 ---
 = Annullare il plug-in SnapCenter per le operazioni di backup di Microsoft SQL Server
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'È possibile annullare le operazioni di backup in esecuzione, in coda 
 
 
 [role="lead"]
-È possibile annullare le operazioni di backup in esecuzione, in coda o che non rispondono. Quando si annulla un'operazione di backup, il server SnapCenter interrompe l'operazione e rimuove tutte le copie Snapshot dallo storage se il backup creato non è registrato con il server SnapCenter. Se il backup è già registrato con il server SnapCenter, non verrà eseguito il rollback della copia Snapshot già creata anche dopo l'attivazione dell'annullamento.
+È possibile annullare le operazioni di backup in esecuzione, in coda o che non rispondono. Quando si annulla un'operazione di backup, il server SnapCenter interrompe l'operazione e rimuove tutte le istantanee dall'archivio se il backup creato non è registrato con il server SnapCenter. Se il backup è già registrato con il server SnapCenter, non verrà eseguito il rollback dell'istantanea già creata anche dopo l'attivazione dell'annullamento.
 
 .Prima di iniziare
 * Per annullare le operazioni di ripristino, è necessario accedere come amministratore SnapCenter o come proprietario del processo.

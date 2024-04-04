@@ -14,13 +14,13 @@ summary: 'È possibile ripristinare i database di SQL Server di cui è stato ese
 È possibile ripristinare i database di SQL Server di cui è stato eseguito il backup dalle LUN fisiche (RDM, iSCSI o FCP) su un sistema di storage secondario. La funzionalità di ripristino è un processo multifase che copia tutti i dati e le pagine di registro da un backup SQL Server specificato che risiede nel sistema di storage secondario in un database specifico.
 
 .Prima di iniziare
-* È necessario replicare le copie Snapshot dal sistema di storage primario a quello secondario.
+* È necessario aver replicato gli snapshot dal sistema di storage primario a quello secondario.
 * È necessario assicurarsi che il server SnapCenter e l'host del plug-in siano in grado di connettersi al sistema di storage secondario.
 * La maggior parte dei campi delle pagine della procedura guidata di ripristino viene spiegata nel processo di ripristino di base. Le seguenti informazioni descrivono alcuni dei campi per i quali potrebbe essere necessaria una guida.
 
 
 .A proposito di questa attività
-Per le policy abilitate per SnapLock, per ONTAP 9.12.1 e versioni successive, se si specifica un periodo di blocco delle copie Snapshot, i cloni creati dalle copie Snapshot a prova di manomissione come parte del ripristino ereditano il tempo di scadenza SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
+Per i criteri abilitati per SnapLock, per ONTAP 9.12.1 e versioni precedenti, se si specifica un periodo di blocco Snapshot, i cloni creati dagli Snapshot a prova di manomissione come parte del ripristino ereditano il tempo di scadenza SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
 
 .Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare *plug-in SnapCenter per SQL Server* dall'elenco.

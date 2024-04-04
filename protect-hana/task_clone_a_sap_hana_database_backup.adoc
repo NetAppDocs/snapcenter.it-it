@@ -32,7 +32,7 @@ NOTE: Se i comandi non sono presenti nell'elenco dei comandi, l'operazione avrà
 
 .A proposito di questa attività
 * Per informazioni sulle limitazioni delle operazioni di suddivisione dei cloni, vedere http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["Guida alla gestione dello storage logico di ONTAP 9"^].
-* Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dalle copie Snapshot del vault di SnapLock come parte del ripristino ereditano il tempo di scadenza del vault di SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
+* Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dagli Snapshot del vault di SnapLock come parte del ripristino ereditano il tempo di scadenza del vault di SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
 
 
 .Fasi
@@ -120,7 +120,7 @@ Esempio per NFS:
  mount VSERVER_DATA_IP:%VOLUME_NAME_Clone /mnt
 +
 
-NOTE: Per i comandi pre e post per le operazioni quiescenza, copia snapshot e inquiescenza, controllare se i comandi sono presenti nell'elenco dei comandi disponibili sull'host plug-in dal percorso _/opt/snapcenter/snapcenter/scc/allowed_command.config_ per Linux e _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_Commands_list.txt_ per Windows.
+NOTE: Per i comandi pre e post per le operazioni quiesce, Snapshot e unquiesce, è necessario controllare se i comandi sono presenti nell'elenco dei comandi disponibili sull'host plug-in dal percorso _/opt/snapcenter/snapcenter/scc/allowed_command.config_ per Linux e _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_Commands_list.txt_ per Windows.
 
 
 

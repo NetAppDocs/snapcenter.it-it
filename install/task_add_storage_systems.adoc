@@ -33,7 +33,7 @@ SnapCenter non supporta più sistemi storage con lo stesso nome su cluster diver
 +
 Se si abilitano queste funzioni, SnapCenter invia informazioni AutoSupport al sistema di storage e messaggi EMS al syslog del sistema di storage quando una risorsa viene protetta, un'operazione di ripristino o clonazione viene completata correttamente o un'operazione non riesce.
 
-* Se si intende replicare le copie Snapshot in una destinazione SnapMirror o SnapVault, è necessario configurare le connessioni del sistema di storage per la SVM o il cluster di destinazione, nonché per la SVM o il cluster di origine.
+* Se hai intenzione di replicare Snapshot su una destinazione SnapMirror o su una destinazione SnapVault, devi impostare connessioni del sistema storage per la SVM o il cluster di destinazione così come la SVM o il cluster di origine.
 
 
 

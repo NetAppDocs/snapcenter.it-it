@@ -42,9 +42,9 @@ Ad esempio, se si aggiunge HR come tag a più gruppi di risorse, è possibile tr
  a| 
 USA il formato nome personalizzato per la copia Snapshot
  a| 
-Selezionare questa casella di controllo e immettere un formato nome personalizzato da utilizzare per il nome della copia Snapshot.
+Selezionare questa casella di controllo e immettere un formato del nome personalizzato che si desidera utilizzare per il nome dell'istantanea.
 
-Ad esempio, _customtext_resource group_policy_hostname o resource group_hostname_. Per impostazione predefinita, al nome della copia Snapshot viene aggiunto un indicatore data e ora.
+Ad esempio, _customtext_resource group_policy_hostname o resource group_hostname_. Per impostazione predefinita, al nome dell'istantanea viene aggiunto un indicatore data e ora.
 
 |===
 . Facoltativo: Nella pagina risorse, selezionare un nome host dall'elenco a discesa *host* e il tipo di risorsa dall'elenco a discesa *tipo di risorsa*.
@@ -66,7 +66,7 @@ Abilitare il backup dei gruppi di coerenza ed eseguire le seguenti attività:
  a| 
 Tempo di attesa per il completamento dell'operazione Consistency Group Snapshot
  a| 
-Selezionare urgente, Medio o rilassato per specificare il tempo di attesa per il completamento dell'operazione di copia Snapshot.
+Selezionare urgente, Medio o rilassato per specificare il tempo di attesa per il completamento dell'operazione istantanea.
 
 Urgente = 5 secondi, Medio = 7 secondi e rilassato = 20 secondi.
 
@@ -81,7 +81,7 @@ Selezionare questa opzione per evitare di forzare un punto di coerenza WAFL.
 +
 image:../media/application_settings.gif["Una schermata delle opzioni per il backup dei gruppi di coerenza: Urgente, medio o rilassato."]
 
-.. Selezionare la freccia script e immettere i comandi pre e post per le operazioni di quiete, copia Snapshot e senza richieste. In caso di errore, è anche possibile inserire i pre-comandi da eseguire prima di uscire.
+.. Selezionare la freccia Scripts (script) e immettere i comandi pre e post per le operazioni quiescenza, istantanea e inquiescenza. In caso di errore, è anche possibile inserire i pre-comandi da eseguire prima di uscire.
 .. Selezionare la freccia Custom Configurations (configurazioni personalizzate) e immettere le coppie chiave-valore personalizzate richieste per tutte le operazioni di protezione dei dati che utilizzano questa risorsa.
 +
 |===
@@ -138,32 +138,32 @@ Attiva la gestione dei log di archiviazione all'interno delle sottodirectory.
 Utilizzare questo parametro se i log di archiviazione si trovano nelle sottodirectory.
 
 |===
-.. Selezionare la freccia *Snapshot Copy Tool* per selezionare lo strumento per creare le copie Snapshot:
+.. Selezionare la freccia *Snapshot Copy Tool* (strumento di copia istantanea) per selezionare lo strumento per creare le istantanee:
 +
 |===
 | Se vuoi... | Quindi... 
 
 
  a| 
-SnapCenter per utilizzare il plug-in per Windows e mettere il file system in uno stato coerente prima di creare una copia Snapshot. Per le risorse Linux, questa opzione non è applicabile.
+SnapCenter deve utilizzare il plug-in per Windows e mettere il file system in uno stato coerente prima di creare una Snapshot. Per le risorse Linux, questa opzione non è applicabile.
  a| 
-Selezionare SnapCenter with file system Consistency (Configurazione con coerenza file system)
+Selezionare *SnapCenter with file system Consistency*.
 
 Questa opzione non è applicabile al plug-in SnapCenter per database SAP HANA.
 
 
 
  a| 
-SnapCenter per creare una copia Snapshot a livello di storage
+SnapCenter per creare una istantanea a livello di storage
  a| 
-Selezionare SnapCenter senza coerenza del file system.
+Selezionare *SnapCenter senza coerenza del file system*.
 
 
 
  a| 
-Per inserire il comando da eseguire sull'host per creare copie Snapshot.
+Immettere il comando da eseguire sull'host per creare Snapshot.
  a| 
-Selezionare Other (Altro), quindi immettere il comando da eseguire sull'host per creare una copia Snapshot.
+Selezionare *Altro*, quindi immettere il comando da eseguire sull'host per creare un'istantanea.
 
 |===
 

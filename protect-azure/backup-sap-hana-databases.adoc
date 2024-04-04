@@ -17,13 +17,13 @@ Se una risorsa non fa ancora parte di un gruppo di risorse, è possibile eseguir
 . Nel riquadro di spostamento di sinistra, selezionare *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina Resource, filtrare le risorse dall'elenco a discesa *View* in base al tipo di risorsa.
 . Selezionare la risorsa di cui si desidera eseguire il backup.
-. Nella pagina Resource, selezionare *Use customed name format for Snapshot copy* (Usa formato nome personalizzato per la copia Snapshot), quindi immettere un formato nome personalizzato da utilizzare per il nome della copia Snapshot.
+. Nella pagina risorsa, selezionare *Usa formato nome personalizzato per copia istantanea*, quindi immettere un formato nome personalizzato che si desidera utilizzare per il nome istantanea.
 . Nella pagina Impostazioni applicazione, effettuare le seguenti operazioni:
 +
 .. Selezionare la freccia *backup* per impostare opzioni di backup aggiuntive.
-.. Selezionare la freccia *Scripts* per eseguire i comandi pre e post per le operazioni quiesce, copia Snapshot e senza richieste.
+.. Selezionare la freccia *Scripts* per eseguire i comandi pre e post per le operazioni quiescenza, istantanea e inquiescenza.
 .. Selezionare la freccia *configurazioni personalizzate*, quindi immettere le coppie di valori personalizzati richieste per tutti i lavori che utilizzano questa risorsa.
-.. Selezionare *strumento di copia snapshot > SnapCenter senza coerenza file system* per creare copie snapshot.
+.. Selezionare *Snapshot Copy Tool > SnapCenter Without file System Consistency* per creare istantanee.
 +
 L'opzione *coerenza file system* è applicabile solo alle applicazioni in esecuzione su host Windows.
 

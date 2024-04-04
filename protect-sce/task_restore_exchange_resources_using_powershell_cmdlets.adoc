@@ -16,7 +16,7 @@ Il ripristino di un database Exchange include l'avvio di una sessione di conness
 È necessario aver preparato l'ambiente PowerShell per eseguire i cmdlet PowerShell.
 
 .A proposito di questa attività
-Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dalle copie Snapshot del vault di SnapLock come parte del ripristino ereditano il tempo di scadenza del vault di SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
+Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dagli Snapshot del vault di SnapLock come parte del ripristino ereditano il tempo di scadenza del vault di SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
 
 .Fasi
 . Avviare una sessione di connessione con il server SnapCenter per un utente specifico utilizzando `Open-SmConnection` cmdlet.

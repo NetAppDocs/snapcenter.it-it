@@ -50,7 +50,7 @@ Facendo clic sul pulsante Refresh (Aggiorna), viene avviata una query dello stor
 Se viene eseguito il backup abilitato SnapLock, facendo clic sul pulsante *Aggiorna* si aggiornano i tempi di scadenza SnapLock primari e secondari recuperati da ONTAP. Inoltre, una pianificazione settimanale aggiorna il tempo di scadenza SnapLock primario e secondario recuperato da ONTAP.
 
 +
-Quando la risorsa dell'applicazione è distribuita su più volumi, il tempo di scadenza del SnapLock per il backup sarà il tempo di scadenza del SnapLock più lungo impostato per una copia Snapshot in un volume. Il tempo di scadenza SnapLock più lungo viene recuperato da ONTAP.
+Quando la risorsa dell'applicazione è distribuita su più volumi, il tempo di scadenza del SnapLock per il backup sarà il tempo di scadenza del SnapLock più lungo impostato per una Snapshot in un volume. Il tempo di scadenza SnapLock più lungo viene recuperato da ONTAP.
 
 +
 Dopo il backup su richiesta, facendo clic sul pulsante *Refresh* (Aggiorna) vengono aggiornati i dettagli del backup o della clonazione.

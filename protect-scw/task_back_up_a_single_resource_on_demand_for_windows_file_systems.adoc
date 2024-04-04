@@ -29,9 +29,9 @@ IMPORTANT: Se si lavora in un contesto di file system Windows, non eseguire il b
 +
 Specificare le impostazioni di protezione, come descritto nella sezione creazione dei gruppi di risorse.
 
-. Facoltativo: Nella pagina Resource della procedura guidata, immettere un formato nome personalizzato per la copia Snapshot.
+. Facoltativo: Nella pagina risorse della procedura guidata, immettere un formato nome personalizzato per l'istantanea.
 +
-Ad esempio, customtext_resourcegroup_policy_hostname o resourcegroup_hostname. Per impostazione predefinita, al nome della copia Snapshot viene aggiunto un indicatore data e ora.
+Ad esempio, customtext_resourcegroup_policy_hostname o resourcegroup_hostname. Per impostazione predefinita, al nome dell'istantanea viene aggiunto un indicatore data e ora.
 
 . Nella pagina Criteri, eseguire le seguenti operazioni:
 +

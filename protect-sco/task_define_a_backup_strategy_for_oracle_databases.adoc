@@ -257,9 +257,9 @@ Le pianificazioni di backup (esattamente quando devono essere eseguiti i backup)
 
 == Convenzioni di denominazione del backup
 
-È possibile utilizzare la convenzione di denominazione predefinita per la copia Snapshot o una convenzione di denominazione personalizzata. La convenzione di denominazione predefinita per il backup aggiunge un indicatore data e ora ai nomi delle copie Snapshot che consente di identificare quando sono state create le copie.
+È possibile utilizzare la convenzione di naming predefinita di Snapshot o una convenzione di naming personalizzata. La convenzione di denominazione predefinita dei backup aggiunge un indicatore data e ora ai nomi Snapshot che consente di identificare quando le copie sono state create.
 
-La copia Snapshot utilizza la seguente convenzione di denominazione predefinita:
+L'istantanea utilizza la seguente convenzione di denominazione predefinita:
 
 `resourcegroupname_hostname_timestamp`
 
@@ -276,7 +276,7 @@ In questo esempio, gli elementi di sintassi hanno i seguenti significati:
 * _03-12-2015_23.17.26_ indica data e ora.
 
 
-In alternativa, è possibile specificare il formato del nome della copia Snapshot proteggendo le risorse o i gruppi di risorse selezionando *Usa il formato del nome personalizzato per la copia Snapshot*. Ad esempio, customtext_resourcegroup_policy_hostname o resourcegroup_hostname. Per impostazione predefinita, il suffisso dell'indicatore orario viene aggiunto al nome della copia Snapshot.
+In alternativa, è possibile specificare il formato del nome dell'istantanea mentre si proteggono le risorse o i gruppi di risorse selezionando *Usa il formato del nome personalizzato per la copia dell'istantanea*. Ad esempio, customtext_resourcegroup_policy_hostname o resourcegroup_hostname. Per impostazione predefinita, il suffisso dell'indicatore data e ora viene aggiunto al nome dell'istantanea.
 
 
 
@@ -299,6 +299,6 @@ NOTE: Per la conservazione a lungo termine delle copie di backup, è necessario 
 
 È possibile verificare le copie di backup sul volume di storage primario o sul volume di storage secondario SnapMirror o SnapVault. La verifica mediante un volume di storage secondario riduce il carico sul volume di storage primario.
 
-Quando si verifica un backup sul volume di storage primario o secondario, tutte le copie Snapshot primarie e secondarie vengono contrassegnate come verificate.
+Quando si verifica un backup che si trova sul volume di storage primario o secondario, tutti gli Snapshot primari e secondari vengono contrassegnati come verificati.
 
 La licenza SnapRestore è necessaria per verificare le copie di backup su SnapMirror e sul volume di storage secondario SnapVault.

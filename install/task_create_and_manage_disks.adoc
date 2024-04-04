@@ -295,10 +295,10 @@ SnapCenter crea il LUN e lo connette all'unità o al percorso del disco specific
 * Per i LUN con thick provisioning, la dimensione espandibile (dimensione disponibile nel volume) viene visualizzata come dimensione massima.
 * Le LUN con partizioni di tipo MBR hanno una dimensione massima di 2 TB.
 * Le LUN con partizioni di tipo GPT hanno un limite di dimensioni del sistema storage di 16 TB.
-* È consigliabile creare una copia Snapshot prima di ridimensionare un LUN.
-* Se è necessario ripristinare un LUN da una copia Snapshot eseguita prima del ridimensionamento del LUN, SnapCenter ridimensiona automaticamente il LUN in base alle dimensioni della copia Snapshot.
+* È consigliabile creare un'istantanea prima di ridimensionare un LUN.
+* Per ripristinare una LUN da una Snapshot creata prima del ridimensionamento della LUN, SnapCenter ridimensiona automaticamente il LUN alla dimensione della Snapshot.
 +
-Dopo l'operazione di ripristino, i dati aggiunti al LUN dopo il ridimensionamento devono essere ripristinati da una copia Snapshot eseguita dopo il ridimensionamento.
+Dopo l'operazione di ripristino, i dati aggiunti al LUN dopo il ridimensionamento devono essere ripristinati da una Snapshot creata dopo il ridimensionamento.
 
 
 

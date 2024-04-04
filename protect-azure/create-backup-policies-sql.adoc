@@ -58,7 +58,7 @@ Selezionato per impostazione predefinita.
 +
 Il database SQL Server utilizza Microsoft SQL Server Database Consistency Checker (DBCC) per verificare l'integrità fisica e logica degli oggetti nel database.
 
-... Selezionare *limita i controlli e ottieni i blocchi invece di utilizzare una copia Snapshot del database interno (TABLOCK)* per limitare i controlli e ottenere i blocchi invece di utilizzare una copia Snapshot del database interno.
+... Selezionare *limita i controlli e ottenere i blocchi invece di utilizzare una copia snapshot del database interno (TABLOCK)* per limitare i controlli e ottenere i blocchi invece di utilizzare un'istantanea del database interna.
 
 
 .. Nella sezione *Log Backup*, selezionare *Verify log backup upon completed* (verifica backup registro al completamento) per verificare il backup del registro al completamento.

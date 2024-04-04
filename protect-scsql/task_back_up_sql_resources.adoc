@@ -33,9 +33,9 @@ Nella vista della topologia, non è possibile distinguere se lo stato del backup
 
 
 
-. Nella pagina risorse, selezionare la casella di controllo *formato nome personalizzato per copia Snapshot*, quindi immettere un formato nome personalizzato da utilizzare per il nome della copia Snapshot.
+. Nella pagina risorse, selezionare la casella di controllo formato nome personalizzato per copia istantanea*, quindi immettere un formato nome personalizzato che si desidera utilizzare per il nome istantanea.
 +
-Ad esempio, customtext_policy_hostname o resource_hostname. Per impostazione predefinita, al nome della copia Snapshot viene aggiunto un indicatore data e ora.
+Ad esempio, customtext_policy_hostname o resource_hostname. Per impostazione predefinita, al nome dell'istantanea viene aggiunto un indicatore data e ora.
 
 . Nella pagina Criteri, eseguire le seguenti operazioni:
 +

@@ -36,7 +36,7 @@ Il valore della chiave può essere visualizzato da swagger attraverso l'API: API
 È possibile utilizzare L'API GET per visualizzare il valore della chiave. L'API SET non è supportata.
 
 * La maggior parte dei campi delle pagine della procedura guidata del ciclo di vita del clone sono esplicativi. Le seguenti informazioni descrivono i campi per i quali potrebbe essere necessaria una guida.
-* Per ONTAP 9.12.1 e versioni precedenti, se si specifica un periodo di blocco delle copie Snapshot, i cloni creati dalle copie Snapshot a prova di manomissione ereditano il tempo di scadenza SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
+* Per ONTAP 9.12.1 e versioni precedenti, se si specifica un periodo di blocco Snapshot, i cloni creati dagli Snapshot a prova di manomissione ereditano il tempo di scadenza SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
 
 
 .Fasi

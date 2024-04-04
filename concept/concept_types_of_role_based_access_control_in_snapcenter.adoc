@@ -57,7 +57,7 @@ Gli utenti devono fornire l'autenticazione durante l'accesso, tramite l'interfac
 
 SnapCenter utilizza le credenziali per verificare che gli utenti SnapCenter autorizzati dispongano anche delle autorizzazioni a livello di applicazione.
 
-Ad esempio, se si desidera eseguire operazioni di copia Snapshot e protezione dei dati in un ambiente SQL Server, è necessario impostare le credenziali con le credenziali Windows o SQL appropriate. Il server SnapCenter autentica il set di credenziali utilizzando uno dei due metodi. Se si desidera eseguire operazioni di copia Snapshot e protezione dei dati in un ambiente di file system Windows sullo storage ONTAP, il ruolo di amministratore di SnapCenter deve disporre dei privilegi di amministratore sull'host Windows.
+Ad esempio, se si desidera eseguire operazioni di snapshot e protezione dei dati in un ambiente SQL Server, è necessario impostare le credenziali con le credenziali Windows o SQL appropriate. Il server SnapCenter autentica il set di credenziali utilizzando uno dei due metodi. Per eseguire operazioni di Snapshot e data Protection in un ambiente file system Windows sullo storage ONTAP, il ruolo di amministratore SnapCenter deve disporre dei privilegi di amministratore sull'host Windows.
 
 Allo stesso modo, se si desidera eseguire operazioni di protezione dei dati su un database Oracle e se l'autenticazione del sistema operativo (OS) è disattivata nell'host del database, è necessario impostare le credenziali con il database Oracle o con le credenziali ASM Oracle. Il server SnapCenter autentica il set di credenziali utilizzando uno di questi metodi, a seconda dell'operazione.
 

@@ -47,9 +47,9 @@ I fattori che determinano il numero di backup necessari includono le dimensioni 
 
 == Convenzione di naming del backup per i file system Windows
 
-I backup del file system di Windows utilizzano la convenzione di denominazione predefinita per le copie Snapshot. La convenzione di denominazione predefinita per il backup aggiunge un indicatore data e ora ai nomi delle copie Snapshot che consente di identificare quando sono state create le copie.
+I backup dei file system di Windows utilizzano la convenzione di denominazione predefinita di Snapshot. La convenzione di denominazione predefinita dei backup aggiunge un indicatore data e ora ai nomi Snapshot che consente di identificare quando le copie sono state create.
 
-La copia Snapshot utilizza la seguente convenzione di denominazione predefinita: Resourcegroupname_hostname_timestamp
+L'istantanea utilizza la seguente convenzione di denominazione predefinita: Resourcegroupname_hostname_timestamp
 
 È necessario assegnare un nome logico ai gruppi di risorse di backup, come nell'esempio seguente:
 

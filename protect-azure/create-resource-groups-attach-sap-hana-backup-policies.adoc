@@ -41,7 +41,7 @@ Inserire una o più etichette per facilitare la ricerca del gruppo di risorse in
  a| 
 USA il formato nome personalizzato per la copia Snapshot
  a| 
-Selezionare questa casella di controllo e immettere un formato nome personalizzato da utilizzare per il nome della copia Snapshot.
+Selezionare questa casella di controllo e immettere un formato del nome personalizzato che si desidera utilizzare per il nome dell'istantanea.
 
 |===
 . Nella pagina risorse, selezionare un nome host dall'elenco a discesa *host* e il tipo di risorsa dall'elenco a discesa *tipo di risorsa*.

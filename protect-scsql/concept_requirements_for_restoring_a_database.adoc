@@ -34,7 +34,7 @@ Il ripristino di AG non riesce quando viene soddisfatta una delle seguenti condi
 https://support.microsoft.com/kb/2887595["Articolo di supporto Microsoft 2887595: Rollup degli aggiornamenti di Windows RT 8.1, Windows 8.1 e Windows Server 2012 R2: Novembre 2013"]
 
 * È necessario aver eseguito il backup dei gruppi di risorse o del database.
-* Se si stanno replicando le copie Snapshot in un mirror o vault, l'amministratore di SnapCenter deve aver assegnato le macchine virtuali di storage (SVM) per i volumi di origine e di destinazione.
+* Se si stanno replicando Snapshot in un mirror o un vault, l'amministratore della SnapCenter deve aver assegnato le Storage Virtual Machine (SVM) per entrambi i volumi di origine e di destinazione.
 +
 Per informazioni sulle modalità di assegnazione delle risorse agli utenti da parte degli amministratori, consultare le informazioni di installazione di SnapCenter.
 

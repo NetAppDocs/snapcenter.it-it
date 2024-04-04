@@ -2,7 +2,7 @@
 :allow-uri-read: 
 
 
-È possibile utilizzare il cmdlet Remove-SmBackup per eliminare il numero di backup per i backup secondari che non dispongono di copie Snapshot. È possibile utilizzare questo cmdlet quando le copie Snapshot totali visualizzate nella topologia Gestione copie non corrispondono all'impostazione di conservazione delle copie Snapshot dello storage secondario.
+È possibile utilizzare il cmdlet Remove-SmBackup per eliminare il conteggio dei backup per i backup secondari che non dispongono di snapshot. È possibile utilizzare questo cmdlet quando le istantanee totali visualizzate nella topologia Manage Copies (Gestisci copie) non corrispondono all'impostazione di conservazione Snapshot dello storage secondario.
 
 È necessario aver preparato l'ambiente PowerShell per eseguire i cmdlet PowerShell.
 
@@ -17,7 +17,7 @@ Open-SmConnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146/
 ----
 . Eliminare il numero di backup secondari utilizzando il parametro -CleanupSecondaryBackups.
 +
-Questo esempio elimina il numero di backup per i backup secondari senza copie Snapshot:
+Nell'esempio riportato di seguito viene eliminato il conteggio dei backup per i backup secondari senza istantanee:
 
 +
 [listing]

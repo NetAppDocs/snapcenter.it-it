@@ -87,7 +87,7 @@ Quiesce
  a| 
 Sì
  a| 
-Deve eseguire un quiesce sull'applicazione. Nella maggior parte dei casi, ciò significa mettere l'applicazione in uno stato in cui il server SnapCenter può creare un backup (ad esempio, una copia Snapshot).
+Deve eseguire un quiesce sull'applicazione. Nella maggior parte dei casi, ciò significa mettere l'applicazione in uno stato in cui il server SnapCenter può creare un backup (ad esempio, un'istantanea).
  a| 
 Prima che il server SnapCenter crei una copia Snapshot o esegua un backup in generale.
 
@@ -100,7 +100,8 @@ Sì
  a| 
 Deve eseguire un'operazione senza domande sull'applicazione. Nella maggior parte dei casi, ciò significa riportare l'applicazione in uno stato operativo normale.
  a| 
-Dopo che il server SnapCenter ha creato una copia Snapshot o ha eseguito un backup in generale.
+Dopo che il server SnapCenter ha creato un'istantanea o ne ha creato uno
+eseguito un backup in generale.
 
 
 

@@ -23,7 +23,7 @@ Prima di utilizzare SnapCenter per eseguire il backup delle risorse di database 
 .. Selezionare il tipo di backup.
 +
 ... Selezionare *Backup basato su file* se si desidera eseguire un controllo di integrità del database.
-... Selezionare *basato su snapshot* se si desidera creare un backup utilizzando la tecnologia di copia Snapshot.
+... Selezionare *basato su snapshot* se si desidera creare un backup utilizzando la tecnologia Snapshot.
 
 
 .. Specificare il tipo di pianificazione.

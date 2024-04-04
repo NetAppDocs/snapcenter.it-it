@@ -164,7 +164,7 @@ Quiesce
  a| 
 obbligatorio
  a| 
-Questo stub è responsabile dell'esecuzione di un quiesce, il che significa mettere l'applicazione in uno stato in cui è possibile creare una copia Snapshot. Questo viene chiamato prima dell'operazione di copia Snapshot. I metadati dell'applicazione da conservare devono essere impostati come parte della risposta, che verrà restituita durante le successive operazioni di clonazione o ripristino sulla copia Snapshot dello storage corrispondente sotto forma di parametri di configurazione.
+Questa stub è responsabile dell'esecuzione di una pausa, il che significa posizionare l'applicazione in uno stato in cui è possibile creare una snapshot. Questo viene chiamato prima dell'operazione istantanea. I metadati dell'applicazione da conservare devono essere impostati come parte della risposta, che verranno restituiti durante le operazioni di cloning o ripristino successive sul Snapshot di storage corrispondente sotto forma di parametri di configurazione.
 
 
 
@@ -173,7 +173,7 @@ Senza richieste
  a| 
 obbligatorio
  a| 
-Questo stub è responsabile dell'esecuzione di un'operazione senza oggetto, il che significa mettere l'applicazione in uno stato normale. Questa operazione viene richiamata dopo la creazione di una copia Snapshot.
+Questo stub è responsabile dell'esecuzione di un'operazione senza oggetto, il che significa mettere l'applicazione in uno stato normale. Questa operazione viene richiamata dopo la creazione di un'istantanea.
 
 
 

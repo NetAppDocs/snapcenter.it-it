@@ -20,8 +20,8 @@ Uno SLA definisce il livello di servizio previsto e risolve molti problemi relat
 . Stabilire quando eseguire il backup delle risorse.
 . Decidere il numero di processi di backup necessari.
 . Decidere come assegnare un nome ai backup.
-. Decidere se si desidera utilizzare copie Snapshot di gruppo di coerenza e scegliere le opzioni appropriate per l'eliminazione delle copie Snapshot di gruppo di coerenza.
+. Decidere se si desidera creare snapshot del gruppo di coerenza e decidere le opzioni appropriate per l'eliminazione degli snapshot del gruppo di coerenza.
 . Decidere se utilizzare la tecnologia NetApp SnapMirror per la replica o la tecnologia NetApp SnapVault per la conservazione a lungo termine.
-. Determinare il periodo di conservazione delle copie Snapshot sul sistema di storage di origine e sulla destinazione di SnapMirror.
+. Determina il periodo di conservazione per gli Snapshot sul sistema di storage di origine e sulla destinazione di SnapMirror.
 . Determinare se si desidera eseguire qualsiasi comando prima o dopo l'operazione di backup e fornire una prescrizione o postscript.
 

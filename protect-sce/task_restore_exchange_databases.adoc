@@ -16,7 +16,7 @@ summary: È possibile utilizzare SnapCenter per ripristinare i database Exchange
 .Prima di iniziare
 * È necessario aver eseguito il backup dei gruppi di risorse, del database o dei DAG (Database Availability Group).
 * Quando il database Exchange viene migrato in un'altra posizione, l'operazione di ripristino non funziona per i backup precedenti.
-* Se si stanno replicando le copie Snapshot in un mirror o vault, l'amministratore di SnapCenter deve aver assegnato le SVM sia per i volumi di origine che per i volumi di destinazione.
+* Se si stanno replicando Snapshot in un mirror o un vault, l'amministratore di SnapCenter deve aver assegnato le SVM sia per i volumi di origine che per quelli di destinazione.
 * In un DAG, se una copia del database attiva si trova su uno storage non NetApp e si desidera eseguire il ripristino dal backup passivo della copia del database presente su uno storage NetApp, eseguire la copia passiva (storage NetApp) come copia attiva, aggiornare le risorse ed eseguire l'operazione di ripristino.
 +
 Eseguire `Move-ActiveMailboxDatabase` per eseguire la copia passiva del database come copia attiva del database.
@@ -44,7 +44,7 @@ Il valore della chiave può essere visualizzato da swagger attraverso l'API: API
 +
 È possibile utilizzare L'API GET per visualizzare il valore della chiave. L'API SET non è supportata.
 
-* Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dalle copie Snapshot del vault di SnapLock come parte del ripristino ereditano il tempo di scadenza del vault di SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
+* Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dagli Snapshot del vault di SnapLock come parte del ripristino ereditano il tempo di scadenza del vault di SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
 
 
 .Fasi

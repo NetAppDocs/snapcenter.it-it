@@ -60,7 +60,7 @@ https://automationstore.netapp.com/home.shtml["Storage Automation Store di NetAp
 
 * Backup basati su policy
 +
-I backup basati su policy sfruttano la tecnologia di copia Snapshot di NetApp per creare backup rapidi, efficienti in termini di spazio, coerenti con le applicazioni e basati su disco. Facoltativamente, è possibile automatizzare la protezione di questi backup nello storage secondario mediante aggiornamenti alle relazioni di protezione esistenti.
+I backup basati su policy sfruttano la tecnologia NetApp Snapshot per creare backup rapidi, efficienti in termini di spazio, coerenti con l'applicazione e basati su disco. Facoltativamente, è possibile automatizzare la protezione di questi backup nello storage secondario mediante aggiornamenti alle relazioni di protezione esistenti.
 
 * Backup di più risorse
 +
@@ -316,7 +316,7 @@ Per gli utenti di SnapCenter 4.1.1, la documentazione del plug-in SnapCenter per
 
 * Abilita la protezione dei dati application-aware per altri plug-in in in esecuzione negli host Windows nell'ambiente SnapCenter
 * Automatizza le operazioni di backup, ripristino e clonazione application-aware per i file system Microsoft nel tuo ambiente SnapCenter
-* Supporta provisioning dello storage, coerenza delle copie Snapshot e recupero dello spazio per gli host Windows
+* Supporta provisioning dello storage, coerenza Snapshot e recupero dello spazio per host Windows
 +
 
 NOTE: Il plug-in per Windows fornisce condivisioni SMB e file system Windows su LUN fisici e RDM, ma non supporta operazioni di backup per file system Windows su condivisioni SMB.

@@ -55,7 +55,8 @@ quiesce
  a| 
 obbligatorio
  a| 
-Questo stub è responsabile dell'esecuzione di un quiesce. L'applicazione viene inserita in uno stato in cui è possibile creare una copia Snapshot. Questo viene chiamato prima dell'operazione di copia Snapshot dello storage.
+Questo stub è responsabile dell'esecuzione di un quiesce. Posiziona il
+Applicazione in uno stato in cui è possibile creare uno Snapshot. Questo viene chiamato prima dell'operazione di snapshot di storage.
 
 
 
@@ -64,7 +65,9 @@ non fare domande
  a| 
 obbligatorio
  a| 
-Questo stub è responsabile dell'esecuzione di una richiesta. Pone l'applicazione in uno stato normale. Questo viene chiamato dopo l'operazione di copia Snapshot dello storage.
+Questo stub è responsabile dell'esecuzione di una richiesta. È così
+l'applicazione in uno stato normale. Questo viene chiamato dopo lo storage
+Funzionamento istantanea.
 
 
 

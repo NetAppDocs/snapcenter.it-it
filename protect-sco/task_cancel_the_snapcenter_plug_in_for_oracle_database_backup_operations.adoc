@@ -17,7 +17,7 @@ Per annullare le operazioni di backup, è necessario accedere come amministrator
 
 *A proposito di questa attività*
 
-Quando si annulla un'operazione di backup, il server SnapCenter interrompe l'operazione e rimuove tutte le copie Snapshot dallo storage se il backup creato non è registrato con il server SnapCenter. Se il backup è già registrato con il server SnapCenter, non verrà eseguito il rollback della copia Snapshot già creata anche dopo l'attivazione dell'annullamento.
+Quando si annulla un'operazione di backup, il server SnapCenter interrompe l'operazione e rimuove tutte le istantanee dall'archivio se il backup creato non è registrato con il server SnapCenter. Se il backup è già registrato con il server SnapCenter, non verrà eseguito il rollback dell'istantanea già creata anche dopo l'attivazione dell'annullamento.
 
 * È possibile annullare solo il log o l'operazione di backup completo in coda o in esecuzione.
 * Non è possibile annullare l'operazione dopo l'avvio della verifica.

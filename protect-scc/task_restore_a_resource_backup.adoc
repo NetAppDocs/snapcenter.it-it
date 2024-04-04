@@ -15,13 +15,13 @@ summary: È possibile utilizzare SnapCenter per ripristinare le risorse. Le funz
 
 .Prima di iniziare
 * È necessario aver eseguito il backup delle risorse o dei gruppi di risorse.
-* L'amministratore di SnapCenter deve aver assegnato all'utente le macchine virtuali di storage (SVM) per i volumi di origine e di destinazione se si stanno replicando le copie Snapshot in un mirror o vault.
+* Se si replicano Snapshot in un mirror o un vault, l'amministratore di SnapCenter deve aver assegnato le Storage Virtual Machine (SVM) sia per i volumi di origine che per quelli di destinazione.
 * È necessario annullare qualsiasi operazione di backup attualmente in corso per la risorsa o il gruppo di risorse che si desidera ripristinare.
 
 
 .A proposito di questa attività
 * L'operazione di ripristino predefinita ripristina solo gli oggetti di storage. Le operazioni di ripristino a livello di applicazione possono essere eseguite solo se il plug-in personalizzato fornisce tale funzionalità.
-* Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dalle copie Snapshot del vault di SnapLock come parte del ripristino ereditano il tempo di scadenza del vault di SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
+* Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dagli Snapshot del vault di SnapLock come parte del ripristino ereditano il tempo di scadenza del vault di SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
 
 
 .Fasi
@@ -53,7 +53,7 @@ image::../media/restoring_resource.gif[ripristino delle risorse]
 +
 .. Se si seleziona *completa risorsa*, il backup delle risorse viene ripristinato.
 +
-Se la risorsa contiene volumi o qtree come Storage Footprint, le copie Snapshot più recenti su tali volumi o qtree vengono eliminate e non possono essere ripristinate. Inoltre, se un'altra risorsa è ospitata sugli stessi volumi o qtree, anche tale risorsa viene eliminata.
+Se la risorsa contiene volumi o qtree come Storage Footprint, snapshot più recenti su tali volumi o qtree vengono eliminati e non possono essere recuperati. Inoltre, se un'altra risorsa è ospitata sugli stessi volumi o qtree, anche tale risorsa viene eliminata.
 
 .. Se è stato selezionato *file Level*, è possibile selezionare *All* (tutto) oppure selezionare Volumes (volumi) o qtree (qtree), quindi immettere il percorso relativo ai volumi o alle qtree selezionati separati da virgole.
 +

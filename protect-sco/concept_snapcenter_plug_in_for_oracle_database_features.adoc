@@ -21,9 +21,9 @@ L'interfaccia SnapCenter offre standardizzazione e coerenza tra plug-in e ambien
 +
 È possibile pianificare operazioni di backup e clonazione, configurare la conservazione dei backup basata su policy ed eseguire operazioni di ripristino. Puoi anche monitorare in modo proattivo il tuo ambiente configurando SnapCenter per l'invio di avvisi e-mail.
 
-* Tecnologia di copia Snapshot di NetApp senza interruzioni
+* Tecnologia Snapshot di NetApp senza interruzioni
 +
-SnapCenter utilizza la tecnologia di copia Snapshot di NetApp con il plug-in per database Oracle e il plug-in per UNIX per eseguire il backup dei database. Le copie Snapshot occupano uno spazio di storage minimo.
+Per eseguire il backup dei database, SnapCenter utilizza la tecnologia Snapshot di NetApp con il plug-in per database e plug-in per UNIX. Le snapshot consumano una quantità minima di spazio storage.
 
 
 
@@ -45,7 +45,7 @@ Il plug-in per Oracle Database offre inoltre i seguenti vantaggi:
 * Verifica del backup automatica e senza interruzioni
 * Possibilità di eseguire più backup contemporaneamente su più host di database
 +
-In una singola operazione, le copie Snapshot vengono consolidate quando i database di un singolo host condividono lo stesso volume.
+In una singola operazione, le Snapshot vengono consolidate quando i database di un singolo host condividono lo stesso volume.
 
 * Supporto per infrastrutture fisiche e virtualizzate
 * Supporto per NFS, iSCSI, Fibre Channel (FC), RDM, VMDK su NFS e VMFS e ASM su NFS, SAN, RDM e VMDK

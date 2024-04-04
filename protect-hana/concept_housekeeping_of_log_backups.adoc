@@ -13,4 +13,4 @@ summary: 'SnapCenter gestisce la gestione dei backup di log e dati a livello di 
 [role="lead"]
 SnapCenter gestisce la gestione dei backup di log e dati a livello di sistema storage e file system e all'interno del catalogo di backup SAP HANA.
 
-Le copie Snapshot sullo storage primario o secondario e le relative voci nel catalogo SAP HANA vengono eliminate in base alle impostazioni di conservazione. Le voci del catalogo SAP HANA vengono eliminate anche durante il backup e l'eliminazione del gruppo di risorse.
+Le Snapshot sullo storage primario o secondario e le relative voci nel catalogo SAP HANA vengono eliminate in base alle impostazioni di conservazione. Le voci del catalogo SAP HANA vengono eliminate anche durante il backup e l'eliminazione del gruppo di risorse.

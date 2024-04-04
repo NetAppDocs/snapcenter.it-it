@@ -11,7 +11,7 @@ summary: È possibile utilizzare il plug-in SnapCenter per Microsoft Windows in 
 
 
 [role="lead"]
-È possibile utilizzare il plug-in SnapCenter per Microsoft Windows in ambienti VMware per creare e gestire LUN e copie Snapshot.
+È possibile utilizzare il plug-in SnapCenter per Microsoft Windows in ambienti VMware per creare e gestire LUN e Snapshot.
 
 
 

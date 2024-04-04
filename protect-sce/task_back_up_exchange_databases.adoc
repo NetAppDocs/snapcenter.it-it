@@ -49,9 +49,9 @@ Fare clic su *image:../media/filter_icon.png[""]*, quindi selezionare il nome ho
 ** Se si desidera eseguire il backup di un gruppo di disponibilità database, fare clic sul nome del gruppo di disponibilità database.
 
 
-. Se si desidera specificare un nome di copia Snapshot personalizzato, nella pagina risorse selezionare la casella di controllo *Usa formato nome personalizzato per copia Snapshot*, quindi immettere un formato nome personalizzato da utilizzare per il nome della copia Snapshot.
+. Se si desidera specificare un nome istantanea personalizzato, nella pagina risorse selezionare la casella di controllo *Usa formato nome personalizzato per copia istantanea*, quindi immettere un formato nome personalizzato che si desidera utilizzare per il nome istantanea.
 +
-Ad esempio, _customtext_policy_hostname_ o _resource_hostname_. Per impostazione predefinita, al nome della copia Snapshot viene aggiunto un indicatore data e ora.
+Ad esempio, _customtext_policy_hostname_ o _resource_hostname_. Per impostazione predefinita, al nome dell'istantanea viene aggiunto un indicatore data e ora.
 
 . Nella pagina Criteri, attenersi alla seguente procedura:
 +

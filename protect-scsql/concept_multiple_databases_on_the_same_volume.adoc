@@ -13,4 +13,4 @@ summary: 'È possibile inserire tutti i database nello stesso volume, poiché il
 [role="lead"]
 È possibile inserire tutti i database nello stesso volume, poiché il criterio di backup dispone di un'opzione per impostare il numero massimo di database per backup (il valore predefinito è 100).
 
-Ad esempio, se si dispone di 200 database nello stesso volume, vengono create due copie Snapshot con 100 database in ciascuna delle due copie Snapshot.
+Ad esempio, se nello stesso volume sono presenti 200 database, vengono creati due snapshot con 100 database in ciascuno dei due snapshot.

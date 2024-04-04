@@ -2,7 +2,7 @@
 permalink: protect-scw/task_clean_up_the_secondary_backup_count_using_powershell_cmdlets_for_windows.html 
 sidebar: sidebar 
 keywords: backups 
-summary: 'È possibile utilizzare il cmdlet Remove-SmBackup per eliminare il numero di backup per i backup secondari che non dispongono di copie Snapshot. È possibile utilizzare questo cmdlet quando le copie Snapshot totali visualizzate nella topologia Gestisci copie non corrispondono all"impostazione di conservazione delle copie Snapshot dello storage secondario.' 
+summary: 'È possibile utilizzare il cmdlet Remove-SmBackup per eliminare il conteggio dei backup per i backup secondari che non dispongono di istantanee. È possibile utilizzare questo cmdlet quando gli Snapshot totali visualizzati nella topologia Manage Copies (Gestisci copie) non corrispondono all"impostazione di conservazione Snapshot dello storage secondario.' 
 ---
 = Ripulire il numero di backup secondari utilizzando i cmdlet PowerShell
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'È possibile utilizzare il cmdlet Remove-SmBackup per eliminare il num
 
 
 [role="lead"]
-È possibile utilizzare il cmdlet Remove-SmBackup per eliminare il numero di backup per i backup secondari che non dispongono di copie Snapshot. È possibile utilizzare questo cmdlet quando le copie Snapshot totali visualizzate nella topologia Gestione copie non corrispondono all'impostazione di conservazione delle copie Snapshot dello storage secondario.
+È possibile utilizzare il cmdlet Remove-SmBackup per eliminare il conteggio dei backup per i backup secondari che non dispongono di snapshot. È possibile utilizzare questo cmdlet quando le istantanee totali visualizzate nella topologia Manage Copies (Gestisci copie) non corrispondono all'impostazione di conservazione Snapshot dello storage secondario.
 
 È necessario aver preparato l'ambiente PowerShell per eseguire i cmdlet PowerShell.
 
@@ -26,7 +26,7 @@ Open-SmConnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146/
 ----
 . Eliminare il numero di backup secondari utilizzando il parametro -CleanupSecondaryBackups.
 +
-Questo esempio elimina il numero di backup per i backup secondari senza copie Snapshot:
+Nell'esempio riportato di seguito viene eliminato il conteggio dei backup per i backup secondari senza istantanee:
 
 +
 [listing]

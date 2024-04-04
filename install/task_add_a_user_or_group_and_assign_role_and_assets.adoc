@@ -82,7 +82,7 @@ host
 +
 È necessario riassegnare l'utente o il gruppo RBAC al cluster o al DAG per includere il nuovo nodo all'utente o al gruppo RBAC. Ad esempio, si dispone di un cluster a due nodi ed è stato assegnato un utente o un gruppo RBAC al cluster. Quando si aggiunge un altro nodo al cluster, è necessario riassegnare l'utente o il gruppo RBAC al cluster per includere il nuovo nodo per l'utente o il gruppo RBAC.
 
-* Se si intende replicare le copie Snapshot, è necessario assegnare la connessione di storage per il volume di origine e di destinazione all'utente che esegue l'operazione.
+* Se si intende replicare le istantanee, è necessario assegnare la connessione di archiviazione per il volume di origine e di destinazione all'utente che esegue l'operazione.
 +
 Aggiungere le risorse prima di assegnare l'accesso agli utenti.
 

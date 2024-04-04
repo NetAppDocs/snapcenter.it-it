@@ -61,13 +61,13 @@ Se si desidera riprendere le operazioni sul gruppo di risorse attivato in modali
 
 *A proposito di questa attività*
 
-È necessario eliminare manualmente tutti i cloni creati per qualsiasi risorsa del gruppo di risorse. È possibile forzare l'eliminazione di tutti i backup, metadati, policy e copie Snapshot associati al gruppo di risorse.
+È necessario eliminare manualmente tutti i cloni creati per qualsiasi risorsa del gruppo di risorse. È possibile facoltativamente forzare l'eliminazione di tutti i backup, i metadati, le policy e gli Snapshot associati al gruppo di risorse.
 
 *Fasi*
 
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina Resources (risorse), selezionare *Resource Group* (Gruppo di risorse) dall'elenco *View* (Visualizza).
 . Selezionare il gruppo di risorse, quindi fare clic su *Elimina*.
-. Facoltativo: Selezionare la casella di controllo *Delete backups and scollega policy associate a questo gruppo di risorse* per rimuovere tutti i backup, i metadati, le policy e le copie Snapshot associate al gruppo di risorse.
+. Facoltativo: Selezionare la casella di controllo *Elimina backup e scollega criteri associati a questo gruppo di risorse* per rimuovere tutti i backup, i metadati, i criteri e le istantanee associati al gruppo di risorse.
 . Fare clic su *OK*.
 

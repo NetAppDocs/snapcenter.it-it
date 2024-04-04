@@ -23,4 +23,4 @@ I backup basati su file verificano l'integrità del database. È possibile piani
 
 == Backup basato su copia Snapshot
 
-I backup basati su copia Snapshot sfruttano la tecnologia di copia Snapshot di NetApp per creare copie online di sola lettura dei volumi su cui risiedono i database SAP HANA.
+I backup basati su copie Snapshot sfruttano la tecnologia NetApp Snapshot per creare copie online di sola lettura dei volumi su cui risiedono i database SAP HANA.

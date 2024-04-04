@@ -23,7 +23,7 @@ L'interfaccia SnapCenter offre standardizzazione e coerenza tra plug-in e ambien
 
 * *Tecnologia di copia Snapshot NetApp senza interruzioni*
 +
-SnapCenter utilizza la tecnologia di copia Snapshot di NetApp con il plug-in per il database SAP HANA per eseguire il backup delle risorse.
+SnapCenter utilizza la tecnologia Snapshot di NetApp con il plug-in per il database SAP HANA per eseguire il backup delle risorse.
 
 
 
@@ -38,12 +38,12 @@ L'utilizzo del plug-in per il database SAP HANA offre anche i seguenti vantaggi:
 +
 È necessaria una licenza FlexClone sul sistema storage in cui si desidera creare il clone.
 
-* Supporto per la funzione di copia Snapshot del gruppo di coerenza (CG) di ONTAP durante la creazione dei backup.
+* Supporto della funzionalità di snapshot del gruppo di coerenza (CG) di ONTAP durante la creazione dei backup.
 * Possibilità di eseguire più backup contemporaneamente su più host di risorse
 +
-In una singola operazione, le copie Snapshot vengono consolidate quando le risorse di un singolo host condividono lo stesso volume.
+In una singola operazione, le Snapshot vengono consolidate quando le risorse di un singolo host condividono lo stesso volume.
 
-* Possibilità di creare copie Snapshot utilizzando comandi esterni.
+* Possibilità di creare snapshot utilizzando comandi esterni.
 * Supporto per il backup basato su file.
 * Supporto per Linux LVM su file system XFS.
 

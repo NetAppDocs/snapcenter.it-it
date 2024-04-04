@@ -2,7 +2,7 @@
 permalink: protect-scw/concept_snapcenter_plug_in_for_windows_features.html 
 sidebar: sidebar 
 keywords: SnapCenter 
-summary: 'Il plug-in per Windows si integra con la tecnologia di copia Snapshot di NetApp sul sistema storage. Per utilizzare il plug-in per Windows, utilizzare l"interfaccia SnapCenter.' 
+summary: 'Il plug-in per Windows si integra con la tecnologia Snapshot di NetApp nel sistema di storage. Per utilizzare il plug-in per Windows, utilizzare l"interfaccia SnapCenter.' 
 ---
 = Funzionalità del plug-in SnapCenter per Windows
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Il plug-in per Windows si integra con la tecnologia di copia Snapshot 
 
 
 [role="lead"]
-Il plug-in per Windows si integra con la tecnologia di copia Snapshot di NetApp sul sistema storage. Per utilizzare il plug-in per Windows, utilizzare l'interfaccia SnapCenter.
+Il plug-in per Windows si integra con la tecnologia Snapshot di NetApp nel sistema di storage. Per utilizzare il plug-in per Windows, utilizzare l'interfaccia SnapCenter.
 
 Il plug-in per Windows include le seguenti funzionalità principali:
 
@@ -23,9 +23,9 @@ L'interfaccia SnapCenter offre standardizzazione e coerenza tra plug-in e ambien
 +
 È possibile pianificare backup di routine del file system, configurare la conservazione dei backup basata su policy e impostare le operazioni di ripristino. È inoltre possibile monitorare in modo proattivo l'ambiente del file system configurando SnapCenter per l'invio di avvisi e-mail.
 
-* *Tecnologia di copia Snapshot NetApp senza interruzioni*
+* *Tecnologia istantanea NetApp senza interruzioni*
 +
-Il plug-in per Windows utilizza la tecnologia di copia Snapshot di NetApp. In questo modo, è possibile eseguire il backup dei file system in pochi secondi e ripristinarli rapidamente senza interrompere la linea dell'host. Le copie Snapshot occupano uno spazio di storage minimo.
+Il plug-in per Windows utilizza la tecnologia Snapshot di NetApp. In questo modo, è possibile eseguire il backup dei file system in pochi secondi e ripristinarli rapidamente senza interrompere la linea dell'host. Le snapshot consumano una quantità minima di spazio storage.
 
 
 

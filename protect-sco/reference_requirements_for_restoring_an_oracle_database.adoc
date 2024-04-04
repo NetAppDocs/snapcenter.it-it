@@ -14,7 +14,7 @@ summary: Prima di ripristinare un database Oracle, assicurarsi che i prerequisit
 Prima di ripristinare un database Oracle, assicurarsi che i prerequisiti siano stati completati.
 
 * La strategia di ripristino e ripristino dovrebbe essere stata definita.
-* L'amministratore di SnapCenter dovrebbe aver assegnato le macchine virtuali di storage (SVM) per i volumi di origine e di destinazione se si stanno replicando le copie Snapshot in un mirror o vault.
+* L'amministratore di SnapCenter deve aver assegnato le Storage Virtual Machine (SVM) sia per i volumi di origine che per i volumi di destinazione, se si replicano Snapshot in un mirror o un vault.
 * Se i log di archiviazione vengono annullati come parte del backup, è necessario montare manualmente i backup del log di archiviazione richiesti.
 * Se si desidera ripristinare i database Oracle che risiedono su un Virtual Machine Disk (VMDK), assicurarsi che la macchina guest disponga del numero richiesto di slot liberi per allocare i VMDK clonati.
 * È necessario garantire che tutti i volumi di dati e i volumi di log di archiviazione appartenenti al database siano protetti se è attivata la protezione secondaria per tale database.

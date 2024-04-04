@@ -91,7 +91,7 @@ Il database SQL Server utilizza Microsoft SQL Server Database Consistency Checke
 
 NOTE: Selezionare questa opzione per ridurre il tempo di esecuzione.
 
-** Selezionare l'opzione **TABLOCK** per limitare i controlli e ottenere i blocchi invece di utilizzare una copia Snapshot del database interno.
+** Selezionare l'opzione **TABLOCK** per limitare i controlli e ottenere i blocchi invece di utilizzare un'istantanea del database interna.
 
 
 |===

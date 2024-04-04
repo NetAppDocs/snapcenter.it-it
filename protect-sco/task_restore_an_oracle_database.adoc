@@ -19,7 +19,8 @@ Se il plug-in è stato installato come utente non root, è necessario assegnare 
 
 *A proposito di questa attività*
 
-* Il ripristino viene eseguito utilizzando i registri di archiviazione disponibili nella posizione del registro di archiviazione configurata. Se il database viene eseguito in modalità ARCHIVELOG, il database Oracle salva i gruppi pieni di file di log di ripristino in una o più destinazioni offline, denominate collettivamente log di ripristino archiviato. SnapCenter identifica e monta il numero ottimale di backup dei log in base all'opzione SCN specificata, data e ora selezionate o tutti i log. Se i registri di archiviazione richiesti per il ripristino non sono disponibili nella posizione configurata, montare la copia Snapshot contenente i registri e specificare il percorso come registri di archiviazione esterni.
+* Il ripristino viene eseguito utilizzando i registri di archiviazione disponibili nella posizione del registro di archiviazione configurata. Se il database viene eseguito in modalità ARCHIVELOG, il database Oracle salva i gruppi pieni di file di log di ripristino in una o più destinazioni offline, denominate collettivamente log di ripristino archiviato. SnapCenter identifica e monta il numero ottimale di backup dei log in base all'opzione SCN specificata, data e ora selezionate o tutti i log.
+Se i log di archivio richiesti per il ripristino non sono disponibili nella posizione configurata, è necessario montare l'istantanea contenente i log e specificare il percorso come log di archivio esterni.
 +
 Se si esegue la migrazione del database ASM da ASMLIB ad ASMFD, i backup creati con ASMLIB non possono essere utilizzati per ripristinare il database. È necessario creare backup nella configurazione ASMFD e utilizzarli per il ripristino. Analogamente, se il database ASM viene migrato da ASMFD ad ASMLIB, è necessario creare i backup nella configurazione ASMLIB per il ripristino.
 
@@ -30,7 +31,7 @@ Quando si ripristina un database, viene creato un file di blocco operativo (.SM_
 
 NOTE: Il ripristino del file SPFILE e Password non è supportato.
 
-* Per le policy abilitate per SnapLock, per ONTAP 9.12.1 e versioni successive, se si specifica un periodo di blocco delle copie Snapshot, i cloni creati dalle copie Snapshot a prova di manomissione come parte del ripristino ereditano il tempo di scadenza SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
+* Per i criteri abilitati per SnapLock, per ONTAP 9.12.1 e versioni precedenti, se si specifica un periodo di blocco Snapshot, i cloni creati dagli Snapshot a prova di manomissione come parte del ripristino ereditano il tempo di scadenza SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
 
 
 *Fasi*
