@@ -8298,14 +8298,6 @@ Le informazioni relative ai parametri che possono essere utilizzati con il coman
   <block id="40b141d81ebc81d0277454ddd95983be" category="paragraph">Dopo il backup su richiesta, facendo clic sul pulsante *Refresh* (Aggiorna) vengono aggiornati i dettagli del backup o della clonazione.</block>
   <block id="e3eb3098d9512640ba3691ccfbed50f5" category="paragraph">È inoltre possibile utilizzare i cmdlet PowerShell manualmente o negli script per eseguire operazioni di backup, ripristino e clonazione. Per informazioni dettagliate sui cmdlet di PowerShell, consultare la guida in linea del cmdlet di SnapCenter o la<block ref="b70cb1971d6e57b9289aed553ef357cb" category="inline-link-rx"></block></block>
   <block id="f1472e722e81a79d38810332425a4e76" category="paragraph">È inoltre possibile utilizzare i cmdlet PowerShell manualmente o negli script per eseguire operazioni di backup, ripristino e clonazione. Per informazioni sui cmdlet PowerShell, consultare la guida in linea del cmdlet di SnapCenter o la<block ref="b70cb1971d6e57b9289aed553ef357cb" category="inline-link-rx"></block>.</block>
-  <block id="5145b2adfb55517e007962efd2a08be6" category="paragraph">permalink: protect-scu/task_split_a_clone.html
-barra laterale: barra laterale
-parole chiave: clone split, SnapCenter
-riepilogo: "È possibile utilizzare SnapCenter per suddividere una risorsa clonata dalla risorsa principale. Il clone suddiviso diventa indipendente dalla risorsa padre".
----
-= Dividi un clone
-:icone: carattere
-:imagesdir: ../media/</block>
   <block id="e9b924bbf420ab11fb241e13f75a92c1" category="summary">Dopo aver installato il plug-in per i file system Unix, i file system sull'host vengono automaticamente rilevati e visualizzati nella pagina risorse.</block>
   <block id="5f6bb3736007978d5604be7df99325f8" category="doc">Individuare i file system UNIX disponibili per il backup</block>
   <block id="c94588b5932cbd964b99829c9c53f185" category="paragraph">Dopo aver installato il plug-in, tutti i file system su quell'host vengono automaticamente rilevati e visualizzati nella pagina risorse. È possibile aggiungere questi file system ai gruppi di risorse per eseguire operazioni di protezione dei dati.</block>
@@ -9074,4 +9066,7 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="bf971f3c72b83a1aac6d9fe1cb39850c" category="admonition">Non è possibile rinominare o eliminare i backup presenti nello storage secondario. L'eliminazione delle istantanee viene gestita dalle impostazioni di conservazione di ONTAP.</block>
   <block id="eb71c7e77b1cb5486117cdac9d378fb6" category="list-text">Se si desidera specificare un nome istantanea personalizzato, nella pagina risorse selezionare la casella di controllo *Usa formato nome personalizzato per copia istantanea*, quindi immettere un formato nome personalizzato che si desidera utilizzare per il nome istantanea.</block>
   <block id="2457e427df18c87448fa7fa796d115c7" category="paragraph">Il backup delle cassette postali Exchange mediante SnapCenter richiede la scelta del tipo di risorsa, ad esempio database e gruppi di disponibilità database (DAG). La tecnologia Snapshot viene sfruttata per creare copie online di sola lettura dei volumi in cui risiedono le risorse.</block>
+  <block id="495685c9e0a33087f4a235b8fe0d5e1c" category="section-title">Rimuovere la protezione</block>
+  <block id="d315d492e2b430b33a4c4cd7b63eda74" category="paragraph">Rimuovi protezione elimina tutti i backup e scollega tutti i criteri. Prima di rimuovere la protezione, è necessario assicurarsi che i backup non siano montati e che nessun clone sia associato al backup.</block>
+  <block id="58184ed57b20efbfac17064f1bc0e4f4" category="list-text">Selezionare il backup e fare clic su *Rimuovi protezione*.</block>
 </blocks>

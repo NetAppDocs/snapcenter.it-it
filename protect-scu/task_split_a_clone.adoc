@@ -1,16 +1,14 @@
-= 
-:allow-uri-read: 
-
-
---
-permalink: protect-scu/task_split_a_clone.html
-barra laterale: barra laterale
-parole chiave: clone split, SnapCenter
-riepilogo: "È possibile utilizzare SnapCenter per suddividere una risorsa clonata dalla risorsa principale. Il clone suddiviso diventa indipendente dalla risorsa padre".
 ---
-= Dividi un clone
-:icone: carattere
+permalink: protect-scu/task_split_a_clone.html 
+sidebar: sidebar 
+keywords: split clone, snapcenter 
+summary: È possibile utilizzare SnapCenter per separare una risorsa clonata dalla risorsa principale. Il clone diviso diventa indipendente dalla risorsa padre. 
+---
+= Separare un clone
+:allow-uri-read: 
+:icons: font
 :imagesdir: ../media/
+
 
 [role="lead"]
 È possibile utilizzare SnapCenter per separare una risorsa clonata dalla risorsa principale. Il clone diviso diventa indipendente dalla risorsa padre.
@@ -77,5 +75,3 @@ L'operazione di avvio del clone split non riesce se sono in corso operazioni di 
 
 .Informazioni correlate
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_clone_or_verfication_fails_with_aggregate_does_not_exist["Il clone o la verifica di SnapCenter non riesce e l'aggregato non esiste"]
-
---

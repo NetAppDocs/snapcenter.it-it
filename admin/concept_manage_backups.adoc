@@ -76,3 +76,20 @@ NOTE: Se l'ultimo backup rimanente viene eliminato, le voci del catalogo HANA as
 NOTE: Se si dispone di backup di database obsoleti in SnapCenter che non dispongono di backup corrispondenti sul sistema di storage, è necessario utilizzare il comando remove-smbackup per ripulire queste voci di backup obsolete. Se i backup obsoleti sono stati catalogati, verranno discatalogati dal database del catalogo di ripristino.
 
 
+
+
+
+== Rimuovere la protezione
+
+Rimuovi protezione elimina tutti i backup e scollega tutti i criteri. Prima di rimuovere la protezione, è necessario assicurarsi che i backup non siano montati e che nessun clone sia associato al backup.
+
+*Fasi*
+
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina risorse, selezionare la risorsa o il gruppo di risorse dall'elenco a discesa *Visualizza*.
+. Selezionare la risorsa o il gruppo di risorse dall'elenco.
++
+Viene visualizzata la pagina della topologia di risorse o gruppi di risorse.
+
+. Selezionare il backup e fare clic su *Rimuovi protezione*.
+
