@@ -197,7 +197,7 @@ NOTE: Il plug-in SnapCenter per UNIX, che fa parte del pacchetto plug-in SnapCen
  a| 
 Sistemi operativi
  a| 
-AIX 6.1 o versione successiva
+AIX 7,1 o versione successiva
 
 
 
