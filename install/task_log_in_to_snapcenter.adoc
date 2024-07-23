@@ -16,6 +16,7 @@ SnapCenter supporta il RBAC (role-based access control). L'amministratore di Sna
 .Prima di iniziare
 * Attivare il servizio di attivazione del processo Windows (WAS) in Windows Server Manager.
 * Se si desidera utilizzare Internet Explorer come browser per accedere al server SnapCenter, assicurarsi che la modalità protetta sia disattivata.
+* Se il server SnapCenter è installato sull'host Linux, è necessario accedere utilizzando l'account utente utilizzato per installare il server SnapCenter.
 
 
 *A proposito di questa attività*
@@ -34,7 +35,7 @@ L'URL GUI predefinito è una connessione sicura alla porta predefinita 8146 sul 
 
 Per l'implementazione ad alta disponibilità (ha), è necessario accedere a SnapCenter utilizzando l'IP del cluster virtuale _ https://Virtual_Cluster_IP_or_FQDN:8146_. Se l'interfaccia utente di SnapCenter non viene visualizzata quando si passa a _ https://Virtual_Cluster_IP_or_FQDN:8146_ in Internet Explorer (IE), è necessario aggiungere l'indirizzo IP del cluster virtuale o l'FQDN come sito attendibile in IE su ciascun host plug-in oppure disattivare la protezione avanzata IE su ciascun host plug-in. Per ulteriori informazioni, vedere https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_access_cluster_IP_address_from_outside_network["Impossibile accedere all'indirizzo IP del cluster dall'esterno della rete"^].
 
-Oltre a utilizzare l'interfaccia grafica di SnapCenter, è possibile utilizzare i cmdlet PowerShell per creare script per eseguire operazioni di configurazione, backup e ripristino. Alcuni cmdlet potrebbero essere stati modificati con ogni release di SnapCenter. Il https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["Guida di riferimento al cmdlet del software SnapCenter"^] contiene i dettagli.
+Oltre a utilizzare l'interfaccia grafica di SnapCenter, è possibile utilizzare i cmdlet PowerShell per creare script per eseguire operazioni di configurazione, backup e ripristino. Alcuni cmdlet potrebbero essere stati modificati con ogni release di SnapCenter. La https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guida di riferimento al cmdlet del software SnapCenter"^] contiene i dettagli.
 
 
 NOTE: Se si effettua l'accesso a SnapCenter per la prima volta, è necessario effettuare l'accesso utilizzando le credenziali fornite durante il processo di installazione.
@@ -83,7 +84,11 @@ Se la registrazione non riesce e viene visualizzato l'errore che indica che il s
 
 Dopo aver effettuato l'accesso al server SnapCenter come utente RBAC per la prima volta, aggiornare l'elenco delle risorse.
 
-Se si desidera che SnapCenter supporti domini Active Directory non attendibili, è necessario registrarli con SnapCenter prima di configurare i ruoli per gli utenti su domini non attendibili. link:../install/task_register_untrusted_active_directory_domains.html["Scopri di più"^]
+Se si desidera che SnapCenter supporti domini Active Directory non attendibili, è necessario registrarli con SnapCenter prima di configurare i ruoli per gli utenti su domini non attendibili. link:../install/task_register_untrusted_active_directory_domains.html["Scopri di più"^].
+
+Se si desidera aggiungere l'host plug-in in SnapCenter in esecuzione su host Linux, è necessario ottenere il file checksum dal percorso: _/opt/NetApp/snapcenter/SnapManagerWeb/Repository_.
+
+A partire dalla versione 6,0, sul desktop viene creato un collegamento per SnapCenter PowerShell. Puoi accedere direttamente ai cmdlet di SnapCenter PowerShell utilizzando il collegamento.
 
 
 
@@ -92,11 +97,7 @@ Se si desidera che SnapCenter supporti domini Active Directory non attendibili, 
 Il server SnapCenter supporta MFA per l'account di dominio, che fa parte di Active Directory.
 
 .Prima di iniziare
-* Dovrebbe essere stata attivata l'autenticazione MFA.
-+
-Per informazioni su come attivare MFA, vedere link:../install/enable_multifactor_authentication.html["Abilitare l'autenticazione a più fattori"]
-
-
+Dovrebbe essere stata attivata l'autenticazione MFA. Per informazioni su come attivare l'MFA, vedere link:../install/enable_multifactor_authentication.html["Abilitare l'autenticazione a più fattori"]
 
 *A proposito di questa attività*
 

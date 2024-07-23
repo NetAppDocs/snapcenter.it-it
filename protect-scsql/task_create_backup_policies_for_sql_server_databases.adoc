@@ -26,7 +26,7 @@ Per informazioni sulle modalità di assegnazione delle risorse agli utenti da pa
 +
 Il valore predefinito è false.
 
-* Per SnapMirror Business Continuity (SM-BC), per ulteriori informazioni sui prerequisiti e sulle limitazioni, fare riferimento a. https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["Limiti a oggetti per la business continuity di SnapMirror"].
+* Esaminare i prerequisiti e i limiti specifici della sincronizzazione attiva di SnapMirror. Per informazioni, fare riferimento a https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["Limiti degli oggetti per la sincronizzazione attiva di SnapMirror"].
 
 
 .A proposito di questa attività
@@ -273,7 +273,7 @@ Aggiornare SnapMirror dopo aver creato una copia Snapshot locale.
 
 . Selezionare questa opzione per creare copie mirror dei set di backup su un altro volume (SnapMirror).
 +
-Questa opzione deve essere abilitata per SnapMirror Business Continuity (SM-BC) o per SnapMirror Sync (SM-S).
+Questa opzione deve essere abilitata per la sincronizzazione attiva di SnapMirror.
 
 +
 Durante la replica secondaria, il tempo di scadenza del SnapLock carica il tempo di scadenza del SnapLock primario. Fare clic sul pulsante *Aggiorna* nella pagina topologia per aggiornare il tempo di scadenza SnapLock secondario e primario recuperato da ONTAP.

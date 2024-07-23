@@ -16,7 +16,7 @@ Prima di utilizzare il plug-in SnapCenter per il database SAP HANA, l'amministra
 * Installare e configurare il server SnapCenter.
 * Accedere al server SnapCenter.
 * Configurare l'ambiente SnapCenter aggiungendo connessioni al sistema di storage e creando credenziali, se applicabili.
-* Installare Java 1.7 o Java 1.8 sull'host Linux o Windows.
+* Installare Java 11 sull'host Linux o Windows.
 +
 È necessario impostare il percorso Java nella variabile di percorso ambientale del computer host.
 

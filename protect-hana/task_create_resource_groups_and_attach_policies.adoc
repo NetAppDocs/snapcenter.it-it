@@ -16,6 +16,8 @@ Un gruppo di risorse è il container al quale è necessario aggiungere risorse d
 .A proposito di questa attività
 * Per creare backup di replica del sistema SAP HANA, si consiglia di aggiungere tutte le risorse del sistema SAP HANA in un unico gruppo di risorse. Ciò garantisce un backup perfetto durante la modalità takeover-failback.
 * Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dagli Snapshot del vault di SnapLock come parte del ripristino ereditano il tempo di scadenza del vault di SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
+* L'aggiunta di nuovi database senza la sincronizzazione attiva di SnapMirror a un gruppo di risorse esistente che contiene risorse con la sincronizzazione attiva di SnapMirror non è supportata.
+* L'aggiunta di nuovi database a un gruppo di risorse esistente in modalità di failover della sincronizzazione attiva SnapMirror non è supportata. È possibile aggiungere risorse al gruppo di risorse solo in stato normale o di failback.
 
 
 .Fasi

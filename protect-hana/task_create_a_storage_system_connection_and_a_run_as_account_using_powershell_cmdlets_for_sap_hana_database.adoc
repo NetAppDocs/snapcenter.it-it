@@ -37,8 +37,7 @@ PS C:\> Open-SmStorageConnection
 +
 [listing]
 ----
-PS C:\> Add-SmStorageConnection -Storage test_vs1 -Protocol Https
--Timeout 60
+PS C:\> Add-SmStorageConnection -StorageType DataOntap -Type DataOntap -OntapStorage ‘scsnfssvm’ -Protocol Https -Timeout 60
 ----
 . Creare una nuova credenziale utilizzando il cmdlet Add-SmCredential.
 +
@@ -92,4 +91,4 @@ Set-SmConfigSettings -Plugin -HostName scs-hana.gdl.englab.netapp.com -PluginCod
 ----
 
 
-Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento alla https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["Guida di riferimento al cmdlet del software SnapCenter"^].
+Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento anche a https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guida di riferimento al cmdlet del software SnapCenter"^].

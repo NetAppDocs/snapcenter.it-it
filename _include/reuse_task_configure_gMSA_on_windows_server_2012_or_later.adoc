@@ -2,11 +2,11 @@
 :allow-uri-read: 
 
 
-Windows Server 2012 o versione successiva consente di creare un account di servizio gestito di gruppo (gMSA) che fornisce la gestione automatica delle password dell'account di servizio da un account di dominio gestito.
+Windows Server 2016 o versione successiva consente di creare un account di servizio gestito di gruppo (gMSA) che fornisce la gestione automatica delle password dell'account di servizio da un account di dominio gestito.
 
 .Prima di iniziare
-* È necessario disporre di un controller di dominio Windows Server 2012 o versione successiva.
-* È necessario disporre di un host Windows Server 2012 o versione successiva, membro del dominio.
+* È necessario disporre di un controller di dominio Windows Server 2016 o versione successiva.
+* È necessario disporre di un host Windows Server 2016 o versione successiva, membro del dominio.
 
 
 .Fasi

@@ -17,6 +17,7 @@ summary: 'È possibile ripristinare un database Exchange Server di cui è stato 
 
 .A proposito di questa attività
 * Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dagli Snapshot del vault di SnapLock come parte del ripristino ereditano il tempo di scadenza del vault di SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
+* Per l'operazione di ripristino della sincronizzazione attiva di SnapMirror, devi selezionare il backup dalla posizione principale.
 
 
 .Fasi

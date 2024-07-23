@@ -1,0 +1,22 @@
+---
+permalink: protect-mysql/restore-mysql.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for MySQL 
+summary: 'Il flusso di lavoro di ripristino e ripristino include la pianificazione, l"esecuzione delle operazioni di ripristino e il monitoraggio delle operazioni.' 
+---
+= Ripristinare il flusso di lavoro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il flusso di lavoro di ripristino e ripristino include la pianificazione, l'esecuzione delle operazioni di ripristino e il monitoraggio delle operazioni.
+
+Il seguente flusso di lavoro mostra la sequenza in cui è necessario eseguire l'operazione di ripristino:
+
+image::../media/restore_workflow.gif[Ripristinare il flusso di lavoro]
+
+È inoltre possibile utilizzare i cmdlet PowerShell manualmente o negli script per eseguire operazioni di backup, ripristino e clonazione. La guida in linea del cmdlet di SnapCenter e le informazioni di riferimento del cmdlet contengono informazioni dettagliate sui cmdlet di PowerShell.
+
+https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guida di riferimento al cmdlet del software SnapCenter"^].

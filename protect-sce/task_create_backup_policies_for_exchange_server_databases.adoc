@@ -23,8 +23,9 @@ Per ulteriori informazioni, vedere la sezione relativa alla definizione di una s
 * Se si stanno replicando Snapshot in un mirror o un vault, l'amministratore della SnapCenter deve aver assegnato le Storage Virtual Machine (SVM) per entrambi i volumi di origine e di destinazione.
 * Se si desidera eseguire gli script PowerShell in prescripts e postscripts, è necessario impostare il valore di `usePowershellProcessforScripts` parametro su true in `web.config` file.
 +
-Il valore predefinito è false
+Il valore predefinito è false.
 
+* Esaminare i prerequisiti e i limiti specifici della sincronizzazione attiva di SnapMirror. Per informazioni, fare riferimento a https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["Limiti degli oggetti per la sincronizzazione attiva di SnapMirror"].
 
 
 .A proposito di questa attività
@@ -250,8 +251,7 @@ Il periodo di conservazione di SnapLock deve essere inferiore a 100 anni.
 
 |===
 +
-
-NOTE: Se si dispone di un database con solo backup di log e nessun backup completo su un host in una configurazione DAG, i backup di log vengono conservati nei seguenti modi:
+Se si dispone di un database con solo backup di log e nessun backup completo su un host in una configurazione DAG, i backup di log vengono conservati nei seguenti modi:
 
 +
 *** Per impostazione predefinita, SnapCenter trova il backup completo più vecchio per questo database in tutti gli altri host del DAG ed elimina tutti i backup del registro su questo host che sono stati eseguiti prima del backup completo.
@@ -273,14 +273,19 @@ Nell'esempio, il valore 10 significa che si mantengono fino a 10 backup del log 
 
  a| 
 Update SnapMirror dopo la creazione di una snapshot locale
+ a| 
+Selezionare questa opzione per conservare le copie mirror dei set di backup su un altro volume (SnapMirror).
 
 Durante la replica secondaria, il tempo di scadenza del SnapLock carica il tempo di scadenza del SnapLock primario.
+
+Questa opzione deve essere abilitata per la sincronizzazione attiva di SnapMirror.
+
+
+IMPORTANT: Non è possibile utilizzare la policy solo primaria se la sincronizzazione attiva SnapMirror è configurata per i volumi Exchange ONTAP. SnapCenter non permette questo. È necessario attivare l'opzione "speculare".
 
 Fare clic sul pulsante *Aggiorna* nella pagina topologia per aggiornare il tempo di scadenza SnapLock secondario e primario recuperato da ONTAP.
 
 Vedere link:..protect-sce/task_view_exchange_backups_in_the_topology_page.html["Visualizzare i backup di Exchange nella pagina topologia"].
- a| 
-Selezionare questa opzione per conservare le copie mirror dei set di backup su un altro volume (SnapMirror).
 
 
 

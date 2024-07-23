@@ -11,7 +11,7 @@ Il ripristino di un backup delle risorse include l'avvio di una sessione di conn
 +
 [listing]
 ----
-Open-smconnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146/
+PS C:\> Open-Smconnection
 ----
 . Recuperare le informazioni relative a uno o più backup che si desidera ripristinare utilizzando i cmdlet Get-SmBackup e Get-SmBackupReport.
 +
@@ -20,7 +20,7 @@ Questo esempio mostra informazioni su tutti i backup disponibili:
 +
 [listing]
 ----
- C:\PS>PS C:\> Get-SmBackup
+PS C:\> Get-SmBackup
 
 BackupId                      BackupName                    BackupTime                    BackupType
 --------                      ----------                    ----------                    ----------
@@ -95,4 +95,4 @@ PluginName          :
 ----
 
 
-Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento alla https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["Guida di riferimento al cmdlet del software SnapCenter"^].
+Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento anche a https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guida di riferimento al cmdlet del software SnapCenter"^].

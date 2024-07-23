@@ -20,7 +20,7 @@ Se si desidera installare il plug-in SnapCenter per Microsoft Windows su più ho
 . Sull'host del server SnapCenter, stabilire una sessione utilizzando `Open-SmConnection` cmdlet, quindi immettere le credenziali.
 . Aggiungere l'host standalone o il cluster a SnapCenter utilizzando `Add-SmHost` cmdlet e i parametri richiesti.
 +
-Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento alla https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["Guida di riferimento al cmdlet del software SnapCenter"^].
+Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento anche a https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guida di riferimento al cmdlet del software SnapCenter"^].
 
 . Installare il plug-in su più host utilizzando `Install-SmHostPackage` cmdlet e i parametri richiesti.
 +

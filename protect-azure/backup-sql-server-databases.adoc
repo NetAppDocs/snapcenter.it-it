@@ -13,6 +13,9 @@ summary: Eseguire il backup della risorsa dalla pagina risorse.
 [role="lead"]
 Se una risorsa non fa ancora parte di un gruppo di risorse, è possibile eseguire il backup della risorsa dalla pagina risorse.
 
+.Prima di iniziare
+È necessario creare un bilanciatore del carico, se il cluster di failover di Azure Windows non ha un IP del cluster assegnato o se non è raggiungibile da SnapCenter. L'IP del bilanciamento del carico deve essere configurato e raggiungibile dal server SnapCenter.
+
 .Fasi
 . Nel riquadro di spostamento di sinistra, selezionare *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina risorsa, selezionare *Database*, *istanza* o *Gruppo disponibilità* dall'elenco a discesa Visualizza.

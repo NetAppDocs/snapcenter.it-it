@@ -1,0 +1,122 @@
+---
+permalink: protect-postgresql/restore-and-recover-an-auto-discovered-cluster-backup.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for postgresql 
+summary: È possibile utilizzare SnapCenter per ripristinare e ripristinare i dati da uno o più backup. 
+---
+= Ripristino e ripristino di un backup del cluster rilevato automaticamente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare SnapCenter per ripristinare e ripristinare i dati da uno o più backup.
+
+.Prima di iniziare
+* È necessario aver eseguito il backup delle risorse o dei gruppi di risorse.
+* È necessario annullare qualsiasi operazione di backup attualmente in corso per la risorsa o il gruppo di risorse che si desidera ripristinare.
+* Per i comandi di pre-restore, post-restore, mount e unmount, controllare se i comandi esistono nell'elenco dei comandi disponibile sull'host del plug-in dai seguenti percorsi:
++
+Per Windows: _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_Commands.config_
+
++
+Per Linux: _/var/opt/snapcenter/scc/allowed_commands.config_
+
++
+
+NOTE: Se i comandi non sono presenti nell'elenco dei comandi, l'operazione avrà esito negativo.
+
+
+
+.A proposito di questa attività
+* Le copie di backup basate su file non possono essere ripristinate da SnapCenter.
+* Per le risorse rilevate automaticamente, il ripristino è supportato con SFSR.
+* Il ripristino automatico non è supportato.
+* Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dagli snapshot del vault di SnapLock come parte del ripristino ereditano il tempo di scadenza del vault di SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
+
+
+.Fasi
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina risorse, filtrare le risorse dall'elenco a discesa *Visualizza* in base al tipo di risorsa.
++
+Le risorse vengono visualizzate insieme al tipo, all'host, ai gruppi di risorse e ai criteri associati e allo stato.
+
++
+
+NOTE: Anche se un backup potrebbe essere per un gruppo di risorse, quando si esegue il ripristino, è necessario selezionare le singole risorse da ripristinare.
+
++
+Se la risorsa non è protetta, nella colonna Stato generale viene visualizzato "`NOT Protected`". Ciò può significare che la risorsa non è protetta o che il backup della risorsa è stato eseguito da un altro utente.
+
+. Selezionare la risorsa o un gruppo di risorse, quindi selezionare una risorsa in tale gruppo.
++
+Viene visualizzata la pagina della topologia delle risorse.
+
+. Dalla vista Manage Copies (Gestisci copie), selezionare *Backup* dai sistemi di storage primario o secondario (mirrorati o vault).
+. Nella tabella Primary backup(s) (Backup primari), selezionare il backup da cui si desidera ripristinare, quindi fare clic su *image:../media/restore_icon.gif["icona restore (ripristina)"]*.
++
+image::../media/restoring_resource.gif[ripristino delle risorse]
+
+. Nella pagina ambito di ripristino, selezionare *completa risorsa* per ripristinare i volumi di dati configurati del cluster PostgreSQL.
+. Nella pagina Recovery Scope (ambito ripristino), selezionare una delle seguenti opzioni:
++
+|===
+
+
+| Se... | Eseguire questa operazione... 
+
+
+ a| 
+Desidera ripristinare il più vicino possibile all'ora corrente
+ a| 
+Selezionare *Ripristina allo stato più recente*. Per le risorse container singole, specificare una o più posizioni di backup del registro e del catalogo.
+
+
+
+ a| 
+Si desidera ripristinare al punto di tempo specificato
+ a| 
+Selezionare *Recover to point in time* (Ripristina al punto nel tempo).
+
+.. Inserire data e ora. Inserire data e ora. Ad esempio, l'host PostgreSQL Linux si trova a Sunnyvale, CA e l'utente in Raleigh, NC sta recuperando i log in SnapCenter.
++
+Se l'utente desidera eseguire un ripristino alle 5:00 . Sunnyvale, CA, quindi l'utente deve impostare il fuso orario del browser sul fuso orario dell'host PostgreSQL Linux, che è GMT-07:00 e specificare la data e l'ora come 5:00:00
+
+
+
+
+
+ a| 
+Non si desidera eseguire il ripristino
+ a| 
+Selezionare *Nessun ripristino*.
+
+|===
+
+
+
+NOTE: Non è possibile recuperare le risorse PostgreSQL aggiunte manualmente.
+
+
+NOTE: Il plug-in SnapCenter per PostgreSQL crea un backup_label e tablespace_map nella cartella _/<OS_temp_folder>/postgresql_sc_recovery_<Restore_JobId>/_ per facilitare il ripristino manuale.
+
+. Nella pagina Pre Ops (operazioni preliminari), immettere i comandi di pre-ripristino e disinstallazione da eseguire prima di eseguire un processo di ripristino.
++
+I comandi di disinstallazione non sono disponibili per le risorse rilevate automaticamente.
+
+. Nella pagina Post Ops (operazioni post), immettere i comandi di montaggio e post ripristino da eseguire dopo l'esecuzione di un processo di ripristino.
++
+I comandi di montaggio non sono disponibili per le risorse rilevate automaticamente.
+
++
+
+NOTE: Per i comandi pre e post per le operazioni quiescenza, snapshot e inquiescenza, controllare se i comandi sono presenti nell'elenco dei comandi disponibili sull'host plug-in dal percorso _/opt/snapcenter/snapcenter/scc/allowed_command.config_ per Linux e _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config_ per Windows.
+
+. Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
++
+È inoltre necessario specificare gli indirizzi e-mail del mittente e del destinatario e l'oggetto dell'e-mail. SMTP deve essere configurato anche nella pagina *Impostazioni* > *Impostazioni globali*.
+
+. Esaminare il riepilogo, quindi fare clic su *fine*.
+. Monitorare l'avanzamento dell'operazione facendo clic su *Monitor* > *Jobs*.
+

@@ -1,20 +1,19 @@
 ---
 permalink: install/task_configure_two_way_ssl.html 
 sidebar: sidebar 
-keywords: security,two-way ssl,configure two-way ssl 
-summary: È necessario configurare la comunicazione SSL bidirezionale per proteggere la comunicazione reciproca tra il server SnapCenter e i plug-in.   
+keywords: security,two-way ssl,configure two-way ssl, windows host 
+summary: 'È necessario configurare la comunicazione SSL bidirezionale per proteggere la comunicazione reciproca tra il server SnapCenter sull"host Windows e i plug-in.' 
 ---
-= Configurare la comunicazione SSL bidirezionale
+= Configurare la comunicazione SSL bidirezionale sull'host Windows
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-È necessario configurare la comunicazione SSL bidirezionale per proteggere la comunicazione reciproca tra il server SnapCenter e i plug-in.
+È necessario configurare la comunicazione SSL bidirezionale per proteggere la comunicazione reciproca tra il server SnapCenter sull'host Windows e i plug-in.
 
-*Prima di iniziare*
-
+.Prima di iniziare
 * Il file CSR del certificato CA dovrebbe essere stato generato con la lunghezza minima supportata della chiave di 3072.
 * Il certificato CA deve supportare l'autenticazione del server e l'autenticazione del client.
 * È necessario disporre di un certificato CA con chiave privata e dettagli di identificazione personale.
@@ -28,8 +27,7 @@ L'ambiente con alcuni host o server non abilitati per la comunicazione SSL bidir
 
 
 
-*Fasi*
-
+.Fasi
 . Per eseguire il binding della porta, attenersi alla seguente procedura sull'host del server SnapCenter per la porta 8146 del server Web IIS SnapCenter (impostazione predefinita) e ancora per la porta 8145 SMCore (impostazione predefinita) utilizzando i comandi PowerShell.
 +
 .. Rimuovere il binding della porta del certificato autofirmato SnapCenter esistente utilizzando il seguente comando PowerShell.
@@ -119,12 +117,10 @@ Nell'editor del Registro di sistema di Windows, passare al percorso indicato di 
 
 È necessario configurare il plug-in Windows di SnapCenter per la comunicazione SSL bidirezionale utilizzando i comandi PowerShell.
 
-*Prima di iniziare*
-
+.Prima di iniziare
 Assicurarsi che il thumbprint del certificato CA sia disponibile.
 
-*Fasi*
-
+.Fasi
 . Per collegare la porta, eseguire le seguenti operazioni sull'host plug-in di Windows per la porta SMCore 8145 (impostazione predefinita).
 +
 .. Rimuovere il binding della porta del certificato autofirmato SnapCenter esistente utilizzando il seguente comando PowerShell.

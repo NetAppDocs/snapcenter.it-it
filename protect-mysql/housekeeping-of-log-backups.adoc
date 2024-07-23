@@ -1,0 +1,14 @@
+---
+permalink: protect-mysql/housekeeping-of-log-backups.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for MySQL 
+summary: 'SnapCenter gestisce l"amministrazione dei backup di log e dati a livello di file system e di sistema storage e all"interno del catalogo di backup MySQL.' 
+---
+= Modalità di gestione dei backup dei registri da parte di SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter gestisce l'amministrazione dei backup dei dati a livello di file system e del sistema di storage.

@@ -18,7 +18,7 @@ summary: 'È necessario configurare i certificati CA e implementarne i certifica
 * È possibile visualizzare lo stato del certificato per i plug-in utilizzando le _Get-SmCertificateSettings_.
 
 
-Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento alla https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["Guida di riferimento al cmdlet del software SnapCenter"^].
+Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento anche a https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guida di riferimento al cmdlet del software SnapCenter"^].
 
 .Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *hosts*.

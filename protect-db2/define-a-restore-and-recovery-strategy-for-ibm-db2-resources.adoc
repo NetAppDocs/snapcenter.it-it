@@ -1,0 +1,22 @@
+---
+permalink: protect-db2/define-a-restore-and-recovery-strategy-for-ibm-db2-resources.html 
+sidebar: sidebar 
+keywords: restore and recovery strategy, IBM Db2 resources, snapcenter 
+summary: È necessario definire una strategia prima di ripristinare e ripristinare il database in modo da poter eseguire correttamente le operazioni di ripristino e ripristino. 
+---
+= Definire una strategia di ripristino e ripristino per le risorse IBM DB2
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario definire una strategia prima di ripristinare e ripristinare il database in modo da poter eseguire correttamente le operazioni di ripristino e ripristino.
+
+
+NOTE: È supportato solo il ripristino manuale del database.
+
+.Fasi
+. Determinare le strategie di ripristino supportate per le risorse IBM DB2 aggiunte manualmente
+. Determinare le strategie di ripristino supportate per i database IBM DB2 rilevati automaticamente
+

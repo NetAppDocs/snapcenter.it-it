@@ -59,9 +59,20 @@ Per personalizzare la porta, vedere https://docs.netapp.com/us-en/snapcenter/ins
 
 
  a| 
+Porta del servizio di pianificazione
+ a| 
+8154 (HTTPS),
+
+Questa porta viene utilizzata per orchestrare i flussi di lavoro dello scheduler SnapCenter per tutti i plug-in gestiti all'interno dell'host server SnapCenter in modo centralizzato.
+
+Per personalizzare la porta, vedere https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["Installare il server SnapCenter utilizzando l'installazione guidata."]
+
+
+
+ a| 
 Porta MySQL
  a| 
-3306 (HTTPS), bidirezionale
+3306 (HTTPS), bidirezionale, personalizzabile
 
 La porta viene utilizzata per la comunicazione tra SnapCenter e il database del repository MySQL.
 
@@ -118,7 +129,18 @@ Per personalizzare la porta, vedere https://docs.netapp.com/us-en/snapcenter/pro
 
 
  a| 
-Plug-in personalizzati per SnapCenter
+Plug-in SnapCenter per database Exchange
+ a| 
+909, personalizzabile
+
+NET predefinito. La porta TCP viene utilizzata dal plug-in di Windows per la connessione ai call-back VSS di Exchange.
+
+Per personalizzare la porta, vedere link:../protect-sce/task_add_hosts_and_install_plug_in_for_exchange.html["Aggiungere host e installare il plug-in per Exchange"].
+
+
+
+ a| 
+Plug-in supportati da NetApp per SnapCenter
  a| 
 9090 (HTTPS), fisso
 

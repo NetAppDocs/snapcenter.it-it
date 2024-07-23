@@ -14,11 +14,17 @@ summary: 'È possibile aggiungere host e installare pacchetti di plug-in SnapCen
 È possibile aggiungere host e installare pacchetti di plug-in SnapCenter, aggiungere un server di verifica, rimuovere host, migrare processi di backup e aggiornare host per aggiornare pacchetti di plug-in o aggiungere nuovi pacchetti di plug-in. A seconda del plug-in utilizzato, è possibile eseguire il provisioning dei dischi, gestire le condivisioni SMB, gestire i gruppi di iniziatori (igroups), gestire le sessioni iSCSI e migrare i dati.
 
 |===
-| È possibile eseguire queste attività... | Per Microsoft Exchange Server | Per Microsoft SQL Server | Per Microsoft Windows | Per database Oracle | Per SAP HANA Database | Per plug-in personalizzati 
+| È possibile eseguire queste attività... | Per Microsoft Exchange Server | Per Microsoft SQL Server | Per Microsoft Windows | Per database Oracle | Per SAP HANA Database | Per i plug-in supportati da NetApp | Per DB2 | Per PostgreSQL | Per MySQL 
 
 
  a| 
 Aggiungere host e installare il pacchetto plug-in
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
  a| 
 Sì
  a| 
@@ -48,11 +54,23 @@ No
 No
  a| 
 No
+ a| 
+No
+ a| 
+No
+ a| 
+No
 
 
 
  a| 
 Sospendere le pianificazioni e mettere gli host in modalità di manutenzione
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
  a| 
 Sì
  a| 
@@ -82,11 +100,23 @@ Sì
 Sì
  a| 
 Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
 
 
 
  a| 
 Rimuovere gli host da SnapCenter
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
  a| 
 Sì
  a| 
@@ -116,6 +146,12 @@ Sì
 Sì
  a| 
 Sì
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Sì
 
 
 
@@ -127,6 +163,12 @@ No
 No
  a| 
 Sì
+ a| 
+No
+ a| 
+No
+ a| 
+No
  a| 
 No
  a| 
@@ -150,6 +192,12 @@ No
 No
  a| 
 No
+ a| 
+No
+ a| 
+No
+ a| 
+No
 
 
 
@@ -161,6 +209,12 @@ No
 No
  a| 
 Sì
+ a| 
+No
+ a| 
+No
+ a| 
+No
  a| 
 No
  a| 
@@ -183,6 +237,13 @@ No
  a| 
 No
  a| 
+No
+ a| 
+No
+ a| 
+No
+ a| 
+No
 
 |===
 

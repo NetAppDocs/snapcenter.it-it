@@ -30,15 +30,6 @@ NOTE: SnapCenter è anche offerto come parte del bundle per la protezione dei da
 
 
  a| 
-SnapCenter basato sulla capacità standard
- a| 
-Richiesto con ONTAP Select e Cloud Volumes ONTAP
-
-Se sei un cliente Cloud Volumes ONTAP o ONTAP Select, devi procurarti una licenza per TB basata sulla capacità in base ai dati gestiti da SnapCenter. Per impostazione predefinita, SnapCenter fornisce una licenza di prova integrata per SnapCenter standard da 100 TB, valida 90 giorni. Per ulteriori informazioni, contattare il rappresentante commerciale.
-
-
-
- a| 
 SnapMirror o SnapVault
  a| 
 ONTAP
@@ -96,9 +87,9 @@ NOTE: Si consiglia, ma non è necessario, di aggiungere le licenze standard di S
 
 |===
 
-NOTE: Le licenze servizi file NAS SnapCenter e SnapCenter sono obsolete e non sono più disponibili.
+NOTE: Le licenze servizi file NAS SnapCenter e SnapCenter sono obsolete e non sono più disponibili. La licenza basata sulla capacità non è più necessaria per Amazon FSX per NetApp ONTAP e Cloud Volumes ONTAP.
 
-Installare una o più licenze SnapCenter. Per informazioni su come aggiungere licenze, vedere link:../install/concept_snapcenter_standard_controller_based_licenses.html["Aggiunta di licenze SnapCenter basate su controller standard"] oppure link:../install/concept_snapcenter_standard_capacity_based_licenses.html["Aggiunta di licenze SnapCenter basate sulla capacità standard"].
+Installare una o più licenze SnapCenter. Per informazioni su come aggiungere licenze, vedere link:../install/concept_snapcenter_standard_controller_based_licenses.html["Aggiunta di licenze SnapCenter basate su controller standard"].
 
 
 

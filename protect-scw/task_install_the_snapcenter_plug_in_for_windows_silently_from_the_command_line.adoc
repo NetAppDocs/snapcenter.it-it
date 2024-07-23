@@ -15,7 +15,7 @@ summary: 'È possibile installare il plug-in SnapCenter per Microsoft Windows lo
 
 .Prima di iniziare
 * È necessario aver installato Microsoft .Net 4.7.2 o versione successiva.
-* PowerShell 4.0 o versione successiva deve essere installato.
+* È necessario aver installato PowerShell 7.4.2 o versione successiva.
 * È necessario aver attivato la funzione di accodamento dei messaggi di Windows.
 * È necessario essere un amministratore locale dell'host.
 

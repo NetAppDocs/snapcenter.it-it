@@ -13,4 +13,4 @@ summary: Fornisce importanti informazioni su questa versione del server SnapCent
 [role="lead"]
 Fornisce importanti informazioni su questa versione del server SnapCenter e sui pacchetti di plug-in SnapCenter, inclusi problemi risolti, problemi noti, precauzioni e limitazioni.
 
-Per ulteriori informazioni, consultare https://library.netapp.com/ecm/ecm_download_file/ECMLP2886893["Note sulla versione del software SnapCenter 5,0"^].
+Per ulteriori informazioni, vedere https://library.netapp.com/ecm/ecm_download_file/ECMLP3323468["Note sulla versione del software SnapCenter 6,0"^].

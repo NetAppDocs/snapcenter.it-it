@@ -1,0 +1,16 @@
+---
+permalink: protect-db2/types-of-restore-strategies-supported-for-auto-discovered-ibm-db2.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for IBM Db2 
+summary: È necessario definire una strategia prima di poter eseguire correttamente le operazioni di ripristino utilizzando SnapCenter. Esistono due tipi di strategie di ripristino per i database IBM DB2 rilevati automaticamente. 
+---
+= Tipo di strategia di ripristino supportata per IBM DB2 rilevato automaticamente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario definire una strategia prima di poter eseguire correttamente le operazioni di ripristino utilizzando SnapCenter.
+
+Il ripristino completo delle risorse è la strategia di ripristino supportata per i database IBM DB2 rilevati automaticamente. Questo consente di ripristinare tutti i volumi, i qtree e le LUN di una risorsa.

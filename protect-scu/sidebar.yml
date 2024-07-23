@@ -36,6 +36,8 @@ entries:
     url: "/protect-scu/task_back_up_unix_file_systems_resource_groups.html"
   - title: Monitorare l'avanzamento del backup
     url: "/protect-scu/task_monitor_unix_file_systems_backup_operations.html"
+  - title: Visualizzare i file system Unix protetti nella pagina topologia
+    url: "/protect-scu/view_protected_unix_file_systems_in_the_topology_page.html"
 - title: Ripristinare e ripristinare i file system Unix
   entries:
   - title: Ripristinare e ripristinare i file system Unix

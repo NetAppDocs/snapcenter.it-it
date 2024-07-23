@@ -36,7 +36,7 @@ I dischi condivisi o montati in rete non sono supportati.
 * Se nelle impostazioni del server Syslog viene utilizzato il protocollo UDP, gli errori dovuti alla porta non sono attivi o non disponibili non possono essere acquisiti come errore o avviso in SnapCenter.
 * È possibile utilizzare i comandi Set-SmAuditSettings e Get-SmAuditSettings per configurare i registri di controllo.
 +
-Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo Get-Help command_name. In alternativa, è possibile consultare anche https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["Guida di riferimento al cmdlet del software SnapCenter"^].
+Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo Get-Help command_name. In alternativa, è anche possibile fare riferimento a https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guida di riferimento al cmdlet del software SnapCenter"^].
 
 
 

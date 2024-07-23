@@ -33,6 +33,7 @@ NOTE: Se i comandi non sono presenti nell'elenco dei comandi, l'operazione avrà
 * Le copie di backup basate su file non possono essere ripristinate da SnapCenter.
 * Dopo l'aggiornamento a SnapCenter 4.3, i backup eseguiti in SnapCenter 4.2 possono essere ripristinati ma non ripristinati. Per ripristinare i backup eseguiti in SnapCenter 4.2, è necessario utilizzare script di ripristino HANA Studio o HANA esterni a SnapCenter.
 * Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dagli Snapshot del vault di SnapLock come parte del ripristino ereditano il tempo di scadenza del vault di SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
+* Per l'operazione di ripristino della sincronizzazione attiva di SnapMirror, devi selezionare il backup dalla posizione principale.
 
 
 .Fasi

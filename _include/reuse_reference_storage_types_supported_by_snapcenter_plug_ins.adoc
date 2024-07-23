@@ -88,6 +88,16 @@ Non è possibile utilizzare SnapCenter per eseguire il backup di dati o condivis
 
 
  a| 
+Macchina virtuale VMware
+ a| 
+Datastore vVol in NFS e SAN
+ a| 
+Strumenti ONTAP per VMware vSphere
+ a| 
+
+
+
+ a| 
 Macchina virtuale Hyper-V.
  a| 
 LUN Virtual FC (VFC) collegate da uno switch Fibre Channel virtuale

@@ -14,13 +14,19 @@ summary: 'È possibile utilizzare la pagina Aggiungi host di SnapCenter per aggi
 È possibile utilizzare la pagina Aggiungi host di SnapCenter per aggiungere host Windows. Il plug-in SnapCenter per Microsoft Windows viene installato automaticamente sull'host specificato. Questo è il metodo consigliato per installare i plug-in. È possibile aggiungere un host e installare un plug-in per un singolo host o per un cluster.
 
 .Prima di iniziare
+* Se il sistema operativo dell'host SnapCenter Server è Windows 2019 e il sistema operativo dell'host plug-in è Windows 2022, è necessario effettuare le seguenti operazioni:
++
+** Eseguire l'aggiornamento a Windows Server 2019 (OS Build 17763,5936) o versione successiva
+** Eseguire l'aggiornamento a Windows Server 2022 (OS Build 20348,2402) o versione successiva
+
+
 * È necessario essere un utente assegnato a un ruolo che disponga delle autorizzazioni di installazione e disinstallazione del plug-in, ad esempio il ruolo di amministratore di SnapCenter.
 * Quando si installa un plug-in su un host Windows, se si specifica una credenziale non integrata o se l'utente appartiene a un utente del gruppo di lavoro locale, è necessario disattivare il controllo dell'account utente sull'host.
 * L'utente SnapCenter deve essere aggiunto al ruolo "`accesso come servizio`" del server Windows.
 * Assicurarsi che il servizio di accodamento dei messaggi sia in esecuzione.
 * Se si utilizza un account di servizio gestito di gruppo (gMSA), è necessario configurare gMSA con privilegi amministrativi.
 +
-link:task_configure_gMSA_on_windows_server_2012_or_later.html["Configurare l'account di servizio gestito di gruppo su Windows Server 2012 o versione successiva per il file system di Windows"]
+link:task_configure_gMSA_on_windows_server_2012_or_later.html["Configurare l'account di servizio gestito di gruppo su Windows Server 2016 o versione successiva per il file system di Windows"]
 
 
 

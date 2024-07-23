@@ -24,7 +24,7 @@ Per prepararsi alla protezione dei dati, è necessario completare attività come
 +
 Il valore predefinito è false
 
-* Per SnapMirror Business Continuity (SM-BC), per ulteriori informazioni sui prerequisiti e sulle limitazioni, fare riferimento a. https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["Limiti a oggetti per la business continuity di SnapMirror"].
+* Esaminare i prerequisiti e i limiti specifici della sincronizzazione attiva di SnapMirror. Per informazioni, fare riferimento a https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["Limiti degli oggetti per la sincronizzazione attiva di SnapMirror"].
 
 
 .A proposito di questa attività
@@ -143,7 +143,7 @@ NOTE: Il valore massimo di conservazione è 1018 per le risorse su ONTAP 9.4 o v
  a| 
 Selezionare questa opzione per creare copie mirror dei set di backup su un altro volume (SnapMirror).
 
-Questa opzione deve essere abilitata per SnapMirror Business Continuity (SM-BC).
+Questa opzione deve essere abilitata per la sincronizzazione attiva di SnapSnapMirror.
 
 Durante la replica secondaria, il tempo di scadenza del SnapLock carica il tempo di scadenza del SnapLock primario. Fare clic sul pulsante *Aggiorna* nella pagina topologia per aggiornare il tempo di scadenza SnapLock secondario e primario recuperato da ONTAP.
 

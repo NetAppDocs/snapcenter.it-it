@@ -13,6 +13,13 @@ summary: È possibile utilizzare SnapCenter per ripristinare e ripristinare i da
 [role="lead"]
 È possibile utilizzare SnapCenter per ripristinare i database di SQL Server di cui è stato eseguito il backup. Il ripristino del database è un processo multifase che copia tutti i dati e le pagine di registro da un backup SQL Server specificato in un database specificato.
 
+.A proposito di questa attività
+È necessario assicurarsi che l'istanza di destinazione per il ripristino sia configurata con un utente di Active Directory che appartiene al dominio di directory ADActive di SMB e che disponga delle autorizzazioni per impostare le autorizzazioni dei file in modo appropriato. È necessario configurare le credenziali in SnapCenter a livello di istanza.
+
+L'autenticazione SQL per l'istanza di destinazione non sarà supportata per le configurazioni SMB. L'istanza di destinazione deve essere configurata in SnapCenter con l'utente di Active Directory che dispone delle autorizzazioni necessarie.
+
+Se l'account del servizio servizi plug-in SnapCenter non è un utente di Active Directory, durante l'esecuzione del ripristino su un host alternativo, l'utente che dispone del controllo completo sui volumi di origine è necessario in modo che possa essere rappresentato ed eseguire l'operazione richiesta.
+
 .Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina risorse, selezionare *Database* o *Gruppo risorse* dall'elenco Visualizza.

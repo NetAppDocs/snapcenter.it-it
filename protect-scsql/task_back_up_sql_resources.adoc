@@ -17,7 +17,13 @@ Se una risorsa non fa ancora parte di un gruppo di risorse, è possibile eseguir
 * Per l'autenticazione delle credenziali Windows, è necessario impostare le credenziali prima di installare i plug-in.
 * Per l'autenticazione dell'istanza di SQL Server, è necessario aggiungere la credenziale dopo l'installazione dei plug-in.
 * Per l'autenticazione gMSA, è necessario configurare gMSA durante la registrazione dell'host con SnapCenter nella pagina *Aggiungi host* o *Modifica host* per abilitare e utilizzare gMSA.
-* Se l'host viene aggiunto con gMSA e gMSA dispone dei privilegi di accesso e amministratore di sistema, gMSA verrà utilizzato per connettersi all'istanza SQL.
+* Se l'host viene aggiunto con gMSA e gMSA dispone di privilegi di accesso e di amministratore di sistema, gMSA può connettersi all'istanza SQL.
++
+** SnapCenter verificherà se l'autenticazione per le istanze SQL è configurata. Se l'autenticazione è configurata, sarà possibile accedere all'istanza SQL utilizzando questa credenziale.
+** Se l'autenticazione non è configurata, utilizzare gMSA per verificare se il plug-in SQL è attualmente operativo. Se il plug-in è in funzione, verrà utilizzato per stabilire una connessione all'istanza SQL.
+** L'accesso all'istanza SQL avviene tramite l'autenticazione delle credenziali di Windows quando entrambe le istanze SQL non sono configurate e il plug-in non è operativo.
+
+
 
 
 .Fasi

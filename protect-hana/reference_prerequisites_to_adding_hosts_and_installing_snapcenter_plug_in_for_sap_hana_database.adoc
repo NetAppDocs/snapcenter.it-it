@@ -13,7 +13,7 @@ summary: Prima di aggiungere un host e installare i pacchetti plug-in, è necess
 [role="lead"]
 Prima di aggiungere un host e installare i pacchetti plug-in, è necessario completare tutti i requisiti. Il plug-in SnapCenter per database SAP HANA è disponibile sia in ambienti Windows che Linux.
 
-* È necessario aver installato Java a 1.8 64 bit sull'host.
+* È necessario aver installato Java 11 sull'host.
 +
 
 NOTE: IBM Java non è supportato.
@@ -33,7 +33,7 @@ NOTE: IBM Java non è supportato.
 * È necessario disporre di un utente di dominio con privilegi di amministratore locale con autorizzazioni di accesso locale sull'host remoto.
 * Durante l'installazione del plug-in per database SAP HANA su un host Windows, il plug-in SnapCenter per Microsoft Windows viene installato automaticamente.
 * È necessario aver attivato la connessione SSH basata su password per l'utente root o non root.
-* È necessario aver installato Java a 1.8 64 bit sull'host Windows.
+* È necessario aver installato Java 11 sull'host Windows.
 +
 http://www.java.com/en/download/manual.jsp["Download Java per tutti i sistemi operativi"]
 
@@ -47,7 +47,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=117015;&solution=1259&isHWU&src
 == Host Linux
 
 * È necessario aver attivato la connessione SSH basata su password per l'utente root o non root.
-* È necessario aver installato Java a 1.8 64 bit sull'host Linux.
+* È necessario aver installato Java 11 sull'host Linux.
 +
 http://www.java.com/en/download/manual.jsp["Download Java per tutti i sistemi operativi"]
 

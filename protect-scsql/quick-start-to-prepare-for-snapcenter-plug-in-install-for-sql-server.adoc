@@ -44,15 +44,6 @@ La licenza standard di SnapCenter è una licenza basata su controller ed è incl
 
 
  a| 
-SnapCenter basato sulla capacità standard
- a| 
-Richiesto con ONTAP Select e Cloud Volumes ONTAP
-
-Se sei un cliente Cloud Volumes ONTAP o ONTAP Select, devi procurarti una licenza per TB basata sulla capacità in base ai dati gestiti da SnapCenter. Per impostazione predefinita, SnapCenter fornisce una licenza di prova integrata per SnapCenter standard da 100 TB, valida 90 giorni. Per ulteriori informazioni, contattare il rappresentante commerciale.
-
-
-
- a| 
 SnapMirror o SnapVault
  a| 
 ONTAP
@@ -99,7 +90,7 @@ Vedere https://imt.netapp.com/matrix/imt.jsp?components=117008;&solution=1259&is
 CPU
  a| 
 * Host server: 4 core
-* Host plug-in: 1 core
+* Host plug-in: 4 core
 
 
 
@@ -108,7 +99,7 @@ CPU
 RAM
  a| 
 * Host server: 8 GB
-* Host plug-in: 1 GB
+* Host plug-in: 4 GB
 
 
 
@@ -118,8 +109,8 @@ Spazio su disco rigido
  a| 
 Host del server:
 
-* 4 GB per il software e i registri del server SnapCenter
-* 6 GB per repository SnapCenter
+* 7 GB per il software e i registri del server SnapCenter
+* 8 GB per repository SnapCenter
 * Ciascun host plug-in: 2 GB per l'installazione del plug-in e i log, necessario solo se il plug-in è installato su un host dedicato.
 
 
@@ -131,8 +122,8 @@ Librerie di terze parti
 Richiesto sull'host del server SnapCenter e sull'host plug-in:
 
 * Microsoft .NET Framework 4.7.2 o versione successiva
-* Windows Management Framework (WMF) 4.0 o versione successiva
-* PowerShell 4.0 o versione successiva
+* ASP. Bundle di hosting NET Core (8.0.5 o versione successiva)
+* PowerShell 7.4.2 o versione successiva
 
 
 

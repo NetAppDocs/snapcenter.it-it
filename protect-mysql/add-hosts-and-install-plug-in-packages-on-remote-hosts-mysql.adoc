@@ -1,0 +1,155 @@
+---
+permalink: protect-mysql/add-hosts-and-install-plug-in-packages-on-remote-hosts-mysql.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: Utilizzare la pagina Aggiungi host di SnapCenter per aggiungere host e installare i pacchetti dei plug-in. I plug-in vengono installati automaticamente sugli host remoti. È possibile aggiungere un host e installare pacchetti plug-in per un singolo host o per un cluster. 
+---
+= Aggiungere host e installare pacchetti plug-in su host remoti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilizzare la pagina Aggiungi host di SnapCenter per aggiungere host e installare i pacchetti dei plug-in. I plug-in vengono installati automaticamente sugli host remoti. È possibile aggiungere l'host e installare i pacchetti plug-in per un singolo host.
+
+.Prima di iniziare
+* Se il sistema operativo dell'host SnapCenter Server è Windows 2019 e il sistema operativo dell'host plug-in è Windows 2022, è necessario effettuare le seguenti operazioni:
++
+** Eseguire l'aggiornamento a Windows Server 2019 (OS Build 17763,5936) o versione successiva
+** Eseguire l'aggiornamento a Windows Server 2022 (OS Build 20348,2402) o versione successiva
+
+
+* È necessario essere un utente assegnato a un ruolo che disponga delle autorizzazioni di installazione e disinstallazione del plug-in, ad esempio il ruolo di amministratore di SnapCenter.
+* Quando si installa un plug-in su un host Windows, se si specifica una credenziale non integrata o se l'utente appartiene a un utente del gruppo di lavoro locale, è necessario disattivare il controllo dell'account utente sull'host.
+* Assicurarsi che il servizio di accodamento dei messaggi sia in esecuzione.
+* La documentazione di amministrazione contiene informazioni sulla gestione degli host.
+
+
+.A proposito di questa attività
+* Non è possibile aggiungere un server SnapCenter come host plug-in a un altro server SnapCenter.
+
+
+.Fasi
+. Nel riquadro di spostamento di sinistra, fare clic su *hosts*.
+. Verificare che la scheda *Managed hosts* sia selezionata nella parte superiore.
+. Fare clic su *Aggiungi*.
+. Nella pagina host, eseguire le seguenti operazioni:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Tipo di host
+ a| 
+Selezionare il tipo di host:
+
+** Windows
+** Linux
++
+
+NOTE: Il plug-in per MySQL deve essere installato sul database server MySQL.
+
+
+
+
+
+ a| 
+Nome host
+ a| 
+Inserire il nome host della comunicazione. Inserire il nome di dominio completo (FQDN) o l'indirizzo IP dell'host. SnapCenter dipende dalla configurazione corretta del DNS. Pertanto, la procedura consigliata consiste nell'inserire l'FQDN.
+
+
+
+ a| 
+Credenziali
+ a| 
+Selezionare il nome della credenziale creata o creare nuove credenziali. La credenziale deve disporre di diritti amministrativi sull'host remoto. Per ulteriori informazioni, vedere le informazioni sulla creazione delle credenziali.
+
+È possibile visualizzare i dettagli relativi alle credenziali posizionando il cursore sul nome fornito.
+
+
+NOTE: La modalità di autenticazione delle credenziali è determinata dal tipo di host specificato nella procedura guidata Aggiungi host.
+
+|===
+. Nella sezione Select Plug-in to Install (Seleziona plug-in da installare), selezionare i plug-in da installare.
++
+Mentre si utilizza l'API REST per installare Plug-in per MySQL, è necessario passare la versione come 3,0. Ad esempio, MySQL:3,0
+
+. (Facoltativo) fare clic su *altre opzioni*.
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Porta
+ a| 
+Mantenere il numero di porta predefinito o specificare il numero di porta. Il numero di porta predefinito è 8145. Se il server SnapCenter è stato installato su una porta personalizzata, tale numero di porta viene visualizzato come porta predefinita.
+
+
+NOTE: Se i plug-in sono stati installati manualmente e si è specificata una porta personalizzata, è necessario specificare la stessa porta. In caso contrario, l'operazione non riesce.
+
+
+
+ a| 
+Percorso di installazione
+ a| 
+Il plug-in per MySQL è installato sull'host client MySQL, e questo host può essere su un sistema Windows o Linux.
+
+** Per il pacchetto di plug-in SnapCenter per Windows, il percorso predefinito è C: In alternativa, è possibile personalizzare il percorso.
+** Per il pacchetto di plug-in SnapCenter per Linux, il percorso predefinito è /opt/NetApp/snapcenter. In alternativa, è possibile personalizzare il percorso.
+
+
+
+
+ a| 
+Ignorare i controlli di preinstallazione
+ a| 
+Selezionare questa casella di controllo se i plug-in sono già stati installati manualmente e non si desidera verificare se l'host soddisfa i requisiti per l'installazione del plug-in.
+
+
+
+ a| 
+Aggiungere tutti gli host nel cluster
+ a| 
+Non applicabile.
+
+
+
+ a| 
+Utilizzare l'account di servizio gestito di gruppo (gMSA) per eseguire i servizi plug-in
+ a| 
+Non applicabile.
+
+|===
+. Fare clic su *Invia*.
++
+Se non è stata selezionata la casella di controllo Ignora precheck, l'host viene validato per verificare se l'host soddisfa i requisiti per l'installazione del plug-in. Lo spazio su disco, la RAM, la versione di PowerShell, la versione di .NET, la posizione (per i plug-in Windows) e la versione di Java (per i plug-in Linux) sono validati in base ai requisiti minimi. Se i requisiti minimi non vengono soddisfatti, vengono visualizzati messaggi di errore o di avviso appropriati.
+
++
+Se l'errore riguarda lo spazio su disco o la RAM, è possibile aggiornare il file web.config che si trova in C: File di programma NetApp SnapCenter WebApp per modificare i valori predefiniti. Se l'errore è correlato ad altri parametri, è necessario risolvere il problema.
+
++
+
+NOTE: In una configurazione ha, se si aggiorna il file web.config, è necessario aggiornare il file su entrambi i nodi.
+
+. Se il tipo di host è Linux, verificare l'impronta digitale, quindi fare clic su *Confirm and Submit* (Conferma e invia).
++
+In una configurazione del cluster, verificare l'impronta digitale di ciascuno dei nodi del cluster.
+
++
+
+NOTE: La verifica dell'impronta digitale è obbligatoria anche se lo stesso host è stato aggiunto in precedenza a SnapCenter e l'impronta digitale è stata confermata.
+
+. Monitorare l'avanzamento dell'installazione.
++
+** Per i plug-in di Windows, i log di installazione e aggiornamento si trovano in: _C:\Windows\SnapCenter plugin\Install_<JOBID>\_
+** Per i plug-in Linux, i log di installazione si trovano in: _/var/opt/snapcenter/logs/SnapCenter_Linux_host_Plug-in_Install_<JOBID>.log_ e i log di aggiornamento si trovano in: _/var/opt/snapcenter/logs/SnapCenter_Linux_host_Plug-in_Upgrade_<JOBID>.log_
+
+
+
+
+.Al termine
+Se si desidera eseguire l'aggiornamento alla versione SnapCenter 6,0, il plug-in basato su PERL per MySQL verrà disinstallato dal server plug-in remoto.

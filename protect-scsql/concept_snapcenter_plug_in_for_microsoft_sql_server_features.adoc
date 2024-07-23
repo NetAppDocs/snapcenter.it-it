@@ -50,4 +50,12 @@ Oltre a queste funzionalità principali, il plug-in per SQL Server offre i segue
 NOTE: I volumi NAS devono disporre di una policy di esportazione predefinita in SVM (Storage Virtual Machine).
 
 * Supporto per FileStream e file group nei database standalone di SQL Server.
+* Supporto per NVMe (non-volatile Memory Express) su Windows Server 2022
++
+** Flussi di lavoro di backup, ripristino, cloning e verifica su layout VMDK creati su NVMe su TCP/IP.
+** Supporta la versione firmware NVMe 1,3 a partire da ESX 8,0 aggiornamento 2 e richiede hardware virtuale versione 21.
+** WSFC (Windows Server failover Clustering) non è supportato per le applicazioni su VMDK su NVMe su TCP/IP.
+
+
+* Supporta la sincronizzazione attiva SnapMirror (inizialmente rilasciata come SnapMirror Business Continuity [SM-BC]) che consente ai servizi business di continuare a funzionare anche attraverso un guasto completo del sito, supportando le applicazioni per il failover in modo trasparente utilizzando una copia secondaria. Non sono richiesti interventi manuali o script aggiuntivi per attivare un failover con la sincronizzazione attiva di SnapMirror.
 

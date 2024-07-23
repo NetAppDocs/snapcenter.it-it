@@ -23,6 +23,7 @@ Per ulteriori informazioni, consulta le informazioni sulla definizione di una st
 +
 Inoltre, è possibile specificare le impostazioni di replica, script e applicazione nel criterio. Queste opzioni consentono di risparmiare tempo quando si desidera riutilizzare il criterio per un altro gruppo di risorse.
 
+* Esaminare i prerequisiti e i limiti specifici della sincronizzazione attiva di SnapMirror. Per informazioni, fare riferimento a https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["Limiti degli oggetti per la sincronizzazione attiva di SnapMirror"].
 
 
 .A proposito di questa attività
@@ -147,6 +148,8 @@ Il periodo di conservazione di SnapLock deve essere inferiore a 100 anni.
 *Aggiornare SnapMirror dopo aver creato una copia Snapshot locale*
  a| 
 Selezionare questo campo per creare copie mirror dei set di backup su un altro volume (replica SnapMirror).
+
+Questa opzione deve essere abilitata per la sincronizzazione attiva di SnapMirror.
 
 Se la relazione di protezione in ONTAP è di tipo Mirror e Vault e se si seleziona solo questa opzione, l'istantanea creata sul primario non verrà trasferita alla destinazione, ma sarà elencata nella destinazione. Se si seleziona questa istantanea dalla destinazione per eseguire un'operazione di ripristino, viene visualizzato il messaggio di errore posizione secondaria non disponibile per il backup a vault/mirror selezionato.
 

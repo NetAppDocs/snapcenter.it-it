@@ -17,6 +17,9 @@ summary: È possibile utilizzare la pagina Aggiungi host di SnapCenter per aggiu
 
 È possibile aggiungere un host e installare pacchetti plug-in per un singolo host o per un cluster. Se si installa il plug-in su un cluster (Oracle RAC), il plug-in viene installato su tutti i nodi del cluster. Per Oracle RAC One Node, è necessario installare il plug-in su entrambi i nodi attivi e passivi.
 
+
+NOTE: Solo l'autenticazione basata su password è supportata quando si installa il plug-in su un Oracle RAC. L'autenticazione basata su chiave SSH non è supportata.
+
 È necessario assegnare un ruolo che disponga delle autorizzazioni di installazione e disinstallazione del plug-in, ad esempio il ruolo di amministratore di SnapCenter.
 
 

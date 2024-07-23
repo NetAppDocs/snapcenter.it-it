@@ -34,6 +34,9 @@ Ambienti
  a| 
 * Server fisico
 * Server virtuale
++
+Datastore vVol in NFS e SAN. È possibile eseguire il provisioning del datastore vVol solo con i tool ONTAP per VMware vSphere.
+
 
 
 
@@ -90,6 +93,5 @@ Tuttavia, è possibile eseguire manualmente il ripristino a livello di file clon
 
 * La combinazione di file system distribuita tra VMDK provenienti dal datastore NFS e VMFS non è supportata.
 * NVMe non è supportato.
-* SnapMirror Business Continuity (SM-BC) non è supportato.
 * Il provisioning non è supportato.
 

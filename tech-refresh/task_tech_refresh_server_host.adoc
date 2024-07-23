@@ -153,4 +153,4 @@ Per informazioni sulla configurazione di F5, consultare la https://docs.netapp.c
 .Informazioni correlate
 Per informazioni sulle API, è necessario accedere alla pagina Swagger. vedere link:https://docs.netapp.com/us-en/snapcenter/sc-automation/task_how%20to_access_rest_apis_using_the_swagger_api_web_page.html["Come accedere alle API REST utilizzando la pagina web delle API di swagger"].
 
-Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, è possibile consultare anche https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["Guida di riferimento al cmdlet del software SnapCenter"^].
+Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, è anche possibile fare riferimento a https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guida di riferimento al cmdlet del software SnapCenter"^].

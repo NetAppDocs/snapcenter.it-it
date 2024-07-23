@@ -25,8 +25,8 @@ L'immagine seguente illustra la relazione tra risorse, gruppi di risorse e crite
 image::../media/sco_resourcegroup_policy.gif[policy del resourcegroup sco]
 
 * Per i criteri abilitati per SnapLock, per ONTAP 9.12.1 e versioni precedenti, se si specifica un periodo di blocco Snapshot, i cloni creati dagli Snapshot a prova di manomissione come parte del ripristino ereditano il tempo di scadenza SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
-* L'aggiunta di nuovi database senza SM-BC a un gruppo di risorse esistente che contiene risorse con SM-BC non è supportata.
-* L'aggiunta di nuovi database a un gruppo di risorse esistente in modalità di failover di SM-BC non è supportata. È possibile aggiungere risorse al gruppo di risorse solo in stato normale o di failback.
+* L'aggiunta di nuovi database senza la sincronizzazione attiva di SnapMirror a un gruppo di risorse esistente che contiene risorse con la sincronizzazione attiva di SnapMirror non è supportata.
+* L'aggiunta di nuovi database a un gruppo di risorse esistente in modalità di failover della sincronizzazione attiva SnapMirror non è supportata. È possibile aggiungere risorse al gruppo di risorse solo in stato normale o di failback.
 
 
 .Fasi

@@ -28,10 +28,14 @@ NOTE: Il numero di backup visualizzati include i backup eliminati dallo storage 
 
 NOTE: I cloni di un backup di un mirror flessibile della versione su un volume di tipo mirror-vault vengono visualizzati nella vista della topologia, ma il numero di backup mirror nella vista della topologia non include il backup flessibile della versione.
 
-
-NOTE: Per le risorse primarie di replica del sistema SAP HANA, sono supportate le operazioni di ripristino ed eliminazione, mentre per le risorse secondarie è supportata l'operazione di clonazione.
-
 Nella pagina topologia, è possibile visualizzare tutti i backup e i cloni disponibili per la risorsa o il gruppo di risorse selezionato. È possibile visualizzare i dettagli di tali backup e cloni e selezionarli per eseguire le operazioni di protezione dei dati.
+
+Se disponi di una relazione secondaria come SnapMirror Active Sync (inizialmente rilasciato come SnapMirror Business Continuity [SM-BC]), puoi vedere le seguenti icone aggiuntive:
+
+* image:../media/topology_replica_site_up.png["replica sito up"] implica che il sito di replica è attivo.
+* image:../media/topology_replica_site_down.png["sito di replica inattivo"]  implica che il sito di replica non è attivo.
+* image:../media/topology_reestablished.png["la relazione viene ristabilita"] implica che la relazione del mirror secondario o del vault non è stata ristabilita.
+
 
 .Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
@@ -54,7 +58,12 @@ Se viene eseguito il backup abilitato SnapLock, facendo clic sul pulsante *Aggio
 Quando la risorsa dell'applicazione è distribuita su più volumi, il tempo di scadenza del SnapLock per il backup sarà il tempo di scadenza del SnapLock più lungo impostato per una Snapshot in un volume. Il tempo di scadenza SnapLock più lungo viene recuperato da ONTAP.
 
 +
-Dopo il backup su richiesta, facendo clic sul pulsante *Refresh* (Aggiorna) vengono aggiornati i dettagli del backup o della clonazione.
+Per la sincronizzazione attiva di SnapMirror, facendo clic sul pulsante *Refresh* (Aggiorna) viene aggiornato l'inventario di backup di SnapCenter eseguendo una query in ONTAP per i siti primario e di replica. Questa attività viene eseguita anche da una pianificazione settimanale per tutti i database contenenti una relazione di sincronizzazione attiva di SnapMirror.
+
++
+** Per la sincronizzazione attiva di SnapMirror e solo per ONTAP 9.14.1, le relazioni Async Mirror o Async MirrorVault nella nuova destinazione primaria devono essere configurate manualmente dopo il failover. Da ONTAP 9.15.1 in poi, Async Mirror o Async MirrorVault vengono configurati automaticamente sulla nuova destinazione primaria.
+** Dopo il failover, è necessario creare un backup affinché SnapCenter sia consapevole del failover. È possibile fare clic su *Aggiorna* solo dopo aver creato un backup.
+
 
 . Nella vista Gestisci copie, fare clic su *backup* o *cloni* dallo storage primario o secondario per visualizzare i dettagli di un backup o clone.
 +

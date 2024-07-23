@@ -67,7 +67,7 @@ entries:
   - title: Impostare le credenziali per il plug-in SnapCenter per il database SAP
       HANA
     url: "/protect-hana/task_set_up_credentials_for_snapcenter_plug_in_for_sap_hana_database.html"
-  - title: Configurare gMSA su Windows Server 2012 o versione successiva
+  - title: Configurare gMSA su Windows Server 2016 o versione successiva
     url: "/protect-hana/task_configure_gMSA_on_windows_server_2012_or_later.html"
   - title: Installare il plug-in SnapCenter per i database SAP HANA
     entries:

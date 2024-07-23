@@ -1,0 +1,121 @@
+---
+permalink: protect-postgresql/clone-postgresql-backup.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for PostgreSQL,run as 
+summary: È possibile utilizzare SnapCenter per clonare un backup. È possibile clonare dal backup primario o secondario. 
+---
+= Clona un backup PostgreSQL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare SnapCenter per clonare un backup. È possibile clonare dal backup primario o secondario.
+
+.Prima di iniziare
+* È necessario aver eseguito il backup delle risorse o del gruppo di risorse.
+* Assicurarsi che gli aggregati che ospitano i volumi siano inclusi nell'elenco degli aggregati assegnati della macchina virtuale di storage (SVM).
+* Per i comandi pre-clone o post-clone, controllare se i comandi sono presenti nell'elenco dei comandi disponibile sull'host del plug-in dai seguenti percorsi:
++
+Per Windows: _C: File di programma NetApp, SnapCenter, Snapcenter Plug-in Creator, ecc., allowed_comands_list.txt_
+
++
+Per Linux: _/var/opt/snapcenter/scc/allowed_comands_list.txt_
+
+
+
+
+NOTE: Se i comandi non sono presenti nell'elenco dei comandi, l'operazione avrà esito negativo.
+
+.A proposito di questa attività
+* Per informazioni sulle limitazioni delle operazioni di suddivisione dei cloni, vedere http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["Guida alla gestione dello storage logico di ONTAP 9"^].
+* Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dagli Snapshot del vault di SnapLock come parte del ripristino ereditano il tempo di scadenza del vault di SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
+
+
+.Fasi
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina risorse, filtrare le risorse dall'elenco a discesa *Visualizza* in base al tipo di risorsa.
++
+Le risorse vengono visualizzate insieme a informazioni quali tipo, host, gruppi di risorse e criteri associati e stato.
+
+. Selezionare la risorsa o il gruppo di risorse.
++
+Selezionare una risorsa se si seleziona un gruppo di risorse.
+
++
+Viene visualizzata la pagina della topologia di risorse o gruppi di risorse.
+
+. Dalla vista Manage Copies (Gestisci copie), selezionare *Backup* dai sistemi di storage primario o secondario (mirrorati o vault).
+. Selezionare il backup dei dati dalla tabella, quindi fare clic su image:../media/clone_icon.gif["icona clona"].
+. Nella pagina Location (posizione), eseguire le seguenti operazioni:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Server clone
+ a| 
+Scegliere un host su cui creare il clone.
+
+
+
+ a| 
+Porta di destinazione
+ a| 
+Immettere la porta di destinazione PostgreSQL da clonare dai backup esistenti.
+
+
+
+ a| 
+NFS Export IP Address (Indirizzo IP esportazione NFS)
+ a| 
+Inserire gli indirizzi IP o i nomi host su cui esportare i volumi clonati.
+
+Applicabile solo alla risorsa del tipo di storage NFS.
+
+
+
+ a| 
+Pool di capacità max. Throughput (MIB/s)
+ a| 
+Immettere la velocità massima di un pool di capacità.
+
+Questo è applicabile solo per la risorsa tipo di archiviazione ANF.
+
+|===
+. Nella pagina script, attenersi alla seguente procedura:
++
+
+NOTE: Gli script vengono eseguiti sull'host del plug-in.
+
++
+.. Immettere i comandi per pre-clone o post-clone che devono essere eseguiti rispettivamente prima o dopo l'operazione di clone.
++
+*** Comando pre-clone: Elimina i cluster esistenti con lo stesso nome
+*** Comando post clone: Verifica di un cluster o avvio di un cluster.
+
+
+.. Immettere il comando mount per montare un file system su un host.
++
+Comando mount per un volume o qtree su una macchina Linux:
+
++
+Esempio per NFS:
+
++
+ mount VSERVER_DATA_IP:%VOLUME_NAME_Clone /mnt
++
+
+NOTE: Per i comandi pre e post per le operazioni quiesce, Snapshot e unquiesce, è necessario controllare se i comandi sono presenti nell'elenco dei comandi disponibili sull'host plug-in dal percorso _/opt/snapcenter/snapcenter/scc/allowed_command.config_ per Linux e _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_Commands_list.txt_ per Windows.
+
+
+
+. Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
++
+È inoltre necessario specificare gli indirizzi e-mail del mittente e del destinatario e l'oggetto dell'e-mail.
+
+. Esaminare il riepilogo, quindi fare clic su *fine*.
+. Monitorare l'avanzamento dell'operazione facendo clic su *Monitor* > *Jobs*.
+

@@ -13,7 +13,7 @@ summary: È possibile utilizzare i cmdlet PowerShell per ripristinare una replic
 [role="lead"]
 È possibile utilizzare i cmdlet PowerShell per ripristinare una replica non sana utilizzando la copia più recente sullo stesso host o la copia più recente da un host alternativo.
 
-Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento alla https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["Guida di riferimento al cmdlet del software SnapCenter"^].
+Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento anche a https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guida di riferimento al cmdlet del software SnapCenter"^].
 
 .Fasi
 . Avviare una sessione di connessione con il server SnapCenter per un utente specifico utilizzando `Open-SmConnection` cmdlet.

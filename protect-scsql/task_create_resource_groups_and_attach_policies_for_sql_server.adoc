@@ -17,8 +17,8 @@ Un gruppo di risorse è un container al quale si aggiungono risorse che si desid
 
 .A proposito di questa attività
 * Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dagli Snapshot del vault di SnapLock come parte del ripristino ereditano il tempo di scadenza del vault di SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
-* L'aggiunta di nuovi database senza SM-BC a un gruppo di risorse esistente che contiene risorse con SM-BC non è supportata.
-* L'aggiunta di nuovi database a un gruppo di risorse esistente in modalità di failover di SM-BC non è supportata. È possibile aggiungere risorse al gruppo di risorse solo in stato normale o di failback.
+* L'aggiunta di nuovi database senza la sincronizzazione attiva di SnapMirror a un gruppo di risorse esistente che contiene risorse con la sincronizzazione attiva di SnapMirror non è supportata.
+* L'aggiunta di nuovi database a un gruppo di risorse esistente in modalità di failover della sincronizzazione attiva SnapMirror non è supportata. È possibile aggiungere risorse al gruppo di risorse solo in stato normale o di failback.
 
 
 .Fasi

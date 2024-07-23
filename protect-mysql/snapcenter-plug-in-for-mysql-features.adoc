@@ -1,0 +1,48 @@
+---
+permalink: protect-mysql/snapcenter-plug-in-for-mysql-features.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for MySQL 
+summary: 'SnapCenter si integra con l"applicazione plug-in e con le tecnologie NetApp del sistema storage. Per lavorare con il plug-in per database MySQL, si utilizza l"interfaccia utente grafica di SnapCenter.' 
+---
+= Plug-in SnapCenter per funzioni MySQL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter si integra con l'applicazione plug-in e con le tecnologie NetApp del sistema storage. Per lavorare con il plug-in per database MySQL, si utilizza l'interfaccia utente grafica di SnapCenter.
+
+* *Interfaccia utente grafica unificata*
++
+L'interfaccia SnapCenter offre standardizzazione e coerenza tra plug-in e ambienti. L'interfaccia di SnapCenter consente di completare operazioni di backup, ripristino e clonazione coerenti tra i plug-in, utilizzare report centralizzati, utilizzare visualizzazioni dashboard a colpo d'occhio, impostare RBAC (role-based access control) e monitorare i processi in tutti i plug-in.
+
+* *Amministrazione centrale automatizzata*
++
+È possibile pianificare le operazioni di backup, configurare la conservazione dei backup basata su policy ed eseguire operazioni di ripristino. Puoi anche monitorare in modo proattivo il tuo ambiente configurando SnapCenter per l'invio di avvisi e-mail.
+
+* *Tecnologia di copia istantanea NetApp senza interruzioni*
++
+SnapCenter utilizza la tecnologia snapshot NetApp con il plug-in per database MySQL per eseguire il backup delle risorse.
+
+
+
+L'utilizzo del plug-in per MySQL offre anche i seguenti vantaggi:
+
+* Supporto per flussi di lavoro di backup, ripristino e clonazione
+* Sicurezza supportata da RBAC e delega centralizzata dei ruoli
++
+È inoltre possibile impostare le credenziali in modo che gli utenti SnapCenter autorizzati dispongano delle autorizzazioni a livello di applicazione.
+
+* Creazione di copie delle risorse efficienti in termini di spazio e point-in-time per il test o l'estrazione dei dati utilizzando la tecnologia NetApp FlexClone
++
+È necessaria una licenza FlexClone sul sistema storage in cui si desidera creare il clone.
+
+* Supporto della funzionalità snapshot del gruppo di coerenza (CG) di ONTAP durante la creazione dei backup.
+* Possibilità di eseguire più backup contemporaneamente su più host di risorse
++
+In una singola operazione, gli snapshot vengono consolidati quando le risorse di un singolo host condividono lo stesso volume.
+
+* Possibilità di creare snapshot utilizzando comandi esterni.
+* Supporto per Linux LVM su file system XFS.
+

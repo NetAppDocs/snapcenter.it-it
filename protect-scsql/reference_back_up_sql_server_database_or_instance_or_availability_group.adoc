@@ -24,7 +24,7 @@ image::../media/scsql_backup_workflow.png[Workflow di backup SCSQL]
 
 NOTE: Le opzioni Backup Now (Backup ora), Restore (Ripristina), Manage Backup (Gestisci backup) e Clone (Clona) nella pagina Resources (risorse) sono disattivate se si seleziona un LUN non NetApp, un database danneggiato o un database da ripristinare.
 
-È inoltre possibile utilizzare i cmdlet PowerShell manualmente o negli script per eseguire operazioni di backup, ripristino, ripristino, verifica e clonazione. Per informazioni dettagliate sui cmdlet di PowerShell, consultare la guida in linea del cmdlet di SnapCenter o la https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["Guida di riferimento al cmdlet del software SnapCenter"]
+È inoltre possibile utilizzare i cmdlet PowerShell manualmente o negli script per eseguire operazioni di backup, ripristino, ripristino, verifica e clonazione. Per informazioni dettagliate sui cmdlet di PowerShell, utilizzare la guida dei cmdlet di SnapCenter o vedere la https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guida di riferimento al cmdlet del software SnapCenter"]
 
 
 

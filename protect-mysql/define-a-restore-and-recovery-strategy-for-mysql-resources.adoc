@@ -1,0 +1,23 @@
+---
+permalink: protect-mysql/define-a-restore-and-recovery-strategy-for-mysql-resources.html 
+sidebar: sidebar 
+keywords: restore and recovery strategy, MySQL resources, snapcenter 
+summary: È necessario definire una strategia prima di ripristinare e ripristinare il database in modo da poter eseguire correttamente le operazioni di ripristino e ripristino. 
+---
+= Definire una strategia di ripristino e ripristino per le risorse MySQL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario definire una strategia prima di ripristinare e ripristinare il database in modo da poter eseguire correttamente le operazioni di ripristino e ripristino.
+
+
+NOTE: È supportato solo il ripristino manuale del database.
+
+.Fasi
+. Determinare le strategie di ripristino supportate per le risorse MySQL aggiunte manualmente
+. Determinare le strategie di ripristino supportate per i database MySQL rilevati automaticamente
+. Decidere il tipo di operazioni di ripristino che si desidera eseguire.
+

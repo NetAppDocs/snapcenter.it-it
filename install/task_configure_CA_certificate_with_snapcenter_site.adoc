@@ -24,6 +24,10 @@ summary: 'È necessario configurare il certificato CA con il sito SnapCenter sul
 . Fare clic su *Edit* (Modifica).
 . Dall'elenco a discesa SSL certificate (certificato SSL), selezionare il certificato SSL importato di recente.
 . Fare clic su *OK*.
++
+
+NOTE: Il sito dell'utilità di pianificazione SnapCenter (porta predefinita: 8154, HTTPS) è configurato con un certificato autofirmato. Questa porta comunica all'interno dell'host del server SnapCenter e non è obbligatoria la configurazione con un certificato CA. Tuttavia, se l'ambiente in uso richiede l'utilizzo di un certificato CA, ripetere i passaggi da 5 a 9 utilizzando il sito Utilità di pianificazione di SnapCenter.
+
 
 
 

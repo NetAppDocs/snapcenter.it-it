@@ -1,0 +1,87 @@
+---
+permalink: protect-postgresql/create-backup-policies-for-postgresql.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for PostgreSQL 
+summary: Prima di utilizzare SnapCenter per eseguire il backup delle risorse cluster PostgreSQL, è necessario creare un criterio di backup per la risorsa o il gruppo di risorse di cui si desidera eseguire il backup. Un criterio di backup è un insieme di regole che regolano la gestione, la pianificazione e la conservazione dei backup. 
+---
+= Creare criteri di backup per PostgreSQL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di utilizzare SnapCenter per eseguire il backup delle risorse PostgreSQL, è necessario creare un criterio di backup per la risorsa o il gruppo di risorse di cui si desidera eseguire il backup. Un criterio di backup è un insieme di regole che regolano la gestione, la pianificazione e la conservazione dei backup.
+
+.Prima di iniziare
+* È necessario aver definito la strategia di backup.
++
+Per informazioni dettagliate, vedere le informazioni sulla definizione di una strategia di protezione dei dati per i cluster PostgreSQL.
+
+* Devi essere preparato per la protezione dei dati completando attività come l'installazione di SnapCenter, l'aggiunta di host, la configurazione delle connessioni del sistema di storage e l'aggiunta di risorse.
+* L'amministratore di SnapCenter deve aver assegnato le SVM per i volumi di origine e destinazione se si sta replicando gli snapshot in un mirror o un vault.
++
+Inoltre, è possibile specificare le impostazioni di replica, script e applicazione nel criterio. Queste opzioni consentono di risparmiare tempo quando si desidera riutilizzare il criterio per un altro gruppo di risorse.
+
+
+
+.A proposito di questa attività
+* SnapLock
++
+** Se è selezionata l'opzione "conserva le copie di backup per un numero specifico di giorni", il periodo di conservazione SnapLock deve essere minore o uguale ai giorni di conservazione menzionati.
+** La specifica di un periodo di blocco dello snapshot impedisce l'eliminazione degli snapshot fino alla scadenza del periodo di conservazione. Ciò potrebbe portare a mantenere un numero maggiore di snapshot rispetto al conteggio specificato nel criterio.
+** Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dagli snapshot del vault di SnapLock come parte del ripristino ereditano il tempo di scadenza del vault di SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
+
+
+
+
+
+NOTE: Le impostazioni SnapLock primarie vengono gestite nel criterio di backup SnapCenter e le impostazioni SnapLock secondarie vengono gestite da ONTAP.
+
+.Fasi
+. Nel riquadro di spostamento di sinistra, fare clic su *Impostazioni*.
+. Nella pagina Impostazioni, fare clic su *Criteri*.
+. Fare clic su *nuovo*.
+. Nella pagina Name (Nome), immettere il nome e la descrizione della policy.
+. Nella pagina tipo di criterio, effettuare le seguenti operazioni:
++
+.. Selezionare il tipo di archiviazione.
+.. Nella sezione *Impostazioni di backup personalizzate*, specificare le impostazioni di backup specifiche da passare al plug-in in formato key-value.
++
+È possibile fornire più valori chiave da passare al plug-in.
+
+
+
+. Nella pagina istantanea, specificare il tipo di pianificazione selezionando *su richiesta*, *orario*, *giornaliero*, *Settimanale* o *mensile*.
++
+
+NOTE: È possibile specificare la pianificazione (data di inizio, data di fine e frequenza) per l'operazione di backup durante la creazione di un gruppo di risorse. Ciò consente di creare gruppi di risorse che condividono la stessa policy e frequenza di backup, ma consente anche di assegnare diverse pianificazioni di backup a ogni policy.
+
++
+image::../media/backup_settings.gif[impostazioni di backup]
+
++
+
+NOTE: Se sono previste le 2:00, la programmazione non verrà attivata durante l'ora legale (DST).
+
+. Nella sezione Impostazioni istantanea, specificare il numero di istantanee che si desidera conservare.
+. Nella pagina conservazione, specificare le impostazioni di conservazione per il tipo di backup e il tipo di pianificazione selezionati nella pagina tipo di backup:
++
+|===
+| Se si desidera... | Quindi... 
+
+
+ a| 
+Conservare un certo numero di snapshot
+ a| 
+Selezionare *copie da conservare*, quindi specificare il numero di istantanee che si desidera conservare.
+
+Se il numero di istantanee supera il numero specificato, le istantanee vengono eliminate con le copie meno recenti eliminate per prime.
+
+|===
++
+
+IMPORTANT: Per i backup basati su copia Snapshot, è necessario impostare il numero di conservazione su 2 o superiore se si intende attivare la replica SnapVault. Se si imposta il conteggio della conservazione su 1, l'operazione di conservazione potrebbe non riuscire perché il primo snapshot è lo snapshot di riferimento per la relazione SnapVault finché non viene replicato nella destinazione uno snapshot più recente.
+
+. Esaminare il riepilogo, quindi fare clic su *fine*.
+

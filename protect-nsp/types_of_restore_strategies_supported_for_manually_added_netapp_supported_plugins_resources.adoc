@@ -1,0 +1,35 @@
+---
+permalink: protect-nsp/types_of_restore_strategies_supported_for_manually_added_netapp_supported_plugins_resources.html 
+sidebar: sidebar 
+keywords: SnapCenter 
+summary: È necessario definire una strategia prima di poter eseguire correttamente le operazioni di ripristino utilizzando SnapCenter. Esistono due tipi di strategie di ripristino per le risorse dei plug-in supportati da NetApp aggiunte manualmente. Non è possibile ripristinare manualmente le risorse dei plug-in NetApp supportati. 
+---
+= Tipi di strategie di ripristino supportate per le risorse dei plug-in supportate da NetApp aggiunte manualmente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario definire una strategia prima di poter eseguire correttamente le operazioni di ripristino utilizzando SnapCenter. Esistono due tipi di strategie di ripristino per le risorse dei plug-in supportati da NetApp aggiunte manualmente.
+
+
+NOTE: Non è possibile ripristinare manualmente le risorse dei plug-in NetApp supportati.
+
+
+
+== Ripristino completo delle risorse
+
+* Ripristina tutti i volumi, le qtree e le LUN di una risorsa
+
+
+
+NOTE: Se la risorsa contiene volumi o qtree, gli Snapshot acquisiti dopo la Snapshot selezionata per il ripristino su tali volumi o qtree vengono eliminati e non possono essere recuperati. Inoltre, se un'altra risorsa è ospitata sugli stessi volumi o qtree, anche tale risorsa viene eliminata.
+
+
+
+== Ripristino a livello di file
+
+* Ripristina i file da volumi, qtree o directory
+* Ripristina solo i LUN selezionati
+

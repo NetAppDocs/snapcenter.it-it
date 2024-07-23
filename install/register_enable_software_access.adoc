@@ -1,0 +1,41 @@
+---
+permalink: install/register_enable_software_access.html 
+sidebar: sidebar 
+keywords: install, snapcenter software, install, register, new customer, NetApp account, enable 
+summary: Se non si dispone di un account NetApp esistente, attenersi alla seguente procedura per registrarsi per accedere al software. 
+---
+= Effettuare la registrazione per accedere al software SnapCenter
+:allow-uri-read: 
+
+
+[role="lead"]
+Puoi accedere al software SnapCenter se sei un nuovo utente di Amazon FSX per NetApp ONTAP o Azure NetApp Files e non hai un account NetApp esistente.
+
+.Prima di iniziare
+* È necessario avere accesso all'ID e-mail aziendale.
+* Se utilizzi Azure NetApp Files, dovresti avere l'ID dell'abbonamento ad Azure.
+* Se utilizzi Amazon FSX per NetApp ONTAP, dovresti avere l'ID del file system del file system FSX per ONTAP.
+
+
+.A proposito di questa attività
+La registrazione è soggetta a convalide di informazioni e può richiedere fino a un giorno per confermare e aggiornare il nuovo account NSS (NetApp Support Site) per accedere "completamente" dall'accesso "ospite".
+
+.Fasi
+. Fare clic https://mysupport.netapp.com/site/user/registration[] per effettuare la registrazione.
+. Inserisci il tuo ID email aziendale, completa la captcha, accetta l'informativa sulla privacy di NetApp e fai clic su *Invia*.
+. Autenticare la registrazione immettendo l'OTP inviato all'ID e-mail e fare clic su *continua*.
+. Nella pagina di completamento della registrazione, immettere i seguenti dettagli per completare la registrazione.
++
+.. Selezionare *cliente NetApp / utente finale*.
+.. Nel campo NUMERO DI SERIE, immettere una delle seguenti opzioni:
++
+*** ID sottoscrizione di Azure se si utilizza Azure NetApp Files.
+*** ID file system se stai utilizzando Amazon FSX per NetApp ONTAP.
+
+
+
+
+
+
+
+NOTE: È possibile inoltrare un ticket all'indirizzo https://mysupport.netapp.com/site/help[] se si verificano problemi durante la registrazione o per conoscere lo stato.

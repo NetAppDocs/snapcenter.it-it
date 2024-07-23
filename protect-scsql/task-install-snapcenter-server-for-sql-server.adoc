@@ -63,22 +63,7 @@ Per un formato nome utente admin locale incorporato, utilizzare _<username>_.
 
 
 
-== Fase 4: Aggiunta di una licenza SnapCenter basata sulla capacità
-
-. Nel riquadro sinistro della GUI di SnapCenter, fare clic su *Impostazioni > Software*, quindi nella sezione licenza fare clic su *+*.
-. Selezionare uno dei due metodi per ottenere la licenza:
-+
-** Immettere le credenziali di accesso al NetApp Support Site per importare le licenze.
-** Individuare il percorso del file di licenza NetApp e fare clic su *Open* (Apri).
-
-
-. Nella pagina Notifiche della procedura guidata, utilizzare la soglia di capacità predefinita del 90%.
-. Fare clic su *fine*.
-
-
-
-
-== Fase 5: Configurare le connessioni del sistema di storage
+== Fase 4: Configurare le connessioni del sistema di storage
 
 . Nel riquadro di sinistra, fare clic su *Storage Systems > New* (sistemi storage > nuovo).
 . Nella pagina Add Storage System (Aggiungi sistema di storage), eseguire le seguenti operazioni:

@@ -33,7 +33,7 @@ NOTE: I cloni di un backup di un mirror flessibile della versione su un volume d
 
 NOTE: I cloni di un backup di un mirror flessibile della versione su un volume di tipo mirror-vault vengono visualizzati nella vista della topologia, ma il numero di backup mirror nella vista della topologia non include il backup flessibile della versione.
 
-Se disponi di una relazione secondaria come SnapMirror Business Continuity (SM-BC), puoi visualizzare le seguenti icone aggiuntive:
+Se disponi di una relazione secondaria come SnapMirror Active Sync (inizialmente rilasciato come SnapMirror Business Continuity [SM-BC]), puoi vedere le seguenti icone aggiuntive:
 
 * image:../media/topology_replica_site_up.png["replica sito up"] implica che il sito di replica è attivo.
 * image:../media/topology_replica_site_down.png["sito di replica inattivo"]  implica che il sito di replica non è attivo.
@@ -61,10 +61,10 @@ Se viene eseguito il backup abilitato SnapLock, facendo clic sul pulsante *Aggio
 Quando la risorsa dell'applicazione è distribuita su più volumi, il tempo di scadenza del SnapLock per il backup sarà il tempo di scadenza del SnapLock più lungo impostato per una Snapshot in un volume. Il tempo di scadenza SnapLock più lungo viene recuperato da ONTAP.
 
 +
-Per SnapMirror Business Continuity (SM-BC), facendo clic sul pulsante *Refresh* (Aggiorna) viene aggiornato l'inventario di backup di SnapCenter eseguendo una query su ONTAP per i siti principali e di replica. Una pianificazione settimanale esegue questa attività anche per tutti i database contenenti relazioni SM-BC.
+Per la sincronizzazione attiva di SnapMirror, facendo clic sul pulsante *Refresh* (Aggiorna) viene aggiornato l'inventario di backup di SnapCenter eseguendo una query in ONTAP per i siti primario e di replica. Questa attività viene eseguita anche da una pianificazione settimanale per tutti i database contenenti una relazione di sincronizzazione attiva di SnapMirror.
 
 +
-** Per le relazioni SM-BC, Async Mirror, Vault o MirrorVault con la nuova destinazione primaria deve essere configurato manualmente dopo il failover.
+** Per la sincronizzazione attiva di SnapMirror e solo per ONTAP 9.14.1, le relazioni Async Mirror o Async MirrorVault nella nuova destinazione primaria devono essere configurate manualmente dopo il failover. Da ONTAP 9.15.1 in poi, Async Mirror o Async MirrorVault vengono configurati automaticamente sulla nuova destinazione primaria.
 ** Dopo il failover, è necessario creare un backup affinché SnapCenter sia consapevole del failover. È possibile fare clic su *Aggiorna* solo dopo aver creato un backup.
 
 
@@ -79,12 +79,6 @@ NOTE: Non è possibile rinominare o eliminare i backup presenti nel sistema di s
 
 +
 Se si utilizzano plug-in personalizzati di SnapCenter, non è possibile rinominare i backup presenti nel sistema di storage primario.
-
-+
-** Se si seleziona un backup di una risorsa o di un gruppo di risorse Oracle, è anche possibile eseguire operazioni di montaggio e smontaggio.
-** Se è stato selezionato un backup del registro di una risorsa o di un gruppo di risorse Oracle, è possibile eseguire operazioni di ridenominazione, montaggio, disinstallazione ed eliminazione.
-** Se si utilizza il pacchetto di plug-in SnapCenter per Linux e il backup è stato catalogato utilizzando Gestione ripristino Oracle (RMAN), non è possibile rinominare i backup catalogati.
-
 
 . Se si desidera eliminare un clone, selezionarlo dalla tabella e fare clic su image:../media/delete_icon.gif["icona elimina"] per eliminare il clone.
 

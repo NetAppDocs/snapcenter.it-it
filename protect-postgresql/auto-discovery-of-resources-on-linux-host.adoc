@@ -1,0 +1,14 @@
+---
+permalink: protect-postgresql/auto-discovery-of-resources-on-linux-host.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for PostgreSQL 
+summary: 'Le risorse sono cluster PostgreSQL e istanze sull"host Linux che sono gestite da SnapCenter. Dopo aver installato il plug-in SnapCenter per il plug-in PostgreSQL, i cluster PostgreSQL su quell"host Linux vengono automaticamente rilevati e visualizzati nella pagina risorse.' 
+---
+= Rilevamento automatico delle risorse sull'host Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le risorse sono cluster PostgreSQL e istanze sull'host Linux che sono gestite da SnapCenter. Dopo aver installato il plug-in SnapCenter per il plug-in PostgreSQL, i cluster PostgreSQL provenienti da tutte le istanze di quell'host Linux vengono automaticamente rilevati e visualizzati nella pagina risorse.

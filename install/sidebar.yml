@@ -20,6 +20,8 @@ entries:
     url: "/install/reference_connection_and_port_requirements.html"
   - title: Licenze SnapCenter
     url: "/install/concept_snapcenter_licenses.html"
+  - title: Effettuare la registrazione per accedere al software SnapCenter
+    url: "/install/register_enable_software_access.html"
   - title: Metodi di autenticazione per le credenziali
     url: "/install/concept_authentication_methods_for_your_credentials.html"
   - title: Connessioni e credenziali di Storage Virtual Machine
@@ -34,11 +36,13 @@ entries:
     - title: Configurare MFA nel server SnapCenter utilizzando PowerShell, SCCLI e
         REST API
       url: "/install/configure_mfa_using_powershell_sccli_restapi.html"
-- title: Installare il server SnapCenter
+- title: Installare il server SnapCenter sull'host Windows
   url: "/install/task_install_the_snapcenter_server_using_the_install_wizard.html"
+- title: Installare il server SnapCenter sull'host Linux
+  url: "/install/install_snapcenter_server_linux.html"
 - title: Accedere a SnapCenter
   url: "/install/task_log_in_to_snapcenter.html"
-- title: Configurare il certificato CA
+- title: Configurare il certificato CA per l'host Windows
   entries:
   - title: Generare il file CSR del certificato CA
     url: "/install/reference_generate_CA_certificate_CSR_file.html"
@@ -52,12 +56,20 @@ entries:
     url: "/install/task_configure_CA_certificate_with_snapcenter_site.html"
   - title: Abilitare i certificati CA per il server SnapCenter
     url: "/install/task_enable_ca_certificates_for_snapcenter.html"
-- title: Configurare e abilitare la comunicazione SSL bidirezionale
+- title: Configurare il certificato CA per l'host Linux
+  url: "/install/configure_ca_certificate_linux_host.html"
+- title: Configurare e abilitare la comunicazione SSL bidirezionale sull'host Windows
   entries:
-  - title: Configurare la comunicazione SSL bidirezionale
+  - title: Configurare la comunicazione SSL bidirezionale sull'host Windows
     url: "/install/task_configure_two_way_ssl.html"
-  - title: Abilitare la comunicazione SSL bidirezionale
+  - title: Attivare la comunicazione SSL bidirezionale sull'host Windows
     url: "/install/task_enable_two_way_ssl.html"
+- title: Configurare e abilitare la comunicazione SSL bidirezionale su host Linux
+  entries:
+  - title: Configurare la comunicazione SSL bidirezionale sull'host Linux
+    url: "/install/configure_two_way_ssl_linux.html"
+  - title: Abilitare la comunicazione SSL sull'host Linux
+    url: "/install/enable_two_way_ssl_linux.html"
 - title: Configurare l'autenticazione basata su certificato
   entries:
   - title: Esportare i certificati dell'autorità di certificazione (CA) dal server
@@ -113,8 +125,6 @@ entries:
   url: "/install/task_add_storage_systems.html"
 - title: Aggiunta di licenze SnapCenter basate su controller standard
   url: "/install/concept_snapcenter_standard_controller_based_licenses.html"
-- title: Aggiunta di licenze SnapCenter basate sulla capacità standard
-  url: "/install/concept_snapcenter_standard_capacity_based_licenses.html"
 - title: Eseguire il provisioning del sistema storage
   entries:
   - title: Eseguire il provisioning dello storage su host Windows
@@ -137,3 +147,5 @@ entries:
   url: "/install/concept_configure_secured_mysql_connections_with_snapcenter_server.html"
 - title: Funzionalità abilitate sull'host Windows durante l'installazione
   url: "/install/reference_features_enabled_on_your_windows_host_during_installation.html"
+- title: Funzioni abilitate sull'host Linux durante l'installazione
+  url: "/install/features_enabled_on_linux_host.html"

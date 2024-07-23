@@ -26,7 +26,7 @@ link:task_back_up_resource_groups_sap_hana.html["Eseguire il backup dei gruppi d
 
 * Se si desidera creare un backup basato su file quando uno o più database tenant sono inattivi, impostare IL parametro ALLOW_FILE_BASED_BACKUP_IFINATTIVO_TENANTS_PRESENT su *YES* nel file di proprietà HANA utilizzando `Set-SmConfigSettings` cmdlet.
 +
-Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo Get-Help _command_name_. In alternativa, fare riferimento alla https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["Guida di riferimento al cmdlet del software SnapCenter"]
+Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo Get-Help _command_name_. In alternativa, fare riferimento anche alla https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guida di riferimento al cmdlet del software SnapCenter"]
 
 * Per i comandi pre e post per le operazioni quiescenza, Snapshot e Unquiesce, è necessario controllare se i comandi sono presenti nell'elenco dei comandi disponibile sull'host del plug-in dai seguenti percorsi:
 +
