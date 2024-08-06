@@ -5515,7 +5515,6 @@
   <block id="91fd94b5750743b0b4db66d235c0cab9" category="list-text">Per visualizzare tutti i cluster aggiunti, selezionare *ONTAP Clusters*.</block>
   <block id="98670eb8cc95dd053ed921df2975cefe" category="list-text">Nell'elenco Storage Connections (connessioni storage), individuare la colonna Controller License (licenza controller).</block>
   <block id="56ea331cb0dea9dc3bddc3e0e2f3ef88" category="paragraph">La colonna Controller License (licenza controller) visualizza il seguente stato:</block>
-  <block id="a909f2df296012a51dc7da77f9e20dc6" category="list-text">Non applicabile indica che una licenza della suite SnapManager non è applicabile perché lo storage controller si trova su piattaforme di storage Cloud Volumes ONTAP, ONTAP Select o secondarie.</block>
   <block id="e7590fb47d0f1f083a0a8a323aa643a0" category="admonition">La licenza basata su controller standard SnapCenter viene visualizzata come licenza SnapManagerSuite sul controller.</block>
   <block id="9865599458fea2a88fc4f94d29ab5c4e" category="list-text">Immettere il comando License show, quindi visualizzare l'output per determinare se la licenza SnapManagerSuite è installata.</block>
   <block id="5b12cbd18ef5bbd432e4411b45e422ad" category="paragraph">Nell'esempio, la licenza SnapManagerSuite è installata, pertanto non sono richieste ulteriori azioni di licenza SnapCenter.</block>
@@ -8790,7 +8789,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="15d048e327e80031abf5c8b2302df43b" category="paragraph">SnapCenter supporta MySQL Server 8.0.37 o versioni successive come database di repository SnapCenter. Se si utilizza una versione precedente di MySQL Server con una versione precedente di SnapCenter, durante l'aggiornamento di SnapCenter, MySQL Server viene aggiornato alla versione 8.0.37 o successiva.</block>
   <block id="1dc4cb439c92e9e74deaa08a6206fd89" category="admonition">SnapCenter supporta anche il bilanciamento del carico elastico (ELB) di AWS e il bilanciamento del carico di Azure.</block>
   <block id="e9782ad9d0230912b51a2e508d0dd653" category="paragraph">Per ulteriori informazioni, vedere<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>.</block>
-  <block id="953ceaee3fd51554dfa1935fc3bed9c7" category="admonition">Le licenze servizi file NAS SnapCenter e SnapCenter sono obsolete e non sono più disponibili. La licenza basata sulla capacità non è più necessaria per Amazon FSX per NetApp ONTAP e Cloud Volumes ONTAP.</block>
   <block id="c11dc4986aae3f449b65e2cc978cb5da" category="paragraph">Installare una o più licenze SnapCenter. Per informazioni su come aggiungere licenze, vedere <block ref="978050eb868e07441781781da059ebc5" category="inline-link-macro-rx"></block>.</block>
   <block id="b69cd8afc7ba47f5300e7eb1864b6e2f" category="admonition">La rimozione manuale di una licenza di prova è necessaria solo se si utilizza una licenza basata su controller standard SnapCenter.</block>
   <block id="de07b96d6e0726ed58c0b7506fed6a37" category="paragraph">Per informazioni sui cmdlet, vedere<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>.</block>
@@ -8953,7 +8951,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="58eaebf972358f1cf03d386a4ade1a0f" category="list-title">Quali sono le prossime novità?</block>
   <block id="eafc328b587e3beef3dbe108a3dedcf8" category="list-text">Se lo stato _SELinux_ è "abilitato" e la _modalità corrente_ è "enforcing", il servizio *nginx* non si avvia. Si consiglia di eseguire i seguenti comandi:</block>
   <block id="9c7abc376e895129105e281972c9f24c" category="list-text">Vai alla home directory.</block>
-  <block id="fffce54e1b9446cd2fa32f9d3350c088" category="list-text">Eseguire il comando:<block ref="4a8e78821c4854328b05bdd52e9bee4b" prefix=" " category="inline-code"></block>.</block>
   <block id="dbc1e96eaa4b3649ea27aa8dc172aef0" category="list-text">Se la porta interna di webapp (8147) non può essere ascoltata, eseguire i seguenti comandi:</block>
   <block id="d8febff31d9105c404a858b1d61e0262" category="list-text"><block ref="d59b1175be1c68f2945ba0ad1856a015" prefix="" category="inline-code"></block></block>
   <block id="f1c7a9d24546d515c477f616b931f8fe" category="list-text"><block ref="d772e354c2fa82d230ec267576cbcac4" prefix="" category="inline-code"></block></block>
@@ -9875,4 +9872,8 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="57318c547ffe570761f4a3f4b7899d67" category="sidebar">Ripristinare PostgreSQL utilizzando i cmdlet di PowerShell</block>
   <block id="480aaec5aa69b781016a62284565640a" category="sidebar">Clona i backup delle risorse PostgreSQL</block>
   <block id="680c5ccf46f4a728694c590785dc9cda" category="sidebar">Clonazione di un backup di un cluster PostgreSQL</block>
+  <block id="881cbdbe2345b7472ef428b8c524734a" category="admonition">Le licenze servizi file NAS SnapCenter e SnapCenter sono obsolete e non sono più disponibili. La licenza basata sulla capacità non è più necessaria per Amazon FSX per NetApp ONTAP e Cloud Volumes ONTAP. Per Azure NetApp Files non sono richieste le licenze standard e la licenza basata sulla capacità.</block>
+  <block id="eba5bfa2c0dc8d9f24998cf70fa891a6" category="list-text">Non applicabile indica che una licenza della suite SnapManager non è applicabile perché lo storage controller è su Amazon FSX per piattaforme di storage NetApp ONTAP, Cloud Volumes ONTAP, ONTAP Select o secondarie.</block>
+  <block id="4e07c38c016a099592ed905ac7e037f7" category="list-text">Eseguire il comando:<block ref="1031a5113d1c9ac03f4fa3db4c69d3a4" prefix=" " category="inline-code"></block>.</block>
+  <block id="a2706d1c365c79f6f2378228b67eb95a" category="admonition">Per Azure NetApp Files non sono richieste le licenze standard e la licenza basata sulla capacità.</block>
 </blocks>

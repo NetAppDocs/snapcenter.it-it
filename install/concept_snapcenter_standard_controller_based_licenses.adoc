@@ -54,7 +54,7 @@ La colonna Controller License (licenza controller) visualizza il seguente stato:
 +
 ** image:../media/controller_licensed_icon.gif["Icona di un segno di spunta"] Indica che una licenza della suite SnapManager è installata su un sistema di storage primario FAS, AFF o ASA.
 ** image:../media/controller_not_licensed_icon.gif["Icona di annullamento"] Indica che la licenza della suite SnapManager non è installata su un sistema di storage primario FAS, AFF o ASA.
-** Non applicabile indica che una licenza della suite SnapManager non è applicabile perché lo storage controller si trova su piattaforme di storage Cloud Volumes ONTAP, ONTAP Select o secondarie.
+** Non applicabile indica che una licenza della suite SnapManager non è applicabile perché lo storage controller è su Amazon FSX per piattaforme di storage NetApp ONTAP, Cloud Volumes ONTAP, ONTAP Select o secondarie.
 
 
 

@@ -87,7 +87,7 @@ NOTE: Si consiglia, ma non è necessario, di aggiungere le licenze standard di S
 
 |===
 
-NOTE: Le licenze servizi file NAS SnapCenter e SnapCenter sono obsolete e non sono più disponibili. La licenza basata sulla capacità non è più necessaria per Amazon FSX per NetApp ONTAP e Cloud Volumes ONTAP.
+NOTE: Le licenze servizi file NAS SnapCenter e SnapCenter sono obsolete e non sono più disponibili. La licenza basata sulla capacità non è più necessaria per Amazon FSX per NetApp ONTAP e Cloud Volumes ONTAP. Per Azure NetApp Files non sono richieste le licenze standard e la licenza basata sulla capacità.
 
 Installare una o più licenze SnapCenter. Per informazioni su come aggiungere licenze, vedere link:../install/concept_snapcenter_standard_controller_based_licenses.html["Aggiunta di licenze SnapCenter basate su controller standard"].
 

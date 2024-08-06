@@ -15,6 +15,9 @@ summary: 'Configurare l"account di storage Azure in SnapCenter.'
 
 L'account di storage Azure contiene dettagli sull'ID della sottoscrizione, la credenziale Azure e l'account Azure NetApp.
 
+
+NOTE: Per Azure NetApp Files non sono richieste le licenze standard e la licenza basata sulla capacità.
+
 .Fasi
 . Nel riquadro di navigazione a sinistra, fare clic su *Storage Systems*.
 . Nella pagina sistemi di archiviazione, selezionare *Azure NetApp Files* e fare clic su *nuovo*.
