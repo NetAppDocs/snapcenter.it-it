@@ -3554,8 +3554,6 @@
   <block id="f99510060ae91e89fdabd39c0e222578" category="paragraph">Se si desidera comunque specificare la posizione dei file di log dell'archivio esterno, selezionare *specifica le posizioni esterne del log dell'archivio*.</block>
   <block id="5207ebbbc32a1a4bd295b43498ad0913" category="paragraph">Se i log di archiviazione vengono annullati come parte del backup e sono stati montati manualmente i backup del log di archiviazione richiesti, è necessario specificare il percorso di backup montato come posizione del log di archiviazione esterno per il ripristino.</block>
   <block id="07a2a06d39605aa9ff4e7d9c550b1f32" category="admonition">Verificare il percorso e il contenuto del percorso di montaggio prima di inserirlo come percorso di log esterno.</block>
-  <block id="58fa648380c73e758318652a30ff424d" category="inline-link">Report tecnico di NetApp 4591: Backup, ripristino, replica e DR per la protezione dei dati del database</block>
-  <block id="5e8af025f634ab1bdb43a04eac96f1c3" category="list-text"><block ref="5e8af025f634ab1bdb43a04eac96f1c3" category="inline-link-rx"></block></block>
   <block id="d4242c48bd0d5641374fbc107c7d9f14" category="inline-link">Operazione non riuscita con errore ora-00308</block>
   <block id="79ca58af823b457a1798d606cfd6d6ae" category="list-text"><block ref="79ca58af823b457a1798d606cfd6d6ae" category="inline-link-rx"></block></block>
   <block id="73ee3801ba5f54ed62d44865741a046d" category="paragraph">Non è possibile eseguire il ripristino con il ripristino da backup secondari se i volumi di log dell'archivio non sono protetti ma i volumi di dati sono protetti. È possibile eseguire il ripristino solo selezionando *No recovery*.</block>
@@ -9876,4 +9874,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="eba5bfa2c0dc8d9f24998cf70fa891a6" category="list-text">Non applicabile indica che una licenza della suite SnapManager non è applicabile perché lo storage controller è su Amazon FSX per piattaforme di storage NetApp ONTAP, Cloud Volumes ONTAP, ONTAP Select o secondarie.</block>
   <block id="4e07c38c016a099592ed905ac7e037f7" category="list-text">Eseguire il comando:<block ref="1031a5113d1c9ac03f4fa3db4c69d3a4" prefix=" " category="inline-code"></block>.</block>
   <block id="a2706d1c365c79f6f2378228b67eb95a" category="admonition">Per Azure NetApp Files non sono richieste le licenze standard e la licenza basata sulla capacità.</block>
+  <block id="9e19caeb431a5e29a1a63e3cee4b36c9" category="inline-link">Data Protection di Oracle con ONTAP</block>
+  <block id="d118010bb2b3542007c6749bfd237123" category="list-text"><block ref="d118010bb2b3542007c6749bfd237123" category="inline-link-rx"></block></block>
 </blocks>

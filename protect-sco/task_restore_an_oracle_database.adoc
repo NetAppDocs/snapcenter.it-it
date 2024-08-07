@@ -176,7 +176,7 @@ Se i log di archiviazione vengono annullati come parte del backup e sono stati m
 
 NOTE: Verificare il percorso e il contenuto del percorso di montaggio prima di inserirlo come percorso di log esterno.
 
-** http://www.netapp.com/us/media/tr-4591.pdf["Report tecnico di NetApp 4591: Backup, ripristino, replica e DR per la protezione dei dati del database"^]
+** https://docs.netapp.com/us-en/ontap-apps-dbs/oracle/oracle-dp-overview.html["Data Protection di Oracle con ONTAP"^]
 ** https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/ORA-00308%3A_cannot_open_archived_log_ORA_LOG_arch1_123_456789012.arc["Operazione non riuscita con errore ora-00308"^]
 
 
