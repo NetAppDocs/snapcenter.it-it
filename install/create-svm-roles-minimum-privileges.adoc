@@ -39,6 +39,9 @@ NOTE: Ripetere questo comando per ogni autorizzazione.
 
 Esistono diversi comandi dell'interfaccia utente di ONTAP da eseguire per creare ruoli SVM e assegnare autorizzazioni.
 
+
+NOTE: A partire da 5,0, gli utenti amministrativi dei vserver sono supportati solo con API REST. Se si desidera creare ruoli utilizzando un amministratore non vserver, è necessario utilizzare ZAPI.
+
 * `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "snapmirror list-destinations" -access all`
 * `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "event generate-autosupport-log" -access all`
 * `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "job history show" -access all`

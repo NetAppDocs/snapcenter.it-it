@@ -39,6 +39,9 @@ NOTE: Ripetere questo comando per ogni autorizzazione.
 
 Esistono diversi comandi dell'interfaccia utente di ONTAP da eseguire per creare ruoli cluster e assegnare autorizzazioni.
 
+
+NOTE: A partire da SnapCenter 5,0, gli utenti degli amministratori dei cluster sono supportati solo con API REST. Se si desidera creare ruoli utilizzando un amministratore non cluster, è necessario utilizzare ZAPI.
+
 * `security login role create -vserver Cluster_name or cluster_name -role Role_Name -cmddirname "metrocluster show" -access readonly`
 * `security login role create -vserver Cluster_name or cluster_name -role Role_Name -cmddirname "cluster identity modify" -access all`
 * `security login role create -vserver Cluster_name -role Role_Name -cmddirname "cluster identity show" -access all`
