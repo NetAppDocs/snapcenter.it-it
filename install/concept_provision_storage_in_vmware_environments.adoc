@@ -31,7 +31,7 @@ Supporta il controller SCSI paravirtuale VMware. È possibile supportare 256 dis
 
 
 
-Per informazioni aggiornate sulle versioni supportate, vedere https://imt.netapp.com/matrix/imt.jsp?components=116926;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^].
+Per informazioni aggiornate sulle versioni supportate, vedere https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^].
 
 
 
