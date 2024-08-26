@@ -91,7 +91,7 @@ Per informazioni, fare riferimento a:
 
 . Aggiungere il nuovo host a SnapCenter.
 . Verificare se tutte le risorse sono state rilevate.
-. Eseguire l'API di aggiornamento dell'host: `/5.0/techrefresh/host` Oppure il cmdlet: _Invoke-SmTechRefreshHost_.
+. Eseguire l'API di aggiornamento dell'host: O il cmdlet: `/<snapcenter_version>/techrefresh/host` _Invoke-SmTechRefreshHost_.
 +
 
 NOTE: La seriografia a secco è attivata per impostazione predefinita e vengono identificate le risorse corrispondenti da ricollegare. È possibile verificare le risorse eseguendo l'API: '/Jobs/{jobid}' o il cmdlet _get-SmJobSummaryReport_.
