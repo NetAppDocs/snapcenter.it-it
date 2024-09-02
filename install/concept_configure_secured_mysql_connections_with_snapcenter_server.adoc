@@ -95,16 +95,16 @@ ssl-key="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/client-key.pem"
 ----
 . Arrestare l'applicazione Web del server SnapCenter nel server di informazioni Internet (IIS).
 . Riavviare il servizio MySQL.
-. Aggiornare il valore della chiave MySQLProtocol nel file web.config.
+. Aggiornare il valore della chiave MySQLProtocol nel file SnapManager.Web.UI.dll.config.
 +
-Nell'esempio seguente viene illustrato il valore della chiave MySQLProtocol aggiornata nel file web.config.
+Nell'esempio seguente viene illustrato il valore della chiave MySQLProtocol aggiornata nel file SnapManager.Web.UI.dll.config.
 
 +
 [listing]
 ----
 <add key="MySQLProtocol" value="SSL" />
 ----
-. Aggiornare il file web.config con i percorsi forniti nella sezione [client] del file my.ini.
+. Aggiornare il file SnapManager.Web.UI.dll.config con i percorsi forniti nella sezione [client] del file my.ini.
 +
 L'esempio seguente mostra i percorsi aggiornati nella sezione [client] del file my.ini.
 
@@ -279,16 +279,16 @@ ssl-key="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/server-key.pem"
 
 . Arrestare l'applicazione Web del server SnapCenter in IIS su entrambi i nodi ha.
 . Riavviare il servizio MySQL su entrambi i nodi ha.
-. Aggiornare il valore della chiave MySQLProtocol nel file web.config per entrambi i nodi ha.
+. Aggiornare il valore della chiave MySQLProtocol nel file SnapManager.Web.UI.dll.config per entrambi i nodi ha.
 +
-Nell'esempio seguente viene illustrato il valore della chiave MySQLProtocol aggiornata nel file web.config.
+Nell'esempio seguente viene illustrato il valore della chiave MySQLProtocol aggiornata nel file SnapManager.Web.UI.dll.config.
 
 +
 [listing]
 ----
 <add key="MySQLProtocol" value="SSL" />
 ----
-. Aggiornare il file web.config con i percorsi specificati nella sezione [client] del file my.ini per entrambi i nodi ha.
+. Aggiornare il file SnapManager.Web.UI.dll.config con i percorsi specificati nella sezione [client] del file my.ini per entrambi i nodi ha.
 +
 L'esempio seguente mostra i percorsi aggiornati nella sezione [client] dei file my.ini.
 

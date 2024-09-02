@@ -13,7 +13,7 @@ summary: 'SnapCenter supporta un"ampia gamma di tipi di storage su macchine fisi
 [role="lead"]
 SnapCenter supporta un'ampia gamma di tipi di storage su macchine fisiche e virtuali. Prima di installare il pacchetto per l'host, è necessario verificare se il supporto è disponibile per il tipo di storage in uso.
 
-Il provisioning SnapCenter e il supporto per la protezione dei dati sono disponibili su Windows Server. Per informazioni aggiornate sulle versioni supportate, consulta https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT[][Tool della matrice di interoperabilità NetApp^].
+Il provisioning SnapCenter e il supporto per la protezione dei dati sono disponibili su Windows Server. Per informazioni aggiornate sulle versioni supportate, vedere https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^].
 
 |===
 | Macchina | Tipo di storage | Eseguire il provisioning utilizzando | Note di supporto 
@@ -47,8 +47,6 @@ Condivisioni SMB3 (CIFS) che risiedono su una macchina virtuale di storage (SVM)
 GUI SnapCenter o cmdlet PowerShell
  a| 
 Supporto solo per il provisioning.
-
-Non è possibile utilizzare SnapCenter per eseguire il backup di dati o condivisioni utilizzando il protocollo SMB.
 
 
 
@@ -90,8 +88,6 @@ Un sistema guest connesso alle condivisioni SMB3 che risiedono su una SVM
 GUI SnapCenter o cmdlet PowerShell
  a| 
 Supporto solo per il provisioning.
-
-Non è possibile utilizzare SnapCenter per eseguire il backup di dati o condivisioni utilizzando il protocollo SMB.
 
 
 
@@ -139,8 +135,6 @@ Un sistema guest connesso alle condivisioni SMB3 che risiedono su una SVM
 GUI SnapCenter o cmdlet PowerShell
  a| 
 Supporto solo per il provisioning.
-
-Non è possibile utilizzare SnapCenter per eseguire il backup di dati o condivisioni utilizzando il protocollo SMB.
 
 
 NOTE: I dischi pass-through Hyper-V e il backup dei database su VHD(x) forniti sullo storage NetApp non sono supportati.
