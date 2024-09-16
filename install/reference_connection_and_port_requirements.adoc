@@ -61,11 +61,20 @@ Per personalizzare la porta, vedere https://docs.netapp.com/us-en/snapcenter/ins
  a| 
 Porta del servizio di pianificazione
  a| 
-8154 (HTTPS),
+8154 (HTTPS)
 
 Questa porta viene utilizzata per orchestrare i flussi di lavoro dello scheduler SnapCenter per tutti i plug-in gestiti all'interno dell'host server SnapCenter in modo centralizzato.
 
 Per personalizzare la porta, vedere https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["Installare il server SnapCenter utilizzando l'installazione guidata."]
+
+
+
+ a| 
+Porto di RabbitMQ
+ a| 
+5672 (tcp)
+
+Questa è la porta predefinita su cui RabbitMQ ascolta e viene utilizzata per la comunicazione tra il servizio Scheduler e SnapCenter sul modello di editore-abbonato.
 
 
 

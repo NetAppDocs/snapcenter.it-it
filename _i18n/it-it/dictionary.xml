@@ -5181,12 +5181,6 @@
   <block id="dc8e501a9233533430803735faab6a4a" category="paragraph">Anche se lo stato della replica è integro, l'opzione -Force consente di ricostruire il repository slave.</block>
   <block id="14c90652b0a2e523d6e8630706107e75" category="summary">Il software SnapCenter può essere utilizzato su più browser.</block>
   <block id="6d84e3718084e0db779da4ff8791a2f2" category="doc">Browser supportati</block>
-  <block id="ebe4f447bd3316e4f81ab2a6d2f26810" category="list-text">Internet Explorer</block>
-  <block id="74e84f9442fdb7717385ee092400869a" category="paragraph">L'interfaccia utente di SnapCenter non viene caricata correttamente se si utilizza IE 10 o versioni precedenti. È necessario eseguire l'aggiornamento a IE 11.</block>
-  <block id="8b45fc0c82a493bebd2ae705881299e0" category="list-text">È supportata solo la sicurezza di livello predefinito.</block>
-  <block id="8c39fdaac8e8c7ec5824fd1acda14c9a" category="paragraph">Le modifiche apportate alle impostazioni di protezione di Internet Explorer comportano problemi significativi di visualizzazione del browser.</block>
-  <block id="c5c74f2a0046f37ca93f6d8e3c775364" category="list-text">La visualizzazione della compatibilità di Internet Explorer deve essere disattivata.</block>
-  <block id="a5c41f715c1b8a880253846c025624e9" category="list-text">Microsoft Edge</block>
   <block id="3eae407dfe0e4c7f1efa654af1ad8d78" category="summary">Se non si desidera utilizzare l'interfaccia grafica di SnapCenter per eseguire il provisioning host e i processi di recupero dello spazio, è possibile utilizzare i cmdlet PowerShell forniti dal plug-in SnapCenter per Microsoft Windows. È possibile utilizzare i cmdlet direttamente o aggiungerli agli script.</block>
   <block id="7237d45fe61f4bbc73cd8a2c246ec386" category="doc">Eseguire il provisioning dello storage utilizzando i cmdlet PowerShell</block>
   <block id="9da496a6d2e4812b4deab34ab555bde8" category="paragraph">Se si eseguono i cmdlet su un host plug-in remoto, è necessario eseguire il cmdlet SnapCenter Open-SMConnection per aprire una connessione al server SnapCenter.</block>
@@ -7459,7 +7453,6 @@
   <block id="46d55a8aefdec15a8ce44087c8123826" category="inline-link">Operazione non riuscita con errore Impossibile rilevare il dispositivo per il LUN</block>
   <block id="24642a08e354f43168ca4f1178850f84" category="list-text">Assicurarsi che il LUN non sia mappato all'host AIX utilizzando iGroup costituito da protocolli misti iSCSI e FC. Per ulteriori informazioni, vedere<block ref="94f247529a6b6f563b3a8d4772877431" category="inline-link-rx"></block>.</block>
   <block id="4fb437564892944d73f87c822342e2bb" category="cell">4.8</block>
-  <block id="028a3c414b2f36abce9baa1df750ef89" category="admonition">La lunghezza della chiave RSA del certificato CA deve essere di almeno 3072 bit.</block>
   <block id="36fecb1daf18c8eeaacbcc8cdc70f4a6" category="paragraph">ONTAP primario e secondario possono essere ONTAP FAS, AFF, All SAN Array (ASA), Select o Cloud ONTAP.</block>
   <block id="d21fbb2a5ce79a2a4ef0780b73023b2e" category="paragraph">Montaggi fisici e diretti NFS sugli host VM (VMDK e LUN RDM non sono supportati).</block>
   <block id="f2688d5a483bee7fcbd80a4e666fc088" category="inline-link">documentazione delle utility host</block>
@@ -8924,7 +8917,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="cf46417d06a0356fc053eba2626759a2" category="list-text">Selezionare il provider di fatturazione.</block>
   <block id="98d7dda5167a79acadd993f0ad819512" category="list-text">Immettere l'ID istanza SnapCenter di 20 cifre.</block>
   <block id="a22e3c4898555ed30acf91192f3c301a" category="paragraph">Porta del servizio di pianificazione</block>
-  <block id="f494773247b901f17fbe90691d43594a" category="paragraph">8154 (HTTPS),</block>
   <block id="0703d446ecd330b75f76dab17472df37" category="paragraph">Questa porta viene utilizzata per orchestrare i flussi di lavoro dello scheduler SnapCenter per tutti i plug-in gestiti all'interno dell'host server SnapCenter in modo centralizzato.</block>
   <block id="e029a63ec5a2d5331a40bbf8a483cc16" category="paragraph">3306 (HTTPS), bidirezionale, personalizzabile</block>
   <block id="10dbf6dc6b3b30fd58efded1253516d8" category="paragraph">Plug-in SnapCenter per database Exchange</block>
@@ -9883,4 +9875,10 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="0512eab1623a615d3740da31907b5d7c" category="list-text">Aggiornare il valore della chiave MySQLProtocol nel file SnapManager.Web.UI.dll.config per entrambi i nodi ha.</block>
   <block id="e20a4407f4a132523f0ff53a11de8ea9" category="paragraph">Nell'esempio seguente viene illustrato il valore della chiave MySQLProtocol aggiornata nel file SnapManager.Web.UI.dll.config.</block>
   <block id="282f609628cc0aa1febc1031254fda4e" category="list-text">Aggiornare il file SnapManager.Web.UI.dll.config con i percorsi specificati nella sezione [client] del file my.ini per entrambi i nodi ha.</block>
+  <block id="be9f9eca92a7b91f5cf9f485b92f2f33" category="admonition">La lunghezza della chiave RSA del certificato CA deve essere di almeno 3072 bit.</block>
+  <block id="76f30afe00c2fd9de2c57b507789aa7c" category="paragraph">8154 (HTTPS)</block>
+  <block id="064270f4c1b637c782011391ccc057cb" category="paragraph">Porto di RabbitMQ</block>
+  <block id="310b8da14055c2cf4702264e02854d3d" category="paragraph">5672 (tcp)</block>
+  <block id="c55a170d16570920e099a9e43d38db67" category="paragraph">Questa è la porta predefinita su cui RabbitMQ ascolta e viene utilizzata per la comunicazione tra il servizio Scheduler e SnapCenter sul modello di editore-abbonato.</block>
+  <block id="f5a551e6a3161ca6d9ee33d926d734d5" category="list-text">Microsoft Edge 110.0.1587.17 e versioni successive</block>
 </blocks>
