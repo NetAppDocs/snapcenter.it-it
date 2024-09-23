@@ -40,6 +40,10 @@ Per Linux: _/var/opt/snapcenter/scc/allowed_comands_list.txt_
 
 NOTE: Se i comandi non sono presenti nell'elenco dei comandi, l'operazione avrà esito negativo.
 
+[role="tabbed-block"]
+====
+.SnapCenter UI
+--
 .Fasi
 . Nel riquadro di spostamento di sinistra, selezionare *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina Resource, filtrare le risorse dall'elenco a discesa *View* in base al tipo di risorsa.
@@ -162,3 +166,154 @@ Per aumentare la dimensione dell'heap Java, individuare il file script _/opt/net
 
 
 
+
+--
+.Cmdlet PowerShell
+--
+.Fasi
+. Avviare una sessione di connessione con il server SnapCenter per un utente specifico utilizzando il cmdlet Open-SmConnection.
++
+[listing]
+----
+Open-smconnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146\
+----
++
+Viene visualizzato il prompt di nome utente e password.
+
+. Aggiungere risorse utilizzando il cmdlet Add-SmResources.
++
+Questo esempio mostra come aggiungere un database SAP HANA di tipo SingleContainer:
+
++
+[listing]
+----
+C:\PS> Add-SmResource -HostName '10.232.204.42' -PluginCode 'HANA' -DatabaseName H10 -ResourceType SingleContainer -StorageFootPrint (@{"VolumeName"="HanaData10";"StorageSystem"="vserver_scauto_primary"}) -SID 'H10' -filebackuppath '/tmp/HanaFileLog' -userstorekeys 'HS10' -osdbuser 'h10adm' -filebackupprefix 'H10_'
+----
++
+Questo esempio mostra come aggiungere un database SAP HANA di tipo MultipleContainers:
+
++
+[listing]
+----
+C:\PS> Add-SmResource -HostName 'vp-hana2.gdl.englab.netapp.com' -PluginCode 'HANA' -DatabaseName MDC_MT -ResourceType MultipleContainers -StorageFootPrint (@{"VolumeName"="VP_HANA2_data";"StorageSystem"="buck.gdl.englab.netapp.com"}) -sid 'A12' -userstorekeys 'A12KEY' -TenantType 'MultiTenant'
+----
++
+Questo esempio mostra come creare una risorsa di volume non dati:
+
++
+[listing]
+----
+C:\PS> Add-SmResource -HostName 'SNAPCENTERN42.sccore.test.com' -PluginCode 'hana' -ResourceName NonDataVolume -ResourceType NonDataVolume -StorageFootPrint (@{"VolumeName"="ng_pvol";"StorageSystem"="vserver_scauto_primary"}) -sid 'S10'
+----
+. Creare un criterio di backup utilizzando il cmdlet Add-SmPolicy.
++
+Questo esempio crea una policy di backup per un backup basato su copia Snapshot:
+
++
+[listing]
+----
+C:\PS> Add-SmPolicy -PolicyName hana_snapshotbased -PolicyType Backup -PluginPolicyType hana -BackupType SnapShotBasedBackup
+----
++
+Questo esempio crea un criterio di backup per un backup basato su file:
+
++
+[listing]
+----
+C:\PS> Add-SmPolicy -PolicyName hana_Filebased -PolicyType Backup -PluginPolicyType hana -BackupType FileBasedBackup
+----
+. Proteggere la risorsa o aggiungere un nuovo gruppo di risorse a SnapCenter utilizzando il cmdlet Add-SmResourceGroup.
++
+Questo esempio protegge una singola risorsa di container:
+
++
+[listing]
+----
+C:\PS> Add-SmProtectResource -PluginCode HANA  -Policies hana_snapshotbased,hana_Filebased
+ -Resources @{"Host"="host.example.com";"UID"="SID"} -Description test -usesnapcenterwithoutfilesystemconsistency
+----
++
+Questo esempio protegge una risorsa di container multipli:
+
++
+[listing]
+----
+C:\PS> Add-SmProtectResource -PluginCode HANA  -Policies hana_snapshotbased,hana_Filebased
+ -Resources @{"Host"="host.example.com";"UID"="MDC\SID"} -Description test -usesnapcenterwithoutfilesystemconsistency
+----
++
+In questo esempio viene creato un nuovo gruppo di risorse con le risorse e i criteri specificati:
+
++
+[listing]
+----
+C:\PS> Add-SmResourceGroup -ResourceGroupName 'ResourceGroup_with_SingleContainer_MultipleContainers_Resources' -Resources @(@{"Host"="sccorelinux61.sccore.test.com";"Uid"="SID"},@{"Host"="sccorelinux62.sccore.test.com";"Uid"="MDC\SID"})
+  -Policies hana_snapshotbased,hana_Filebased  -usesnapcenterwithoutfilesystemconsistency  -plugincode 'HANA'
+----
++
+In questo esempio viene creato un gruppo di risorse di volumi non dati:
+
++
+[listing]
+----
+C:\PS> Add-SmResourceGroup -ResourceGroupName 'Mixed_RG_backup_when_Remove_Backup_throguh_BackupName_windows' -Resources @(@{"Host"="SNAPCENTERN42.sccore.test.com";"Uid"="H11";"PluginName"="hana"},@{"Host"="SNAPCENTERN42.sccore.test.com";"Uid"="MDC\H31";"PluginName"="hana"},@{"Host"="SNAPCENTERN42.sccore.test.com";"Uid"="NonDataVolume\S10\NonDataVolume";"PluginName"="hana"}) -Policies hanaprimary
+----
+. Avviare un nuovo processo di backup utilizzando il cmdlet New-SmBackup.
++
+Questo esempio mostra come eseguire il backup di un gruppo di risorse:
+
++
+[listing]
+----
+C:\PS> New-SMBackup -ResourceGroupName 'ResourceGroup_with_SingleContainer_MultipleContainers_Resources'  -Policy hana_snapshotbased
+----
++
+Questo esempio esegue il backup di una risorsa protetta:
+
++
+[listing]
+----
+C:\PS> New-SMBackup -Resources @{"Host"="10.232.204.42";"Uid"="MDC\SID";"PluginName"="hana"} -Policy hana_Filebased
+----
+. Monitorare lo stato del processo (in esecuzione, completato o non riuscito) utilizzando il cmdlet Get-smJobSummaryReport.
++
+[listing]
+----
+PS C:\> Get-smJobSummaryReport -JobID 123
+----
+. Monitorare i dettagli del processo di backup, come ID di backup, nome del backup per eseguire operazioni di ripristino o clonazione, utilizzando il cmdlet Get-SmBackupReport.
++
+[listing]
+----
+PS C:\> Get-SmBackupReport -JobId 351
+Output:
+BackedUpObjects           : {DB1}
+FailedObjects             : {}
+IsScheduled               : False
+HasMetadata               : False
+SmBackupId                : 269
+SmJobId                   : 2361
+StartDateTime             : 10/4/2016 11:20:45 PM
+EndDateTime               : 10/4/2016 11:21:32 PM
+Duration                  : 00:00:46.2536470
+CreatedDateTime           : 10/4/2016 11:21:09 PM
+Status                    : Completed
+ProtectionGroupName       : Verify_ASUP_Message_windows
+SmProtectionGroupId       : 211
+PolicyName                : test2
+SmPolicyId                : 20
+BackupName                : Verify_ASUP_Message_windows_scc54_10-04-2016_23.20.46.2758
+VerificationStatus        : NotVerified
+VerificationStatuses      :
+SmJobError                :
+BackupType                : SCC_BACKUP
+CatalogingStatus          : NotApplicable
+CatalogingStatuses        :
+ReportDataCreatedDateTime :
+----
+
+
+Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento anche a https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guida di riferimento al cmdlet del software SnapCenter"^].
+
+--
+====

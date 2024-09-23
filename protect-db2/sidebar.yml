@@ -113,15 +113,13 @@ entries:
     url: "/protect-db2/create-backup-policies-for-ibm-db2.html"
   - title: Creare gruppi di risorse e allegare policy
     url: "/protect-db2/create-resource-groups-and-attach-policies.html"
-  - title: Eseguire il backup di IBM DB2
-    url: "/protect-db2/back-up-ibm-db2.html"
+  - title: Eseguire il backup di DB2 database
+    url: "/protect-db2/back-up-db2-databases.html"
   - title: Eseguire il backup dei gruppi di risorse
     url: "/protect-db2/back-up-resource-groups-ibm-db2.html"
   - title: Creare una connessione al sistema di archiviazione e una credenziale utilizzando
       i cmdlet PowerShell per IBM DB2
     url: "/protect-db2/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-ibm-db2.html"
-  - title: Eseguire il backup dei database utilizzando i cmdlet PowerShell
-    url: "/protect-db2/back-up-databases-using-powershell-cmdlets-ibm-db2.html"
   - title: Monitorare le operazioni di backup
     entries:
     - title: Monitorare le operazioni di backup nella pagina lavori SnapCenter
@@ -141,8 +139,6 @@ entries:
     url: "/protect-db2/restore-manually-added-resource-backup.html"
   - title: Ripristinare un backup del database rilevato automaticamente
     url: "/protect-db2/restore-auto-discovered-database-backup.html"
-  - title: Ripristinare IBM DB2 utilizzando i cmdlet PowerShell
-    url: "/protect-db2/restore-ibm-db2-database-using-powershell-cmdlets.html"
   - title: Monitorare le operazioni di ripristino
     url: "/protect-db2/monitor-db2-restore-operations.html"
 - title: Clona i backup delle risorse di IBM DB2
@@ -151,8 +147,6 @@ entries:
     url: "/protect-db2/clone-ibm-db2-resource-backups.html"
   - title: Clonazione di un backup del database IBM DB2
     url: "/protect-db2/clone-ibm-db2-backup.html"
-  - title: Clona i backup del database IBM DB2 utilizzando i cmdlet PowerShell
-    url: "/protect-db2/clone-ibm-db2-backups-using-powershell-cmdlets.html"
   - title: Monitorare le operazioni di clonazione in SnapCenter
     url: "/protect-db2/monitor-db2-clone-operations.html"
   - title: Separare un clone

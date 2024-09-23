@@ -117,8 +117,6 @@ entries:
   - title: Creare una connessione al sistema di archiviazione e una credenziale utilizzando
       i cmdlet PowerShell per MySQL
     url: "/protect-mysql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-mysql.html"
-  - title: Eseguire il backup dei database utilizzando i cmdlet PowerShell
-    url: "/protect-mysql/back-up-databases-using-powershell-cmdlets-mysql.html"
   - title: Monitorare le operazioni di backup
     entries:
     - title: Monitorare le operazioni di backup nella pagina lavori SnapCenter
@@ -138,8 +136,6 @@ entries:
     url: "/protect-mysql/restore-and-recover-a-manually-added-resource-backup.html"
   - title: Ripristinare e ripristinare un backup del database rilevato automaticamente
     url: "/protect-mysql/restore-and-recover-an-auto-discovered-database-backup.html"
-  - title: Ripristinare MySQL utilizzando i cmdlet PowerShell
-    url: "/protect-mysql/restore-mysql-using-powershell-cmdlets.html"
   - title: Ripristinare le risorse utilizzando i cmdlet PowerShell
     url: "/protect-mysql/restore-and-recover-resources-using-powershell-cmdlets-mysql.html"
   - title: Monitorare le operazioni di ripristino
@@ -150,8 +146,6 @@ entries:
     url: "/protect-mysql/clone-mysql-resource-backups.html"
   - title: Clonare un backup del database MySQL
     url: "/protect-mysql/clone-mysql-backup.html"
-  - title: Clona i backup del database MySQL utilizzando i cmdlet PowerShell
-    url: "/protect-mysql/clone-mysql-backups-using-powershell-cmdlets.html"
   - title: Monitorare le operazioni di clonazione in SnapCenter
     url: "/protect-mysql/monitor-mysql-clone-operations.html"
   - title: Separare un clone

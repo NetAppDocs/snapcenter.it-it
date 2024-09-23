@@ -65,7 +65,6 @@ Pacchetti software richiesti
  a| 
 * . Nucleo NETTO 8.0.5
 * PowerShell Core 7.4.2
-* Java 11 Oracle Java e OpenJDK
 
 
 Per informazioni aggiornate sulle versioni supportate, vedere https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^].

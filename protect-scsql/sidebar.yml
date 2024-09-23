@@ -152,8 +152,6 @@ entries:
   - title: Creare una connessione al sistema storage e una credenziale utilizzando
       i cmdlet PowerShell
     url: "/protect-scsql/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_sql.html"
-  - title: Eseguire il backup delle risorse utilizzando i cmdlet PowerShell
-    url: "/protect-scsql/task_back_up_resources_using_powershell_cmdlets_for_sql.html"
   - title: Annullare il plug-in SnapCenter per le operazioni di backup di Microsoft
       SQL Server
     url: "/protect-scsql/task_cancel_the_snapcenter_plug_in_for_sql_server_operations.html"
@@ -173,10 +171,10 @@ entries:
     url: "/protect-scsql/task_restore_sql_server_database_backups.html"
   - title: Ripristinare un database SQL Server dallo storage secondario
     url: "/protect-scsql/task_restore_a_sql_server_database_from_secondary_storage.html"
+  - title: Ripristinare le risorse utilizzando i cmdlet PowerShell
+    url: "/protect-scsql/task_restore_and_recover_resources_using_powershell_cmdlets_for_sql.html"
   - title: Eseguire nuovamente il reeed dei database del gruppo di disponibilità
     url: "/protect-scsql/task_reseed_availability_group_databases.html"
-  - title: Ripristinare e ripristinare le risorse utilizzando i cmdlet PowerShell
-    url: "/protect-scsql/task_restore_and_recover_resources_using_powershell_cmdlets_for_sql.html"
   - title: Monitorare le operazioni di ripristino
     url: "/protect-scsql/task_monitor_sql_resources_restore_operations.html"
   - title: Annullare le operazioni di ripristino
@@ -187,8 +185,6 @@ entries:
     url: "/protect-scsql/reference_clone_sql_server_database_resources.html"
   - title: Clonare da un backup di database SQL Server
     url: "/protect-scsql/task_clone_from_a_sql_server_database_backup.html"
-  - title: Clonare i backup utilizzando i cmdlet PowerShell
-    url: "/protect-scsql/task_clone_backups_using_powershell_cmdlets_for_sql.html"
   - title: Eseguire il ciclo di vita del clone
     url: "/protect-scsql/task_perform_clone_lifecycle_management.html"
   - title: Monitorare le operazioni di clonazione in SnapCenter

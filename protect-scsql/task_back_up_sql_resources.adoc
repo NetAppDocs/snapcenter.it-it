@@ -26,6 +26,10 @@ Se una risorsa non fa ancora parte di un gruppo di risorse, è possibile eseguir
 
 
 
+[role="tabbed-block"]
+====
+.SnapCenter UI
+--
 .Fasi
 . Nel riquadro di spostamento di sinistra, selezionare *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina risorse, selezionare *Database*, *Instance* o *Availability Group* dall'elenco a discesa *View*.
@@ -158,3 +162,101 @@ https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/Sn
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Backup_fails_with_Windows_scheduler_error["Il backup non riesce e viene visualizzato un errore dello scheduler di Windows"]
 
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Quiesce_or_grouping_resources_operations_fail["Le operazioni di quiesce o raggruppamento delle risorse non riescono"]
+
+--
+.Cmdlet PowerShell
+--
+.Fasi
+. Avviare una sessione di connessione con il server SnapCenter per un utente specifico utilizzando il cmdlet Open-SmConnection.
++
+[listing]
+----
+Open-smconnection  -SMSbaseurl  https://snapctr.demo.netapp.com:8146
+----
++
+Viene visualizzato il prompt di nome utente e password.
+
+. Creare un criterio di backup utilizzando il cmdlet Add-SmPolicy.
++
+In questo esempio viene creata una nuova policy di backup con un tipo di backup completo SQL:
+
++
+[listing]
+----
+PS C:\> Add-SmPolicy -PolicyName TESTPolicy
+-PluginPolicyType SCSQL -PolicyType Backup
+-SqlBackupType FullBackup -Verbose
+----
++
+Questo esempio crea una nuova policy di backup con un tipo di backup del file system Windows di CrashConsistent:
+
++
+[listing]
+----
+PS C:\> Add-SmPolicy -PolicyName FileSystemBackupPolicy
+-PluginPolicyType SCW -PolicyType Backup
+-ScwBackupType CrashConsistent -Verbose
+----
+. Individuare le risorse host utilizzando il cmdlet Get-SmResources.
++
+In questo esempio vengono illustrate le risorse per il plug-in Microsoft SQL sull'host specificato:
+
++
+[listing]
+----
+C:\PS>PS C:\> Get-SmResources -HostName vise-f6.sddev.mycompany.com
+-PluginCode SCSQL
+----
++
+In questo esempio vengono illustrate le risorse per i file system Windows sull'host specificato:
+
++
+[listing]
+----
+C:\PS>PS C:\> Get-SmResources -HostName vise2-f6.sddev.mycompany.com
+-PluginCode SCW
+----
+. Aggiungere un nuovo gruppo di risorse a SnapCenter utilizzando il cmdlet Add-SmResourceGroup.
++
+Questo esempio crea un nuovo gruppo di risorse di backup del database SQL con i criteri e le risorse specificati:
+
++
+[listing]
+----
+PS C:\> Add-SmResourceGroup -ResourceGroupName AccountingResource
+-Resources @{"Host"="visef6.org.com";
+"Type"="SQL Database";"Names"="vise-f6\PayrollDatabase"}
+-Policies "BackupPolicy"
+----
++
+Questo esempio crea un nuovo gruppo di risorse di backup del file system Windows con i criteri e le risorse specificati:
+
++
+[listing]
+----
+PS C:\> Add-SmResourceGroup -ResourceGroupName EngineeringResource
+-PluginCode SCW -Resources @{"Host"="WIN-VOK20IKID5I";
+"Type"="Windows Filesystem";"Names"="E:\"}
+-Policies "EngineeringBackupPolicy"
+----
+. Avviare un nuovo processo di backup utilizzando il cmdlet New-SmBackup.
++
+[listing]
+----
+PS C:> New-SmBackup -ResourceGroupName PayrollDataset -Policy FinancePolicy
+----
+. Visualizzare lo stato del processo di backup utilizzando il cmdlet Get-SmBackupReport.
++
+Questo esempio visualizza un report di riepilogo di tutti i lavori eseguiti alla data specificata:
+
++
+[listing]
+----
+PS C:\> Get-SmJobSummaryReport -Date '1/27/2016'
+----
+
+
+Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento anche a https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guida di riferimento al cmdlet del software SnapCenter"^].
+
+--
+====

@@ -110,8 +110,6 @@ entries:
   - title: Creare una connessione al sistema storage e una credenziale utilizzando
       i cmdlet PowerShell
     url: "/protect-nsp/create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets.html"
-  - title: Eseguire il backup delle risorse utilizzando i cmdlet PowerShell
-    url: "/protect-nsp/back_up_resources_using_powershell_cmdlets.html"
   - title: Monitorare le operazioni di backup
     url: "/protect-nsp/monitor_resources_backup_operations.html"
   - title: Annullare le operazioni di backup
@@ -135,7 +133,5 @@ entries:
     url: "/protect-nsp/clone_netapp_supported_plugins_resource_backups.html"
   - title: Clonare da un backup
     url: "/protect-nsp/clone_from_a_backup.html"
-  - title: Clonare i backup utilizzando i cmdlet PowerShell
-    url: "/protect-nsp/clone_backups_using_powershell_cmdlets.html"
   - title: Monitorare le operazioni di clonazione in SnapCenter
     url: "/protect-nsp/monitor_resource_clone_operations.html"
