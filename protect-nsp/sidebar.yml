@@ -103,13 +103,13 @@ entries:
     url: "/protect-nsp/create_policies_for_netapp_supported_plugins_resources.html"
   - title: Creare gruppi di risorse e allegare policy
     url: "/protect-nsp/create_resource_groups_and_attach_policies.html"
+  - title: Creare una connessione al sistema storage e una credenziale utilizzando
+      i cmdlet PowerShell
+    url: "/protect-nsp/create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets.html"
   - title: Backup di singole risorse di plug-in supportate da NetApp
     url: "/protect-nsp/back_up_individual_netapp_supported_plugins_resources.html"
   - title: Eseguire il backup di gruppi di risorse dei plug-in supportati da NetApp
     url: "/protect-nsp/back_up_resource_groups_of_netapp_supported_plugins_resources.html"
-  - title: Creare una connessione al sistema storage e una credenziale utilizzando
-      i cmdlet PowerShell
-    url: "/protect-nsp/create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets.html"
   - title: Monitorare le operazioni di backup
     url: "/protect-nsp/monitor_resources_backup_operations.html"
   - title: Annullare le operazioni di backup

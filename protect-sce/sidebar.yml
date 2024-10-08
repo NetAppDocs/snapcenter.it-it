@@ -72,19 +72,17 @@ entries:
     url: "/protect-sce/task_create_backup_policies_for_exchange_server_databases.html"
   - title: Creare gruppi di risorse e associare criteri per i server Exchange
     url: "/protect-sce/task_create_resource_groups_and_attach_policies_for_exchange_servers.html"
+  - title: Creare una connessione al sistema di storage e una credenziale utilizzando
+      i cmdlet PowerShell per Exchange Server
+    url: "/protect-sce/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_exchange_database.html"
   - title: Eseguire il backup dei database Exchange
     url: "/protect-sce/task_back_up_exchange_databases.html"
   - title: Eseguire il backup dei gruppi di risorse di Exchange
     url: "/protect-sce/task_back_up_exchange_resources_groups.html"
-  - title: Creare una connessione al sistema di storage e una credenziale utilizzando
-      i cmdlet PowerShell per Exchange Server
-    url: "/protect-sce/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_exchange_database.html"
   - title: Monitorare le operazioni di backup
     url: "/protect-sce/task_monitor_backup_operations.html"
   - title: Annullare le operazioni di backup per il database Exchange
     url: "/protect-sce/task_cancel_backup_operations_for_exchange_database.html"
-  - title: Rimuovere i backup di Exchange utilizzando i cmdlet PowerShell
-    url: "/protect-sce/task_remove_exchange_backups_using_powershell_cmdlets.html"
   - title: Visualizzare i backup di Exchange nella pagina topologia
     url: "/protect-sce/task_view_exchange_backups_in_the_topology_page.html"
 - title: Ripristinare le risorse Exchange

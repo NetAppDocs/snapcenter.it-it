@@ -113,19 +113,15 @@ entries:
     url: "/protect-db2/create-backup-policies-for-ibm-db2.html"
   - title: Creare gruppi di risorse e allegare policy
     url: "/protect-db2/create-resource-groups-and-attach-policies.html"
+  - title: Creare una connessione al sistema di archiviazione e una credenziale utilizzando
+      i cmdlet PowerShell per IBM DB2
+    url: "/protect-db2/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-ibm-db2.html"
   - title: Eseguire il backup di DB2 database
     url: "/protect-db2/back-up-db2-databases.html"
   - title: Eseguire il backup dei gruppi di risorse
     url: "/protect-db2/back-up-resource-groups-ibm-db2.html"
-  - title: Creare una connessione al sistema di archiviazione e una credenziale utilizzando
-      i cmdlet PowerShell per IBM DB2
-    url: "/protect-db2/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-ibm-db2.html"
-  - title: Monitorare le operazioni di backup
-    entries:
-    - title: Monitorare le operazioni di backup nella pagina lavori SnapCenter
-      url: "/protect-db2/monitor-db2-backup-operations.html"
-    - title: Monitorare le operazioni nel riquadro attività
-      url: "/protect-db2/monitor-dataprotection-operations-on-db2-in-the-activity-pane.html"
+  - title: Monitorare le operazioni di backup nella pagina lavori SnapCenter
+    url: "/protect-db2/monitor-db2-backup-operations.html"
   - title: Annullare le operazioni di backup
     url: "/protect-db2/cancel-backup-operations-for-ibm-db2.html"
   - title: Visualizzare i backup e i cloni del database IBM DB2 nella pagina Topology

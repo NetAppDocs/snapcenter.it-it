@@ -7,7 +7,7 @@ summary: 'È possibile monitorare l"avanzamento di diverse operazioni di backup 
 = Monitorare le operazioni di backup delle risorse SQL nella pagina processi SnapCenter
 :allow-uri-read: 
 :icons: font
-:imagesdir: ../media/
+:imagesdir: ../media/ ///
 
 
 [role="lead"]
@@ -44,5 +44,21 @@ NOTE: Sebbene venga visualizzato lo stato del processo di backupimage:../media/s
 . Nella pagina Job Details (Dettagli processo), fare clic su *View logs* (Visualizza registri).
 +
 Il pulsante *View logs* (Visualizza registri) visualizza i registri dettagliati per l'operazione selezionata.
+
+
+
+
+
+== Monitorare le operazioni di protezione dei dati sulle risorse SQL nel riquadro attività
+
+Il riquadro Activity (attività) visualizza le cinque operazioni più recenti eseguite. Il riquadro Activity (attività) visualizza anche il momento in cui l'operazione è stata avviata e lo stato dell'operazione.
+
+Il riquadro Activity (attività) visualizza informazioni relative alle operazioni di backup, ripristino, clonazione e backup pianificati.
+
+.Fasi
+. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Fare clic su image:../media/activity_pane_icon.gif[""] Nel riquadro Activity (attività) per visualizzare le cinque operazioni più recenti.
++
+Quando si fa clic su una delle operazioni, i dettagli dell'operazione vengono elencati nella pagina *Dettagli commessa*.
 
 

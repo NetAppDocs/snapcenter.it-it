@@ -128,19 +128,15 @@ entries:
     url: "/protect-hana/task_create_backup_policies_for_sap_hana_databases.html"
   - title: Creare gruppi di risorse e allegare policy
     url: "/protect-hana/task_create_resource_groups_and_attach_policies.html"
+  - title: Creare una connessione al sistema storage e una credenziale utilizzando
+      i cmdlet PowerShell per il database SAP HANA
+    url: "/protect-hana/task_create_a_storage_system_connection_and_a_run_as_account_using_powershell_cmdlets_for_sap_hana_database.html"
   - title: Eseguire il backup dei database SAP HANA
     url: "/protect-hana/task_back_up_sap_hana_databases.html"
   - title: Eseguire il backup dei gruppi di risorse
     url: "/protect-hana/task_back_up_resource_groups_sap_hana.html"
-  - title: Creare una connessione al sistema storage e una credenziale utilizzando
-      i cmdlet PowerShell per il database SAP HANA
-    url: "/protect-hana/task_create_a_storage_system_connection_and_a_run_as_account_using_powershell_cmdlets_for_sap_hana_database.html"
-  - title: Monitorare le operazioni di backup
-    entries:
-    - title: Monitorare le operazioni di backup nella pagina lavori SnapCenter
-      url: "/protect-hana/task_monitor_hana_databases_backup_operations.html"
-    - title: Monitorare le operazioni nel riquadro attività
-      url: "/protect-hana/task_monitor_dataprotection_operations_on_hana_databases_in_the_activity_pane.html"
+  - title: Monitorare le operazioni di backup nella pagina lavori SnapCenter
+    url: "/protect-hana/task_monitor_hana_databases_backup_operations.html"
   - title: Annullare le operazioni di backup
     url: "/protect-hana/task_cancel_backup_operations_for_sap_hana.html"
   - title: Visualizzare i backup e i cloni del database SAP HANA nella pagina topologia
