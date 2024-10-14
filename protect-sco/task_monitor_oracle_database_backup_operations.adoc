@@ -45,7 +45,7 @@ Nella pagina lavori vengono visualizzate le seguenti icone che indicano lo stato
 . Selezionare un processo di backup, quindi fare clic su *Dettagli* per visualizzare i dettagli del processo.
 +
 
-NOTE: Sebbene venga visualizzato lo stato del processo di backupimage:../media/success_icon.gif["Completato"], facendo clic sui dettagli del lavoro, è possibile che alcune delle attività secondarie dell'operazione di backup siano ancora in corso o contrassegnate da segnali di avviso.
+NOTE: Sebbene venga visualizzato lo stato del processo di backup image:../media/success_icon.gif["Completato"], quando si fa clic sui dettagli del processo, è possibile che alcune delle attività secondarie dell'operazione di backup siano ancora in corso o contrassegnate da segnali di avviso.
 
 . Nella pagina Job Details (Dettagli processo), fare clic su *View logs* (Visualizza registri).
 +

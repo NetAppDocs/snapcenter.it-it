@@ -108,7 +108,9 @@ NOTE: È necessario aumentare questo valore se si desidera eseguire più operazi
 --
 .Backup del registro
 --
-Eseguire il backup dei registri delle transazioni. . Selezionare *Log backup*.
+. Eseguire il backup dei registri delle transazioni.
+. Selezionare *Log backup*.
+
 
 --
 .Backup solo copia
@@ -151,7 +153,7 @@ NOTE: Nelle configurazioni del cluster, i backup vengono conservati in ciascun n
 È possibile selezionare un solo tipo di pianificazione per un criterio.
 
 +
-image::../media/backup_settings.gif[Schermata Backup settings (Backup impostazioni).]
+image:../media/backup_settings.gif["Schermata Backup settings (Backup impostazioni)."]
 
 +
 
@@ -279,7 +281,7 @@ Questa opzione deve essere abilitata per la sincronizzazione attiva di SnapMirro
 Durante la replica secondaria, il tempo di scadenza del SnapLock carica il tempo di scadenza del SnapLock primario. Fare clic sul pulsante *Aggiorna* nella pagina topologia per aggiornare il tempo di scadenza SnapLock secondario e primario recuperato da ONTAP.
 
 +
-Vedere link:..protect-scsql/task_view_sql_server_backups_and_clones_in_the_topology_page.html["Visualizzare i backup e i cloni di SQL Server nella pagina topologia"].
+Vedere link:task_view_sql_server_backups_and_clones_in_the_topology_page.html["Visualizzare i backup e i cloni di SQL Server nella pagina topologia"].
 
 
 
@@ -299,7 +301,7 @@ Quando SnapLock è configurato solo sul secondario da ONTAP noto come vault di S
 Per ulteriori informazioni sul vault di SnapLock, vedere https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["Assegnare le copie Snapshot a WORM su una destinazione del vault"]
 
 +
-Vedere link:..protect-scsql/task_view_sql_server_backups_and_clones_in_the_topology_page.html["Visualizzare i backup e i cloni di SQL Server nella pagina topologia"].
+Vedere link:task_view_sql_server_backups_and_clones_in_the_topology_page.html["Visualizzare i backup e i cloni di SQL Server nella pagina topologia"].
 
 
 
