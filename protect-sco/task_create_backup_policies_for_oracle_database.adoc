@@ -127,7 +127,7 @@ Selezionare *Delete archive logs from the destinations welling are of backup*.
 
 |===
 +
-image:../media/sco_backuppolicy_prunning.gif[""]
+image:../media/sco_backuppolicy_prunning.gif["policy di backup"]
 
 
 
@@ -201,7 +201,7 @@ Quando SnapLock è configurato solo sul secondario da ONTAP noto come vault di S
 
 Per ulteriori informazioni sul vault di SnapLock, vedere https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["Assegnare le copie Snapshot a WORM su una destinazione del vault"]
 
-Vedere link:..protect-sco/task_view_oracle_databse_backups_and_clones_in_the_topology_page.html["Visualizzare i backup e i cloni dei database Oracle nella pagina topologia"].
+Vedere link:../protect-sco/task_view_oracle_databse_backups_and_clones_in_the_topology_page.html["Visualizzare i backup e i cloni dei database Oracle nella pagina topologia"].
 
 
 

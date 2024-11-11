@@ -7,7 +7,7 @@ summary: 'REST è uno stile per la creazione di applicazioni web distribuite. Qu
 = Base REST per i web Services
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

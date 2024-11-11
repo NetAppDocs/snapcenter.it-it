@@ -285,7 +285,7 @@ IMPORTANT: Non è possibile utilizzare la policy solo primaria se la sincronizza
 
 Fare clic sul pulsante *Aggiorna* nella pagina topologia per aggiornare il tempo di scadenza SnapLock secondario e primario recuperato da ONTAP.
 
-Vedere link:..protect-sce/task_view_exchange_backups_in_the_topology_page.html["Visualizzare i backup di Exchange nella pagina topologia"].
+Vedere link:../protect-sce/task_view_exchange_backups_in_the_topology_page.html["Visualizzare i backup di Exchange nella pagina topologia"].
 
 
 

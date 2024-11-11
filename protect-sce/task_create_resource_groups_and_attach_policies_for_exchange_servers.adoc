@@ -127,7 +127,7 @@ Le pianificazioni di backup di terze parti non sono supportate quando si sovrapp
 Per la notifica via email, è necessario aver specificato i dettagli del server SMTP utilizzando il comando GUI o PowerShell `Set-SmSmtpServer`.
 
 +
-Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento anche alla https://docs.netapp.com/us-en/snapcenter-cmdlets/index.htmlnapCenter[] Guida di riferimento dei cmdlet Software^].
+Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento anche a https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guida di riferimento al cmdlet del software SnapCenter"^].
 
 . Esaminare il riepilogo, quindi fare clic su *fine*.
 

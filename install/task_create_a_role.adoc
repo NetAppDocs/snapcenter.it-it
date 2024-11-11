@@ -23,7 +23,7 @@ Dovresti aver effettuato l'accesso come ruolo "SnapCenterAdmin".
 . Nella pagina Add role (Aggiungi ruolo), specificare un nome e una descrizione per il nuovo ruolo.
 +
 
-NOTE: Da SnapCenter 4.5, è possibile includere solo i seguenti caratteri speciali nei nomi utente e nei nomi dei gruppi: Spazio ( ), trattino (-), carattere di sottolineatura (_) e due punti (:). Se si desidera utilizzare un ruolo creato in una release precedente di SnapCenter con questi caratteri speciali, è possibile disattivare la convalida del nome del ruolo modificando il valore del parametro "DisableSQLInjectionValidation" su true nel file web.config in cui è installata l'applicazione web di SnapCenter. Dopo aver modificato il valore, non è necessario riavviare il servizio.
+NOTE: È possibile includere solo i seguenti caratteri speciali nei nomi degli utenti e dei gruppi: Spazio ( ), trattino (-), trattino basso (_) e due punti (:).
 
 . Selezionare *tutti i membri di questo ruolo possono visualizzare gli oggetti degli altri membri* per consentire agli altri membri del ruolo di visualizzare risorse come volumi e host dopo l'aggiornamento dell'elenco delle risorse.
 +

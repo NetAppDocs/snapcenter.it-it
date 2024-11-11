@@ -25,7 +25,7 @@ Un gruppo di risorse è un insieme di risorse su un host. Un'operazione di backu
 . Nel riquadro di spostamento di sinistra, selezionare *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina Resources (risorse), selezionare *Resource Group* (Gruppo di risorse) dall'elenco *View* (Visualizza).
 +
-È possibile cercare il gruppo di risorse inserendo il nome del gruppo di risorse nella casella di ricerca o selezionando image:../media/filter_icon.png[""], quindi selezionare il tag. Quindi selezionare image:../media/filter_icon.png[""] per chiudere il riquadro del filtro.
+È possibile eseguire una ricerca nel gruppo di risorse immettendo il nome del gruppo di risorse nella casella di ricerca oppure selezionando , quindi selezionando image:../media/filter_icon.png["icona del filtro"]il tag. È quindi possibile scegliere image:../media/filter_icon.png["icona del filtro"] di chiudere il riquadro del filtro.
 
 . Nella pagina gruppi di risorse, selezionare il gruppo di risorse di cui si desidera eseguire il backup, quindi selezionare *Esegui backup ora*.
 . Nella pagina Backup, attenersi alla seguente procedura:

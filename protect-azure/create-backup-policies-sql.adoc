@@ -18,8 +18,9 @@ summary: Creare un criterio di backup per la risorsa o il gruppo di risorse di c
 . Nella pagina Impostazioni, fare clic su *Criteri*.
 . Fare clic su *nuovo*.
 . Nella pagina Name (Nome), immettere il nome e la descrizione della policy.
-. Nella pagina Impostazioni, attenersi alla seguente procedura:
+. Nella pagina tipo di criterio, effettuare le seguenti operazioni:
 +
+.. Selezionare *Azure NetApp Files* come tipo di archiviazione.
 .. Selezionare il tipo di backup.
 +
 ... Selezionare *Backup completo e Backup registro* se si desidera eseguire il backup dei file di database e dei registri delle transazioni.
@@ -35,13 +36,14 @@ summary: Creare un criterio di backup per la risorsa o il gruppo di risorse di c
 ... Selezionare la priorità di backup.
 
 
-.. Specificare il tipo di pianificazione.
 
 
-. Nella pagina di conservazione, in base al tipo di backup selezionato, specificare le impostazioni di conservazione.
+. Nella pagina istantanea e backup, effettuare le seguenti operazioni:
 +
+.. Selezionare la frequenza del backup pianificato.
+.. Specificare le impostazioni di conservazione in base al tipo di backup selezionato.
+.. Se si desidera attivare il backup Azure NetApp Files, selezionare *attiva backup* e specificare le impostazioni di conservazione.
 
-NOTE: La replica su storage secondario non è supportata.
 
 . Nella pagina verifica, attenersi alla seguente procedura:
 +

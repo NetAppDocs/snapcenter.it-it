@@ -25,15 +25,12 @@ Il pacchetto di plug-in SnapCenter per AIX risolve automaticamente il collegamen
 * Creare le credenziali con la modalità di autenticazione come Linux o AIX per l'utente di installazione.
 * È necessario aver installato Java 11 sull'host Linux o AIX.
 +
+** Java di Oracle e OpenJDK è supportato per Linux
+** IBM Java per AIX. È possibile scaricare da https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?version=11&os=AIX["IBM Semeru Runtimes Download"]
++
 
 NOTE: Assicurarsi di aver installato solo L'edizione certificata DI JAVA 11 sull'host Linux.
 
-+
-Per informazioni su come scaricare JAVA, consulta:
-
-+
-** http://www.java.com/en/download/manual.jsp["Download Java per tutti i sistemi operativi"^]
-** https://www.ibm.com/support/pages/java-sdk-aix["IBM Java per AIX"^]
 
 
 * Per i database Oracle in esecuzione su un host Linux o AIX, è necessario installare sia il plug-in SnapCenter per il database Oracle che il plug-in SnapCenter per UNIX.
@@ -94,7 +91,7 @@ NOTE: È necessario allocare spazio su disco sufficiente e monitorare il consumo
  a| 
 Pacchetti software richiesti
  a| 
-Java 11 Oracle Java e OpenJDK
+Java 11 Oracle e OpenJDK
 
 
 NOTE: Assicurarsi di aver installato solo L'edizione certificata DI JAVA 11 sull'host Linux.
@@ -113,6 +110,7 @@ SnapCenter 2.0 e versioni successive consentono a un utente non root di installa
 *Cosa ti serve*
 
 * Sudo versione 1.8.7 o successiva.
+* Se l'umask è 0027, assicurarsi che la cartella java e tutti i file all'interno dovrebbero avere l'autorizzazione di 555. In caso contrario, l'installazione dei plug-in potrebbe non riuscire.
 * Per l'utente non root, assicurarsi che il nome dell'utente non root e del gruppo dell'utente siano identici.
 * Modificare il file _/etc/ssh/sshd_config_ per configurare gli algoritmi del codice di autenticazione del messaggio: Mac hmac-sha2-256 e Mac hmac-sha2-512.
 +
@@ -238,6 +236,7 @@ SnapCenter 4.4 e versioni successive consentono a un utente non root di installa
 *Cosa ti serve*
 
 * Sudo versione 1.8.7 o successiva.
+* Se l'umask è 0027, assicurarsi che la cartella java e tutti i file all'interno dovrebbero avere l'autorizzazione di 555. In caso contrario, l'installazione dei plug-in potrebbe non riuscire.
 * Modificare il file _/etc/ssh/sshd_config_ per configurare gli algoritmi del codice di autenticazione del messaggio: Mac hmac-sha2-256 e Mac hmac-sha2-512.
 +
 Riavviare il servizio sshd dopo aver aggiornato il file di configurazione.
@@ -404,9 +403,9 @@ NOTE: Se si specificano dettagli errati durante la creazione di una credenziale,
 
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina Resources (risorse), selezionare *Database* dall'elenco *View* (Visualizza).
-. Fare clic su image:../media/filter_icon.png[""], quindi selezionare il nome host e il tipo di database per filtrare le risorse.
+. Fare clic su image:../media/filter_icon.png["icona del filtro"], quindi selezionare il nome host e il tipo di database per filtrare le risorse.
 +
-Quindi fare clic su image:../media/filter_icon.png[""] per chiudere il riquadro del filtro.
+È quindi possibile fare clic su image:../media/filter_icon.png["icona del filtro"] per chiudere il riquadro del filtro.
 
 . Selezionare il database, quindi fare clic su *Impostazioni database* > *Configura database*.
 . Nella sezione Configure database settings (Configura impostazioni database), dall'elenco a discesa *Use Existing Credential* (Usa credenziale esistente), selezionare la credenziale da utilizzare per eseguire i processi di protezione dei dati nel database Oracle.

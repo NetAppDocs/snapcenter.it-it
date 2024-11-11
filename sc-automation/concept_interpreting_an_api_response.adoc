@@ -7,7 +7,7 @@ summary: Ogni richiesta API genera una risposta al client. È necessario esamina
 = Interpretazione di una risposta API
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

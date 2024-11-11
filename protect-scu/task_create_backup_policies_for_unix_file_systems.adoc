@@ -106,7 +106,7 @@ NOTE: È necessario configurare il criterio di conservazione SnapMirror in ONTAP
 . Nella pagina script, immettere il percorso e gli argomenti del prespt o del postscript che si desidera eseguire rispettivamente prima o dopo l'operazione di backup.
 +
 
-NOTE: Controllare se i comandi sono presenti nell'elenco dei comandi disponibili sull'host plug-in dal percorso _/opt/NetApp/snapcenter/scc/etc/allowed_command.config_.
+NOTE: Controllare se i comandi sono presenti nell'elenco dei comandi disponibili sull'host plug-in dal percorso _ /opt/NetApp/SnapCenter/scc/etc/allowed_Commands.config_.
 
 +
 È inoltre possibile specificare il valore di timeout dello script. Il valore predefinito è 60 secondi.

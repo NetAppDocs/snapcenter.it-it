@@ -47,4 +47,4 @@ image::../media/datasets_and_policies.gif[Diagramma dei set di dati e delle poli
 
 L'immagine seguente illustra la relazione tra risorse, gruppi di risorse e criteri per i file system Windows:
 
-image::../media/resources_and_policies_for_wfs.gif[risorse e policy per wfs]
+image::../media/resources_and_policies_for_wfs.gif[risorse e criteri]

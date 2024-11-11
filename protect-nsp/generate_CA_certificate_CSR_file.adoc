@@ -6,6 +6,8 @@ summary: 'È possibile generare una CSR (Certificate Signing Request) e importar
 ---
 = Generare il file CSR del certificato CA
 :allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
 
 
 [role="lead"]

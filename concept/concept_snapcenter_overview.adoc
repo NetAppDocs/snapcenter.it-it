@@ -56,7 +56,7 @@ La data Protection è supportata per Microsoft Exchange Server, Microsoft SQL Se
 La protezione dei dati è supportata anche per altre applicazioni e database standard o personalizzati fornendo un framework per creare plug-in SnapCenter definiti dall'utente. Ciò consente la protezione dei dati per altre applicazioni e database dallo stesso singolo pannello di controllo. Sfruttando questo framework, NetApp ha rilasciato i plug-in SnapCenter per MongoDB, MySQL, PostgreSQL, Storage, MaxDB, Sybase ASE, ORASCPM, MongoDB e DPGrue. Inoltre, è possibile creare un plug-in personalizzato utilizzando la guida dello sviluppatore.
 
 +
-link:concept_develop_a_plug_in_for_your_application.html["Sviluppare un plug-in per l'applicazione"]
+link:../protect-nsp/develop_a_plug_in_for_your_application.html["Sviluppare un plug-in per l'applicazione"]
 
 * Backup basati su policy
 +

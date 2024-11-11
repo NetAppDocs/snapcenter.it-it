@@ -7,7 +7,7 @@ summary: È possibile controllare la modalità di elaborazione di una chiamata A
 = Variabili di input che controllano una richiesta API
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

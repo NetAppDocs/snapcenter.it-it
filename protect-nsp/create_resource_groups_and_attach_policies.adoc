@@ -10,6 +10,7 @@ summary: Un gruppo di risorse è il container al quale è necessario aggiungere 
 :imagesdir: ../media/
 
 
+[role="lead"]
 Un gruppo di risorse è il container al quale è necessario aggiungere risorse di cui si desidera eseguire il backup e la protezione. Consente di eseguire contemporaneamente il backup di tutti i dati associati a una determinata applicazione. È inoltre necessario associare uno o più criteri al gruppo di risorse per definire il tipo di lavoro di protezione dei dati che si desidera eseguire.
 
 .Fasi

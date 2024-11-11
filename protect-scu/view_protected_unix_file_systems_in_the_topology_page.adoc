@@ -32,9 +32,9 @@ NOTE: I cloni di un backup di un mirror flessibile della versione su un volume d
 
 Se disponi di una relazione secondaria come SnapMirror Active Sync (inizialmente rilasciato come SnapMirror Business Continuity [SM-BC]), puoi vedere le seguenti icone aggiuntive:
 
-* image:../media/topology_replica_site_up.png["replica sito up"] implica che il sito di replica è attivo.
-* image:../media/topology_replica_site_down.png["sito di replica inattivo"]  implica che il sito di replica non è attivo.
-* image:../media/topology_reestablished.png["la relazione viene ristabilita"] implica che la relazione del mirror secondario o del vault non è stata ristabilita.
+* image:../media/topology_replica_site_up.png["replica sito up"] Il sito di replica è attivo.
+* image:../media/topology_replica_site_down.png["sito di replica inattivo"] Il sito di replica è inattivo.
+* image:../media/topology_reestablished.png["la relazione viene ristabilita"] La relazione del mirror secondario o del vault non è stata ristabilita.
 
 
 *Fasi*

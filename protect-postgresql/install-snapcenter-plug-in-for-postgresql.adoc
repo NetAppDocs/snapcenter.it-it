@@ -13,4 +13,4 @@ summary: Se si desidera proteggere PostgreSQL, è necessario installare e config
 [role="lead"]
 Se si desidera proteggere i cluster PostgreSQL, è necessario installare e configurare il plug-in SnapCenter per PostgreSQL.
 
-image::../media/sap_hana_install_configure_workflow.gif[Installare e configurare il workflow]
+image::../media/sap_hana_install_configure_workflow.png[Installare e configurare il workflow]

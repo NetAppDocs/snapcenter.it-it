@@ -58,7 +58,7 @@ NOTE: Le impostazioni SnapLock primarie vengono gestite nel criterio di backup S
 NOTE: È possibile specificare la pianificazione (data di inizio, data di fine e frequenza) per l'operazione di backup durante la creazione di un gruppo di risorse. Ciò consente di creare gruppi di risorse che condividono la stessa policy e frequenza di backup, ma consente anche di assegnare diverse pianificazioni di backup a ogni policy.
 
 +
-image::../media/backup_settings.gif[impostazioni di backup]
+image::../media/backup_settings.gif[servizio di backup]
 
 +
 

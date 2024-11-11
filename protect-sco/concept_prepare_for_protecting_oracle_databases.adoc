@@ -41,7 +41,6 @@ Vedere link:../protect-sco/reference_prerequisites_for_adding_hosts_and_installi
 * Se si dispone di database Oracle su ambienti SAN, assicurarsi che l'ambiente SAN sia configurato in base ai consigli indicati nelle seguenti guide:
 +
 ** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547957["Impostazioni host consigliate per le utility host unificate Linux"^]
-** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547958["Utilizzo di host Linux con storage ONTAP"^]
 ** https://library.netapp.com/ecm/ecm_download_file/ECMP1119218["Impostazioni host interessate dalle utility host AIX"^]
 
 

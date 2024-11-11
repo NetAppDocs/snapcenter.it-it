@@ -44,7 +44,7 @@ I nuovi file creati dopo il backup potrebbero non essere disponibili dopo il rip
 . Nella pagina PostOps, immettere i comandi di ripristino post da eseguire dopo aver eseguito un processo di ripristino.
 +
 
-NOTE: Controllare se i comandi sono presenti nell'elenco dei comandi disponibili sull'host plug-in dal percorso _/opt/NetApp/snapcenter/scc/etc/allowed_command.config_.
+NOTE: Controllare se i comandi sono presenti nell'elenco dei comandi disponibili sull'host plug-in nel percorso _/opt/NetApp/SnapCenter/scc/etc/allowed_Commands.config_.
 
 . Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare le notifiche email.
 +

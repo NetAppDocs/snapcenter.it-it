@@ -18,16 +18,14 @@ summary: È possibile utilizzare SnapCenter per ripristinare e ripristinare i da
 * È necessario annullare qualsiasi operazione di backup attualmente in corso per la risorsa o il gruppo di risorse che si desidera ripristinare.
 * Per i comandi di pre-restore, post-restore, mount e unmount, controllare se i comandi esistono nell'elenco dei comandi disponibile sull'host del plug-in dai seguenti percorsi:
 +
-Per Windows: _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_Commands.config_
+** Posizione predefinita sull'host Windows: _C:\programmi\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc\allowed_Commands.config_
+** Posizione predefinita sull'host Linux: _/opt/NetApp/SnapCenter/scc/etc/allowed_Commands.config_
 
-+
-Per Linux: _/opt/NetApp/snapcenter/scc/etc/allowed_command.config_
 
-+
+
+
 
 NOTE: Se i comandi non sono presenti nell'elenco dei comandi, l'operazione avrà esito negativo.
-
-
 
 .A proposito di questa attività
 * Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dagli Snapshot del vault di SnapLock come parte del ripristino ereditano il tempo di scadenza del vault di SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
@@ -76,10 +74,6 @@ NOTE: Se si seleziona *tutto*, vengono ripristinati tutti i file presenti nei vo
 
 . Nella pagina Pre Ops (operazioni preliminari), immettere i comandi di pre-ripristino e disinstallazione da eseguire prima di eseguire un processo di ripristino.
 . Nella pagina Post Ops (operazioni post), immettere i comandi di montaggio e post ripristino da eseguire dopo l'esecuzione di un processo di ripristino.
-+
-
-NOTE: Per i comandi pre e post per le operazioni quiescenza, Snapshot e inquiescenza, controllare se i comandi sono presenti nell'elenco dei comandi disponibili sull'host plug-in dal percorso _/opt/snapcenter/snapcenter/scc/allowed_command.config_ per Linux e _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config_ per Windows.
-
 . Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
 +
 È inoltre necessario specificare gli indirizzi e-mail del mittente e del destinatario e l'oggetto dell'e-mail. SMTP deve essere configurato anche nella pagina *Impostazioni* > *Impostazioni globali*.

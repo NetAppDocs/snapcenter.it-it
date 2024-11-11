@@ -18,21 +18,19 @@ Prima di utilizzare SnapCenter per eseguire il backup delle risorse di database 
 . Nella pagina Impostazioni, fare clic su *Criteri*.
 . Fare clic su *nuovo*.
 . Nella pagina Name (Nome), immettere il nome e la descrizione della policy.
-. Nella pagina Impostazioni, attenersi alla seguente procedura:
+. Nella pagina tipo di criterio, effettuare le seguenti operazioni:
 +
-.. Selezionare il tipo di backup.
+.. Selezionare *Azure NetApp Files* come tipo di archiviazione.
+.. Selezionare *basato su file* se si desidera eseguire un controllo di integrità del database.
+.. Selezionare *basato su snapshot* se si desidera creare un backup utilizzando la tecnologia Snapshot.
+
+
+. Nella pagina istantanea e backup, effettuare le seguenti operazioni:
 +
-... Selezionare *Backup basato su file* se si desidera eseguire un controllo di integrità del database.
-... Selezionare *basato su snapshot* se si desidera creare un backup utilizzando la tecnologia Snapshot.
+.. Selezionare la frequenza del backup pianificato.
+.. Specificare le impostazioni di conservazione.
+.. Se si desidera attivare il backup Azure NetApp Files, selezionare *attiva backup* e specificare le impostazioni di conservazione.
 
-
-.. Specificare il tipo di pianificazione.
-
-
-. Nella pagina di conservazione, specificare le impostazioni di conservazione per il tipo di backup e il tipo di pianificazione selezionato.
-+
-
-NOTE: La replica su storage secondario non è supportata.
 
 . Esaminare il riepilogo e fare clic su *fine*.
 

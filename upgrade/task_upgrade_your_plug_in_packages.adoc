@@ -13,7 +13,7 @@ summary: 'I pacchetti plug-in vengono distribuiti come parte dell"aggiornamento 
 [role="lead"]
 I pacchetti plug-in vengono distribuiti come parte dell'aggiornamento di SnapCenter.
 
-La procedura di aggiornamento posiziona l'host Windows, Linux o AIX in modalità "`maintenance`", impedendo all'host di eseguire qualsiasi processo pianificato.
+Non è necessario impostare manualmente ciascun host plug-in che si desidera aggiornare in modalità di manutenzione poiché la procedura di aggiornamento imposta gli host plug-in Windows, Linux o AIX in modalità di manutenzione. La modalità di manutenzione impedisce l'esecuzione di qualsiasi processo pianificato sull'host del plug-in durante l'aggiornamento.
 
 .Prima di iniziare
 * Se si è utenti non root con accesso alle macchine Linux, aggiornare il file _/etc/sudoers_ con i valori checksum più recenti prima di eseguire l'operazione di aggiornamento.
@@ -28,7 +28,6 @@ Esempi di file di configurazione di SnapCenter: SnapDriveService.exe.config, SMC
 
 
 .A proposito di questa attività
-* La procedura di aggiornamento posiziona l'host Windows, Linux o AIX in modalità "`maintenance`", impedendo all'host di eseguire qualsiasi processo pianificato.
 * Per il plug-in SnapCenter per Microsoft SQL Server, il plug-in SnapCenter per Microsoft Exchange Server e il plug-in SnapCenter per Microsoft Windows, si consiglia di aggiornare sia il server che gli host plug-in alla versione più recente per l'esecuzione DI SCRIPTS_PATH.
 +
 Per le pianificazioni di backup e verifica esistenti con prescritture e postscript attivati nel criterio, le operazioni di backup continueranno a funzionare dopo l'aggiornamento.
@@ -42,14 +41,14 @@ Nella pagina *Dettagli lavoro*, un messaggio di avviso consiglia al cliente di c
 . Nel riquadro di navigazione a sinistra, fare clic su *hosts* > *Managed hosts*.
 . Aggiornare gli host eseguendo una delle seguenti operazioni:
 +
-** Se la colonna Overall Status (Stato generale) visualizza "`Upgrade Available`" (aggiornamento disponibile) per uno degli host, fare clic sul nome host ed eseguire le seguenti operazioni:
+** Se nella colonna Stato generale viene visualizzato "aggiornamento disponibile" per uno dei plug-in host, fare clic sul nome host del plug-in ed eseguire le seguenti operazioni:
 +
 ... Fare clic su *altre opzioni*.
-... Selezionare *Ignora precheck* se non si desidera verificare se l'host soddisfa i requisiti per l'aggiornamento del plug-in.
+... Selezionare *Ignora controlli preliminari* se non si desidera verificare se l'host del plug-in soddisfa i requisiti per aggiornare il plug-in.
 ... Fare clic su *Upgrade* (Aggiorna).
 
 
-** Se si desidera aggiornare più host, selezionare tutti gli host e fare clic su image:../media/more_icon.gif[""], Quindi fare clic su *Upgrade* > *OK*.
+** Se si desidera aggiornare più host plug-in, selezionare tutti gli host, fare clic su image:../media/more_icon.gif[""], quindi fare clic su *Upgrade* > *OK*.
 +
 Tutti i servizi correlati vengono riavviati durante l'aggiornamento del plug-in.
 
@@ -58,7 +57,7 @@ Tutti i servizi correlati vengono riavviati durante l'aggiornamento del plug-in.
 NOTE: Tutti i plug-in del pacchetto vengono selezionati, ma solo i plug-in installati con la versione precedente di SnapCenter vengono aggiornati e i plug-in rimanenti non vengono installati. Per installare qualsiasi nuovo plug-in, utilizzare l'opzione *Aggiungi plug-in*.
 
 +
-Se non è stata selezionata la casella di controllo *Ignora precheck*, l'host viene validato per verificare se soddisfa i requisiti per l'installazione del plug-in. Se i requisiti minimi non vengono soddisfatti, vengono visualizzati messaggi di errore o di avviso appropriati. Dopo aver risolto il problema, fare clic su *Upgrade* (Aggiorna).
+Se non è stata selezionata la casella di controllo *Ignora controlli preliminari*, l'host del plug-in viene convalidato per verificare se soddisfa i requisiti di installazione del plug-in. Se i requisiti minimi non sono soddisfatti, vengono visualizzati messaggi di errore o di avviso appropriati. Dopo aver risolto il problema, fare clic su *Upgrade* (Aggiorna).
 
 +
 

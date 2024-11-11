@@ -21,7 +21,7 @@ Di seguito è riportato un esempio di configurazione ALM:
 * FCI per ha (Local High Availability) e AG (Availability Group) per il disaster recovery con un'istanza standalone nel sito di disaster recovery
 
 
-image::../media/asymmetric_lun_mapping_diagram.gif[diagramma di mappatura del lun asimmetrico]
+image::../media/asymmetric_lun_mapping_diagram.gif[mappatura delle lun]
 
 Lo storage nel data center primario è condiviso tra i nodi FCI presenti nel data center primario. Lo storage nel data center per il disaster recovery è condiviso tra i nodi FCI presenti nel data center per il disaster recovery.
 

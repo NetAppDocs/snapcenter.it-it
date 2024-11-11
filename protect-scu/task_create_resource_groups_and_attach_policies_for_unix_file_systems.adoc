@@ -22,7 +22,7 @@ Collegare uno o più criteri al gruppo di risorse per definire il tipo di lavoro
 L'immagine seguente illustra la relazione tra risorse, gruppi di risorse e criteri per i database:
 
 +
-image::../media/sco_resourcegroup_policy.gif[policy del resourcegroup sco]
+image::../media/sco_resourcegroup_policy.gif[criterio gruppo di risorse]
 
 * Per i criteri abilitati per SnapLock, per ONTAP 9.12.1 e versioni precedenti, se si specifica un periodo di blocco Snapshot, i cloni creati dagli Snapshot a prova di manomissione come parte del ripristino ereditano il tempo di scadenza SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
 * L'aggiunta di nuovi file system senza la sincronizzazione attiva di SnapMirror a un gruppo di risorse esistente che contiene risorse con la sincronizzazione attiva di SnapMirror non è supportata.

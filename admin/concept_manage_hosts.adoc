@@ -322,7 +322,7 @@ Al riavvio dei servizi, assicurarsi che non siano in esecuzione processi.
 . Nel riquadro di spostamento di sinistra, fare clic su *hosts*.
 . Nella pagina hosts, fare clic su *Managed hosts*.
 . Nella pagina Managed hosts (host gestiti), selezionare l'host che si desidera avviare.
-. Fare clic su image:../media/more_icon.gif[""] E fare clic su *Avvia servizio* o *Riavvia servizio*.
+. Fare clic suimage:../media/more_icon.gif["icona altro"], quindi su *Avvia servizio* o *Riavvia servizio*.
 +
 È possibile avviare o riavviare il servizio di più host contemporaneamente.
 
@@ -342,7 +342,7 @@ NOTE: Non è possibile sospendere le pianificazioni su un host inattivo perché 
 . Nel riquadro di spostamento di sinistra, fare clic su *hosts*.
 . Nella pagina hosts, fare clic su *Managed hosts*.
 . Nella pagina Managed hosts (host gestiti), selezionare l'host che si desidera sospendere.
-. Fare clic su image:../media/more_icon.gif[""] Quindi fare clic su *Suspend Schedule* per impostare l'host per questo plug-in in modalità di manutenzione.
+. Fare clic sul image:../media/more_icon.gif["icona altro"], quindi su *Sospendi pianificazione* per impostare l'host per il plug-in in modalità di manutenzione.
 +
 È possibile sospendere la pianificazione di più host contemporaneamente.
 

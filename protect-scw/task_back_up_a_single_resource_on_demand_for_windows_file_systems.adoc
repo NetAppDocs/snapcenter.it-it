@@ -44,12 +44,12 @@ Ad esempio, customtext_resourcegroup_policy_hostname o resourcegroup_hostname. P
 È possibile selezionare qualsiasi criterio esistente, quindi fare clic su *Dettagli* per determinare se è possibile utilizzarlo.
 
 +
-Se nessuna policy esistente soddisfa i requisiti, è possibile copiare una policy esistente e modificarla oppure creare una nuova policy facendo clic su image:../media/add_policy_from_resourcegroup.gif[""] per avviare la procedura guidata dei criteri.
+Se nessun criterio esistente soddisfa i propri requisiti, è possibile copiare e modificare un criterio esistente oppure creare un nuovo criterio facendo clic su image:../media/add_policy_from_resourcegroup.gif["aggiungere il gruppo di risorse del modulo criterio"] per avviare la procedura guidata.
 
 +
 I criteri selezionati sono elencati nella colonna Policy della sezione Configure schedules for selected policies.
 
-.. Nella sezione Configura pianificazioni per criteri selezionati, fare clic su image:../media/add_policy_from_resourcegroup.gif[""] Nella colonna Configura pianificazioni per il criterio per il quale si desidera configurare la pianificazione.
+.. Nella sezione Configura pianificazioni per i criteri selezionati, fare clic image:../media/add_policy_from_resourcegroup.gif["aggiungi criterio dal gruppo di risorse"] nella colonna Configura pianificazioni per il criterio per il quale si desidera configurare la pianificazione.
 .. Nella finestra di dialogo Add schedules for policy _policy_name_, configurare la pianificazione specificando la data di inizio, la data di scadenza e la frequenza, quindi fare clic su *fine*.
 +
 Le pianificazioni configurate sono elencate nella colonna Applied Schedules (Pianificazioni applicate) della sezione Configure schedules for selected policies (Configura pianificazioni per criteri selezionati).

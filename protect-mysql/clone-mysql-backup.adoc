@@ -18,10 +18,9 @@ summary: È possibile utilizzare SnapCenter per clonare un backup. È possibile 
 * Assicurarsi che gli aggregati che ospitano i volumi siano inclusi nell'elenco degli aggregati assegnati della macchina virtuale di storage (SVM).
 * Per i comandi pre-clone o post-clone, controllare se i comandi sono presenti nell'elenco dei comandi disponibile sull'host del plug-in dai seguenti percorsi:
 +
-Per Windows: _C: File di programma NetApp, SnapCenter, Snapcenter Plug-in Creator, ecc., allowed_comands_list.txt_
+** Posizione predefinita sull'host Windows: _C:\programmi\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc\allowed_Commands.config_
+** Posizione predefinita sull'host Linux: _/opt/NetApp/SnapCenter/scc/etc/allowed_Commands.config_
 
-+
-Per Linux: _/var/opt/snapcenter/scc/allowed_comands_list.txt_
 
 
 
@@ -31,7 +30,7 @@ NOTE: Se i comandi non sono presenti nell'elenco dei comandi, l'operazione avrà
 .A proposito di questa attività
 * Non è possibile proteggere le istanze MySQL clonate.
 * Per informazioni sulle limitazioni delle operazioni di suddivisione dei cloni, vedere http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["Guida alla gestione dello storage logico di ONTAP 9"^].
-* Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dagli Snapshot del vault di SnapLock come parte del ripristino ereditano il tempo di scadenza del vault di SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
+* Per ONTAP 9.12,1 e le versioni precedenti, i cloni creati dagli Snapshot del vault di SnapLock come parte del ripristino ereditano il tempo di scadenza del vault di SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
 
 
 [role="tabbed-block"]
@@ -96,13 +95,7 @@ NOTE: Gli script vengono eseguiti sull'host del plug-in.
 Comando mount per un volume o qtree su una macchina Linux:
 
 +
-Esempio per NFS:
-
-+
- mount VSERVER_DATA_IP:%VOLUME_NAME_Clone /mnt
-+
-
-NOTE: Per i comandi pre e post per le operazioni quiesce, Snapshot e unquiesce, è necessario controllare se i comandi sono presenti nell'elenco dei comandi disponibili sull'host plug-in dal percorso _/opt/snapcenter/snapcenter/scc/allowed_command.config_ per Linux e _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_Commands_list.txt_ per Windows.
+Esempio per NFS: `mount VSERVER_DATA_IP:%VOLUME_NAME_Clone /mnt`
 
 
 

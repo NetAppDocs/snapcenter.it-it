@@ -44,7 +44,7 @@ Se non vengono creati backup, è possibile modificare tutti i valori specificati
 
 . Nel riquadro di navigazione a sinistra, fare clic su *Resources*, quindi selezionare il plug-in Oracle Database dall'elenco.
 . Nella pagina Resources (risorse), selezionare *Application Volume* (Volume applicazione) dall'elenco *View* (Visualizza).
-. Fare clic su image:../media/edit_icon.gif[""] per modificare i valori.
+. Fare clic su image:../media/edit_icon.gif["icona edit (modifica)"] per modificare i valori.
 
 
 
@@ -59,5 +59,5 @@ Se necessario, SnapCenter consente di annullare l'operazione di eliminazione.
 
 . Nel riquadro di navigazione a sinistra, fare clic su *Resources*, quindi selezionare il plug-in Oracle Database dall'elenco.
 . Nella pagina Resources (risorse), selezionare *Application Volume* (Volume applicazione) dall'elenco *View* (Visualizza).
-. Fare clic su image:../media/delete_icon.gif[""] per modificare i valori.
+. Fare clic su image:../media/delete_icon.gif["icona elimina"] per modificare i valori.
 

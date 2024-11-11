@@ -13,4 +13,4 @@ summary: Se si desidera proteggere MySQL, è necessario installare e configurare
 [role="lead"]
 Se si desidera proteggere i database MySQL, è necessario installare e configurare il plug-in SnapCenter per MySQL.
 
-image::../media/sap_hana_install_configure_workflow.gif[Installare e configurare il workflow]
+image::../media/sap_hana_install_configure_workflow.png[Installare e configurare il workflow]

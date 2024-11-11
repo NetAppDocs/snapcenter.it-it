@@ -57,7 +57,7 @@ Specificare il percorso in cui verrà montato il file system.
 .. Immettere i comandi per pre-clone o post-clone che devono essere eseguiti rispettivamente prima o dopo l'operazione di clone.
 +
 
-NOTE: È necessario controllare se i comandi sono presenti nell'elenco dei comandi disponibili sull'host del plug-in dal percorso _/opt/NetApp/snapcenter/scc/allowed_Commands.config_.
+NOTE: Controllare se i comandi sono presenti nell'elenco dei comandi disponibili sull'host plug-in dal percorso _/opt/NetApp/snapcenter/scc/etc/allowed_command.config_.
 
 
 

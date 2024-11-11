@@ -7,7 +7,7 @@ summary: Mentre REST stabilisce un insieme comune di tecnologie e Best practice,
 = Caratteristiche operative di base
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

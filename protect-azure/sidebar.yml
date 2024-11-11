@@ -2,6 +2,8 @@
 section: protect-azure
 title: Proteggi le applicazioni in esecuzione su Azure NetApp Files
 entries:
+- title: Proteggi le applicazioni in esecuzione su Azure NetApp Files
+  url: "/protect-azure/protect-applications-azure-netapp-files.html"
 - title: Installare SnapCenter e creare le credenziali
   entries:
   - title: Installare SnapCenter sulla macchina virtuale Azure

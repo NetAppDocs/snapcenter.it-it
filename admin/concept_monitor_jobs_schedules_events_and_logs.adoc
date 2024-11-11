@@ -33,6 +33,37 @@ NOTE: È possibile monitorare solo i lavori creati e rilevanti per l'utente, a m
 
 
 
+=== Gestire i processi di backup pianificati
+
+A partire dalla release di SnapCenter 6.0.1, è stato introdotto un nuovo parametro *JobConcurrencyThreshold* che imposta una soglia sul numero di processi pianificati che possono essere eseguiti in un determinato momento. Ciò consente di controllare il numero di backup che si desidera eseguire in base alla configurazione hardware del sistema.
+
+Il valore predefinito assegnato a *JobConcurrencyThreshold* è 0 ed è disattivato. È possibile attivare assegnando un valore se si osserva un peggioramento delle prestazioni durante la finestra di backup pianificata.
+
+
+NOTE: Se si abilita *JobConcurrencyThreshold* per gestire processi simultanei, SnapCenter non consente di controllare l'ordine dei backup e i backup potrebbero non essere attivati nello stesso momento specificato nella pianificazione.
+
+.Fasi
+. Impostare il valore del parametro _JobConcurrencyThreshold_ situato in _C:\programmi\NetApp\SnapCenter WebApp\SnapManager.Web.UI.dll.config_.
+. Riciclare il pool di applicazioni SnapCenter facendo clic su IIS > Pool di applicazioni > SnapCenter > Riavvia.
+. Riavviare il servizio Web SnapCenter facendo clic su IIS > Siti > SnapCenter > Riavvia.
+
+
+
+
+=== Gestire i lavori obsoleti
+
+I lavori obsoleti vengono creati a causa di interruzioni in SnapCenter o di aggiornamenti impropri dei lavori. A partire dalla versione SnapCenter 6.0.1, viene introdotta una pianificazione predefinita per ripulire questi lavori obsoleti che rimangono bloccati per più di 72 ore. È possibile modificare la frequenza di pianificazione modificando il parametro configurabile *CleanUpStaleJobsIntervalHours*.
+
+È possibile attivare la pulizia su richiesta eseguendo la pianificazione da *Monitor* > *pianificazioni* > *SnapCenter_StaleJobCleanUp*.
+
+.Fasi
+. Impostare il valore del parametro _CleanUpStaleJobsIntervalHours_ situato in _C:\programmi\NetApp\SnapCenter WebApp\SnapManager.Web.UI.dll.config_.
+. Riciclare il pool di applicazioni SnapCenter facendo clic su IIS > Pool di applicazioni > SnapCenter > Riavvia.
+. Riavviare il servizio Web SnapCenter facendo clic su IIS > Siti > SnapCenter > Riavvia.
+
+
+
+
 == Monitorare le pianificazioni
 
 È possibile visualizzare le pianificazioni correnti per determinare quando l'operazione viene avviata, quando è stata eseguita l'ultima volta e quando viene eseguita successivamente. È inoltre possibile determinare l'host su cui viene eseguita l'operazione, insieme alle informazioni sul gruppo di risorse e sui criteri dell'operazione.

@@ -45,6 +45,4 @@ Se i dati di altri server host SQL si trovano sullo stesso volume, non è possib
 
 *Ulteriori informazioni*
 
-link:task_back_up_resources_using_powershell_cmdlets_for_sql.html["Eseguire il backup delle risorse utilizzando i cmdlet PowerShell"]
-
 link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Quiesce_or_grouping_resources_operations_fail["Le operazioni di quiesce o raggruppamento delle risorse non riescono"]

@@ -31,4 +31,4 @@ Un gruppo di risorse definisce _cosa_ si desidera proteggere e quando si desider
 
 L'immagine seguente illustra la relazione tra risorse, gruppi di risorse e criteri per i database:
 
-image::../media/scsql_resourcegroup_policy.gif[policy resourcegroup di scsql]
+image::../media/scsql_resourcegroup_policy.gif[criterio gruppo di risorse]

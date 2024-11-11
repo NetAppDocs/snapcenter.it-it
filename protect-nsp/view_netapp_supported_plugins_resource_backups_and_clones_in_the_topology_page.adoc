@@ -68,5 +68,5 @@ NOTE: Non è possibile rinominare o eliminare i backup presenti nel sistema di s
 
 NOTE: Non è possibile rinominare i backup presenti nel sistema di storage primario.
 
-. Se si desidera eliminare un clone, selezionarlo dalla tabella e fare clic su image:../media/delete_icon.gif[""] per eliminare il clone.
+. Se si desidera eliminare un clone, selezionarlo dalla tabella e fare clic su image:../media/delete_icon.gif["icona elimina"] per eliminare il clone.
 

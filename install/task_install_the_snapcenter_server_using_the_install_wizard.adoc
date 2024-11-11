@@ -13,7 +13,7 @@ summary: È possibile eseguire il programma di installazione del server SnapCent
 [role="lead"]
 È possibile eseguire il programma di installazione del server SnapCenter per installare il server SnapCenter.
 
-È possibile eseguire diverse procedure di installazione e configurazione utilizzando i cmdlet PowerShell.
+È possibile eseguire diverse procedure di installazione e configurazione utilizzando i cmdlet PowerShell. Si consiglia di utilizzare PowerShell 7.4.2 o versione successiva.
 
 
 NOTE: L'installazione automatica del server SnapCenter dalla riga di comando non è supportata.

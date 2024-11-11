@@ -7,7 +7,7 @@ summary: 'L"accesso all"API offre una prospettiva prima di iniziare a utilizzarl
 = Inizia con L'API REST
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -18,22 +18,30 @@ SnapCenter supporta un'ampia gamma di tipi di storage su macchine fisiche e macc
 
 
  a| 
-Server fisici e virtuali
- a| 
-LUN connessi a FC
-
-
-
- a| 
 Server fisico
  a| 
-LUN connessi a iSCSI
+* LUN connessi a FC
+* LUN connessi a iSCSI
+* Volumi connessi a NFS
+
 
 
 
  a| 
-Server fisici e virtuali
+VMware ESXi
  a| 
-Volumi connessi a NFS
+* Il completamento delle LUN RDM collegate da un HBASCAN ESXi FC o iSCSI degli HBA (host bus adapter) potrebbe richiedere molto tempo, in quanto SnapCenter esegue la scansione di tutti gli adattatori bus host presenti nell'host.
++
+È possibile modificare il file *LinuxConfig.pm* situato in _/opt/NetApp/snapcenter/spl/plugins/scu/scucore/modules/SCU/Config_ per impostare il valore del parametro *SCSI_HOSTS_OPTIMIZED_RESCAN* su 1 per ripetere la scansione solo degli HBA elencati in HBA_DRIVER_NAMES.
+
+* LUN iSCSI collegati direttamente al sistema guest dall'iniziatore iSCSI
+* VMDK su datastore NFS
+* VMDK in VMFS creato
+* Volumi NFS collegati direttamente al sistema guest
+* Datastore vVol in NFS e SAN
++
+È possibile eseguire il provisioning del datastore vVol solo con i tool ONTAP per VMware vSphere.
+
+
 
 |===

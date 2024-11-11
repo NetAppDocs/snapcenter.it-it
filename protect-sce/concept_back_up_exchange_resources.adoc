@@ -17,4 +17,4 @@ Quando si installa il plug-in SnapCenter per Microsoft Exchange Server nell'ambi
 
 Il seguente flusso di lavoro mostra la sequenza in cui è necessario eseguire l'operazione di backup:
 
-image:../media/sce_backup_workflow.gif[""]
+image:../media/sce_backup_workflow.gif["Flusso di lavoro del backup del database Exchange"]

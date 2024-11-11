@@ -50,7 +50,7 @@ NOTE: SnapCenter può eseguire il backup solo del database primario se si dispon
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina risorse, selezionare *Database*, *Instance* o *Availability Group* dall'elenco a discesa *View*.
 +
-Fare clic su image:../media/filter_icon.png[""] E selezionare il nome host e l'istanza di SQL Server per filtrare le risorse. Quindi fare clic su image:../media/filter_icon.png[""] per chiudere il riquadro del filtro.
+Fare clic su image:../media/filter_icon.png["icona del filtro"] e selezionare il nome host e l'istanza SQL Server per filtrare le risorse. È quindi possibile fare clic su image:../media/filter_icon.png["icona del filtro"] per chiudere il riquadro del filtro.
 
 . Fare clic su *Aggiorna risorse*.
 +

@@ -19,10 +19,9 @@ Se una risorsa non fa ancora parte di un gruppo di risorse, è possibile eseguir
 * Per le operazioni di backup basate su copie Snapshot, assicurarsi che tutti i database tenant siano validi e attivi.
 * Per i comandi pre e post per le operazioni quiescenza, Snapshot e Unquiesce, è necessario controllare se i comandi sono presenti nell'elenco dei comandi disponibile sull'host del plug-in dai seguenti percorsi:
 +
-Per Windows: _C: File di programma NetApp, SnapCenter, Snapcenter Plug-in Creator, ecc., allowed_comands_list.txt_
+** Posizione predefinita sull'host Windows: _C:\programmi\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc\allowed_Commands.config_
+** Posizione predefinita sull'host Linux: _/opt/NetApp/SnapCenter/scc/etc/allowed_Commands.config_
 
-+
-Per Linux: _/var/opt/snapcenter/scc/allowed_comands_list.txt_
 
 
 
@@ -37,7 +36,7 @@ NOTE: Se i comandi non sono presenti nell'elenco dei comandi, l'operazione avrà
 . Nel riquadro di spostamento di sinistra, selezionare *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina Resource, filtrare le risorse dall'elenco a discesa *View* in base al tipo di risorsa.
 +
-Selezionare *image:../media/filter_icon.png[""]*, quindi selezionare il nome host e il tipo di risorsa per filtrare le risorse. Quindi selezionare image:../media/filter_icon.png[""] per chiudere il riquadro del filtro.
+Selezionare image:../media/filter_icon.png["icona del filtro"], quindi selezionare il nome host e il tipo di risorsa per filtrare le risorse. È quindi possibile scegliere image:../media/filter_icon.png["icona del filtro"] di chiudere il riquadro del filtro.
 
 . Selezionare la risorsa di cui si desidera eseguire il backup.
 . Nella pagina risorsa, selezionare *Usa formato nome personalizzato per copia istantanea*, quindi immettere un formato nome personalizzato che si desidera utilizzare per il nome istantanea.
@@ -100,7 +99,7 @@ Selezionare *Altro*, quindi immettere il comando per creare un'istantanea.
 
 |===
 +
-image:../media/application_settings.gif[""]
+image:../media/application_settings.gif["impostazioni dell'applicazione"]
 
 
 

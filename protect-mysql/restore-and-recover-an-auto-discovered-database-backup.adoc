@@ -18,13 +18,14 @@ summary: È possibile utilizzare SnapCenter per ripristinare e ripristinare i da
 * È necessario annullare qualsiasi operazione di backup attualmente in corso per la risorsa o il gruppo di risorse che si desidera ripristinare.
 * Per i comandi di pre-restore, post-restore, mount e unmount, controllare se i comandi esistono nell'elenco dei comandi disponibile sull'host del plug-in dai seguenti percorsi:
 +
-Per Linux: _/var/opt/snapcenter/scc/allowed_commands.config_
+** Posizione predefinita sull'host Windows: _C:\programmi\NetApp\SnapCenter\SnapCenter Plug-in Creator\etc\allowed_Commands.config_
+** Posizione predefinita sull'host Linux: _/opt/NetApp/SnapCenter/scc/etc/allowed_Commands.config_
 
-+
+
+
+
 
 NOTE: Se i comandi non sono presenti nell'elenco dei comandi, l'operazione avrà esito negativo.
-
-
 
 .A proposito di questa attività
 * Per le risorse rilevate automaticamente, il ripristino è supportato con SFSR.
@@ -62,10 +63,6 @@ I comandi di disinstallazione non sono disponibili per le risorse rilevate autom
 . Nella pagina Post Ops (operazioni post), immettere i comandi di montaggio e post ripristino da eseguire dopo l'esecuzione di un processo di ripristino.
 +
 I comandi di montaggio non sono disponibili per le risorse rilevate automaticamente.
-
-+
-
-NOTE: Per i comandi pre e post per le operazioni quiesce, snapshot e unquiesce, è necessario controllare se i comandi sono presenti nell'elenco dei comandi disponibile sull'host plug-in dal percorso _/opt/snapcenter/snapenter/scc/allowed_commands.config_ per Linux.
 
 . Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
 +

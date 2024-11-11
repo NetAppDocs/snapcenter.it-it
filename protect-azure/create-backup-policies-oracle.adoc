@@ -19,16 +19,22 @@ Prima di utilizzare SnapCenter per eseguire il backup delle risorse di database 
 . Selezionare Oracle Database dall'elenco a discesa.
 . Fare clic su *nuovo*.
 . Nella pagina Name (Nome), immettere il nome e la descrizione della policy.
-. Nella pagina Backup Type (tipo di backup), attenersi alla seguente procedura:
+. Nella pagina tipo di criterio, effettuare le seguenti operazioni:
 +
+.. Selezionare *Azure NetApp Files* come tipo di archiviazione.
 .. Selezionare il tipo di backup come backup in linea o non in linea.
-.. Specificare la frequenza di pianificazione.
 .. Se si desidera catalogare il backup utilizzando Oracle Recovery Manager (RMAN), selezionare *Catalog backup with Oracle Recovery Manager (RMAN)*.
 .. Se si desidera ridurre i registri di archiviazione dopo il backup, selezionare *Prune archive logs after backup* (Sintonizzare i registri di archiviazione dopo il backup).
 .. Specificare le impostazioni di eliminazione del registro archivio.
 
 
-. Nella pagina di conservazione, specificare le impostazioni di conservazione.
+. Nella pagina istantanea e backup, effettuare le seguenti operazioni:
++
+.. Selezionare la frequenza del backup pianificato.
+.. Specificare le impostazioni di conservazione.
+.. Se si desidera attivare il backup Azure NetApp Files, selezionare *attiva backup* e specificare le impostazioni di conservazione.
+
+
 . Nella pagina script, immettere il percorso e gli argomenti del prespt o del postscript che si desidera eseguire rispettivamente prima o dopo l'operazione di backup.
 . Nella pagina verifica, selezionare la pianificazione di backup per la quale si desidera eseguire l'operazione di verifica e immettere il percorso e gli argomenti del postscript o del file di prescrizione che si desidera eseguire prima o dopo l'operazione di verifica, rispettivamente.
 . Esaminare il riepilogo e fare clic su *fine*.

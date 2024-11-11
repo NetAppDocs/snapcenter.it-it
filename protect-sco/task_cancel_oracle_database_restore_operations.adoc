@@ -42,7 +42,7 @@ Pagina Monitor
  a| 
 Riquadro delle attività
  a| 
-. Dopo aver avviato l'operazione di ripristino, fare clic su image:../media/activity_pane_icon.gif[""] Nel riquadro Activity (attività) per visualizzare le cinque operazioni più recenti.
+. Dopo aver avviato l'operazione di ripristino, fare clic image:../media/activity_pane_icon.gif["icone sul riquadro attività"] sul riquadro attività per visualizzare le cinque operazioni più recenti.
 . Selezionare l'operazione.
 . Nella pagina Dettagli processo, fare clic su *Annulla processo*.
 
