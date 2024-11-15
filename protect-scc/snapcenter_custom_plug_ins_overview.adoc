@@ -1,0 +1,28 @@
+---
+permalink: protect-scc/snapcenter_custom_plug_ins_overview.html 
+sidebar: sidebar 
+keywords: custom plug-ins 
+summary: È possibile sviluppare plug-in personalizzati per le applicazioni utilizzate e quindi utilizzare SnapCenter per eseguire il backup, il ripristino o la clonazione di tali applicazioni. Come altri plug-in SnapCenter, i plug-in personalizzati agiscono come componenti lato host del software NetApp SnapCenter, consentendo la protezione dei dati e la gestione delle risorse applicative. 
+---
+= Panoramica sui plug-in personalizzati di SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile sviluppare plug-in personalizzati per le applicazioni utilizzate e quindi utilizzare SnapCenter per eseguire il backup, il ripristino o la clonazione di tali applicazioni. I plug-in personalizzati fungono da componenti lato host del software NetApp SnapCenter, consentendo una protezione dei dati integrata con l'applicazione e la gestione delle risorse.
+
+Una volta installati dei plug-in personalizzati, è possibile utilizzare SnapCenter con tecnologia NetApp SnapMirror per creare copie mirror dei set di backup su un altro volume e utilizzare la tecnologia NetApp SnapVault per eseguire la replica di backup disk-to-disk. I plug-in personalizzati possono essere utilizzati in ambienti Windows e Linux.
+
+
+NOTE: SnapCenterCLI non supporta i comandi dei plug-in personalizzati.
+
+È possibile installare il plug-in personalizzato dalla pagina Add host (Aggiungi host).
+
+link:add_hosts_and_install_plug_in_packages_on_remote_hosts.html["Aggiungere host e installare pacchetti plug-in su host remoti."^]
+
+
+NOTE: I criteri di supporto di SnapCenter riguarderanno il supporto per il framework del plug-in personalizzato di SnapCenter, il motore principale e le API associate. Il supporto non copre il codice sorgente del plug-in e gli script associati creati sul framework del plug-in personalizzato.
+
+È possibile creare plug-in personalizzati facendo riferimento alla link:develop_a_plug_in_for_your_application.html["Sviluppare un plug-in per l'applicazione"^] guida.

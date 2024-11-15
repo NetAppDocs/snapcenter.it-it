@@ -1,0 +1,48 @@
+---
+permalink: protect-scc/storage_types_supported_by_custom_plugins.html 
+sidebar: sidebar 
+keywords: SnapCenter Custom Plug-ins 
+summary: 'SnapCenter supporta un"ampia gamma di tipi di storage su macchine fisiche e virtuali. Prima di installare i plug-in personalizzati di SnapCenter, è necessario verificare il supporto per il tipo di storage in uso.' 
+---
+= Tipi di storage supportati dai plug-in personalizzati di SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter supporta un'ampia gamma di tipi di storage su macchine fisiche e virtuali. Prima di installare i plug-in personalizzati di SnapCenter, è necessario verificare il supporto per il tipo di storage in uso.
+
+|===
+| Macchina | Tipo di storage 
+
+
+ a| 
+Montaggi fisici e diretti NFS sugli host VM (VMDK e LUN RDM non sono supportati).
+ a| 
+LUN connessi a FC
+
+
+
+ a| 
+Montaggi fisici e diretti NFS sugli host VM (VMDK e LUN RDM non sono supportati).
+ a| 
+LUN connessi a iSCSI
+
+
+
+ a| 
+Montaggi fisici e diretti NFS sugli host VM (VMDK e LUN RDM non sono supportati).
+ a| 
+Volumi connessi a NFS
+
+
+
+ a| 
+VMware ESXi
+ a| 
+Datastore vVol in NFS e SAN
+
+È possibile eseguire il provisioning del datastore vVol solo con i tool ONTAP per VMware vSphere.
+
+|===

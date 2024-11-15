@@ -1,22 +1,22 @@
 ---
-permalink: protect-nsp/create_policies_for_netapp_supported_plugins_resources.html 
+permalink: protect-scc/create_policies_for_custom_plug_in_resources.html 
 sidebar: sidebar 
-keywords: create policies, NetApp supported plug-in 
-summary: Prima di utilizzare SnapCenter per eseguire il backup di risorse specifiche dei plug-in supportati da NetApp, è necessario creare un criterio di backup per la risorsa o il gruppo di risorse di cui si desidera eseguire il backup. 
+keywords: create policies, custom plug-in 
+summary: Prima di utilizzare SnapCenter per eseguire il backup di risorse specifiche del plug-in personalizzato, è necessario creare un criterio di backup per la risorsa o il gruppo di risorse di cui si desidera eseguire il backup. 
 ---
-= Crea policy per le risorse dei plug-in supportate da NetApp
+= Creare policy per risorse plug-in personalizzate
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Prima di utilizzare SnapCenter per eseguire il backup di risorse specifiche dei plug-in supportati da NetApp, è necessario creare un criterio di backup per la risorsa o il gruppo di risorse di cui si desidera eseguire il backup.
+Prima di utilizzare SnapCenter per eseguire il backup di risorse specifiche del plug-in personalizzato, è necessario creare un criterio di backup per la risorsa o il gruppo di risorse di cui si desidera eseguire il backup.
 
 .Prima di iniziare
 * Dovresti aver definito la tua strategia di backup.
 +
-Per ulteriori informazioni, consulta le informazioni relative alla definizione di una strategia di data Protection per i plug-in supportati da NetApp.
+Per ulteriori informazioni, consulta le informazioni sulla definizione di una strategia di protezione dei dati per i plug-in personalizzati.
 
 * Dovresti aver preparato per la protezione dei dati.
 +
@@ -119,7 +119,7 @@ Durante la replica secondaria, il tempo di scadenza del SnapLock carica il tempo
 
 Fare clic sul pulsante *Aggiorna* nella pagina topologia per aggiornare il tempo di scadenza SnapLock secondario e primario recuperato da ONTAP.
 
-Vedere link:../protect-nsp/view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["Visualizza i backup e i cloni relativi alle risorse dei plug-in supportati da NetApp nella pagina topologia"].
+Vedere link:view_custom_plug_in_resource_backups_and_clones_in_the_topology_page.html["Visualizza i backup e i cloni personalizzati relativi alle risorse plug-in nella pagina topologia"].
 
 
 
@@ -135,7 +135,7 @@ Quando SnapLock è configurato solo sul secondario da ONTAP noto come vault di S
 Per ulteriori informazioni sul vault di SnapLock, vedere commit Snapshot to WORM in un vault
 destinazione
 
-link:../protect-nsp/view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["Visualizza i backup e i cloni relativi alle risorse dei plug-in supportati da NetApp nella pagina topologia"].
+Vedere link:view_custom_plug_in_resource_backups_and_clones_in_the_topology_page.html["Visualizza i backup e i cloni personalizzati relativi alle risorse plug-in nella pagina topologia"].
 
 
 

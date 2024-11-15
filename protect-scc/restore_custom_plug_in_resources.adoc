@@ -1,10 +1,10 @@
 ---
-permalink: protect-nsp/restore_netapp_supported_plugins_resources.html 
+permalink: protect-scc/restore_custom_plug_in_resources.html 
 sidebar: sidebar 
 keywords:  
 summary: 'Il flusso di lavoro di ripristino e ripristino include la pianificazione, l"esecuzione delle operazioni di ripristino e il monitoraggio delle operazioni.' 
 ---
-= Ripristinare le risorse dei plug-in supportati da NetApp
+= Ripristinare risorse plug-in personalizzate
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

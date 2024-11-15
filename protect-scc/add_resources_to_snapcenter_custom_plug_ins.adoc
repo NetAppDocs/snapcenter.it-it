@@ -1,0 +1,94 @@
+---
+permalink: protect-scc/add_resources_to_snapcenter_custom_plug_ins.html 
+sidebar: sidebar 
+keywords: custom plug-in, resources, snapcenter 
+summary: 'È necessario aggiungere le risorse di cui si desidera eseguire il backup o la clonazione. A seconda dell"ambiente in uso, le risorse possono essere istanze di database o raccolte di cui si desidera eseguire il backup o la clonazione.' 
+---
+= Aggiungere risorse ai plug-in personalizzati di SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario aggiungere le risorse di cui si desidera eseguire il backup o la clonazione. A seconda dell'ambiente in uso, le risorse possono essere istanze di database o raccolte di cui si desidera eseguire il backup o la clonazione.
+
+.Prima di iniziare
+* È necessario completare attività come l'installazione del server SnapCenter, l'aggiunta di host, la creazione di connessioni al sistema di storage e l'aggiunta di credenziali.
+* È necessario disporre di link:develop_a_plug_in_for_your_application.html["creazione di un plug-in personalizzato per l'applicazione"].
+* I plug-in devono essere stati caricati sul server SnapCenter.
+
+
+.Fasi
+. Nel riquadro di spostamento di sinistra, selezionare *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina risorse, selezionare *Aggiungi risorsa*.
+. Nella pagina fornire dettagli sulle risorse, eseguire le seguenti operazioni:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Nome
+ a| 
+Immettere il nome della risorsa.
+
+
+
+ a| 
+Nome host
+ a| 
+Selezionare l'host.
+
+
+
+ a| 
+Tipo
+ a| 
+Selezionare il tipo. Il tipo è definito dall'utente in base al file di descrizione del plug-in. Ad esempio, database e istanze.
+
+Nel caso in cui il tipo selezionato abbia un padre, inserisci i dettagli dell'padre. Ad esempio, se il tipo è Database e il padre è istanza, inserire i dettagli dell'istanza.
+
+
+
+ a| 
+Nome della credenziale
+ a| 
+Selezionare credenziale o creare una nuova credenziale.
+
+
+
+ a| 
+Percorsi di montaggio
+ a| 
+Immettere i percorsi di montaggio in cui è montata la risorsa. Questo è valido solo per un host Windows.
+
+|===
+. Nella pagina fornire footprint dello storage, selezionare un sistema storage e scegliere uno o più volumi, LUN e qtree, quindi selezionare *Salva*.
++
+Facoltativo: Selezionare image:../media/add_policy_from_resourcegroup.gif["Icona più"] Per aggiungere più volumi, LUN e qtree da altri sistemi storage.
+
++
+image::../media/storage_footprint.gif[Impatto dello storage]
+
+. Nella pagina Resource Settings (Impostazioni risorse), fornire coppie chiave-valore personalizzate per la risorsa.
++
+
+NOTE: Verificare che il nome delle chiavi personalizzate sia in maiuscolo.
+
++
+image::../media/resource_settings.gif[impostazioni delle risorse]
+
+. Esaminare il riepilogo, quindi selezionare *fine*.
+
+
+.Risultato
+Le risorse vengono visualizzate insieme a informazioni quali tipo, nome host o cluster, criteri e gruppi di risorse associati e stato generale.
+
+
+IMPORTANT: È necessario aggiornare le risorse se i database vengono rinominati al di fuori di SnapCenter.
+
+.Al termine
+Se si desidera fornire l'accesso alle risorse ad altri utenti, l'amministratore di SnapCenter deve assegnare le risorse a tali utenti. In questo modo, gli utenti possono eseguire le azioni per le quali dispongono delle autorizzazioni per le risorse ad essi assegnate.
+
+Dopo aver aggiunto le risorse, è possibile modificarne i dettagli.

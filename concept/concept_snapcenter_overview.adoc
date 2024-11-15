@@ -50,13 +50,13 @@ SnapCenter include le seguenti funzionalità principali:
 
 * Protezione dei dati centralizzata e coerente con l'applicazione
 +
-La data Protection è supportata per Microsoft Exchange Server, Microsoft SQL Server, database Oracle su Linux o AIX, database SAP HANA, IBM DB2 e file host Windows in esecuzione su sistemi ONTAP.
+La data Protection è supportata per Microsoft Exchange Server, Microsoft SQL Server, database Oracle su Linux o AIX, database SAP HANA, IBM DB2, PostgreSQL, MySQL e Windows host filesystem in esecuzione su sistemi ONTAP.
 
 +
-La protezione dei dati è supportata anche per altre applicazioni e database standard o personalizzati fornendo un framework per creare plug-in SnapCenter definiti dall'utente. Ciò consente la protezione dei dati per altre applicazioni e database dallo stesso singolo pannello di controllo. Sfruttando questo framework, NetApp ha rilasciato i plug-in SnapCenter per MongoDB, MySQL, PostgreSQL, Storage, MaxDB, Sybase ASE, ORASCPM, MongoDB e DPGrue. Inoltre, è possibile creare un plug-in personalizzato utilizzando la guida dello sviluppatore.
+La protezione dei dati è supportata anche per altre applicazioni e database standard o personalizzati fornendo un framework per creare plug-in SnapCenter definiti dall'utente. Ciò consente la protezione dei dati per altre applicazioni e database dallo stesso singolo pannello di controllo. Sfruttando questo framework, NetApp ha rilasciato i plug-in SnapCenter per MongoDB, Storage, MaxDB, Sybase ASE, ORASCPM. Inoltre, è possibile creare un plug-in personalizzato utilizzando la guida dello sviluppatore.
 
 +
-link:../protect-nsp/develop_a_plug_in_for_your_application.html["Sviluppare un plug-in per l'applicazione"]
+link:../protect-scc/develop_a_plug_in_for_your_application.html["Sviluppare un plug-in per l'applicazione"]
 
 * Backup basati su policy
 +
@@ -176,6 +176,11 @@ SnapCenter è costituito dal server SnapCenter e dai plug-in SnapCenter. Install
 ** Plug-in SnapCenter per IBM DB2
 ** Plug-in SnapCenter per PostgreSQL
 ** Plug-in SnapCenter per MySQL
+** Plug-in di SnapCenter per MongoDB
+** Plug-in SnapCenter per ORASCPM (applicazioni Oracle)
+** Plug-in SnapCenter per SAP ASE
+** Plug-in SnapCenter per SAP MaxDB
+** Plug-in SnapCenter per il plug-in Storage
 
 
 * Pacchetto plug-in SnapCenter per Linux, che include i seguenti plug-in:
@@ -186,15 +191,20 @@ SnapCenter è costituito dal server SnapCenter e dai plug-in SnapCenter. Install
 ** Plug-in SnapCenter per IBM DB2
 ** Plug-in SnapCenter per PostgreSQL
 ** Plug-in SnapCenter per MySQL
+** Plug-in di SnapCenter per MongoDB
+** Plug-in SnapCenter per ORASCPM (applicazioni Oracle)
+** Plug-in SnapCenter per SAP ASE
+** Plug-in SnapCenter per SAP MaxDB
+** Plug-in SnapCenter per il plug-in Storage
 
 
 * Pacchetto plug-in SnapCenter per AIX, che include i seguenti plug-in:
 +
 ** Plug-in SnapCenter per database Oracle
 ** Plug-in SnapCenter per file system UNIX
+** Plug-in SnapCenter per IBM DB2
 
 
-* Plug-in supportati da SnapCenter NetApp
 
 
 Il plug-in SnapCenter per VMware vSphere, in precedenza NetApp Data Broker, è un'appliance virtuale standalone che supporta le operazioni di protezione dei dati SnapCenter su database e file system virtualizzati.
@@ -351,6 +361,71 @@ Host Db2MySQL
  a| 
 Linux o Windows
 
+
+
+ a| 
+Plug-in per MongoDB
+ a| 
+Pacchetto plug-in per Linux e pacchetto plug-in per Windows
+ a| 
+Plug-in per UNIX o Plug-in per Windows
+ a| 
+Host MongoDB
+ a| 
+Linux o Windows
+
+
+
+ a| 
+Plug-in per ORASCPM (applicazioni Oracle)
+ a| 
+Pacchetto plug-in per Linux e pacchetto plug-in per Windows
+ a| 
+Plug-in per UNIX o Plug-in per Windows
+ a| 
+Host Oracle
+ a| 
+Linux o Windows
+
+
+
+ a| 
+Plug-in per SAP ASE
+ a| 
+Pacchetto plug-in per Linux e pacchetto plug-in per Windows
+ a| 
+Plug-in per UNIX o Plug-in per Windows
+ a| 
+Host SAP
+ a| 
+Linux o Windows
+
+
+
+ a| 
+Plug-in per SAP MaxDB
+ a| 
+Pacchetto plug-in per Linux e pacchetto plug-in per Windows
+ a| 
+Plug-in per UNIX o Plug-in per Windows
+ a| 
+Host SAP MaxDB
+ a| 
+Linux o Windows
+
+
+
+ a| 
+Plug-in per Storage
+ a| 
+Pacchetto plug-in per Linux e pacchetto plug-in per Windows
+ a| 
+Plug-in per UNIX o Plug-in per Windows
+ a| 
+Host di storage
+ a| 
+Linux o Windows
+
 |===
 
 NOTE: Il plug-in SnapCenter per VMware vSphere supporta operazioni di backup e ripristino coerenti con il crash e le macchine virtuali per macchine virtuali (VM), datastore e dischi macchine virtuali (VMDK) e supporta i plug-in specifici dell'applicazione SnapCenter per proteggere le operazioni di backup e ripristino coerenti con l'applicazione per database e file system virtualizzati.
@@ -421,14 +496,12 @@ Automatizza backup, ripristino e cloning dei database SAP HANA integrati con l'a
 
 === Funzionalità dei plug-in supportate da NetApp
 
+I plug-in supportati da NetApp sono MongoDB, ORASCPM (applicazioni Oracle), SAP ASE, SAP MaxDB e plug-in storage.
+
 * Supporta altri plug-in per gestire applicazioni o database non supportati da altri plug-in SnapCenter. I plug-in supportati da NetApp non vengono forniti come parte dell'installazione di SnapCenter.
 * Supporta la creazione di copie mirror dei set di backup su un altro volume ed esecuzione della replica del backup disk-to-disk.
 * Supporta ambienti Windows e Linux. Negli ambienti Windows, le applicazioni personalizzate tramite plug-in personalizzati possono utilizzare il plug-in SnapCenter per Microsoft Windows per eseguire backup coerenti del file system.
 
-
-NetApp supporta la funzionalità di creazione e utilizzo dei plug-in supportati; tuttavia, i plug-in creati non sono supportati da NetApp.
-
-Per ulteriori informazioni, vedere link:../protect-nsp/develop_a_plug_in_for_your_application.html["Sviluppare un plug-in per l'applicazione"]
 
 
 

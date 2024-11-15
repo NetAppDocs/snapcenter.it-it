@@ -1,17 +1,17 @@
 ---
-permalink: protect-nsp/netapp_supported_plugins_features.html 
+permalink: protect-scc/snapcenter_custom_plug_ins_features.html 
 sidebar: sidebar 
-keywords: NetApp supported plug-ins features, MongoDB, ORASCPM, Oracle Applications, SAP ASE, SAP MaxDB, Storage plug-in 
-summary: 'SnapCenter si integra con l"applicazione plug-in e con le tecnologie NetApp del sistema storage. Per lavorare con i plug-in supportati da NetApp, si utilizza l"interfaccia utente grafica di SnapCenter.' 
+keywords: custom plug-ins features 
+summary: 'SnapCenter si integra con l"applicazione plug-in e con le tecnologie NetApp del sistema storage. Per utilizzare i plug-in personalizzati, si utilizza l"interfaccia utente grafica di SnapCenter.' 
 ---
-= Funzionalità dei plug-in supportate da NetApp
+= Funzionalità dei plug-in personalizzati di SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter si integra con l'applicazione plug-in e con le tecnologie NetApp del sistema storage. Per lavorare con i plug-in supportati da NetApp come MongoDB, ORASCPM (applicazioni Oracle), SAP ASE, SAP MaxDB e plug-in di storage, si utilizza l'interfaccia utente grafica di SnapCenter.
+SnapCenter si integra con l'applicazione plug-in e con le tecnologie NetApp del sistema storage. Per utilizzare i plug-in personalizzati, si utilizza l'interfaccia utente grafica di SnapCenter.
 
 * *Interfaccia utente grafica unificata*
 +
@@ -23,11 +23,11 @@ L'interfaccia SnapCenter offre standardizzazione e coerenza tra plug-in e ambien
 
 * *Tecnologia istantanea NetApp senza interruzioni*
 +
-SnapCenter utilizza la tecnologia Snapshot di NetApp con i plug-in supportati da NetApp per eseguire il backup delle risorse. Le snapshot consumano una quantità minima di spazio storage.
+SnapCenter utilizza la tecnologia NetApp Snapshot con plug-in personalizzati per il backup delle risorse. Le snapshot consumano una quantità minima di spazio storage.
 
 
 
-I plug-in supportati da NetApp offrono anche i seguenti benefici:
+L'utilizzo della funzionalità dei plug-in personalizzati offre anche i seguenti vantaggi:
 
 * Supporto per flussi di lavoro di backup, ripristino e clonazione
 * Sicurezza supportata da RBAC e delega centralizzata dei ruoli

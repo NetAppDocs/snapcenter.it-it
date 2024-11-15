@@ -13,6 +13,4 @@ summary: Se si desidera proteggere le risorse dei plug-in supportati da NetApp, 
 [role="lead"]
 Se si desidera proteggere le risorse dei plug-in supportati da NetApp, è necessario installare e configurare i plug-in supportati da SnapCenter NetApp.
 
-image::../media/scc_install_configure_workflow.png[Flusso di lavoro dei plug-in supportati da SnapCenter NetApp]
-
-link:develop_a_plug_in_for_your_application.html["Sviluppare un plug-in per l'applicazione"]
+image::../media/sap_hana_install_configure_workflow.png[][flusso di lavoro dei plug-in supportati da SnapCenter NetApp]

@@ -1,0 +1,18 @@
+---
+permalink: protect-scc/install_snapcenter_custom_plug_in.html 
+sidebar: sidebar 
+keywords: install workflow, custom plug-in 
+summary: Se si desidera proteggere le risorse dei plug-in personalizzati, è necessario installare e configurare i plug-in personalizzati di SnapCenter. 
+---
+= Workflow di installazione dei plug-in personalizzati di SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se si desidera proteggere le risorse dei plug-in personalizzati, è necessario installare e configurare i plug-in personalizzati di SnapCenter.
+
+image::../media/scc_install_configure_workflow.png[Flusso di lavoro dei plug-in personalizzati SnapCenter]
+
+link:develop_a_plug_in_for_your_application.html["Sviluppare un plug-in per l'applicazione"]
