@@ -25,4 +25,5 @@ Quando una policy con backup di Azure NetApp Files è abilitata e associata a un
 * I flussi di lavoro di montaggio e catalogo di Oracle e SAP HANA non sono supportati.
 * La verifica del backup dallo storage a oggetti, il supporto delle API REST, il Lifecycle management dei cloni dallo storage a oggetti e le funzionalità di reporting per i backup dello storage a oggetti non sono supportate.
 * Il ripristino da backup nell'archiviazione BLOB di Azure in Azure NetApp Files non è supportato. È possibile utilizzare l'opzione clone, in alternativa.
+* La divisione clone non è supportata.
 

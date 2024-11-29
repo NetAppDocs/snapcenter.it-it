@@ -1,0 +1,18 @@
+---
+permalink: release-notes/release-notes.html 
+sidebar: sidebar 
+keywords: release notes, snapcenter 
+summary: Fornisce importanti informazioni su questa versione del server SnapCenter e sui pacchetti di plug-in SnapCenter, inclusi problemi risolti, problemi noti, precauzioni e limitazioni. 
+---
+= Note di rilascio
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Scoprite le nuove e migliorate funzioni disponibili in SnapCenter 6,0 e 6,0.1.
+
+Per un elenco completo delle nuove funzioni e dei miglioramenti, vedere link:what's-new-in-snapcenter601.html["Novità di SnapCenter 6.0.1"] e link:what's-new-in-snapcenter60.html["Novità di SnapCenter 6,0"].
+
+Per informazioni dettagliate su problemi noti, limitazioni, problemi risolti e comandi nuovi e modificati, vedere https://library.netapp.com/ecm/ecm_download_file/ECMLP3323468["Note sulla versione del software SnapCenter 6,0 e 6.0.1"^] . Per accedere alle Note di rilascio, è necessario accedere con l'account NetApp o creare un account.

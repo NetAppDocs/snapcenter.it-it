@@ -155,4 +155,4 @@ NOTE: La verifica dell'impronta digitale è obbligatoria anche se lo stesso host
 
 
 .Al termine
-Se si desidera eseguire l'aggiornamento alla versione SnapCenter 6,0, il plug-in basato su PERL esistente per DB2 verrà disinstallato dal server plug-in remoto.
+Se si desidera eseguire l'aggiornamento a SnapCenter 6,0 o versione successiva, il plug-in basato su PERL esistente per DB2 verrà disinstallato dal server plug-in remoto.

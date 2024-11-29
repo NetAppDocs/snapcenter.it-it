@@ -81,7 +81,7 @@ NOTE: È necessario allocare spazio su disco sufficiente e monitorare il consumo
  a| 
 Pacchetti software richiesti
  a| 
-* . Nucleo NETTO 8.0.5
+* NET Core che inizia con la versione 8.0.5 e include tutte le patch .NET 8 successive
 * PowerShell Core 7.4.2
 * Java 11 Oracle Java e OpenJDK
 
@@ -165,7 +165,7 @@ NOTE: È necessario allocare spazio su disco sufficiente e monitorare il consumo
  a| 
 Pacchetti software richiesti
  a| 
-* . Nucleo NETTO 8.0.5
+* NET Core che inizia con la versione 8.0.5 e include tutte le patch .NET 8 successive
 * PowerShell Core 7.4.2
 * Java 11 Oracle Java e OpenJDK
 

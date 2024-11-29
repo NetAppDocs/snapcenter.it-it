@@ -1,0 +1,43 @@
+---
+permalink: 'release-notes/what"s-new-in-snapcenter601.html' 
+sidebar: sidebar 
+keywords: what is new, features, enhancements, 6.0.1 
+summary: La versione 6.0.1 del software SnapCenter include diverse nuove funzioni e miglioramenti. 
+---
+= Novità del software SnapCenter 6.0.1
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La versione 6.0.1 del software SnapCenter include diverse nuove funzioni e miglioramenti.
+
+|===
+| Aggiornare | Descrizione 
+
+
+| link:https://review.docs.netapp.com/us-en/snapcenter_sc601_oct2024_releasebranch/protect-azure/protect-applications-azure-netapp-files.html["Supporto per backup Azure NetApp Files"]  a| 
+SnapCenter supporta la funzionalità di backup Azure NetApp Files che espande le funzionalità di protezione dei dati di Azure NetApp Files fornendo una soluzione di backup completamente gestita per il recovery, l'archiviazione e la conformità a lungo termine.
+
+
+
+| link:hhttps://docs.netapp.com/us-en/snapcenter/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html["Supporto per l'alta disponibilità di SnapCenter in esecuzione su Linux"]  a| 
+Configurare l'alta disponibilità in SnapCenter in esecuzione su Windows o Linux utilizzando il bilanciamento del carico F5, Microsoft Network Load Balancing (NLB), Amazon Web Services (AWS) Elastic Load Balancing (ELB) o Azure Load Balancer.
+
+
+
+| link:https://review.docs.netapp.com/us-en/snapcenter_sc601_oct2024_releasebranch/admin/concept_monitor_jobs_schedules_events_and_logs.html#manage-scheduled-backup-jobs["Supporto per la gestione dei processi di backup pianificati"]  a| 
+Consente di impostare una soglia per il numero di processi pianificati che possono essere eseguiti in un determinato momento. Ciò consente di controllare il numero di backup che si desidera eseguire in base alla configurazione hardware del sistema.
+
+
+
+| link:https://review.docs.netapp.com/us-en/snapcenter_sc601_oct2024_releasebranch/admin/concept_monitor_jobs_schedules_events_and_logs.html#manage-stale-jobs["Supporto per la gestione di lavori obsoleti"]  a| 
+Consente di pulire i lavori obsoleti bloccati per più di 72 ore.
+
+
+
+| Supporto per IBM DB2, Oracle Application e plug-in Storage su AIX  a| 
+Supporta la protezione dei dati di IBM DB2, Oracle Application e plug-in di storage su AIX
+
+|===
