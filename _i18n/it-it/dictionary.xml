@@ -9981,18 +9981,18 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="180a2e8c671bfb57b670570970b59480" category="summary">La versione 6.0.1 del software SnapCenter include diverse nuove funzioni e miglioramenti.</block>
   <block id="f5db6e0b0a7608b32dd00dbb85353e53" category="doc">Novità del software SnapCenter 6.0.1</block>
   <block id="0ee351a583abf7baa869129519adaddb" category="inline-link-macro">Supporto per backup Azure NetApp Files</block>
-  <block id="62c2d7366772786ca345ac877bf79c4a" category="cell"><block ref="62c2d7366772786ca345ac877bf79c4a" category="inline-link-macro-rx"></block></block>
   <block id="4cc6d2996939fe7970c652728017b3e9" category="paragraph">SnapCenter supporta la funzionalità di backup Azure NetApp Files che espande le funzionalità di protezione dei dati di Azure NetApp Files fornendo una soluzione di backup completamente gestita per il recovery, l'archiviazione e la conformità a lungo termine.</block>
   <block id="f47390dbd7bff67c8e4d16001f8c4395" category="inline-link-macro">Supporto per l'alta disponibilità di SnapCenter in esecuzione su Linux</block>
-  <block id="fa7aa08aceadadc58383fc01281330d1" category="cell"><block ref="fa7aa08aceadadc58383fc01281330d1" category="inline-link-macro-rx"></block></block>
   <block id="8951fc15a429c65f620e89da09c5240e" category="paragraph">Configurare l'alta disponibilità in SnapCenter in esecuzione su Windows o Linux utilizzando il bilanciamento del carico F5, Microsoft Network Load Balancing (NLB), Amazon Web Services (AWS) Elastic Load Balancing (ELB) o Azure Load Balancer.</block>
   <block id="1810fc343d328f63ca20580898910abc" category="inline-link-macro">Supporto per la gestione dei processi di backup pianificati</block>
-  <block id="a9e5aa37b3dc50c95040bd19f911000b" category="cell"><block ref="a9e5aa37b3dc50c95040bd19f911000b" category="inline-link-macro-rx"></block></block>
   <block id="6775f2c837a6e0d211c88415495a3ca3" category="paragraph">Consente di impostare una soglia per il numero di processi pianificati che possono essere eseguiti in un determinato momento. Ciò consente di controllare il numero di backup che si desidera eseguire in base alla configurazione hardware del sistema.</block>
   <block id="6c1303e3667436380323a8f91aeeb3b1" category="inline-link-macro">Supporto per la gestione di lavori obsoleti</block>
-  <block id="0f16714fed95f3a4b2ef5ba9724d3658" category="cell"><block ref="0f16714fed95f3a4b2ef5ba9724d3658" category="inline-link-macro-rx"></block></block>
   <block id="4b6d2450b6badef80cca9ba40b34bd88" category="paragraph">Consente di pulire i lavori obsoleti bloccati per più di 72 ore.</block>
   <block id="70e43ac38d4ee9a77d2476513c883d81" category="cell">Supporto per IBM DB2, Oracle Application e plug-in Storage su AIX</block>
   <block id="9b37c223b27baf9481210cc34272107f" category="paragraph">Supporta la protezione dei dati di IBM DB2, Oracle Application e plug-in di storage su AIX</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">Note di rilascio</block>
+  <block id="4396a053fce24f7f396ccf91773d1924" category="cell"><block ref="4396a053fce24f7f396ccf91773d1924" category="inline-link-macro-rx"></block></block>
+  <block id="c382d5571738a226abf22d83f911bf29" category="cell"><block ref="c382d5571738a226abf22d83f911bf29" category="inline-link-macro-rx"></block></block>
+  <block id="2a332b39aa52e9f2636ba160aca67cb8" category="cell"><block ref="2a332b39aa52e9f2636ba160aca67cb8" category="inline-link-macro-rx"></block></block>
+  <block id="4e57d9d37ed4764b16b2fed20544a690" category="cell"><block ref="4e57d9d37ed4764b16b2fed20544a690" category="inline-link-macro-rx"></block></block>
 </blocks>
