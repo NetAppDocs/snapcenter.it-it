@@ -18,26 +18,33 @@ La versione 6.0.1 del software SnapCenter include diverse nuove funzioni e migli
 
 
 | link:https://docs.netapp.com/us-en/snapcenter/protect-azure/protect-applications-azure-netapp-files.html["Supporto per backup Azure NetApp Files"]  a| 
-SnapCenter supporta la funzionalità di backup Azure NetApp Files che espande le funzionalità di protezione dei dati di Azure NetApp Files fornendo una soluzione di backup completamente gestita per il recovery, l'archiviazione e la conformità a lungo termine.
+Puoi ora utilizzare SnapCenter per eseguire il backup e clonare le applicazioni che risiedono in Azure NetApp Files nell'archiviazione BLOB di Azure (archivio di oggetti).
 
 
 
 | link:https://docs.netapp.com/us-en/snapcenter/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html["Supporto per l'alta disponibilità di SnapCenter in esecuzione su Linux"]  a| 
-Configurare l'alta disponibilità in SnapCenter in esecuzione su Windows o Linux utilizzando il bilanciamento del carico F5, Microsoft Network Load Balancing (NLB), Amazon Web Services (AWS) Elastic Load Balancing (ELB) o Azure Load Balancer.
+Il supporto della configurazione ha per SnapCenter è ora esteso ai sistemi Linux. È possibile utilizzare i bilanciatori del carico standard per questa configurazione:
+
+* F5 sistema di bilanciamento del carico
+* Bilanciamento del carico di rete Microsoft (NLB)
+* Amazon Web Services (AWS)
+* Bilanciamento del carico elastico (ELB)
+* Bilanciamento del carico Azure
 
 
 
-| link:https://docs.netapp.com/us-en/snapcenter/admin/concept_monitor_jobs_schedules_events_and_logs.html#manage-scheduled-backup-jobs["Supporto per la gestione dei processi di backup pianificati"]  a| 
-Consente di impostare una soglia per il numero di processi pianificati che possono essere eseguiti in un determinato momento. Ciò consente di controllare il numero di backup che si desidera eseguire in base alla configurazione hardware del sistema.
+
+| link:https://docs.netapp.com/us-en/snapcenter/admin/concept_monitor_jobs_schedules_events_and_logs.html#manage-scheduled-backup-jobs["Possibilità di gestire i processi di backup pianificati"]  a| 
+È ora possibile impostare una soglia per i processi pianificati per controllare il numero di backup che si desidera eseguire in un determinato momento in base alla configurazione hardware del sistema.
 
 
 
-| link:https://docs.netapp.com/us-en/snapcenter/admin/concept_monitor_jobs_schedules_events_and_logs.html#manage-stale-jobs["Supporto per la gestione di lavori obsoleti"]  a| 
-Consente di pulire i lavori obsoleti bloccati per più di 72 ore.
+| link:https://docs.netapp.com/us-en/snapcenter/admin/concept_monitor_jobs_schedules_events_and_logs.html#manage-stale-jobs["Capacità di gestire lavori obsoleti"]  a| 
+È ora possibile impostare una pianificazione predefinita per eliminare i processi obsoleti bloccati per più di 72 ore.
 
 
 
-| Supporto per IBM DB2, Oracle Application e plug-in Storage su AIX  a| 
-Supporta la protezione dei dati di IBM DB2, Oracle Application e plug-in di storage su AIX
+| Funzionalità di protezione dei dati incluse per IBM DB2, Oracle Application e plug-in di storage in esecuzione su AIX  a| 
+Supporto della protezione dati di IBM DB2, Oracle Application e del plug-in di storage in esecuzione su AIX.
 
 |===

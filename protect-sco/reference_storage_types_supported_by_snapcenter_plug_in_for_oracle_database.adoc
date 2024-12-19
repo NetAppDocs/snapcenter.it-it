@@ -32,7 +32,7 @@ Server fisico
 * LUN connessi a iSCSI
 * Volumi connessi a NFS
 * NVMe-FC
-* NVMe-TCP
+* NVMe/TCP
 
 
 
@@ -46,7 +46,7 @@ VMware ESXi
 
 * LUN iSCSI collegati direttamente al sistema guest dall'iniziatore iSCSI
 * VMDK su datastore NFS
-* VMDK su VMFS creato su NVMe-TCP
+* VMDK su VMFS creato su NVMe/TCP
 +
 
 NOTE: RAC è supportato su ESX 8.0U2 che supporta VMDK condiviso
