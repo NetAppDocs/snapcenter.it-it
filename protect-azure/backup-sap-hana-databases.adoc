@@ -32,7 +32,7 @@ L'opzione *coerenza file system* è applicabile solo alle applicazioni in esecuz
 . Nella pagina Criteri, attenersi alla seguente procedura:
 +
 .. Selezionare uno o più criteri dall'elenco a discesa.
-.. Selezionare *image:../media/add_policy_from_resourcegroup.gif[""]* Nella colonna Configure Schedules (Configura pianificazioni) per il criterio per il quale si desidera configurare una pianificazione.
+.. Selezionare * *image:../media/add_policy_from_resourcegroup.gif["aggiungere il gruppo di risorse del modulo criterio"]nella colonna Configura pianificazioni per il criterio per il quale si desidera configurare una pianificazione.
 .. Nella finestra di dialogo Add schedules for policy _policy_name_, configurare la pianificazione, quindi selezionare *OK*.
 +
 _policy_name_ è il nome del criterio selezionato.

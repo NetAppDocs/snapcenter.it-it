@@ -34,7 +34,7 @@ Pagina Monitor
  a| 
 Riquadro delle attività
  a| 
-.. Dopo aver avviato l'operazione di backup, fare clic su *image:../media/activity_pane_icon.gif[""]* Nel riquadro attività per visualizzare le cinque operazioni più recenti.
+.. Dopo aver avviato l'operazione di backup, fare clic su * *image:../media/activity_pane_icon.gif["icona del riquadro attività"]nel riquadro attività per visualizzare le cinque operazioni più recenti.
 .. Selezionare l'operazione.
 .. Nella pagina Dettagli processo, fare clic su *Annulla processo*.
 

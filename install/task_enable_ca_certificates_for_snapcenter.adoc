@@ -31,10 +31,10 @@ Le informazioni relative ai parametri che possono essere utilizzati con il cmdle
 
 L'host della scheda host gestiti visualizza un lucchetto e il colore del lucchetto indica lo stato della connessione tra il server SnapCenter e l'host del plug-in.
 
-* *image:../media/enable_ca_issues_icon.png[""]* Indica che all'host del plug-in non è abilitato o assegnato alcun certificato CA.
-* *image:../media/enable_ca_good_icon.png[""]* Indica che il certificato CA è stato validato correttamente.
-* *image:../media/enable_ca_failed_icon.png[""]* Indica che non è stato possibile validare il certificato CA.
-* *image:../media/enable_ca_undefined_icon.png[""]* indica che non è stato possibile recuperare le informazioni di connessione.
+* * *image:../media/enable_ca_issues_icon.png["icona problemi"]Indica che non è stato attivato o assegnato alcun certificato CA all'host del plug-in.
+* * *image:../media/enable_ca_good_icon.png["icona buona"]Indica che il certificato CA è stato convalidato correttamente.
+* * *image:../media/enable_ca_failed_icon.png["icona non riuscita"]Indica che il certificato CA non può essere convalidato.
+* * *image:../media/enable_ca_undefined_icon.png["icona non definita"]indica che non è stato possibile recuperare le informazioni di connessione.
 
 
 

@@ -31,7 +31,7 @@ Dopo aver diviso il clone2, è possibile eseguire l'operazione di divisione del 
 
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina Resources (risorse), selezionare *Database* dall'elenco *View* (Visualizza).
-. Selezionare la risorsa clonata, ad esempio il database o il LUN, quindi fare clic su image:../media/split_cone.gif[""].
+. Selezionare la risorsa clonata, ad esempio il database o il LUN, quindi fare clic su image:../media/split_clone.gif["clone split"].
 . Esaminare le dimensioni stimate del clone da dividere e lo spazio richiesto disponibile sull'aggregato, quindi fare clic su *Start*.
 . Monitorare l'avanzamento dell'operazione facendo clic su *Monitor* > *Jobs*.
 +

@@ -26,7 +26,7 @@ Se una singola risorsa dei plug-in supportati da NetApp non fa parte di un grupp
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina risorse, filtrare le risorse dall'elenco a discesa *Visualizza* in base al tipo di risorsa.
 +
-Fare clic su image:../media/filter_icon.png["icona del filtro"], quindi selezionare il nome host e il tipo di risorsa per filtrare le risorse. È quindi possibile fare clic su image:../media/filter_icon.png["icona del filtro"] per chiudere il riquadro del filtro.
+Fare clic su image:../media/filter_icon.gif["icona del filtro"], quindi selezionare il nome host e il tipo di risorsa per filtrare le risorse. È quindi possibile fare clic su image:../media/filter_icon.gif["icona del filtro"] per chiudere il riquadro del filtro.
 
 . Fare clic sulla risorsa di cui si desidera eseguire il backup.
 . Nella pagina risorsa, se si desidera utilizzare un nome personalizzato, selezionare la casella di controllo *Usa formato nome personalizzato per copia istantanea* , quindi immettere un formato nome personalizzato per il nome dell'istantanea.

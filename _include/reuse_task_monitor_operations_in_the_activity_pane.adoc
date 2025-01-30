@@ -8,7 +8,7 @@ Il riquadro Activity (attività) visualizza informazioni relative alle operazion
 
 .Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
-. Fare clic image:../media/activity_pane_icon.gif["riquadro attività"] sul riquadro attività per visualizzare le cinque operazioni più recenti.
+. Fare clic image:../media/activity_pane_icon.gif["icona del riquadro attività"] sul riquadro attività per visualizzare le cinque operazioni più recenti.
 +
 Quando si fa clic su una delle operazioni, i dettagli dell'operazione vengono elencati nella pagina *Dettagli commessa*.
 

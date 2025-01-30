@@ -78,12 +78,12 @@ NOTE: Le risorse aggiunte di recente vengono visualizzate nell'elenco delle riso
 .. Selezionare uno o più criteri dall'elenco a discesa.
 +
 
-NOTE: Puoi anche creare una policy facendo clic su *image:../media/add_policy_from_resourcegroup.gif[""]*.
+NOTE: È anche possibile creare una policy facendo clic su * *image:../media/add_policy_from_resourcegroup.gif["aggiungere il gruppo di risorse del modulo criterio"].
 
 +
 Nella sezione Configure schedules for selected policies (Configura pianificazioni per policy selezionate), vengono elencati i criteri selezionati.
 
-.. Nella sezione Configure schedules for selected policy (Configura pianificazioni per policy selezionate), fare clic su *image:../media/add_policy_from_resourcegroup.gif[""]* Nella colonna Configure Schedules (Configura pianificazioni) per il criterio per il quale si desidera configurare la pianificazione.
+.. Nella sezione Configura pianificazioni per i criteri selezionati, fare clic su * *image:../media/add_policy_from_resourcegroup.gif["aggiungere il gruppo di risorse del modulo criterio"]nella colonna Configura pianificazioni per il criterio per il quale si desidera configurare la pianificazione.
 .. Nella finestra di dialogo Add schedules for policy _policy_name_, configurare la pianificazione specificando la data di inizio, la data di scadenza e la frequenza, quindi fare clic su *OK*.
 +
 È necessario eseguire questa operazione per ciascuna frequenza elencata nella policy. Le pianificazioni configurate sono elencate nella colonna Applied Schedules (Pianificazioni applicate) nella sezione *Configure schedules for selected policy* (Configura pianificazioni per policy selezionate).
@@ -111,7 +111,7 @@ L'elenco include tutti gli SQL Server aggiunti in SnapCenter. È possibile selez
 NOTE: La versione del server di verifica deve corrispondere alla versione e all'edizione del server SQL che ospita il database primario.
 
 .. Fare clic su *Load Locator* (carica locatori) per caricare i volumi SnapMirror e SnapVault per eseguire la verifica sullo storage secondario.
-.. Selezionare il criterio per il quale si desidera configurare la pianificazione di verifica, quindi fare clic su *image:../media/add_policy_from_resourcegroup.gif[""]*.
+.. Selezionare il criterio per cui si desidera configurare la pianificazione della verifica, quindi fare clic su * *image:../media/add_policy_from_resourcegroup.gif["aggiungere il gruppo di risorse del modulo criterio"].
 .. Nella finestra di dialogo Add Verification Schedules policy_name, eseguire le seguenti operazioni:
 +
 |===

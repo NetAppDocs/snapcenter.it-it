@@ -19,7 +19,7 @@ Le operazioni di backup e ripristino non possono essere eseguite contemporaneame
 
 Il seguente flusso di lavoro mostra la sequenza in cui è necessario eseguire le operazioni di backup:
 
-image::../media/scsql_backup_workflow.png[Workflow di backup SCSQL]
+image::../media/scsql_backup_workflow.gif[Workflow di backup SCSQL]
 
 
 NOTE: Le opzioni Backup Now (Backup ora), Restore (Ripristina), Manage Backup (Gestisci backup) e Clone (Clona) nella pagina Resources (risorse) sono disattivate se si seleziona un LUN non NetApp, un database danneggiato o un database da ripristinare.

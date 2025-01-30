@@ -82,14 +82,13 @@ Non applicabile
  a| 
 Pacchetti software richiesti
  a| 
-* Microsoft .NET Framework 4.7.2 o versione successiva
-* ASP.NET Core Hosting Bundle a partire dalla versione 8.0.5 e comprendente tutte le patch .NET 8 successive
+* ASP.NET Core Runtime 8.0.12 (e tutte le successive patch 8,0.x) Hosting Bundle
 * PowerShell 7.4.2 o versione successiva
 
 
 Per informazioni specifiche sulla risoluzione dei problemi di .NET, vedere https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["L'aggiornamento o l'installazione di SnapCenter non riesce per i sistemi legacy che non dispongono di connettività Internet"^].
  a| 
-* ASP.NET Core Runtime che inizia con la versione 8.0.5 e include tutte le patch .NET 8 successive
+* .NET Framework 8.0.12 (e tutte le patch 8,0.x successive)
 * PowerShell 7.4.2 o versione successiva
 * Nginx è un server web che può essere usato come proxy inverso
 * PAM-devel
@@ -99,3 +98,5 @@ PAM (Plugggable Authentication Modules) è uno strumento di protezione del siste
 
 
 |===
+
+NOTE: ASP.NET core richiede IIS_IUSRS per accedere al file system temporaneo nel server SnapCenter su Windows.

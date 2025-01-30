@@ -19,14 +19,77 @@ Prima di utilizzare SnapCenter per eseguire il backup dei file system Unix, è n
 * Esaminare i prerequisiti e i limiti specifici della sincronizzazione attiva di SnapMirror. Per informazioni, fare riferimento a https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["Limiti degli oggetti per la sincronizzazione attiva di SnapMirror"].
 
 
+.A proposito di questa attività
+* SnapLock
++
+** Se è selezionata l'opzione "conserva le copie di backup per un numero specifico di giorni", il periodo di conservazione SnapLock deve essere minore o uguale ai giorni di conservazione menzionati.
++
+La specifica di un periodo di blocco snapshot impedisce l'eliminazione delle istantanee fino alla scadenza del periodo di conservazione.  Questo potrebbe portare a mantenere un numero di Snapshot maggiore del conteggio specificato nel criterio.
+
++
+Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dagli Snapshot del vault di SnapLock come parte del ripristino ereditano il tempo di scadenza del vault di SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
+
+
+
+
+
 .Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *Impostazioni*.
 . Nella pagina Impostazioni, fare clic su *Criteri*.
 . Selezionare *Unix file Systems* dall'elenco a discesa.
 . Fare clic su *nuovo*.
-. Nella pagina Name (Nome), immettere il nome e la descrizione della policy.
-. Specificare la frequenza del programma selezionando *on demand*, *Hourly*, *Daily*, *Weekly* o *Monthly*.
-. Nella pagina conservazione, specificare le impostazioni di conservazione per il tipo di backup e il tipo di pianificazione selezionati nella pagina tipo di backup:
+. Nella pagina Name (Nome), inserire il nome del criterio e i relativi dettagli.
+. Nella pagina Backup e replica, eseguire le seguenti operazioni:
++
+.. Specificare le impostazioni di backup.
+.. Specificare la frequenza del programma selezionando *on demand*, *Hourly*, *Daily*, *Weekly* o *Monthly*.
+.. Selezionare un'etichetta Snapshot.
++
+A seconda dell'etichetta Snapshot selezionata, ONTAP applica la politica di conservazione Snapshot secondaria corrispondente all'etichetta.
+
++
+
+NOTE: Se è stato selezionato *Update SnapMirror dopo la creazione di una copia Snapshot locale*, è possibile specificare l'etichetta del criterio secondario. Tuttavia, se è stato selezionato *Aggiorna SnapVault dopo la creazione di una copia Snapshot locale*, è necessario specificare l'etichetta del criterio secondario.
+
+.. Nella sezione Seleziona opzioni di replica secondaria, selezionare una o entrambe le seguenti opzioni di replica secondaria:
++
+
+NOTE: È necessario selezionare le opzioni di replica secondarie per *periodo di blocco della copia dello snapshot secondario* per essere efficace. L'opzione *periodo di blocco della copia dell'istantanea secondaria* è disponibile nella pagina di conservazione.
+
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Aggiornare SnapMirror dopo aver creato una copia Snapshot locale
+ a| 
+Selezionare questo campo per creare copie mirror dei set di backup su un altro volume (replica SnapMirror).
+
+Questa opzione deve essere abilitata per la sincronizzazione attiva di SnapMirror.
+
+
+
+ a| 
+Aggiornare SnapVault dopo aver creato una copia Snapshot locale
+ a| 
+Selezionare questa opzione per eseguire la replica del backup disk-to-disk (backup SnapVault).
+
+
+
+ a| 
+Numero tentativi di errore
+ a| 
+Immettere il numero massimo di tentativi di replica consentiti prima dell'interruzione dell'operazione.
+
+|===
++
+
+NOTE: È necessario configurare il criterio di conservazione SnapMirror in ONTAP per lo storage secondario, in modo da evitare di raggiungere il limite massimo di Snapshot sullo storage secondario.
+
+
+
+. Nella pagina di conservazione, specificare le impostazioni di conservazione per il tipo di backup e il tipo di pianificazione selezionato nella pagina Backup e replica:
 +
 |===
 
@@ -54,54 +117,32 @@ Conservare le istantanee per un determinato numero di giorni
  a| 
 Selezionare *Mantieni copie snapshot per*, quindi specificare il numero di giorni per i quali si desidera conservare le istantanee prima di eliminarle.
 
+
+
+ a| 
+Periodo di blocco della copia dello snapshot primario
+ a| 
+Se si desidera specificare il periodo di blocco dell'istantanea per il primario, selezionare *periodo di blocco della copia dell'istantanea primaria* e selezionare giorni, mesi o anni.
+
+Il periodo di conservazione di SnapLock deve essere inferiore a 100 anni.
+
+
+
+ a| 
+Periodo di blocco dell'istantanea secondaria
+ a| 
+Selezionare *periodo blocco copia istantanea secondaria*, quindi giorni, mesi o anni.
+
+Affinché questa opzione sia efficace, è necessario effettuare le seguenti operazioni:
+
+** Selezionare il *periodo di blocco della copia dell'istantanea primaria*.
+** Selezionare una o entrambe le opzioni di replica secondarie.
+
+
 |===
 +
 
 NOTE: È possibile conservare i backup dei log di archiviazione solo se sono stati selezionati i file di log di archiviazione come parte del backup.
-
-. Nella pagina Replication, specificare le impostazioni di replica:
-+
-|===
-| Per questo campo... | Eseguire questa operazione... 
-
-
- a| 
-Aggiornare SnapMirror dopo aver creato una copia Snapshot locale
- a| 
-Selezionare questo campo per creare copie mirror dei set di backup su un altro volume (replica SnapMirror).
-
-Questa opzione deve essere abilitata per la sincronizzazione attiva di SnapMirror.
-
-
-
- a| 
-Aggiornare SnapVault dopo aver creato una copia Snapshot locale
- a| 
-Selezionare questa opzione per eseguire la replica del backup disk-to-disk (backup SnapVault).
-
-
-
- a| 
-Etichetta del criterio secondario
- a| 
-Selezionare un'etichetta Snapshot.
-
-A seconda dell'etichetta Snapshot selezionata, ONTAP applica la politica di conservazione Snapshot secondaria corrispondente all'etichetta.
-
-
-NOTE: Se è stato selezionato *Update SnapMirror dopo la creazione di una copia Snapshot locale*, è possibile specificare l'etichetta del criterio secondario. Tuttavia, se è stato selezionato *Aggiorna SnapVault dopo la creazione di una copia Snapshot locale*, è necessario specificare l'etichetta del criterio secondario.
-
-
-
- a| 
-Numero tentativi di errore
- a| 
-Immettere il numero massimo di tentativi di replica consentiti prima dell'interruzione dell'operazione.
-
-|===
-+
-
-NOTE: È necessario configurare il criterio di conservazione SnapMirror in ONTAP per lo storage secondario, in modo da evitare di raggiungere il limite massimo di Snapshot sullo storage secondario.
 
 . Nella pagina script, immettere il percorso e gli argomenti del prespt o del postscript che si desidera eseguire rispettivamente prima o dopo l'operazione di backup.
 +

@@ -22,9 +22,9 @@ summary: È necessario configurare HDB User Store Key e HDBSQL OS User per esegu
 .Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in SnapCenter per il database SAP HANA dall'elenco.
 . Nella pagina risorse, selezionare il tipo di risorsa dall'elenco *Visualizza*.
-. (Facoltativo) fare clic su image:../media/filter_icon.png["icona del filtro"] e selezionare il nome host.
+. (Facoltativo) fare clic su image:../media/filter_icon.gif["icona del filtro"] e selezionare il nome host.
 +
-È quindi possibile fare clic su image:../media/filter_icon.png["icona del filtro"] per chiudere il riquadro del filtro.
+È quindi possibile fare clic su image:../media/filter_icon.gif["icona del filtro"] per chiudere il riquadro del filtro.
 
 . Selezionare il database, quindi fare clic su *Configura database*.
 . Nella sezione Configure database settings (Configura impostazioni database), immettere HDB Secure User Store Key (chiave archivio utente sicura HDB).

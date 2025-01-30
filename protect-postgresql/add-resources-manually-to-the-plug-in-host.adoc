@@ -70,7 +70,7 @@ Questa opzione è facoltativa.
 |===
 . Nella pagina fornire spazio di archiviazione, selezionare un tipo di archiviazione e scegliere uno o più volumi, LUN e qtree, quindi fare clic su *Salva*.
 +
-Facoltativo: È possibile fare clic su *image:../media/add_policy_from_resourcegroup.gif[""]* Per aggiungere più volumi, LUN e qtree da altri sistemi storage.
+Opzionale: Puoi fare clic sull'icona * *image:../media/add_policy_from_resourcegroup.gif["aggiungere il gruppo di risorse del modulo criterio"]per aggiungere ulteriori volumi, LUN e qtree da altri sistemi storage.
 
 . Facoltativo: Nella pagina Impostazioni risorse, per le risorse sull'host Windows, immettere coppie di valori chiave personalizzati per il plug-in PostgreSQL
 . Esaminare il riepilogo, quindi fare clic su *fine*.

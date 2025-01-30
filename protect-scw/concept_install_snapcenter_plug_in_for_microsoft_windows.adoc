@@ -13,4 +13,4 @@ summary: Se si desidera proteggere i file di SnapCenter che non sono file di dat
 [role="lead"]
 Se si desidera proteggere i file di SnapCenter che non sono file di database, è necessario installare e configurare il plug-in di Microsoft Windows.
 
-image::../media/scw_workflow_for_installing.png[installazione del flusso di lavoro]
+image::../media/scw_workflow_for_installing.gif[installazione del flusso di lavoro]

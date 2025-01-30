@@ -79,7 +79,7 @@ Se si sta montando il backup di un database ASM, viene visualizzato il percorso 
 `./sccli Get-Smbackup-BackupNamebackup_name`
 
 +
-Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help _command_name_. In alternativa, fare riferimento anche a https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["Guida di riferimento al comando software SnapCenter"^].
+Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help _command_name_. In alternativa, fare riferimento anche a https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666["Guida di riferimento al comando software SnapCenter"^].
 
 
 

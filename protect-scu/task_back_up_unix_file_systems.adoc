@@ -16,7 +16,7 @@ Se una risorsa non fa parte di un gruppo di risorse, è possibile eseguarne il b
 .Fasi
 . Nel riquadro di navigazione a sinistra, selezionare *risorse* e il plug-in appropriato dall'elenco.
 . Nella pagina risorse, selezionare *percorso* dall'elenco Visualizza.
-. Fare clic su image:../media/filter_icon.png["Icona del filtro"], Quindi selezionare il nome host e il file system Unix per filtrare le risorse.
+. Fare clic su image:../media/filter_icon.gif["icona del filtro"], quindi selezionare il nome host e il file system Unix per filtrare le risorse.
 . Selezionare il file system di cui si desidera eseguire il backup.
 . Nella pagina Resources (risorse), è possibile effettuare le seguenti operazioni:
 +

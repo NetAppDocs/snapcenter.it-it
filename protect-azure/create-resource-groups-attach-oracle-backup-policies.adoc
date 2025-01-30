@@ -56,14 +56,14 @@ Specificare le destinazioni dei file di registro dell'archivio.
 . Nella pagina Criteri, attenersi alla seguente procedura:
 +
 .. Selezionare uno o più criteri dall'elenco a discesa.
-.. Nella colonna Configure Schedules (Configura pianificazioni), fare clic su *image:../media/add_policy_from_resourcegroup.gif[""]* per la policy che si desidera configurare.
+.. Nella colonna Configura pianificazioni, fare clic su * *image:../media/add_policy_from_resourcegroup.gif["aggiungere il gruppo di risorse del modulo criterio"]per il criterio che si desidera configurare.
 .. Nella finestra di dialogo Add schedules for policy _policy_name_, configurare la pianificazione, quindi fare clic su *OK*.
 
 
 . Nella pagina verifica, attenersi alla seguente procedura:
 +
 .. Selezionare il server di verifica.
-.. Selezionare il criterio per il quale si desidera configurare la pianificazione di verifica, quindi fare clic su *image:../media/add_policy_from_resourcegroup.gif[""].
+.. Selezionare il criterio per il quale si desidera configurare la pianificazione della verifica, quindi fare clic su *image:../media/add_policy_from_resourcegroup.gif["aggiungere il gruppo di risorse del modulo criterio"].
 .. Selezionare *Esegui verifica dopo il backup* o *Esegui verifica pianificata*.
 .. Fare clic su *OK*.
 

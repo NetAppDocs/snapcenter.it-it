@@ -23,7 +23,7 @@ Se una risorsa non fa ancora parte di un gruppo di risorse, è possibile eseguir
 . Nella pagina Criteri, attenersi alla seguente procedura:
 +
 .. Selezionare uno o più criteri dall'elenco a discesa.
-.. Selezionare *image:../media/add_policy_from_resourcegroup.gif[""]* Nella colonna Configure Schedules (Configura pianificazioni) per il criterio per il quale si desidera configurare una pianificazione.
+.. Selezionare * *image:../media/add_policy_from_resourcegroup.gif["aggiungere il gruppo di risorse del modulo criterio"]nella colonna Configura pianificazioni per il criterio per il quale si desidera configurare una pianificazione.
 .. Nella finestra di dialogo Add schedules for policy _policy_name_, configurare la pianificazione, quindi selezionare *OK*.
 +
 _policy_name_ è il nome del criterio selezionato.
@@ -34,7 +34,7 @@ _policy_name_ è il nome del criterio selezionato.
 . Nella pagina verifica, attenersi alla seguente procedura:
 +
 .. Selezionare il server di verifica.
-.. Selezionare il criterio per il quale si desidera configurare la pianificazione di verifica, quindi fare clic su *image:../media/add_policy_from_resourcegroup.gif[""]*.
+.. Selezionare il criterio per cui si desidera configurare la pianificazione della verifica, quindi fare clic su * *image:../media/add_policy_from_resourcegroup.gif["aggiungere il gruppo di risorse del modulo criterio"].
 .. Selezionare *Esegui verifica dopo il backup* o *Esegui verifica pianificata*.
 .. Fare clic su OK.
 

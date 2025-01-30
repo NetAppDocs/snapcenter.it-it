@@ -19,7 +19,7 @@ summary: È possibile abilitare la comunicazione SSL per proteggere la comunicaz
 .. Accedere alla GUI di SnapCenter.
 .. Fare clic su *Impostazioni* > *Impostazioni globali* e selezionare *attiva convalida certificato sul server SnapCenter*.
 .. Fare clic su *hosts* > *Managed hosts* e selezionare l'host plug-in per cui si desidera abilitare SSL unidirezionale.
-.. Fare clic su image:../media/more_icon.gif["icona altro"], quindi su *attiva convalida certificato*.
+.. Fare clic image:../media/more_icon.gif["icona altro"] sull'icona, quindi su *Abilita convalida certificato*.
 
 
 . Abilitare la comunicazione bidirezionale SSL dall'host SnapCenter Server Linux.

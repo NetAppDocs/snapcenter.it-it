@@ -48,7 +48,7 @@ link:task_configure_CA_client_certificate_for_LDAPS.html["Configurare il certifi
 . Nel riquadro di spostamento di sinistra, fare clic su *Impostazioni*.
 . Nella pagina Impostazioni, fare clic su *Impostazioni globali*.
 . Nella pagina Global Settings (Impostazioni globali), fare clic su *Domain Settings* (Impostazioni dominio).
-. Fare clic su image:../media/add_policy_from_resourcegroup.gif["aggiungi criterio"] per registrare un nuovo dominio.
+. Fare clic su image:../media/add_policy_from_resourcegroup.gif["aggiungere il gruppo di risorse del modulo criterio"] per registrare un nuovo dominio.
 . Nella pagina Registra nuovo dominio, selezionare *LDAP* o *LDAPS*.
 +
 .. Se si seleziona *LDAP*, specificare le informazioni necessarie per la registrazione del dominio non attendibile per LDAP:

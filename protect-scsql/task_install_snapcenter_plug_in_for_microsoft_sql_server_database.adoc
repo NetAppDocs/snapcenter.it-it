@@ -13,4 +13,4 @@ summary: Se si desidera proteggere i database di SnapCenter, è necessario insta
 [role="lead"]
 Se si desidera proteggere i database di SnapCenter, è necessario installare e configurare il plug-in di SQL Server.
 
-image::../media/scsql_install_configure_workflow.png[Workflow di SQL]
+image::../media/scsql_install_configure_workflow.gif[installare il flusso di lavoro sql]

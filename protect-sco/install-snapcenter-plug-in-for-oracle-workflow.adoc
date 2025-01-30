@@ -13,4 +13,4 @@ summary: Se si desidera proteggere i database SnapCenter, è necessario installa
 [role="lead"]
 Se si desidera proteggere i database SnapCenter, è necessario installare e configurare il plug-in Oracle per il database Oracle.
 
-image::../media/sco_install_configure_workflow.png[Flusso di lavoro di installazione dei plug-in Oracle]
+image::../media/sco_install_configure_workflow.gif[installa il plug-in oracle]

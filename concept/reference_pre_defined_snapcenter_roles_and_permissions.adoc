@@ -281,6 +281,21 @@ Non applicabile
 
 
  a| 
+SecondaryProtection
+ a| 
+No
+ a| 
+No
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+
+
+
+ a| 
 Monitoraggio del processo
  a| 
 Sì
@@ -545,6 +560,21 @@ Non applicabile
 
 
  a| 
+SecondaryProtection
+ a| 
+No
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+
+
+
+ a| 
 Monitoraggio del processo
  a| 
 Sì
@@ -795,6 +825,21 @@ Non applicabile
 
  a| 
 Ripristino completo del volume
+ a| 
+No
+ a| 
+No
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+ a| 
+Non applicabile
+
+
+
+ a| 
+SecondaryProtection
  a| 
 No
  a| 

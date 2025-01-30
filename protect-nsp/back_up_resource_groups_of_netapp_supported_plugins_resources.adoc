@@ -22,7 +22,7 @@ summary: È possibile eseguire il backup di un gruppo di risorse su richiesta da
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina Resources (risorse), selezionare *Resource Group* (Gruppo di risorse) dall'elenco *View* (Visualizza).
 +
-È possibile cercare il gruppo di risorse inserendo il nome del gruppo di risorse nella casella di ricerca o facendo clic su image:../media/filter_icon.png["icona del filtro"] e selezionando il tag. Quindi fare clic su image:../media/filter_icon.png["icona del filtro"] per chiudere il riquadro del filtro.
+È possibile eseguire una ricerca nel gruppo di risorse immettendo il nome del gruppo di risorse nella casella di ricerca oppure facendo clic image:../media/filter_icon.gif["icona del filtro"] e selezionando il tag. È quindi possibile fare clic su image:../media/filter_icon.gif["icona del filtro"] per chiudere il riquadro del filtro.
 
 . Nella pagina gruppi di risorse, selezionare il gruppo di risorse di cui si desidera eseguire il backup, quindi fare clic su *Esegui backup ora*.
 . Nella pagina Backup, attenersi alla seguente procedura:

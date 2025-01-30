@@ -81,5 +81,5 @@ I dettagli dei backup e dei cloni vengono visualizzati in formato tabella.
 NOTE: Non è possibile rinominare o eliminare i backup presenti nello storage secondario.
 
 . Selezionare un clone dalla tabella e fare clic su *Clone Split*.
-. Se si desidera eliminare un clone, selezionarlo dalla tabella, quindi fare clic su image:../media/delete_icon.gif[""].
+. Se si desidera eliminare un clone, selezionarlo dalla tabella, quindi fare clic su image:../media/delete_icon.gif["icona elimina"].
 

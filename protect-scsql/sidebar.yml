@@ -129,6 +129,9 @@ entries:
     url: "/protect-scsql/task_create_backup_policies_for_sql_server_databases.html"
   - title: Creare gruppi di risorse e allegare criteri per SQL Server
     url: "/protect-scsql/task_create_resource_groups_and_attach_policies_for_sql_server.html"
+  - title: Creare gruppi di risorse e abilitare la protezione secondaria per le risorse
+      Microsoft SQL Server nei sistemi ASA R2
+    url: "/protect-scsql/create-resource-groups-secondary-protection-for-asa-r2-mssql-resources.html"
   - title: Requisiti per il backup delle risorse SQL
     url: "/protect-scsql/concept_requirements_for_backing_up_sql_resources.html"
   - title: Creare una connessione al sistema storage e una credenziale utilizzando

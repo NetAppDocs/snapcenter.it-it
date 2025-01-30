@@ -85,7 +85,7 @@ Selezionare questa opzione per evitare di forzare un punto di coerenza WAFL.
 
 |===
 +
-image:../media/application_settings.gif["impostazione dell'applicazione"]
+image:../media/application_settings.gif["impostazioni dell'applicazione"]
 
 .. Fare clic sulla freccia *Scripts* e immettere i comandi pre e post per le operazioni quiescenza, snapshot e inquiescenza. In caso di errore, è anche possibile inserire i pre-comandi da eseguire prima di uscire.
 .. Fare clic sulla freccia *Custom Configurations* (configurazioni personalizzate) e immettere le coppie chiave-valore personalizzate richieste per tutte le operazioni di protezione dei dati che utilizzano questa risorsa.
@@ -181,12 +181,12 @@ Selezionare *Altro*, quindi immettere il comando da eseguire sull'host per crear
 .. Selezionare uno o più criteri dall'elenco a discesa.
 +
 
-NOTE: Puoi anche creare una policy facendo clic su *image:../media/add_policy_from_resourcegroup.gif[""]*.
+NOTE: È anche possibile creare una policy facendo clic su * *image:../media/add_policy_from_resourcegroup.gif["aggiungere il gruppo di risorse del modulo criterio"].
 
 +
 I criteri sono elencati nella sezione Configura pianificazioni per i criteri selezionati.
 
-.. Nella colonna Configure Schedules (Configura pianificazioni), fare clic su *image:../media/add_policy_from_resourcegroup.gif[""]* per la policy che si desidera configurare.
+.. Nella colonna Configura pianificazioni, fare clic su * *image:../media/add_policy_from_resourcegroup.gif["aggiungere il gruppo di risorse del modulo criterio"]per il criterio che si desidera configurare.
 .. Nella finestra di dialogo Add schedules for policy _policy_name_, configurare la pianificazione, quindi fare clic su *OK*.
 +
 Dove, policy_name è il nome del criterio selezionato.

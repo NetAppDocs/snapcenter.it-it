@@ -28,7 +28,7 @@ Ad esempio, se il database di produzione è db1, il clono1 del database viene cl
 Viene visualizzata la pagina della topologia della risorsa o del gruppo di risorse.
 
 . Dalla vista Manage Copies (Gestisci copie), selezionare *cloni* dai sistemi di storage primario o secondario (mirrorati o replicati).
-. Selezionare il clone, quindi fare clic su image:../media/delete_icon.gif[""].
+. Selezionare il clone, quindi fare clic su image:../media/delete_icon.gif["icona elimina"].
 +
 Se si stanno eliminando i cloni del database SAP HANA, nella pagina Delete Clone (Elimina clone), eseguire le seguenti operazioni:
 

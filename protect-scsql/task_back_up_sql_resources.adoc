@@ -14,6 +14,7 @@ summary: Se una risorsa non fa ancora parte di un gruppo di risorse, è possibil
 Se una risorsa non fa ancora parte di un gruppo di risorse, è possibile eseguire il backup della risorsa dalla pagina risorse.
 
 .A proposito di questa attività
+* Per ottimizzare l'operazione di backup, è necessario creare un record di ricerca inversa dei nomi dei cluster Windows e degli indirizzi IP nel server DNS.
 * Per l'autenticazione delle credenziali Windows, è necessario impostare le credenziali prima di installare i plug-in.
 * Per l'autenticazione dell'istanza di SQL Server, è necessario aggiungere la credenziale dopo l'installazione dei plug-in.
 * Per l'autenticazione gMSA, è necessario configurare gMSA durante la registrazione dell'host con SnapCenter nella pagina *Aggiungi host* o *Modifica host* per abilitare e utilizzare gMSA.
@@ -51,12 +52,12 @@ Ad esempio, customtext_policy_hostname o resource_hostname. Per impostazione pre
 +
 .. Nella sezione Criteri, selezionare uno o più criteri dall'elenco a discesa.
 +
-È possibile creare una policy selezionando *image:../media/add_policy_from_resourcegroup.gif[""]* per avviare la procedura guidata delle policy.
+È possibile creare un criterio selezionando * *image:../media/add_policy_from_resourcegroup.gif["aggiungere il gruppo di risorse del modulo criterio"]per avviare la procedura guidata.
 
 +
 Nella sezione *Configure schedules for selected policy* (Configura pianificazioni per policy selezionate), vengono elencati i criteri selezionati.
 
-.. Selezionare *image:../media/add_policy_from_resourcegroup.gif[""]* Nella colonna Configure Schedules (Configura pianificazioni) per il criterio per il quale si desidera configurare una pianificazione.
+.. Selezionare * *image:../media/add_policy_from_resourcegroup.gif["aggiungere il gruppo di risorse del modulo criterio"]nella colonna Configura pianificazioni per il criterio per il quale si desidera configurare una pianificazione.
 .. Nel campo *Aggiungi pianificazioni per policy* `policy_name` Configurare la pianificazione, quindi selezionare *OK*.
 +
 Qui `policy_name` è il nome del criterio selezionato.
@@ -78,7 +79,7 @@ Le pianificazioni configurate sono elencate nella colonna *Pianificazioni applic
 NOTE: La versione del server di verifica deve essere uguale o superiore alla versione dell'edizione del server SQL che ospita il database primario.
 
 .. Selezionare *Load secondary locators to verify backups on secondary* (carica locatori secondari) per verificare i backup sul sistema di storage secondario.
-.. Selezionare il criterio per il quale si desidera configurare la pianificazione di verifica, quindi selezionare *image:../media/add_policy_from_resourcegroup.gif[""]*.
+.. Selezionare il criterio per cui si desidera configurare la pianificazione della verifica, quindi selezionare * *image:../media/add_policy_from_resourcegroup.gif["aggiungere il gruppo di risorse del modulo criterio"].
 .. Nella finestra di dialogo Add Verification Schedules _policy_name_, eseguire le seguenti operazioni:
 +
 |===

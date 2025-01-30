@@ -6,13 +6,13 @@ indexpage:
   lead: Il software SnapCenter è una piattaforma semplice, centralizzata e scalabile
     che offre una protezione dei dati coerente per applicazioni, database, file system
     host e macchine virtuali in esecuzione su sistemi ONTAP in qualsiasi punto del
-    cloud ibrido. Questa libreria di documentazione contiene informazioni relative
-    alla versione 6,0 e 6,0.1.
+    cloud ibrido. Questa libreria di documentazione include informazioni sulla versione
+    6,1.
   tiles:
   - title: Inizia subito
     links:
     - title: Note di rilascio
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3323468
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3337665
     - title: Scopri di più su SnapCenter
       url: "/concept/concept_snapcenter_overview.html"
     - title: Aggiornare il server SnapCenter e i plug-in SnapCenter
@@ -89,7 +89,7 @@ indexpage:
     - title: Guida di riferimento per cmdlet
       url: https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html
     - title: Guida di riferimento ai comandi
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666
     - title: Documentazione per le versioni precedenti di SnapCenter
       url: https://www.netapp.com/data-protection/backup-recovery/snapcenter-backup-management/documentation/#ProseArticleLinkList13
     - title: Knowledge base di NetApp - SnapCenter

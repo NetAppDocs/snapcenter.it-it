@@ -26,6 +26,6 @@ Il flusso di lavoro dei cloni include l'esecuzione dell'operazione di cloni e il
 
 Il seguente flusso di lavoro mostra la sequenza in cui è necessario eseguire l'operazione di clonazione:
 
-image::../media/sco_scc_wfs_clone_workflow.png[Clonare il flusso di lavoro]
+image::../media/sco_scc_wfs_clone_workflow.gif[Clonare il flusso di lavoro]
 
 È inoltre possibile utilizzare i cmdlet PowerShell manualmente o negli script per eseguire operazioni di backup, ripristino e clonazione. La guida in linea del cmdlet di SnapCenter e le informazioni di riferimento del cmdlet contengono informazioni dettagliate sui cmdlet di PowerShell.

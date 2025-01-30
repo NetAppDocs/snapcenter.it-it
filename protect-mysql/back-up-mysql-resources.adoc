@@ -15,6 +15,6 @@ summary: 'È possibile creare un backup di una risorsa o di un gruppo di risorse
 
 Il seguente flusso di lavoro mostra la sequenza in cui è necessario eseguire l'operazione di backup:
 
-image::../media/db2_backup_workflow.png[Flusso di lavoro di MySQL Backup]
+image:../media/db2_backup_workflow.gif["Flusso di lavoro di MySQL Backup"]
 
 È inoltre possibile utilizzare i cmdlet PowerShell manualmente o negli script per eseguire operazioni di backup, ripristino e clonazione. La guida in linea del cmdlet di SnapCenter e le informazioni di riferimento del cmdlet contengono ulteriori informazioni sui cmdlet di PowerShell. https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guida di riferimento al cmdlet del software SnapCenter"^].

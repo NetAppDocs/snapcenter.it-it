@@ -13,4 +13,4 @@ summary: 'L"immagine del flusso di lavoro mostra i passaggi per installare e con
 [role="lead"]
 Il flusso di lavoro mostra le diverse attività necessarie per installare e configurare il server SnapCenter.
 
-image::../media/install_snapcenter_server.png[Installare il server SnapCenter]
+image::../media/install_snapcenter_server.gif[Installare il server SnapCenter]

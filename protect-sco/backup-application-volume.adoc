@@ -21,9 +21,9 @@ Per impostazione predefinita, vengono creati i backup del gruppo di coerenza (CG
 
 . Nel riquadro di navigazione a sinistra, fare clic su *Resources*, quindi selezionare il plug-in Oracle Database dall'elenco.
 . Nella pagina Resources (risorse), selezionare *Application Volume* (Volume applicazione) dall'elenco *View* (Visualizza).
-. Fare clic su image:../media/filter_icon.png["icona del filtro"], quindi selezionare il nome host e il tipo di database per filtrare le risorse.
+. Fare clic su * *image:../media/filter_icon.gif["icona del filtro"], quindi selezionare il nome host e il tipo di database per filtrare le risorse.
 +
-È quindi possibile fare clic su image:../media/filter_icon.png["icona del filtro"] per chiudere il riquadro del filtro.
+È quindi possibile fare clic su * *image:../media/filter_icon.gif["icona del filtro"]per chiudere il riquadro del filtro.
 
 . Selezionare il volume dell'applicazione di cui si desidera eseguire il backup.
 +
@@ -55,7 +55,7 @@ Specificare le destinazioni dei file di log dell'archivio di cui non si desidera
 .. Selezionare uno o più criteri dall'elenco a discesa.
 +
 
-NOTE: È inoltre possibile creare un criterio facendo clic su image:../media/add_policy_from_resourcegroup.gif["aggiungi criterio"].
+NOTE: È anche possibile creare una policy facendo clic su * *image:../media/add_policy_from_resourcegroup.gif["aggiungere il gruppo di risorse del modulo criterio"].
 
 
 
@@ -63,7 +63,7 @@ NOTE: È inoltre possibile creare un criterio facendo clic su image:../media/add
 Nella sezione Configure schedules for selected policies (Configura pianificazioni per policy selezionate), vengono elencati i criteri selezionati.
 
 +
-.. Fare clic image:../media/add_policy_from_resourcegroup.gif["aggiungi criterio"] nella colonna Configura pianificazioni per il criterio per il quale si desidera configurare una pianificazione.
+.. Fare clic image:../media/add_policy_from_resourcegroup.gif["aggiungere il gruppo di risorse del modulo criterio"] nella colonna Configura pianificazioni per il criterio per il quale si desidera configurare una pianificazione.
 .. Nella finestra Add schedules for policy _policy_name_, configurare la pianificazione, quindi fare clic su *OK*.
 +
 _policy_name_ è il nome del criterio selezionato.

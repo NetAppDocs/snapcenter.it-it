@@ -70,7 +70,7 @@ NOTE: Per la notifica via email, è necessario aver specificato i dettagli del s
 
 . Nel riquadro di navigazione a sinistra, fare clic su *Resources*, quindi selezionare il plug-in Oracle Database dall'elenco.
 . Nella pagina Resources (risorse), selezionare *Application Volume* (Volume applicazione) dall'elenco *View* (Visualizza).
-. Selezionare la risorsa clonata e fare clic su image:../media/split_cone.gif[""].
+. Selezionare la risorsa clonata e fare clic su image:../media/split_clone.gif["clone split"].
 . Esaminare le dimensioni stimate del clone da dividere e lo spazio richiesto disponibile sull'aggregato, quindi fare clic su *Start*.
 . Monitorare l'avanzamento dell'operazione facendo clic su *Monitor* > *Jobs*.
 
@@ -90,7 +90,7 @@ NOTE: Per la notifica via email, è necessario aver specificato i dettagli del s
 Viene visualizzata la pagina della topologia della risorsa o del gruppo di risorse.
 
 . Dalla vista Manage Copies (Gestisci copie), selezionare *cloni* dai sistemi di storage primario o secondario (mirrorati o replicati).
-. Selezionare il clone, quindi fare clic su image:../media/delete_icon.gif[""].
+. Selezionare il clone, quindi fare clic su image:../media/delete_icon.gif["icona elimina"].
 . Nella pagina Delete Clone (Elimina clone), eseguire le seguenti operazioni:
 +
 .. Nel campo *Pre clone delete*, immettere i nomi degli script da eseguire prima di eliminare il clone.

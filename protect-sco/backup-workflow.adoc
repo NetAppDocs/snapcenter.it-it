@@ -15,7 +15,7 @@ summary: 'È possibile creare un backup di una risorsa (database) o di un gruppo
 
 Il seguente flusso di lavoro mostra la sequenza in cui è necessario eseguire l'operazione di backup:
 
-image::../media/sco_backup_workflow.png[Workflow di backup per Oracle]
+image::../media/sco_backup_workflow.gif[Workflow di backup per Oracle]
 
 Durante la creazione di un backup per i database Oracle, viene creato un file di blocco operativo (_.SM_lock_dbsid_) sull'host del database Oracle nella directory _/var/opt/snapcenter/sco/lock_ per evitare l'esecuzione di più operazioni sul database. Una volta eseguito il backup del database, il file di blocco operativo viene rimosso automaticamente.
 

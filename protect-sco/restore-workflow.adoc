@@ -15,4 +15,4 @@ Il flusso di lavoro di ripristino include la pianificazione, l'esecuzione delle 
 
 Il seguente flusso di lavoro mostra la sequenza in cui è necessario eseguire l'operazione di ripristino:
 
-image::../media/all_plug_ins_restore_workflow.png[all_plug-in_restore_workflow]
+image::../media/all_plug_ins_restore_workflow.gif[all_plug-in_restore_workflow]

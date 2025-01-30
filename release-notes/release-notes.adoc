@@ -11,8 +11,8 @@ summary: Fornisce importanti informazioni su questa versione del server SnapCent
 
 
 [role="lead"]
-Scoprite le nuove e migliorate funzioni disponibili in SnapCenter 6,0 e 6,0.1.
+Scoprite le nuove e migliorate funzioni disponibili in SnapCenter 6,1.
 
-Per un elenco completo delle nuove funzioni e dei miglioramenti, vedere link:what's-new-in-snapcenter601.html["Novità di SnapCenter 6.0.1"] e link:what's-new-in-snapcenter60.html["Novità di SnapCenter 6,0"].
+Per un elenco completo delle nuove funzioni e dei miglioramenti, vedere link:what's-new-in-snapcenter61.html["Novità di SnapCenter 6,1"].
 
-Per informazioni dettagliate su problemi noti, limitazioni, problemi risolti e comandi nuovi e modificati, vedere https://library.netapp.com/ecm/ecm_download_file/ECMLP3323468["Note sulla versione del software SnapCenter 6,0 e 6.0.1"^] . Per accedere alle Note di rilascio, è necessario accedere con l'account NetApp o creare un account.
+Per informazioni dettagliate su problemi noti, limitazioni, problemi risolti e comandi nuovi e modificati, vedere https://library.netapp.com/ecm/ecm_download_file/ECMLP3337665["Note sulla versione del software SnapCenter 6,1"^] . Per accedere alle Note di rilascio, è necessario accedere con l'account NetApp o creare un account.

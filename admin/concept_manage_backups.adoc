@@ -62,7 +62,7 @@ Viene visualizzata la pagina della topologia di risorse o gruppi di risorse.
 +
 Non è possibile eliminare i backup presenti nel sistema di storage secondario.
 
-. Selezionare il backup, quindi fare clic su image:../media/delete_icon.gif[""].
+. Selezionare il backup, quindi fare clic su image:../media/delete_icon.gif["icona elimina"].
 +
 Se si elimina un backup del database SAP HANA, vengono eliminati anche i cataloghi SAP HANA associati al backup.
 

@@ -28,9 +28,9 @@ Le risorse rilevate automaticamente non possono essere modificate o eliminate.
 .Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in per IBM DB2 dall'elenco.
 . Nella pagina risorse, selezionare il tipo di risorsa dall'elenco Visualizza.
-. (Facoltativo) fare clic su *image:../media/filter_icon.png["icona del filtro"]*, quindi selezionare il nome host.
+. (Facoltativo) fare clic su * *image:../media/filter_icon.gif["icona del filtro"], quindi selezionare il nome host.
 +
-Quindi fare clic su *image:../media/filter_icon.png["icona del filtro"]* per chiudere il riquadro del filtro.
+È quindi possibile fare clic su * *image:../media/filter_icon.gif["icona del filtro"]per chiudere il riquadro del filtro.
 
 . Fare clic su *Refresh Resources* (Aggiorna risorse) per scoprire le risorse disponibili sull'host.
 +

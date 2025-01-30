@@ -16,9 +16,9 @@ Se una risorsa non fa parte di un gruppo di risorse, è possibile eseguarne il b
 .Fasi
 . Nel riquadro di navigazione a sinistra, selezionare *risorse* e il plug-in appropriato dall'elenco.
 . Nella pagina Resources (risorse), selezionare *Database* dall'elenco View (Visualizza).
-. Fare clic su image:../media/filter_icon.png["Icona del filtro"], quindi selezionare il nome host e il tipo di database per filtrare le risorse.
+. Fare clic su image:../media/filter_icon.gif["icona del filtro"], quindi selezionare il nome host e il tipo di database per filtrare le risorse.
 +
-Quindi fare clic su image:../media/filter_icon.png["Icona del filtro"] per chiudere il riquadro del filtro.
+È quindi possibile fare clic su image:../media/filter_icon.gif["icona del filtro"] per chiudere il riquadro del filtro.
 
 . Selezionare il database di cui si desidera eseguire il backup.
 +

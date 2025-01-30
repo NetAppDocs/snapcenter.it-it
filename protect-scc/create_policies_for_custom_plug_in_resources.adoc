@@ -41,32 +41,32 @@ L'amministratore di SnapCenter deve aver assegnato le SVM per i volumi di origin
 
 
 
-
-NOTE: Le impostazioni SnapLock primarie vengono gestite nel criterio di backup SnapCenter e le impostazioni SnapLock secondarie vengono gestite da ONTAP.
-
 .Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *Impostazioni*.
 . Nella pagina Impostazioni, fare clic su *Criteri*.
 . Fare clic su *nuovo*.
-. Nella pagina Name (Nome), immettere il nome e la descrizione della policy.
-. Nella pagina Impostazioni, attenersi alla seguente procedura:
+. Nella pagina Name (Nome), inserire il nome del criterio e i relativi dettagli.
+. Nella pagina tipo di criterio, effettuare le seguenti operazioni:
 +
-** Specificare il tipo di pianificazione selezionando *on demand*, *Hourly*, *Daily*, *Weekly* o *Monthly*.
+.. Selezionare il tipo di archiviazione.
+.. Nella sezione Impostazioni di backup personalizzate, fornire le impostazioni di backup specifiche che devono essere passate al plug-in in formato valore chiave.
++
+È possibile fornire più valori chiave da passare al plug-in.
+
+
+
+. Nella pagina Snapshot and Replication (istantanea e replica), effettuare le seguenti operazioni:
++
+.. Specificare il tipo di pianificazione selezionando *on demand*, *Hourly*, *Daily*, *Weekly* o *Monthly*.
 +
 
 NOTE: È possibile specificare la pianificazione (data di inizio, data di fine e frequenza) per l'operazione di backup durante la creazione di un gruppo di risorse. Ciò consente di creare gruppi di risorse che condividono la stessa policy e frequenza di backup, ma consente di assegnare diverse pianificazioni di backup a ciascun criterio.
 
 +
-image::../media/backup_settings.gif[Pagina di backup delle impostazioni]
-
-+
 
 NOTE: Se sono previste le 2:00, la programmazione non verrà attivata durante l'ora legale (DST).
 
-** Nella sezione Custom backup settings (Impostazioni di backup personalizzate), fornire le impostazioni di backup specifiche che devono essere passate al plug-in in formato key-value. È possibile fornire più valori chiave da passare al plug-in.
-
-
-. Nella pagina *retention*, specificare le impostazioni di conservazione per il tipo di backup e il tipo di pianificazione selezionato nella pagina *Backup Type*:
+.. Nella sezione Impostazioni istantanea, specificare le impostazioni di conservazione per il tipo di backup e il tipo di pianificazione selezionato nella pagina *tipo di backup*:
 +
 |===
 | Se si desidera... | Quindi... 
@@ -75,7 +75,7 @@ NOTE: Se sono previste le 2:00, la programmazione non verrà attivata durante l'
  a| 
 Mantenere un certo numero di istantanee
  a| 
-Selezionare *totale copie snapshot da conservare*, quindi specificare il numero di istantanee che si desidera conservare.
+Selezionare *copie da conservare*, quindi specificare il numero di istantanee che si desidera conservare.
 
 Se il numero di istantanee supera il numero specificato, le istantanee vengono eliminate con le copie meno recenti eliminate per prime.
 
@@ -90,19 +90,46 @@ NOTE: Il valore massimo di conservazione è 1018 per le risorse su ONTAP 9.4 o v
  a| 
 Conservare le istantanee per un determinato numero di giorni
  a| 
-Selezionare *Mantieni copie snapshot per*, quindi specificare il numero di giorni per i quali si desidera conservare le istantanee prima di eliminarle.
+Selezionare *conserva copie per*, quindi specificare il numero di giorni per i quali si desidera conservare le istantanee prima di eliminarle.
 
 
 
  a| 
-Periodo di blocco della copia snapshot
+Periodo di blocco della copia dello snapshot primario
  a| 
 Selezionare periodo di blocco istantanea e selezionare giorni, mesi o anni.
 
 Il periodo di conservazione di SnapLock deve essere inferiore a 100 anni.
 
+
+
+ a| 
+Periodo di blocco della copia snapshot secondaria
+ a| 
+Selezionare *periodo blocco copia istantanea secondaria*, quindi giorni, mesi o anni.
+
+Affinché questa opzione sia efficace, è necessario effettuare le seguenti operazioni:
+
+*** Selezionare il *periodo di blocco della copia dell'istantanea primaria*.
+*** Selezionare una o entrambe le opzioni di replica secondarie.
+
+
 |===
-. Nella pagina *Replica*, specificare le impostazioni di replica:
+.. Selezionare un'etichetta Snapshot.
++
+A seconda dell'etichetta Snapshot selezionata, ONTAP applica la politica di conservazione Snapshot secondaria corrispondente all'etichetta.
+
++
+
+NOTE: Se è stato selezionato *Update SnapMirror dopo la creazione di una copia Snapshot locale*, è possibile specificare l'etichetta del criterio secondario. Tuttavia, se è stato selezionato *Aggiorna SnapVault dopo la creazione di una copia Snapshot locale*, è necessario specificare l'etichetta del criterio secondario.
+
+
+
+. Nella sezione Seleziona opzioni di replica secondaria, selezionare una o entrambe le seguenti opzioni di replica secondaria:
++
+
+NOTE: È necessario selezionare le opzioni di replica secondarie per *periodo di blocco della copia dello snapshot secondario* per essere efficace.
+
 +
 |===
 | Per questo campo... | Eseguire questa operazione... 
@@ -136,18 +163,6 @@ Per ulteriori informazioni sul vault di SnapLock, vedere commit Snapshot to WORM
 destinazione
 
 Vedere link:view_custom_plug_in_resource_backups_and_clones_in_the_topology_page.html["Visualizza i backup e i cloni personalizzati relativi alle risorse plug-in nella pagina topologia"].
-
-
-
- a| 
-*Etichetta del criterio secondario*
- a| 
-Selezionare un'etichetta Snapshot.
-
-A seconda dell'etichetta Snapshot selezionata, ONTAP applica la politica di conservazione Snapshot secondaria corrispondente all'etichetta.
-
-
-NOTE: Se è stato selezionato *Update SnapMirror dopo la creazione di una copia Snapshot locale*, è possibile specificare l'etichetta del criterio secondario. Tuttavia, se è stato selezionato *Aggiorna SnapVault dopo la creazione di una copia Snapshot locale*, è necessario specificare l'etichetta del criterio secondario.
 
 
 

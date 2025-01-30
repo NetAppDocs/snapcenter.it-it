@@ -25,6 +25,6 @@ Se si desidera individuare l'impatto dello storage dei cloni nascosti, eseguire 
 Viene visualizzata la pagina della topologia delle risorse.
 
 . Dalla vista Manage Copies (Gestisci copie), selezionare i cloni dai sistemi di storage primario o secondario (mirrorati o replicati).
-. Selezionare i cloni, quindi fare clic image:../media/delete_icon.gif["icona elimina"] per eliminare i cloni o fare clic image:../media/split_cone.gif["icona dividi"] per suddividere i cloni.
+. Selezionare i cloni, quindi fare clic image:../media/delete_icon.gif["icona elimina"] per eliminare i cloni o fare clic image:../media/split_clone.gif["clone split"] per suddividere i cloni.
 . Fare clic su *OK*.
 

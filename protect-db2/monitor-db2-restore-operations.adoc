@@ -31,7 +31,7 @@ Nella pagina lavori vengono visualizzate le seguenti icone che indicano lo stato
 . Nella pagina *Monitor*, fare clic su *Jobs*.
 . Nella pagina *lavori*, attenersi alla seguente procedura:
 +
-.. Fare clic su image:../media/filter_icon.png["Icona del filtro"] per filtrare l'elenco in modo che vengano elencate solo le operazioni di ripristino.
+.. Fare clic image:../media/filter_icon.gif["icona del filtro"] per filtrare l'elenco in modo che vengano elencate solo le operazioni di ripristino.
 .. Specificare le date di inizio e di fine.
 .. Dall'elenco a discesa *tipo*, selezionare *Ripristina*.
 .. Dall'elenco a discesa *Status* (Stato), selezionare lo stato di ripristino.

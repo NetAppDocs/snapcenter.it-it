@@ -1,7 +1,7 @@
 ---
 permalink: install/task_add_storage_systems.html 
 sidebar: sidebar 
-keywords: add, storage system, SVM 
+keywords: add, storage system, SVM, ASA r2 systems 
 summary: È necessario configurare il sistema storage che consente a SnapCenter di accedere allo storage ONTAP per eseguire operazioni di provisioning e protezione dei dati. È possibile aggiungere una SVM standalone o un cluster composto da più SVM. 
 ---
 = Aggiungere sistemi storage
@@ -11,7 +11,7 @@ summary: È necessario configurare il sistema storage che consente a SnapCenter 
 
 
 [role="lead"]
-È necessario configurare il sistema storage che consente a SnapCenter di accedere allo storage ONTAP o ad Amazon FSX per NetApp ONTAP per eseguire operazioni di provisioning e protezione dei dati.
+Per eseguire operazioni di provisioning e data Protection, devi configurare il sistema storage che offra accesso SnapCenter allo storage ONTAP, ai sistemi ASA R2 o ad Amazon FSX per NetApp ONTAP.
 
 È possibile aggiungere una SVM standalone o un cluster composto da più SVM. Se si utilizza Amazon FSX per NetApp ONTAP, è possibile aggiungere FSX admin LIF composto da più SVM utilizzando l'account fsxadmin o aggiungere FSX SVM in SnapCenter.
 

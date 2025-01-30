@@ -36,7 +36,7 @@ NOTE: Se i comandi non sono presenti nell'elenco dei comandi, l'operazione avrà
 . Nel riquadro di spostamento di sinistra, selezionare *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
 . Nella pagina Resource, filtrare le risorse dall'elenco a discesa *View* in base al tipo di risorsa.
 +
-Selezionare image:../media/filter_icon.png["icona del filtro"], quindi selezionare il nome host e il tipo di risorsa per filtrare le risorse. È quindi possibile scegliere image:../media/filter_icon.png["icona del filtro"] di chiudere il riquadro del filtro.
+Selezionare image:../media/filter_icon.gif["icona del filtro"], quindi selezionare il nome host e il tipo di risorsa per filtrare le risorse. È quindi possibile scegliere image:../media/filter_icon.gif["icona del filtro"] di chiudere il riquadro del filtro.
 
 . Selezionare la risorsa di cui si desidera eseguire il backup.
 . Nella pagina risorsa, selezionare *Usa formato nome personalizzato per copia istantanea*, quindi immettere un formato nome personalizzato che si desidera utilizzare per il nome istantanea.

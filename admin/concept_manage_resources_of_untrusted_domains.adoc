@@ -78,5 +78,5 @@ Gli host, gli utenti, i gruppi e le credenziali associati al dominio non attendi
 . Nella pagina Impostazioni, fare clic su *Impostazioni globali*.
 . Nella pagina Global Settings (Impostazioni globali), fare clic su *Domain Settings* (Impostazioni dominio).
 . Dall'elenco dei domini, selezionare il dominio che si desidera annullare la registrazione.
-. Fare clic su image:../media/delete_icon.gif[""], Quindi fare clic su *OK*.
+. Fare clic su image:../media/delete_icon.gif["icona elimina"], quindi su *OK*.
 

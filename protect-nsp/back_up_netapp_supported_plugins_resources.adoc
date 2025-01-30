@@ -15,6 +15,6 @@ Il workflow di backup include la pianificazione, l'identificazione delle risorse
 
 Il seguente flusso di lavoro mostra la sequenza in cui è necessario eseguire l'operazione di backup:
 
-image::../media/scc_backup_workflow.png[Workflow di backup]
+image::../media/scc_backup_workflow.gif[Workflow di backup]
 
 È inoltre possibile utilizzare i cmdlet PowerShell manualmente o negli script per eseguire operazioni di backup, ripristino e clonazione. Per informazioni dettagliate sui cmdlet di PowerShell, utilizzare la guida dei cmdlet di SnapCenter o vedere la https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guida di riferimento al cmdlet del software SnapCenter"]

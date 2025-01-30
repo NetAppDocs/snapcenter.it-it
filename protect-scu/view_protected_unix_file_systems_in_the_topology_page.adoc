@@ -75,7 +75,7 @@ I dettagli dei backup e dei cloni vengono visualizzati in formato tabella.
 
 NOTE: Non è possibile rinominare o eliminare i backup presenti nello storage secondario.
 
-. Se si desidera eliminare un clone, selezionarlo dalla tabella, quindi fare clic su image:../media/delete_icon.gif[""].
+. Se si desidera eliminare un clone, selezionarlo dalla tabella, quindi fare clic su image:../media/delete_icon.gif["icona elimina"].
 
 
 .Esempio di visualizzazione di backup e cloni sullo storage primario

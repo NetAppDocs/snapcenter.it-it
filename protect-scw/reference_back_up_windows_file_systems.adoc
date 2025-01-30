@@ -17,6 +17,8 @@ Quando si installa il plug-in SnapCenter per Microsoft Windows nell'ambiente in 
 
 Il seguente flusso di lavoro mostra la sequenza in cui è necessario eseguire le operazioni di backup:
 
+image::../media/sce_backup_workflow.gif[flusso di lavoro di backup]
+
 image::../media/sce_backup_workflow.gif[Flusso di lavoro di backup del database Exchange]
 
 È inoltre possibile utilizzare i cmdlet PowerShell manualmente o negli script per eseguire operazioni di backup, ripristino e clonazione. La guida dei cmdlet di SnapCenter o https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["Guida di riferimento al cmdlet del software SnapCenter"^] contiene informazioni dettagliate sui cmdlet di PowerShell.

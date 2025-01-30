@@ -64,6 +64,7 @@ NOTE: Le risorse vengono elencate nella sezione risorse disponibili solo se la r
 
 NOTE: È possibile aggiungere database da host Linux e AIX in un singolo gruppo di risorse.
 
+. Nella pagina Impostazioni applicazione, selezionare l'opzione di backup.
 . Nella pagina Criteri, attenersi alla seguente procedura:
 +
 .. Selezionare uno o più criteri dall'elenco a discesa.

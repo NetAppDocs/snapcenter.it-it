@@ -29,7 +29,7 @@ Nella pagina lavori vengono visualizzate le seguenti icone che indicano lo stato
 . Nella pagina Monitor, fare clic su *Jobs*.
 . Nella pagina lavori, attenersi alla seguente procedura:
 +
-.. Fare clic image:../media/filter_icon.png["icona del filtro"] per filtrare l'elenco in modo che vengano elencate solo le operazioni di backup.
+.. Fare clic image:../media/filter_icon.gif["icona del filtro"] per filtrare l'elenco in modo che vengano elencate solo le operazioni di backup.
 .. Specificare le date di inizio e di fine.
 .. Dall'elenco a discesa *tipo*, selezionare *Backup*.
 .. Dal menu a discesa *Status* (Stato), selezionare lo stato del backup.

@@ -1,0 +1,141 @@
+---
+permalink: protect-sco/create-resource-groups-secondary-protection-for-asa-r2-oracle-resources.html 
+sidebar: sidebar 
+keywords: asa r2, secondary protection, consistency group, primary consistency group, secondary consistency group 
+summary: Un gruppo di risorse è un container in cui vengono aggiunte le risorse di cui si desidera eseguire il backup e la protezione. Un gruppo di risorse consente di eseguire contemporaneamente il backup di tutti i dati associati a una determinata applicazione. 
+---
+= Creare gruppi di risorse e abilitare la protezione secondaria per le risorse Oracle sui sistemi ASA R2
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario creare il gruppo di risorse per aggiungere le risorse presenti nei sistemi ASA R2. È inoltre possibile eseguire il provisioning della protezione secondaria durante la creazione del gruppo di risorse.
+
+.Prima di iniziare
+* Assicurarsi di non aggiungere risorse ONTAP 9.x e ASA R2 allo stesso gruppo di risorse.
+* Assicurarsi di non disporre di un database con risorse ONTAP 9.x e ASA R2.
+
+
+.A proposito di questa attività
+* La protezione secondaria è disponibile solo se l'utente connesso è assegnato al ruolo con la funzionalità *SecondaryProtection* abilitata.
+* Se è stata attivata la protezione secondaria, il gruppo di risorse viene impostato in modalità di manutenzione durante la creazione dei gruppi di coerenza primario e secondario. Dopo la creazione dei gruppi di coerenza primario e secondario, il gruppo di risorse viene disattivato dalla modalità di manutenzione.
+* SnapCenter non supporta la protezione secondaria per una risorsa clone.
+
+
+.Fasi
+. Nel riquadro di navigazione a sinistra, selezionare *risorse* e il plug-in appropriato dall'elenco.
+. Nella pagina Resources (risorse), fare clic su *New Resource Group* (nuovo gruppo di risorse).
+. Nella pagina Name (Nome), eseguire le seguenti operazioni:
++
+.. Immettere un nome per il gruppo di risorse nel campo Nome.
++
+
+NOTE: Il nome del gruppo di risorse non deve superare i 250 caratteri.
+
+.. Inserire una o più etichette nel campo Tag per facilitare la ricerca del gruppo di risorse in un secondo momento.
++
+Ad esempio, se si aggiunge HR come tag a più gruppi di risorse, è possibile trovare in seguito tutti i gruppi di risorse associati al tag HR.
+
+.. Selezionare questa casella di controllo e immettere un formato del nome personalizzato che si desidera utilizzare per il nome dell'istantanea.
++
+Ad esempio, customtext_resource group_policy_hostname o resource group_hostname. Per impostazione predefinita, al nome dell'istantanea viene aggiunto un indicatore data e ora.
+
+.. Specificare le destinazioni dei file di log dell'archivio di cui non si desidera eseguire il backup.
++
+
+NOTE: Se necessario, utilizzare la stessa destinazione impostata nell'applicazione, incluso il prefisso.
+
+
+
+. Nella pagina risorse, selezionare il nome host del database dall'elenco a discesa *host*.
++
+
+NOTE: Le risorse vengono elencate nella sezione risorse disponibili solo se la risorsa viene rilevata correttamente. Le risorse aggiunte di recente vengono visualizzate nell'elenco delle risorse disponibili solo dopo l'aggiornamento dell'elenco delle risorse.
+
+. Selezionare le risorse di ASA R2 dalla sezione risorse disponibili e spostarle nella sezione risorse selezionate.
+. Nella pagina Impostazioni applicazione, selezionare l'opzione di backup.
+. Nella pagina Criteri, attenersi alla seguente procedura:
++
+.. Selezionare uno o più criteri dall'elenco a discesa.
++
+
+NOTE: È anche possibile creare un criterio facendo clic su image:../media/add_policy_from_resourcegroup.gif["aggiungi simbolo"].
+
++
+Nella sezione Configure schedules for selected policies (Configura pianificazioni per policy selezionate), vengono elencati i criteri selezionati.
+
+.. Fare clic su image:../media/add_policy_from_resourcegroup.gif["aggiungi simbolo"] Nella colonna Configure Schedules (Configura pianificazioni) per il criterio per il quale si desidera configurare una pianificazione.
+.. Nella finestra Add schedules for policy _policy_name_, configurare la pianificazione, quindi fare clic su *OK*.
++
+Dove _policy_name_ è il nome del criterio selezionato.
+
++
+Le pianificazioni configurate sono elencate nella colonna Applied Schedules (Pianificazioni applicate).
+
+
+
++
+Le pianificazioni di backup di terze parti non sono supportate quando si sovrappongono alle pianificazioni di backup di SnapCenter.
+
+. Se la protezione secondaria è attivata per il criterio selezionato, viene visualizzata la pagina protezione secondaria ed è necessario effettuare le seguenti operazioni:
++
+.. Selezionare il tipo di criterio di replica.
++
+
+NOTE: Il criterio di replica sincrona non è supportato.
+
+.. Specificare il suffisso del gruppo di coerenza che si desidera utilizzare.
+.. Dai menu a discesa cluster di destinazione e SVM di destinazione, selezionare il cluster in cui si esegue il peered e la SVM che si desidera utilizzare.
++
+
+NOTE: Il peering di cluster e SVM non è supportato da SnapCenter. Per eseguire il peering di cluster e SVM è consigliabile utilizzare System Manager o ONTAP.
+
+
+
+
+
+
+NOTE: Se le risorse sono già protette al di fuori di SnapCenter, verranno visualizzate nella sezione risorse protette secondarie.
+
+. Nella pagina verifica, attenersi alla seguente procedura:
++
+.. Fare clic su *Load Locators* (carica locatori) per caricare i volumi SnapMirror o SnapVault per eseguire la verifica sullo storage secondario.
+.. Fare clic su image:../media/add_policy_from_resourcegroup.gif["aggiungi simbolo"] Nella colonna Configura pianificazioni per configurare la pianificazione di verifica per tutti i tipi di pianificazione del criterio.
+.. Nella finestra di dialogo Add Verification Schedules policy_name, eseguire le seguenti operazioni:
++
+|===
+| Se si desidera... | Eseguire questa operazione... 
+
+
+ a| 
+Eseguire la verifica dopo il backup
+ a| 
+Selezionare *Esegui verifica dopo backup*.
+
+
+
+ a| 
+Pianifica una verifica
+ a| 
+Selezionare *Esegui verifica pianificata*, quindi selezionare il tipo di pianificazione dall'elenco a discesa.
+
+|===
+.. Selezionare *verify on secondary location* (verifica su posizione secondaria) per verificare i backup sul sistema di storage secondario.
+.. Fare clic su *OK*.
++
+Le pianificazioni di verifica configurate sono elencate nella colonna Applied Schedules (Pianificazioni applicate).
+
+
+
+. Nella pagina notifica, dall'elenco a discesa *Email preference* (Preferenze email), selezionare gli scenari in cui si desidera inviare i messaggi e-mail.
++
+È inoltre necessario specificare gli indirizzi e-mail del mittente e del destinatario e l'oggetto dell'e-mail. Se si desidera allegare il report dell'operazione eseguita sul gruppo di risorse, selezionare *Allega report*.
+
++
+
+NOTE: Per la notifica via email, è necessario aver specificato i dettagli del server SMTP utilizzando la GUI o il comando PowerShell Set-SmtpServer.
+
+. Esaminare il riepilogo, quindi fare clic su *fine*.
+

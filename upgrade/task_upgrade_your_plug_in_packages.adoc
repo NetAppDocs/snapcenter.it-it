@@ -48,7 +48,7 @@ Nella pagina *Dettagli lavoro*, un messaggio di avviso consiglia al cliente di c
 ... Fare clic su *Upgrade* (Aggiorna).
 
 
-** Se si desidera aggiornare più host plug-in, selezionare tutti gli host, fare clic su image:../media/more_icon.gif[""], quindi fare clic su *Upgrade* > *OK*.
+** Se si desidera aggiornare più host, selezionare tutti gli host, fare clic su , quindi fare clic su image:../media/more_icon.gif["icona altro"]*Upgrade* > *OK*.
 +
 Tutti i servizi correlati vengono riavviati durante l'aggiornamento del plug-in.
 
