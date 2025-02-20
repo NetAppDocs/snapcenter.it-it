@@ -1522,8 +1522,6 @@
   <block id="684a61c61cc522de778dd73d69a56db5" category="doc">Panoramica del plug-in SnapCenter per Microsoft SQL Server</block>
   <block id="c5014d22a313068a158c26e54205b1bd" category="paragraph">Il plug-in SnapCenter per Microsoft SQL Server è un componente sul lato host del software NetApp SnapCenter che consente la gestione della protezione dei dati basata sulle applicazioni dei database Microsoft SQL Server. Il plug-in per SQL Server automatizza le operazioni di backup, verifica, ripristino e clonazione del database SQL Server nell'ambiente SnapCenter.</block>
   <block id="fd7c25f250fa06be60d09323c5f66c05" category="paragraph">Una volta installato il plug-in per SQL Server, è possibile utilizzare SnapCenter con la tecnologia NetApp SnapMirror per creare copie mirror dei set di backup su un altro volume e con la tecnologia NetApp SnapVault per eseguire la replica del backup disk-to-disk a scopo di conformità agli standard o di archiviazione.</block>
-  <block id="0441f921ecb29005b4b309df792042a3" category="summary">La definizione di una strategia di ripristino per SQL Server consente di ripristinare correttamente il database.</block>
-  <block id="24fc557949539a292d3c18f3c9454f62" category="doc">Definire una strategia di ripristino per SQL Server</block>
   <block id="d050ee33bc723342413319851e1c3dd2" category="summary">Quando si installa il plug-in SnapCenter per Microsoft SQL Server nell'ambiente in uso, è possibile utilizzare SnapCenter per eseguire il backup delle risorse di SQL Server.</block>
   <block id="f395a8aee7b6b7007a1b6a64b54468f1" category="doc">Workflow di backup</block>
   <block id="a2bc7758f1d4b865eb9ffb18573c3d1d" category="paragraph">È possibile pianificare più backup per l'esecuzione simultanea tra i server.</block>
@@ -5084,8 +5082,6 @@
   <block id="f668cd2acef670f8b213c6c785ddf8d6" category="paragraph"><block ref="7da21d8fe0787a3171af06722db1ee6f" prefix="" category="inline-code"></block></block>
   <block id="97088f26ec75cb4d55c4fe5eeb3b62b4" category="section-title">Aggiornare i metadati MFA di SnapCenter</block>
   <block id="ac82039d46e3be923c813d3d4c5456e4" category="paragraph">È necessario aggiornare i metadati MFA di SnapCenter in ad FS ogni volta che si verifica una modifica nel server ADFS, ad esempio riparazione, rinnovo del certificato CA, DR e così via.</block>
-  <block id="56ec825045a003fc115765658ea8b639" category="list-text">Fare clic su *Trust di parte*.</block>
-  <block id="83e84b83a6a686044df5e13021693e95" category="list-text">Fare clic con il pulsante destro del mouse sul trust della parte di base creato per SnapCenter e fare clic su *Elimina*.</block>
   <block id="d929cc2f30ed7ebb91266d0b79b5f2cf" category="paragraph">Viene visualizzato il nome definito dall'utente del trust della parte che si basa.</block>
   <block id="18231d11def74e66e747d2eb30fc1c50" category="list-text">Attivare l'autenticazione a più fattori (MFA).</block>
   <block id="0f5b112cebb37022dbfe2c80e388d605" category="paragraph">Vedere <block ref="5ec6b0ec41fc91e8184fa478c63adb14" category="inline-link-macro-rx"></block>.</block>
@@ -5735,7 +5731,6 @@
   <block id="5010ac065b072d3a5a66d4913af22358" category="section-title">Creare un LUN FC RDM condiviso</block>
   <block id="10680a7aa79949d8b454b29a782cc64a" category="paragraph">Prima di poter utilizzare le LUN RDM FC per condividere lo storage tra i nodi di un cluster Microsoft, è necessario creare il disco di quorum condiviso e il disco di storage condiviso, quindi aggiungerli a entrambe le macchine virtuali del cluster.</block>
   <block id="cbdb6828febec04786f22df9a1ccc748" category="inline-link">Cluster di macchine virtuali tra host fisici</block>
-  <block id="343e62dffb88999e9c503088341e1fc0" category="paragraph">Il disco condiviso non viene creato utilizzando il plug-in per Windows. Creare e aggiungere il LUN condiviso a ciascuna macchina virtuale del cluster. Per ulteriori informazioni, vedere<block ref="4339506e2feb8115940eea5a6e9ba248" category="inline-link-rx"></block>.</block>
   <block id="802b9025b1849bde319ecf1bd531a8b0" category="summary">Per configurare il controllo degli accessi basato sui ruoli per gli utenti SnapCenter, è possibile aggiungere utenti o gruppi e assegnare un ruolo. Il ruolo determina le opzioni a cui gli utenti SnapCenter possono accedere.</block>
   <block id="332a86cbb620ff1d0701c9addc091319" category="list-text">È necessario aver effettuato l'accesso come ruolo "SnapCenterAdmin".</block>
   <block id="2902196cd3adb323030b2cc093acb386" category="list-text">È necessario aver creato gli account utente o di gruppo in Active Directory nel sistema operativo o nel database. Non è possibile utilizzare SnapCenter per creare questi account.</block>
@@ -7399,7 +7394,6 @@ Aggiornare questo valore con la chiave SPL_CERTIFICATE_ALIAS.</block>
   <block id="c8010626798701f4dd6505ffd8c7bab3" category="paragraph">È possibile attivare la funzionalità MFA per il server SnapCenter utilizzando i comandi PowerShell.</block>
   <block id="65b2ac31e28fbe23df3871ad716e40c2" category="list-text">Attivare MFA per il server SnapCenter utilizzando<block ref="2eb01e8a95b53a60b13860ce5cac5104" prefix=" " category="inline-code"></block> cmdlet.</block>
   <block id="b73f485c1067e4b3168b292142131855" category="inline-link">I tentativi di accesso simultanei in più schede mostrano un errore MFA</block>
-  <block id="9e4f9470d66f1730ad7525f9043126be" category="paragraph">Per informazioni sulla risoluzione dei problemi, fare riferimento a.<block ref="361c774ee5cb22be42ef8ea152ed45ad" category="inline-link-rx"></block>.</block>
   <block id="b3844eddf099b8f80b95a7c68ca22ae5" category="list-text">Disattivare l'MFA e pulire i file di configurazione creati al momento dell'attivazione dell'MFA utilizzando<block ref="2eb01e8a95b53a60b13860ce5cac5104" prefix=" " category="inline-code"></block> cmdlet.</block>
   <block id="b31ad42cda3bd1bc7787fd71d2a175bf" category="summary">È possibile utilizzare le interfacce REST API, PowerShell e SCCLI per configurare MFA.</block>
   <block id="0699cec0b36b38a01a2c7453df793209" category="doc">Configurare MFA nel server SnapCenter utilizzando PowerShell, SCCLI e REST API</block>
@@ -7898,9 +7892,6 @@ Il ripristino di una singola casella postale di NetApp® è giunto alla fine del
   <block id="8ffddc72407882a56963d8f378c8a456" category="list-text">Refresh dello storage primario</block>
   <block id="9f4800cf67d29558e0e5678693afc837" category="paragraph">L'aggiornamento tecnologico dello storage è supportato per sostituire lo storage primario con il nuovo storage. Non è possibile convertire lo storage secondario esistente in uno storage primario.</block>
   <block id="1e1065b586c984207ccf5533c1320669" category="list-text">Refresh dello storage secondario</block>
-  <block id="3d31d63019c8a7405127998ac1be0ceb" category="paragraph">Gli altri scenari supportati sono:</block>
-  <block id="0985fc6b1b51806986eb62030f325040" category="list-text">Modifica del nome della SVM</block>
-  <block id="fc957d9228b0c0b7e2969feb8f831113" category="list-text">Modifica del nome del volume</block>
   <block id="7fd4a62a4b2e1acfeaddfc8e7f2832c8" category="section-title">Aggiornare i backup dello storage primario</block>
   <block id="ff8ce159bd650a518bc9706cce5196da" category="paragraph">Quando lo storage viene tech refresh, è necessario eseguire l'API o il cmdlet per l'aggiornamento dei vecchi backup in SnapCenter con i nuovi dettagli dello storage.</block>
   <block id="e1efdab7eb1b670b3a9bd8ace49c4b03" category="list-text">Migrazione dei dati dal vecchio storage al nuovo storage.</block>
@@ -10064,4 +10055,9 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="888e5b40ea166427f96db1a9c08af7fc" category="sidebar">Documentazione del software SnapCenter 6,1</block>
   <block id="fc8e535c7339f77157a0f93f32cb1f80" category="list-text">I flussi di lavoro di montaggio e catalogo di Oracle e SAP HANA non sono supportati per i backup dello storage a oggetti ma sono supportati per le snapshot.</block>
   <block id="2128757ca4207f5d5000cd4894d8c58f" category="list-text">I cloni di Oracle PDB non sono supportati per i backup dello storage a oggetti, ma sono supportati per le snapshot.</block>
+  <block id="6eec14240810faadbd60c3ec98b543e7" category="paragraph">Il disco condiviso non viene creato utilizzando il plug-in per Windows. Creare e aggiungere il LUN condiviso a ciascuna macchina virtuale del cluster. Per informazioni, vedere<block ref="0564b16166a6e24aa234d21e5bcdc18a" category="inline-link-rx"></block>.</block>
+  <block id="744d48cfa6032e04d109166f7ff6aeaf" category="paragraph">Per informazioni sulla risoluzione dei problemi, vedere<block ref="361c774ee5cb22be42ef8ea152ed45ad" category="inline-link-rx"></block>.</block>
+  <block id="a141599a0eec0e6d9aea907fc97ea039" category="list-text">Selezionare *trust di parti che si affidano*.</block>
+  <block id="458f1b484cf2f93e8e2f35b3f5a3b94a" category="list-text">Fare clic con il pulsante destro del mouse sull'attendibilità della parte che è stata creata per SnapCenter e selezionare *Elimina*.</block>
+  <block id="c6cd54ad2b3bca5fe6357919d1ec62e7" category="list-text">Si consiglia di installare ASP.NET Core Runtime 8.0.12 (e tutte le successive patch 8,0.x) Hosting Bundle e PowerShell 7.4.2 o versioni successive.</block>
 </blocks>

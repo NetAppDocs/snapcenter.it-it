@@ -116,7 +116,7 @@ SnapCenter si riflette ora come parte di base con il nome visualizzato fornito.
 
 La funzionalità MFA di SnapCenter può anche essere attivata utilizzando API REST.
 
-Per informazioni sulla risoluzione dei problemi, fare riferimento a. https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_MFA_login_error_The_SAML_message_response_1_doesnt_match_the_expected_response_2["I tentativi di accesso simultanei in più schede mostrano un errore MFA"].
+Per informazioni sulla risoluzione dei problemi, vedere https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_MFA_login_error_The_SAML_message_response_1_doesnt_match_the_expected_response_2["I tentativi di accesso simultanei in più schede mostrano un errore MFA"].
 
 
 
@@ -143,8 +143,8 @@ Per informazioni sulla risoluzione dei problemi, fare riferimento a. https://kb.
 .Fasi
 . Nell'host ad FS, aprire la procedura guidata di gestione di ad FS ed eseguire le seguenti operazioni:
 +
-.. Fare clic su *Trust di parte*.
-.. Fare clic con il pulsante destro del mouse sul trust della parte di base creato per SnapCenter e fare clic su *Elimina*.
+.. Selezionare *trust di parti che si affidano*.
+.. Fare clic con il pulsante destro del mouse sull'attendibilità della parte che è stata creata per SnapCenter e selezionare *Elimina*.
 +
 Viene visualizzato il nome definito dall'utente del trust della parte che si basa.
 

@@ -31,12 +31,6 @@ L'aggiornamento tecnologico dello storage è supportato per sostituire lo storag
 * Refresh dello storage secondario
 
 
-Gli altri scenari supportati sono:
-
-* Modifica del nome della SVM
-* Modifica del nome del volume
-
-
 
 
 == Aggiornare i backup dello storage primario
