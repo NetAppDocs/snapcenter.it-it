@@ -87,7 +87,7 @@ NOTE: Non utilizzare un carattere jolly (*) per consentire tutti i comandi.
 
 == Configurare i privilegi sudo per gli utenti non root per l'host Linux
 
-SnapCenter 2.0 e versioni successive consentono a un utente non root di installare il pacchetto di plug-in SnapCenter per Linux e avviare il processo di plug-in. I processi di plug-in verranno eseguiti come utenti non root. È necessario configurare i privilegi sudo per l'utente non root per fornire l'accesso a diversi percorsi.
+SnapCenter consente a un utente non root di installare il pacchetto di plug-in SnapCenter per Linux e di avviare il processo di plug-in. I processi di plug-in verranno eseguiti come utenti non root. È necessario configurare i privilegi sudo per l'utente non root per fornire l'accesso a diversi percorsi.
 
 *Cosa ti serve*
 

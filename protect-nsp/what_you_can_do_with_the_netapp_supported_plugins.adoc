@@ -31,7 +31,7 @@ Puoi utilizzare i plug-in supportati da NetApp per operazioni di data Protection
 
 * Update delle Snapshot acquisite nel primario in un secondario ONTAP, sfruttando la relazione di replica esistente (SnapVault/SnapMirror/replica unificata) utilizzando la policy SnapCenter
 +
-ONTAP primario e secondario possono essere ONTAP FAS, AFF, All SAN Array (ASA), Select o Cloud ONTAP.
+ONTAP primario e secondario possono essere ONTAP FAS, AFF, ASA, ONTAP Select o Cloud Volumes ONTAP.
 
 * Ripristinare il volume, il LUN o i file ONTAP completi.
 +

@@ -26,7 +26,7 @@ SnapCenter può essere implementato nei seguenti modi:
 
 * On-premise per proteggere:
 +
-** Dati presenti nei sistemi primari ONTAP FAS, AFF o All SAN Array (ASA) e replicati nei sistemi secondari ONTAP FAS, AFF o ASA
+** I dati che sono sui sistemi primari ONTAP FAS, AFF o ASA e replicati sui sistemi secondari ONTAP FAS, AFF o ASA
 ** Dati sui sistemi primari ONTAP Select
 ** Dati presenti nei sistemi primari e secondari ONTAP FAS, AFF o ASA e protetti nello storage a oggetti StorageGRID locale
 ** I dati che sono sui sistemi primari e secondari ONTAP ASA R2

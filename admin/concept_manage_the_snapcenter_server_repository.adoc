@@ -6,8 +6,6 @@ summary: Le informazioni relative alle varie operazioni eseguite da SnapCenter v
 ---
 = Gestire il repository del server SnapCenter
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
 
 [role="lead"]
@@ -96,7 +94,7 @@ Il seguente cmdlet ripristina il repository del database MySQL di SnapCenter dai
 C:\PS>Restore-SmRepositoryBackup -BackupName MYSQL_DS_SC_Repository_mva-x3550-s09_09-15-2016_10.32.00.4445
 ----
 +
-Il seguente cmdlet ripristina il database MySQL di SnapCenter quando i file di backup vengono cancellati accidentalmente nel LUN iSCSI. Per VMDK ripristinare manualmente il backup da Snapshot ONTAP.
+Il seguente cmdlet ripristina il database MySQL di SnapCenter quando i file di backup vengono cancellati accidentalmente nel LUN iSCSI. Per VMDK ripristinare manualmente il backup dagli Snapshot ONTAP.
 
 +
 [listing]

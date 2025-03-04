@@ -28,7 +28,7 @@ summary: È possibile utilizzare SnapCenter per clonare un backup. È possibile 
 NOTE: Se i comandi non sono presenti nell'elenco dei comandi, l'operazione avrà esito negativo.
 
 .A proposito di questa attività
-* Per informazioni sulle limitazioni delle operazioni di suddivisione dei cloni, vedere http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["Guida alla gestione dello storage logico di ONTAP 9"^].
+* Per informazioni sulle operazioni di divisione del volume FlexClone, vedere, https://docs.netapp.com/us-en/ontap/volumes/split-flexclone-from-parent-task.html["Separare un volume FlexClone dal volume di origine"].
 * Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dagli Snapshot del vault di SnapLock come parte del ripristino ereditano il tempo di scadenza del vault di SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
 
 

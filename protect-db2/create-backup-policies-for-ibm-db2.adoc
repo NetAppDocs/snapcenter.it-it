@@ -96,12 +96,6 @@ Periodo di blocco dell'istantanea secondaria
  a| 
 Selezionare *periodo blocco copia istantanea secondaria*, quindi giorni, mesi o anni.
 
-Affinché questa opzione sia efficace, è necessario effettuare le seguenti operazioni:
-
-*** Selezionare il *periodo di blocco della copia dell'istantanea primaria*.
-*** Selezionare una o entrambe le opzioni di replica secondarie.
-
-
 |===
 +
 
@@ -148,9 +142,10 @@ Etichetta del criterio secondario
  a| 
 Selezionare un'etichetta Snapshot.
 
-+ in base all'etichetta Snapshot selezionata, ONTAP applica la policy di conservazione Snapshot secondaria corrispondente all'etichetta.
+A seconda dell'etichetta Snapshot selezionata, ONTAP applica la politica di conservazione Snapshot secondaria corrispondente all'etichetta.
 
-+ NOTA: Se è stato selezionato *Aggiorna SnapMirror dopo aver creato una copia istantanea locale*, è possibile specificare l'etichetta del criterio secondario. Tuttavia, se è stato selezionato *Aggiorna SnapVault dopo la creazione di una copia Snapshot locale*, è necessario specificare l'etichetta del criterio secondario.
+
+NOTE: Se è stato selezionato *Update SnapMirror dopo la creazione di una copia Snapshot locale*, è possibile specificare l'etichetta del criterio secondario. Tuttavia, se è stato selezionato *Aggiorna SnapVault dopo la creazione di una copia Snapshot locale*, è necessario specificare l'etichetta del criterio secondario.
 
 
 

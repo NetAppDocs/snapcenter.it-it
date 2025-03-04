@@ -20,11 +20,11 @@ SnapCenter richiede diverse licenze per consentire la protezione dei dati di app
  a| 
 Basato su controller standard SnapCenter
  a| 
-Richiesto per FAS, AFF, All SAN Array (ASA)
+Richiesto per FAS, AFF, ASA
 
-La licenza standard SnapCenter è una licenza basata su controller ed è inclusa nell'ambito di ONTAP One. Se si dispone della licenza della suite SnapManager, si ottiene anche il diritto di licenza standard SnapCenter. Se si desidera installare SnapCenter in prova con FAS, AFF o ASA, è possibile ottenere una licenza di valutazione di ONTAP ONE contattando il rappresentante di vendita.
+La licenza standard SnapCenter è una licenza basata su controller ed è inclusa nell'ambito di NetApp ONTAP One. Se si dispone della licenza della suite SnapManager, si ottiene anche il diritto di licenza standard SnapCenter. Se si desidera installare SnapCenter in prova con FAS, AFF o ASA, è possibile ottenere una licenza di valutazione di NetApp ONTAP ONE contattando il rappresentante di vendita.
 
-Per informazioni sulle licenze incluse in ONTAP One, fare riferimento alla sezione https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html#licenses-included-with-ontap-one["Licenze incluse con ONTAP ONE"].
+Per informazioni sulle licenze incluse in NetApp ONTAP One, fare riferimento alla sezione https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html#licenses-included-with-ontap-one["Licenze incluse con NetApp ONTAP ONE"].
 
 
 NOTE: SnapCenter è anche offerto come parte del bundle per la protezione dei dati. Se hai acquistato A400 o versioni successive, devi acquistare il bundle per la protezione dei dati.

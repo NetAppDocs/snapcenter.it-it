@@ -13,7 +13,7 @@ Ad esempio, dopo aver creato il clone1 da un backup del database, è possibile c
 Dopo aver diviso il clone2, è possibile eseguire l'operazione di divisione del clone sul clone1, poiché il clone1 non è più il clone intermedio.
 
 * Quando si divide un clone, le copie di backup e i lavori di clonazione del clone vengono eliminati.
-* Per informazioni sulle limitazioni delle operazioni di suddivisione dei cloni, vedere http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["Guida alla gestione dello storage logico di ONTAP 9"^].
+* Per informazioni sulle operazioni di divisione del volume FlexClone, vedere, https://docs.netapp.com/us-en/ontap/volumes/split-flexclone-from-parent-task.html["Separare un volume FlexClone dal volume di origine"^].
 * Assicurarsi che il volume o l'aggregato sul sistema di storage sia online.
 
 

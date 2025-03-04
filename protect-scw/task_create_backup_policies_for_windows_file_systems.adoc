@@ -171,12 +171,6 @@ Periodo di blocco della copia snapshot secondaria
  a| 
 Selezionare *periodo blocco copia istantanea secondaria*, quindi giorni, mesi o anni.
 
-Affinché questa opzione sia efficace, è necessario effettuare le seguenti operazioni:
-
-** Selezionare il *periodo di blocco della copia dell'istantanea primaria*.
-** Selezionare una o entrambe le opzioni di replica secondarie.
-
-
 |===
 +
 
@@ -184,7 +178,7 @@ IMPORTANT: È necessario impostare il conteggio di conservazione su 2 o superior
 
 +
 
-NOTE: Il valore massimo di conservazione è 1018 per le risorse su ONTAP 9.4 o versioni successive e 254 per le risorse su ONTAP 9.3 o versioni precedenti. I backup non avranno esito positivo se la conservazione viene impostata su un valore superiore a quello supportato dalla versione di ONTAP sottostante.
+NOTE: Il valore di mantenimento massimo è 1018. I backup non avranno esito positivo se la conservazione viene impostata su un valore superiore a quello supportato dalla versione di ONTAP sottostante.
 
 . Nella pagina script, immettere il percorso del prescrittore o del postscript che si desidera venga eseguito dal server SnapCenter rispettivamente prima o dopo l'operazione di backup e un limite di tempo che SnapCenter attende l'esecuzione dello script prima del timeout.
 +

@@ -130,9 +130,6 @@ Se una nuova SVM viene aggiunta al cluster ONTAP utilizzando l'interfaccia grafi
 
 
 
-
-NOTE: Se i sistemi di storage FAS o AFF sono stati aggiornati a tutti gli array SAN (ASA), è necessario aggiornare la connessione di storage nel server SnapCenter in modo che rifletta il nuovo tipo di storage in SnapCenter.
-
 *Al termine*
 
 Un amministratore del cluster deve abilitare AutoSupport su ciascun nodo del sistema di storage per inviare notifiche e-mail da tutti i sistemi di storage a cui SnapCenter ha accesso, eseguendo il seguente comando dalla riga di comando del sistema di storage:

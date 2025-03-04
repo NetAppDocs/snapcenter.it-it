@@ -64,7 +64,7 @@ NOTE: Per una configurazione di Flex ASM (dove la cardinalità è inferiore al n
 
 Anche se il ripristino in-place è stato attivato forzatamente, SnapCenter esegue il ripristino della connessione e della copia nei seguenti scenari:
 
-* Eseguire il ripristino dal sistema di storage secondario e se Data ONTAP è precedente alla 8.3
+* Eseguire il ripristino dal sistema storage secondario
 * Ripristino di gruppi di dischi ASM presenti sui nodi di un'installazione Oracle RAC su cui l'istanza di database non è configurata
 * Nell'installazione di Oracle RAC, su uno qualsiasi dei nodi peer se l'istanza ASM o l'istanza del cluster non è in esecuzione o se il nodo peer non è attivo
 * Ripristino solo dei file di controllo
@@ -81,7 +81,7 @@ Anche se il ripristino in-place è stato attivato forzatamente, SnapCenter esegu
 Se il layout del database è simile al backup e non ha subito modifiche di configurazione nello stack di storage e database, viene eseguito il ripristino in-place, in cui il ripristino del file o del LUN viene eseguito su ONTAP. SnapCenter supporta solo SFSR (Single file SnapRestore) come parte del metodo di ripristino in-place.
 
 
-NOTE: Data ONTAP 8.3 o versione successiva supporta il ripristino in-place da una posizione secondaria.
+NOTE: NetApp ONTAP supporta il ripristino in-place da una posizione secondaria.
 
 Se si desidera eseguire il ripristino in-place sul database, assicurarsi di avere solo i file di dati nel gruppo di dischi ASM. È necessario creare un backup dopo aver apportato modifiche al gruppo di dischi ASM o alla struttura fisica del database. Dopo aver eseguito il ripristino in-place, il gruppo di dischi conterrà lo stesso numero di file di dati al momento del backup.
 

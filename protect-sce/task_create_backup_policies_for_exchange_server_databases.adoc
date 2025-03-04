@@ -221,7 +221,7 @@ Le opzioni visualizzate dipendono dal tipo di backup e dal tipo di frequenza pre
 
 +
 
-NOTE: Il valore massimo di conservazione è 1018 per le risorse su ONTAP 9.4 o versioni successive e 254 per le risorse su ONTAP 9.3 o versioni precedenti. I backup non avranno esito positivo se la conservazione viene impostata su un valore superiore a quello supportato dalla versione di ONTAP sottostante.
+NOTE: Il valore di mantenimento massimo è 1018. I backup non avranno esito positivo se la conservazione viene impostata su un valore superiore a quello supportato dalla versione di ONTAP sottostante.
 
 +
 
@@ -304,12 +304,6 @@ Il periodo di conservazione di SnapLock deve essere inferiore a 100 anni.
 Periodo di blocco dell'istantanea secondaria
  a| 
 Selezionare *periodo blocco copia istantanea secondaria*, quindi giorni, mesi o anni.
-
-Affinché questa opzione sia efficace, è necessario effettuare le seguenti operazioni:
-
-*** Selezionare il *periodo di blocco della copia dell'istantanea primaria*.
-*** Selezionare una o entrambe le opzioni di replica secondarie.
-
 
 |===
 +

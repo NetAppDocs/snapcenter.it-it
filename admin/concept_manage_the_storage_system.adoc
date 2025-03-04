@@ -99,3 +99,38 @@ NOTE: Non è possibile selezionare la SVM che fa parte di un cluster.
 NOTE: Se una SVM viene eliminata dal cluster ONTAP utilizzando l'interfaccia grafica di ONTAP, nella GUI di SnapCenter fare clic su *riscopri* per aggiornare l'elenco SVM.
 
 
+
+
+
+== Supporto API REST
+
+Per impostazione predefinita, tutte le connessioni di storage ai sistemi di storage ONTAP e ASA R2 utilizzano ZAPI. L'API REST può essere abilitata per determinate versioni di ONTAP.
+
+È possibile modificare le chiavi di configurazione nei seguenti file di configurazione:
+
+* IsRestEnabledForStorageConnection
++
+Il valore predefinito è false.
+
+* MinOntapVersionToUseREST
++
+Il valore predefinito è 9.13.1.
+
+
+
+.Attivare la connessione tramite API REST
+. Impostare IsRestEnabledForStorageConnection su true.
+. Aggiungere la chiave in SMCoreServiceHost.dll.config e SnapDriveService.dll.config sia sul server che sugli host dei plug-in di Windows.
++
+_<add key="IsRestEnabledForStorageConnection" value="true" />_
+
+
+
+.Limitare la connessione tramite API REST alla versione specifica di ONTAP
+. Impostare il parametro di configurazione MinOntapVersionToUseREST su true.
+. Aggiungere la chiave in SMCoreServiceHost.dll.config e SnapDriveService.dll.config sia sul server che sugli host dei plug-in di Windows.
++
+_<add key="MinOntapVersionToUseREST" value="9.13.1" />_
+
+. Riavviare il servizio per SmCore sul server e il plug-in e il servizio SnapDrive sul computer plug-in.
+

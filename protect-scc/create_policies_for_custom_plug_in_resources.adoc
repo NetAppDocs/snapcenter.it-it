@@ -83,7 +83,7 @@ Se il numero di istantanee supera il numero specificato, le istantanee vengono e
 NOTE: Se si intende attivare la replica SnapVault, è necessario impostare il numero di conservazione su 2 o superiore. Se si imposta il conteggio della conservazione su 1, l'operazione di conservazione potrebbe non riuscire perché il primo Snapshot è il Snapshot di riferimento per la relazione SnapVault fino a quando una snapshot più recente non viene replicata nella destinazione.
 
 
-NOTE: Il valore massimo di conservazione è 1018 per le risorse su ONTAP 9.4 o versioni successive e 254 per le risorse su ONTAP 9.3 o versioni precedenti. I backup non avranno esito positivo se la conservazione viene impostata su un valore superiore a quello supportato dalla versione di ONTAP sottostante.
+NOTE: Il valore di mantenimento massimo è 1018. I backup non avranno esito positivo se la conservazione viene impostata su un valore superiore a quello supportato dalla versione di ONTAP sottostante.
 
 
 
@@ -107,12 +107,6 @@ Il periodo di conservazione di SnapLock deve essere inferiore a 100 anni.
 Periodo di blocco della copia snapshot secondaria
  a| 
 Selezionare *periodo blocco copia istantanea secondaria*, quindi giorni, mesi o anni.
-
-Affinché questa opzione sia efficace, è necessario effettuare le seguenti operazioni:
-
-*** Selezionare il *periodo di blocco della copia dell'istantanea primaria*.
-*** Selezionare una o entrambe le opzioni di replica secondarie.
-
 
 |===
 .. Selezionare un'etichetta Snapshot.

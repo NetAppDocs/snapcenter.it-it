@@ -25,7 +25,6 @@ NOTE: I cloni di un backup di un mirror flessibile della versione su un volume d
 * image:../media/topology_vault_secondary_storage.gif["icona del vault secondario"] Visualizza il numero di backup e cloni replicati sullo storage secondario utilizzando la tecnologia SnapVault.
 +
 ** Il numero di backup visualizzati include i backup eliminati dallo storage secondario. Ad esempio, se sono stati creati 6 backup utilizzando un criterio per conservare solo 4 backup, il numero di backup visualizzati è 6.
-** Se è stato eseguito l'aggiornamento da SnapCenter 1.1, i cloni sul secondario (mirror o vault) non vengono visualizzati in copie mirrorate o copie del vault nella pagina topologia. Tutti i cloni creati con SnapCenter 1.1 vengono visualizzati nelle copie locali di SnapCenter 3.0.
 
 
 

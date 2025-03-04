@@ -42,7 +42,7 @@ Per i plug-in creati in stile NATIVO, assicurarsi di non fornire l'estensione de
  a| 
 Versione
  a| 
-Versione del plug-in. Può includere sia la versione principale che quella secondaria. Ad esempio, 1.0, 1.1, 2.0, 2.1
+Versione del plug-in. Può includere sia la versione principale che quella secondaria. Ad esempio, 5,0, 6,0, 6,1
 
 
 

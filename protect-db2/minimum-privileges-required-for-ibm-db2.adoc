@@ -13,7 +13,7 @@ summary: I privilegi minimi di ONTAP richiesti variano in base ai plug-in di Sna
 [role="lead"]
 I privilegi minimi di ONTAP richiesti variano in base ai plug-in di SnapCenter utilizzati per la protezione dei dati.
 
-* All-access comands (comandi all-access): Privilegi minimi richiesti per ONTAP 8.3.0 e versioni successive
+* All-access comands (comandi all-access): Privilegi minimi richiesti per ONTAP 9.12.1 e versioni successive
 +
 ** event generate-autosupport-log
 ** mostra la cronologia dei lavori

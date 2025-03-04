@@ -30,10 +30,7 @@ Esempi di file di configurazione di SnapCenter: SnapDriveService.exe.config, SMC
 .A proposito di questa attività
 * Durante l'aggiornamento, viene eseguito uno script SQL per aggiornare i dati di Exchange nel database NSM, che converte il DAG e il shortname host in FQDN. Questa opzione è applicabile solo se si utilizza il server SnapCenter con il plug-in Exchange.
 * Prima di iniziare l'operazione di aggiornamento, se l'host del server è stato impostato manualmente in modalità di manutenzione, dopo l'aggiornamento è necessario disattivare manualmente la modalità di manutenzione dell'host del server facendo clic su *host* > *attiva pianificazione*.
-* Per il plug-in SnapCenter per Microsoft SQL Server, il plug-in SnapCenter per Microsoft Exchange Server e il plug-in SnapCenter per Microsoft Windows, si consiglia di aggiornare sia il server che gli host dei plug-in alla versione 4.7 affinché IL PERCORSO SCRIPT venga eseguito.
-+
-Per le pianificazioni di backup e verifica esistenti con prescritture e postscript attivati nel criterio, le operazioni di backup continueranno a funzionare dopo l'aggiornamento.
-
+* Per le pianificazioni di backup e verifica esistenti con prescritture e postscript attivati nel criterio, le operazioni di backup continueranno a funzionare dopo l'aggiornamento.
 +
 Nella pagina *Dettagli lavoro*, un messaggio di avviso consiglia al cliente di copiare gli script nel PERCORSO_SCRIPT e modificare il criterio per fornire un percorso relativo al PERCORSO_SCRIPT. Per il lavoro del ciclo di vita clone, il messaggio di avviso viene visualizzato a livello di lavoro secondario.
 

@@ -1,17 +1,17 @@
 ---
 permalink: install/task_add_an_rbac_role_using_security_login_commands.html 
 sidebar: sidebar 
-keywords: RBAC roles, add, ONTAP RBAC role 
-summary: È possibile utilizzare i comandi di accesso di sicurezza per aggiungere un ruolo RBAC ONTAP quando i sistemi storage eseguono Clustered ONTAP. 
+keywords: RBAC roles, add, NetApp ONTAP RBAC role 
+summary: Puoi utilizzare i comandi di login alla sicurezza per aggiungere un ruolo RBAC di NetApp ONTAP quando i tuoi sistemi storage eseguono Clustered NetApp ONTAP. 
 ---
-= Aggiungere un ruolo RBAC ONTAP utilizzando i comandi di accesso di sicurezza
+= Aggiungi un ruolo RBAC di NetApp ONTAP utilizzando i comandi di login e sicurezza
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-È possibile utilizzare i comandi di accesso di sicurezza per aggiungere un ruolo RBAC ONTAP quando i sistemi storage eseguono Clustered ONTAP.
+Puoi utilizzare i comandi di login alla sicurezza per aggiungere un ruolo RBAC di NetApp ONTAP quando i tuoi sistemi storage eseguono Clustered ONTAP.
 
 .Prima di iniziare
 * Prima di creare un ruolo RBAC ONTAP per i sistemi storage che eseguono Clustered ONTAP, è necessario identificare quanto segue:
@@ -37,12 +37,12 @@ Esistono due livelli di accesso per ogni directory di comando: All-access e Read
 
 *A proposito di questa attività*
 
-Per semplificare la configurazione di questi ruoli nei sistemi storage, è possibile utilizzare il tool RBAC User Creator for Data ONTAP, disponibile nel forum delle community NetApp.
+Per semplificare la configurazione di questi ruoli sui sistemi storage, puoi utilizzare lo strumento RBAC User Creator per NetApp ONTAP, pubblicato nel forum della community NetApp.
 
-Questo strumento gestisce automaticamente la corretta impostazione dei privilegi ONTAP. Ad esempio, lo strumento RBAC User Creator for Data ONTAP aggiunge automaticamente i privilegi nell'ordine corretto in modo che i privilegi di accesso completo vengano visualizzati per primi. Se si aggiungono prima i privilegi di sola lettura e poi i privilegi di accesso completo, ONTAP contrassegna i privilegi di accesso completo come duplicati e li ignora.
+Questo strumento gestisce automaticamente la corretta impostazione dei privilegi ONTAP. Ad esempio, lo strumento creazione utenti RBAC per NetApp ONTAP aggiunge automaticamente il Privileges nell'ordine corretto in modo che il Privileges ad accesso completo venga visualizzato per primo. Se si aggiungono prima i privilegi di sola lettura e poi i privilegi di accesso completo, ONTAP contrassegna i privilegi di accesso completo come duplicati e li ignora.
 
 
-NOTE: Se in seguito si aggiorna SnapCenter o ONTAP, eseguire nuovamente lo strumento RBAC User Creator for Data ONTAP per aggiornare i ruoli utente creati in precedenza. I ruoli utente creati per una versione precedente di SnapCenter o ONTAP non funzionano correttamente con le versioni aggiornate. Quando si esegue di nuovo, lo strumento gestisce automaticamente l'aggiornamento. Non è necessario ricreare i ruoli.
+NOTE: Se successivamente si aggiorna SnapCenter o ONTAP, è necessario eseguire nuovamente lo strumento creazione utenti RBAC per NetApp ONTAP per aggiornare i ruoli utente creati in precedenza. I ruoli utente creati per una versione precedente di SnapCenter o ONTAP non funzionano correttamente con le versioni aggiornate. Quando si esegue di nuovo, lo strumento gestisce automaticamente l'aggiornamento. Non è necessario ricreare i ruoli.
 
 Per ulteriori informazioni sull'impostazione dei ruoli RBAC di ONTAP, vedere http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-adm-auth-rbac/home.html["Autenticazione amministratore di ONTAP 9 e guida all'alimentazione RBAC"^].
 

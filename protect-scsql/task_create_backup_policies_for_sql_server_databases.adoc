@@ -224,7 +224,7 @@ Conservare le copie di backup per un numero specifico di giorni.
 IMPORTANT: Per impostazione predefinita, il valore del conteggio di conservazione è impostato su 2. Se si imposta il conteggio della conservazione su 1, l'operazione di conservazione potrebbe non riuscire perché il primo snapshot è lo snapshot di riferimento per la relazione SnapVault finché non viene replicato nella destinazione uno snapshot più recente.
 
 
-NOTE: Il valore massimo di conservazione è 1018 per le risorse su ONTAP 9.4 o versioni successive e 254 per le risorse su ONTAP 9.3 o versioni precedenti. I backup non avranno esito positivo se la conservazione viene impostata su un valore superiore a quello supportato dalla versione di ONTAP sottostante.
+NOTE: Il valore di mantenimento massimo è 1018. I backup non avranno esito positivo se la conservazione è impostata su un valore superiore a quello supportato dalla versione NetApp ONTAP sottostante.
 
 . Periodo di tempo necessario per la conservazione delle snapshot
 +
@@ -237,12 +237,6 @@ Il periodo di conservazione di SnapLock deve essere inferiore a 100 anni.
 
 . Se si desidera specificare il periodo di blocco della copia dell'istantanea secondaria, selezionare *periodo di blocco della copia dell'istantanea secondaria* e selezionare giorni, mesi o anni.
 +
-Affinché questa opzione sia efficace, è necessario effettuare le seguenti operazioni:
-
-+
-** Selezionare il *periodo di blocco della copia dell'istantanea primaria*.
-** Selezionare una o entrambe le opzioni di replica secondarie.
-+
 Questo esempio imposta la conservazione dello snapshot di registro su 2:
 
 +
@@ -254,8 +248,6 @@ Set-SmPolicy -policyName 'newpol' -PolicyType 'Backup' -PluginPolicyType 'SCSQL'
 ====
 +
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_retains_Snapshot_copies_of_the_database["SnapCenter conserva le copie Snapshot del database"]
-
-
 
 . Selezionare un'etichetta istantanea
 +
