@@ -8034,7 +8034,6 @@ Il ripristino di una singola casella postale di NetApp® è giunto alla fine del
   <block id="98950caea953c79d817eba870ba7ae48" category="summary">Creare la credenziale Azure in SnapCenter per accedere all'account Azure NetApp.</block>
   <block id="1ed01bab203e8745a0dcfe58f019c1d9" category="doc">Creare la credenziale Azure in SnapCenter</block>
   <block id="df807c6f76450e7af962b9ec2ffe867e" category="paragraph">È necessario creare la credenziale Azure in SnapCenter per accedere all'account Azure NetApp.</block>
-  <block id="c564c60262d5040cb9b4b2cb05c8532d" category="paragraph">Prima di creare la credenziale Azure, assicurarsi di aver creato l'entità del servizio in Azure. L'ID tenant, l'ID client e la chiave segreta associati all'identità del servizio saranno necessari per creare la credenziale Azure.</block>
   <block id="aeec85b47cdcde0a1bea1e8a52e7efae" category="paragraph">Selezionare *Azure Credential* dall'elenco a discesa.</block>
   <block id="7131a7a6bfe81200d21d5a33c64847b6" category="paragraph">ID tenant</block>
   <block id="797fc8989dfaa45ed85ce3b352fc0fb9" category="paragraph">Immettere l'ID tenant.</block>
@@ -10070,4 +10069,11 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="cdc0da196ab05c60eaebdca9a2459cd1" category="list-text">Per informazioni sulle operazioni di divisione del volume FlexClone, vedere, <block ref="a740171a60876518d945f2e24ddd79f9" category="inline-link-rx"></block></block>
   <block id="dc4d7bf5602b12335597fd5350deab23" category="admonition">Il valore di mantenimento massimo è 1018. I backup non avranno esito positivo se la conservazione è impostata su un valore superiore a quello supportato dalla versione NetApp ONTAP sottostante.</block>
   <block id="ee96dd48de878c0191d0701d853dd514" category="paragraph">Questo esempio imposta la conservazione dello snapshot di registro su 2:</block>
+  <block id="ab6d9fe11358cebc1d2cc02fa1c47496" category="list-text">Assicurarsi di aver creato l'entità del servizio in Azure.</block>
+  <block id="6f346066b074941885d0989051206e4e" category="list-text">Verificare che l'ID tenant, l'ID client e la chiave segreta associati all'entità del servizio siano disponibili.</block>
+  <block id="db4af27eace345776f29f9a3dbb3b5ff" category="list-text">L'ID tenant si trova nel portale di Azure nella pagina Panoramica di Entra ID.</block>
+  <block id="dc2337ddc542969fd93e297dc61108a9" category="list-text">L'ID cliente è anche noto come ID applicazione per l'app aziendale/responsabile del servizio. Questa funzione si trova nel portale Azure nella pagina Panoramica dell'applicazione aziendale creata per fungere da Service Principal per SnapCenter.</block>
+  <block id="ee69fc7e193d5b369d8bd7792465c781" category="list-text">La chiave segreta del client è anche nota come valore segreto. È possibile creare questo segreto client nel portale di Azure accedendo a *registrazioni app* in Entra ID. Dopo aver selezionato l'applicazione aziendale creata, accedere a *certificati e segreti* e quindi *nuovo segreto client*.</block>
+  <block id="732f79401041a0ecc8df586c30756a84" category="admonition">È possibile accedere al valore segreto solo quando viene creato. Non è possibile accedervi in un secondo momento.</block>
+  <block id="f221207f0adcd828979d33693cf006d5" category="list-text">È necessario concedere autorizzazioni al responsabile del servizio. Il ruolo di Contributor consentirà all'entità del servizio di eseguire le azioni richieste in Azure. Per eseguire questa operazione, accedere alla pagina Access Control (IAM) all'interno della pagina Subscription (abbonamento).</block>
 </blocks>
