@@ -19,5 +19,5 @@ Per ulteriori informazioni su SMBR, fare riferimento a quanto segue:
 
 * https://kb.netapp.com/Legacy/SMBR/How_to_manually_restore_a_single_item_with_SMBR["Come ripristinare manualmente un singolo elemento con SMBR (applicabile anche per i ripristini Ontrack Power Control)"]
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Single_Mailbox_Recovery_(SMBR)/How_to_restore_from_secondary_storage_in_SMBR_with_SnapCenter["Come eseguire il ripristino dallo storage secondario in SMBR con SnapCenter"^]
-* https://www.youtube.com/watch?v=fOMuaaXrreI&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg&index=3["Ripristino della posta di Microsoft Exchange da SnapVault utilizzando SMBR"^]
+* https://www.youtube.com/watch?v=wMSo049rREY&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg&index=3["Ripristino della posta di Microsoft Exchange da SnapVault utilizzando SMBR"^]
 

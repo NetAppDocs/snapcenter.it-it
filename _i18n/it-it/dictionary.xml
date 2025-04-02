@@ -1686,7 +1686,6 @@
   <block id="2a1a78f96ec6b03f3ccdd06b708e6f1a" category="list-text">(Facoltativo) sostituire il plug-in SnapCenter per i file di configurazione di SQL Server dal backup di disaster recovery (DR) al nuovo computer.</block>
   <block id="9f2c74676fb5b339a2fd4a0ccd75bd1e" category="list-text">Importare pianificazioni Windows e SQL dalla cartella del plug-in SnapCenter per SQL Server dal backup DR.</block>
   <block id="27e7993c4841ae5fd670cdd945ccb96d" category="inline-link-macro">API di disaster recovery</block>
-  <block id="ab9238ca6f628634f6f6f2cf63502cdb" category="paragraph">Vedere <block ref="44de5c9fafab2e4e76e19e3717abc2e2" category="inline-link-macro-rx"></block> video.</block>
   <block id="ed23594fb532cf4eb57e0617ea972d01" category="summary">È possibile utilizzare SnapCenter per ripristinare i database di SQL Server di cui è stato eseguito il backup. Il ripristino del database è un processo multifase che copia tutti i dati e le pagine di registro da un backup di SQL Server specificato in un database specifico.</block>
   <block id="8dc83a66a1d1ae521ee2721fa555da40" category="doc">Ripristinare i backup del database di SQL Server</block>
   <block id="1e7a55ae3280cf1a9aaeaf2d01204a21" category="list-text">È possibile ripristinare i database di SQL Server di cui è stato eseguito il backup in un'istanza di SQL Server diversa sullo stesso host in cui è stato creato il backup.</block>
@@ -6035,7 +6034,6 @@
   <block id="f367d650e57088caf7b808e01235016d" category="inline-link">Come eseguire il ripristino dallo storage secondario in SMBR con SnapCenter</block>
   <block id="41b4c689a8b0e3ba8bfecb2a1e608e46" category="list-text"><block ref="41b4c689a8b0e3ba8bfecb2a1e608e46" category="inline-link-rx"></block></block>
   <block id="f004280f6db6ea5f9302c9851388d751" category="inline-link">Ripristino della posta di Microsoft Exchange da SnapVault utilizzando SMBR</block>
-  <block id="1b0fb59a5bc951f7dc82cb43fe362145" category="list-text"><block ref="00a76af185a73b84e54e96058031aef5" category="inline-link-rx"></block></block>
   <block id="e53c11d95478892635e2a7753106adc5" category="summary">Prima di aggiungere un host e installare i pacchetti plug-in, è necessario completare tutti i requisiti.</block>
   <block id="690761e3a499ee562da842d3bd6f2db0" category="doc">Prerequisiti per aggiungere host e installare il plug-in SnapCenter per Microsoft Exchange Server</block>
   <block id="3135b36cd939fa03c3be552b0fbe8534" category="list-text">È necessario utilizzare Microsoft Exchange Server 2013, 2016 o 2019 per le configurazioni standalone e Database Availability Group.</block>
@@ -10076,4 +10074,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="ee69fc7e193d5b369d8bd7792465c781" category="list-text">La chiave segreta del client è anche nota come valore segreto. È possibile creare questo segreto client nel portale di Azure accedendo a *registrazioni app* in Entra ID. Dopo aver selezionato l'applicazione aziendale creata, accedere a *certificati e segreti* e quindi *nuovo segreto client*.</block>
   <block id="732f79401041a0ecc8df586c30756a84" category="admonition">È possibile accedere al valore segreto solo quando viene creato. Non è possibile accedervi in un secondo momento.</block>
   <block id="f221207f0adcd828979d33693cf006d5" category="list-text">È necessario concedere autorizzazioni al responsabile del servizio. Il ruolo di Contributor consentirà all'entità del servizio di eseguire le azioni richieste in Azure. Per eseguire questa operazione, accedere alla pagina Access Control (IAM) all'interno della pagina Subscription (abbonamento).</block>
+  <block id="c23d56866a5b11fd0d8dc189fcf21298" category="list-text"><block ref="341e3fddad4b27511133b6917a75bb8a" category="inline-link-rx"></block></block>
+  <block id="57cf9c4ee485623172a5c60cbee423a4" category="paragraph">Vedere il <block ref="96716f545c5cf1a209bf10c1a798ce38" category="inline-link-macro-rx"></block> video.</block>
 </blocks>
