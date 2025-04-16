@@ -3890,7 +3890,6 @@
   <block id="b783d3e004ffabe67253f1b39595280f" category="paragraph">In qualsiasi momento, facendo clic sul pulsante *Annulla*, il flusso di lavoro di aggiornamento viene annullato. Non ripristinerà lo stato precedente del server SnapCenter.</block>
   <block id="01d8aef1693c1ab37693630fe558d8cc" category="cell">*Procedura consigliata:* per accedere all'interfaccia grafica di SnapCenter, è necessario disconnettersi e accedere a SnapCenter oppure chiudere e aprire un nuovo browser.</block>
   <block id="075ef73eccc4174ca2b3625b875d44d4" category="list-text">Se l'aggiornamento non riesce, è necessario eliminare l'installazione non riuscita, reinstallare la versione precedente di SnapCenter e ripristinare il database NSM allo stato precedente.</block>
-  <block id="7608e75619cff3eeb4e8bce40481b456" category="doc">Documentazione del software SnapCenter</block>
   <block id="34c24f1d15647adba6dcde96f1a84b95" category="summary">È possibile utilizzare le API REST per eseguire diverse operazioni di gestione di SnapCenter. Le API REST sono esposte attraverso la pagina web di Swagger. È possibile accedere alla pagina Web di Swagger per visualizzare la documentazione API REST e per eseguire manualmente una chiamata API. È possibile utilizzare le API REST per gestire il server SnapCenter o l'host SnapCenter vSphere.</block>
   <block id="c8e5654e4bfafe9239ad785c178eec35" category="doc">Automazione SnapCenter con API REST</block>
   <block id="4da05a98f7d43c6ecf97005050dd8b4c" category="cell">Le API REST per...</block>
@@ -3940,7 +3939,6 @@
   <block id="c3c73b7f9d382d2231b0aa3e8a26db67" category="paragraph">Monitoraggio del processo</block>
   <block id="df44602e169cb1f9dbb6288c7e86985e" category="paragraph">Il ruolo Backup and Clone Viewer (Visualizzatore di backup e clonazione) dispone di una vista in sola lettura di tutte le autorizzazioni. Questo ruolo dispone anche di autorizzazioni abilitate per il rilevamento, la creazione di report e l'accesso al dashboard.</block>
   <block id="969d7fda8acd2ab121789be3a975bbb4" category="paragraph">Il ruolo Infrastructure Admin (Amministratore dell'infrastruttura) dispone di autorizzazioni abilitate per la gestione degli host, la gestione dello storage, il provisioning, i gruppi di risorse, i report di installazione remota, E l'accesso alla dashboard.</block>
-  <block id="0344fda8fff2d8c5a125ffa5ba5f19a7" category="summary">Il software SnapCenter è una piattaforma semplice, centralizzata e scalabile che offre una protezione dei dati coerente con l'applicazione per applicazioni, database, file system host e macchine virtuali in esecuzione su sistemi ONTAP in qualsiasi punto del cloud ibrido.</block>
   <block id="6309043436d4e7e5bad9a81c89ff15e4" category="doc">Panoramica di SnapCenter</block>
   <block id="edaafea0543ae64ebb79a2ed2e7a055b" category="paragraph">SnapCenter sfrutta le tecnologie NetApp Snapshot, SnapRestore, FlexClone, SnapMirror e SnapVault per fornire quanto segue:</block>
   <block id="6d02db19251dfec578c356202bfb1bdc" category="list-text">Backup rapidi, efficienti in termini di spazio, coerenti con le applicazioni e basati su disco</block>
@@ -5004,7 +5002,6 @@
   <block id="3c3e0111222e44f64ad4670abe8d6923" category="list-text">Avviare l'applicazione Web del server SnapCenter in IIS su entrambi i nodi ha.</block>
   <block id="38c6db21335904565d9a647706a7ba00" category="list-text">Utilizzare il cmdlet Set-SmRepositoryConfig -RebuildSlave -Force PowerShell con l'opzione -Force su uno dei nodi ha per stabilire una replica MySQL sicura su entrambi i nodi ha.</block>
   <block id="dc8e501a9233533430803735faab6a4a" category="paragraph">Anche se lo stato della replica è integro, l'opzione -Force consente di ricostruire il repository slave.</block>
-  <block id="14c90652b0a2e523d6e8630706107e75" category="summary">Il software SnapCenter può essere utilizzato su più browser.</block>
   <block id="6d84e3718084e0db779da4ff8791a2f2" category="doc">Browser supportati</block>
   <block id="3eae407dfe0e4c7f1efa654af1ad8d78" category="summary">Se non si desidera utilizzare l'interfaccia grafica di SnapCenter per eseguire il provisioning host e i processi di recupero dello spazio, è possibile utilizzare i cmdlet PowerShell forniti dal plug-in SnapCenter per Microsoft Windows. È possibile utilizzare i cmdlet direttamente o aggiungerli agli script.</block>
   <block id="7237d45fe61f4bbc73cd8a2c246ec386" category="doc">Eseguire il provisioning dello storage utilizzando i cmdlet PowerShell</block>
@@ -9996,8 +9993,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="4a3f09c73e2dacacbebddfd96cac1948" category="inline-link">Note sulla versione del software SnapCenter 6,1</block>
   <block id="77400fe4524142ac29310162939726cb" category="paragraph">Per informazioni dettagliate su problemi noti, limitazioni, problemi risolti e comandi nuovi e modificati, vedere<block ref="5c68c6454568b27710c4196bb910da4f" category="inline-link-rx"></block> . Per accedere alle Note di rilascio, è necessario accedere con l'account NetApp o creare un account.</block>
   <block id="d6eb82c324cab2f36e345863fad95090" category="cell">6,1</block>
-  <block id="e62d168588d6c1af2fbd37668a7343da" category="summary">La versione 6,1 del software SnapCenter include diverse nuove funzioni e miglioramenti.</block>
-  <block id="0220307da5eec95fc03c435ffbbc2bfa" category="doc">Novità del software SnapCenter 6,1</block>
   <block id="1e095c69621645fccc8f12cd7f35f6fc" category="inline-link-macro">Supporto per i sistemi ASA R2</block>
   <block id="cf1b0e66e5b65c6a3b32f92fdc6552c4" category="cell"><block ref="cf1b0e66e5b65c6a3b32f92fdc6552c4" category="inline-link-macro-rx"></block></block>
   <block id="cc753d144910e12701641281c8cb88ed" category="paragraph">SnapCenter ora supporta i sistemi ASA R2 che creano un'esperienza semplificata specifica delle esigenze dei clienti che utilizzano solo SAN.</block>
@@ -10006,8 +10001,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="92d37724657724129ae0451584c728aa" category="inline-link">Rimuovere il plug-in SnapCenter per VMware vSphere</block>
   <block id="79cfb9f00fa8ea603f631e679e453fad" category="paragraph">Per informazioni sulla disinstallazione del plug-in SnapCenter per VMware vSphere, vedere<block ref="cae8a6db54fa4da6d80207fee61e78d1" category="inline-link-rx"></block>.</block>
   <block id="9792c7ba1a8a833a1c75e11c4a7b46c3" category="list-text">Se si desidera aggiornare più host, selezionare tutti gli host, fare clic su , quindi fare clic su <block ref="725f4bf2ffc300942027282d0182533f" category="inline-image-macro-rx" type="image"></block>*Upgrade* &gt; *OK*.</block>
-  <block id="eafbda6a16d2997896c70ba8ded3db33" category="sidebar">Il software SnapCenter è una piattaforma semplice, centralizzata e scalabile che offre una protezione dei dati coerente per applicazioni, database, file system host e macchine virtuali in esecuzione su sistemi ONTAP in qualsiasi punto del cloud ibrido. Questa libreria di documentazione include informazioni sulla versione 6,1.</block>
-  <block id="888e5b40ea166427f96db1a9c08af7fc" category="sidebar">Documentazione del software SnapCenter 6,1</block>
   <block id="fc8e535c7339f77157a0f93f32cb1f80" category="list-text">I flussi di lavoro di montaggio e catalogo di Oracle e SAP HANA non sono supportati per i backup dello storage a oggetti ma sono supportati per le snapshot.</block>
   <block id="2128757ca4207f5d5000cd4894d8c58f" category="list-text">I cloni di Oracle PDB non sono supportati per i backup dello storage a oggetti, ma sono supportati per le snapshot.</block>
   <block id="6eec14240810faadbd60c3ec98b543e7" category="paragraph">Il disco condiviso non viene creato utilizzando il plug-in per Windows. Creare e aggiungere il LUN condiviso a ciascuna macchina virtuale del cluster. Per informazioni, vedere<block ref="0564b16166a6e24aa234d21e5bcdc18a" category="inline-link-rx"></block>.</block>
@@ -10075,4 +10068,11 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="c23d56866a5b11fd0d8dc189fcf21298" category="list-text"><block ref="341e3fddad4b27511133b6917a75bb8a" category="inline-link-rx"></block></block>
   <block id="57cf9c4ee485623172a5c60cbee423a4" category="paragraph">Vedere il <block ref="96716f545c5cf1a209bf10c1a798ce38" category="inline-link-macro-rx"></block> video.</block>
   <block id="5c8b8bc332cb41802ffbe6c5cda258ab" category="paragraph">È supportato il layout dello storage virtuale VMDK, vVol e RDM.</block>
+  <block id="e5385a9de21528bfedd644f4c0331eb1" category="summary">Il software SnapCenter è una piattaforma semplice, centralizzata e scalabile che offre data Protection coerente con l'applicazione per applicazioni, database, file system host e VM su sistemi ONTAP ovunque nel cloud ibrido.</block>
+  <block id="0d391616b89aaac354c13202aaccb4ba" category="summary">Il software SnapCenter può essere utilizzato su più browser.</block>
+  <block id="68578ccfcf5117ca8a9a2d7d884e320f" category="summary">La release 6,1 del software SnapCenter include diverse nuove funzioni e miglioramenti.</block>
+  <block id="600ede45d5c4a07242a73e3a5a885e15" category="doc">Novità del software SnapCenter 6,1</block>
+  <block id="8f13c7650e8ef95e186d64196ea879a5" category="sidebar">Il software SnapCenter è una piattaforma semplice, centralizzata e scalabile che offre data Protection coerente con l'applicazione per applicazioni, database, file system host e VM su sistemi ONTAP ovunque nel cloud ibrido. Questa libreria di documentazione include informazioni sulla versione 6,1.</block>
+  <block id="8127605cde4cee83a23b35f1207c7572" category="sidebar">Documentazione del software SnapCenter</block>
+  <block id="f3e84c2e19a0aa80c716ba1fc7f07e0e" category="sidebar">Documentazione del software SnapCenter 6,1</block>
 </blocks>

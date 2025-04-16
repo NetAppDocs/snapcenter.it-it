@@ -4,10 +4,9 @@ indexpage:
   keywords: snapcenter server, plug-in, data protection, applications, databases,
     host file systems, VmWare, backup, restore, clone
   lead: Il software SnapCenter è una piattaforma semplice, centralizzata e scalabile
-    che offre una protezione dei dati coerente per applicazioni, database, file system
-    host e macchine virtuali in esecuzione su sistemi ONTAP in qualsiasi punto del
-    cloud ibrido. Questa libreria di documentazione include informazioni sulla versione
-    6,1.
+    che offre data Protection coerente con l'applicazione per applicazioni, database,
+    file system host e VM su sistemi ONTAP ovunque nel cloud ibrido. Questa libreria
+    di documentazione include informazioni sulla versione 6,1.
   tiles:
   - title: Inizia subito
     links:
