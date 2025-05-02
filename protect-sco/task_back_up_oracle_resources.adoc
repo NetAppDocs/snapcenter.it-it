@@ -24,7 +24,7 @@ Se una risorsa non fa parte di un gruppo di risorse, è possibile eseguarne il b
 +
 Viene visualizzata la pagina protezione database.
 
-. Nella pagina Resources (risorse), è possibile effettuare le seguenti operazioni:
+. Nella pagina risorse, attenersi alla seguente procedura:
 +
 .. Selezionare la casella di controllo e immettere un formato del nome personalizzato che si desidera utilizzare per il nome dell'istantanea.
 +
@@ -37,8 +37,7 @@ Ad esempio, `customtext_policy_hostname` oppure `resource_hostname`. Per imposta
 +
 .. Selezionare uno o più criteri dall'elenco a discesa.
 +
-
-NOTE: È possibile creare un criterio facendo clic su image:../media/add_policy_from_resourcegroup.gif["aggiungi simbolo"].
+È possibile creare un criterio facendo clic su image:../media/add_policy_from_resourcegroup.gif["aggiungi simbolo"].
 
 +
 Nella sezione Configure schedules for selected policies (Configura pianificazioni per policy selezionate), vengono elencati i criteri selezionati.

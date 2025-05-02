@@ -45,7 +45,7 @@ Se il database viene trasferito, attenersi alla seguente procedura:
 
 
 
-== Per le versioni Oracle da 12cR2 a 18c
+== Per Oracle versioni 12cR2 - 18c, 19c o 21c
 
 .Database RAC
 I database RAC vengono rilevati utilizzando il comando srvctl config. Le voci del database dovrebbero essere presenti nel file /etc/oratab.

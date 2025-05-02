@@ -1,7 +1,7 @@
 ---
 permalink: protect-sco/task_create_resource_groups_and_attach_policies_for_oracle_databases.html 
 sidebar: sidebar 
-keywords: run as 
+keywords: run as, resource groups, policies, Oracle database 
 summary: Un gruppo di risorse è un container in cui vengono aggiunte le risorse di cui si desidera eseguire il backup e la protezione. Un gruppo di risorse consente di eseguire contemporaneamente il backup di tutti i dati associati a una determinata applicazione. 
 ---
 = Crea gruppi di risorse e allega policy per database Oracle

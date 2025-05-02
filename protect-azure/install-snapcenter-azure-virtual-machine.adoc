@@ -14,8 +14,8 @@ summary: Scarica e installa SnapCenter su macchina virtuale Azure.
 È possibile scaricare il software SnapCenter dal sito di supporto NetApp e installare il software sulla macchina virtuale Azure.
 
 .Prima di iniziare
-* Assicurarsi che la macchina virtuale Azure Windows soddisfi i requisiti per l'installazione del server SnapCenter. Per ulteriori informazioni, vedere link:../install/reference_domain_and_workgroup_requirements.html["Preparazione per l'installazione del server SnapCenter"].
-* Se non si dispone di un account NetApp esistente per la prima volta in Azure NetApp Files, assicurarsi di aver effettuato la registrazione in modo da poter accedere al software SnapCenter.
+* Assicurarsi che la macchina virtuale Azure Windows soddisfi i requisiti per l'installazione del server SnapCenter. Per informazioni, vedere link:../install/requirements-to-install-snapcenter-server.html["Requisiti per l'installazione del server SnapCenter"].
+* Se non si dispone di un account NetApp esistente per la prima volta in Azure NetApp Files, assicurarsi di aver effettuato la registrazione in modo da poter accedere al software SnapCenter. Per informazioni, vedere link:../install/register_enable_software_access.html["Effettuare la registrazione per accedere al software SnapCenter"].
 
 
 .Fasi

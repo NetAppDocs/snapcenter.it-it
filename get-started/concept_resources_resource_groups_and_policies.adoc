@@ -1,0 +1,114 @@
+---
+permalink: get-started/concept_resources_resource_groups_and_policies.html 
+sidebar: sidebar 
+keywords: resource, resource group, policy 
+summary: Prima di utilizzare SnapCenter, è utile comprendere i concetti di base relativi alle operazioni di backup, clonazione e ripristino che si desidera eseguire. 
+---
+= Concetti chiave relativi alla protezione dei dati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di utilizzare SnapCenter, comprendi i concetti chiave relativi al backup, al cloning e al ripristino.
+
+
+
+== Risorse
+
+Le risorse includono database, file system Windows o condivisioni di file di cui è stato eseguito il backup o il cloning con SnapCenter. A seconda dell'ambiente in uso, le risorse possono essere anche istanze di database, gruppi di disponibilità di SQL Server, database Oracle, database RAC o gruppi di applicazioni personalizzate.
+
+
+
+== Gruppo di risorse
+
+Un gruppo di risorse è una raccolta di risorse su un host o cluster, potenzialmente provenienti da più host e cluster. Le operazioni eseguite su un gruppo di risorse si applicano a tutte le risorse in base alla pianificazione specificata. È possibile eseguire backup su richiesta o pianificati per singole risorse o gruppi.
+
+
+NOTE: Se un host di un gruppo di risorse condiviso entra in modalità di manutenzione, tutte le operazioni pianificate per tale gruppo verranno sospese in tutti gli host.
+
+Utilizza plug-in pertinenti per eseguire il backup di risorse specifiche: Plug-in per database, plug-in per file system e plug-in SnapCenter per VMware vSphere per macchine virtuali e datastore.
+
+
+
+== Policy
+
+Le policy specificano la frequenza del backup, la conservazione delle copie, la replica, gli script e altre caratteristiche delle operazioni di protezione dei dati.
+
+È possibile selezionare uno o più criteri durante la creazione di un gruppo di risorse o l'esecuzione di un backup su richiesta.
+
+Un gruppo di risorse definisce ciò che deve essere protetto e quando deve essere protetto in termini di giorno e ora. Una politica descrive come verrà effettuata la protezione. Ad esempio, se è necessario eseguire il backup di tutti i database o file system di un host, potrebbe essere creato un gruppo di risorse che include tutti i database o i file system nell'host. Al gruppo di risorse potrebbero quindi essere associati due criteri: Una politica giornaliera e una politica oraria.
+
+Quando si crea il gruppo di risorse e si allegano i criteri, è possibile configurarlo per eseguire un backup completo ogni giorno e un'altra pianificazione per i backup dei log ogni ora.
+
+È possibile utilizzare post-script e prescrizioni personalizzate per le operazioni di protezione dei dati. Questi script consentono l'automazione prima o dopo il processo di protezione dei dati. Ad esempio, uno script potrebbe notificare automaticamente gli errori o gli avvisi relativi al processo di protezione dei dati. La comprensione dei requisiti per la creazione di questi script è fondamentale prima di impostare prescritti e postscript.
+
+
+
+== Utilizzo di prescrittori e postscript
+
+Prescrittori e postscript personalizzati possono automatizzare le attività di protezione dei dati prima o dopo l'intervento. Ad esempio, è possibile aggiungere uno script per notificare errori o avvisi di processo. Prima di impostarli, assicurarsi di aver compreso i requisiti di questi script.
+
+
+
+=== Tipi di script supportati
+
+Per Windows sono supportati i seguenti tipi di script:
+
+* File batch
+* Script PowerShell
+* Script Perl
+
+
+Sono supportati i seguenti tipi di script per UNIX:
+
+* Script Perl
+* Script Python
+* Script shell
++
+
+NOTE: Insieme alla shell bash di default sono supportate anche altre shell come sh-shell, k-shell e c-shell.
+
+
+
+
+
+=== Percorso dello script
+
+Tutti i prescritti e postscript eseguiti come parte delle operazioni SnapCenter su sistemi di storage non virtualizzati e virtualizzati vengono eseguiti sull'host plug-in.
+
+* Gli script di Windows devono essere posizionati sull'host del plug-in.
+
+
+
+NOTE: Il percorso prescripts o postscripts non deve includere dischi o condivisioni. Il percorso deve essere relativo al PERCORSO_SCRIPT.
+
+* Gli script UNIX devono essere posizionati sull'host del plug-in.
+
+
+
+NOTE: Il percorso dello script viene convalidato al momento dell'esecuzione.
+
+
+
+=== Dove specificare gli script
+
+Gli script sono specificati nelle policy di backup. All'avvio di un processo di backup, il criterio associa automaticamente lo script alle risorse di cui viene eseguito il backup. Quando si crea un criterio di backup, è possibile specificare gli argomenti prescrittt e postscript.
+
+
+NOTE: Non è possibile specificare più script.
+
+
+
+=== Timeout dello script
+
+Per impostazione predefinita, il timeout è impostato su 60 secondi. È possibile modificare il valore di timeout.
+
+
+
+=== Output dello script
+
+La directory predefinita per i file di output delle prescrizioni e dei post-script di Windows è Windows System32.
+
+Non esiste una posizione predefinita per le prescrizioni e i postscript UNIX. È possibile reindirizzare il file di output in qualsiasi posizione preferita.

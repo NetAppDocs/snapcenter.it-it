@@ -25,7 +25,7 @@ NOTE: Non inserire alcuna informazione di licenza nell'interfaccia grafica di Sn
 * Bloccato sul numero di serie del controller
 
 
-Per informazioni sulle licenze richieste, vedere link:../install/concept_snapcenter_licenses.html["Licenze SnapCenter"^].
+Per informazioni sulle licenze richieste, vedere link:../get-started/concept_snapcenter_licenses.html["Licenze SnapCenter"].
 
 
 

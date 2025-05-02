@@ -23,3 +23,7 @@ Il servizio di ripristino di una singola casella postale di NetApp è un prodott
 Il plug-in per Exchange supporta la sincronizzazione attiva SnapMirror (inizialmente rilasciata come SnapMirror Business Continuity [SM-BC]) che consente ai servizi di business di continuare a funzionare anche in caso di guasto completo del sito, supportando il failover delle applicazioni in modo trasparente utilizzando una copia secondaria. Non sono richiesti interventi manuali o script aggiuntivi per attivare un failover con la sincronizzazione attiva di SnapMirror.
 
 Supporta la modalità asimmetrica, failover o non duplex di SnapMirror Active Sync. Questo si riferisce alla soluzione in cui il percorso ottimizzato proviene solo dal nodo proprietario della LUN laterale primaria. Qualsiasi i/o presente nei percorsi del cluster secondario viene fornito con un proxy al cluster primario. La replica sincrona è unidirezionale, nella direzione dal primario al secondario.
+
+* Automatizza le operazioni di backup e ripristino application-aware per i database Microsoft Exchange Server e i gruppi di disponibilità dei database (DAG) nel tuo ambiente SnapCenter
+* Supporta Exchange Server virtualizzati su LUN RDM quando si implementa il plug-in SnapCenter per VMware vSphere e si registra il plug-in con SnapCenter.
+

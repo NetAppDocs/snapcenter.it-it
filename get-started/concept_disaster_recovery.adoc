@@ -1,0 +1,35 @@
+---
+permalink: get-started/concept_disaster_recovery.html 
+sidebar: sidebar 
+keywords: Disaster Recovery, DR, crash, resource deleted 
+summary: È possibile ripristinare il server SnapCenter in caso di disastri come il danneggiamento delle risorse o il crash del server utilizzando la funzione di disaster recovery di SnapCenter. 
+---
+= Disaster recovery in SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La funzionalità di disaster recovery (DR) di SnapCenter consente di eseguire il ripristino in caso di disastri come il danneggiamento delle risorse o un crash del server. Consente di ripristinare l'archivio di SnapCenter, le pianificazioni dei server, i componenti di configurazione e il plug-in SnapCenter per SQL Server e il relativo storage.
+
+La presente sezione descrive i due tipi di DR in SnapCenter:
+
+
+
+== Dr. Server SnapCenter
+
+* Viene eseguito il backup dei dati del server SnapCenter e possono essere ripristinati senza alcun plug-in aggiunto o gestito dal server SnapCenter.
+* Il server SnapCenter secondario deve essere installato nella stessa directory di installazione e sulla stessa porta del server SnapCenter primario.
+* Per l'autenticazione multifattore (MFA), durante il DR del server SnapCenter, chiudere tutte le schede del browser e riaprire un browser per accedere nuovamente. In questo modo, i cookie di sessione esistenti o attivi verranno salvati e verranno aggiornati i dati di configurazione corretti.
+* La funzionalità di disaster recovery di SnapCenter utilizza le API REST per eseguire il backup del server SnapCenter. Vedere link:../tech-refresh/task_tech_refresh_server_host.html["Flussi di lavoro API REST per il disaster recovery del server SnapCenter"].
+* Il backup del file di configurazione relativo alle impostazioni di controllo non viene eseguito nel backup DR e né nel server DR dopo l'operazione di ripristino. Ripetere manualmente le impostazioni del registro di controllo.
+
+
+
+
+== Plug-in SnapCenter e DR storage
+
+DR è disponibile solo per il plug-in SnapCenter per SQL Server. Se il plug-in non è attivo, passare a un altro host SQL e ripristinare i dati seguendo alcuni passaggi. Vedere link:../protect-scsql/task_disaster_recovery_scsql.html["Disaster recovery del plug-in SnapCenter per SQL Server"].
+
+SnapCenter utilizza ONTAP SnapMirror per replicare i dati, che possono essere utilizzati per il DR mantenendo i dati sincronizzati su un sito secondario. Per avviare il failover, interrompere la replica SnapMirror. Durante il fallback, eseguire la sincronizzazione in modo inverso per replicare i dati dal sito DR nella posizione primaria.

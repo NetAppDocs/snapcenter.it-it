@@ -1,10 +1,10 @@
 ---
-permalink: concept/reference_data_security.html 
+permalink: get-started/reference_data_security.html 
 sidebar: sidebar 
-keywords: security,authentication, CA certificates 
+keywords: security, authentication, CA certificates, FIPS, SSL, AES, TLS, RBAC, MFA, multi-factor authentication 
 summary: SnapCenter utilizza rigide funzionalità di sicurezza e autenticazione per garantire la sicurezza dei dati. 
 ---
-= Funzionalità di sicurezza
+= Funzioni di protezione di SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,23 +17,20 @@ SnapCenter include le seguenti funzioni di sicurezza:
 
 * Tutte le comunicazioni con SnapCenter utilizzano HTTP su SSL (HTTPS).
 * Tutte le credenziali in SnapCenter sono protette mediante la crittografia AES (Advanced Encryption Standard).
-* SnapCenter utilizza algoritmi di sicurezza conformi allo standard FIPS (Federal Information Processing Standard).
-* SnapCenter supporta l'utilizzo dei certificati CA autorizzati forniti dal cliente.
-* SnapCenter 4.1.1 o versioni successive supporta TLS (Transport Layer Security) 1,2 per la comunicazione con ONTAP. È inoltre possibile utilizzare TLS 1,2 per le comunicazioni tra client e server.
-+
-A partire da 5,0, SnapCenter supporta (TLS) 1,3 per le comunicazioni con ONTAP.
-
-* SnapCenter supporta un determinato set di suite di crittografia SSL per garantire la sicurezza delle comunicazioni di rete.
-+
-Per ulteriori informazioni, vedere https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_the_supported_SSL_Cipher_Suite["Come configurare la suite di crittografia SSL supportata"].
-
+* Supporta algoritmi di sicurezza conformi al Federal Information Processing Standard (FIPS).
+* Supporta l'utilizzo dei certificati CA autorizzati forniti dal cliente.
+* Supporta Transport Layer Security (TLS) 1,3 per la comunicazione con ONTAP. È inoltre possibile utilizzare TLS 1,2 per le comunicazioni tra client e server.
+* Supporta un determinato set di suite di crittografia SSL per garantire la protezione della comunicazione di rete. https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_the_supported_SSL_Cipher_Suite["Scopri di più"].
 * SnapCenter viene installato all'interno del firewall aziendale per consentire l'accesso al server SnapCenter e la comunicazione tra il server SnapCenter e i plug-in.
 * L'API SnapCenter e l'accesso alle operazioni utilizzano token crittografati con crittografia AES, che scadono dopo 24 ore.
 * SnapCenter si integra con Windows Active Directory per l'accesso e il RBAC (role-based access control) che regolano le autorizzazioni di accesso.
 * IPSec è supportato con SnapCenter su ONTAP per computer host Windows e Linux. https://docs.netapp.com/us-en/ontap/networking/configure_ip_security_@ipsec@_over_wire_encryption.html#use-ipsec-identities["Scopri di più"].
 * I cmdlet PowerShell di SnapCenter sono protetti da sessione.
-* Dopo un periodo di inattività predefinito di 15 minuti, SnapCenter avvisa che l'utente verrà disconnesso tra 5 minuti. Dopo 20 minuti di inattività, SnapCenter si disconnette ed è necessario effettuare nuovamente l'accesso. È possibile modificare il periodo di disconnessione.
-* L'accesso viene temporaneamente disattivato dopo 5 o più tentativi di accesso non corretti.
+* Dopo un periodo di inattività predefinito di 15 minuti, SnapCenter avvisa che l'utente verrà disconnesso tra 5 minuti.
++
+Dopo 20 minuti di inattività, SnapCenter si disconnette ed è necessario effettuare nuovamente l'accesso. È possibile modificare il periodo di disconnessione.
+
+* L'accesso viene temporaneamente disattivato dopo 5 tentativi di accesso non corretti.
 * Supporta l'autenticazione del certificato CA tra il server SnapCenter e ONTAP. https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_securely_connect_SnapCenter_with_ONTAP_using_CA_certificate["Scopri di più"].
 * Integrity Verifier viene aggiunto al server SnapCenter e ai plug-in e convalida tutti i file binari forniti durante le nuove operazioni di installazione e aggiornamento.
 

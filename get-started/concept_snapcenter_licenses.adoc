@@ -1,10 +1,10 @@
 ---
-permalink: install/concept_snapcenter_licenses.html 
+permalink: get-started/concept_snapcenter_licenses.html 
 sidebar: sidebar 
 keywords: licenses, FAS, AFF, ASA, SnapMirror, SnapVault, SnapRestore, FlexClone, SMBR, Single Mailbox Recovery 
 summary: 'SnapCenter richiede diverse licenze per abilitare le operazioni di protezione dei dati. Il tipo di licenze SnapCenter installate dipende dall"ambiente di storage e dalle funzionalità che si desidera utilizzare.' 
 ---
-= Licenze SnapCenter
+= Licenze richieste da SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -67,7 +67,7 @@ Sui sistemi di storage primario e secondario
 
 
  a| 
-Protocolli
+Licenze dei protocolli
  a| 
 * Licenza iSCSI o FC per LUN
 * Licenza CIFS per le condivisioni SMB
@@ -87,18 +87,19 @@ Destinazioni secondarie
 
 NOTE: Si consiglia, ma non è necessario, di aggiungere le licenze standard di SnapCenter alle destinazioni secondarie. Se le licenze standard di SnapCenter non sono abilitate sulle destinazioni secondarie, non è possibile utilizzare SnapCenter per eseguire il backup delle risorse sulla destinazione secondaria dopo aver eseguito un'operazione di failover. Tuttavia, è necessaria una licenza FlexClone sulle destinazioni secondarie per eseguire operazioni di cloning e verifica.
 
-|===
-
-NOTE: Le licenze servizi file NAS SnapCenter e SnapCenter sono obsolete e non sono più disponibili. La licenza standard e la licenza basata sulla capacità non sono più richieste per Amazon FSX per NetApp ONTAP, ONTAP Select, Cloud Volumes ONTAP e Azure NetApp Files.
-
-Installare una o più licenze SnapCenter. Per informazioni su come aggiungere licenze, vedere link:../install/concept_snapcenter_standard_controller_based_licenses.html["Aggiunta di licenze SnapCenter basate su controller standard"].
 
 
-
-== Licenze SMBR (Single Mailbox Recovery)
-
+ a| 
+Licenze SMBR (Single Mailbox Recovery)
+ a| 
 Se si utilizza il plug-in SnapCenter per Exchange per gestire i database e il ripristino di una singola casella postale (SMBR), è necessaria una licenza aggiuntiva per SMBR che deve essere acquistata separatamente in base alla casella postale dell'utente.
 
 Il ripristino di una singola casella postale di NetApp® è giunto alla fine della disponibilità (EOA) il 12 maggio 2023. Per ulteriori informazioni, fare riferimento a. link:https://mysupport.netapp.com/info/communications/ECMLP2885729.html["CPC-00507"]. NetApp continuerà a supportare i clienti che hanno acquistato capacità, manutenzione e supporto della casella postale attraverso i codici marketing introdotti il 24 giugno 2020, per tutta la durata del diritto al supporto.
 
 Il servizio di ripristino di una singola casella postale di NetApp è un prodotto partner fornito da Ontrack. Ontrack PowerControl offre funzionalità simili a quelle del ripristino di una singola casella postale di NetApp. I clienti possono acquistare nuove licenze software Ontrack PowerControls e rinnovi di assistenza e manutenzione Ontrack PowerControls da Ontrack (fino al licensingteam@ontrack.com) per il ripristino granulare della mailbox dopo la data EOA del 12 maggio 2023.
+
+|===
+
+NOTE: Le licenze servizi file NAS SnapCenter e SnapCenter sono obsolete e non sono più disponibili. La licenza standard e la licenza basata sulla capacità non sono più richieste per Amazon FSX per NetApp ONTAP, ONTAP Select, Cloud Volumes ONTAP e Azure NetApp Files.
+
+Installare una o più licenze SnapCenter. Per informazioni su come aggiungere licenze, vedere link:../install/concept_snapcenter_standard_controller_based_licenses.html["Aggiunta di licenze SnapCenter basate su controller standard"].

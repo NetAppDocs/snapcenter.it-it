@@ -390,7 +390,7 @@ Al termine dell'impostazione delle credenziali, è possibile assegnare la manute
 
 *A proposito di questa attività*
 
-È necessario esaminare i diversi metodi di autenticazione supportati per il database Oracle. Per ulteriori informazioni, vederelink:../install/concept_authentication_methods_for_your_credentials.html["Metodi di autenticazione per le credenziali"^].
+È necessario esaminare i diversi metodi di autenticazione supportati per il database Oracle. Per informazioni, vedere link:../get-started/concept_authentication_methods_for_your_credentials.html["Metodi di autenticazione per le credenziali"^].
 
 Se si impostano le credenziali per singoli gruppi di risorse e il nome utente non dispone di privilegi di amministratore completi, il nome utente deve avere almeno privilegi di gruppo di risorse e di backup.
 

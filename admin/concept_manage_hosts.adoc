@@ -133,7 +133,7 @@ Sì
 
 
  a| 
-Avviare i servizi plug-in
+Avviare i servizi plug-in (applicabile solo per i plug-in in esecuzione sull'host Windows)
  a| 
 Sì
  a| 
@@ -141,7 +141,7 @@ Sì
  a| 
 Sì
  a| 
-Sì
+No
  a| 
 Sì
  a| 

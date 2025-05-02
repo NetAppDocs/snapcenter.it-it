@@ -34,4 +34,6 @@ La clonazione è supportata solo a livello di CDB.
 * Pianifica le operazioni di backup e verifica.
 * Monitorare tutte le operazioni.
 * Visualizza i report per le operazioni di backup, ripristino e clonazione.
+* Automatizza backup, ripristino, ripristino, verifica, montaggio e ripristino basati sulle applicazioni Smontare e clonare le operazioni per i database Oracle nel tuo ambiente SnapCenter
+* Supporta i database Oracle per SAP, tuttavia non viene fornita l'integrazione SAP BR*Tools
 

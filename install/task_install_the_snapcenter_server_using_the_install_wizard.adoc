@@ -31,8 +31,7 @@ NOTE: Non installare il server SnapCenter su un host che dispone di server Excha
 
 
 
-*Fasi*
-
+.Fasi
 . Scaricare il pacchetto di installazione del server SnapCenter da https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["Sito di supporto NetApp"^].
 . Avviare l'installazione del server SnapCenter facendo doppio clic sul file .exe scaricato.
 +
@@ -63,23 +62,4 @@ Tuttavia, se si fa clic su *Annulla* durante l'esecuzione delle operazioni "riav
 +
 I file di log sono sempre elencati (per primi quelli meno recenti) nella cartella %temp% dell'utente amministratore. Se si desidera reindirizzare le posizioni dei log, avviare l'installazione del server SnapCenter dal prompt dei comandi eseguendo:``C:\installer_location\installer_name.exe /log"C:\"``
 
-
-
-
-
-== Registrare il prodotto per attivare il supporto
-
-Se non si dispone di un account NetApp esistente per la prima volta che si utilizzano prodotti NetApp, è necessario registrare il prodotto per attivare il supporto.
-
-.Fasi
-. Dopo aver installato SnapCenter, accedere a *Guida > informazioni su*.
-. Nella finestra di dialogo _informazioni su SnapCenter_, prendere nota dell'istanza SnapCenter, un numero a 20 cifre che inizia con 971.
-. Fare clic su https://register.netapp.com[].
-. Fare clic su *non sono un cliente NetApp registrato*.
-. Specifica i tuoi dati per registrarti.
-. Lasciare vuoto il campo SN riferimento NetApp.
-. Selezionare *SnapCenter* dall'elenco a discesa linea di prodotti.
-. Selezionare il provider di fatturazione.
-. Immettere l'ID istanza SnapCenter di 20 cifre.
-. Fare clic su *Invia*.
 
