@@ -111,6 +111,7 @@ Accodamento messaggi
 NOTE: Assicurarsi che nessun'altra applicazione utilizzi il servizio MSMQ creato e gestito da SnapCenter.
 
 * Rabbitmq
+* Erlang
 
 
 
