@@ -17,8 +17,7 @@ I registri di audit sono protetti mediante la generazione di digest con firma di
 
 Dovresti aver effettuato l'accesso come ruolo "SnapCenterAdmin".
 
-*A proposito di questa attività*
-
+.A proposito di questa attività
 * Gli avvisi vengono inviati nei seguenti scenari:
 +
 ** Il programma di controllo dell'integrità del registro di controllo o il server Syslog sono attivati o disattivati
@@ -40,8 +39,7 @@ Le informazioni relative ai parametri che possono essere utilizzati con il cmdle
 
 
 
-*Fasi*
-
+.Fasi
 . Nella pagina *Impostazioni*, selezionare *Impostazioni* > *Impostazioni globali* > *Impostazioni registro di controllo*.
 . Nella sezione Registro di controllo, immettere i dettagli.
 . Inserire la directory *Registro audit* e la directory *Registro checksum audit*
