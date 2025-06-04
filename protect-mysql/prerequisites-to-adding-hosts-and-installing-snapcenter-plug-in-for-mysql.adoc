@@ -16,7 +16,7 @@ Prima di aggiungere un host e installare i pacchetti plug-in, è necessario comp
 * È necessario aver installato Java 11 sull'host.
 +
 
-NOTE: IBM Java non è supportato.
+NOTE: IBM Java non è supportato su host Windows e Linux.
 
 * Per Windows, il plug-in Creator Service dovrebbe essere eseguito utilizzando l'utente di Windows "`LocalSystem'", che è il comportamento predefinito quando Plug-in per MySQL è installato come amministratore di dominio.
 * Quando si installa un plug-in su un host Windows, se si specifica una credenziale non integrata o se l'utente appartiene a un utente del gruppo di lavoro locale, è necessario disattivare il controllo dell'account utente sull'host. Il plug-in SnapCenter per Microsoft Windows verrà implementato per impostazione predefinita con il plug-in MySQL sugli host Windows.
@@ -33,7 +33,7 @@ NOTE: IBM Java non è supportato.
 * È necessario aver attivato la connessione SSH basata su password per l'utente root o non root.
 * È necessario aver installato Java 11 sull'host Windows.
 +
-http://www.java.com/en/download/manual.jsp["Download Java per tutti i sistemi operativi"]
+http://www.java.com/en/download/manual.jsp["Scarica JAVA per tutti i sistemi operativi"]
 
 +
 https://imt.netapp.com/matrix/imt.jsp?components=121071;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"]
@@ -47,7 +47,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=121071;&solution=1259&isHWU&src
 * È necessario aver attivato la connessione SSH basata su password per l'utente root o non root.
 * È necessario aver installato Java 11 sull'host Linux.
 +
-http://www.java.com/en/download/manual.jsp["Download Java per tutti i sistemi operativi"]
+http://www.java.com/en/download/manual.jsp["Scarica JAVA per tutti i sistemi operativi"]
 
 +
 https://imt.netapp.com/matrix/imt.jsp?components=121071;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"]

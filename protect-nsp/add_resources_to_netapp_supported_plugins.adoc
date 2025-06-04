@@ -197,5 +197,6 @@ Impostazioni risorse:
 * ORA_TEMP specifica la directory per i file temporanei.
 * ORACLE_HOME specifica la directory in cui è installato il software Oracle.
 * ARCHIVE_LOG_ONLY specifica se eseguire o meno il backup dei registri di archivio.
-* ORACLE_BACKUP_MODE specifica se eseguire il backup online o offline.
+* ORACLE_BACKUPMODE specifica se eseguire il backup online o offline.
+* ORACLE_EXPORT_PARAMETERS specifica se è possibile esportare le variabili d'ambiente durante l'esecuzione di _bin/su_. Il valore di ORACLE_EXPORT_PARAMETERS deve essere impostato su *y*.
 

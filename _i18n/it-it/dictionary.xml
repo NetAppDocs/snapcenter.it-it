@@ -242,7 +242,6 @@
   <block id="04a26f096e312ade5bd651748180efd4" category="list-text">Visualizza i report per le operazioni di backup, ripristino e clonazione.</block>
   <block id="993d084476d90eaf8ecb0ad1a0a2f901" category="summary">Prima di aggiungere un host e installare i pacchetti plug-in, è necessario completare tutti i requisiti. Il plug-in SnapCenter per database SAP HANA è disponibile sia in ambienti Windows che Linux.</block>
   <block id="66cf3f797a37d99d37e260746f767101" category="doc">Prerequisiti per l'aggiunta di host e l'installazione del plug-in SnapCenter per il database SAP HANA</block>
-  <block id="3a6eb59ee064b09b020c1a87c5de4988" category="admonition">IBM Java non è supportato.</block>
   <block id="f75d6b3895c7e3dc12c8aebce148b694" category="list-text">È necessario aver installato il terminale interattivo del database SAP HANA (client HDBSQL) sull'host.</block>
   <block id="6af0ddf64964f87eaafc79f93b164227" category="list-text">Per Windows, il servizio di creazione del plug-in deve essere eseguito utilizzando l'utente di Windows "`LocalSystem`", che è il comportamento predefinito quando il plug-in per il database SAP HANA viene installato come amministratore di dominio.</block>
   <block id="b5d183d4ef5aaa89ffb0925b9e6e4c0c" category="list-text">Per Windows, le chiavi dell'archivio utente devono essere create come utente DI SISTEMA.</block>
@@ -8723,7 +8722,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="0b12a00876503fb1813afee6ad9b0a76" category="list-text">ORA_TEMP specifica la directory per i file temporanei.</block>
   <block id="e1ab4aa639aa539548c7d55759dc7004" category="list-text">ORACLE_HOME specifica la directory in cui è installato il software Oracle.</block>
   <block id="57808f9033b6670d0e1ff1ecc8197488" category="list-text">ARCHIVE_LOG_ONLY specifica se eseguire o meno il backup dei registri di archivio.</block>
-  <block id="6d6058c414d1170875e11ce8a19484f0" category="list-text">ORACLE_BACKUP_MODE specifica se eseguire il backup online o offline.</block>
   <block id="c4e433903376436b2e77e2cfdc6f5913" category="summary">Se una singola risorsa dei plug-in supportati da NetApp non fa parte di un gruppo di risorse, è possibile eseguire il backup della risorsa dalla pagina risorse. È possibile eseguire il backup della risorsa on-demand oppure, se la risorsa dispone di un criterio allegato e di una pianificazione configurata, i backup vengono eseguiti automaticamente in base alla pianificazione.</block>
   <block id="6ce5278b296a0a5a39af4a4d0cbd927c" category="doc">Backup di singole risorse di plug-in supportate da NetApp</block>
   <block id="37a077fe53864717026a312c9cfed412" category="doc">Eseguire il backup delle risorse dei plug-in supportati da NetApp</block>
@@ -9980,4 +9978,16 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="d39d360863f3fda3c5d615dc978e14ae" category="sidebar">Installare il server SnapCenter</block>
   <block id="3199d4d0758d0f4f53db9a8f36670c18" category="sidebar">Configurare il server SnapCenter</block>
   <block id="4c975961e88401702aa6aac167300031" category="sidebar">Aggiungere e predisporre il sistema di archiviazione</block>
+  <block id="81f9b64ab1987ed2d00f4d52a80ca52b" category="paragraph">Per informazioni aggiornate sulle versioni supportate, vedere<block ref="315018c067f16596ddc2e2de507c24d0" category="inline-link-rx"></block>.</block>
+  <block id="0885e9f12d8cb35b0f02655c34c87004" category="admonition">IBM Java non è supportato su host Windows e Linux.</block>
+  <block id="48c9a1bf5de7bf57f1efa648f3bc8d17" category="inline-link">Scarica JAVA per Windows</block>
+  <block id="a4560fe71d10d98deabf55fdf50b90f0" category="paragraph"><block ref="a4560fe71d10d98deabf55fdf50b90f0" category="inline-link-rx"></block></block>
+  <block id="25827211b51e5a08cc74ddb2f845f386" category="inline-link">Scarica JAVA per Linux</block>
+  <block id="0632a773655c14c1b1e9ced88bc550ed" category="paragraph"><block ref="0632a773655c14c1b1e9ced88bc550ed" category="inline-link-rx"></block></block>
+  <block id="ffef625a5852f63e8c97e120b261e871" category="inline-link">Scarica JAVA per AIX</block>
+  <block id="1cf0cff6e7cd05dac4238e50abe74627" category="paragraph"><block ref="1cf0cff6e7cd05dac4238e50abe74627" category="inline-link-rx"></block></block>
+  <block id="67366bdaf9086e6015fe527a27beb845" category="inline-link">Scarica JAVA per tutti i sistemi operativi</block>
+  <block id="230f7d0fc162c3a559cd8b29556f41f4" category="paragraph"><block ref="230f7d0fc162c3a559cd8b29556f41f4" category="inline-link-rx"></block></block>
+  <block id="17103b09b3247a2b39032b11b995b325" category="list-text">ORACLE_BACKUPMODE specifica se eseguire il backup online o offline.</block>
+  <block id="849d9298ad9d6def4918273148b3d4bf" category="list-text">ORACLE_EXPORT_PARAMETERS specifica se è possibile esportare le variabili d'ambiente durante l'esecuzione di _bin/su_. Il valore di ORACLE_EXPORT_PARAMETERS deve essere impostato su *y*.</block>
 </blocks>
