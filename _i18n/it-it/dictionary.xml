@@ -9989,5 +9989,5 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="67366bdaf9086e6015fe527a27beb845" category="inline-link">Scarica JAVA per tutti i sistemi operativi</block>
   <block id="230f7d0fc162c3a559cd8b29556f41f4" category="paragraph"><block ref="230f7d0fc162c3a559cd8b29556f41f4" category="inline-link-rx"></block></block>
   <block id="17103b09b3247a2b39032b11b995b325" category="list-text">ORACLE_BACKUPMODE specifica se eseguire il backup online o offline.</block>
-  <block id="849d9298ad9d6def4918273148b3d4bf" category="list-text">ORACLE_EXPORT_PARAMETERS specifica se è possibile esportare le variabili d'ambiente durante l'esecuzione di _bin/su_. Il valore di ORACLE_EXPORT_PARAMETERS deve essere impostato su *y*.</block>
+  <block id="e787bc810fe0c9919da5538cad8cb1f1" category="list-text">ORACLE_EXPORT_PARAMETERS specifica se le variabili d'ambiente definite sopra debbano essere riesportate durante l'esecuzione di _/bin/su &lt;utente che esegue sqlplus&gt; -c sqlplus /nolog &lt;cmd&gt;_. Questo si verifica in genere quando l'utente che esegue sqlplus non ha impostato tutte le variabili d'ambiente necessarie per connettersi al database tramite _connect / come sysdba_.</block>
 </blocks>

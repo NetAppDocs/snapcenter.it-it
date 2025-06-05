@@ -198,5 +198,5 @@ Impostazioni risorse:
 * ORACLE_HOME specifica la directory in cui è installato il software Oracle.
 * ARCHIVE_LOG_ONLY specifica se eseguire o meno il backup dei registri di archivio.
 * ORACLE_BACKUPMODE specifica se eseguire il backup online o offline.
-* ORACLE_EXPORT_PARAMETERS specifica se è possibile esportare le variabili d'ambiente durante l'esecuzione di _bin/su_. Il valore di ORACLE_EXPORT_PARAMETERS deve essere impostato su *y*.
+* ORACLE_EXPORT_PARAMETERS specifica se le variabili d'ambiente definite sopra debbano essere riesportate durante l'esecuzione di _/bin/su <utente che esegue sqlplus> -c sqlplus /nolog <cmd>_. Questo si verifica in genere quando l'utente che esegue sqlplus non ha impostato tutte le variabili d'ambiente necessarie per connettersi al database tramite _connect / come sysdba_.
 
