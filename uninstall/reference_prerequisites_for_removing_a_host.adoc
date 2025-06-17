@@ -16,7 +16,6 @@ summary: È possibile rimuovere un host se non si desidera più utilizzare SnapC
 Prima di rimuovere un host dal server SnapCenter, è necessario completare i prerequisiti.
 
 * Devi effettuare l'accesso come amministratore.
-* Se si utilizzano plug-in personalizzati di SnapCenter, è necessario eliminare tutti i cloni da SnapCenter associati all'host.
 * Assicurarsi che i processi di rilevamento non siano in esecuzione sull'host.
 * È necessario assegnare un ruolo con le autorizzazioni necessarie per rimuovere tutti gli oggetti associati all'host. In caso contrario, l'operazione di rimozione non riesce.
 * Se la chiave SSH è stata modificata dopo aver aggiunto l'host a SnapCenter, confermare l'impronta digitale.

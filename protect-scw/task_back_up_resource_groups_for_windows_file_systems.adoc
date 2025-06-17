@@ -23,7 +23,7 @@ Un gruppo di risorse è un insieme di risorse su un host o cluster. Un'operazion
 NOTE: Quando si esegue il backup di un file system, SnapCenter non esegue il backup dei LUN montati su un punto di montaggio del volume (VMP) nel file system di cui si sta eseguendo il backup.
 
 
-IMPORTANT: Se si lavora in un contesto di file system Windows, non eseguire il backup dei file di database. In questo modo si crea un backup incoerente e una possibile perdita di dati durante il ripristino. Per proteggere i file di database, è necessario utilizzare il plug-in SnapCenter appropriato per il database (ad esempio, il plug-in SnapCenter per Microsoft SQL Server, il plug-in SnapCenter per Microsoft Exchange Server o un plug-in personalizzato per i file di database).
+IMPORTANT: Se si lavora in un contesto di file system Windows, non eseguire il backup dei file di database. In questo modo si crea un backup incoerente e una possibile perdita di dati durante il ripristino. Per proteggere i file del database, è necessario utilizzare il plug-in SnapCenter appropriato per il database (ad esempio, il plug-in SnapCenter per Microsoft SQL Server o il plug-in SnapCenter per Microsoft Exchange Server).
 
 .Fasi
 . Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.

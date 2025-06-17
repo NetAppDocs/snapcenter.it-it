@@ -15,7 +15,7 @@ Si può usare SnapCenter per clonare il file system Unix usando il backup del fi
 
 .Prima di iniziare
 * Puoi saltare l'aggiornamento del file fstab impostando il valore di _SKIP_FSTAB_UPDATE_ su *true* nel file _agent.properties_ situato in _/opt/NetApp/snapcenter/scc/etc_.
-* È possibile avere un nome di volume clone statico e un percorso di giunzione impostando il valore di _USE_CUSTOM_CLONE_VOLUME_NAME_FORMAT_ su *true* nel file _agent.properties_ che si trova in _/opt/NetApp/snapcenter/scc/etc_. Dopo aver aggiornato il file, è necessario riavviare SnapCenter per il servizio plug-in personalizzato eseguendo il comando: `/opt/NetApp/snapcenter/scc/bin/scc restart`.
+* È possibile avere un nome di volume clone statico e un percorso di giunzione impostando il valore di _USE_CUSTOM_CLONE_VOLUME_NAME_FORMAT_ su *true* nel file _agent.properties_ che si trova in _/opt/NetApp/snapcenter/scc/etc_. Dopo aver aggiornato il file, dovresti riavviare il servizio di creazione del plug-in SnapCenter eseguendo il comando:  `/opt/NetApp/snapcenter/scc/bin/scc restart` .
 +
 Esempio: Senza questa proprietà il nome del volume clone e il percorso della giunzione saranno simili a <Source_volume_name>_Clone_<Timestamp>, ma ora saranno <Source_volume_name>_Clone_<Clone_Name>
 

@@ -104,7 +104,9 @@ NOTE: Se una SVM viene eliminata dal cluster ONTAP utilizzando l'interfaccia gra
 
 == Supporto API REST
 
-Per impostazione predefinita, tutte le connessioni di storage ai sistemi di storage ONTAP e ASA R2 utilizzano ZAPI. L'API REST può essere abilitata per determinate versioni di ONTAP.
+Per impostazione predefinita, tutte le connessioni dei sistemi ASA, AFF o FAS a ONTAP avvengono tramite ZAPI. L'API REST può essere abilitata per specifiche versioni di ONTAP.
+
+SnapCenter sfrutta le API REST per eseguire tutte le operazioni sui sistemi ASA r2, che non supportano le ZAPI.
 
 È possibile modificare le chiavi di configurazione nei seguenti file di configurazione:
 

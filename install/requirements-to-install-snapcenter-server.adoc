@@ -305,9 +305,9 @@ Plug-in supportati da NetApp per SnapCenter
 HTTPS
  a| 
  a| 
-Si tratta di una porta interna che viene utilizzata solo sull'host plug-in personalizzato; non è richiesta alcuna eccezione firewall.
+Questa è una porta interna utilizzata solo sull'host del plug-in; non è richiesta alcuna eccezione del firewall.
 
-La comunicazione tra il server SnapCenter e i plug-in personalizzati viene instradata attraverso la porta 8145.
+La comunicazione tra SnapCenter Server e i plug-in avviene tramite la porta 8145.
 
 
 

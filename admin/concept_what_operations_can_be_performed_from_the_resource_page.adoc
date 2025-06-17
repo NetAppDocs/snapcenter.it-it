@@ -16,13 +16,11 @@ summary: È possibile individuare le risorse ed eseguire operazioni di protezion
 Dalla pagina risorse, è possibile eseguire le seguenti operazioni:
 
 |===
-| È possibile eseguire queste attività... | Per Microsoft Exchange Server | Per Microsoft SQL Server | Per Microsoft Windows | Per database Oracle | Per SAP HANA Database | Per plug-in personalizzati 
+| È possibile eseguire queste attività... | Per Microsoft Exchange Server | Per Microsoft SQL Server | Per Microsoft Windows | Per database Oracle | Per SAP HANA Database 
 
 
  a| 
 Determinare se le risorse sono disponibili per il backup
- a| 
-Sì
  a| 
 Sì
  a| 
@@ -48,15 +46,11 @@ Sì
 Sì
  a| 
 Sì
- a| 
-Sì
 
 
 
  a| 
 Ripristinare dai backup
- a| 
-Sì
  a| 
 Sì
  a| 
@@ -82,15 +76,11 @@ Sì
 Sì
  a| 
 Sì
- a| 
-Sì
 
 
 
  a| 
 Gestire i backup
- a| 
-Sì
  a| 
 Sì
  a| 
@@ -116,15 +106,11 @@ Sì
 Sì
  a| 
 Sì
- a| 
-Sì
 
 
 
  a| 
 Gestire le policy
- a| 
-Sì
  a| 
 Sì
  a| 
@@ -150,8 +136,6 @@ Sì
 Sì
  a| 
 Sì
- a| 
-Sì
 
 
 
@@ -165,8 +149,6 @@ No
 No
  a| 
 Sì
- a| 
-No
  a| 
 No
 
@@ -184,15 +166,11 @@ No
 Sì
  a| 
 No
- a| 
-No
 
 
 
  a| 
 Visualizza i dettagli
- a| 
-Sì
  a| 
 Sì
  a| 

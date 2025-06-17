@@ -119,7 +119,6 @@ Le risorse disponibili tramite l'API REST di SnapCenter sono organizzate in cate
 * Ripristinare un backup del database SQL
 * Ripristinare un backup del database Oracle
 * ripristinare un backup personalizzato dell'applicazione
-* creare una risorsa plug-in personalizzata
 * Creare una risorsa SAP HANA
 * proteggere una risorsa personalizzata utilizzando il plug-in per l'applicazione personalizzata
 * Proteggere una risorsa Microsoft SQL Server utilizzando il plug-in per Microsoft SQL Server
@@ -272,7 +271,6 @@ Le risorse disponibili tramite l'API REST di SnapCenter sono organizzate in cate
 * Configurare il database SAP HANA utilizzando una chiave
 * Configurare il database Oracle utilizzando una chiave
 * ripristinare un backup personalizzato dell'applicazione utilizzando una chiave
-* creare una risorsa plug-in personalizzata
 * Creare una risorsa SAP HANA
 * Creare una risorsa di volume per applicazioni Oracle
 * proteggere una risorsa personalizzata utilizzando il plug-in per l'applicazione personalizzata
