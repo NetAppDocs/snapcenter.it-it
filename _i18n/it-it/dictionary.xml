@@ -9585,5 +9585,5 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="6fea498808c5d97bb251d0bdbc3943eb" category="sidebar">Configurare il certificato CA per il servizio plug-in SnapCenter sull'host Linux</block>
   <block id="5c1418af1ce8eeaeb3745b659e1fcfe8" category="sidebar">Configurare il certificato CA per il servizio plug-in SnapCenter sull'host Windows</block>
   <block id="f890e4e7d1398542e6dfe99fa9cf5732" category="paragraph">Per istruzioni su come configurare i server SnapCenter per l'elevata disponibilità utilizzando il bilanciatore di carico F5, fare riferimento a <block ref="4d4c1b07c3f7cab3f346d17a2617da56" category="inline-link-rx"></block> .</block>
-  <block id="78805a221a988e79ef3f42d7c5bfd418" category="paragraph">immagine</block>
+  <block id="c0f10ba70433b3a51c779845827cf459" category="paragraph">Se si utilizza un cluster Windows, è opportuno installare e configurare anche Windows Remote Management (WinRM).</block>
 </blocks>

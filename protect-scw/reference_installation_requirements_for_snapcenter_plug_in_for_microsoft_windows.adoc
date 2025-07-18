@@ -41,6 +41,8 @@ Microsoft Windows
 
 Per informazioni aggiornate sulle versioni supportate, vedere https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^].
 
+Se si utilizza un cluster Windows, è opportuno installare e configurare anche Windows Remote Management (WinRM).
+
 
 
  a| 

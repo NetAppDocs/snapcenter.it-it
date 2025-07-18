@@ -23,8 +23,6 @@ Per gli ambienti cloud, è possibile configurare l'high Availability utilizzando
 --
 Per istruzioni su come configurare i server SnapCenter per l'elevata disponibilità utilizzando il bilanciatore di carico F5, fare riferimento a  https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_SnapCenter_Servers_for_high_availability_using_F5_Load_Balancer["Come configurare i server SnapCenter per l'alta disponibilità utilizzando F5 Load Balancer"^] .
 
-immagine
-
 Per aggiungere e rimuovere i cluster F5, è necessario essere membri del gruppo amministratori locali sui server SnapCenter (oltre che essere assegnati al ruolo SnapCenterAdmin):
 
 * Add-SmServerCluster
