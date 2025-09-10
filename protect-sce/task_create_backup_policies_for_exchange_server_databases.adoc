@@ -162,17 +162,10 @@ NOTE: Se sono previste le 2:00, la programmazione non verrà attivata durante l'
 
 .. Selezionare l'etichetta criterio.
 +
-A seconda dell'etichetta Snapshot selezionata, ONTAP applica la politica di conservazione Snapshot secondaria corrispondente all'etichetta.
 
-+
-
-NOTE: Se è stato selezionato *Update SnapMirror dopo la creazione di una copia Snapshot locale*, è possibile specificare l'etichetta del criterio secondario. Tuttavia, se è stato selezionato *Aggiorna SnapVault dopo la creazione di una copia Snapshot locale*, è necessario specificare l'etichetta del criterio secondario.
+NOTE: È possibile assegnare etichette SnapMirror agli snapshot primari per la replica remota, consentendo agli snapshot primari di trasferire l'operazione di replica degli snapshot da SnapCenter ai sistemi secondari ONTAP .  Questa operazione può essere eseguita senza abilitare l'opzione SnapMirror o SnapVault nella pagina dei criteri.
 
 .. Nella sezione Seleziona opzioni di replica secondaria, selezionare una o entrambe le seguenti opzioni di replica secondaria:
-+
-
-NOTE: È necessario selezionare le opzioni di replica secondarie per *periodo di blocco della copia dello snapshot secondario* per essere efficace. L'opzione *periodo di blocco della copia dell'istantanea secondaria* è disponibile nella pagina di conservazione.
-
 +
 |===
 | Per questo campo... | Eseguire questa operazione... 

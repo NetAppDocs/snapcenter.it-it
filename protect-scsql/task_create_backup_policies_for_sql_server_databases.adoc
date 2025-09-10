@@ -214,48 +214,33 @@ Conservare le copie di backup per un numero specifico di giorni.
 +
 ... Per specificare il numero di istantanee da conservare, selezionare *copie da conservare*.
 ... Se il numero di istantanee supera il numero specificato, le istantanee vengono eliminate con le copie meno recenti eliminate per prime.
-
-
-
-
-
-
++
 
 IMPORTANT: Per impostazione predefinita, il valore del conteggio di conservazione è impostato su 2. Se si imposta il conteggio della conservazione su 1, l'operazione di conservazione potrebbe non riuscire perché il primo snapshot è lo snapshot di riferimento per la relazione SnapVault finché non viene replicato nella destinazione uno snapshot più recente.
 
++
 
 NOTE: Il valore di mantenimento massimo è 1018. I backup non avranno esito positivo se la conservazione è impostata su un valore superiore a quello supportato dalla versione NetApp ONTAP sottostante.
+
+
+
+
+
+
 
 . Periodo di tempo necessario per la conservazione delle snapshot
 +
 .. Se si desidera specificare il numero di giorni per i quali si desidera conservare gli snapshot prima di eliminarli, selezionare *conserva copie per*.
 
 
-. Se si desidera specificare il periodo di blocco della copia dell'istantanea primaria, selezionare *periodo di blocco della copia dell'istantanea primaria* e selezionare giorni, mesi o anni.
+. Selezionare *Periodo di blocco della copia snapshot* e specificare la durata in giorni, mesi o anni.
 +
 Il periodo di conservazione di SnapLock deve essere inferiore a 100 anni.
 
-. Se si desidera specificare il periodo di blocco della copia dell'istantanea secondaria, selezionare *periodo di blocco della copia dell'istantanea secondaria* e selezionare giorni, mesi o anni.
-+
-Questo esempio imposta la conservazione dello snapshot di registro su 2:
-
-+
-.Mostra esempio
-[]
-====
-Set-SmPolicy -policyName 'newpol' -PolicyType 'Backup' -PluginPolicyType 'SCSQL' -sqlbackuptype 'FullBackupAndLogBackup' -RetentionSettings @{BackupType='DATA';ScheduleType='Hourly';RetentionCount=}@{ScheduleType='Hourly Count';Retenth2} ScheduleType='Hourly Count';None=Hourly Count'Hourly='2';Conteggio@{}
-
-====
-+
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_retains_Snapshot_copies_of_the_database["SnapCenter conserva le copie Snapshot del database"]
-
-. Selezionare un'etichetta istantanea
-+
-A seconda dell'etichetta Snapshot selezionata, ONTAP applica la politica di conservazione Snapshot secondaria corrispondente all'etichetta.
-
+. Selezionare un'etichetta di criterio.
 +
 
-NOTE: Se è stato selezionato *Update SnapMirror dopo la creazione di una copia Snapshot locale*, è possibile specificare l'etichetta del criterio secondario. Tuttavia, se è stato selezionato *Aggiorna SnapVault dopo la creazione di una copia Snapshot locale*, è necessario specificare l'etichetta del criterio secondario.
+NOTE: È possibile assegnare etichette SnapMirror agli snapshot primari per la replica remota, consentendo agli snapshot primari di trasferire l'operazione di replica degli snapshot da SnapCenter ai sistemi secondari ONTAP .  Questa operazione può essere eseguita senza abilitare l'opzione SnapMirror o SnapVault nella pagina dei criteri.
 
 
 
@@ -264,10 +249,6 @@ NOTE: Se è stato selezionato *Update SnapMirror dopo la creazione di una copia 
 == Passaggio 7: Configurare le opzioni di replica secondarie
 
 . Nella sezione Seleziona opzioni di replica secondaria, selezionare una o entrambe le seguenti opzioni di replica secondaria:
-+
-
-NOTE: È necessario selezionare le opzioni di replica secondarie per *periodo di blocco della copia dello snapshot secondario* per essere efficace.
-
 
 
 [role="tabbed-block"]

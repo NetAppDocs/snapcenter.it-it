@@ -93,10 +93,6 @@ NOTE: Se è stato selezionato *Update SnapMirror dopo la creazione di una copia 
 
 . Nella sezione Seleziona opzioni di replica secondaria, selezionare una o entrambe le seguenti opzioni di replica secondaria:
 +
-
-NOTE: È necessario selezionare le opzioni di replica secondarie per *periodo di blocco della copia dello snapshot secondario* per essere efficace.
-
-+
 |===
 | Per questo campo... | Eseguire questa operazione... 
 
@@ -158,18 +154,11 @@ Scegliere questa opzione se si desidera specificare il numero di giorni in cui S
 
 
  a| 
-Periodo di blocco della copia dello snapshot primario
+Periodo di blocco della copia snapshot
  a| 
-Selezionare periodo di blocco istantanea e selezionare giorni, mesi o anni.
+Selezionare il periodo di blocco degli snapshot e specificare la durata in giorni, mesi o anni.
 
 Il periodo di conservazione di SnapLock deve essere inferiore a 100 anni.
-
-
-
- a| 
-Periodo di blocco della copia snapshot secondaria
- a| 
-Selezionare *periodo blocco copia istantanea secondaria*, quindi giorni, mesi o anni.
 
 |===
 +
@@ -178,7 +167,7 @@ IMPORTANT: È necessario impostare il conteggio di conservazione su 2 o superior
 
 +
 
-NOTE: Il valore di mantenimento massimo è 1018. I backup non avranno esito positivo se la conservazione viene impostata su un valore superiore a quello supportato dalla versione di ONTAP sottostante.
+NOTE: Il valore massimo di ritenzione è 1018.  I backup non riusciranno se la conservazione è impostata su un valore superiore a quello supportato dalla versione ONTAP .
 
 . Nella pagina script, immettere il percorso del prescrittore o del postscript che si desidera venga eseguito dal server SnapCenter rispettivamente prima o dopo l'operazione di backup e un limite di tempo che SnapCenter attende l'esecuzione dello script prima del timeout.
 +

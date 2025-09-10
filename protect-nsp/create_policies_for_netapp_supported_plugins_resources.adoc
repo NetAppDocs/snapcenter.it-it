@@ -98,35 +98,21 @@ Selezionare *conserva copie per*, quindi specificare il numero di giorni per i q
 
 
  a| 
-Periodo di blocco della copia dello snapshot primario
+Periodo di blocco della copia snapshot
  a| 
-Selezionare periodo di blocco istantanea e selezionare giorni, mesi o anni.
+Selezionare *Periodo di blocco della copia snapshot* e specificare giorni, mesi o anni.
 
 Il periodo di conservazione di SnapLock deve essere inferiore a 100 anni.
-
-
-
- a| 
-Periodo di blocco della copia snapshot secondaria
- a| 
-Selezionare *periodo blocco copia istantanea secondaria*, quindi giorni, mesi o anni.
 
 |===
 .. Selezionare un'etichetta di criterio.
 +
-A seconda dell'etichetta del criterio selezionata, ONTAP applica il criterio di conservazione Snapshot secondario corrispondente all'etichetta.
 
-+
-
-NOTE: Se è stato selezionato *Update SnapMirror dopo la creazione di una copia Snapshot locale*, è possibile specificare l'etichetta del criterio secondario. Tuttavia, se è stato selezionato *Aggiorna SnapVault dopo la creazione di una copia Snapshot locale*, è necessario specificare l'etichetta del criterio secondario.
+NOTE: È possibile assegnare etichette SnapMirror agli snapshot primari per la replica remota, consentendo agli snapshot primari di trasferire l'operazione di replica degli snapshot da SnapCenter ai sistemi secondari ONTAP .  Questa operazione può essere eseguita senza abilitare l'opzione SnapMirror o SnapVault nella pagina dei criteri.
 
 
 
 . Nella sezione Seleziona opzioni di replica secondaria, selezionare una o entrambe le seguenti opzioni di replica secondaria:
-+
-
-NOTE: È necessario selezionare le opzioni di replica secondarie per *periodo di blocco della copia dello snapshot secondario* per essere efficace.
-
 +
 |===
 | Per questo campo... | Eseguire questa operazione... 
