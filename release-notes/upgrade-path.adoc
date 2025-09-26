@@ -11,20 +11,17 @@ summary: I percorsi di aggiornamento supportati per SnapCenter.
 
 
 [role="lead"]
-Il percorso di aggiornamento consente di comprendere da quali versioni precedenti di SnapCenter è possibile eseguire l'aggiornamento alle versioni più recenti di SnapCenter e quali versioni dei plug-in sono supportate.
+Il percorso di aggiornamento mostra da quali versioni di SnapCenter è possibile effettuare l'aggiornamento e quali versioni dei plug-in sono supportate.
+
+
+NOTE: Se si aggiorna SnapCenter Server alla versione 6.2, aggiornare anche i plug-in alla versione 6.2.
 
 |===
 | Se si utilizza la versione del server SnapCenter... | È possibile aggiornare direttamente il server SnapCenter a... | Versioni plug-in supportate 
 
 
-.3+| 5,0 | 6,0  a| 
-* 5,0
+.3+| 6,0 | 6.0.1  a| 
 * 6,0
-
-
-
-
-| 6.0.1  a| 
 * 6.0.1
 
 
@@ -36,24 +33,28 @@ Il percorso di aggiornamento consente di comprendere da quali versioni precedent
 
 
 
-.2+| 6,0  a| 
-6.0.1
+| 6,2  a| 
+* 6,2
+
+
+
+
+.2+| 6.0.1  a| 
+6,1
  a| 
-* 6,0
-* 6.0.1
-
-
-
-
-| 6,1  a| 
 * 6,1
 
 
 
 
-| 6.0.1 | 6,1  a| 
-* 6.0.1
-* 6,1
+| 6,2  a| 
+* 6,2
+
+
+
+
+| 6,1 | 6,2  a| 
+* 6,2
 
 
 |===

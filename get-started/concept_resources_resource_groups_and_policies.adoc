@@ -46,6 +46,12 @@ Quando si crea il gruppo di risorse e si allegano i criteri, è possibile config
 
 
 
+== Gruppo di coerenza (CG)
+
+Un gruppo di coerenza è una raccolta di volumi gestiti come un'unica unità.  I CG vengono sincronizzati per garantire la coerenza dei dati tra unità di archiviazione e volumi.  In ONTAP, forniscono una gestione semplice e una garanzia di protezione per un carico di lavoro applicativo che si estende su più volumi. Scopri di più su link:https://docs.netapp.com/us-en/ontap/consistency-groups["gruppi di coerenza"^] .
+
+
+
 == Utilizzo di prescrittori e postscript
 
 Prescrittori e postscript personalizzati possono automatizzare le attività di protezione dei dati prima o dopo l'intervento. Ad esempio, è possibile aggiungere uno script per notificare errori o avvisi di processo. Prima di impostarli, assicurarsi di aver compreso i requisiti di questi script.

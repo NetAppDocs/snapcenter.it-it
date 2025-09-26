@@ -11,26 +11,34 @@ summary: È necessario conoscere il sistema di storage, le applicazioni e i data
 
 
 [role="lead"]
-I sistemi di archiviazione ASA r2 sono supportati a partire da SnapCenter 6.1.  https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["Scopri di più sui sistemi ASA R2"]
+I sistemi di archiviazione ASA r2 sono supportati a partire da SnapCenter 6.1. https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["Scopri di più sui sistemi ASA R2"^] .
 
-SnapCenter sfrutta le API REST per eseguire tutte le operazioni sui sistemi ASA r2, che non supportano le ZAPI.
+SnapCenter supporta sia la protezione primaria che quella secondaria delle applicazioni in esecuzione su sistemi fisici e su Virtual Machine File System (VMFS).  SnapCenter utilizza le API REST per tutte le operazioni sui sistemi ASA r2.  I sistemi ASA r2 non supportano le ZAPI.
 
 *Operazioni supportate da SnapCenter per sistemi ASA r2*
 
-* Creazione di backup primari delle applicazioni su VMDK
-* Trasferimento delle snapshot del gruppo di coerenza al sistema di storage secondario
-* Ripristino dei backup dai sistemi di archiviazione primari e secondari all'host originale o all'host alternativo
+* Creazione di backup primari delle applicazioni
+* Spostamento degli snapshot del gruppo di coerenza gerarchica sul sistema di archiviazione secondario
+* Ripristino dei backup dai sistemi di archiviazione primari e secondari all'host originale o alternativo
 +
 ** Ripristino sul posto da sistemi di storage primari e secondari utilizzando VMware vMotion
 ** Connetti e copia il ripristino dai sistemi di archiviazione primari e secondari
 
 
 * Clonazione dei backup sull'host originale o sull'host alternativo
+* RDM (Raw Device Mapping)
+* Protezione dei volumi applicativi per Oracle
+* Protezione di SAP HANA NDV
+* LockVault
+* Provisioning secondario della directory di registro dell'host del plug-in SQL
 
 
-SnapCenter può individuare o creare gruppi di coerenza ONTAP. Può anche predisporre e inizializzare le relazioni SnapMirror con il cluster di destinazione per la protezione secondaria.
+SnapCenter scopre o crea gruppi di coerenza ONTAP .  Imposta relazioni SnapMirror sul cluster di destinazione per la protezione secondaria. https://docs.netapp.com/us-en/ontap/consistency-groups["Scopri di più sui gruppi di coerenza ONTAP"^] .
 
-Per informazioni su come abilitare la protezione secondaria sui sistemi ASA r2 per la tua applicazione, fai riferimento a:
+
+NOTE: Dopo l'aggiornamento a SnapCenter 6.2 (server e plug-in) e ONTAP 9.17.1, SnapCenter modifica i gruppi di coerenza semplici in gruppi di coerenza gerarchici durante il primo backup pianificato.
+
+Per informazioni su come abilitare la protezione secondaria sui sistemi ASA r2 per la tua applicazione, consulta:
 
 * https://docs.netapp.com/us-en/snapcenter/protect-scsql/create-resource-groups-secondary-protection-for-asa-r2-mssql-resources.html["Abilita la protezione secondaria per le risorse di Microsoft SQL Server"]
 * https://docs.netapp.com/us-en/snapcenter/protect-hana/create-resource-groups-secondary-protection-for-asa-r2-hana-resources.html["Abilita la protezione secondaria per le risorse SAP HANA"]
@@ -44,15 +52,15 @@ Per informazioni su come abilitare la protezione secondaria sui sistemi ASA r2 p
 
 *Operazioni non supportate da SnapCenter per i sistemi ASA r2*
 
-* RDM (Raw Device Mapping)
-* Volumi di applicazioni per Oracle
-* SAP HANA NDV
-* LockVault
 * Snapshot a prova di manomissione
 * Volumi FlexGroup
-* Gruppo di coerenza gerarchica
 * Migrazione dai sistemi di storage ASA, AFF o FAS ai sistemi di storage ASA r2
-* Protezione dei database che contengono un mix di risorse ASA, AFF o FAS e risorse ASA r2
+* Protezione dei database con un mix di risorse ASA, AFF o FAS e risorse ASA r2
 * Ridenominazione degli snapshot
-* Provisioning secondario della directory di registro dell'host del plug-in SQL
+* Provisioning delle risorse di Windows
+* Protezione secondaria in caso di failover di sincronizzazione attiva SnapMirror
+* Protocollo NVMe (Nonvolatile Memory Express) se è abilitata la sincronizzazione attiva SnapMirror
+* Protezione delle applicazioni in esecuzione su AIX
+* Tech refresh
+* Ripristino di emergenza delle risorse Microsoft SQL
 

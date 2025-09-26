@@ -26,9 +26,15 @@ NOTE: I volumi applicativi supportano solo connessioni dirette NFS e iSCSI.
 ** Nel campo host Name (Nome host), immettere il nome dell'host.
 
 
-. Nella pagina Storage Footprint, inserire il nome del sistema di storage, selezionare uno o volumi e specificare i LUN o le Qtree associati.
+. Nella pagina Impronta di archiviazione, eseguire le seguenti azioni:
 +
-È possibile aggiungere più sistemi storage.
+** Selezionare il tipo di archiviazione.
+** Immettere il nome del sistema di archiviazione.
+** Selezionare le unità di archiviazione.
++
+È possibile aggiungere più unità di archiviazione.
+
+
 
 . Esaminare il riepilogo, quindi fare clic su *fine*.
 . Nella pagina Resources (risorse), selezionare *Application Volume* (Volume applicazione) dall'elenco *View* (Visualizza) per visualizzare tutti i volumi delle applicazioni aggiunti.
@@ -60,5 +66,5 @@ Se necessario, SnapCenter consente di annullare l'operazione di eliminazione.
 
 . Nel riquadro di navigazione a sinistra, fare clic su *Resources*, quindi selezionare il plug-in Oracle Database dall'elenco.
 . Nella pagina Resources (risorse), selezionare *Application Volume* (Volume applicazione) dall'elenco *View* (Visualizza).
-. Fare clic image:../media/delete_icon.gif["icona elimina"]sull'icona Elete] per modificare i valori.
+. Clicimage:../media/delete_icon.gif["icona elimina"] per eliminare il volume dell'applicazione.
 

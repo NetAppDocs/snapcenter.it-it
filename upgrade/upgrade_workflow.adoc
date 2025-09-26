@@ -13,7 +13,7 @@ summary: Descrive come aggiornare il server SnapCenter e i plug-in e quali sono 
 [role="lead"]
 Ogni release di SnapCenter contiene un pacchetto di plug-in e server SnapCenter aggiornati. Gli aggiornamenti dei pacchetti plug-in vengono distribuiti con il programma di installazione di SnapCenter. È possibile configurare SnapCenter per verificare la disponibilità di aggiornamenti.
 
-Il flusso di lavoro mostra le diverse attività richieste per aggiornare il server SnapCenter e i pacchetti plug-in.
+Il flusso di lavoro elenca le attività che è necessario completare per aggiornare i pacchetti SnapCenter Server e Plug-in.
 
 image::../media/upgrade_workflow.gif[workflow di upgrade]
 
@@ -21,20 +21,17 @@ image::../media/upgrade_workflow.gif[workflow di upgrade]
 
 == Percorsi di upgrade supportati
 
-Il percorso di aggiornamento consente di comprendere da quali versioni precedenti di SnapCenter è possibile eseguire l'aggiornamento alle versioni più recenti di SnapCenter e quali versioni dei plug-in sono supportate.
+Questa sezione mostra da quali versioni SnapCenter è possibile effettuare l'aggiornamento e quali versioni dei plug-in sono supportate.
+
+
+NOTE: Se si aggiorna SnapCenter Server alla versione 6.2, aggiornare anche i plug-in alla versione 6.2.
 
 |===
 | Se si utilizza la versione del server SnapCenter... | È possibile aggiornare direttamente il server SnapCenter a... | Versioni plug-in supportate 
 
 
-.3+| 5,0 | 6,0  a| 
-* 5,0
+.3+| 6,0 | 6.0.1  a| 
 * 6,0
-
-
-
-
-| 6.0.1  a| 
 * 6.0.1
 
 
@@ -46,25 +43,29 @@ Il percorso di aggiornamento consente di comprendere da quali versioni precedent
 
 
 
-.2+| 6,0  a| 
-6.0.1
+| 6,2  a| 
+* 6,2
+
+
+
+
+.2+| 6.0.1  a| 
+6,1
  a| 
-* 6,0
-* 6.0.1
-
-
-
-
-| 6,1  a| 
 * 6,1
 
 
 
 
-| 6.0.1 | 6,1  a| 
-* 6.0.1
-* 6,1
+| 6,2  a| 
+* 6,2
+
+
+
+
+| 6,1 | 6,2  a| 
+* 6,2
 
 
 |===
-Per informazioni sull'aggiornamento del plug-in SnapCenter per VMware vSphere, vedere https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_upgrade.html["Upgrade del plug-in SnapCenter per VMware vSphere"^].
+Per informazioni su come aggiornare il SnapCenter Plug-in for VMware vSphere, vedere https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_upgrade.html["Upgrade del plug-in SnapCenter per VMware vSphere"^] .

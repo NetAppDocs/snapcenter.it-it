@@ -1,28 +1,25 @@
 ---
 permalink: 'release-notes/what"s-new-in-snapcenter61.html' 
 sidebar: sidebar 
-keywords: what is new, features, enhancements, 6.1 
+keywords: what is new, features, enhancements, 6.2 
 summary: La release 6,1 del software SnapCenter include diverse nuove funzioni e miglioramenti. 
 ---
-= Novità del software SnapCenter 6,1
+= Novità del SnapCenter software 6.2
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-La release 6,1 del software SnapCenter include diverse nuove funzioni e miglioramenti.
+La versione 6.2 del SnapCenter software include la seguente nuova funzionalità.
 
 |===
 | Aggiornare | Descrizione 
 
 
 | link:../get-started/reference_supported_storage_systems_and_applications.html["Supporto per i sistemi ASA R2"]  a| 
-SnapCenter ora supporta i sistemi ASA R2 che creano un'esperienza semplificata specifica delle esigenze dei clienti che utilizzano solo SAN.
+SnapCenter 6.2 (server e plug-in) insieme a ONTAP 9.17.1 supporta sia la protezione primaria che quella secondaria delle applicazioni in esecuzione su sistemi fisici (Linux e Windows) e Virtual Machine File System (VMFS) utilizzando gruppi di coerenza gerarchica.
 
-
-
-| Supporta lo snapshot secondario antimanomissione  a| 
-SnapCenter consente di specificare il periodo di blocco per gli snapshot secondari.
+Dopo l'aggiornamento a SnapCenter 6.2 e ONTAP 9.17.1, SnapCenter modifica i gruppi di coerenza semplici in gruppi di coerenza gerarchici durante il primo backup pianificato.
 
 |===

@@ -2761,8 +2761,6 @@
   <block id="8544e54da381581f9b9e4e593c42cb57" category="list-text">Fare clic su *Add Application Volume* (Aggiungi volume applicazione).</block>
   <block id="3e98357302d4518e158bc9dc7f45c162" category="list-text">Nel campo Name (Nome), immettere il nome del volume dell'applicazione.</block>
   <block id="53b78d17407010f7e0c4051f330998b4" category="list-text">Nel campo host Name (Nome host), immettere il nome dell'host.</block>
-  <block id="2e1075c2f00fe853dfc8acda6a66a53f" category="list-text">Nella pagina Storage Footprint, inserire il nome del sistema di storage, selezionare uno o volumi e specificare i LUN o le Qtree associati.</block>
-  <block id="bc1281f9dd3caf1b8951ef83af9fbe38" category="paragraph">È possibile aggiungere più sistemi storage.</block>
   <block id="80e5eb37566e84270d23254e8f050156" category="list-text">Nella pagina Resources (risorse), selezionare *Application Volume* (Volume applicazione) dall'elenco *View* (Visualizza) per visualizzare tutti i volumi delle applicazioni aggiunti.</block>
   <block id="088ea09c5845b030ebf8ae5975d090cb" category="section-title">Modificare il volume dell'applicazione</block>
   <block id="6c6c48e7a3a56b7164aaa8b8eb204354" category="paragraph">Se non vengono creati backup, è possibile modificare tutti i valori specificati durante l'aggiunta del volume dell'applicazione. Se il backup viene creato, è possibile modificare solo i dettagli del sistema di storage.</block>
@@ -3501,7 +3499,6 @@
   <block id="adebd9b53fa49781be98cf46c0afc646" category="summary">Descrive come aggiornare il server SnapCenter e i plug-in e quali sono i percorsi di aggiornamento supportati</block>
   <block id="5b416e1633d16aad217a2e0fc2d097f8" category="doc">Workflow di upgrade</block>
   <block id="994e8a3ae2b587ba4467292fb5e6ba75" category="paragraph">Ogni release di SnapCenter contiene un pacchetto di plug-in e server SnapCenter aggiornati. Gli aggiornamenti dei pacchetti plug-in vengono distribuiti con il programma di installazione di SnapCenter. È possibile configurare SnapCenter per verificare la disponibilità di aggiornamenti.</block>
-  <block id="1942fea7712357c67be30cfd20652b93" category="paragraph">Il flusso di lavoro mostra le diverse attività richieste per aggiornare il server SnapCenter e i pacchetti plug-in.</block>
   <block id="f640c846348fd61e77b392f8bb721f0c" category="image-alt">workflow di upgrade</block>
   <block id="eccc8325175b53fdef9a1846222d4161" category="section-title">Percorsi di upgrade supportati</block>
   <block id="521d29d37f5561d4922ece42dc92cb07" category="cell">Se si utilizza la versione del server SnapCenter...</block>
@@ -3534,8 +3531,6 @@
   <block id="c3ab820456c9495a13e6c8d3bf203adb" category="list-text">Backup dell'app e ruolo di amministratore del clone</block>
   <block id="9cbf4a13bbbfd716d85a344992a28d5c" category="list-text">Ruolo di Backup e Clone Viewer</block>
   <block id="c79885b0ddab0b04ef9ffcd2a2adc001" category="list-text">Ruolo di amministratore dell'infrastruttura</block>
-  <block id="c6e575969465b9ba25194550f4409a37" category="paragraph">Quando si aggiunge un utente a un ruolo, è necessario assegnare l'autorizzazione StorageConnection per abilitare la comunicazione SVM (Storage Virtual Machine) o assegnare una SVM all'utente per abilitare l'autorizzazione all'utilizzo di SVM. L'autorizzazione connessione storage consente agli utenti di creare connessioni SVM.</block>
-  <block id="a1a7f8fc168b0e00b72aa67994aca50a" category="paragraph">Ad esempio, un utente con il ruolo di amministratore SnapCenter può creare connessioni SVM e assegnarle a un utente con il ruolo di backup dell'applicazione e amministratore clone, che per impostazione predefinita non dispone dell'autorizzazione per creare o modificare connessioni SVM. Senza una connessione SVM, gli utenti non possono completare alcuna operazione di backup, clonazione o ripristino.</block>
   <block id="9c841e2716f76afb092d7a07c5b70179" category="paragraph">Il ruolo di amministratore di SnapCenter ha tutte le autorizzazioni attivate. Non è possibile modificare le autorizzazioni per questo ruolo. È possibile aggiungere utenti e gruppi al ruolo o rimuoverli.</block>
   <block id="a874cfab5c47d6543b2c7212ad2c31f5" category="paragraph">Il ruolo App Backup and Clone Admin dispone delle autorizzazioni necessarie per eseguire azioni amministrative per i backup delle applicazioni e le attività correlate ai cloni. Questo ruolo non dispone di autorizzazioni per la gestione degli host, il provisioning, la gestione della connessione dello storage o l'installazione remota.</block>
   <block id="d08ccf52b4cdd08e41cfb99ec42e0b29" category="cell">Permessi</block>
@@ -3561,7 +3556,6 @@
   <block id="1281764038ea27ade56d7d2b8be22798" category="paragraph">Smontare</block>
   <block id="0d73a80a294d9fcca263cef71862af94" category="paragraph">Ripristino completo del volume</block>
   <block id="c3c73b7f9d382d2231b0aa3e8a26db67" category="paragraph">Monitoraggio del processo</block>
-  <block id="df44602e169cb1f9dbb6288c7e86985e" category="paragraph">Il ruolo Backup and Clone Viewer (Visualizzatore di backup e clonazione) dispone di una vista in sola lettura di tutte le autorizzazioni. Questo ruolo dispone anche di autorizzazioni abilitate per il rilevamento, la creazione di report e l'accesso al dashboard.</block>
   <block id="969d7fda8acd2ab121789be3a975bbb4" category="paragraph">Il ruolo Infrastructure Admin (Amministratore dell'infrastruttura) dispone di autorizzazioni abilitate per la gestione degli host, la gestione dello storage, il provisioning, i gruppi di risorse, i report di installazione remota, E l'accesso alla dashboard.</block>
   <block id="6309043436d4e7e5bad9a81c89ff15e4" category="doc">Panoramica di SnapCenter</block>
   <block id="6d02db19251dfec578c356202bfb1bdc" category="list-text">Backup rapidi, efficienti in termini di spazio, coerenti con le applicazioni e basati su disco</block>
@@ -3632,17 +3626,12 @@
   <block id="eb3b9ec963eb618621a779602a309514" category="inline-link-macro">Flussi di lavoro API REST per il disaster recovery del server SnapCenter</block>
   <block id="717bb61127675bdfbac9d09d06c4bd89" category="paragraph-title">Plug-in SnapCenter e DR storage</block>
   <block id="c89d1d1a076ae6db4420d478e9a43bd1" category="summary">Le autorizzazioni RBAC (Role-Based Access Control) e ONTAP di SnapCenter consentono agli amministratori di SnapCenter di creare ruoli e impostare le autorizzazioni di accesso. Questo accesso gestito centralmente consente agli amministratori delle applicazioni di lavorare in modo sicuro all'interno degli ambienti delegati.</block>
-  <block id="a6434cb33fd5968114b46f8371c99b97" category="paragraph">Le autorizzazioni RBAC (Role-Based Access Control) e ONTAP di SnapCenter consentono agli amministratori di SnapCenter di delegare il controllo delle risorse SnapCenter a diversi utenti o gruppi di utenti. Questo accesso gestito centralmente consente agli amministratori delle applicazioni di lavorare in modo sicuro all'interno degli ambienti delegati.</block>
-  <block id="e8a9ea3436295dbce3f5e848ea8c441a" category="admonition">Non è possibile utilizzare SnapCenter per creare account utente o di gruppo. È necessario creare account utente o di gruppo in Active Directory del sistema operativo o del database.</block>
-  <block id="8b4e9abf70f654cf29a1dd56b5572032" category="paragraph">SnapCenter utilizza i seguenti tipi di controllo degli accessi in base al ruolo:</block>
   <block id="5e8182c0fb39e16fe0a96577565e2e28" category="list-text">SnapCenter RBAC</block>
   <block id="9624ca855be2906ad6628109f1d9e3d0" category="list-text">RBAC a livello applicativo</block>
   <block id="67c73d0c05c627af68622cc01164ae15" category="list-text">Permessi ONTAP</block>
   <block id="57dc1aab3659c78a4e7752db4d4e652d" category="paragraph">È possibile assegnare le autorizzazioni RBAC a utenti e gruppi all'interno della stessa foresta e a utenti appartenenti a foreste diverse. Non è possibile assegnare autorizzazioni RBAC agli utenti appartenenti a gruppi nidificati tra foreste.</block>
   <block id="c75f7811d70d17dbcd88e9d03752cbed" category="section-title">Autenticazione</block>
-  <block id="f99af3f9d6fe830ae8bd2fc15f75f35f" category="paragraph">Gli utenti devono fornire l'autenticazione durante l'accesso, tramite l'interfaccia grafica utente (GUI) o utilizzando i cmdlet PowerShell. Se gli utenti sono membri di più ruoli, dopo aver immesso le credenziali di accesso, viene richiesto di specificare il ruolo che si desidera utilizzare. Gli utenti devono inoltre fornire l'autenticazione per eseguire le API.</block>
   <block id="4621c32301e9db3796cade120966e4ac" category="paragraph">SnapCenter utilizza le credenziali per verificare che gli utenti SnapCenter autorizzati dispongano anche delle autorizzazioni a livello di applicazione.</block>
-  <block id="1247a4f73aec617351c15da7677f2470" category="paragraph">Allo stesso modo, se si desidera eseguire operazioni di protezione dei dati su un database Oracle e se l'autenticazione del sistema operativo (OS) è disattivata nell'host del database, è necessario impostare le credenziali con il database Oracle o con le credenziali ASM Oracle. Il server SnapCenter autentica il set di credenziali utilizzando uno di questi metodi, a seconda dell'operazione.</block>
   <block id="880474ac5a13e7ace0b497d868bfcec8" category="section-title">Plug-in SnapCenter per VMware vSphere RBAC</block>
   <block id="c30d59401403b986989fc4a149ff2aea" category="summary">SnapCenter utilizza rigide funzionalità di sicurezza e autenticazione per garantire la sicurezza dei dati.</block>
   <block id="79333b6bf46efb54b1410de6b731a635" category="paragraph">SnapCenter include le seguenti funzioni di sicurezza:</block>
@@ -3684,7 +3673,6 @@
   <block id="a8b41ff3cf6d5a098fc3bc734aaecc1c" category="section-title">Output dello script</block>
   <block id="7d901a35f38f46ac340bf0fcef37cb9d" category="paragraph">La directory predefinita per i file di output delle prescrizioni e dei post-script di Windows è Windows System32.</block>
   <block id="7a21760d7cbd0896708b77121ef519dc" category="paragraph">Non esiste una posizione predefinita per le prescrizioni e i postscript UNIX. È possibile reindirizzare il file di output in qualsiasi posizione preferita.</block>
-  <block id="8e9100a341414c9d65801258490fe489" category="cell">*Best practice:* NetApp consiglia di creare un ruolo ONTAP per il plug-in SnapCenter per le operazioni VMware vSphere e assegnargli tutti i privilegi richiesti.</block>
   <block id="0e8b55402d6627c0f8102010e3494744" category="inline-link-macro">Come accedere alle API REST utilizzando la pagina web delle API di swagger</block>
   <block id="3ded167f4ad4afb85c6ace5862e27ba0" category="cell">Metodo HTTP</block>
   <block id="7528035a93ee69cedb1dbddb2f0bfcc8" category="paragraph">OTTIENI</block>
@@ -7285,7 +7273,6 @@ Il ripristino di una singola casella postale di NetApp® è giunto alla fine del
   <block id="106eca4a643cd4a82ba724aaf63cf399" category="sidebar">Ripristinare e ripristinare i file system Unix</block>
   <block id="acebdece1b3734e875859ee761ab347e" category="sidebar">Clona file system Unix</block>
   <block id="1121f6eb8ee08b3fbbc4d05a5ee6ca76" category="sidebar">Tech refresh</block>
-  <block id="336669dbe720233ed5577ddf81b653d3" category="cell">5,0</block>
   <block id="4bb4114cf33351f203faec5f1e34960e" category="paragraph"><block ref="11d2d1b194d6948e42dc38dca8202191" category="inline-link-rx"></block></block>
   <block id="9166c380efba6c6a0d61dc08bcc135ee" category="summary">Creare un criterio di backup per la risorsa o il gruppo di risorse di cui si desidera eseguire il backup.</block>
   <block id="73f45971c435fbf9828b3c34fe76a670" category="paragraph">Prima di utilizzare SnapCenter per eseguire il backup delle risorse di database Oracle, è necessario creare un criterio di backup per la risorsa o il gruppo di risorse di cui si desidera eseguire il backup.</block>
@@ -7870,7 +7857,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="4c6ec01f6ae03e08c146fe6865423a4b" category="list-text">PowerShell 7.4.2 o versione successiva</block>
   <block id="149d1be25c7d76696b875863179ac66d" category="list-text">Nginx è un server web che può essere usato come proxy inverso</block>
   <block id="6d4ed4face9b51c5caae12208e47fa1e" category="paragraph">PAM (Plugggable Authentication Modules) è uno strumento di protezione del sistema che consente agli amministratori di sistema di impostare i criteri di autenticazione senza dover ricompilare i programmi che eseguono l'autenticazione.</block>
-  <block id="47217be9e2af813e09f7a7760c32e8ce" category="paragraph">Supporta NVMe (non-volatile Memory Express) su TCP (Transport Control Protocol).</block>
   <block id="2e2da9aed107a3761b9b4f5441c315fc" category="summary">Se non si dispone di un account NetApp esistente, attenersi alla seguente procedura per registrarsi per accedere al software.</block>
   <block id="377990998ce406bfbee44e98450fd025" category="doc">Effettuare la registrazione per accedere al software SnapCenter</block>
   <block id="e50fd9dc4c667a815c84bcd3a7168b40" category="list-text">È necessario avere accesso all'ID e-mail aziendale.</block>
@@ -8888,7 +8874,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="8bd5c68a1ade9c22f98424902eb6b969" category="admonition">I sistemi DB2 PureScale e DB2 Multipode (DPF) non sono supportati.</block>
   <block id="89f4d38108821acdbf6cd6b780454397" category="summary">I percorsi di aggiornamento supportati per SnapCenter.</block>
   <block id="5097f966477870c178d6885558d88ef0" category="doc">Percorsi di aggiornamento supportati per SnapCenter</block>
-  <block id="917e552e8290664f15e1332b2d723ec0" category="paragraph">Il percorso di aggiornamento consente di comprendere da quali versioni precedenti di SnapCenter è possibile eseguire l'aggiornamento alle versioni più recenti di SnapCenter e quali versioni dei plug-in sono supportate.</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">Note di rilascio</block>
   <block id="8b7c42123642e2e4ea7dd426aeb2de58" category="list-text">NVMe/TCP</block>
   <block id="e32c19b9fdeb1a3c3b963304701ce944" category="list-text">VMDK su VMFS creato su NVMe/TCP</block>
@@ -8948,7 +8933,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="150f5e2d2bbfc9515a0cf19f5cfb78cf" category="list-text"><block ref="b58bfe0f03c84dd62a9ee2931ced9b8e" prefix="" category="inline-code"></block></block>
   <block id="dc7e4332f30a78544c57ff51a169f4c2" category="summary">Se si configurano SVM in sistemi ASA R2 da utilizzare con SanpCenter, è necessario creare ruoli SVM senza utilizzare il ruolo di vsadmin,</block>
   <block id="48dba86fa4ce5de943ef3072ea74d595" category="doc">Creare ruoli SVM per i sistemi ASA R2</block>
-  <block id="0c645d1cfd7f66061d3e5a68e06bc4df" category="paragraph">Esistono diversi comandi della CLI di ONTAP che devi eseguire per creare un ruolo per un nuovo utente SVM nei sistemi ASA R2. Questo ruolo è necessario se si configurano SVM nei sistemi ASA R2 da utilizzare con SnapCenter e non si desidera utilizzare il ruolo vsadmin.</block>
   <block id="3a3326ab8a855eda366dde90677dcceb" category="paragraph"><block ref="8116804423bfe31ed3dfa65643146cde" prefix="" category="inline-code"></block></block>
   <block id="ceb09374475caa40385e66db6413f535" category="list-text"><block ref="62422d81270184927cae1001a7799732" prefix="" category="inline-code"></block></block>
   <block id="2523fae0d4c9e7a295a409276c552f2b" category="list-text"><block ref="58c812fa3d72aa1f67c5bcf47b8d10b2" prefix="" category="inline-code"></block></block>
@@ -8958,13 +8942,8 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="1f46b6eec6f3def165a94aea4fbd2de8" category="list-text"><block ref="d873942b6f54bbecd97eb915c6e95c45" prefix="" category="inline-code"></block></block>
   <block id="73c050ddeaec2b5e5a856c81666f8026" category="list-text">Fare clic <block ref="725f4bf2ffc300942027282d0182533f" category="inline-image-macro-rx" type="image"></block> sull'icona, quindi su *Abilita convalida certificato*.</block>
   <block id="989977a18a476a92018e04dd60ec37c1" category="inline-link">Scopri di più sui sistemi ASA R2</block>
-  <block id="b3c78f6e772922673e6d35ae6df26cbd" category="list-text">Creazione di backup primari delle applicazioni su VMDK</block>
-  <block id="7e358fa759baa4f70a96f79cf29b4c61" category="list-text">Trasferimento delle snapshot del gruppo di coerenza al sistema di storage secondario</block>
   <block id="a0f3e47cc5179a026d7b861797055f6d" category="list-text">RDM (Raw Device Mapping)</block>
-  <block id="b47dab3c647bba9b7ad0a8fc0cde81dc" category="list-text">Volumi di applicazioni per Oracle</block>
-  <block id="7236f926bc1402ad0d847fd55a34001d" category="list-text">SAP HANA NDV</block>
   <block id="da612433b3e7d1bdc94a92a26f362677" category="list-text">LockVault</block>
-  <block id="425514993f273b658b0218c334836b26" category="list-text">Gruppo di coerenza gerarchica</block>
   <block id="980869fd79cd78a3682752206f149791" category="list-text">Ridenominazione degli snapshot</block>
   <block id="bc3c828cce582fafd1e35e77b8c84327" category="cell">Port Name (Nome porta)</block>
   <block id="f78fb51edae6a69d5e1e911a2b6fc268" category="cell">Numeri di porta</block>
@@ -9013,8 +8992,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="b618a910cf6913786f002b81f8c68b29" category="inline-image-macro">icona non definita</block>
   <block id="f79223ed88950e342e86b7b49a4754b0" category="list-text">* *<block ref="31f3aaed9a9bf45960790968b6c989cf" category="inline-image-macro-rx" type="image"></block>indica che non è stato possibile recuperare le informazioni di connessione.</block>
   <block id="dddf3c98ce717f2c803bfbb3e00ab335" category="list-text">Fare clic su <block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block> per registrare un nuovo dominio.</block>
-  <block id="7194a77b27ca79615dcf6dd232710c52" category="inline-link">Avviso per SnapCenter 6,1</block>
-  <block id="077b1607930ff1f5ea2a35c6bd385625" category="paragraph"><block ref="077b1607930ff1f5ea2a35c6bd385625" category="inline-link-rx"></block></block>
   <block id="ddc7a1dcd5b30eb0947ce31cc8f2d939" category="list-text">Selezionare * *<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>nella colonna Configura pianificazioni per il criterio per il quale si desidera configurare una pianificazione.</block>
   <block id="2cd8b8c68f6fcf7e0dad392639951464" category="list-text">Selezionare il criterio per cui si desidera configurare la pianificazione della verifica, quindi fare clic su * *<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>.</block>
   <block id="26d41db9e082320c220bc9f4fdc9368a" category="list-text">Nella colonna Configura pianificazioni, fare clic su * *<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>per il criterio che si desidera configurare.</block>
@@ -9063,7 +9040,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="54131ac137e0428a48243c6552fd5559" category="paragraph">Vedere <block ref="582182fe79d6b435038edcbe448ef476" category="inline-link-macro-rx"></block>.</block>
   <block id="b2c46b2b0702b19d5fccc4f1b9f8648a" category="paragraph">Per ulteriori informazioni sul vault di SnapLock, vedere commit Snapshot to WORM su una destinazione del vault.</block>
   <block id="d2b3fcd21580309bc53248671abf5edb" category="image-alt">Flusso di lavoro dei plug-in supportati da SnapCenter NetApp</block>
-  <block id="6dbd0d50e334f8371da5ec40fc37adb2" category="list-text">Se si dispone di più percorsi di dati (LIF) in SVM, SnapCenter sceglie il percorso di dati appropriato per il montaggio del volume clonato NFS. Tuttavia, se si desidera specificare un percorso dati specifico (LIF), è necessario eseguire la CLI Set-SvmPreferredDataPath. Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento anche a<block ref="a6987fd1f481831496b6e000c63cd27d" category="inline-link-rx"></block>.</block>
   <block id="3b666c1c85e6d7621ddbf36de893633c" category="paragraph"><block ref="3b666c1c85e6d7621ddbf36de893633c" category="inline-link-macro-rx"></block></block>
   <block id="cdfd383dc16da3ad6abe4e1c059a6094" category="list-text">Nella pagina Backup e replica, eseguire le seguenti operazioni:</block>
   <block id="a01b7da75a123f67d2bd092bd390357b" category="inline-link-macro">Visualizzare i backup e i cloni relativi alle risorse PostgreSQL nella pagina topologia</block>
@@ -9082,12 +9058,10 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="41b7523d6eb2b3d6f06599d202b36bc2" category="paragraph">Periodo di blocco dell'istantanea primaria</block>
   <block id="bdb12321d80003b575f05b8f7554d39f" category="paragraph">Selezionare *periodo blocco copia istantanea primaria*, quindi giorni, mesi o anni.</block>
   <block id="a76a81f87730cc587fdae2f40fc9d18b" category="paragraph">Fare clic su <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block> e selezionare il nome host e il server Exchange per filtrare le risorse. È quindi possibile fare clic su <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block> per chiudere il riquadro del filtro.</block>
-  <block id="95ca7268c72e31c20f65d0b5b54ea8c6" category="list-text">Fare clic <block ref="f790bf9188cee374d2bb1f3790c6a393" category="inline-image-macro-rx" type="image"></block>sull'icona Elete] per modificare i valori.</block>
   <block id="dffd94234b3c1a116e4948ff3c5072e3" category="list-text">Per l'host AIX:<block ref="b116e79e4da50b16dcaed1ed3f1567e1" prefix=" " category="inline-code"></block></block>
   <block id="d1f43f7b8d3d193845fa35a92bbdd6a6" category="paragraph">È possibile eseguire una ricerca nel gruppo di risorse immettendo il nome del gruppo di risorse nella casella di ricerca oppure facendo clic su * *<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>e quindi selezionando il tag. È quindi possibile fare clic su * *<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>per chiudere il riquadro del filtro.</block>
   <block id="c00a655ac4b7e93c83b7d1e532a271e3" category="list-text">Fare clic su * *<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>, quindi selezionare il nome host e il tipo di database per filtrare le risorse.</block>
   <block id="f63dd098114d3f8b75e78f18fe6c2a93" category="list-text">Fare clic <block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block> nella colonna Configura pianificazioni per il criterio per il quale si desidera configurare una pianificazione.</block>
-  <block id="92d77f5c034495123ea4c7adc77aeefa" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help command_name. In alternativa, fare riferimento a<block ref="a6987fd1f481831496b6e000c63cd27d" category="inline-link-rx"></block>.</block>
   <block id="0930d24a992b94bd9c44e45e7df5d54f" category="list-text">Selezionare la risorsa clonata e fare clic su <block ref="16199d2eb7d7252498e560be9c8c8d7c" category="inline-image-macro-rx" type="image"></block>.</block>
   <block id="e41304e7d689f8fed5c98620228184cf" category="inline-link">Utilizzo di host Linux con storage ONTAP</block>
   <block id="4261289fb5bad467a2ad973679d86c14" category="list-text"><block ref="4261289fb5bad467a2ad973679d86c14" category="inline-link-rx"></block></block>
@@ -9096,7 +9070,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="f4e54f1fe48ac3ce5112308b1eceabc9" category="list-text">Fare clic su <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>, quindi selezionare il nome host e il tipo di database per filtrare le risorse.</block>
   <block id="cf36ffc4ba53a8ecbd58193758b7e7f2" category="list-text">Immettere il nome del gruppo di risorse nella casella di ricerca o fare clic su <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>, quindi selezionare il tag.</block>
   <block id="fab9a033dfbc33ab049bd62138584423" category="paragraph">Fare clic su <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block> per chiudere il riquadro del filtro.</block>
-  <block id="0368e71bb17355bfa46d48de37edc0d2" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help _command_name_. In alternativa, fare riferimento anche a<block ref="a6987fd1f481831496b6e000c63cd27d" category="inline-link-rx"></block>.</block>
   <block id="61cdbe28fdf91e577bdcd2f7eb0d2b9d" category="paragraph">È possibile aggiungere altri parametri facendo clic su * *<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>.</block>
   <block id="c784d3cba09b3b53f393f1421e45c4df" category="section-title">Aggiornare l'IP preferito sull'host</block>
   <block id="85ad854c35f24af1b7c52632e891c37a" category="paragraph">Al termine dell'operazione di clonazione, il percorso fornito dal livello di accesso allo storage (SAL) al clone sarà in formato _&lt;nfs_lif_IP&gt;:&lt;JunctionPath&gt;_. Per fornire l'IP preferito, è necessario configurarlo sull'host utilizzando i comandi SCCLI.</block>
@@ -9117,15 +9090,11 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="eb1d9d00c6e807619cab9ea37bcf137a" category="list-text">Nella sezione Impostazioni conservazione istantanea dati , specificare le impostazioni di conservazione per il tipo di backup e il tipo di pianificazione selezionato nella pagina tipo di backup:</block>
   <block id="218bd996ffd443419d26b630b917d4da" category="list-text">Nella sezione Impostazioni di conservazione snapshot registro archivio, specificare le impostazioni di conservazione per il tipo di backup e il tipo di pianificazione selezionato nella pagina tipo di backup:</block>
   <block id="17e51acfcdd274bfcfeb54ea63213736" category="list-text">Selezionare l'etichetta del criterio.</block>
-  <block id="e38051a0d9227426e5f8160402a78211" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help command_name. In alternativa, fare riferimento anche a<block ref="a6987fd1f481831496b6e000c63cd27d" category="inline-link-rx"></block>.</block>
   <block id="8a2ba757e81446f3bb13c549e71a6fe2" category="list-text">Selezionare il clone PDB (targetCDB:PDBClone), quindi fare clic su <block ref="f790bf9188cee374d2bb1f3790c6a393" category="inline-image-macro-rx" type="image"></block>.</block>
   <block id="81dfe22f147e5863ac036d5825fc0d36" category="paragraph">Fare clic <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>sull'icona ilter], quindi selezionare il nome host e il tipo di database per filtrare le risorse. Quindi, fare clic sull'icona imagfilter_icon.gif[filter icon]_icon.png[] per chiudere il riquadro del filtro.</block>
-  <block id="669176988e2770456c38c567c99afee6" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help _command_name_. In alternativa, fare riferimento anche a<block ref="a6987fd1f481831496b6e000c63cd27d" category="inline-link-rx"></block>.</block>
-  <block id="796405e4b0f07f89056f5608f7f10669" category="paragraph">Per informazioni dettagliate sui comandi UNIX, vedere<block ref="a6987fd1f481831496b6e000c63cd27d" category="inline-link-rx"></block>.</block>
   <block id="4fb3b2f69e00418d4f3dcd3ecbd61d1e" category="list-text">Selezionare la risorsa clonata, ad esempio il database o il LUN, quindi fare clic su <block ref="16199d2eb7d7252498e560be9c8c8d7c" category="inline-image-macro-rx" type="image"></block>.</block>
   <block id="c0eb997ff74c60645cc757d2031ca50a" category="list-text">Selezionare il clone PDB (targetCDB:PDBClone), quindi fare clic su <block ref="16199d2eb7d7252498e560be9c8c8d7c" category="inline-image-macro-rx" type="image"></block>.</block>
   <block id="e13720033977db6e0527dfee3b780f5b" category="list-text">Se si desidera eliminare un clone, selezionarlo dalla tabella, quindi fare clic su <block ref="f790bf9188cee374d2bb1f3790c6a393" category="inline-image-macro-rx" type="image"></block>.</block>
-  <block id="c3574823a3ee32c7dee18739df74fe59" category="paragraph">In alternativa, è possibile fare riferimento anche a<block ref="a6987fd1f481831496b6e000c63cd27d" category="inline-link-rx"></block> o<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>.</block>
   <block id="8ee05325e57cc519cdb31ab5c97c3054" category="image-alt">mappatura asimmetrica delle lun</block>
   <block id="c347b6ffeaa299dea564511a8a531ca5" category="doc">Creare gruppi di risorse e abilitare la protezione secondaria per le risorse Microsoft SQL Server nei sistemi ASA R2</block>
   <block id="8d2ad583a58059f543540eb44dc0662b" category="list-text">Per ottimizzare l'operazione di backup, è necessario creare un record di ricerca inversa dei nomi dei cluster Windows e degli indirizzi IP nel server DNS.</block>
@@ -9168,16 +9137,8 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="e1282ba4f34b11ff282fb7d9970b2736" category="paragraph">Copie Snapshot totali da conservare</block>
   <block id="890049ee281f6f438392008ad804b79b" category="paragraph">Mantieni copie Snapshot per</block>
   <block id="cd57cfd18c8588efd33f1587c562e1f0" category="list-text">È necessario aver installato ASP.NET Core Runtime 8.0.12 (e tutte le successive patch 8,0.x) Hosting Bundle.</block>
-  <block id="37a72f0a6be56bf333e34afd56e02051" category="paragraph">Scoprite le nuove e migliorate funzioni disponibili in SnapCenter 6,1.</block>
-  <block id="9b158dce63142730ba189d0e12431ec8" category="inline-link-macro">Novità di SnapCenter 6,1</block>
-  <block id="4a0c8bd65f8fdcc6af3bc9ef18a3f989" category="paragraph">Per un elenco completo delle nuove funzioni e dei miglioramenti, vedere <block ref="4f8e9916d8d6ddf6a19a65cc210544e6" category="inline-link-macro-rx"></block>.</block>
-  <block id="4a3f09c73e2dacacbebddfd96cac1948" category="inline-link">Note sulla versione del software SnapCenter 6,1</block>
-  <block id="77400fe4524142ac29310162939726cb" category="paragraph">Per informazioni dettagliate su problemi noti, limitazioni, problemi risolti e comandi nuovi e modificati, vedere<block ref="5c68c6454568b27710c4196bb910da4f" category="inline-link-rx"></block> . Per accedere alle Note di rilascio, è necessario accedere con l'account NetApp o creare un account.</block>
   <block id="d6eb82c324cab2f36e345863fad95090" category="cell">6,1</block>
   <block id="1e095c69621645fccc8f12cd7f35f6fc" category="inline-link-macro">Supporto per i sistemi ASA R2</block>
-  <block id="cc753d144910e12701641281c8cb88ed" category="paragraph">SnapCenter ora supporta i sistemi ASA R2 che creano un'esperienza semplificata specifica delle esigenze dei clienti che utilizzano solo SAN.</block>
-  <block id="915d43127ff96a6e94b70e22873bdfb5" category="cell">Supporta lo snapshot secondario antimanomissione</block>
-  <block id="3725caead33410ce98d5a292b7c0cc95" category="paragraph">SnapCenter consente di specificare il periodo di blocco per gli snapshot secondari.</block>
   <block id="92d37724657724129ae0451584c728aa" category="inline-link">Rimuovere il plug-in SnapCenter per VMware vSphere</block>
   <block id="79cfb9f00fa8ea603f631e679e453fad" category="paragraph">Per informazioni sulla disinstallazione del plug-in SnapCenter per VMware vSphere, vedere<block ref="cae8a6db54fa4da6d80207fee61e78d1" category="inline-link-rx"></block>.</block>
   <block id="9792c7ba1a8a833a1c75e11c4a7b46c3" category="list-text">Se si desidera aggiornare più host, selezionare tutti gli host, fare clic su , quindi fare clic su <block ref="725f4bf2ffc300942027282d0182533f" category="inline-image-macro-rx" type="image"></block>*Upgrade* &gt; *OK*.</block>
@@ -9239,10 +9200,7 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="5c8b8bc332cb41802ffbe6c5cda258ab" category="paragraph">È supportato il layout dello storage virtuale VMDK, vVol e RDM.</block>
   <block id="e5385a9de21528bfedd644f4c0331eb1" category="summary">Il software SnapCenter è una piattaforma semplice, centralizzata e scalabile che offre data Protection coerente con l'applicazione per applicazioni, database, file system host e VM su sistemi ONTAP ovunque nel cloud ibrido.</block>
   <block id="68578ccfcf5117ca8a9a2d7d884e320f" category="summary">La release 6,1 del software SnapCenter include diverse nuove funzioni e miglioramenti.</block>
-  <block id="600ede45d5c4a07242a73e3a5a885e15" category="doc">Novità del software SnapCenter 6,1</block>
-  <block id="8f13c7650e8ef95e186d64196ea879a5" category="sidebar">Il software SnapCenter è una piattaforma semplice, centralizzata e scalabile che offre data Protection coerente con l'applicazione per applicazioni, database, file system host e VM su sistemi ONTAP ovunque nel cloud ibrido. Questa libreria di documentazione include informazioni sulla versione 6,1.</block>
   <block id="8127605cde4cee83a23b35f1207c7572" category="sidebar">Documentazione del software SnapCenter</block>
-  <block id="f3e84c2e19a0aa80c716ba1fc7f07e0e" category="sidebar">Documentazione del software SnapCenter 6,1</block>
   <block id="e76a4ae8df1bf6770838ce7c7d94e229" category="paragraph">Avviare i servizi plug-in (applicabile solo per i plug-in in esecuzione sull'host Windows)</block>
   <block id="8e6af76634121af640a2987aea883af4" category="doc">Metodi di autenticazione per le credenziali SnapCenter</block>
   <block id="ab1717232c31936a0349a64fd823f3c9" category="paragraph">Le credenziali utilizzano metodi di autenticazione diversi a seconda dell'applicazione o dell'ambiente. Le credenziali autenticano gli utenti in modo che possano eseguire operazioni SnapCenter. È necessario creare un set di credenziali per l'installazione dei plug-in e un altro per le operazioni di protezione dati.</block>
@@ -9339,16 +9297,10 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="0c009e2dd71d00302c96ee23f56096a6" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> Proteggere l'applicazione</block>
   <block id="52a52f83f343872ccfdccea36d808fbe" category="paragraph">Dopo aver installato correttamente il server SnapCenter e i plug-in necessari, è possibile avviare la creazione dei backup delle applicazioni. Questi backup possono essere utilizzati successivamente a scopi di ripristino e cloning, quando necessario.</block>
   <block id="f13285409ed0f9b4e02f4b32dde1d33b" category="doc">Role-based access control in SnapCenter</block>
-  <block id="c9828fe019b2727bf358cb0c2478e00e" category="paragraph">È possibile creare e modificare ruoli e aggiungere accesso alle risorse agli utenti in qualsiasi momento. Tuttavia, quando si imposta SnapCenter per la prima volta, è necessario aggiungere almeno utenti o gruppi di Active Directory ai ruoli e quindi aggiungere l'accesso alle risorse a tali utenti o gruppi.</block>
   <block id="d57877ec626f302c9e7b1e10875a9aba" category="section-title">Tipi di RBAC in SnapCenter</block>
   <block id="de366de90ac02d57b616cbb9abcdf3bf" category="list-text">Plug-in SnapCenter per VMware vSphere RBAC</block>
-  <block id="8592af0d51ce75785397c9766e688d3e" category="paragraph">SnapCenter dispone di ruoli predefiniti ed è possibile assegnare utenti o gruppi di utenti a tali ruoli. I ruoli predefiniti sono:</block>
-  <block id="007a5b05d417439d7f97ec008cdc5503" category="paragraph">Quando si assegna un ruolo a un utente, solo i lavori rilevanti per tale utente sono visibili nella pagina lavori a meno che non sia stato assegnato il ruolo SnapCenterAdmin.</block>
   <block id="9ca340103de1d28a94c059e44a33383f" category="paragraph">È inoltre possibile creare nuovi ruoli e gestire autorizzazioni e utenti. È possibile assegnare autorizzazioni a utenti o gruppi per accedere a oggetti SnapCenter come host, connessioni di storage e gruppi di risorse.</block>
-  <block id="2f76e68b8e64dc2201f5063e384a8abe" category="admonition">Se si crea un ruolo personalizzato, deve contenere tutte le autorizzazioni del ruolo SnapCenterAdmin. Se si copiano solo alcune delle autorizzazioni, ad esempio aggiunta host o rimozione host, non è possibile eseguire tali operazioni.</block>
-  <block id="39c904af75907a4d55bdd66945c2263a" category="paragraph">Ad esempio, se si desidera eseguire operazioni di protezione dei dati in un ambiente SQL Server, è necessario impostare le credenziali con le credenziali Windows o SQL appropriate. Il server SnapCenter autentica il set di credenziali utilizzando uno dei due metodi. Per eseguire operazioni di protezione dei dati in un ambiente file system Windows sullo storage ONTAP, il ruolo di amministratore del SnapCenter deve disporre di admin Privileges sull'host Windows.</block>
   <block id="c8bff4b06f4bf572d4901653835a04c3" category="paragraph">Se si utilizza il plug-in VMware di SnapCenter per la protezione dei dati coerente con le macchine virtuali, il server vCenter fornisce un livello aggiuntivo di RBAC. Il plug-in SnapCenter VMware supporta sia vCenter Server RBAC che ONTAP RBAC.<block ref="8ce4aadb919efeeb2d5eb9e4e24e0325" category="inline-link-rx"></block></block>
-  <block id="b04339a4190897882d5056f48b492577" category="paragraph">Creare un account vsadmin con le autorizzazioni necessarie per accedere al sistema storage. <block ref="4788713879ad0dd4b6ac16aeef8f00b9" category="inline-link-macro-rx"></block></block>
   <block id="936fc5cf40b66aba18242ea8b14d5c34" category="section-title">Autorizzazioni assegnate ai ruoli SnapCenter predefiniti</block>
   <block id="01dad866320f752a70be4c8b1afc9d88" category="doc">Funzioni di protezione di SnapCenter</block>
   <block id="12071348264f48526f2f806ad19b4835" category="list-text">Supporta algoritmi di sicurezza conformi al Federal Information Processing Standard (FIPS).</block>
@@ -9364,7 +9316,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="655128b143567b934dd54966cc45ec47" category="list-text">NetApp ONTAP 9.12.1 e versioni successive</block>
   <block id="7450cfde7058dc5e1f7909d0280fd7ae" category="list-text">Azure NetApp Files</block>
   <block id="4d82a1ec1af02725042c8c785564ee7a" category="list-text">Amazon FSX per NetApp ONTAP</block>
-  <block id="ababa124e254733f565e62afc357fc79" category="list-text">Sistemi NetApp ASA R2 con NetApp ONTAP 9.16.1.</block>
   <block id="0b4e0166878acdd36f882f2270445c06" category="section-title">Applicazioni e database supportati</block>
   <block id="29756d78461f8a62cb986dc97f47496b" category="paragraph">SnapCenter supporta la protezione di diverse applicazioni e database. Per informazioni dettagliate sulle applicazioni e i database supportati, vedere<block ref="734369dbdcbe00444fc7be843d617a6c" category="inline-link-rx"></block>.</block>
   <block id="ee0febdaba6d4c618d2cca84b2c49df1" category="paragraph">SnapCenter supporta la protezione dei carichi di lavoro Oracle e Microsoft SQL in ambienti VMware Cloud su Amazon Web Services (AWS) Software-Defined Data Center (SDDC). <block ref="95513dc65edb533209d1910ac5e4b37d" category="inline-link-rx"></block>.</block>
@@ -9474,14 +9425,10 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="599bdb9ade4d424c1d0e46738185a553" category="paragraph">SnapCenter sfrutta le API REST per eseguire tutte le operazioni sui sistemi ASA r2, che non supportano le ZAPI.</block>
   <block id="c2ecaf82710b87f701c30b03217ce358" category="paragraph">La data Protection è supportata per Microsoft Exchange Server, Microsoft SQL Server, database Oracle su Linux o AIX, database SAP HANA, IBM DB2, PostgreSQL, MySQL e Windows host filesystem in esecuzione su sistemi ONTAP. SnapCenter supporta anche la protezione di applicazioni quali MongoDB, Storage, MaxDB, Sybase ASE, ORASCPM.</block>
   <block id="856b104aa0e600cd87dcca68d37108cd" category="doc">Operazioni SnapCenter supportate per sistemi ASA r2</block>
-  <block id="b7e8225960284afe2c6e37957709cd90" category="paragraph">I sistemi di archiviazione ASA r2 sono supportati a partire da SnapCenter 6.1. <block ref="b840388ca7e01a42ddc42d721bbbf472" category="inline-link-rx"></block></block>
   <block id="9495c0bfae580f7cd9a35b1c4bda619f" category="paragraph">*Operazioni supportate da SnapCenter per sistemi ASA r2*</block>
-  <block id="48a4a4a55c074d578a28288306965ebc" category="list-text">Ripristino dei backup dai sistemi di archiviazione primari e secondari all'host originale o all'host alternativo</block>
   <block id="88f032fba4d12f7f4fad32b78d6163d7" category="list-text">Ripristino sul posto da sistemi di storage primari e secondari utilizzando VMware vMotion</block>
   <block id="5eaeee1ce928de977b68a25b9c1b1a94" category="list-text">Connetti e copia il ripristino dai sistemi di archiviazione primari e secondari</block>
   <block id="2ac74f7e56e1eda352b17c65251f4a20" category="list-text">Clonazione dei backup sull'host originale o sull'host alternativo</block>
-  <block id="1ad6d2de484cb785da5c2ff1e4e68a57" category="paragraph">SnapCenter può individuare o creare gruppi di coerenza ONTAP. Può anche predisporre e inizializzare le relazioni SnapMirror con il cluster di destinazione per la protezione secondaria.</block>
-  <block id="6f04bce7ee68a94f8a7107a6ec8f82ef" category="paragraph">Per informazioni su come abilitare la protezione secondaria sui sistemi ASA r2 per la tua applicazione, fai riferimento a:</block>
   <block id="1cc48bfa9deb8cbe9ac86aa7814eafc2" category="inline-link">Abilita la protezione secondaria per le risorse di Microsoft SQL Server</block>
   <block id="6a7bda8e55fec33c0e84308f3a7487d9" category="list-text"><block ref="6a7bda8e55fec33c0e84308f3a7487d9" category="inline-link-rx"></block></block>
   <block id="5c1b83640f350debd19233ccd7049769" category="inline-link">Abilita la protezione secondaria per le risorse SAP HANA</block>
@@ -9502,7 +9449,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="c4bf0f56feeec9a45e973768fbc4f47e" category="list-text">Snapshot a prova di manomissione</block>
   <block id="ee1ef6cf0f3971b44eb2abcac958fb8d" category="list-text">Volumi FlexGroup</block>
   <block id="29a720af33d29332fae31060b6910f77" category="list-text">Migrazione dai sistemi di storage ASA, AFF o FAS ai sistemi di storage ASA r2</block>
-  <block id="7abee40aa1933e637766c0d692411a73" category="list-text">Protezione dei database che contengono un mix di risorse ASA, AFF o FAS e risorse ASA r2</block>
   <block id="dbc2c133826d732ac86927b2062c928d" category="list-text">Provisioning secondario della directory di registro dell'host del plug-in SQL</block>
   <block id="e29e29246a71235f47845c88c4a61f52" category="paragraph">Questa è una porta interna utilizzata solo sull'host del plug-in; non è richiesta alcuna eccezione del firewall.</block>
   <block id="225b299c2a6edae75ebfaff049e07f4e" category="paragraph">La comunicazione tra SnapCenter Server e i plug-in avviene tramite la porta 8145.</block>
@@ -9584,4 +9530,82 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="bd4112ff24244ca0e669eb1f5a3bae9b" category="paragraph">Selezionare il *Periodo di blocco della copia snapshot* e specificare la durata in giorni, mesi o anni.</block>
   <block id="4b0801e52b058b04e3451f31a90447e6" category="list-text">Selezionare *Periodo di blocco della copia snapshot* e specificare la durata in giorni, mesi o anni.</block>
   <block id="5c2f59b69b9e772c86d6723464bda765" category="paragraph">Selezionare il periodo di blocco degli snapshot e specificare la durata in giorni, mesi o anni.</block>
+  <block id="88d9e24753477cfb09f25b21c0a59b9e" category="paragraph">SnapCenter esegue gli aggiornamenti a SnapMirror e SnapVault dopo aver completato l'operazione Snapshot. Gli aggiornamenti SnapMirror e SnapVault vengono eseguiti come parte del processo SnapCenter . Se si utilizza SnapMirror ActiveSync, utilizzare le pianificazioni predefinite SnapMirror o SnapVault sia per SnapMirror ActiveSync che per le relazioni asincrone.</block>
+  <block id="f347968a4de8b3b247caa682bf0f6240" category="section-title">Gruppo di coerenza (CG)</block>
+  <block id="b36742dbca767f044c826ec8fbe9b099" category="inline-link-macro">gruppi di coerenza</block>
+  <block id="95b64a20a2db4c159dee86787823dbff" category="paragraph">Un gruppo di coerenza è una raccolta di volumi gestiti come un'unica unità.  I CG vengono sincronizzati per garantire la coerenza dei dati tra unità di archiviazione e volumi.  In ONTAP, forniscono una gestione semplice e una garanzia di protezione per un carico di lavoro applicativo che si estende su più volumi. Scopri di più su <block ref="e3fa34f0a183afb2fde78d5c0bcf8944" category="inline-link-macro-rx"></block> .</block>
+  <block id="3d2174aeb8ed8c653211741f95bf82b5" category="paragraph">I sistemi di archiviazione ASA r2 sono supportati a partire da SnapCenter 6.1.<block ref="8282a433e360eb53c7146eae7e6c919b" category="inline-link-rx"></block> .</block>
+  <block id="fcc6d2668bf7d486bbebe88e6ebcafac" category="paragraph">SnapCenter supporta sia la protezione primaria che quella secondaria delle applicazioni in esecuzione su sistemi fisici e su Virtual Machine File System (VMFS).  SnapCenter utilizza le API REST per tutte le operazioni sui sistemi ASA r2.  I sistemi ASA r2 non supportano le ZAPI.</block>
+  <block id="928fe5b86c85a90f1dd411e2499b4911" category="list-text">Creazione di backup primari delle applicazioni</block>
+  <block id="e8f70758ce1ebf2129e56741fa84fc19" category="list-text">Spostamento degli snapshot del gruppo di coerenza gerarchica sul sistema di archiviazione secondario</block>
+  <block id="0361013e37238c5a27537b54089d9c27" category="list-text">Ripristino dei backup dai sistemi di archiviazione primari e secondari all'host originale o alternativo</block>
+  <block id="ac946ae7b415df20f529a46fd24b98e3" category="list-text">Protezione dei volumi applicativi per Oracle</block>
+  <block id="5097ab7bd6d21f43a44cf3fa2819d1a9" category="list-text">Protezione di SAP HANA NDV</block>
+  <block id="dea949f89da961edae31cb07cf178de2" category="inline-link">Scopri di più sui gruppi di coerenza ONTAP</block>
+  <block id="33f6f98912a46b71470b0b88a5796453" category="paragraph">SnapCenter scopre o crea gruppi di coerenza ONTAP .  Imposta relazioni SnapMirror sul cluster di destinazione per la protezione secondaria.<block ref="c9cf167a41f1aec3d6cac7c4bebb9647" category="inline-link-rx"></block> .</block>
+  <block id="66a780869a0bc12446e0ddcc0035ae9b" category="admonition">Dopo l'aggiornamento a SnapCenter 6.2 (server e plug-in) e ONTAP 9.17.1, SnapCenter modifica i gruppi di coerenza semplici in gruppi di coerenza gerarchici durante il primo backup pianificato.</block>
+  <block id="9f2d0dc08fd406b0b8600cb2332c7a4c" category="paragraph">Per informazioni su come abilitare la protezione secondaria sui sistemi ASA r2 per la tua applicazione, consulta:</block>
+  <block id="7e2e4828b97a80ed5f31feecd44dbb2c" category="list-text">Protezione dei database con un mix di risorse ASA, AFF o FAS e risorse ASA r2</block>
+  <block id="6fe3ae956085a9133eaacd31f9913d80" category="list-text">Provisioning delle risorse di Windows</block>
+  <block id="3e17ad5c21f5763c3ec42c72b28831f9" category="list-text">Protezione secondaria in caso di failover di sincronizzazione attiva SnapMirror</block>
+  <block id="8fda05d0d5dc4c21680bc806b4b5d00e" category="list-text">Protocollo NVMe (Nonvolatile Memory Express) se è abilitata la sincronizzazione attiva SnapMirror</block>
+  <block id="ce69d758f9a6bec23f9c27fcc9e412ad" category="list-text">Protezione delle applicazioni in esecuzione su AIX</block>
+  <block id="58b7e6269a90f98426cc77f0ae13268f" category="list-text">Ripristino di emergenza delle risorse Microsoft SQL</block>
+  <block id="b30158c7fa46aee24e490898d671bc95" category="paragraph">Il controllo degli accessi basato sui ruoli (RBAC) SnapCenter e le autorizzazioni ONTAP consentono agli amministratori SnapCenter di assegnare l'accesso alle risorse a utenti o gruppi.  Questo accesso gestito centralmente consente agli amministratori delle applicazioni di lavorare in modo sicuro all'interno di ambienti designati.</block>
+  <block id="309756228a9746144b98b5d69a86513d" category="paragraph">Dovresti creare o modificare i ruoli e aggiungere l'accesso alle risorse agli utenti.  Quando si configura SnapCenter per la prima volta, aggiungere utenti o gruppi di Active Directory ai ruoli e assegnare risorse a tali utenti o gruppi.</block>
+  <block id="cc7189f4c07659090445fd16c85392de" category="admonition">SnapCenter non crea account utente o di gruppo.  Creare account utente o di gruppo nell'Active Directory del sistema operativo o del database.</block>
+  <block id="1294035acf56fcb2ee658fdb1caf21f3" category="paragraph">SnapCenter supporta i seguenti tipi di controllo degli accessi basato sui ruoli:</block>
+  <block id="75a26496b2bf414af9e579e87fcf7f7a" category="paragraph">SnapCenter ha ruoli predefiniti ed è possibile assegnare utenti o gruppi a questi ruoli.</block>
+  <block id="1c824809edac653a7f2402a54726bbb3" category="paragraph">Quando si assegna un ruolo a un utente, SnapCenter visualizza i lavori pertinenti per quell'utente nella pagina Lavori, a meno che l'utente non abbia il ruolo SnapCenterAdmin.</block>
+  <block id="c463d704b604bb0e4a44ab5198f250a3" category="admonition">Quando crei un ruolo personalizzato, assicurati che includa tutte le autorizzazioni del ruolo SnapCenterAdmin.  Se si copiano solo alcune autorizzazioni, SnapCenter impedisce di eseguire tutte le operazioni.</block>
+  <block id="f07c3a86a889108d1123eb9a7020b716" category="paragraph">Gli utenti devono autenticarsi quando accedono tramite l'interfaccia utente o i cmdlet di PowerShell.  Se gli utenti hanno più ruoli, ne selezionano uno dopo aver effettuato l'accesso. L'autenticazione è richiesta anche per eseguire le API.</block>
+  <block id="13e09db1bf5e1c29d1b3ff5cbc25200f" category="paragraph">Ad esempio, per eseguire operazioni di protezione dei dati in un ambiente SQL Server, impostare le credenziali Windows o SQL corrette.  Se si desidera eseguire operazioni di protezione dei dati in un ambiente file system Windows su un archivio ONTAP , il ruolo di amministratore SnapCenter deve disporre di privilegi di amministratore sull'host Windows.</block>
+  <block id="84e3d4f2b980c06798f1ea5b71db7612" category="paragraph">Allo stesso modo, se si desidera eseguire operazioni di protezione dei dati su un database Oracle e se l'autenticazione del sistema operativo (SO) è disabilitata sull'host del database, è necessario impostare le credenziali con il database Oracle o con le credenziali Oracle ASM.  Il server SnapCenter autentica le credenziali impostate utilizzando uno di questi metodi, a seconda dell'operazione.</block>
+  <block id="2537acb1dcecf2bb045e640678bc4d28" category="paragraph">NOTA: NetApp consiglia di creare un ruolo ONTAP per il SnapCenter Plug-in for VMware vSphere e di assegnargli tutti i privilegi richiesti.</block>
+  <block id="2019816d7f8d1634743e43281cebbbeb" category="paragraph">È necessario creare un account vsadmin con le autorizzazioni necessarie per accedere al sistema di archiviazione.<block ref="4788713879ad0dd4b6ac16aeef8f00b9" category="inline-link-macro-rx"></block></block>
+  <block id="ec7108c1f489d11ef4093aba09ed0426" category="paragraph">Quando si aggiunge un utente a un ruolo, assegnare l'autorizzazione StorageConnection per abilitare la comunicazione con la macchina virtuale di archiviazione (SVM) oppure assegnare una SVM all'utente per concedere l'autorizzazione a utilizzare la SVM.  L'autorizzazione Connessione di archiviazione consente agli utenti di creare connessioni SVM.</block>
+  <block id="4fa772613b9230db9720cbffec0bb577" category="paragraph">Ad esempio, un amministratore SnapCenter può creare connessioni SVM e assegnarle agli utenti App Backup e Clone Admin, che non possono creare o modificare connessioni SVM.  Senza una connessione SVM, gli utenti non possono eseguire operazioni di backup, clonazione o ripristino.</block>
+  <block id="9f159c30e60b26f31f5d8cd1c8be396c" category="paragraph">Il ruolo di Visualizzatore backup e clonazione ha la visualizzazione di sola lettura di tutte le autorizzazioni.  Questo ruolo dispone anche di autorizzazioni abilitate per la scoperta, la creazione di report e l'accesso alla Dashboard.</block>
+  <block id="035924fdde240e490096f67f520b2a14" category="paragraph">Amazon FSx for NetApp ONTAP supporta la memoria non volatile express (NVMe) tramite Transport Control Protocol (TCP).</block>
+  <block id="3973825448e1695dd11390dad8f1df7d" category="list-text">Sistemi NetApp ASA r2 che eseguono NetApp ONTAP 9.16.1 e versioni successive</block>
+  <block id="65bb9cafce054984dfcbd59e86fce377" category="paragraph">Se si utilizzano SnapCenter Server 6.2 e i plug-in SnapCenter 6.2, è necessario utilizzare ONTAP 9.17.1.</block>
+  <block id="f3dde5fad667fb972961b6f701156637" category="paragraph">Dopo aver installato SnapCenter Server e i plug-in, è necessario abilitare l'API REST affinché SnapCenter rilevi le relazioni di sincronizzazione attiva SnapMirror .</block>
+  <block id="3bb944e9cbfa3d955346c885e83c07b2" category="list-text">Sull'host del server SnapCenter , modificare il file _C:\Program Files\ NetApp\SMCore\SMCoreServiceHost.dll.config_ per modificare il valore del parametro _IsRestEnabledForStorageConnection_ su _true_, quindi riavviare il servizio SnapCenter SMCore.</block>
+  <block id="9542c26f82881425e6e9e8ba6e59679f" category="list-text">Sugli host plug-in di Windows:</block>
+  <block id="c8b21d5f027718e63a4436fe0c39b873" category="list-text">Modificare il file _C:\Programmi\ NetApp\ SnapCenter\SMCore\SMCoreServiceHost.dll.config_ per modificare il valore del parametro _IsRestEnabledForStorageConnection_ su _true_.</block>
+  <block id="688684488a7d080aa39f8cf8ee987f33" category="list-text">Modificare il file _C:\Program Files\ NetApp\ SnapCenter\SMCore\SnapDriveService.dll.config_ per modificare il valore del parametro _IsRestEnabledForStorageConnection_ su _true_.</block>
+  <block id="71853e69c97656091e1ccd739e228e7c" category="list-text">Riavviare il servizio SnapCenter SMCore.</block>
+  <block id="e7da6395a99301c869ec8939ad3351c5" category="paragraph">Per creare un ruolo per un nuovo utente SVM nei sistemi ASA r2 è necessario eseguire diversi comandi ONTAP CLI.  Questo ruolo è obbligatorio se si configurano le SVM nei sistemi ASA r2 per l'utilizzo con SnapCenter e non si desidera utilizzare il ruolo vsadmin.</block>
+  <block id="1103eb1f6654db72f56132d6ce60314d" category="inline-link">Avviso per SnapCenter 6.2</block>
+  <block id="19ebec718f0cd2ae87495f51da298086" category="paragraph"><block ref="19ebec718f0cd2ae87495f51da298086" category="inline-link-rx"></block></block>
+  <block id="223ee142b61cd4579ffa55b3c511adbe" category="list-text">Se sono presenti più percorsi dati (LIF) nelle SVM, SnapCenter sceglie il percorso dati (LIF) appropriato per il montaggio del volume clonato NFS.  Tuttavia, se si desidera specificare un percorso dati specifico (LIF), è necessario eseguire la CLI Set-SvmPreferredDataPath.  Le informazioni riguardanti i parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo _Get-Help nome_comando_.  In alternativa, puoi anche fare riferimento a<block ref="4a5b4acb82a31b5d3a197c5ec1468fe8" category="inline-link-rx"></block> .</block>
+  <block id="95c937cfb2c57f00a2d2ef3ceafe0a1c" category="list-text">Nella pagina Impronta di archiviazione, eseguire le seguenti azioni:</block>
+  <block id="c64c055a256278373345c4759cc269fe" category="list-text">Selezionare il tipo di archiviazione.</block>
+  <block id="effc7a4b937dedb033f6979733da3aa9" category="list-text">Immettere il nome del sistema di archiviazione.</block>
+  <block id="409f598b752b995f6f2326bda7c4f815" category="list-text">Selezionare le unità di archiviazione.</block>
+  <block id="785dc4b462634580fc1eb2f77acb239c" category="paragraph">È possibile aggiungere più unità di archiviazione.</block>
+  <block id="b80a6daf1581b8ab554db7d606c1428c" category="list-text">Clic<block ref="f790bf9188cee374d2bb1f3790c6a393" category="inline-image-macro-rx" type="image"></block> per eliminare il volume dell'applicazione.</block>
+  <block id="bb7642a6340577eecc8f765b360b6eae" category="paragraph">Le informazioni sui parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help nome_comando.  In alternativa, è possibile fare riferimento a<block ref="4a5b4acb82a31b5d3a197c5ec1468fe8" category="inline-link-rx"></block> .</block>
+  <block id="57c72a5ff23bb1db581b8001531dcb35" category="paragraph">Le informazioni riguardanti i parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help _command_name_.  In alternativa, puoi anche fare riferimento a<block ref="4a5b4acb82a31b5d3a197c5ec1468fe8" category="inline-link-rx"></block> .</block>
+  <block id="9bc40fe6e0b9523fba111ee7815e3a1b" category="paragraph">Le informazioni sui parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help nome_comando.  In alternativa, puoi anche fare riferimento a<block ref="4a5b4acb82a31b5d3a197c5ec1468fe8" category="inline-link-rx"></block> .</block>
+  <block id="202db78e7e2ac241d08b359f1f79644f" category="paragraph">Le informazioni riguardanti i parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help _command_name_.  In alternativa, puoi anche fare riferimento a<block ref="4a5b4acb82a31b5d3a197c5ec1468fe8" category="inline-link-rx"></block> .</block>
+  <block id="052131f99fadbb192418dc45065d8c15" category="paragraph">Per informazioni dettagliate sui comandi UNIX, vedere<block ref="4a5b4acb82a31b5d3a197c5ec1468fe8" category="inline-link-rx"></block> .</block>
+  <block id="67998d9af35dea74903e9cdb371f7e7a" category="paragraph">In alternativa, puoi anche fare riferimento a<block ref="4a5b4acb82a31b5d3a197c5ec1468fe8" category="inline-link-rx"></block> O<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block> .</block>
+  <block id="e2affc8ad90cb942103d56d82396b5f7" category="paragraph">Scopri le nuove e migliorate funzionalità disponibili in SnapCenter 6.2.</block>
+  <block id="652468e7a8f47c94c0dfc2bbbe3f6788" category="inline-link-macro">Novità di SnapCenter 6.2</block>
+  <block id="d5d7d6e218fb8deef9aa758f16f3e053" category="paragraph">Per un elenco completo delle nuove funzionalità e dei miglioramenti, consultare <block ref="ba56a05032a421946bbeef30dde12674" category="inline-link-macro-rx"></block> .</block>
+  <block id="24443d9133830b434ac05072f0c9653a" category="inline-link">Note sulla versione 6.2 del software SnapCenter</block>
+  <block id="34319768640d09bbc428643b51adb5af" category="paragraph">Per i dettagli sui problemi noti, le limitazioni, i problemi risolti e i comandi nuovi e modificati, vedere<block ref="b5242c8747d109e2a469b208226df65c" category="inline-link-rx"></block> . Per accedere alle Note sulla versione è necessario effettuare l'accesso con il proprio account NetApp o creare un account.</block>
+  <block id="320bd16b81d8a6a0a077d7308db7683d" category="paragraph">Il percorso di aggiornamento mostra da quali versioni di SnapCenter è possibile effettuare l'aggiornamento e quali versioni dei plug-in sono supportate.</block>
+  <block id="f734f899336791933d28373bca69a72f" category="admonition">Se si aggiorna SnapCenter Server alla versione 6.2, aggiornare anche i plug-in alla versione 6.2.</block>
+  <block id="7a22247de8db3271f3bf8573be10e986" category="cell">6,2</block>
+  <block id="cb2f94cd974dcdf68577ffd66816a900" category="doc">Novità del SnapCenter software 6.2</block>
+  <block id="02a7a1f2d7c2b92647dd96da7bf06024" category="paragraph">La versione 6.2 del SnapCenter software include la seguente nuova funzionalità.</block>
+  <block id="efd8ec518c3271e168cebeb4a21d4fc3" category="paragraph">SnapCenter 6.2 (server e plug-in) insieme a ONTAP 9.17.1 supporta sia la protezione primaria che quella secondaria delle applicazioni in esecuzione su sistemi fisici (Linux e Windows) e Virtual Machine File System (VMFS) utilizzando gruppi di coerenza gerarchica.</block>
+  <block id="669e7e163e3b320fc474c04f2cd99bdc" category="paragraph">Dopo l'aggiornamento a SnapCenter 6.2 e ONTAP 9.17.1, SnapCenter modifica i gruppi di coerenza semplici in gruppi di coerenza gerarchici durante il primo backup pianificato.</block>
+  <block id="9e1557573461036ce114499c0c41ed6f" category="paragraph">Il flusso di lavoro elenca le attività che è necessario completare per aggiornare i pacchetti SnapCenter Server e Plug-in.</block>
+  <block id="dd201952143a00ac8776c871aff1b834" category="paragraph">Questa sezione mostra da quali versioni SnapCenter è possibile effettuare l'aggiornamento e quali versioni dei plug-in sono supportate.</block>
+  <block id="24f24d3f1f893e4176aff86940b1f7bd" category="paragraph">Per informazioni su come aggiornare il SnapCenter Plug-in for VMware vSphere, vedere<block ref="9fa07c2f7a59d2185d48077e327b705e" category="inline-link-rx"></block> .</block>
+  <block id="97e76bbffdf8f08342d1c5a741af4b2a" category="sidebar">Il SnapCenter software è una piattaforma semplice, centralizzata e scalabile che fornisce una protezione dei dati coerente per applicazioni, database, file system host e VM in esecuzione su sistemi ONTAP ovunque nel cloud ibrido.  Questa raccolta di documentazione include informazioni per la versione 6.2.</block>
+  <block id="1e0eab11641f75c3ff495410ce40bf66" category="sidebar">Documentazione SnapCenter software 6.2</block>
 </blocks>
