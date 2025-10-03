@@ -15,4 +15,4 @@ Scopri le nuove e migliorate funzionalità disponibili in SnapCenter 6.2.
 
 Per un elenco completo delle nuove funzionalità e dei miglioramenti, consultare link:what's-new-in-snapcenter61.html["Novità di SnapCenter 6.2"] .
 
-Per i dettagli sui problemi noti, le limitazioni, i problemi risolti e i comandi nuovi e modificati, vedere https://library.netapp.com/ecm/ecm_download_file/ECMLP3337665["Note sulla versione 6.2 del software SnapCenter"^] . Per accedere alle Note sulla versione è necessario effettuare l'accesso con il proprio account NetApp o creare un account.
+Per i dettagli sui problemi noti, le limitazioni, i problemi risolti e i comandi nuovi e modificati, vedere https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["Note sulla versione 6.2 del software SnapCenter"^] . Per accedere alle Note sulla versione è necessario effettuare l'accesso con il proprio account NetApp o creare un account.

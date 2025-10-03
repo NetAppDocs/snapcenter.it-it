@@ -9595,7 +9595,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="652468e7a8f47c94c0dfc2bbbe3f6788" category="inline-link-macro">Novità di SnapCenter 6.2</block>
   <block id="d5d7d6e218fb8deef9aa758f16f3e053" category="paragraph">Per un elenco completo delle nuove funzionalità e dei miglioramenti, consultare <block ref="ba56a05032a421946bbeef30dde12674" category="inline-link-macro-rx"></block> .</block>
   <block id="24443d9133830b434ac05072f0c9653a" category="inline-link">Note sulla versione 6.2 del software SnapCenter</block>
-  <block id="34319768640d09bbc428643b51adb5af" category="paragraph">Per i dettagli sui problemi noti, le limitazioni, i problemi risolti e i comandi nuovi e modificati, vedere<block ref="b5242c8747d109e2a469b208226df65c" category="inline-link-rx"></block> . Per accedere alle Note sulla versione è necessario effettuare l'accesso con il proprio account NetApp o creare un account.</block>
   <block id="320bd16b81d8a6a0a077d7308db7683d" category="paragraph">Il percorso di aggiornamento mostra da quali versioni di SnapCenter è possibile effettuare l'aggiornamento e quali versioni dei plug-in sono supportate.</block>
   <block id="f734f899336791933d28373bca69a72f" category="admonition">Se si aggiorna SnapCenter Server alla versione 6.2, aggiornare anche i plug-in alla versione 6.2.</block>
   <block id="7a22247de8db3271f3bf8573be10e986" category="cell">6,2</block>
@@ -9608,4 +9607,5 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="24f24d3f1f893e4176aff86940b1f7bd" category="paragraph">Per informazioni su come aggiornare il SnapCenter Plug-in for VMware vSphere, vedere<block ref="9fa07c2f7a59d2185d48077e327b705e" category="inline-link-rx"></block> .</block>
   <block id="97e76bbffdf8f08342d1c5a741af4b2a" category="sidebar">Il SnapCenter software è una piattaforma semplice, centralizzata e scalabile che fornisce una protezione dei dati coerente per applicazioni, database, file system host e VM in esecuzione su sistemi ONTAP ovunque nel cloud ibrido.  Questa raccolta di documentazione include informazioni per la versione 6.2.</block>
   <block id="1e0eab11641f75c3ff495410ce40bf66" category="sidebar">Documentazione SnapCenter software 6.2</block>
+  <block id="9968307e35346723a7def9d1da87a203" category="paragraph">Per i dettagli sui problemi noti, le limitazioni, i problemi risolti e i comandi nuovi e modificati, vedere<block ref="bedfbb0cb9ae5977029e72ca67318671" category="inline-link-rx"></block> . Per accedere alle Note sulla versione è necessario effettuare l'accesso con il proprio account NetApp o creare un account.</block>
 </blocks>
