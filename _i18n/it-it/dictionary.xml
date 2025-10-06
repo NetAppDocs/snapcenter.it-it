@@ -6933,7 +6933,6 @@ Il ripristino di una singola casella postale di NetApp® è giunto alla fine del
   <block id="3d1c64d2c8b1e4058225a78c3ef09fa6" category="list-text">Selezionare *OK*.</block>
   <block id="5477ea177e290e8ac1c03a7ee8f2a92b" category="list-text">Selezionare *Esegui backup ora*.</block>
   <block id="3f897d901d24f02777ff0994b7823d1a" category="list-text">Dati presenti nei sistemi primari e secondari ONTAP FAS, AFF o ASA e protetti nello storage a oggetti StorageGRID locale</block>
-  <block id="f7b38c62b0e74d318a255bc3094cf531" category="list-text">Dati su sistemi primari e secondari ONTAP FAS, AFF o ASA e protetti per lo storage di oggetti e archivi nel cloud (utilizzando l'integrazione di backup e ripristino BlueXP)</block>
   <block id="6920404cf085bab5be2132dbc275f33b" category="paragraph">Un gruppo di risorse è un insieme di risorse su un host o cluster. L'operazione di backup viene eseguita su tutte le risorse definite nel gruppo di risorse.</block>
   <block id="a833804e6b707a2a653d8b6273573c9f" category="paragraph">È possibile eseguire il backup di un gruppo di risorse su richiesta dalla pagina risorse. Se un gruppo di risorse dispone di un criterio allegato e di una pianificazione configurata, i backup vengono creati in base alla pianificazione.</block>
   <block id="45b6721b8137bd82de1f2497a525d57a" category="list-text">Selezionare la risorsa di cui si desidera eseguire il backup.</block>
@@ -7675,7 +7674,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="b69cd8afc7ba47f5300e7eb1864b6e2f" category="admonition">La rimozione manuale di una licenza di prova è necessaria solo se si utilizza una licenza basata su controller standard SnapCenter.</block>
   <block id="24d3d7a47c8a6bc8f8121257c5b3734e" category="summary">È necessario configurare il certificato CA con il server SnapCenter sull'host Linux.</block>
   <block id="a4edcfdfc889aead495fa92bc734d112" category="doc">Configurare il certificato CA per l'host Linux</block>
-  <block id="18ae08106eef2261e3ddf3194dc3429d" category="paragraph">Dopo aver installato il server SnapCenter su Linux, il programma di installazione crea il certificato autofirmato. Se si desidera utilizzare il certificato CA, è necessario configurare i certificati per il proxy inverso nginx, la registrazione del controllo e i servizi SnapCenter.</block>
   <block id="bdb64fa4c7cfc41de86c180fed3a74a3" category="section-title">Configurare il certificato nginx</block>
   <block id="bf5dd606dc54b8a102d4848f6293df53" category="list-text">Selezionare _/etc/nginx/conf.d_:<block ref="ebff76a76b37531f3434f4bfdc9bd6d2" prefix=" " category="inline-code"></block></block>
   <block id="5b0c642dda05deb86e7125990e1b3d31" category="list-text">Aprire *snapcenter.conf* usando vi o qualsiasi editor di testo.</block>
@@ -7689,13 +7687,11 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="fa9ee7f4ef8bb2ab6cefea40930760f8" category="list-text">Modificare le chiavi *AUDILOG_CERTIFICATE_PATH* e *AUDILOG_CERTIFICATE_PASSWORD* per includere rispettivamente il percorso e la password del certificato CA.</block>
   <block id="d5fd9ad0c29ecbaec9f0a9d6615b47f6" category="paragraph">Solo il formato _.pfx_ è supportato per il certificato del registro di controllo.</block>
   <block id="00ee24396aca54b4f6c836a787b63361" category="list-text">Riavviare il servizio *snapmanagerweb*:<block ref="c45cb1774a978712d2a7471bbefe6e51" prefix=" " category="inline-code"></block></block>
-  <block id="f3715a4e5728396f7be1bdbaaca98851" category="section-title">Configurare il certificato dei servizi SnapCenter</block>
   <block id="5378454eddc5733c8a37aa2d0f538173" category="list-text">Aprire i seguenti file di configurazione utilizzando vi o qualsiasi editor di testo.</block>
   <block id="2d1487edff39ef32df796c3f332e5af4" category="list-text">_INSTALL_DIR/NetApp/snapcenter/SnapManagerWeb/SnapManager.Web.UI.dll.config_</block>
   <block id="ec6c7d95279ecbfc15ae033c6b6ce173" category="list-text">_INSTALL_DIR/NetApp/snapcenter/SMCore/SMCoreServiceHost.dll.config_</block>
   <block id="53af01d18c1d8e8c1bf8178140cfbc85" category="list-text">_INSTALL_DIR/NetApp/snapcenter/Scheduler/Scheduler.API.dll.config_</block>
   <block id="9797d0b330551d54a3004ee8339ea2ba" category="list-text">Modificare le chiavi *SERVICE_CERTIFICATE_PATH* e *SERVICE_CERTIFICATE_PASSWORD* per includere rispettivamente il percorso e la password del certificato CA.</block>
-  <block id="0f278f6bc55db5d981f2fbc237afe8d3" category="paragraph">Solo il formato _.pfx_ è supportato per il certificato dei servizi SnapCenter.</block>
   <block id="a3e66f24b77a616cc07a99fbe97c88e2" category="list-text">Salvare e chiudere i file.</block>
   <block id="66ff4f7d59911f532e5382ba09adb157" category="list-text">Riavviare tutti i servizi.</block>
   <block id="dd5be82d05db99d06412d2c63b8fe671" category="list-text"><block ref="c45cb1774a978712d2a7471bbefe6e51" prefix="" category="inline-code"></block></block>
@@ -9608,4 +9604,12 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="97e76bbffdf8f08342d1c5a741af4b2a" category="sidebar">Il SnapCenter software è una piattaforma semplice, centralizzata e scalabile che fornisce una protezione dei dati coerente per applicazioni, database, file system host e VM in esecuzione su sistemi ONTAP ovunque nel cloud ibrido.  Questa raccolta di documentazione include informazioni per la versione 6.2.</block>
   <block id="1e0eab11641f75c3ff495410ce40bf66" category="sidebar">Documentazione SnapCenter software 6.2</block>
   <block id="9968307e35346723a7def9d1da87a203" category="paragraph">Per i dettagli sui problemi noti, le limitazioni, i problemi risolti e i comandi nuovi e modificati, vedere<block ref="bedfbb0cb9ae5977029e72ca67318671" category="inline-link-rx"></block> . Per accedere alle Note sulla versione è necessario effettuare l'accesso con il proprio account NetApp o creare un account.</block>
+  <block id="ea1c96f839915f73d25b910bbc92b734" category="list-text">Dati presenti sui sistemi primari e secondari ONTAP FAS, AFF o ASA e protetti su storage di oggetti e archivi nel cloud tramite l'integrazione di backup e ripristino NetApp</block>
+  <block id="45099ef1959df4e973d03fee8da8217e" category="paragraph">Dopo aver installato SnapCenter Server su Linux, il programma di installazione crea il certificato autofirmato. Se si desidera utilizzare il certificato CA, è necessario configurare i certificati per il proxy inverso nginx, la registrazione degli audit e SnapCenter.</block>
+  <block id="f2c3d774134cb37665bf8a734950fe0b" category="section-title">Configurare il certificato SnapCenter</block>
+  <block id="767f07b2bcd3e25b3f22994ec92e8447" category="paragraph">Per il certificato SnapCenter è supportato solo il formato _.pfx_.</block>
+  <block id="bc2fe31b1e2682a9a79513d792e9c721" category="section-title">BlueXP è ora NetApp Console</block>
+  <block id="995c8f79a8e07fbd8d519e45d03d6004" category="paragraph">NetApp Console, basata sulle fondamenta BlueXP migliorate e ristrutturate, offre una gestione centralizzata dello storage NetApp e dei NetApp Data Services in ambienti on-premise e cloud di livello aziendale, offrendo informazioni in tempo reale, flussi di lavoro più rapidi e un'amministrazione semplificata, il tutto in modo altamente sicuro e conforme.</block>
+  <block id="2ef9d641d45afe99b74ad6f9a9f797ad" category="inline-link-macro">Note sulla versione della console NetApp</block>
+  <block id="1e3eeac5409758903bc21870184a640a" category="paragraph">Per i dettagli su cosa è cambiato, vedere il<block ref="06d876b9fcdfcba8772d93beac1ca38b" category="inline-link-macro-rx"></block> .</block>
 </blocks>

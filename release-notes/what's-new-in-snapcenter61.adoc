@@ -23,3 +23,10 @@ SnapCenter 6.2 (server e plug-in) insieme a ONTAP 9.17.1 supporta sia la protezi
 Dopo l'aggiornamento a SnapCenter 6.2 e ONTAP 9.17.1, SnapCenter modifica i gruppi di coerenza semplici in gruppi di coerenza gerarchici durante il primo backup pianificato.
 
 |===
+
+
+== BlueXP è ora NetApp Console
+
+NetApp Console, basata sulle fondamenta BlueXP migliorate e ristrutturate, offre una gestione centralizzata dello storage NetApp e dei NetApp Data Services in ambienti on-premise e cloud di livello aziendale, offrendo informazioni in tempo reale, flussi di lavoro più rapidi e un'amministrazione semplificata, il tutto in modo altamente sicuro e conforme.
+
+Per i dettagli su cosa è cambiato, vedere illink:https://docs.netapp.com/us-en/bluexp-relnotes/index.html["Note sulla versione della console NetApp"^] .

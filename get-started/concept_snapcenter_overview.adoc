@@ -35,7 +35,7 @@ Per proteggere i dati, puoi installare SnapCenter in locale o su un cloud pubbli
 * In locale in un cloud ibrido per proteggere quanto segue:
 +
 ** Dati presenti nei sistemi primari ONTAP FAS, AFF o ASA e replicati in Cloud Volumes ONTAP
-** Dati su sistemi primari e secondari ONTAP FAS, AFF o ASA e protetti per lo storage di oggetti e archivi nel cloud (utilizzando l'integrazione di backup e ripristino BlueXP)
+** Dati presenti sui sistemi primari e secondari ONTAP FAS, AFF o ASA e protetti su storage di oggetti e archivi nel cloud tramite l'integrazione di backup e ripristino NetApp
 
 
 * In un cloud pubblico per proteggere:
