@@ -168,7 +168,7 @@ La tabella seguente elenca le diverse porte e i relativi valori predefiniti.
 
 
  a| 
-Porta SnapCenter
+Porta web SnapCenter
  a| 
 8146
  a| 

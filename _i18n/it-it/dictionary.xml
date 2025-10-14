@@ -1946,7 +1946,6 @@
   <block id="7dbd4083dc9a93160940c1e53d03999f" category="admonition">Si consiglia, ma non è necessario, di aggiungere le licenze standard di SnapCenter alle destinazioni secondarie. Se le licenze standard di SnapCenter non sono abilitate sulle destinazioni secondarie, non è possibile utilizzare SnapCenter per eseguire il backup delle risorse sulla destinazione secondaria dopo aver eseguito un'operazione di failover. Tuttavia, è necessaria una licenza FlexClone sulle destinazioni secondarie per eseguire operazioni di cloning e verifica.</block>
   <block id="918d32b75f0ab883abba3a8dc0c3ae8d" category="inline-link">Tool di matrice di interoperabilità</block>
   <block id="8124579383e90243e4b06323d2b37f8d" category="cell">Host</block>
-  <block id="ed00b70cc595a411eff2cc42510a291f" category="paragraph">Porta SnapCenter</block>
   <block id="18622e175ff22b2375f9cbc2314b3285" category="paragraph">Porta di comunicazione SMCore SnapCenter</block>
   <block id="4abc501abe98e95144eba2c4d17174ad" category="paragraph">Host plug-in Windows</block>
   <block id="5ae5c2db7baad917cb8389420693266d" category="paragraph">Plug-in SnapCenter per Windows</block>
@@ -9612,4 +9611,5 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="995c8f79a8e07fbd8d519e45d03d6004" category="paragraph">NetApp Console, basata sulle fondamenta BlueXP migliorate e ristrutturate, offre una gestione centralizzata dello storage NetApp e dei NetApp Data Services in ambienti on-premise e cloud di livello aziendale, offrendo informazioni in tempo reale, flussi di lavoro più rapidi e un'amministrazione semplificata, il tutto in modo altamente sicuro e conforme.</block>
   <block id="2ef9d641d45afe99b74ad6f9a9f797ad" category="inline-link-macro">Note sulla versione della console NetApp</block>
   <block id="1e3eeac5409758903bc21870184a640a" category="paragraph">Per i dettagli su cosa è cambiato, vedere il<block ref="06d876b9fcdfcba8772d93beac1ca38b" category="inline-link-macro-rx"></block> .</block>
+  <block id="e6f36a956625505e0a3733e3e0073fa0" category="paragraph">Porta web SnapCenter</block>
 </blocks>
