@@ -156,14 +156,13 @@ Per EMS, fare riferimento a. https://docs.netapp.com/us-en/snapcenter/admin/conc
 
 . Esaminare il riepilogo, quindi selezionare *fine*.
 . Monitorare l'avanzamento dell'operazione selezionando *Monitor* > *Jobs*.
++
+
+NOTE: Una volta creato il clone, non rinominarlo.
 
 
-.Al termine
-Una volta creato il clone, non rinominarlo.
 
 .Informazioni correlate
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["L'operazione di clonazione potrebbe non riuscire o richiedere più tempo per il completamento con il valore TCP_TIMEOUT predefinito"]
-
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/The_failover_cluster_instance_database_clone_fails["Il clone del database dell'istanza del cluster di failover non riesce"]
 
 --

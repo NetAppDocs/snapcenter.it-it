@@ -34,9 +34,6 @@ NOTE: IBM Java non è supportato su host Windows e Linux.
 +
 http://www.java.com/en/download/manual.jsp["Scarica JAVA per tutti i sistemi operativi"]
 
-+
-https://imt.netapp.com/matrix/imt.jsp?components=121069;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"]
-
 
 
 
@@ -47,9 +44,6 @@ https://imt.netapp.com/matrix/imt.jsp?components=121069;&solution=1259&isHWU&src
 * È necessario aver installato Java 11 sull'host Linux.
 +
 http://www.java.com/en/download/manual.jsp["Scarica JAVA per tutti i sistemi operativi"]
-
-+
-https://imt.netapp.com/matrix/imt.jsp?components=121069;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"]
 
 * Per i cluster PostgreSQL in esecuzione su un host Linux, durante l'installazione del plug-in per PostgreSQL, il plug-in SnapCenter per UNIX viene installato automaticamente.
 * Si dovrebbe avere *bash* come shell predefinita per l'installazione del plug-in.

@@ -22,7 +22,7 @@ Sistemi operativi
  a| 
 Microsoft Windows
 
-Per informazioni aggiornate sulle versioni supportate, vedere https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1258&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^].
++ Per le informazioni più recenti sulle versioni supportate, vedere https://imt.netapp.com/imt/imt.jsp?components=180321;180339;&solution=1257&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"].
 
 
 
@@ -50,8 +50,6 @@ Pacchetti software richiesti
 * PowerShell Core 7.4.2
 * Java 11 Oracle Java e OpenJDK
 
-
-Per informazioni aggiornate sulle versioni supportate, vedere https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1258&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^].
 
 Per informazioni specifiche sulla risoluzione dei problemi di .NET, vedere https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_upgrade_or_install_fails_with_This_KB_is_not_related_to_the_OS["L'aggiornamento o l'installazione di SnapCenter non riesce per i sistemi legacy che non dispongono di connettività Internet."]
 

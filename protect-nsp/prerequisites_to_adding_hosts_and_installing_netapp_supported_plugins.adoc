@@ -53,16 +53,13 @@ NOTE: Le applicazioni di storage e Oracle sono supportate su AIX.
 * È necessario aver attivato la connessione SSH basata su password per l'utente root o non root.
 * È necessario aver installato Java 11 sull'host Linux.
 +
-Se si utilizza Windows Server 2019 o Windows Server 2016 per l'host SnapCenter Server, è necessario installare Java 11. Lo strumento matrice di interoperabilità (IMT) contiene le informazioni più recenti sui requisiti.
+Se si utilizza Windows Server 2019 o Windows Server 2016 per l'host SnapCenter Server, è necessario installare Java 11.
 
 +
 http://www.java.com/en/download/manual.jsp["Scarica JAVA per Linux"]
 
 +
 https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license=IBM["Scarica JAVA per AIX"]
-
-+
-https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"]
 
 * Per consentire l'accesso a diversi percorsi, è necessario configurare i privilegi sudo per l'utente non root. Aggiungere le seguenti righe al file /etc/sudoers usando l'utility visudo Linux.
 +
@@ -148,8 +145,6 @@ Java 11 IBM Java
 Se JAVA è stato aggiornato alla versione più recente, assicurarsi che l'opzione JAVA_HOME disponibile in /var/opt/snapcenter/spl/etc/spl.properties sia impostata sulla versione JAVA corretta e sul percorso corretto.
 
 |===
-Per informazioni aggiornate sulle versioni supportate, vedere https://imt.netapp.com/matrix/imt.jsp?components=121073;&solution=1257&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^].
-
 
 
 === Configurare i privilegi sudo per gli utenti non root per l'host AIX
