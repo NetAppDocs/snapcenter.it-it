@@ -4,64 +4,53 @@ sidebar: sidebar
 keywords: upgrade, upgrade plug-in packages 
 summary: 'I pacchetti plug-in vengono distribuiti come parte dell"aggiornamento di SnapCenter.' 
 ---
-= Aggiorna i pacchetti plug-in
+= Aggiorna i pacchetti plug-in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-I pacchetti plug-in vengono distribuiti come parte dell'aggiornamento di SnapCenter.
+I pacchetti plug-in vengono distribuiti come parte dell'aggiornamento SnapCenter . La procedura di aggiornamento mette automaticamente gli host plug-in Windows, Linux o AIX in modalità di manutenzione.  La modalità di manutenzione impedisce all'host del plug-in di eseguire attività pianificate durante l'aggiornamento.
 
-Non è necessario impostare manualmente ciascun host plug-in che si desidera aggiornare in modalità di manutenzione poiché la procedura di aggiornamento imposta gli host plug-in Windows, Linux o AIX in modalità di manutenzione. La modalità di manutenzione impedisce l'esecuzione di qualsiasi processo pianificato sull'host del plug-in durante l'aggiornamento.
+Il sistema seleziona tutti i plug-in nel pacchetto, ma aggiorna solo i plug-in installati con la versione precedente di SnapCenter.  Il sistema non installa i plug-in rimanenti.  Utilizzare l'opzione *Aggiungi plug-in* per installare qualsiasi nuovo plug-in.
 
 .Prima di iniziare
 * Se si è utenti non root con accesso alle macchine Linux, aggiornare il file _/etc/sudoers_ con i valori checksum più recenti prima di eseguire l'operazione di aggiornamento.
+* Assicurarsi che PowerShell Core 7.4.2 sia installato sull'host del plug-in Windows.
+* Assicurarsi che Java 11 Oracle Java e OpenJDK siano installati sugli host plug-in Windows e Linux.
 * Per impostazione predefinita, SnapCenter rileva JAVA_HOME dall'ambiente. Se si desidera utilizzare UNA JAVA_HOME fissa e si stanno aggiornando i plug-in su un host Linux, aggiungere manualmente IL parametro SKIP_JAVAHOME_UPDATE nel file _spl.properties_ che si trova in _/var/opt/snapcenter/spl/etc/_ e impostare il valore su TRUE.
 +
 Il valore DI JAVA_HOME viene aggiornato quando il plug-in viene aggiornato o quando il servizio caricatore di plug-in (SPL) di SnapCenter viene riavviato. Prima di aggiornare o riavviare SPL, se si aggiunge IL parametro SKIP_JAVAHOME_UPDATE e si imposta il valore su TRUE, IL valore DI JAVA_HOME non viene aggiornato.
 
-* È necessario aver eseguito il backup di tutti i file di configurazione SnapCenter modificati sull'host del server SnapCenter o sul plug-in host.
-+
-Esempi di file di configurazione di SnapCenter: SnapDriveService.exe.config, SMCoreServiceHost.exe.config e così via.
-
+* Eseguire il backup di tutti i file di configurazione SnapCenter modificati (ad esempio SnapDriveService.exe.config, SMCoreServiceHost.exe.config e così via) sull'host del server SnapCenter o sull'host del plug-in.
 
 
 .A proposito di questa attività
-* Per il plug-in SnapCenter per Microsoft SQL Server, il plug-in SnapCenter per Microsoft Exchange Server e il plug-in SnapCenter per Microsoft Windows, si consiglia di aggiornare sia il server che gli host plug-in alla versione più recente per l'esecuzione DI SCRIPTS_PATH.
-+
+Per il plug-in SnapCenter per Microsoft SQL Server, il plug-in SnapCenter per Microsoft Exchange Server e il plug-in SnapCenter per Microsoft Windows, si consiglia di aggiornare sia il server che gli host plug-in alla versione più recente per l'esecuzione DI SCRIPTS_PATH.
+
 Per le pianificazioni di backup e verifica esistenti con prescritture e postscript attivati nel criterio, le operazioni di backup continueranno a funzionare dopo l'aggiornamento.
 
-+
 Nella pagina *Dettagli lavoro*, un messaggio di avviso consiglia al cliente di copiare gli script nel PERCORSO_SCRIPT e modificare il criterio per fornire un percorso relativo al PERCORSO_SCRIPT. Per il lavoro del ciclo di vita clone, il messaggio di avviso viene visualizzato a livello di lavoro secondario.
-
-
 
 .Fasi
 . Nel riquadro di navigazione a sinistra, fare clic su *hosts* > *Managed hosts*.
 . Aggiornare gli host eseguendo una delle seguenti operazioni:
 +
-** Se nella colonna Stato generale viene visualizzato "aggiornamento disponibile" per uno dei plug-in host, fare clic sul nome host del plug-in ed eseguire le seguenti operazioni:
+** Se nella colonna Stato generale viene visualizzato "Aggiornamento disponibile" per uno degli host del plug-in, fare clic sul nome dell'host del plug-in ed eseguire le seguenti operazioni:
 +
 ... Fare clic su *altre opzioni*.
 ... Selezionare *Ignora controlli preliminari* se non si desidera verificare se l'host del plug-in soddisfa i requisiti per aggiornare il plug-in.
++
+
+NOTE: Se non si seleziona *Salta controlli preliminari*, SnapCenter verifica se l'host del plug-in soddisfa i requisiti.  Se i requisiti non vengono soddisfatti, vengono visualizzati messaggi di errore o di avviso.  Se l'errore è correlato allo spazio su disco o alla RAM, è possibile aggiornare il file web.config situato in _C:\Program Files\ NetApp\ SnapCenter WebApp_ oppure i file di configurazione di PowerShell situati in _C:\Windows\System32\WindowsPowerShell\v1.0\Modules\ SnapCenter\_ per modificare i valori predefiniti. Se l'errore è correlato ai parametri rimanenti, è necessario risolvere il problema e quindi convalidare nuovamente i requisiti.
+
 ... Fare clic su *Upgrade* (Aggiorna).
 
 
 ** Se si desidera aggiornare più host, selezionare tutti gli host, fare clic su , quindi fare clic su image:../media/more_icon.gif["icona altro"]*Upgrade* > *OK*.
 +
 Tutti i servizi correlati vengono riavviati durante l'aggiornamento del plug-in.
-
-+
-
-NOTE: Tutti i plug-in del pacchetto vengono selezionati, ma solo i plug-in installati con la versione precedente di SnapCenter vengono aggiornati e i plug-in rimanenti non vengono installati. Per installare qualsiasi nuovo plug-in, utilizzare l'opzione *Aggiungi plug-in*.
-
-+
-Se non è stata selezionata la casella di controllo *Ignora controlli preliminari*, l'host del plug-in viene convalidato per verificare se soddisfa i requisiti di installazione del plug-in. Se i requisiti minimi non sono soddisfatti, vengono visualizzati messaggi di errore o di avviso appropriati. Dopo aver risolto il problema, fare clic su *Upgrade* (Aggiorna).
-
-+
-
-NOTE: Se l'errore riguarda lo spazio su disco o la RAM, è possibile aggiornare il file web.config che si trova in C: File di programma NetApp SnapCenter WebApp o i file di configurazione PowerShell che si trovano in C: Windows System 32, WindowsPowerShell v1.0, moduli SnapCenter per modificare i valori predefiniti. Se l'errore riguarda i parametri rimanenti, è necessario risolvere il problema e convalidare nuovamente i requisiti.
 
 
 

@@ -25,9 +25,9 @@ Prima di utilizzare SnapCenter per eseguire il backup delle risorse di database 
 .A proposito di questa attività
 Se è selezionata l'opzione "conserva le copie di backup per un numero specifico di giorni", il periodo di conservazione SnapLock deve essere minore o uguale ai giorni di conservazione menzionati.
 
-+ Specificando un periodo di blocco degli snapshot si impedisce l'eliminazione degli snapshot fino alla scadenza del periodo di conservazione.  Ciò potrebbe comportare la conservazione di un numero di snapshot maggiore rispetto al conteggio specificato nella policy.
+La specifica di un periodo di blocco snapshot impedisce l'eliminazione delle istantanee fino alla scadenza del periodo di conservazione. Questo potrebbe portare a mantenere un numero di Snapshot maggiore del conteggio specificato nel criterio.
 
-+ Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dagli SnapLock Vault Snapshot come parte del ripristino erediteranno il tempo di scadenza SnapLock Vault.  L'amministratore dell'archiviazione deve pulire manualmente i cloni dopo la scadenza SnapLock .
+Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dagli SnapLock Vault Snapshot come parte del ripristino erediteranno il tempo di scadenza SnapLock Vault. L'amministratore dell'archiviazione deve pulire manualmente i cloni dopo la scadenza SnapLock .
 
 *Fasi*
 

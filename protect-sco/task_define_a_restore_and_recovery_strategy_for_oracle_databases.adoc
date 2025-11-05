@@ -168,6 +168,7 @@ Le seguenti operazioni di ripristino non sono supportate:
 * Ripristino e ripristino degli spazi delle tabelle del database dei container root (CDB)
 * Ripristino di tablespace temporanei e tablespace temporanei associati ai PDB
 * Ripristino e ripristino di tablespace da più PDB contemporaneamente
+* Ripristino dei file temporanei perché il plug-in per Oracle non esegue il backup dei file temporanei
 * Ripristino dei backup dei log
 * Ripristino dei backup in una posizione diversa
 * Ripristino dei file di log di ripristino in qualsiasi configurazione diversa dai database di standby Data Guard o Active Data Guard
