@@ -17,6 +17,5 @@ Una volta installato il plug-in per SQL Server, è possibile utilizzare SnapCent
 
 * Automatizza le operazioni di backup, ripristino e clonazione application-aware per i database Microsoft SQL Server nel tuo ambiente SnapCenter.
 * Supporta i database Microsoft SQL Server su LUN VMDK e RDM (Raw Device Mapping) quando si implementa il plug-in SnapCenter per VMware vSphere e si registra il plug-in con SnapCenter
-* Supporta solo il provisioning delle condivisioni SMB. Non viene fornito il supporto per il backup dei database SQL Server sulle condivisioni SMB.
 * Supporta l'importazione di backup da SnapManager per Microsoft SQL Server a SnapCenter.
 

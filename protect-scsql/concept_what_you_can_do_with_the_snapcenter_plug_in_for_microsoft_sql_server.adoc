@@ -37,6 +37,3 @@ La verifica del database di sistema di SQL Server non è supportata. SnapCenter 
 * Pianificazione delle operazioni di backup e clonazione
 * Monitorare le operazioni di backup, ripristino e clonazione
 
-
-
-NOTE: Il plug-in per SQL Server non supporta il backup e il ripristino dei database SQL Server sulle condivisioni SMB.
