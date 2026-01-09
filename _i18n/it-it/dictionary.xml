@@ -1898,7 +1898,6 @@
   <block id="c48d82f0b1e5949ce3d34dc8ac74b4b5" category="paragraph">La verifica del database di sistema di SQL Server non è supportata. SnapCenter clona i database per eseguire le operazioni di verifica. SnapCenter non è in grado di clonare i database del sistema SQL Server, pertanto la verifica di questi database non è supportata.</block>
   <block id="c27ceb4a4892c429a975a62841762540" category="list-text">Pianificazione delle operazioni di backup e clonazione</block>
   <block id="aa71cd3a5a90a32aafb3072b19a68b09" category="list-text">Monitorare le operazioni di backup, ripristino e clonazione</block>
-  <block id="c343d8ab7af87f16e58b8e8040d7813a" category="admonition">Il plug-in per SQL Server non supporta il backup e il ripristino dei database SQL Server sulle condivisioni SMB.</block>
   <block id="230797cd257f4279279a678587ed7d3e" category="summary">Se si desidera proteggere i database di SnapCenter, è necessario installare e configurare il plug-in di SQL Server.</block>
   <block id="f03c757efff1b7a92c7b30cbc8c7c0b8" category="doc">Workflow di installazione del plug-in SnapCenter per Microsoft SQL Server</block>
   <block id="8ab00376f11ae4d62cc80dab05f617ea" category="doc">Opzioni di conservazione del backup per il plug-in per SQL Server</block>
@@ -3584,7 +3583,6 @@
   <block id="4abb41aae1dfe9c81afb3c3672df559c" category="paragraph">Linux o Windows</block>
   <block id="50e95eafa6faf8d2ee3f01921820b42b" category="list-text">Automatizza le operazioni di backup, ripristino e clonazione application-aware per i database Microsoft SQL Server nel tuo ambiente SnapCenter.</block>
   <block id="e40237d2b53363bc373f8134071d1be1" category="list-text">Supporta i database Microsoft SQL Server su LUN VMDK e RDM (Raw Device Mapping) quando si implementa il plug-in SnapCenter per VMware vSphere e si registra il plug-in con SnapCenter</block>
-  <block id="a7e3ff2bca34971756f1600032ff8b61" category="list-text">Supporta solo il provisioning delle condivisioni SMB. Non viene fornito il supporto per il backup dei database SQL Server sulle condivisioni SMB.</block>
   <block id="6bff10ef4d0d0d6d7ed28de9adc0169d" category="list-text">Supporta l'importazione di backup da SnapManager per Microsoft SQL Server a SnapCenter.</block>
   <block id="1b789581aeaa48640561ebae3b263a76" category="list-text">Abilita la protezione dei dati application-aware per altri plug-in in in esecuzione negli host Windows nell'ambiente SnapCenter</block>
   <block id="d764b7be86ece9a7b21fa445a8e1493c" category="list-text">Automatizza le operazioni di backup, ripristino e clonazione application-aware per i file system Microsoft nel tuo ambiente SnapCenter</block>
@@ -5025,9 +5023,6 @@
   <block id="623ef35114e69633221d2c9bf99f6cab" category="list-text">Attivazione HTTP di Windows Communication Foundation (WCF) 45</block>
   <block id="c38d32373eca3e6335e44b42893f0034" category="list-text">Attivazione TCP</block>
   <block id="cb6ddd90b08469e2479460ec34538fe2" category="list-text">Attivazione HTTP</block>
-  <block id="c3dbd8c35d4829310dd57365a749f10f" category="paragraph">Accodamento messaggi</block>
-  <block id="9c7750973d73f078f45c6bfd80cbfc85" category="list-text">Servizi di Accodamento messaggi</block>
-  <block id="be0efd214f0b56cf8372d18ec1837f53" category="admonition">Assicurarsi che nessun'altra applicazione utilizzi il servizio MSMQ creato e gestito da SnapCenter.</block>
   <block id="a8e1305e0c86caf1fec261807b3362ef" category="paragraph">Servizio di attivazione del processo di Windows</block>
   <block id="494ecde4fb6ee77e99799902ed23cd14" category="list-text">Modello di processo</block>
   <block id="293616622aeda675821b42e39b4d4e7b" category="paragraph">API di configurazione</block>
@@ -7827,7 +7822,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="10dbf6dc6b3b30fd58efded1253516d8" category="paragraph">Plug-in SnapCenter per database Exchange</block>
   <block id="b0ca30368b247fa738c8bdba36dd4d73" category="paragraph">NET predefinito. La porta TCP viene utilizzata dal plug-in di Windows per la connessione ai call-back VSS di Exchange.</block>
   <block id="cc0974b8a511f2e4b4d021cda6e5e820" category="paragraph">Plug-in supportati da NetApp per SnapCenter</block>
-  <block id="7eaa993723e57b3bfc99923c196e2e17" category="list-text">Rabbitmq</block>
   <block id="6905661e5d7f8f3e6a4faffbbab0f627" category="cell">Requisiti dell'host Windows</block>
   <block id="e7074f744b12e993cbdc6c77ee980b3e" category="list-text">Red Hat Enterprise Linux (RHEL) 8 e 9</block>
   <block id="447430d602cceb081264e037425cd96e" category="list-text">SUSE Linux Enterprise Server (SLES) 15</block>
@@ -9608,4 +9602,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="9ece03be74b25dcc59b19ce7d0ef2dfb" category="list-text">Eseguire il backup di tutti i file di configurazione SnapCenter modificati (ad esempio SnapDriveService.exe.config, SMCoreServiceHost.exe.config e così via) sull'host del server SnapCenter o sull'host del plug-in.</block>
   <block id="def9934ca3f718accf65ee67850cf9eb" category="list-text">Se nella colonna Stato generale viene visualizzato "Aggiornamento disponibile" per uno degli host del plug-in, fare clic sul nome dell'host del plug-in ed eseguire le seguenti operazioni:</block>
   <block id="25c5cc506d7be2c3d358fc8fd23f0e8f" category="admonition">Se non si seleziona *Salta controlli preliminari*, SnapCenter verifica se l'host del plug-in soddisfa i requisiti.  Se i requisiti non vengono soddisfatti, vengono visualizzati messaggi di errore o di avviso.  Se l'errore è correlato allo spazio su disco o alla RAM, è possibile aggiornare il file web.config situato in _C:\Program Files\ NetApp\ SnapCenter WebApp_ oppure i file di configurazione di PowerShell situati in _C:\Windows\System32\WindowsPowerShell\v1.0\Modules\ SnapCenter\_ per modificare i valori predefiniti. Se l'errore è correlato ai parametri rimanenti, è necessario risolvere il problema e quindi convalidare nuovamente i requisiti.</block>
+  <block id="ef99553115dfc1718a9b51a970da1ae9" category="paragraph">Specifica l'estensione del file di registro dell'archivio.</block>
+  <block id="7f051ce525ea23f09ed6b21ec49fa590" category="paragraph">Ad esempio, se il registro di archivio è log_backup_0_1.log, specificare .log come estensione del file.</block>
 </blocks>

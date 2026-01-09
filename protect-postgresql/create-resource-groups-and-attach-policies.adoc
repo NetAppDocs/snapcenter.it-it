@@ -128,9 +128,9 @@ ARCHIVE_LOG_EXT
  a| 
 estensione_file
  a| 
-Specifica la lunghezza dell'estensione del file di log dell'archivio.
+Specifica l'estensione del file di registro dell'archivio.
 
-Ad esempio, se il log di archiviazione è log_backup_0_0_0_0.161518551942 9 e il valore di estensione_file è 5, l'estensione del log conserverà 5 cifre, ossia 16151.
+Ad esempio, se il registro di archivio è log_backup_0_1.log, specificare .log come estensione del file.
 
 
 
