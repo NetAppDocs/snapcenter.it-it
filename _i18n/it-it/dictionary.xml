@@ -7878,7 +7878,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="66fe54fa4e213e520e33fab0de4829f3" category="list-text">È necessario aver completato attività quali l'installazione del server SnapCenter, l'aggiunta di host e l'impostazione delle connessioni al sistema di storage.</block>
   <block id="8d8222bc5c37db0562c84d9175b85db9" category="paragraph">Il rilevamento manuale non è supportato per le seguenti configurazioni:</block>
   <block id="0e74c3e0dd316d16d24798ac1b0249ef" category="list-text">Nel riquadro di spostamento di sinistra, selezionare *risorse*, quindi selezionare il plug-in SnapCenter per IBM DB2 dall'elenco a discesa.</block>
-  <block id="6425c50f54d17cde35a57532dc8e8d08" category="list-text">Nella pagina risorse, fare clic su *Aggiungi risorsa IBM DB2*.</block>
   <block id="75795411fa0821e8da73e95200ff81ad" category="paragraph">Specificare il nome del database.</block>
   <block id="1c07f24dbaeb847f4662960d2691d528" category="paragraph">Host Name (Nome host)</block>
   <block id="ce7a42c0c120b0e761b1d9b2851def5b" category="paragraph">Immettere il nome host.</block>
@@ -7888,7 +7887,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="5efe9e6fa4156b39ced69425eba7fb49" category="paragraph">Selezionare le credenziali o aggiungere informazioni per la credenziale.</block>
   <block id="deec2d29ae112d513d1bbd8cb6f3a23c" category="paragraph">Questa opzione è facoltativa.</block>
   <block id="4e4f9229f5def86d57e9acaf8014a093" category="list-text">Nella pagina fornire spazio di archiviazione, selezionare un tipo di archiviazione e scegliere uno o più volumi, LUN e qtree, quindi fare clic su *Salva*.</block>
-  <block id="bdf0204433b7ea9c415d7d723d74d2ef" category="list-text">Facoltativo: Nella pagina Impostazioni risorse, per le risorse sull'host Windows, immettere coppie di valori chiave personalizzati per il plug-in IBM DB2</block>
   <block id="da0726c01021262f418bf88a38a3c39d" category="paragraph">I database vengono visualizzati insieme a informazioni quali il nome host, i gruppi di risorse e i criteri associati e lo stato generale</block>
   <block id="c919dec0be0a88ec3d86651541015ec0" category="paragraph">Dopo aver aggiunto i database, è possibile modificare i dettagli del database IBM DB2.</block>
   <block id="8c1a9a6f582efdb1bcf39b24b3a86ac7" category="summary">Le risorse sono database IBM DB2 e istanze sull'host Linux che sono gestite da SnapCenter. Dopo aver installato il plug-in SnapCenter per IBM DB2, i database IBM DB2 su quell'host Linux vengono automaticamente rilevati e visualizzati nella pagina risorse.</block>
@@ -9606,4 +9604,21 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="ae0aa1a81eb18e69d5fc662eaee0efd5" category="inline-link-macro">Documentazione Tecnica Broadcom</block>
   <block id="35108ed715245e1479e838ca41d91463" category="paragraph">Consultare <block ref="fba62a4233b1f0aa3ff3e46f7f59037b" category="inline-link-macro-rx"></block> e cercare la documentazione sul clustering di macchine virtuali su host fisici e sulla creazione di LUN FC RDM condivise per cluster Microsoft.</block>
   <block id="82b9e59bccf9587b5e339fa8a0f02dd5" category="list-text">I controller NVMe sono supportati solo con i datastore NVMe.</block>
+  <block id="cc05f18551b367465c63e80895a59c04" category="list-text">Nella pagina Resources, seleziona *Add IBM DB2 Resource*.</block>
+  <block id="89cb4324d3c17b7b0eaa5b7eb935edd8" category="paragraph">Percorsi di montaggio</block>
+  <block id="cc1a25d74bb64939e2163e074e092923" category="paragraph">Inserisci i percorsi di montaggio in cui è montata la risorsa. Questa opzione è valida solo per gli host Windows.</block>
+  <block id="30deb25c4a7c59e8200ce96d5e23156f" category="paragraph">Questo campo è facoltativo.</block>
+  <block id="d353032aed6d3d3117bcf87b841c7809" category="list-text">Facoltativo: nella pagina Impostazioni Risorse, per le risorse sugli host Linux dove è installato il plug-in SnapCenter per IBM Db2, inserire coppie chiave-valore personalizzate per il plug-in IBM Db2. Le coppie chiave-valore personalizzate non sono supportate per i database IBM Db2 registrati come plug-in centralizzato Windows.</block>
+  <block id="a56c9defea42601d21f4c5106fa4712f" category="paragraph">I database vengono visualizzati insieme a informazioni quali l'host name, i gruppi di risorse e i criteri associati e lo stato generale.</block>
+  <block id="aeab626a715ace67f9b44eba97173286" category="list-text">Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dagli snapshot SnapLock Vault come parte del ripristino erediteranno il tempo di scadenza SnapLock Vault. Gli amministratori di storage dovrebbero pulire manualmente i cloni dopo il tempo di scadenza SnapLock.</block>
+  <block id="988351bdb1f1d7ecd10610f11fe7bd42" category="list-text">Nella pagina Resources, seleziona *New Resource Group*.</block>
+  <block id="5c97cba64ecb09baf4d77b8f9af3d46f" category="paragraph">Utilizza un formato nome personalizzato per Snapshot</block>
+  <block id="5ff5fcae197a653580a534917740d7f8" category="list-text">Selezionare la freccia *Scripts* e immettere i comandi pre e post per le operazioni di quiesce, snapshot e unquiesce. È anche possibile immettere i comandi pre da eseguire prima di uscire in caso di errore.</block>
+  <block id="d3436e2d89e59038914374a22cc8c673" category="list-text">Selezionare la freccia *Custom Configurations* e immettere le coppie chiave-valore personalizzate richieste per tutte le operazioni di protezione dei dati che utilizzano questa risorsa.</block>
+  <block id="98f1c90d5d623746b2adfec471311f76" category="list-text">Selezionare la freccia *Snapshot Copy Tool* per selezionare lo strumento per creare snapshot:</block>
+  <block id="7658971f73ec7751e63de7b917ad3277" category="paragraph">Per inserire il comando da eseguire sull'host per creare snapshot.</block>
+  <block id="375a1cee000ea12f25f7ea0aa40c92d2" category="paragraph"><block ref="375a1cee000ea12f25f7ea0aa40c92d2" category="inline-link-macro-rx"></block></block>
+  <block id="3edc812c3aede1bb8931ed56901c3d63" category="list-text">È necessario aver installato Java 11 sui propri host Linux o AIX.</block>
+  <block id="67444cdbc60594b36af73fd32a491c3e" category="paragraph"><block ref="67444cdbc60594b36af73fd32a491c3e" category="inline-link-macro-rx"></block></block>
+  <block id="947890351727a5bfefd25ab911655064" category="paragraph"><block ref="947890351727a5bfefd25ab911655064" category="inline-link-macro-rx"></block></block>
 </blocks>

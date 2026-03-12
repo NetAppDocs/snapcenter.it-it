@@ -25,7 +25,7 @@ Il rilevamento manuale non è supportato per le seguenti configurazioni:
 
 .Fasi
 . Nel riquadro di spostamento di sinistra, selezionare *risorse*, quindi selezionare il plug-in SnapCenter per IBM DB2 dall'elenco a discesa.
-. Nella pagina risorse, fare clic su *Aggiungi risorsa IBM DB2*.
+. Nella pagina Resources, seleziona *Add IBM DB2 Resource*.
 . Nella pagina fornire dettagli sulle risorse, eseguire le seguenti operazioni:
 +
 |===
@@ -61,21 +61,28 @@ Specificare il nome dell'istanza, che è il padre del database.
 
 
  a| 
+Percorsi di montaggio
+ a| 
+Inserisci i percorsi di montaggio in cui è montata la risorsa. Questa opzione è valida solo per gli host Windows.
+
+
+
+ a| 
 Credenziali
  a| 
 Selezionare le credenziali o aggiungere informazioni per la credenziale.
 
-Questa opzione è facoltativa.
+Questo campo è facoltativo.
 
 |===
 . Nella pagina fornire spazio di archiviazione, selezionare un tipo di archiviazione e scegliere uno o più volumi, LUN e qtree, quindi fare clic su *Salva*.
 +
 Opzionale: Puoi fare clic sull'icona * *image:../media/add_policy_from_resourcegroup.gif["aggiungere il gruppo di risorse del modulo criterio"]per aggiungere ulteriori volumi, LUN e qtree da altri sistemi storage.
 
-. Facoltativo: Nella pagina Impostazioni risorse, per le risorse sull'host Windows, immettere coppie di valori chiave personalizzati per il plug-in IBM DB2
+. Facoltativo: nella pagina Impostazioni Risorse, per le risorse sugli host Linux dove è installato il plug-in SnapCenter per IBM Db2, inserire coppie chiave-valore personalizzate per il plug-in IBM Db2. Le coppie chiave-valore personalizzate non sono supportate per i database IBM Db2 registrati come plug-in centralizzato Windows.
 . Esaminare il riepilogo, quindi fare clic su *fine*.
 +
-I database vengono visualizzati insieme a informazioni quali il nome host, i gruppi di risorse e i criteri associati e lo stato generale
+I database vengono visualizzati insieme a informazioni quali l'host name, i gruppi di risorse e i criteri associati e lo stato generale.
 
 
 
