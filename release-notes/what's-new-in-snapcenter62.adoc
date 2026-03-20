@@ -1,8 +1,8 @@
 ---
-permalink: 'release-notes/what"s-new-in-snapcenter61.html' 
+permalink: 'release-notes/what"s-new-in-snapcenter62.html' 
 sidebar: sidebar 
 keywords: what is new, features, enhancements, 6.2 
-summary: La release 6,1 del software SnapCenter include diverse nuove funzioni e miglioramenti. 
+summary: La release 6.2 del SnapCenter software include diverse nuove funzionalità e miglioramenti. 
 ---
 = Novità del SnapCenter software 6.2
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: La release 6,1 del software SnapCenter include diverse nuove funzioni e
 
 
 [role="lead"]
-La versione 6.2 del SnapCenter software include la seguente nuova funzionalità.
+La release 6.2 del SnapCenter software include la seguente funzionalità ampliata.
 
 |===
 | Aggiornare | Descrizione 

@@ -15,14 +15,14 @@ Un gruppo di risorse è il container al quale è necessario aggiungere risorse d
 
 .A proposito di questa attività
 * Per creare backup di replica del sistema SAP HANA, si consiglia di aggiungere tutte le risorse del sistema SAP HANA in un unico gruppo di risorse. Ciò garantisce un backup perfetto durante la modalità takeover-failback.
-* Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dagli Snapshot del vault di SnapLock come parte del ripristino ereditano il tempo di scadenza del vault di SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
+* Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dagli snapshot SnapLock Vault come parte del ripristino ereditano il tempo di scadenza SnapLock Vault. L'amministratore dello storage deve eliminare manualmente i cloni dopo il tempo di scadenza SnapLock Vault.
 * L'aggiunta di nuovi database senza la sincronizzazione attiva di SnapMirror a un gruppo di risorse esistente che contiene risorse con la sincronizzazione attiva di SnapMirror non è supportata.
 * L'aggiunta di nuovi database a un gruppo di risorse esistente in modalità di failover della sincronizzazione attiva SnapMirror non è supportata. È possibile aggiungere risorse al gruppo di risorse solo in stato normale o di failback.
 
 
 .Fasi
-. Nel riquadro di spostamento di sinistra, fare clic su *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
-. Nella pagina Resources (risorse), fare clic su *New Resource Group* (nuovo gruppo di risorse).
+. Nel riquadro di spostamento di sinistra, selezionare *risorse*, quindi selezionare il plug-in appropriato dall'elenco.
+. Nella pagina Resources, seleziona *New Resource Group*.
 . Nella pagina Name (Nome), eseguire le seguenti operazioni:
 +
 |===
@@ -49,21 +49,21 @@ Ad esempio, se si aggiunge HR come tag a più gruppi di risorse, è possibile tr
 
 
  a| 
-USA il formato nome personalizzato per la copia Snapshot
+Utilizza un formato di nome personalizzato per le snapshot.
  a| 
 Selezionare questa casella di controllo e immettere un formato del nome personalizzato che si desidera utilizzare per il nome dell'istantanea.
 
-Ad esempio, customtext_resource group_policy_hostname o resource group_hostname. Per impostazione predefinita, al nome dell'istantanea viene aggiunto un indicatore data e ora.
+Ad esempio, customtext_resourcegroup_policy_hostname o resource group_hostname. Per impostazione predefinita, al nome dello snapshot viene aggiunto un timestamp.
 
 |===
 . Nella pagina risorse, selezionare un nome host dall'elenco a discesa *host* e il tipo di risorsa dall'elenco a discesa *tipo di risorsa*.
 +
 In questo modo è possibile filtrare le informazioni sullo schermo.
 
-. Selezionare le risorse dalla sezione *risorse disponibili*, quindi fare clic sulla freccia destra per spostarle nella sezione *risorse selezionate*.
+. Selezionare le risorse dalla sezione *risorse disponibili*, quindi selezionare la freccia destra per spostarle nella sezione *risorse selezionate*.
 . Nella pagina Impostazioni applicazione, effettuare le seguenti operazioni:
 +
-.. Fare clic sulla freccia *Backup* per impostare opzioni di backup aggiuntive:
+.. Selezionare la freccia *Backup* per impostare opzioni di backup aggiuntive:
 +
 Abilitare il backup dei gruppi di coerenza ed eseguire le seguenti attività:
 
@@ -73,9 +73,9 @@ Abilitare il backup dei gruppi di coerenza ed eseguire le seguenti attività:
 
 
  a| 
-Tempo di attesa per il completamento dell'operazione Consistency Group Snapshot
+Attendere il completamento dell'operazione di snapshot del gruppo di coerenza
  a| 
-Selezionare *urgente*, *Medio* o *rilassato* per specificare il tempo di attesa per il completamento dell'operazione istantanea.
+Selezionare *urgente*, *Medio* o *rilassato* per specificare il tempo di attesa per il completamento dell'operazione snapshot.
 
 Urgente = 5 secondi, Medio = 7 secondi e rilassato = 20 secondi.
 
@@ -90,8 +90,8 @@ Selezionare questa opzione per evitare di forzare un punto di coerenza WAFL.
 +
 image:../media/application_settings.gif["impostazioni dell'applicazione"]
 
-.. Fare clic sulla freccia *Scripts* e immettere i comandi pre e post per le operazioni quiescenza, istantanea e inquiescenza. In caso di errore, è anche possibile inserire i pre-comandi da eseguire prima di uscire.
-.. Fare clic sulla freccia *Custom Configurations* (configurazioni personalizzate) e immettere le coppie chiave-valore personalizzate richieste per tutte le operazioni di protezione dei dati che utilizzano questa risorsa.
+.. Selezionare la freccia *Scripts* e immettere i comandi pre e post per le operazioni di quiesce, snapshot e unquiesce. È anche possibile immettere i comandi pre da eseguire prima di uscire in caso di errore.
+.. Selezionare la freccia *Custom Configurations* e immettere le coppie chiave-valore personalizzate richieste per tutte le operazioni di protezione dei dati che utilizzano questa risorsa.
 +
 |===
 | Parametro | Impostazione | Descrizione 
@@ -111,9 +111,9 @@ ARCHIVE_LOG_RETENTION
  a| 
 numero_di_giorni
  a| 
-Specifica il numero di giorni in cui i registri di archiviazione vengono conservati.
+Specifica il numero di giorni per cui i log di archivio vengono conservati.
 
-Questa impostazione deve essere uguale o superiore a NTAP_SNAPSHOT_ RETENTIONS.
+Questa impostazione deve essere uguale o superiore a NTAP_SNAPSHOT_RETENTIONS.
 
 
 
@@ -122,7 +122,7 @@ ARCHIVE_LOG_DIR
  a| 
 change_info_directory/logs
  a| 
-Specifica il percorso della directory che contiene i log di archiviazione.
+Specifica il percorso della directory che contiene i log di archivio.
 
 
 
@@ -131,34 +131,34 @@ ARCHIVE_LOG_EXT
  a| 
 estensione_file
  a| 
-Specifica la lunghezza dell'estensione del file di log dell'archivio.
+Specifica un'espressione regolare che corrisponde alle estensioni dei nomi file dei log.
 
-Ad esempio, se il log di archiviazione è log_backup_0_0_0_0.161518551942 9 e il valore di estensione_file è 5, l'estensione del log conserverà 5 cifre, ossia 16151.
+Per i file di log che terminano con un numero di cifre, utilizzare un'espressione regolare, come  `[0-9+]` o (dalla 6.0)  `\d+` (qualsiasi lunghezza di cifre di almeno un carattere) come valore per il parametro, che rappresenta qualsiasi numero di sequenza del log in SAP HANA.
 
 
 
  a| 
-ARCHIVE_LOG_RECURSIVE_SE ARCH
+ARCHIVE_LOG_RICERCA_RICORSIVA
  a| 
 (S/N)
  a| 
-Attiva la gestione dei log di archiviazione all'interno delle sottodirectory.
+Consente la gestione dei log di archivio all'interno delle sottodirectory.
 
-Utilizzare questo parametro se i log di archiviazione si trovano nelle sottodirectory.
+È necessario utilizzare questo parametro se i log di archivio si trovano in sottodirectory.
 
 |===
 +
 
-NOTE: Le coppie chiave-valore personalizzate sono supportate per i sistemi plug-in SAP HANA Linux e non per il database SAP HANA registrato come plug-in Windows centralizzato.
+NOTE: Le coppie chiave-valore personalizzate sono supportate per il SnapCenter Plug-in per SAP HANA Database sui sistemi Linux, ma non per i database SAP HANA registrati con il SnapCenter Plug-in per Microsoft Windows.
 
-.. Fare clic sulla freccia *Snapshot Copy Tool* per selezionare lo strumento per creare le istantanee:
+.. Selezionare la freccia *Snapshot Copy Tool* per selezionare lo strumento per creare snapshot:
 +
 |===
 | Se vuoi... | Quindi... 
 
 
  a| 
-SnapCenter deve utilizzare il plug-in per Windows e mettere il file system in uno stato coerente prima di creare una Snapshot. Per le risorse Linux, questa opzione non è applicabile.
+SnapCenter deve utilizzare il plug-in per Windows e mettere il file system in uno stato coerente prima di creare uno snapshot. Per le risorse Linux, questa opzione non è applicabile.
  a| 
 Selezionare *SnapCenter with file system Consistency*.
 
@@ -167,16 +167,16 @@ Questa opzione non è applicabile al plug-in SnapCenter per database SAP HANA.
 
 
  a| 
-SnapCenter per creare una istantanea a livello di storage
+SnapCenter per creare una snapshot a livello di storage
  a| 
 Selezionare *SnapCenter senza coerenza del file system*.
 
 
 
  a| 
-Per inserire il comando da eseguire sull'host per creare copie Snapshot.
+Immettere il comando da eseguire sull'host per creare copie snapshot.
  a| 
-Selezionare *Altro*, quindi immettere il comando da eseguire sull'host per creare un'istantanea.
+Selezionare *Altro*, quindi immettere il comando da eseguire sull'host per creare uno snapshot.
 
 |===
 
@@ -186,13 +186,13 @@ Selezionare *Altro*, quindi immettere il comando da eseguire sull'host per crear
 .. Selezionare uno o più criteri dall'elenco a discesa.
 +
 
-NOTE: È anche possibile creare una policy facendo clic su * *image:../media/add_policy_from_resourcegroup.gif["aggiungere il gruppo di risorse del modulo criterio"].
+NOTE: È inoltre possibile creare una policy selezionando *image:../media/add_policy_from_resourcegroup.gif["aggiungere il gruppo di risorse del modulo criterio"]*.
 
 +
 I criteri sono elencati nella sezione Configura pianificazioni per i criteri selezionati.
 
-.. Nella colonna Configura pianificazioni, fare clic su * *image:../media/add_policy_from_resourcegroup.gif["aggiungere il gruppo di risorse del modulo criterio"]per il criterio che si desidera configurare.
-.. Nella finestra di dialogo Add schedules for policy _policy_name_, configurare la pianificazione, quindi fare clic su *OK*.
+.. Nella colonna Configura pianificazioni, seleziona *image:../media/add_policy_from_resourcegroup.gif["aggiungere il gruppo di risorse del modulo criterio"]* per la policy che desideri configurare.
+.. Nella finestra di dialogo Add schedules for policy _policy_name_, configurare la pianificazione, quindi selezionare *OK*.
 +
 Dove, policy_name è il nome del criterio selezionato.
 
@@ -208,5 +208,5 @@ Le pianificazioni di backup di terze parti non sono supportate quando si sovrapp
 +
 È inoltre necessario specificare gli indirizzi e-mail del mittente e del destinatario e l'oggetto dell'e-mail. Il server SMTP deve essere configurato in *Impostazioni* > *Impostazioni globali*.
 
-. Esaminare il riepilogo, quindi fare clic su *fine*.
+. Esaminare il riepilogo, quindi selezionare *fine*.
 

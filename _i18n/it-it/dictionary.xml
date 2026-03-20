@@ -761,12 +761,10 @@
   <block id="39044c9904e8af5b92ac884123a563e6" category="paragraph">ARCHIVE_LOG_RECURSIVE_SE ARCH</block>
   <block id="f5c64a8a00482e0316a9a53b3ee3affc" category="paragraph">Attiva la gestione dei log di archiviazione all'interno delle sottodirectory.</block>
   <block id="88ff0775a15d5ae4d05b9ecdeb6b5a48" category="paragraph">Utilizzare questo parametro se i log di archiviazione si trovano nelle sottodirectory.</block>
-  <block id="0d1c37a6cf22ce8a58bdf0cb6bb40c68" category="admonition">Le coppie chiave-valore personalizzate sono supportate per i sistemi plug-in SAP HANA Linux e non per il database SAP HANA registrato come plug-in Windows centralizzato.</block>
   <block id="70ea5c730ba565a725b5e6a5ce34b32d" category="cell">Se vuoi...</block>
   <block id="1accc18e0f25decba79f224ccd167283" category="paragraph">Selezionare *SnapCenter with file system Consistency*.</block>
   <block id="62559cf2803ff56106a84e128591c337" category="paragraph">Questa opzione non è applicabile al plug-in SnapCenter per database SAP HANA.</block>
   <block id="6d9c2c737b6e3a27597d11ff3b1d8a05" category="paragraph">Selezionare *SnapCenter senza coerenza del file system*.</block>
-  <block id="086beaa9afd2391b7d5204a8db47791c" category="paragraph">Per inserire il comando da eseguire sull'host per creare copie Snapshot.</block>
   <block id="53899dcc4360d3b8622ce5dc08a12950" category="list-text">Nella pagina Criteri, attenersi alla seguente procedura:</block>
   <block id="70c30c71587e2d0c71b7f9e97a8aad7d" category="list-text">Selezionare uno o più criteri dall'elenco a discesa.</block>
   <block id="e27c3f444b9f74c83a643ba11ed3a83e" category="admonition">Puoi anche creare una policy facendo clic su *<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>*.</block>
@@ -6008,7 +6006,6 @@
   <block id="86ce5961ef6624058f736d93459d1889" category="list-text">Fare clic su *Sì*.</block>
   <block id="b36ee7ff89fbb252e1b22b5a6cce9b0f" category="summary">Le informazioni relative alle varie operazioni eseguite da SnapCenter vengono memorizzate nel repository del database del server SnapCenter. È necessario creare backup del repository per proteggere il server SnapCenter dalla perdita di dati.</block>
   <block id="7d0bb889cb0b99adea9fd13298f9dc65" category="doc">Gestire il repository del server SnapCenter</block>
-  <block id="a1e91e17ee1b5e24f7c7302a0064632f" category="paragraph">Il repository del server SnapCenter viene talvolta definito database NSM.</block>
   <block id="fe7cd80bae6be2bcc96ab226eb99c50a" category="section-title">Prerequisiti per la protezione del repository SnapCenter</block>
   <block id="01ef52f0d7aff8362a33649ac3782a4e" category="paragraph">L'ambiente deve soddisfare determinati prerequisiti per proteggere il repository SnapCenter.</block>
   <block id="56cd02514fc7e3e9a291f682b7b4152f" category="list-text">Gestione delle connessioni SVM (Storage Virtual Machine)</block>
@@ -6018,20 +6015,10 @@
   <block id="5939935560a57cf24f66e58fc3474130" category="paragraph">Per ulteriori informazioni sull'aggiunta di host, la configurazione delle connessioni SVM e il provisioning degli host, consultare le istruzioni di installazione.</block>
   <block id="f59018181ccb88a6778559b6b5c4473e" category="list-text">Provisioning del LUN iSCSI o VMDK</block>
   <block id="4ab874225134090fa4c4cfdc80864dd6" category="paragraph">Per la configurazione ad alta disponibilità (ha), è possibile eseguire il provisioning di un LUN iSCSI o di un VMDK in uno dei server SnapCenter.</block>
-  <block id="7597d52eb0c956005115012b9fa9bd26" category="paragraph">Il backup del repository del server SnapCenter consente di proteggerlo dalla perdita di dati. È possibile eseguire il backup del repository eseguendo il cmdlet _Protect-SmRepository_.</block>
-  <block id="df8c6c6a4cbe864804d25a19c138d1e4" category="paragraph">Il cmdlet _Protect-SmRepository_ esegue le seguenti attività:</block>
   <block id="a50ee732cf2b94825d6f396603785b14" category="list-text">Crea un gruppo di risorse e una policy</block>
   <block id="bcd34fe0c0a8a4c0ceaad81a07d9c1a3" category="list-text">Crea una pianificazione di backup per il repository SnapCenter</block>
-  <block id="304b4f669a8de7a8bc81003b9b4662ac" category="list-text">Eseguire il backup del repository utilizzando il cmdlet _Protect-SmRepository_ e i parametri richiesti.</block>
   <block id="619a478ddd75b061c06fe4b486fd257d" category="section-title">Visualizzare i backup del repository SnapCenter</block>
-  <block id="3914a7caf7bf09997c2fc2fbe52d8be9" category="paragraph">È possibile visualizzare un elenco dei backup del repository di database del server SnapCenter eseguendo il cmdlet _Get-SmRepositoryBackups_.</block>
-  <block id="cf09cb1daef76e19292bdba03e3b0854" category="paragraph">I backup del repository vengono creati in base alla pianificazione specificata nel cmdlet _Protect-SmRepository_.</block>
-  <block id="82e30b4352734f6dc42efb531c81acab" category="list-text">Dal prompt dei comandi, immettere il seguente cmdlet, quindi fornire le credenziali per la connessione al server SnapCenter: _Open-SMConnection_</block>
-  <block id="1052207e87a7abc9637c274fe1512058" category="list-text">Elencare tutti i backup dei database SnapCenter disponibili utilizzando il cmdlet _Get-SmRepositoryBackups_.</block>
   <block id="1f3fde786df2928c4db966c705ec8ba1" category="section-title">Ripristinare il repository del database SnapCenter</block>
-  <block id="8efce21441fffae32eaf2ee4fec1a9b8" category="paragraph">È possibile ripristinare il repository SnapCenter eseguendo il cmdlet _Restore-SmRepositoryBackup_.</block>
-  <block id="09a6d5e712449f112a3dcd2169dac55a" category="paragraph">Durante il ripristino del repository SnapCenter, le altre operazioni SnapCenter in esecuzione saranno interessate dal fatto che durante l'operazione di ripristino il database del repository non è accessibile.</block>
-  <block id="f65a265b9c1e948edcb4b8b5bd492a18" category="list-text">Ripristinare il backup del repository utilizzando il cmdlet _Restore-SmRepositoryBackup_.</block>
   <block id="ec9dad1ea2b1a5314f82d20d3bf23f49" category="paragraph">Il seguente cmdlet ripristina il repository del database MySQL di SnapCenter dai backup esistenti su LUN iSCSI o VMDK:</block>
   <block id="ba26ffcdcd99a1aea9b86f7be319ba8b" category="admonition">Il backup utilizzato per eseguire l'operazione di ripristino del repository non viene elencato quando vengono recuperati i backup del repository dopo aver eseguito l'operazione di ripristino.</block>
   <block id="071788d560dec04e39684f7e9734f7f8" category="section-title">Migrare il repository SnapCenter</block>
@@ -6050,8 +6037,6 @@
   <block id="b8b2c5727e9add44321ab3714400d246" category="section-title">Reimpostare la password del repository SnapCenter</block>
   <block id="faa0310fc3df6f9869f6dc9e0bb9d44d" category="paragraph">La password del database del repository MySQL Server viene generata automaticamente durante l'installazione del server SnapCenter da SnapCenter 4.2. Questa password generata automaticamente non è nota all'utente SnapCenter in nessun momento. Se si desidera accedere al database del repository, è necessario reimpostare la password.</block>
   <block id="b34c04c23047012dce89ab9b0f667d6f" category="paragraph">Per reimpostare la password, è necessario disporre dei privilegi di amministratore di SnapCenter.</block>
-  <block id="2bc36d79452c84a7d4dcf76ddbbd79db" category="list-text">Dal prompt dei comandi, immettere il seguente comando, quindi fornire le credenziali per la connessione al server SnapCenter: _Open-SMConnection_</block>
-  <block id="f14f9ddeff8bba25b45edf7c8f27a7f1" category="list-text">Reimpostare la password del repository: _Set-SmRepositoryPassword_</block>
   <block id="e340c193c1f0abe76ae4f936229af71d" category="paragraph">Il seguente comando reimposta la password del repository:</block>
   <block id="5a2af8cfc36900326af214cab7c1b9ff" category="summary">È possibile richiedere report sui processi di backup, ripristino e clonazione dalla pagina Dashboard. Questa opzione è utile se si desidera identificare il numero totale di processi riusciti o non riusciti nell'ambiente SnapCenter.</block>
   <block id="0b421aef4e2a6824e12019d1a2729de5" category="doc">Richiedere i report di stato dei lavori dalla dashboard</block>
@@ -7571,8 +7556,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="6fa0e3128174a7e08f019a67d401084d" category="list-text">Selezionare la freccia *Scripts* per eseguire i comandi pre e post per le operazioni quiescenza, istantanea e inquiescenza.</block>
   <block id="5b0cda43c7e63de2868d2bf0d3b62f53" category="paragraph">SnapCenter per creare una Snapshot a livello di storage</block>
   <block id="d00226243bd3282875e3647e34ef9ac2" category="paragraph">SnapCenter utilizzare il plug-in per Windows per impostare lo stato coerente del file system e quindi creare una Snapshot</block>
-  <block id="513e9e5c9242c20cd3a0e1af2c91141c" category="paragraph">Selezionare *urgente*, *Medio* o *rilassato* per specificare il tempo di attesa per il completamento dell'operazione istantanea.</block>
-  <block id="7753c7b112c057fc94bcaa18ecc0f343" category="list-text">Fare clic sulla freccia *Scripts* e immettere i comandi pre e post per le operazioni quiescenza, istantanea e inquiescenza. In caso di errore, è anche possibile inserire i pre-comandi da eseguire prima di uscire.</block>
   <block id="660ee777f341ef8a02048c649ceb5033" category="admonition">Se la risorsa contiene volumi o qtree, gli Snapshot acquisiti dopo la Snapshot selezionata per il ripristino su tali volumi o qtree vengono eliminati e non possono essere recuperati. Inoltre, se un'altra risorsa è ospitata sugli stessi volumi o qtree, anche tale risorsa viene eliminata.</block>
   <block id="99b447de4897ad60ae2d4ef832acc11d" category="paragraph">Ad esempio, se il periodo di conservazione degli Snapshot primari è di 7 giorni e la conservazione degli Snapshot secondari è di 45 giorni, dopo il completamento di 45 giorni e dopo l'eliminazione di tutti i backup, è necessario eliminare il gruppo di risorse e la vecchia risorsa MDC.</block>
   <block id="d7d148a2da0b4f8f54f724e577240359" category="paragraph">Se la risorsa contiene volumi o qtree, gli Snapshot acquisiti dopo la Snapshot selezionata per il ripristino su tali volumi o qtree vengono eliminati e non possono essere recuperati. Inoltre, se un'altra risorsa è ospitata sugli stessi volumi o qtree, anche tale risorsa viene eliminata. Questa opzione è applicabile quando l'opzione *completa risorsa* con *Ripristino volume* è selezionata per il ripristino.</block>
@@ -9143,7 +9126,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="57cf9c4ee485623172a5c60cbee423a4" category="paragraph">Vedere il <block ref="96716f545c5cf1a209bf10c1a798ce38" category="inline-link-macro-rx"></block> video.</block>
   <block id="5c8b8bc332cb41802ffbe6c5cda258ab" category="paragraph">È supportato il layout dello storage virtuale VMDK, vVol e RDM.</block>
   <block id="e5385a9de21528bfedd644f4c0331eb1" category="summary">Il software SnapCenter è una piattaforma semplice, centralizzata e scalabile che offre data Protection coerente con l'applicazione per applicazioni, database, file system host e VM su sistemi ONTAP ovunque nel cloud ibrido.</block>
-  <block id="68578ccfcf5117ca8a9a2d7d884e320f" category="summary">La release 6,1 del software SnapCenter include diverse nuove funzioni e miglioramenti.</block>
   <block id="8127605cde4cee83a23b35f1207c7572" category="sidebar">Documentazione del software SnapCenter</block>
   <block id="e76a4ae8df1bf6770838ce7c7d94e229" category="paragraph">Avviare i servizi plug-in (applicabile solo per i plug-in in esecuzione sull'host Windows)</block>
   <block id="8e6af76634121af640a2987aea883af4" category="doc">Metodi di autenticazione per le credenziali SnapCenter</block>
@@ -9533,13 +9515,11 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="67998d9af35dea74903e9cdb371f7e7a" category="paragraph">In alternativa, puoi anche fare riferimento a<block ref="4a5b4acb82a31b5d3a197c5ec1468fe8" category="inline-link-rx"></block> O<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block> .</block>
   <block id="e2affc8ad90cb942103d56d82396b5f7" category="paragraph">Scopri le nuove e migliorate funzionalità disponibili in SnapCenter 6.2.</block>
   <block id="652468e7a8f47c94c0dfc2bbbe3f6788" category="inline-link-macro">Novità di SnapCenter 6.2</block>
-  <block id="d5d7d6e218fb8deef9aa758f16f3e053" category="paragraph">Per un elenco completo delle nuove funzionalità e dei miglioramenti, consultare <block ref="ba56a05032a421946bbeef30dde12674" category="inline-link-macro-rx"></block> .</block>
   <block id="24443d9133830b434ac05072f0c9653a" category="inline-link">Note sulla versione 6.2 del software SnapCenter</block>
   <block id="320bd16b81d8a6a0a077d7308db7683d" category="paragraph">Il percorso di aggiornamento mostra da quali versioni di SnapCenter è possibile effettuare l'aggiornamento e quali versioni dei plug-in sono supportate.</block>
   <block id="f734f899336791933d28373bca69a72f" category="admonition">Se si aggiorna SnapCenter Server alla versione 6.2, aggiornare anche i plug-in alla versione 6.2.</block>
   <block id="7a22247de8db3271f3bf8573be10e986" category="cell">6,2</block>
   <block id="cb2f94cd974dcdf68577ffd66816a900" category="doc">Novità del SnapCenter software 6.2</block>
-  <block id="02a7a1f2d7c2b92647dd96da7bf06024" category="paragraph">La versione 6.2 del SnapCenter software include la seguente nuova funzionalità.</block>
   <block id="efd8ec518c3271e168cebeb4a21d4fc3" category="paragraph">SnapCenter 6.2 (server e plug-in) insieme a ONTAP 9.17.1 supporta sia la protezione primaria che quella secondaria delle applicazioni in esecuzione su sistemi fisici (Linux e Windows) e Virtual Machine File System (VMFS) utilizzando gruppi di coerenza gerarchica.</block>
   <block id="669e7e163e3b320fc474c04f2cd99bdc" category="paragraph">Dopo l'aggiornamento a SnapCenter 6.2 e ONTAP 9.17.1, SnapCenter modifica i gruppi di coerenza semplici in gruppi di coerenza gerarchici durante il primo backup pianificato.</block>
   <block id="9e1557573461036ce114499c0c41ed6f" category="paragraph">Il flusso di lavoro elenca le attività che è necessario completare per aggiornare i pacchetti SnapCenter Server e Plug-in.</block>
@@ -9621,4 +9601,40 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="3edc812c3aede1bb8931ed56901c3d63" category="list-text">È necessario aver installato Java 11 sui propri host Linux o AIX.</block>
   <block id="67444cdbc60594b36af73fd32a491c3e" category="paragraph"><block ref="67444cdbc60594b36af73fd32a491c3e" category="inline-link-macro-rx"></block></block>
   <block id="947890351727a5bfefd25ab911655064" category="paragraph"><block ref="947890351727a5bfefd25ab911655064" category="inline-link-macro-rx"></block></block>
+  <block id="4eecf71620cb916df975db3d622e9c30" category="paragraph">Il SnapCenter Server repository viene talvolta indicato come NSM database. Consultare la <block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block> per i dettagli di tutti i cmdlet disponibili.</block>
+  <block id="e9087f4d1c2c90b2c0e70f14ce029f2b" category="paragraph">Il backup del SnapCenter Server repository aiuta a proteggerlo dalla perdita di dati. È possibile eseguire il backup del repository eseguendo il <block ref="f89bc12c0d2d413f64b24c351b6b566d" prefix=" " category="inline-code"></block> cmdlet.</block>
+  <block id="7de02e43c7e5e44fea6db42bf98f4e4f" category="paragraph">Il<block ref="f89bc12c0d2d413f64b24c351b6b566d" prefix=" " category="inline-code"></block> cmdlet esegue le seguenti operazioni:</block>
+  <block id="7c6f43e53987a1cba407a45574b6e131" category="list-text">Sul host SnapCenter Server, stabilire una sessione utilizzando il <block ref="5127bb5818426c9a226f86808b688df6" prefix=" " category="inline-code"></block> cmdlet e immettere le credenziali.</block>
+  <block id="2313913b76aff94d8503163d4f267e85" category="list-text">Eseguire il backup del repository utilizzando il<block ref="f89bc12c0d2d413f64b24c351b6b566d" prefix=" " category="inline-code"></block> cmdlet che accetta i seguenti parametri obbligatori:</block>
+  <block id="a78522bed1f819174f25cef96c0c0ff3" category="list-text"><block ref="cf11ed5faa9031625d5872a33b51369d" prefix="" category="inline-code"></block>: Specifica il nome host del server in cui si trova il repository SnapCenter.</block>
+  <block id="f72b4d51cc947b4944fe5bff106a159e" category="list-text"><block ref="6c15defbbb5591f238f00aae21da8102" prefix="" category="inline-code"></block>: Specifica il percorso del file system sul sistema storage NetApp in cui vengono memorizzati i backup del repository.</block>
+  <block id="45cfbc93f52bddc8332cbb3821a79fcd" category="list-text"><block ref="3e6a04e315cffe1935944c6e148259e3" prefix="" category="inline-code"></block>: Definisce la pianificazione per il backup del repository. In genere viene definita come una hashtable.</block>
+  <block id="ea93be765766b1b0340a46ec9fa44007" category="list-text"><block ref="17c9a3d0386d0c9388f23f0e1746b442" prefix="" category="inline-code"></block>: Specifica il numero di backup del repository da conservare. Quando il numero di backup supera questo valore, il backup più vecchio viene eliminato.</block>
+  <block id="fbb43b857700ed367835ec83901639b4" category="inline-link">SnapCenter Software Guida di riferimento ai cmdlet - Get-SmRepositoryBackups</block>
+  <block id="bc38773382be3f74dc73755cd9827105" category="paragraph">È possibile visualizzare un elenco dei backup del repository del database del server SnapCenter eseguendo il<block ref="8f3ee45ff6a4d15cb1535fbb2104cbe3" prefix=" " category="inline-code"></block> cmdlet. Consultare il<block ref="c67bf538930b4faf23ee321b029e47b4" category="inline-link-rx"></block> per i dettagli.</block>
+  <block id="fe977c7845ac3fb77271396a2eccec70" category="paragraph">I backup del repository vengono creati secondo la pianificazione specificata nel <block ref="f89bc12c0d2d413f64b24c351b6b566d" prefix=" " category="inline-code"></block> cmdlet.</block>
+  <block id="c55d0155b4fd52f1558139d035379b17" category="list-text">Dal prompt dei comandi, immettere il <block ref="5127bb5818426c9a226f86808b688df6" prefix=" " category="inline-code"></block> cmdlet e fornire le credenziali per connettersi al server SnapCenter.</block>
+  <block id="1d8ed305cde1786adbe54ceb761583b1" category="list-text">Elenca tutti i backup del database SnapCenter disponibili utilizzando il <block ref="8f3ee45ff6a4d15cb1535fbb2104cbe3" prefix=" " category="inline-code"></block> cmdlet.</block>
+  <block id="f815b5ceaf8636c8128f6fdfe485fca0" category="paragraph">È possibile ripristinare il SnapCenter repository eseguendo il<block ref="8ae865811cf35c74eae23a4044145d22" prefix=" " category="inline-code"></block> cmdlet.</block>
+  <block id="358aee23266781e25636c5c68e9d029f" category="paragraph">Quando si ripristina il SnapCenter repository, le altre SnapCenter operazioni in esecuzione vengono influenzate perché durante l'operazione di ripristino il repository database non è accessibile.</block>
+  <block id="ade1166053736f73c976329f5201c8e3" category="list-text">Ripristina il backup del repository utilizzando il <block ref="8ae865811cf35c74eae23a4044145d22" prefix=" " category="inline-code"></block> cmdlet.</block>
+  <block id="493b7d8df398bc120f9f428c564acc5c" category="list-text">Reimposta la password del repository utilizzando il <block ref="e276a5794a7efafc0fd13b7cc2d4468c" prefix=" " category="inline-code"></block> cmdlet.</block>
+  <block id="151857987a4ca8ab0b6b4ae84218e0ef" category="paragraph">È possibile ottenere le informazioni sui parametri che è possibile utilizzare con il cmdlet e le relative descrizioni eseguendo il comando <block ref="b306feeed6ddda97d08ef1f2a0ba62d9" prefix=" " category="inline-code"></block>. In alternativa, è possibile fare riferimento a <block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>.</block>
+  <block id="f6290ecec0b6032b705450a72b783056" category="list-text">Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dagli snapshot SnapLock Vault come parte del ripristino ereditano il tempo di scadenza SnapLock Vault. L'amministratore dello storage deve eliminare manualmente i cloni dopo il tempo di scadenza SnapLock Vault.</block>
+  <block id="5e0169811e6298c75af680faf7eb3898" category="paragraph">Utilizza un formato di nome personalizzato per le snapshot.</block>
+  <block id="32aa9c674cdcdd67bbedcd5786e9c89c" category="paragraph">Ad esempio, customtext_resourcegroup_policy_hostname o resource group_hostname. Per impostazione predefinita, al nome dello snapshot viene aggiunto un timestamp.</block>
+  <block id="71c597cb94a0c26a5fa6146e850d4c89" category="paragraph">Specifica il numero di giorni per cui i log di archivio vengono conservati.</block>
+  <block id="25b35304e237e166d7ff315d9ad4ba4d" category="paragraph">Questa impostazione deve essere uguale o superiore a NTAP_SNAPSHOT_RETENTIONS.</block>
+  <block id="7e4961425800a99500e244a5e02bc700" category="paragraph">Specifica il percorso della directory che contiene i log di archivio.</block>
+  <block id="244579f440504a33f1468b477f530b72" category="paragraph">Specifica un'espressione regolare che corrisponde alle estensioni dei nomi file dei log.</block>
+  <block id="2168489b9f8e6334897f26a5329667ab" category="paragraph">Per i file di log che terminano con un numero di cifre, utilizzare un'espressione regolare, come <block ref="ececa0327fd65b97690ab7756b7b6c18" prefix=" " category="inline-code"></block> o (dalla 6.0) <block ref="217c2028762e7dcdedd3dce416220593" prefix=" " category="inline-code"></block> (qualsiasi lunghezza di cifre di almeno un carattere) come valore per il parametro, che rappresenta qualsiasi numero di sequenza del log in SAP HANA.</block>
+  <block id="488081ea3d4e639bcf2be8f71cd46132" category="paragraph">ARCHIVE_LOG_RICERCA_RICORSIVA</block>
+  <block id="85bbfdb76a2b2ed0fd1b0da7a4fb3785" category="paragraph">Consente la gestione dei log di archivio all'interno delle sottodirectory.</block>
+  <block id="4c6d3857eae63796ee3d5f67011e194f" category="paragraph">È necessario utilizzare questo parametro se i log di archivio si trovano in sottodirectory.</block>
+  <block id="5223ed0f09a7ed8f79cb34ee678642b2" category="admonition">Le coppie chiave-valore personalizzate sono supportate per il SnapCenter Plug-in per SAP HANA Database sui sistemi Linux, ma non per i database SAP HANA registrati con il SnapCenter Plug-in per Microsoft Windows.</block>
+  <block id="fef844efd5d5274641ab5a8e530ced87" category="admonition">È inoltre possibile creare una policy selezionando *<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>*.</block>
+  <block id="d3562ace999b51c49c22ce4c580579b0" category="list-text">Nella colonna Configura pianificazioni, seleziona *<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>* per la policy che desideri configurare.</block>
+  <block id="8d3b5ad5b9f27b4f9781e490487c376e" category="paragraph">Per un elenco completo delle nuove funzionalità e dei miglioramenti, vedere <block ref="333326639e0f94ceb693906a79235ec5" category="inline-link-macro-rx"></block>.</block>
+  <block id="2f1352033f9cdf5dbec684bea0d87ee5" category="summary">La release 6.2 del SnapCenter software include diverse nuove funzionalità e miglioramenti.</block>
+  <block id="f4090871da1ea3c21c90ff0a2bfe77db" category="paragraph">La release 6.2 del SnapCenter software include la seguente funzionalità ampliata.</block>
 </blocks>
