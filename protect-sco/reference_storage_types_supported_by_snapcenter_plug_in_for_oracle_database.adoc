@@ -58,6 +58,21 @@ NOTE: RAC è supportato su ESX 8.0U2 che supporta VMDK condiviso
 
 
 
+
+
+ a| 
+Altri hypervisor
+ a| 
+Linux in esecuzione su KVM, Xen, Hyper-V e hypervisor hyperscaler è supportato quando il sistema operativo guest ha accesso TCP/IP diretto alle risorse di storage ONTAP utilizzando i seguenti metodi:
+
+* LUN connessi a iSCSI
+* Volumi connessi a NFS
+* NVMe/TCP
+
+
+
+NOTE: I datastore e le presentazioni raw dei dispositivi non sono supportati al di fuori di VMware.
+
 |===
 
 
