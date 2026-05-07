@@ -13,7 +13,7 @@ summary: Prima di aggiungere un host e installare i pacchetti plug-in, è necess
 [role="lead"]
 Prima di aggiungere un host e installare i pacchetti plug-in, è necessario completare tutti i requisiti. Il plug-in SnapCenter per database SAP HANA è disponibile sia in ambienti Windows che Linux.
 
-* È necessario aver installato Java 11 sull'host.
+* È necessario aver installato Java 17 sul proprio host.
 +
 
 NOTE: IBM Java non è supportato su host Windows e Linux.
@@ -33,9 +33,9 @@ NOTE: IBM Java non è supportato su host Windows e Linux.
 * È necessario disporre di un utente di dominio con privilegi di amministratore locale con autorizzazioni di accesso locale sull'host remoto.
 * Durante l'installazione del plug-in per database SAP HANA su un host Windows, il plug-in SnapCenter per Microsoft Windows viene installato automaticamente.
 * È necessario aver attivato la connessione SSH basata su password per l'utente root o non root.
-* È necessario aver installato Java 11 sull'host Windows.
+* È necessario aver installato Java 17 sul proprio host Windows.
 +
-http://www.java.com/en/download/manual.jsp["Scarica JAVA per tutti i sistemi operativi"]
+link:https://www.oracle.com/java/technologies/downloads/#java17["Scarica Java per tutti i sistemi operativi"]
 
 
 
@@ -44,9 +44,9 @@ http://www.java.com/en/download/manual.jsp["Scarica JAVA per tutti i sistemi ope
 == Host Linux
 
 * È necessario aver attivato la connessione SSH basata su password per l'utente root o non root.
-* È necessario aver installato Java 11 sull'host Linux.
+* È necessario aver installato Java 17 sul proprio host Linux.
 +
-http://www.java.com/en/download/manual.jsp["Scarica JAVA per tutti i sistemi operativi"]
+link:https://www.oracle.com/java/technologies/downloads/#java17["Scarica Java per tutti i sistemi operativi"]
 
 * Per i database SAP HANA in esecuzione su un host Linux, durante l'installazione del plug-in per il database SAP HANA, il plug-in SnapCenter per UNIX viene installato automaticamente.
 * Si dovrebbe avere *bash* come shell predefinita per l'installazione del plug-in.

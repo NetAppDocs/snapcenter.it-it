@@ -1,0 +1,28 @@
+---
+permalink: protect-sco/enable-consistency-group-snapshots-resource-group-level.html 
+sidebar: sidebar 
+keywords: consistency group, enable, create, resource group level 
+summary: Un gruppo di risorse è un container in cui vengono aggiunte le risorse di cui si desidera eseguire il backup e la protezione. Un gruppo di risorse consente di eseguire contemporaneamente il backup di tutti i dati associati a una determinata applicazione. 
+---
+= Abilita gli snapshot dei gruppi di coerenza a livello di gruppo di risorse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per impostazione predefinita, il SnapCenter Plug-in per Oracle Database crea snapshot del gruppo di coerenza a livello di gruppo di dischi Automatic Storage Management (ASM) o di gruppo di volumi Logical Volume Management (LVM). Come best practice, i database all'interno di un singolo gruppo di risorse non dovrebbero condividere volumi ONTAP tra gruppi di dischi ASM o gruppi di volumi LVM.
+
+Tuttavia, se i gruppi di dischi ASM o i gruppi di volumi LVM condividono i volumi ONTAP sottostanti, lo snapshot del gruppo di coerenza potrebbe non riuscire a causa di conflitti di snapshot duplicati. In questi casi, SnapCenter ripiega automaticamente sugli snapshot a livello di volume.
+
+.A proposito di questa attività
+Negli scenari in cui i volumi sono condivisi tra gruppi di dischi ASM o gruppi di volumi LVM, SnapCenter supporta l'abilitazione degli snapshot dei gruppi di coerenza a livello di gruppo di risorse. Ciò garantisce che tutti i gruppi di dischi ASM o i gruppi di volumi LVM associati ai database all'interno del gruppo di risorse vengano inclusi in un singolo snapshot del gruppo di coerenza. I passaggi seguenti descrivono come utilizzare questa funzionalità.
+
+.Fasi
+. Accedere al seguente file di configurazione sul SnapCenter server:
++
+`C:\Program Files\NetApp\SMCore\SMCoreServiceHost.dll.config`.
+
+. Individua il  `isCgSnapshotForRg` parametro e modifica il suo valore da *false* a *true*.
+. Riavvia il  `SMCoreService` servizio affinché la modifica abbia effetto.
+

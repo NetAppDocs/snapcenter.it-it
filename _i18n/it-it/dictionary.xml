@@ -232,7 +232,6 @@
   <block id="361ef555cc4b1de8cd252d68a14901af" category="list-text">È necessario disporre di un utente di dominio con privilegi di amministratore locale con autorizzazioni di accesso locale sull'host remoto.</block>
   <block id="19651d78354411794cd21f4636d9840b" category="list-text">Durante l'installazione del plug-in per database SAP HANA su un host Windows, il plug-in SnapCenter per Microsoft Windows viene installato automaticamente.</block>
   <block id="92f854eabda8c2aa761e01fba1c6ffd4" category="list-text">È necessario aver attivato la connessione SSH basata su password per l'utente root o non root.</block>
-  <block id="6919c26b69875a76335f5a1dd643e508" category="inline-link">Download Java per tutti i sistemi operativi</block>
   <block id="cfe19b0ae08454358fbe515d88fd6095" category="section-title">Host Linux</block>
   <block id="f551df54591f7eef7409f694b7b0cc08" category="list-text">Per i database SAP HANA in esecuzione su un host Linux, durante l'installazione del plug-in per il database SAP HANA, il plug-in SnapCenter per UNIX viene installato automaticamente.</block>
   <block id="8a9acf145456ddf488e58afbf2c913a1" category="summary">Le risorse sono database SAP HANA e volumi non dati sull'host Linux gestiti da SnapCenter. È possibile aggiungere queste risorse ai gruppi di risorse per eseguire operazioni di protezione dei dati dopo aver individuato i database SAP HANA disponibili.</block>
@@ -1042,7 +1041,6 @@
   <block id="a51e41e4cd7b03dd48ce2e65ed3e1736" category="list-text">SUSE Linux Enterprise Server (SLES)</block>
   <block id="083ad21990802d20fc5fdefdb7255565" category="paragraph">2 GB</block>
   <block id="1ec72ff98c807b748e55dd0ff1dbf757" category="admonition">È necessario allocare spazio su disco sufficiente e monitorare il consumo di storage da parte della cartella dei log. Lo spazio di log richiesto varia in base al numero delle entità da proteggere e alla frequenza delle operazioni di protezione dei dati. Se lo spazio su disco non è sufficiente, i registri non verranno creati per le operazioni eseguite di recente.</block>
-  <block id="bac8e3a852c936b4db89afd35d4d962a" category="paragraph">Se JAVA è stato aggiornato alla versione più recente, assicurarsi che l'opzione JAVA_HOME disponibile in /var/opt/snapcenter/spl/etc/spl.properties sia impostata sulla versione JAVA corretta e sul percorso corretto.</block>
   <block id="afd7453bfb7b2ee3805b612dd9889484" category="summary">È necessario definire una strategia prima di ripristinare e ripristinare il database in modo da poter eseguire correttamente le operazioni di ripristino e ripristino.</block>
   <block id="f053b1c99159302e4282006cc7c9d970" category="doc">Definire una strategia di ripristino per le risorse SAP HANA</block>
   <block id="c6534fab43cf3777e5130a53358227ce" category="list-text">Determinare le strategie di ripristino supportate per le risorse SAP HANA aggiunte manualmente</block>
@@ -3174,7 +3172,6 @@
   <block id="b2e43cf8357eaf43ddb786837e13f48b" category="list-text">Se si installa il pacchetto di plug-in SnapCenter per AIX su host AIX, i collegamenti simbolici a livello di directory dovrebbero essere stati risolti manualmente.</block>
   <block id="7ea03b56d913b0b846ddb14167eed21a" category="paragraph">Il pacchetto di plug-in SnapCenter per AIX risolve automaticamente il collegamento simbolico a livello di file, ma non i collegamenti simbolici a livello di directory per ottenere il percorso ASSOLUTO JAVA_HOME.</block>
   <block id="b5920495a710a16336b4343815e09685" category="list-text">Creare le credenziali con la modalità di autenticazione come Linux o AIX per l'utente di installazione.</block>
-  <block id="48b525b2b37df887839c2e72d7a4a780" category="admonition">Assicurarsi di aver installato solo L'edizione certificata DI JAVA 11 sull'host Linux.</block>
   <block id="41ad31577018e71491bd0866701dd1b5" category="list-text">Per i database Oracle in esecuzione su un host Linux o AIX, è necessario installare sia il plug-in SnapCenter per il database Oracle che il plug-in SnapCenter per UNIX.</block>
   <block id="b45e2244ecb857cf03fd685ecf2522d6" category="admonition">È possibile utilizzare il plug-in per Oracle Database per gestire anche i database Oracle per SAP. Tuttavia, l'integrazione SAP BR*Tools non è supportata.</block>
   <block id="b327d38de9a934b16819cbfb7fe94387" category="list-text">Se si utilizza Oracle database 11.2.0.3 o versione successiva, è necessario installare la patch Oracle 13366202.</block>
@@ -3209,7 +3206,6 @@
   <block id="1937942be6bc478199bc930af1623991" category="paragraph">SnapCenter utilizza le credenziali per autenticare gli utenti per le operazioni SnapCenter. Creare le credenziali per l'installazione del pacchetto plug-in su host Linux o AIX.</block>
   <block id="93ec70472eb9ceff1f5bd3b65b97df6c" category="paragraph">Le credenziali vengono create per l'utente root o per un utente non root che dispone dei privilegi di sudo per installare e avviare il processo di plug-in.</block>
   <block id="11dbb070e552e50e58059b5d673f1d1a" category="paragraph">Per ulteriori informazioni, vedere: <block ref="f3719d4df312e2308fdbfca4904a6c51" category="inline-xref-macro-rx"></block> oppure <block ref="0cff305d940e3d5ee78f36245aa0f592" category="inline-xref-macro-rx"></block></block>
-  <block id="bb7cb5e0c78f0ae62b8ec079f1b70efc" category="cell">*Best practice:* sebbene sia consentito creare credenziali dopo la distribuzione degli host e l'installazione dei plug-in, la Best practice consiste nel creare credenziali dopo l'aggiunta di SVM, prima di distribuire gli host e installare i plug-in.</block>
   <block id="a789173ed9b6f7eea2bff098b4efbb2b" category="list-text">Nella pagina credenziale, immettere le informazioni sulle credenziali:</block>
   <block id="678fe3118680b05727ac6f1183530e90" category="paragraph">A seconda del sistema operativo dell'host plug-in, selezionare Linux o AIX.</block>
   <block id="8f414d86207e09d30548c998144cf26d" category="paragraph">Al termine dell'impostazione delle credenziali, è possibile assegnare la manutenzione delle credenziali a un utente o a un gruppo di utenti nella pagina *utente e accesso*.</block>
@@ -3218,8 +3214,6 @@
   <block id="5b00a6bb860d50a1c997c998160e673c" category="inline-link-macro">Metodi di autenticazione per le credenziali</block>
   <block id="242cdc11ae22f217c93ae40e14e96194" category="paragraph">Se si impostano le credenziali per singoli gruppi di risorse e il nome utente non dispone di privilegi di amministratore completi, il nome utente deve avere almeno privilegi di gruppo di risorse e di backup.</block>
   <block id="7b13621f41f0146d0ffd2434af94438a" category="paragraph">Se è stata attivata l'autenticazione del database Oracle, nella vista delle risorse viene visualizzata un'icona a forma di lucchetto rosso. È necessario configurare le credenziali del database per proteggere il database o aggiungerlo al gruppo di risorse per eseguire le operazioni di protezione dei dati.</block>
-  <block id="9d84c90ce04a969ca09498823506ba1f" category="admonition">Se si specificano dettagli errati durante la creazione di una credenziale, viene visualizzato un messaggio di errore. Fare clic su *Annulla*, quindi riprovare.</block>
-  <block id="5de6e0a70b653c8dab85d2d2bccf04ae" category="list-text">Selezionare il database, quindi fare clic su *Impostazioni database* &gt; *Configura database*.</block>
   <block id="6df18cfefa59a0d65ea120d8247b7ba8" category="list-text">Nella sezione Configure database settings (Configura impostazioni database), dall'elenco a discesa *Use Existing Credential* (Usa credenziale esistente), selezionare la credenziale da utilizzare per eseguire i processi di protezione dei dati nel database Oracle.</block>
   <block id="bc36b053b483bc3f05afdf22b15ab4cf" category="admonition">L'utente Oracle deve disporre dei privilegi sysdba.</block>
   <block id="1cfc01edff8bef313773da53b3e8c4eb" category="inline-image-macro">icona add (aggiungi) nella schermata di configurazione del database</block>
@@ -3232,7 +3226,6 @@
   <block id="65c2449dd103d146930974c3c6b38806" category="paragraph">I nodi preferiti possono essere uno o tutti i nodi del cluster in cui sono presenti le istanze del database RAC. L'operazione di backup viene attivata solo su questi nodi preferiti in ordine di preferenza.</block>
   <block id="368fea2d6bbc65dc4e5625eb27f9bd66" category="paragraph">In RAC One Node, nei nodi preferiti è elencato solo un nodo, che è il nodo in cui è attualmente ospitato il database.</block>
   <block id="cc64f4c44fdc213d2a7145638c9720aa" category="paragraph">Dopo il failover o il trasferimento del database RAC a un nodo, l'aggiornamento delle risorse nella pagina risorse SnapCenter rimuoverà l'host dall'elenco *Preferred RAC Node* (nodi RAC preferiti) in cui il database era stato ospitato in precedenza. Il nodo RAC in cui viene ricollocato il database viene elencato in *nodi RAC* e deve essere configurato manualmente come nodo RAC preferito.</block>
-  <block id="b73216514e4678fde5a5aea6c63626c9" category="paragraph">Per ulteriori informazioni, vedere <block ref="8f2b39531f2b3f3e4e9667f4d7ba23f5" category="inline-link-macro-rx"></block>.</block>
   <block id="f6580ca6cc46a9f70a1144ca360dac1d" category="summary">È possibile aggiornare il clone eseguendo il comando "Refresh-SmClone". Questo comando crea un backup del database, elimina il clone esistente e crea un clone con lo stesso nome.</block>
   <block id="1170d6f09309cb8dc382034a34680937" category="doc">Aggiornare un clone</block>
   <block id="19b2a14361caf1b643cecc574e4e994e" category="paragraph">È possibile aggiornare il clone eseguendo il comando _Refresh-SmClone_. Questo comando crea un backup del database, elimina il clone esistente e crea un clone con lo stesso nome.</block>
@@ -7044,7 +7037,6 @@ Il ripristino di una singola casella postale di NetApp® è giunto alla fine del
   <block id="2e1961167c1057a818d6fff279cd9778" category="list-text">È possibile utilizzare l'autenticazione basata su password per l'utente root o non root oppure l'autenticazione basata su chiave SSH.</block>
   <block id="fed1505389358193273003d88a5d4e8b" category="paragraph">Il plug-in SnapCenter per file system Unix può essere installato da un utente non root. Tuttavia, è necessario configurare i privilegi sudo per l'utente non root per installare e avviare il processo di plug-in. Dopo aver installato il plug-in, i processi verranno eseguiti come utenti non root.</block>
   <block id="45d6e373e26981f8611297351f3acd1f" category="list-text">Creare credenziali con la modalità di autenticazione come Linux per l'utente di installazione.</block>
-  <block id="def18ece6fc73f693c0b0bc38b5819e3" category="paragraph">Per informazioni su come scaricare JAVA, consulta:<block ref="dc93a441af3c4c177b993a3220d67dc7" category="inline-link-rx"></block></block>
   <block id="03a5add8b1ca9e57103fcc6d2af1e13d" category="summary">In caso di perdita di dati, è possibile utilizzare SnapCenter per ripristinare i dati.</block>
   <block id="e4fb3d3aee9f2c9a606d7c14e14554c2" category="doc">Ripristinare i file system Unix</block>
   <block id="477b9e0faab6fa2ed715b3c19c3d00d9" category="paragraph">In caso di perdita di dati, è possibile utilizzare SnapCenter per ripristinare i file system Unix.</block>
@@ -7606,15 +7598,12 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="58184ed57b20efbfac17064f1bc0e4f4" category="list-text">Selezionare il backup e fare clic su *Rimuovi protezione*.</block>
   <block id="ad569cc1cca820033bb20ffe1d5bc4a5" category="paragraph">AIX 7,1 o versione successiva</block>
   <block id="6b139c8a52407032a30a5d0cbb7c1438" category="list-text">modifica snapshot del volume-tempo di scadenza snaplock</block>
-  <block id="4a58751c57809081912e30803a16d52e" category="list-text">PowerShell Core 7.4.2</block>
-  <block id="b7ccd7f577996dd33bde8070db971b93" category="list-text">Java 11 Oracle Java e OpenJDK</block>
   <block id="9b722cfab4d80b751e95d2565746573a" category="paragraph">Datastore vVol in NFS e SAN</block>
   <block id="e37a9ce9ba1b9f128287af3bf8300997" category="paragraph">Strumenti ONTAP per VMware vSphere</block>
   <block id="74db7181476f94f0e2927d8c8d98cb97" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento anche a<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>.</block>
   <block id="7359d18faa5cf73508a61a7a55fa8078" category="paragraph">Windows Server 2016 o versione successiva consente di creare un account di servizio gestito di gruppo (gMSA) che fornisce la gestione automatica delle password dell'account di servizio da un account di dominio gestito.</block>
   <block id="f9c537b0510058ab13ecb3f2c5dba296" category="list-text">È necessario disporre di un controller di dominio Windows Server 2016 o versione successiva.</block>
   <block id="7f8a12ff662f4ebfae4a4fae37911f70" category="list-text">È necessario disporre di un host Windows Server 2016 o versione successiva, membro del dominio.</block>
-  <block id="13d1cfa343dd610d15ad68b43ed6733b" category="list-text">Avviare una sessione di connessione PowerShell Core utilizzando il cmdlet Open-SmConnection.</block>
   <block id="a5fa058c13c0c8a9236ecfe243b173b2" category="cell">Per i plug-in supportati da NetApp</block>
   <block id="d63a7945f954d7f0cb122f664ce1a434" category="cell">Per DB2</block>
   <block id="32b2fa1d8696fe76a40e6bfcf9eb68ca" category="cell">Per PostgreSQL</block>
@@ -7853,7 +7842,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="97aa5d732e113de93c33cd5b5f45d232" category="admonition">Il plug-in per IBM DB2 è installato sull'host client IBM DB2 e questo host può essere su un sistema Windows o Linux.</block>
   <block id="ac3f0f70b90920f66b01df6df5178730" category="paragraph">Quando si utilizza l'API REST per installare Plug-in per DB2, è necessario passare la versione come 3,0. Ad esempio, DB2:3,0</block>
   <block id="a06badbc50b005d66c89afeb19164928" category="paragraph">Il plug-in per IBM DB2 è installato sull'host client IBM DB2 e questo host può essere su un sistema Windows o Linux.</block>
-  <block id="7e5dacddaaa8672290ea4564cf1c41ad" category="paragraph">Se non è stata selezionata la casella di controllo Ignora controlli preliminari, l'host viene convalidato per verificare se l'host soddisfa i requisiti per l'installazione del plug-in. Lo spazio su disco, la RAM, la versione PowerShell, . La versione di NET, la posizione (per i plug-in Windows) e Java 11 (per i plug-in Windows e Linux) sono convalidati in base ai requisiti minimi. Se i requisiti minimi non vengono soddisfatti, vengono visualizzati messaggi di errore o di avviso appropriati.</block>
   <block id="0fcc0f3a2dace0457cd9db71bb8bfef8" category="list-text">Per i plug-in di Windows, i log di installazione e aggiornamento si trovano in: _C:\Windows\SnapCenter plugin\Install_&lt;JOBID&gt;\</block>
   <block id="4921a99bb14e7c74ffbcbc45df56f359" category="list-text">Per i plug-in Linux, i log di installazione si trovano in: _/var/opt/snapcenter/logs/SnapCenter_Linux_host_Plug-in_Install_&lt;JOBID&gt;.log e i log di aggiornamento si trovano in: _/var/opt/snapcenter/logs/SnapCenter_Linux_host_Plug-in_Upgrade_&lt;JOBID&gt;.log</block>
   <block id="f55d81a07e6e0581f3e19eff0a932069" category="summary">Il rilevamento automatico non è supportato per alcune istanze DB2. È necessario aggiungere queste risorse manualmente.</block>
@@ -7909,7 +7897,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="cbdb153ba57beb687294d7e8f31412e0" category="list-text">Pianificazioni di backup (esattamente quando devono essere eseguiti i backup)</block>
   <block id="6aeab35488d70b793616d60842ca0876" category="summary">È necessario creare una connessione SVM (Storage Virtual Machine) e una credenziale prima di utilizzare i cmdlet PowerShell per eseguire il backup, il ripristino o la clonazione dei database IBM DB2.</block>
   <block id="7df89a57cd954d9fccb7460aba44487f" category="doc">Creare una connessione al sistema di archiviazione e una credenziale utilizzando i cmdlet PowerShell per IBM DB2</block>
-  <block id="118cab1ac580f1a92885e2cf6b354202" category="list-text">Fare clic su *SnapCenterPS* per avviare PowerShell Core.</block>
   <block id="dabd3a5e1251c743ed158ee90a82f546" category="list-text">Aggiungere l'host di comunicazione IBM DB2 al server SnapCenter.</block>
   <block id="4d733d69dd67f5078610a37dc6cf23e2" category="list-text">Installare il pacchetto e il plug-in SnapCenter per IBM DB2 sull'host.</block>
   <block id="1b859fa3e819f0a2c67e3a9c24c49334" category="list-text">Impostare il percorso su SQLLIB.</block>
@@ -7987,14 +7974,10 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="1cee6b1d92dab1cdbc73f49bf49e7540" category="doc">Preparare i sistemi storage per la replica SnapMirror e SnapVault per IBM DB2</block>
   <block id="f80fec9ba0fd21d9be7aae0929912664" category="summary">Prima di utilizzare il plug-in SnapCenter per IBM DB2, l'amministratore di SnapCenter deve installare e configurare il server SnapCenter ed eseguire le attività dei prerequisiti.</block>
   <block id="5a57722bded3e33c1b6bf551ed3ea25f" category="doc">Prerequisiti per l'utilizzo del plug-in SnapCenter per IBM DB2</block>
-  <block id="80718846c9ca830ee95177bb30f81b82" category="list-text">Installare Java 11 sull'host Linux o Windows.</block>
-  <block id="8b78d81fcf70311e0778d7ca1a1da748" category="list-text">È necessario aver installato Java 11 sull'host.</block>
   <block id="ab4159cc3447ed2c57efc22073c9a591" category="list-text">Per Windows, il plug-in Creator Service dovrebbe essere in esecuzione utilizzando l'utente di Windows "`LocalSystem'", che è il comportamento predefinito quando Plug-in per IBM DB2 è installato come amministratore di dominio.</block>
   <block id="e4a8446fdfa57d72bb5925250cccc5b7" category="list-text">Quando si installa un plug-in su un host Windows, se si specifica una credenziale non integrata o se l'utente appartiene a un utente del gruppo di lavoro locale, è necessario disattivare il controllo dell'account utente sull'host. Il plug-in SnapCenter per Microsoft Windows verrà distribuito per impostazione predefinita con il plug-in IBM DB2 sugli host Windows.</block>
   <block id="70557a0ca3b5f90edd18cfc0d99671ad" category="list-text">Il server SnapCenter deve avere accesso alla porta 8145 o personalizzata del plug-in per l'host IBM DB2.</block>
   <block id="e978910a0a826388ce9c16d9683c5bd4" category="list-text">Durante l'installazione del plug-in per IBM DB2 su un host Windows, il plug-in SnapCenter per Microsoft Windows viene installato automaticamente.</block>
-  <block id="74b8e77de0b5018c5ab2ca7eb523ff31" category="list-text">È necessario aver installato Java 11 sull'host Windows.</block>
-  <block id="129fdeda5a8637916b3b579b072e4eaa" category="list-text">È necessario aver installato Java 11 sull'host Linux.</block>
   <block id="29a9fb7975f0f566600524d35939f828" category="list-text">Per i database IBM DB2 in esecuzione su un host Linux, durante l'installazione del plug-in per IBM DB2, il plug-in SnapCenter per UNIX viene installato automaticamente.</block>
   <block id="a2e3df47ed947a4f17566f6f4c728ec8" category="list-text">Per l'utente non root, assicurarsi che il nome dell'utente non root e del gruppo dell'utente siano identici.</block>
   <block id="31245bdedaeb267e7e5c6f53cf9e708d" category="paragraph">È possibile ottenere il _checksum_value_ dal file *sc_unix_plugins_checksum.txt*, che si trova in:</block>
@@ -8254,7 +8237,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="c8decdbf430021dfc0d8d243973909b6" category="summary">Prima di utilizzare SnapCenter per eseguire il backup di risorse specifiche dei plug-in supportati da NetApp, è necessario creare un criterio di backup per la risorsa o il gruppo di risorse di cui si desidera eseguire il backup.</block>
   <block id="3dd6642ca499d1f7ea549635f37b1c82" category="doc">Crea policy per le risorse dei plug-in supportate da NetApp</block>
   <block id="19648bb3ed0d97dbf793f0f414a626a8" category="paragraph">Per ulteriori informazioni, consulta le informazioni relative alla definizione di una strategia di data Protection per i plug-in supportati da NetApp.</block>
-  <block id="8e3a492a9b736283405d7d14febefe64" category="paragraph">Java 11 Oracle Java o OpenJDK</block>
   <block id="3d409e4955bb3de9bcf0382e6ed02f3c" category="doc">Modalità di utilizzo di risorse, gruppi di risorse e policy per la protezione delle risorse dei plug-in supportate da NetApp</block>
   <block id="041c2bc239865621fefddc8c25a37009" category="summary">Se si desidera proteggere le risorse dei plug-in supportati da NetApp, è necessario installare e configurare i plug-in supportati da SnapCenter NetApp.</block>
   <block id="51810f5f2de2f019cb898ee5bb825600" category="doc">Flusso di lavoro di installazione dei plug-in supportati da SnapCenter NetApp</block>
@@ -8279,7 +8261,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="031130cc740dce019fe31437829d3261" category="doc">Preparare sistemi storage per la replica SnapMirror e SnapVault per i plug-in supportati da NetApp</block>
   <block id="b5d24747e2254cd74a278959e55db769" category="summary">Prima di utilizzare i plug-in supportati da SnapCenter NetApp, l'amministratore di SnapCenter deve installare e configurare il server SnapCenter ed eseguire le attività dei prerequisiti.</block>
   <block id="6f9abdf4e6349ffead799b7fe0fb5848" category="doc">Prerequisiti per l'utilizzo dei plug-in supportati da NetApp</block>
-  <block id="b64964f7c6cb3e2d0ad50647f28415f4" category="list-text">Se applicabile, installare Java 11 sull'host plug-in.</block>
   <block id="70470fa292d95a8fc9a82053e4e3efc0" category="paragraph">La porta 9090 deve essere riservata ai plug-in supportati da NetApp oltre alle altre porte richieste da SnapCenter.</block>
   <block id="db39871b690a95f007f3b71acd6533d2" category="doc">Prerequisiti per l'aggiunta di host e l'installazione dei plug-in supportati da NetApp</block>
   <block id="06489e5a01873cf102f78c0da703ea59" category="list-text">L'operazione di ripristino predefinita ripristina solo gli oggetti di storage. Le operazioni di ripristino a livello di applicazione possono essere eseguite solo se il plug-in supportato da NetApp fornisce tale funzionalità.</block>
@@ -8461,8 +8442,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="7de40efacefbbc10736955fb76d4f312" category="list-text">Backup, ripristino, clone, mount, unmount, i flussi di lavoro di creazione di cataloghi, cataloghi e verifiche sono supportati su NVMe su TCP/IP.</block>
   <block id="449c889358b05b8939d81d9dfd5ad5a4" category="list-text">Backup, ripristino, clone, mount, unmount, i flussi di lavoro di catalogo, rimozione dei cataloghi e verifica sono supportati sul layout VMDK creato su NVMe su TCP/IP.</block>
   <block id="0520e3156de98e2c722c4ebe7fe303c7" category="list-text">Supporta la sincronizzazione attiva SnapMirror (inizialmente rilasciata come SnapMirror Business Continuity [SM-BC]) che consente ai servizi business di continuare a funzionare anche attraverso un guasto completo del sito, supportando le applicazioni per il failover in modo trasparente utilizzando una copia secondaria. Non sono richiesti interventi manuali o script aggiuntivi per attivare un failover con la sincronizzazione attiva di SnapMirror.</block>
-  <block id="cadca0993c074565e0295e47c4f0c2a0" category="list-text">È necessario aver installato Java 11 sull'host Linux o AIX.</block>
-  <block id="97ee77f84790cbf22d7e32413911f94c" category="paragraph">Java 11 IBM Java</block>
   <block id="3ab5865f7b3fcc5851ae24144b15f370" category="list-text">NVMe-FC</block>
   <block id="bb2676e02f9905c86303b7f1988d2898" category="list-text">VMDK su datastore NFS</block>
   <block id="ae1d120b56beba9c6f5a7802f3e3d61d" category="admonition">RAC è supportato su ESX 8.0U2 che supporta VMDK condiviso</block>
@@ -8741,10 +8720,7 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="44040e214e919d86d6a1f3f26db3d22c" category="inline-image-macro">icona edit (modifica)</block>
   <block id="68819c7042f13f544d27a782b1c23806" category="list-text">Fare clic su <block ref="b4ece97e1b8d14f42e755a2c424f87a6" category="inline-image-macro-rx" type="image"></block> per modificare i valori.</block>
   <block id="cb62fbb794888232bcd99a94764ba3fb" category="image-alt">criterio gruppo di risorse</block>
-  <block id="79a43ebcb13d1d4c2e8786939bbd0a57" category="list-text">Java di Oracle e OpenJDK è supportato per Linux</block>
   <block id="4f89061470b39de2158694538d7101af" category="inline-link">IBM Semeru Runtimes Download</block>
-  <block id="1c4627ccac14a61e3bce6d3629218d85" category="list-text">IBM Java per AIX. È possibile scaricare da<block ref="cf41b0c524544b137d4105ff48ece522" category="inline-link-rx"></block></block>
-  <block id="94cfbdf843ad80dab8b4c63aa78522c5" category="paragraph">Java 11 Oracle e OpenJDK</block>
   <block id="2584ae0844f37bdb517dc8e38d68a2f5" category="list-text">Dopo aver avviato il processo di backup, fare clic <block ref="64eace402f8f00b7a999e38fb6d87e55" category="inline-image-macro-rx" type="image"></block> sul riquadro attività per visualizzare le cinque operazioni più recenti.</block>
   <block id="8da2271859ceaf1866467967dd6640c9" category="paragraph">Vedere <block ref="dc20cca85782861f6e03c00cec5a33c0" category="inline-link-macro-rx"></block>.</block>
   <block id="1edc23bb6f80cdc062019a1682663523" category="list-text">Selezionare image:../media/filter_icon.png[filter icon], quindi selezionare il nome host per filtrare le istanze.</block>
@@ -8786,7 +8762,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="c8df28b406eabc43243b92181d68f712" category="paragraph">È possibile installare i plug-in supportati da NetApp dalla pagina Aggiungi host.</block>
   <block id="cb15647de6f65c6f817e3b480a54f7db" category="summary">Prima di aggiungere un host e installare i pacchetti plug-in, è necessario completare tutti i requisiti. I plug-in supportati da NetApp possono essere utilizzati in ambienti Windows, Linux o AIX.</block>
   <block id="01b37fc83542f28040f13cc0ca72a787" category="paragraph">Prima di aggiungere un host e installare i pacchetti plug-in, è necessario completare tutti i requisiti. I plug-in supportati da NetApp sono supportati in ambienti Windows, Linux e AIX.</block>
-  <block id="a12fcc2714160353d9eaad3f6b1236bc" category="list-text">È necessario aver installato Java 11 sull'host Linux, Windows o AIX.</block>
   <block id="4baf1f02e89e733c2e9e86eb70c5a37b" category="list-text">I plug-in supportati da NetApp come MongoDB, ORASCPM, applicazioni Oracle, SAP ASE, SAP MaxDB e plug-in di storage devono essere disponibili sull'host client da cui viene eseguita l'operazione di aggiunta dell'host.</block>
   <block id="0612f5c4c0ebcf5d100decba8d34d5a2" category="list-text">È necessario scegliere manualmente il plug-in SnapCenter per Microsoft Windows.</block>
   <block id="97f324a8c5553ff0e590a7f1d7426c7b" category="list-text">Host Linux o AIX</block>
@@ -9311,14 +9286,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="3199d4d0758d0f4f53db9a8f36670c18" category="sidebar">Configurare il server SnapCenter</block>
   <block id="4c975961e88401702aa6aac167300031" category="sidebar">Aggiungere e predisporre il sistema di archiviazione</block>
   <block id="0885e9f12d8cb35b0f02655c34c87004" category="admonition">IBM Java non è supportato su host Windows e Linux.</block>
-  <block id="48c9a1bf5de7bf57f1efa648f3bc8d17" category="inline-link">Scarica JAVA per Windows</block>
-  <block id="a4560fe71d10d98deabf55fdf50b90f0" category="paragraph"><block ref="a4560fe71d10d98deabf55fdf50b90f0" category="inline-link-rx"></block></block>
-  <block id="25827211b51e5a08cc74ddb2f845f386" category="inline-link">Scarica JAVA per Linux</block>
-  <block id="0632a773655c14c1b1e9ced88bc550ed" category="paragraph"><block ref="0632a773655c14c1b1e9ced88bc550ed" category="inline-link-rx"></block></block>
-  <block id="ffef625a5852f63e8c97e120b261e871" category="inline-link">Scarica JAVA per AIX</block>
-  <block id="1cf0cff6e7cd05dac4238e50abe74627" category="paragraph"><block ref="1cf0cff6e7cd05dac4238e50abe74627" category="inline-link-rx"></block></block>
-  <block id="67366bdaf9086e6015fe527a27beb845" category="inline-link">Scarica JAVA per tutti i sistemi operativi</block>
-  <block id="230f7d0fc162c3a559cd8b29556f41f4" category="paragraph"><block ref="230f7d0fc162c3a559cd8b29556f41f4" category="inline-link-rx"></block></block>
   <block id="17103b09b3247a2b39032b11b995b325" category="list-text">ORACLE_BACKUPMODE specifica se eseguire il backup online o offline.</block>
   <block id="e787bc810fe0c9919da5538cad8cb1f1" category="list-text">ORACLE_EXPORT_PARAMETERS specifica se le variabili d'ambiente definite sopra debbano essere riesportate durante l'esecuzione di _/bin/su &lt;utente che esegue sqlplus&gt; -c sqlplus /nolog &lt;cmd&gt;_. Questo si verifica in genere quando l'utente che esegue sqlplus non ha impostato tutte le variabili d'ambiente necessarie per connettersi al database tramite _connect / come sysdba_.</block>
   <block id="a6f6a01605d225b6eccb8bc600198254" category="doc">Gestisci la password per il keystore del plug-in e l'alias della coppia di chiavi firmata dalla CA in uso</block>
@@ -9465,7 +9432,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="5097ab7bd6d21f43a44cf3fa2819d1a9" category="list-text">Protezione di SAP HANA NDV</block>
   <block id="dea949f89da961edae31cb07cf178de2" category="inline-link">Scopri di più sui gruppi di coerenza ONTAP</block>
   <block id="33f6f98912a46b71470b0b88a5796453" category="paragraph">SnapCenter scopre o crea gruppi di coerenza ONTAP .  Imposta relazioni SnapMirror sul cluster di destinazione per la protezione secondaria.<block ref="c9cf167a41f1aec3d6cac7c4bebb9647" category="inline-link-rx"></block> .</block>
-  <block id="66a780869a0bc12446e0ddcc0035ae9b" category="admonition">Dopo l'aggiornamento a SnapCenter 6.2 (server e plug-in) e ONTAP 9.17.1, SnapCenter modifica i gruppi di coerenza semplici in gruppi di coerenza gerarchici durante il primo backup pianificato.</block>
   <block id="9f2d0dc08fd406b0b8600cb2332c7a4c" category="paragraph">Per informazioni su come abilitare la protezione secondaria sui sistemi ASA r2 per la tua applicazione, consulta:</block>
   <block id="7e2e4828b97a80ed5f31feecd44dbb2c" category="list-text">Protezione dei database con un mix di risorse ASA, AFF o FAS e risorse ASA r2</block>
   <block id="6fe3ae956085a9133eaacd31f9913d80" category="list-text">Provisioning delle risorse di Windows</block>
@@ -9513,9 +9479,7 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="202db78e7e2ac241d08b359f1f79644f" category="paragraph">Le informazioni riguardanti i parametri che possono essere utilizzati con il comando e le relative descrizioni possono essere ottenute eseguendo Get-Help _command_name_.  In alternativa, puoi anche fare riferimento a<block ref="4a5b4acb82a31b5d3a197c5ec1468fe8" category="inline-link-rx"></block> .</block>
   <block id="052131f99fadbb192418dc45065d8c15" category="paragraph">Per informazioni dettagliate sui comandi UNIX, vedere<block ref="4a5b4acb82a31b5d3a197c5ec1468fe8" category="inline-link-rx"></block> .</block>
   <block id="67998d9af35dea74903e9cdb371f7e7a" category="paragraph">In alternativa, puoi anche fare riferimento a<block ref="4a5b4acb82a31b5d3a197c5ec1468fe8" category="inline-link-rx"></block> O<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block> .</block>
-  <block id="e2affc8ad90cb942103d56d82396b5f7" category="paragraph">Scopri le nuove e migliorate funzionalità disponibili in SnapCenter 6.2.</block>
   <block id="652468e7a8f47c94c0dfc2bbbe3f6788" category="inline-link-macro">Novità di SnapCenter 6.2</block>
-  <block id="24443d9133830b434ac05072f0c9653a" category="inline-link">Note sulla versione 6.2 del software SnapCenter</block>
   <block id="320bd16b81d8a6a0a077d7308db7683d" category="paragraph">Il percorso di aggiornamento mostra da quali versioni di SnapCenter è possibile effettuare l'aggiornamento e quali versioni dei plug-in sono supportate.</block>
   <block id="f734f899336791933d28373bca69a72f" category="admonition">Se si aggiorna SnapCenter Server alla versione 6.2, aggiornare anche i plug-in alla versione 6.2.</block>
   <block id="7a22247de8db3271f3bf8573be10e986" category="cell">6,2</block>
@@ -9527,7 +9491,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="24f24d3f1f893e4176aff86940b1f7bd" category="paragraph">Per informazioni su come aggiornare il SnapCenter Plug-in for VMware vSphere, vedere<block ref="9fa07c2f7a59d2185d48077e327b705e" category="inline-link-rx"></block> .</block>
   <block id="97e76bbffdf8f08342d1c5a741af4b2a" category="sidebar">Il SnapCenter software è una piattaforma semplice, centralizzata e scalabile che fornisce una protezione dei dati coerente per applicazioni, database, file system host e VM in esecuzione su sistemi ONTAP ovunque nel cloud ibrido.  Questa raccolta di documentazione include informazioni per la versione 6.2.</block>
   <block id="1e0eab11641f75c3ff495410ce40bf66" category="sidebar">Documentazione SnapCenter software 6.2</block>
-  <block id="9968307e35346723a7def9d1da87a203" category="paragraph">Per i dettagli sui problemi noti, le limitazioni, i problemi risolti e i comandi nuovi e modificati, vedere<block ref="bedfbb0cb9ae5977029e72ca67318671" category="inline-link-rx"></block> . Per accedere alle Note sulla versione è necessario effettuare l'accesso con il proprio account NetApp o creare un account.</block>
   <block id="ea1c96f839915f73d25b910bbc92b734" category="list-text">Dati presenti sui sistemi primari e secondari ONTAP FAS, AFF o ASA e protetti su storage di oggetti e archivi nel cloud tramite l'integrazione di backup e ripristino NetApp</block>
   <block id="45099ef1959df4e973d03fee8da8217e" category="paragraph">Dopo aver installato SnapCenter Server su Linux, il programma di installazione crea il certificato autofirmato. Se si desidera utilizzare il certificato CA, è necessario configurare i certificati per il proxy inverso nginx, la registrazione degli audit e SnapCenter.</block>
   <block id="f2c3d774134cb37665bf8a734950fe0b" category="section-title">Configurare il certificato SnapCenter</block>
@@ -9550,7 +9513,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="d289bbfe1554f83d213d5958a481c248" category="paragraph">Per le informazioni più recenti sulle versioni supportate, vedere Per le informazioni più recenti sulle versioni supportate, vedere<block ref="00e02cae149cc9de4aea278bb76f630e" category="inline-link-rx"></block>.</block>
   <block id="0be174a8508a59f21b484245da1e1605" category="paragraph">Per le informazioni più recenti sulle versioni supportate, vedere<block ref="845d98cf9e1414112b381d552d9c8014" category="inline-link-rx"></block> .</block>
   <block id="57c12b0c6639b8884c79259831fa9f28" category="paragraph">IL<block ref="45ef37a4bb1edb251808bfcdb0b9e22c" category="inline-link-rx"></block> contiene le informazioni più recenti sulle configurazioni supportate.</block>
-  <block id="f101abf86e878a2ecb48d889221777be" category="paragraph">Se si utilizza Windows Server 2019 o Windows Server 2016 per l'host SnapCenter Server, è necessario installare Java 11.</block>
   <block id="a0d1f8ac2dd9261f6193237061098514" category="paragraph">IL<block ref="b6383984df7f2080eb1163b0aa6a5917" category="inline-link-rx"></block> contiene le informazioni più recenti sulle configurazioni supportate.</block>
   <block id="6fc7bf078a50f1c4ddd79c0229afe3ff" category="doc">Tipi di archiviazione supportati dal plug-in SnapCenter per Microsoft Exchange Server</block>
   <block id="08fed5985d86e1f1278601d57e1bff6b" category="paragraph">Il supporto per il provisioning e la protezione dei dati SnapCenter è disponibile su Windows Server. Per le informazioni più recenti sulle versioni supportate, vedere<block ref="bf4b37302d584cabdf50327923359db4" category="inline-link-rx"></block> .</block>
@@ -9573,8 +9535,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="f98d06e0365bbdb788bff3b7d98e015e" category="doc">Aggiorna i pacchetti plug-in SnapCenter</block>
   <block id="5afd668caa3def0cebf1f64a3e6a9d0c" category="paragraph">I pacchetti plug-in vengono distribuiti come parte dell'aggiornamento SnapCenter . La procedura di aggiornamento mette automaticamente gli host plug-in Windows, Linux o AIX in modalità di manutenzione.  La modalità di manutenzione impedisce all'host del plug-in di eseguire attività pianificate durante l'aggiornamento.</block>
   <block id="50263858fed39155040b6bb90507bcee" category="paragraph">Il sistema seleziona tutti i plug-in nel pacchetto, ma aggiorna solo i plug-in installati con la versione precedente di SnapCenter.  Il sistema non installa i plug-in rimanenti.  Utilizzare l'opzione *Aggiungi plug-in* per installare qualsiasi nuovo plug-in.</block>
-  <block id="6d49197dab9dd6c6555e0981f8aa6207" category="list-text">Assicurarsi che PowerShell Core 7.4.2 sia installato sull'host del plug-in Windows.</block>
-  <block id="0b1004975d827c800b2ea1d2934ebcdd" category="list-text">Assicurarsi che Java 11 Oracle Java e OpenJDK siano installati sugli host plug-in Windows e Linux.</block>
   <block id="9ece03be74b25dcc59b19ce7d0ef2dfb" category="list-text">Eseguire il backup di tutti i file di configurazione SnapCenter modificati (ad esempio SnapDriveService.exe.config, SMCoreServiceHost.exe.config e così via) sull'host del server SnapCenter o sull'host del plug-in.</block>
   <block id="def9934ca3f718accf65ee67850cf9eb" category="list-text">Se nella colonna Stato generale viene visualizzato "Aggiornamento disponibile" per uno degli host del plug-in, fare clic sul nome dell'host del plug-in ed eseguire le seguenti operazioni:</block>
   <block id="25c5cc506d7be2c3d358fc8fd23f0e8f" category="admonition">Se non si seleziona *Salta controlli preliminari*, SnapCenter verifica se l'host del plug-in soddisfa i requisiti.  Se i requisiti non vengono soddisfatti, vengono visualizzati messaggi di errore o di avviso.  Se l'errore è correlato allo spazio su disco o alla RAM, è possibile aggiornare il file web.config situato in _C:\Program Files\ NetApp\ SnapCenter WebApp_ oppure i file di configurazione di PowerShell situati in _C:\Windows\System32\WindowsPowerShell\v1.0\Modules\ SnapCenter\_ per modificare i valori predefiniti. Se l'errore è correlato ai parametri rimanenti, è necessario risolvere il problema e quindi convalidare nuovamente i requisiti.</block>
@@ -9597,10 +9557,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="d3436e2d89e59038914374a22cc8c673" category="list-text">Selezionare la freccia *Custom Configurations* e immettere le coppie chiave-valore personalizzate richieste per tutte le operazioni di protezione dei dati che utilizzano questa risorsa.</block>
   <block id="98f1c90d5d623746b2adfec471311f76" category="list-text">Selezionare la freccia *Snapshot Copy Tool* per selezionare lo strumento per creare snapshot:</block>
   <block id="7658971f73ec7751e63de7b917ad3277" category="paragraph">Per inserire il comando da eseguire sull'host per creare snapshot.</block>
-  <block id="375a1cee000ea12f25f7ea0aa40c92d2" category="paragraph"><block ref="375a1cee000ea12f25f7ea0aa40c92d2" category="inline-link-macro-rx"></block></block>
-  <block id="3edc812c3aede1bb8931ed56901c3d63" category="list-text">È necessario aver installato Java 11 sui propri host Linux o AIX.</block>
-  <block id="67444cdbc60594b36af73fd32a491c3e" category="paragraph"><block ref="67444cdbc60594b36af73fd32a491c3e" category="inline-link-macro-rx"></block></block>
-  <block id="947890351727a5bfefd25ab911655064" category="paragraph"><block ref="947890351727a5bfefd25ab911655064" category="inline-link-macro-rx"></block></block>
   <block id="4eecf71620cb916df975db3d622e9c30" category="paragraph">Il SnapCenter Server repository viene talvolta indicato come NSM database. Consultare la <block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block> per i dettagli di tutti i cmdlet disponibili.</block>
   <block id="e9087f4d1c2c90b2c0e70f14ce029f2b" category="paragraph">Il backup del SnapCenter Server repository aiuta a proteggerlo dalla perdita di dati. È possibile eseguire il backup del repository eseguendo il <block ref="f89bc12c0d2d413f64b24c351b6b566d" prefix=" " category="inline-code"></block> cmdlet.</block>
   <block id="7de02e43c7e5e44fea6db42bf98f4e4f" category="paragraph">Il<block ref="f89bc12c0d2d413f64b24c351b6b566d" prefix=" " category="inline-code"></block> cmdlet esegue le seguenti operazioni:</block>
@@ -9634,10 +9590,82 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="5223ed0f09a7ed8f79cb34ee678642b2" category="admonition">Le coppie chiave-valore personalizzate sono supportate per il SnapCenter Plug-in per SAP HANA Database sui sistemi Linux, ma non per i database SAP HANA registrati con il SnapCenter Plug-in per Microsoft Windows.</block>
   <block id="fef844efd5d5274641ab5a8e530ced87" category="admonition">È inoltre possibile creare una policy selezionando *<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>*.</block>
   <block id="d3562ace999b51c49c22ce4c580579b0" category="list-text">Nella colonna Configura pianificazioni, seleziona *<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>* per la policy che desideri configurare.</block>
-  <block id="8d3b5ad5b9f27b4f9781e490487c376e" category="paragraph">Per un elenco completo delle nuove funzionalità e dei miglioramenti, vedere <block ref="333326639e0f94ceb693906a79235ec5" category="inline-link-macro-rx"></block>.</block>
   <block id="2f1352033f9cdf5dbec684bea0d87ee5" category="summary">La release 6.2 del SnapCenter software include diverse nuove funzionalità e miglioramenti.</block>
   <block id="f4090871da1ea3c21c90ff0a2bfe77db" category="paragraph">La release 6.2 del SnapCenter software include la seguente funzionalità ampliata.</block>
   <block id="e8210c34cf4a643a11f3bfc4c0fd905f" category="paragraph">Altri hypervisor</block>
   <block id="ff968c11eab0f01c02347241d47d4a25" category="paragraph">Linux in esecuzione su KVM, Xen, Hyper-V e hypervisor hyperscaler è supportato quando il sistema operativo guest ha accesso TCP/IP diretto alle risorse di storage ONTAP utilizzando i seguenti metodi:</block>
   <block id="19228485fa8108fc9a8c5a7a0e681742" category="admonition">I datastore e le presentazioni raw dei dispositivi non sono supportati al di fuori di VMware.</block>
+  <block id="d5339ec2460f6dc04a037cc1e0c21e2c" category="list-text">PowerShell 7.4.13</block>
+  <block id="3eff2fffafd42d18c698c1f6d5b8528d" category="list-text">Java 17 (Oracle Java e OpenJDK)</block>
+  <block id="0b28f3dba3d0679c7ead8286c1b86497" category="admonition">Dopo l'aggiornamento a SnapCenter 6.2.1 (server e plug-in) e ONTAP 9.17.1, SnapCenter converte i gruppi di coerenza flat in gruppi di coerenza gerarchica durante il primo backup pianificato.</block>
+  <block id="690134bf1736a3c694f96c546d17c21d" category="paragraph">Se non si seleziona la casella di controllo "Ignora controlli preliminari", l'host viene convalidato per verificare se soddisfa i requisiti per l'installazione del plug-in. Lo spazio su disco, la RAM, la versione di PowerShell, la versione di .NET, la posizione (per i plug-in Windows) e Java 17 (sia per i plug-in Windows che Linux) vengono convalidati rispetto ai requisiti minimi. Se i requisiti minimi non vengono soddisfatti, vengono visualizzati messaggi di errore o di avviso appropriati.</block>
+  <block id="1eb0af61a769d0522873cb3b2942d431" category="list-text">Seleziona *SnapCenterPS* per avviare PowerShell.</block>
+  <block id="852731c1b7550625486510fe72aa91ae" category="paragraph">Se hai aggiornato Java all'ultima versione, devi assicurarti che l'opzione JAVA_HOME situata in /var/opt/snapcenter/spl/etc/spl.properties sia impostata sulla versione di Java corretta e sul percorso corretto.</block>
+  <block id="76b820fbb056248b792f7d6bd52d26b2" category="list-text">Installa Java 17 sul tuo host Linux o Windows.</block>
+  <block id="4abb709c6d05f5f86be6a29ebfa3b2cd" category="list-text">È necessario aver installato Java 17 sul proprio host.</block>
+  <block id="d5c967ad4811c11d6537b7432e92b977" category="list-text">È necessario aver installato Java 17 sul proprio host Windows.</block>
+  <block id="32c6d5ca3ecff4133066e972e1572ac7" category="inline-link-macro">Scarica Java per Windows</block>
+  <block id="f46c99c6dad9cfc1105a9eb84bac7db0" category="paragraph"><block ref="f46c99c6dad9cfc1105a9eb84bac7db0" category="inline-link-macro-rx"></block></block>
+  <block id="5d8727327c9fe92d26bd0015c2bbe68c" category="list-text">È necessario aver installato Java 17 sui propri host Linux o AIX.</block>
+  <block id="277beaf4372bf50e1af3a4104115fe0a" category="inline-link-macro">Scarica Java per Linux</block>
+  <block id="028890b6d9b6139ffe4f229f30b7bbfa" category="paragraph"><block ref="028890b6d9b6139ffe4f229f30b7bbfa" category="inline-link-macro-rx"></block></block>
+  <block id="067bc8a063d23efc69ec35694bac526f" category="inline-link-macro">Scarica Java per AIX</block>
+  <block id="d8f3c02dacf7aa14b7984862d6519daa" category="paragraph"><block ref="d8f3c02dacf7aa14b7984862d6519daa" category="inline-link-macro-rx"></block></block>
+  <block id="21edd03e54925331f15a7eeccef5d870" category="inline-link-macro">Scarica Java per tutti i sistemi operativi</block>
+  <block id="b463ee31d784a22ba3ba4b0645fa7aaa" category="paragraph"><block ref="b463ee31d784a22ba3ba4b0645fa7aaa" category="inline-link-macro-rx"></block></block>
+  <block id="229b8bb179d661c3d6ed2a72028f7029" category="list-text">È necessario aver installato Java 17 sul proprio host Linux.</block>
+  <block id="8c6b5164102ae393bac5cf68a8e53c50" category="paragraph">Java 17 (Oracle Java o OpenJDK)</block>
+  <block id="c137369ed677f84e8f10d176b75f0f60" category="list-text">Se necessario, installare Java 17 sull'host del plug-in.</block>
+  <block id="645c05cc982c6967f4b780067b08d7e5" category="list-text">È necessario aver installato Java 17 sul proprio host Linux, Windows o AIX.</block>
+  <block id="d39860bc8546eab4e9a54056d3755ef2" category="paragraph"><block ref="d39860bc8546eab4e9a54056d3755ef2" category="inline-link-macro-rx"></block></block>
+  <block id="635642373e8f1e4e290c872a3e808345" category="paragraph">Se si utilizza Windows Server 2019 o Windows Server 2016 per l'host del server SnapCenter, è necessario installare Java 17.</block>
+  <block id="8e38e28ee0341b15ba2a3e98884afe4b" category="paragraph"><block ref="8e38e28ee0341b15ba2a3e98884afe4b" category="inline-link-macro-rx"></block></block>
+  <block id="c51e95a7ba6f7936384db31eff8869e3" category="paragraph"><block ref="c51e95a7ba6f7936384db31eff8869e3" category="inline-link-rx"></block></block>
+  <block id="d018402cf57ffa7c0393b1d67057e5e4" category="paragraph">Java 17 IBM Java</block>
+  <block id="44c13dc9a1753cb466fee3ad110bb019" category="summary">È necessario configurare le credenziali dell'utente del cluster PostgreSQL per eseguire operazioni di protezione dei dati.</block>
+  <block id="3243b2db06af9a3a8b41f285981576ec" category="doc">Configurare le credenziali per il cluster PostgreSQL</block>
+  <block id="502ea8597e926db5739accdc503c5c90" category="list-text">Se il cluster PostgreSQL non dispone di credenziali valide configurate, l'icona del lucchetto rosso viene visualizzata solo per le risorse rilevate automaticamente. Se durante una successiva operazione di rilevamento si scopre che le credenziali configurate sono errate o non consentono l'accesso al cluster stesso, l'icona del lucchetto rosso ricomparirà.</block>
+  <block id="c9a75870f8ba894399624e689c422596" category="list-text">È necessario configurare credenziali valide per il cluster PostgreSQL per poter proteggere la risorsa o aggiungerla a un gruppo di risorse per eseguire operazioni di protezione dei dati.</block>
+  <block id="d55b89ea75b27c9de81ad2f6398cb84d" category="list-text">L'utente PostgreSQL configurato nelle credenziali deve disporre di privilegi sufficienti per accedere al cluster ed eseguire operazioni di backup e ripristino. Come minimo, l'utente deve avere il ruolo *SUPERUSER* o privilegi equivalenti (come le autorizzazioni *pg_read_all_data*, *pg_write_all_data* e *replication*).</block>
+  <block id="10ba74df3991cdbaaf9f0670d4001cf5" category="list-text">SnapCenter utilizza le credenziali configurate per connettersi all'istanza PostgreSQL tramite il client *psql* o *libpq*. Assicurarsi che gli strumenti client di PostgreSQL siano installati sull'host del plug-in.</block>
+  <block id="dd3e905814dfdaf48b383528621ea0ee" category="admonition">Prima di configurare il cluster, è necessario prima aggiungere le credenziali PostgreSQL a SnapCenter.</block>
+  <block id="cbf3301d0d753e8461dcc76725f98e1d" category="list-text">Nel riquadro di navigazione a sinistra, selezionare *Risorse* e quindi selezionare SnapCenter Plug-in for PostgreSQL cluster dall'elenco.</block>
+  <block id="66e4f4069d5574fce9f76098a0d21eef" category="list-text">(Facoltativo) Selezionare <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block> e selezionare l'host name.</block>
+  <block id="92e6162b6295f71cd24f1ddaa4deabdb" category="paragraph">A questo punto è possibile selezionare <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block> per chiudere il riquadro dei filtri.</block>
+  <block id="c1327e03f464857dae9e0881c85d39e5" category="list-text">Seleziona il cluster, quindi seleziona *Configura credenziali*.</block>
+  <block id="ffcbcede6515ab2fc9732ecf5f1d76df" category="list-text">Selezionare le credenziali che sono state configurate in SnapCenter per l'utente del cluster PostgreSQL. Le credenziali devono includere un nome utente e una password validi con privilegi sufficienti per eseguire operazioni di protezione dei dati.</block>
+  <block id="9a9700301d1207689b2cfec2adf03e45" category="paragraph">È possibile modificare la configurazione del cluster dalla pagina Topologia.</block>
+  <block id="f374913797d0295c317d0055e71b421e" category="doc">Abilita gli snapshot dei gruppi di coerenza a livello di gruppo di risorse</block>
+  <block id="a9cf5d66edaed6a32b08051d0eb943ab" category="paragraph">Per impostazione predefinita, il SnapCenter Plug-in per Oracle Database crea snapshot del gruppo di coerenza a livello di gruppo di dischi Automatic Storage Management (ASM) o di gruppo di volumi Logical Volume Management (LVM). Come best practice, i database all'interno di un singolo gruppo di risorse non dovrebbero condividere volumi ONTAP tra gruppi di dischi ASM o gruppi di volumi LVM.</block>
+  <block id="b9f94b68be04293cfc27b9c82cc9f8d3" category="paragraph">Tuttavia, se i gruppi di dischi ASM o i gruppi di volumi LVM condividono i volumi ONTAP sottostanti, lo snapshot del gruppo di coerenza potrebbe non riuscire a causa di conflitti di snapshot duplicati. In questi casi, SnapCenter ripiega automaticamente sugli snapshot a livello di volume.</block>
+  <block id="dfb289753e6224ef9124760edf05ea07" category="paragraph">Negli scenari in cui i volumi sono condivisi tra gruppi di dischi ASM o gruppi di volumi LVM, SnapCenter supporta l'abilitazione degli snapshot dei gruppi di coerenza a livello di gruppo di risorse. Ciò garantisce che tutti i gruppi di dischi ASM o i gruppi di volumi LVM associati ai database all'interno del gruppo di risorse vengano inclusi in un singolo snapshot del gruppo di coerenza. I passaggi seguenti descrivono come utilizzare questa funzionalità.</block>
+  <block id="5c741578980e7704da528093f5e324cd" category="list-text">Accedere al seguente file di configurazione sul SnapCenter server:</block>
+  <block id="104eca5a6c04470e26d35fe31b06c3ea" category="paragraph"><block ref="be2c922dfeee4a22e9331f08a784def3" prefix="" category="inline-code"></block>.</block>
+  <block id="46376aff63fb964edf22387df4324caa" category="list-text">Individua il <block ref="bc0b5416c67e568e5fd5d624fd885d11" prefix=" " category="inline-code"></block> parametro e modifica il suo valore da *false* a *true*.</block>
+  <block id="911f345bc86988158b772d982e282ada" category="list-text">Riavvia il <block ref="92d506e04aeaf411d00bd3530505a36b" prefix=" " category="inline-code"></block> servizio affinché la modifica abbia effetto.</block>
+  <block id="2c2657517ad43d08352a5451f985e40e" category="list-text">È necessario aver installato Java 17 sul proprio host Linux o AIX.</block>
+  <block id="c21b5da89b1f81162977127cb9031d22" category="list-text">Java di Oracle e OpenJDK sono supportati per Linux.</block>
+  <block id="3a963dcf9de35dbba651650701736b82" category="list-text">IBM Java per AIX. È possibile scaricarlo da <block ref="c0de5e0b50d0c2c65f1c384a68baae61" category="inline-link-rx"></block>.</block>
+  <block id="5644b685e992d1f3592d7905a4bf7ce2" category="admonition">Assicurati di aver installato solo la versione certificata di Java 17 sull'host Linux.</block>
+  <block id="34173baea9817dda310abe58b671a2f7" category="paragraph">Java 17 (Oracle o OpenJDK)</block>
+  <block id="4984a1c61cf9b38d22b24181dc7e50e9" category="list-text">Modifica il <block ref="07b421e5f5e0300b1a0fd6cc22745306" prefix=" " category="inline-code"></block> file per configurare gli algoritmi del codice di autenticazione del messaggio: MACs hmac-sha2-256 e MACs hmac-sha2-512.</block>
+  <block id="1eb22a3ae1c2ce45dd6dd271f5a31da7" category="admonition">Sebbene sia consentito creare le credenziali dopo aver distribuito gli host e installato i plug-in, la *best practice* è quella di crearle dopo aver aggiunto gli SVM e prima di distribuire gli host e installare i plug-in.</block>
+  <block id="6b7e4e697475dd4860abcf786126c1c7" category="admonition">Se durante la creazione delle credenziali si inseriscono dati errati, viene visualizzato un messaggio di errore. È necessario selezionare *Annulla* e poi riprovare.</block>
+  <block id="a67c677fb64ec1097b791d50fa972eeb" category="list-text">Seleziona <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>, quindi seleziona l'host name e il tipo di database per filtrare le risorse.</block>
+  <block id="d8f223fc0bc1bca623d2d7c084e193c2" category="list-text">Seleziona il database, quindi seleziona *Impostazioni database* &gt; *Configura database*.</block>
+  <block id="dab985facceb94f13f985f8249833bc0" category="paragraph">Per ulteriori informazioni, consultare <block ref="8f2b39531f2b3f3e4e9667f4d7ba23f5" category="inline-link-macro-rx"></block>.</block>
+  <block id="fe83151208012d5b73e22523d7f033ba" category="paragraph">Per informazioni sui download di Java, fare riferimento a <block ref="f2ff54b9e43f2ec55847a13d208d9402" category="inline-link-macro-rx"></block>.</block>
+  <block id="41a4b4dac1c1d04e2b895fdb51832356" category="paragraph">Scopri le nuove funzionalità e i miglioramenti disponibili in SnapCenter 6.2 e 6.2.1.</block>
+  <block id="ba326f97f514ee86456bacdbb611b94c" category="inline-link-macro">Novità in SnapCenter 6.2.1</block>
+  <block id="1e8a051ced3087d8f8c0358cafb2bae4" category="paragraph">Per un elenco completo delle nuove funzionalità e dei miglioramenti, consultare <block ref="dbbc4e697b5acac11e7237418d4e74e7" category="inline-link-macro-rx"></block>.</block>
+  <block id="660e11cd0d8b7a0d5f30a5c4ab9874ee" category="paragraph">Per un elenco completo delle nuove funzionalità e dei miglioramenti, consultare <block ref="333326639e0f94ceb693906a79235ec5" category="inline-link-macro-rx"></block>.</block>
+  <block id="6fb4aad380990fd6f7b6d9b9431147f8" category="inline-link">SnapCenter Software Note di rilascio 6.2.1</block>
+  <block id="555ee24c1ccffeec9a9363373d9b08a6" category="paragraph">Per informazioni dettagliate su problemi noti, limitazioni, problemi risolti e comandi nuovi e modificati, consultare le <block ref="039e73fc576f8d9ddcba7242690e2327" category="inline-link-rx"></block>. È necessario accedere con il proprio NetApp account o crearne uno per accedere alle Note di rilascio.</block>
+  <block id="5aae26cfc631423a28ee9f3eea8618b0" category="cell">6.2.1</block>
+  <block id="4405435b2ad2e79a5a4506de478aafd7" category="summary">La versione 6.2.1 del SnapCenter software non presenta nuove funzionalità o miglioramenti e include solo correzioni di bug noti e aggiornamenti di versione qualificati per il SnapCenter Server e i plug-in.</block>
+  <block id="fed22bd00ec1bb7537e843bbc0886bcc" category="doc">Novità del software SnapCenter 6.2.1</block>
+  <block id="f6a2ad4b89455cf23e3e4843e1f51aee" category="inline-link-macro">SnapCenter 6.2.1 Note di rilascio</block>
+  <block id="f0de22be0ad3dd3c1e51ed207f0e298e" category="paragraph">La versione 6.2.1 del SnapCenter software non presenta nuove funzionalità o miglioramenti. Include solo correzioni di bug noti e aggiornamenti delle versioni qualificate per il SnapCenter Server e i plug-in. Consultare la <block ref="f297672c4e3c5441ce384d3bd8457e0c" category="inline-link-macro-rx"></block> per ulteriori dettagli.</block>
+  <block id="8ca913d8030ab27ecf31b8863c908b83" category="list-text">Assicurarsi che PowerShell 7.4.13 sia installato sull'host del plug-in Windows.</block>
+  <block id="1a0f97251fd1801dcc25004385c56be0" category="list-text">Assicurarsi che Java 17 (Oracle Java e OpenJDK) sia installato sugli host plug-in Windows e Linux.</block>
 </blocks>

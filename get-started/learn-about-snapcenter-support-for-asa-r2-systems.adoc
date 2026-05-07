@@ -36,7 +36,7 @@ SnapCenter supporta sia la protezione primaria che quella secondaria delle appli
 SnapCenter scopre o crea gruppi di coerenza ONTAP .  Imposta relazioni SnapMirror sul cluster di destinazione per la protezione secondaria. https://docs.netapp.com/us-en/ontap/consistency-groups["Scopri di più sui gruppi di coerenza ONTAP"^] .
 
 
-NOTE: Dopo l'aggiornamento a SnapCenter 6.2 (server e plug-in) e ONTAP 9.17.1, SnapCenter modifica i gruppi di coerenza semplici in gruppi di coerenza gerarchici durante il primo backup pianificato.
+NOTE: Dopo l'aggiornamento a SnapCenter 6.2.1 (server e plug-in) e ONTAP 9.17.1, SnapCenter converte i gruppi di coerenza flat in gruppi di coerenza gerarchica durante il primo backup pianificato.
 
 Per informazioni su come abilitare la protezione secondaria sui sistemi ASA r2 per la tua applicazione, consulta:
 

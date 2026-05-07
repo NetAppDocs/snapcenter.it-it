@@ -27,7 +27,7 @@ SnapCenter non supporta più sistemi storage con lo stesso nome su cluster diver
 
 
 .Fasi
-. Fare clic su *SnapCenterPS* per avviare PowerShell Core.
+. Seleziona *SnapCenterPS* per avviare PowerShell.
 . Creare una nuova connessione al sistema di storage utilizzando il cmdlet Add-SmStorageConnection.
 +
 [listing]

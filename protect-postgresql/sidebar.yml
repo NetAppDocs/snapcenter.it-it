@@ -106,6 +106,8 @@ entries:
   entries:
   - title: Backup del workflow
     url: "/protect-postgresql/back-up-postgresql-resources.html"
+  - title: Configurare le credenziali per il cluster PostgreSQL
+    url: "/protect-postgresql/configure-credentials-for-postgresql-cluster.html"
   - title: Rilevare automaticamente i cluster
     url: "/protect-postgresql/discover-the-clusters-automatically.html"
   - title: Aggiungere le risorse manualmente all'host del plug-in
