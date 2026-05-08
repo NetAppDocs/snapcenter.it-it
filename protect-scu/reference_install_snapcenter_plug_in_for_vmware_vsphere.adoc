@@ -19,7 +19,7 @@ Per informazioni sulla distribuzione, vedere https://docs.netapp.com/us-en/sc-pl
 
 == Implementare il certificato CA
 
-Per configurare il certificato CA con il plug-in SnapCenter per VMware vSphere, vedere https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_create_and_or_import_an_SSL_certificate_to_SnapCenter_Plug-in_for_VMware_vSphere_(SCV)["Creare o importare un certificato SSL"^].
+Per configurare il certificato CA con SnapCenter Plug-in per VMware vSphere, vedere  https://kb.netapp.com/data-mgmt/SnapCenter/SC_KBs/How_to_create_and_or_import_an_SSL_certificate_to_SnapCenter_Plug-in_for_VMware_vSphere["Creare o importare un certificato SSL"^].
 
 
 
