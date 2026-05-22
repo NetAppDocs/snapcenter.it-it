@@ -15,18 +15,18 @@ Prima di aggiungere un host e installare i pacchetti plug-in, è necessario comp
 
 * Se si utilizza iSCSI, il servizio iSCSI deve essere in esecuzione.
 * È necessario disporre di un utente di dominio con privilegi di amministratore locale con autorizzazioni di accesso locale sull'host remoto.
-* È necessario utilizzare Microsoft Exchange Server 2013, 2016 o 2019 per le configurazioni standalone e Database Availability Group.
+* È necessario utilizzare Microsoft Exchange Server per le configurazioni standalone e Database Availability Group. Consultare la link:https://imt.netapp.com/imt/#search["Strumento di matrice di interoperabilità (IMT)"^] per le versioni supportate di Microsoft Exchange Server.
 * Quando si installa un plug-in su un host Windows, se si specifica una credenziale non integrata o se l'utente appartiene a un utente del gruppo di lavoro locale, è necessario disattivare il controllo dell'account utente sull'host.
 * Se si gestiscono i nodi del cluster in SnapCenter, è necessario disporre di un utente con privilegi amministrativi per tutti i nodi del cluster.
 * È necessario disporre di un utente con autorizzazioni amministrative su Exchange Server.
 * Se SnapManager per Microsoft Exchange Server e SnapDrive per Windows sono già installati, è necessario annullare la registrazione del provider hardware VSS utilizzato da SnapDrive per Windows prima di installare il plug-in per Exchange sullo stesso server Exchange per garantire la corretta protezione dei dati utilizzando SnapCenter.
 * Se SnapManager per Microsoft Exchange Server e il plug-in per Exchange sono installati sullo stesso server, è necessario sospendere o eliminare da Windows Scheduler tutte le pianificazioni create da SnapManager per Microsoft Exchange Server.
 * L'host deve essere risolvibile con il nome di dominio completo (FQDN) dal server. Se il file hosts viene modificato in modo da renderlo risolvibile e se nel file hosts sono specificati sia il nome breve che l'FQDN, creare una voce nel file hosts di SnapCenter nel seguente formato: _<ip_address> <host_fqdn> <host_name>_.
-* Assicurarsi che le seguenti porte non siano bloccate nel firewall, altrimenti l'operazione di aggiunta dell'host non riesce. Per risolvere questo problema, è necessario configurare l'intervallo di porte dinamiche. Per ulteriori informazioni, vedere https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/configure-rpc-dynamic-port-allocation-with-firewalls["Documentazione Microsoft"^].
+* Assicurarsi che le seguenti porte non siano bloccate nel firewall, altrimenti l'operazione di aggiunta host non andrà a buon fine. Per risolvere questo problema, è necessario configurare l'intervallo di porte dinamiche. Per ulteriori informazioni, consultare  https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/configure-rpc-dynamic-port-allocation-with-firewalls["Documentazione Microsoft"^]. Consultare link:https://imt.netapp.com/imt/#search["Strumento di matrice di interoperabilità (IMT)"^] per le versioni supportate di Microsoft Exchange Server.
 +
-** Intervallo di porte 50000 - 51000 per Windows 2016 ed Exchange 2016
-** Intervallo di porte 6000 - 6500 per Windows 2012 R2 ed Exchange 2013
 ** Intervallo di porte 49152 - 65536 per Windows 2019
+** Intervallo di porte 50000 - 51000 per Windows 2016 ed Exchange 2016
+** Gamma di porte 6000 - 6500 per Windows 2012 R2 e Exchange 2013
 
 
 
