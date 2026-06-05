@@ -13,7 +13,7 @@ summary: Prima di aggiungere un host e installare i pacchetti plug-in, è necess
 [role="lead"]
 Prima di aggiungere un host e installare i pacchetti plug-in, è necessario completare tutti i requisiti. Il plug-in SnapCenter per MySQL è disponibile sia in ambienti Windows che Linux.
 
-* È necessario aver installato Java 17 sul proprio host.
+* È necessario aver installato Java 17, Java 11 (per SnapCenter 6.2 solo) sul proprio host.
 +
 
 NOTE: IBM Java non è supportato su host Windows e Linux.
@@ -32,7 +32,7 @@ NOTE: IBM Java non è supportato su host Windows e Linux.
 * È necessario disporre di un utente di dominio con privilegi di amministratore locale con autorizzazioni di accesso locale sull'host remoto.
 * Durante l'installazione del plug-in per MySQL su un host Windows, il plug-in SnapCenter per Microsoft Windows viene installato automaticamente.
 * È necessario aver attivato la connessione SSH basata su password per l'utente root o non root.
-* È necessario aver installato Java 17 sul proprio host Windows.
+* È necessario aver installato Java 17, Java 11 (per SnapCenter 6.2 solo) sul proprio host Windows.
 +
 link:https://www.oracle.com/java/technologies/downloads/#java17["Scarica Java per tutti i sistemi operativi"]
 
@@ -43,7 +43,7 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["Scarica Java pe
 == Host Linux
 
 * È necessario aver attivato la connessione SSH basata su password per l'utente root o non root.
-* È necessario aver installato Java 17 sul proprio host Linux.
+* È necessario aver installato Java 17, Java 11 (per SnapCenter 6.2 solamente) sul proprio host Linux.
 +
 link:https://www.oracle.com/java/technologies/downloads/#java17["Scarica Java per tutti i sistemi operativi"]
 

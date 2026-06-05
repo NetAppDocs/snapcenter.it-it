@@ -63,12 +63,12 @@ NOTE: Le risorse vengono elencate nella sezione risorse disponibili solo se la r
 *** Selezionare *file System coerenti* se si desidera assicurarsi che i dati memorizzati nella cache dei file system vengano scaricati prima di creare il backup e che non siano consentite operazioni di input o output sul file system durante la creazione del backup.
 +
 
-NOTE: Se coerenti con il file system, verranno create snapshot del gruppo di coerenza per i LUN coinvolti nel gruppo di volumi.
+NOTE: Per la coerenza del file system, vengono acquisiti snapshot del gruppo di coerenza per le LUN coinvolte nel gruppo di volumi.
 
 *** Selezionare *Crash coerente* se si desidera assicurarsi che i dati memorizzati nella cache dei file system vengano eliminati prima di creare il backup.
 +
 
-NOTE: Se sono stati aggiunti file system diversi nel gruppo di risorse, tutti i volumi di file system diversi nel gruppo di risorse verranno inseriti in un gruppo di coerenza.
+NOTE: Se sono stati aggiunti diversi file system al gruppo di risorse, tutti i volumi provenienti da file system differenti all'interno del gruppo di risorse vengono inseriti in un Consistency group. Per i backup coerenti in caso di arresto anomalo, viene creata un'istantanea del Consistency group per impostazione predefinita, anche se è presente un solo file system o volume.
 
 
 

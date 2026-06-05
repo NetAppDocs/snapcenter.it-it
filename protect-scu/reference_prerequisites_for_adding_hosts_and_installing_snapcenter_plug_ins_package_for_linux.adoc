@@ -16,13 +16,17 @@ Prima di aggiungere un host e installare il pacchetto plug-in per Linux, è nece
 * Se si utilizza iSCSI, il servizio iSCSI deve essere in esecuzione.
 * È possibile utilizzare l'autenticazione basata su password per l'utente root o non root oppure l'autenticazione basata su chiave SSH.
 +
+
+NOTE: La chiave RSA è l'unico formato di chiave SSH supportato per SnapCenter. Consulta l'articolo della Knowledge Base link:https://kb.netapp.com/data-mgmt/SnapCenter/SC_KBs/How_to_create_an_RSA_key_for_SnapCenter_SSH_Key_Based_credential["Come creare una chiave RSA per le credenziali SSH basate su chiave di SnapCenter"^] per i dettagli su come creare la chiave SSH.
+
++
 Il plug-in SnapCenter per file system Unix può essere installato da un utente non root. Tuttavia, è necessario configurare i privilegi sudo per l'utente non root per installare e avviare il processo di plug-in. Dopo aver installato il plug-in, i processi verranno eseguiti come utenti non root.
 
 * Creare credenziali con la modalità di autenticazione come Linux per l'utente di installazione.
-* È necessario aver installato Java 17 sul proprio host Linux.
+* È necessario aver installato Java 17, Java 11 (per SnapCenter 6.2 solamente) sul proprio host Linux.
 +
 
-NOTE: Assicurati di aver installato solo la versione certificata di Java 17 sull'host Linux.
+NOTE: Assicurati di aver installato solo la versione certificata di Java 17 o Java 11 (solo per SnapCenter 6.2) sul sistema host Linux.
 
 +
 Per informazioni sui download di Java, fare riferimento a link:https://www.oracle.com/java/technologies/downloads/#java17["Scarica Java per tutti i sistemi operativi"^].
@@ -70,12 +74,12 @@ NOTE: È necessario allocare spazio su disco sufficiente e monitorare il consumo
  a| 
 Pacchetti software richiesti
  a| 
-Java 17 (Oracle Java e OpenJDK)
+Java 17 (Oracle Java o OpenJDK), Java 11 (per SnapCenter 6.2 solo)
 
 
-NOTE: Assicurati di aver installato solo la versione certificata di Java 17 sull'host Linux.
+NOTE: Assicurati di aver installato solo la versione certificata di Java 17 o Java 11 (solo per SnapCenter 6.2) sul sistema host Linux.
 
 Se hai aggiornato Java all'ultima versione, devi assicurarti che l'opzione JAVA_HOME situata in /var/opt/snapcenter/spl/etc/spl.properties sia impostata sulla versione di Java corretta e sul percorso corretto.
 
 |===
-Per le informazioni più recenti sulle versioni supportate, vedere https://imt.netapp.com/imt/imt.jsp?components=180320;180338;&solution=1257&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"] .
+Per le informazioni più recenti sulle versioni supportate, consultare la  https://imt.netapp.com/imt/imt.jsp?components=180320;180338;&solution=1257&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^].
