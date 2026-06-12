@@ -106,13 +106,13 @@ Non applicabile
 Pacchetti software richiesti
  a| 
 * ASP.NET Core Runtime 8.0.24 (e tutte le successive patch 8.0.x) Hosting Bundle
-* PowerShell 7.4.2 o versione successiva
+* PowerShell 7.4.13 o successivo
 
 
 Per informazioni specifiche sulla risoluzione dei problemi di .NET, vedere https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["L'aggiornamento o l'installazione di SnapCenter non riesce per i sistemi legacy che non dispongono di connettività Internet"^].
  a| 
 * .NET Framework 8.0.12 (e tutte le patch 8,0.x successive)
-* PowerShell 7.4.2 o versione successiva
+* PowerShell 7.4.13 o successivo
 * Nginx è un server web che può essere usato come proxy inverso
 * PAM-devel
 +

@@ -16,7 +16,7 @@ summary: È possibile utilizzare il file eseguibile del programma di installazio
 .Prima di iniziare
 * Aggiornare l'host del server SnapCenter con gli ultimi aggiornamenti di Windows e assicurarsi che non vi siano riavvii del sistema in sospeso.
 * Prima di avviare l'aggiornamento, assicurarsi che non siano in esecuzione altre operazioni.
-* Installare ASP.NET Core Runtime 8.0.24 (e tutte le patch successive 8.0.x) Hosting Bundle e PowerShell 7.4.2 o versioni successive.
+* Installare ASP.NET Core Runtime 8.0.24 (e tutte le patch successive 8.0.x) Hosting Bundle e PowerShell 7.4.13 o versioni successive.
 * Eseguire il backup del database del repository SnapCenter (MySQL) dopo essersi assicurati che non vi siano processi in esecuzione. Si consiglia di effettuare questa operazione prima di aggiornare SnapCenter Server e il plug-in di Exchange.
 +
 Per ulteriori informazioni, vedere link:../admin/concept_manage_the_snapcenter_server_repository.html#back-up-the-snapcenter-repository["Eseguire il backup del repository SnapCenter"^].

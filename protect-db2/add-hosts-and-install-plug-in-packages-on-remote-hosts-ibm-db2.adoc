@@ -129,7 +129,7 @@ NOTE: GMSA verrà utilizzato come account del servizio di accesso solo per il se
 |===
 . Fare clic su *Invia*.
 +
-Se non hai selezionato la casella di controllo *Ignora controlli preliminari*, l'host viene convalidato per verificare se soddisfa i requisiti per l'installazione del plug-in. Lo spazio su disco, la RAM, la versione di PowerShell, la versione di .NET, la posizione (per i plug-in Windows) e Java 17, Java 11 (solo per SnapCenter 6.2) per i plug-in Windows e Linux vengono convalidati rispetto ai requisiti minimi. Se i requisiti minimi non vengono soddisfatti, vengono visualizzati messaggi di errore o di avviso appropriati.
+Se non hai selezionato la casella di controllo *Ignora controlli preliminari*, l'host viene convalidato per verificare se soddisfa i requisiti per l'installazione del plug-in. Lo spazio su disco, la RAM, la versione di PowerShell, la versione di .NET, la posizione (per i plug-in Windows) e Java 17 (per SnapCenter 6.2.1 e successive) o Java 11 (per SnapCenter 6.2 e precedenti) per i plug-in Windows e Linux vengono convalidati rispetto ai requisiti minimi. Se i requisiti minimi non vengono soddisfatti, vengono visualizzati messaggi di errore o di avviso appropriati.
 
 +
 Se l'errore riguarda lo spazio su disco o la RAM, è possibile aggiornare il file web.config che si trova in C: File di programma NetApp SnapCenter WebApp per modificare i valori predefiniti. Se l'errore è correlato ad altri parametri, è necessario risolvere il problema.

@@ -3485,8 +3485,6 @@
   <block id="a7e402a09cf33c2060ecbdb749dd7977" category="summary">SnapCenter comunica periodicamente con il sito di supporto NetApp per notificare gli aggiornamenti software disponibili. È inoltre possibile creare una pianificazione per specificare l'intervallo in cui si desidera ricevere informazioni sugli aggiornamenti disponibili.</block>
   <block id="243fa8b3087ff5e0b8de4d51c71aa24c" category="doc">Configurare SnapCenter per verificare la disponibilità di aggiornamenti</block>
   <block id="677b4f66c084ede8f48394ab8ce8969c" category="paragraph">La pagina Software disponibile visualizza i pacchetti plug-in disponibili, le versioni disponibili e il relativo stato di installazione.</block>
-  <block id="79f9ba8457e2aeaced209e98800790ef" category="list-text">Fare clic su *Controlla aggiornamenti* per verificare se sono disponibili versioni più recenti dei pacchetti plug-in.</block>
-  <block id="55f0dab8010fdb26ffb7d3d63275f2bd" category="list-text">Fare clic su *Schedule Updates* (Pianifica aggiornamenti) per creare una pianificazione in cui specificare l'intervallo in cui si desidera ricevere informazioni sugli aggiornamenti disponibili:</block>
   <block id="e218113d9d20db943c1804f6d106df38" category="list-text">Selezionare l'intervallo in *Controlla aggiornamenti*.</block>
   <block id="644de64c921a575ddfcd3087ae6d3de1" category="list-text">Selezionare la credenziale di amministrazione del server SnapCenter e fare clic su *OK*.</block>
   <block id="c589a9c8b3b9ae7adc1d5609288b15f4" category="summary">È possibile utilizzare il file eseguibile del programma di installazione del server SnapCenter per aggiornare il server SnapCenter.</block>
@@ -6924,7 +6922,6 @@ Il ripristino di una singola casella postale di NetApp® è giunto alla fine del
   <block id="3923067f4ce9be3fa5f505420591ee38" category="inline-image-macro">Icona Elimina</block>
   <block id="a6ea6a770733073de3f90cdf4e56ebe4" category="list-text">Se si desidera eliminare un clone, selezionarlo dalla tabella, quindi fare clic su <block ref="c2bbcd7602467a0298801d314b839a50" category="inline-image-macro-rx" type="image"></block>.</block>
   <block id="6fa0c9d6ea713436f9f94730ad807a6e" category="inline-image-macro">Icona Clona divisione</block>
-  <block id="86d9a4e53238020341a7cca7bbe68ff8" category="list-text">Nella pagina *Impostazioni*, fare clic su *Software*.</block>
   <block id="a960d38d305c44a6a4717655aace3dd7" category="list-text">Nella pagina *Dettagli processo*, fare clic su *Annulla processo*.</block>
   <block id="768d18144454e6cec5a96d61cb09fd9c" category="inline-image-macro">icona più</block>
   <block id="8e806db608c82eb62efdb0eb9f5cfc6b" category="paragraph">Se nessuna policy esistente soddisfa i tuoi requisiti, puoi creare una nuova policy facendo clic su *<block ref="b45fdb91c5c7d010bf6dc162ec4fd533" category="inline-image-macro-rx" type="image"></block>* per avviare la procedura guidata delle policy.</block>
@@ -7792,7 +7789,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="a1fb12d161d2304544584ed2d9b82082" category="admonition">Se il repository SnapCenter si trova nello stesso disco in cui è installato il server SnapCenter, si consiglia di utilizzare 15 GB.</block>
   <block id="9f101c0e6e5929a04c9e7663fdf91eda" category="paragraph">15 GB</block>
   <block id="d6874413f4fac004d1cb83f02eccc33c" category="admonition">NOTA: Se il server SnapCenter si trova nello stesso disco in cui è installato il repository SnapCenter, si consiglia di utilizzare 15 GB.</block>
-  <block id="4c6ec01f6ae03e08c146fe6865423a4b" category="list-text">PowerShell 7.4.2 o versione successiva</block>
   <block id="149d1be25c7d76696b875863179ac66d" category="list-text">Nginx è un server web che può essere usato come proxy inverso</block>
   <block id="6d4ed4face9b51c5caae12208e47fa1e" category="paragraph">PAM (Plugggable Authentication Modules) è uno strumento di protezione del sistema che consente agli amministratori di sistema di impostare i criteri di autenticazione senza dover ricompilare i programmi che eseguono l'autenticazione.</block>
   <block id="2e2da9aed107a3761b9b4f5441c315fc" category="summary">Se non si dispone di un account NetApp esistente, attenersi alla seguente procedura per registrarsi per accedere al software.</block>
@@ -8469,7 +8465,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="f6be498f0ce984a9f472edc345bed193" category="paragraph">Questa opzione deve essere abilitata per la sincronizzazione attiva di SnapSnapMirror.</block>
   <block id="b0a3f15abbd085a9ebbbb827f6a30fea" category="list-text">L'aggiunta di nuovi file system senza sincronizzazione attiva di SnapMirror a un gruppo di risorse esistente che contiene risorse con sincronizzazione attiva di SnapMirror non è supportata.</block>
   <block id="b4def2e83bf4535969292e7053588dc1" category="list-text">L'aggiunta di nuovi file system a un gruppo di risorse esistente in modalità di failover della sincronizzazione attiva di SnapMirror non è supportata. È possibile aggiungere risorse al gruppo di risorse solo in stato normale o di failback.</block>
-  <block id="06b79cf9e641e40d79092a668abcecac" category="list-text">È necessario aver installato PowerShell 7.4.2 o versione successiva.</block>
   <block id="aff86e576d5506698bb4e7f32cd2b64c" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, è anche possibile fare riferimento a<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>.</block>
   <block id="0cbb7ef5fc44b96bd6b77fafcfe689de" category="paragraph">Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento anche alla<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block></block>
   <block id="8245e636832a5ea87978dec1abd9f8b7" category="paragraph">È inoltre possibile disinstallare un plug-in da più host utilizzando il cmdlet _Uninstall-SmHostPackage_ e i parametri richiesti. Le informazioni relative ai parametri che possono essere utilizzati con il cmdlet e le relative descrizioni possono essere ottenute eseguendo _Get-Help command_name_. In alternativa, fare riferimento anche a<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>.</block>
@@ -8654,7 +8649,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="c5161716a036dddca2f68cda30000d0f" category="paragraph">== passare da NLB a F5 per l'alta disponibilità</block>
   <block id="156a5008fbec69c3f4a424d5bca0e1d8" category="admonition">Le licenze servizi file NAS SnapCenter e SnapCenter sono obsolete e non sono più disponibili. La licenza standard e la licenza basata sulla capacità non sono più richieste per Amazon FSX per NetApp ONTAP, ONTAP Select, Cloud Volumes ONTAP e Azure NetApp Files.</block>
   <block id="dbd495ad96b61252237734b22b1ddf62" category="admonition">È possibile includere solo i seguenti caratteri speciali nei nomi degli utenti e dei gruppi: Spazio ( ), trattino (-), trattino basso (_) e due punti (:).</block>
-  <block id="3c1eae5e6ea0b19f0a43abeaee269bc2" category="paragraph">È possibile eseguire diverse procedure di installazione e configurazione utilizzando i cmdlet PowerShell. Si consiglia di utilizzare PowerShell 7.4.2 o versione successiva.</block>
   <block id="5d825eb71cc82b0659f98bbe8206a991" category="paragraph">Può essere un plug-in host centralizzato o un host di sistema HANA.</block>
   <block id="1d98dbd46a33302abdc8ef53dd47dfbc" category="admonition">Se il plug-in HANA è installato su un host centralizzato che gestisce database HANA su altri host, creando o eliminando cloni, SnapCenter salta intenzionalmente le operazioni sul lato host (montaggio o smontaggio del file system), poiché il server di destinazione è un host centralizzato. È necessario utilizzare script pre o post-cloni personalizzati per eseguire operazioni di montaggio e smontaggio.</block>
   <block id="8daa80e39a9f9c433d3ff261cfefbbc1" category="list-text">Nella pagina tipo di criterio, effettuare le seguenti operazioni:</block>
@@ -9637,7 +9631,6 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="fed22bd00ec1bb7537e843bbc0886bcc" category="doc">Novità del software SnapCenter 6.2.1</block>
   <block id="f6a2ad4b89455cf23e3e4843e1f51aee" category="inline-link-macro">SnapCenter 6.2.1 Note di rilascio</block>
   <block id="f0de22be0ad3dd3c1e51ed207f0e298e" category="paragraph">La versione 6.2.1 del SnapCenter software non presenta nuove funzionalità o miglioramenti. Include solo correzioni di bug noti e aggiornamenti delle versioni qualificate per il SnapCenter Server e i plug-in. Consultare la <block ref="f297672c4e3c5441ce384d3bd8457e0c" category="inline-link-macro-rx"></block> per ulteriori dettagli.</block>
-  <block id="8ca913d8030ab27ecf31b8863c908b83" category="list-text">Assicurarsi che PowerShell 7.4.13 sia installato sull'host del plug-in Windows.</block>
   <block id="92f7e9adcc0061bde4c2abd78f00e01e" category="paragraph">Per configurare il certificato CA con SnapCenter Plug-in per VMware vSphere, vedere <block ref="e0ef04da7ad7ee6e29cb49ed5497582e" category="inline-link-rx"></block>.</block>
   <block id="0ff275ffe02e672fcd7c5215c9cbcfb6" category="paragraph"><block ref="a578dd94961bb2b0ce287d29a112740b" prefix="" category="inline-code"></block><block ref="e685e5103f8306754d61ec1a0da15686" prefix=" " category="inline-code"></block><block ref="0897acf49c7c1ea9f76efe59187aa046" prefix=" " category="inline-code"></block></block>
   <block id="11428fc511268a2c63fa0e7ebcb2530d" category="paragraph"><block ref="ee29fb805334372351c3e459eaf40ac3" prefix="" category="inline-code"></block><block ref="e685e5103f8306754d61ec1a0da15686" prefix=" " category="inline-code"></block><block ref="0897acf49c7c1ea9f76efe59187aa046" prefix=" " category="inline-code"></block></block>
@@ -9648,27 +9641,48 @@ Ad esempio, la conservazione viene impostata su 7 per un gruppo di risorse con S
   <block id="89f809cf75828a2d4c90b8f6a2d824a8" category="list-text">ASP.NET Core Runtime 8.0.24 (e tutte le successive patch 8.0.x) Hosting Bundle</block>
   <block id="2ec3c1941108a0b73ba16cd1f51e91a2" category="list-text">(Oracle Java o OpenJDK) (o Java 11 per SnapCenter 6.2)</block>
   <block id="4fcda169e2d730f4d7e58ab11dada974" category="paragraph">+Funzionalità di .NET Framework+</block>
-  <block id="937b867b6811c326a6fb0a62d27cf6a6" category="paragraph">Se non hai selezionato la casella di controllo *Ignora controlli preliminari*, l'host viene convalidato per verificare se soddisfa i requisiti per l'installazione del plug-in. Lo spazio su disco, la RAM, la versione di PowerShell, la versione di .NET, la posizione (per i plug-in Windows) e Java 17, Java 11 (solo per SnapCenter 6.2) per i plug-in Windows e Linux vengono convalidati rispetto ai requisiti minimi. Se i requisiti minimi non vengono soddisfatti, vengono visualizzati messaggi di errore o di avviso appropriati.</block>
-  <block id="98404830bda33c326f08421f8e66a557" category="paragraph">Java 17 (Oracle Java o OpenJDK), Java 11 (per SnapCenter 6.2 solo)</block>
-  <block id="d9699e478a64c2cd9e68890eeb4ee28c" category="list-text">Installa Java 17, Java 11 (solo per SnapCenter 6.2) sul tuo host Linux o Windows.</block>
-  <block id="04f3c2e1748713ce6ffb6d71f40813eb" category="list-text">È necessario aver installato Java 17, Java 11 (per SnapCenter 6.2 solo) sul proprio host.</block>
-  <block id="56207fd8e31acfaba8fc77b4284c626b" category="list-text">È necessario aver installato Java 17, Java 11 (per SnapCenter 6.2 solo) sul proprio host Windows.</block>
-  <block id="b074c2b09d4eae87877d27f927846db1" category="list-text">È necessario aver installato Java 17, Java 11 (per SnapCenter 6.2 solo) sui propri host Linux o AIX.</block>
-  <block id="ecfe67e2a421ab06268efcf96e930ce4" category="list-text">È necessario aver installato Java 17, Java 11 (per SnapCenter 6.2 solamente) sul proprio host Linux.</block>
-  <block id="c9e8463e6bf45b62fd2a34f2725df1ab" category="list-text">Se necessario, installare Java 17, Java 11 (solo per SnapCenter 6.2) sull'host del plug-in.</block>
-  <block id="6c2994c44d696dc528a1d8049851e839" category="list-text">È necessario aver installato Java 17, Java 11 (per SnapCenter 6.2 solo) sul proprio host Linux, Windows o AIX.</block>
-  <block id="a89d2fe9f2ff0a8e1e92d72cd2f9f49c" category="paragraph">Se si utilizza Windows Server 2019 o Windows Server 2016 per l'host del server SnapCenter, è necessario installare Java 17, Java 11 (solo per SnapCenter 6.2).</block>
-  <block id="f4efa9e0b8156c9a98c0e876cd85ffa4" category="paragraph">Java 17, Java 11 (per SnapCenter 6.2 solo), IBM Java</block>
-  <block id="54a91fc01e87691018b949fcec747376" category="list-text">È necessario aver installato Java 17, Java 11 (per SnapCenter 6.2 solo) sul proprio host Linux o AIX.</block>
-  <block id="8c3fd16186617c8701712d39240492eb" category="admonition">Assicurati di aver installato solo la versione certificata di Java 17 o Java 11 (solo per SnapCenter 6.2) sul sistema host Linux.</block>
-  <block id="aaf42b0e39de3b7c551c103b09e31930" category="paragraph">Java 17 (Oracle o OpenJDK), Java 11 (per SnapCenter 6.2 solo)</block>
-  <block id="5f225ab9372945dab0ec755670f88ea5" category="paragraph">IBM Java 17, IBM Java 11 (per SnapCenter 6.2 solamente)</block>
   <block id="665be5e1b9dadcbb7301375fc518ac35" category="inline-link-macro">Come creare una chiave RSA per le credenziali SSH basate su chiave di SnapCenter</block>
   <block id="3b7da8598a81d63ce4f466a50cc7f36d" category="admonition">La chiave RSA è l'unico formato di chiave SSH supportato per SnapCenter. Consulta l'articolo della Knowledge Base <block ref="d40341440b723151f44e615b4ce137a9" category="inline-link-macro-rx"></block> per i dettagli su come creare la chiave SSH.</block>
   <block id="017b89dbeed4d6c39a07b04821e77062" category="paragraph">Per le informazioni più recenti sulle versioni supportate, consultare la <block ref="7bd33b95d0920bcbb6caeb370fe1470a" category="inline-link-rx"></block>.</block>
   <block id="3bb60a37742e52f43083aadd15b42634" category="admonition">Per la coerenza del file system, vengono acquisiti snapshot del gruppo di coerenza per le LUN coinvolte nel gruppo di volumi.</block>
   <block id="039e5b00c69b5f0b1d8102eed90a99d2" category="admonition">Se sono stati aggiunti diversi file system al gruppo di risorse, tutti i volumi provenienti da file system differenti all'interno del gruppo di risorse vengono inseriti in un Consistency group. Per i backup coerenti in caso di arresto anomalo, viene creata un'istantanea del Consistency group per impostazione predefinita, anche se è presente un solo file system o volume.</block>
   <block id="81dc1fd31e1618567754ef16f452f80d" category="list-text">È necessario aver installato ASP.NET Core Runtime 8.0.24 (e tutte le successive patch 8.0.x) Hosting Bundle.</block>
-  <block id="2cab5653ed51756a3f6bca5df3bfda26" category="list-text">Installare ASP.NET Core Runtime 8.0.24 (e tutte le patch successive 8.0.x) Hosting Bundle e PowerShell 7.4.2 o versioni successive.</block>
-  <block id="b4ded5b580f7ff4ca7eca5d658d4e55f" category="list-text">Assicurarsi che Java 17 (Oracle Java o OpenJDK) sia installato sugli host plug-in Windows e Linux (oppure Java 11 per SnapCenter 6.2 solo).</block>
+  <block id="6d379457554ecca51ab298da606eeb2d" category="list-text">PowerShell 7.4.13 o successivo</block>
+  <block id="a169558050265df89ca0306e418e6a7b" category="paragraph">È possibile eseguire facoltativamente diverse procedure di installazione e configurazione utilizzando i cmdlet di PowerShell. È necessario utilizzare PowerShell 7.4.13 o versioni successive.</block>
+  <block id="7bc90b8946c9287aa4837e2c5d0f1a81" category="paragraph">Se non hai selezionato la casella di controllo *Ignora controlli preliminari*, l'host viene convalidato per verificare se soddisfa i requisiti per l'installazione del plug-in. Lo spazio su disco, la RAM, la versione di PowerShell, la versione di .NET, la posizione (per i plug-in Windows) e Java 17 (per SnapCenter 6.2.1 e successive) o Java 11 (per SnapCenter 6.2 e precedenti) per i plug-in Windows e Linux vengono convalidati rispetto ai requisiti minimi. Se i requisiti minimi non vengono soddisfatti, vengono visualizzati messaggi di errore o di avviso appropriati.</block>
+  <block id="abfbfd83f2c483daf4440823a9e0a9ab" category="list-text">Java 17 (Oracle Java o OpenJDK) per SnapCenter 6.2.1 e versioni successive o</block>
+  <block id="dfbd857138771ee8449cb85654e62cf2" category="list-text">Java 11 per SnapCenter 6.2 e versioni precedenti</block>
+  <block id="ffd1a97da6d9463bfd834a42505ddd6b" category="list-text">Installa Java 17 (Oracle Java o OpenJDK) per SnapCenter 6.2.1 e versioni successive o</block>
+  <block id="546926a720f9dc7c00286127d57d2155" category="list-text">Java 11 per SnapCenter 6.2 e versioni precedenti sul tuo host Linux o Windows.</block>
+  <block id="5996261d2f1d31f4f804897d9e4eb07f" category="list-text">È necessario aver installato Java 17 (Oracle Java o OpenJDK) per SnapCenter 6.2.1 e versioni successive oppure</block>
+  <block id="3bb66432d41243ee00b353a799874a9c" category="list-text">Java 11 per SnapCenter 6.2 e versioni precedenti sul tuo host.</block>
+  <block id="92908a41204679133faed8314eae374e" category="list-text">Java 11 per SnapCenter 6.2 e versioni precedenti sui tuoi host Linux o AIX.</block>
+  <block id="9adc1f2bc331d9d94d9a205e48957d36" category="list-text">Java 11 per SnapCenter 6.2 e versioni precedenti sul tuo host Windows.</block>
+  <block id="51475d2ed2902cef48dd258ccabb797f" category="list-text">Java 11 per SnapCenter 6.2 e versioni precedenti sul tuo host Linux.</block>
+  <block id="43fd72623499b5234779dd47f414cbbc" category="list-text">Se applicabile, installare Java 17 (Oracle Java o OpenJDK) per SnapCenter 6.2.1 e versioni successive oppure</block>
+  <block id="647b5ed7d2fe5d2447dab38c7968bf25" category="list-text">Java 11 per SnapCenter 6.2 e versioni precedenti sull'host del plug-in.</block>
+  <block id="285cfe0af3a19e1eb54755170c50209c" category="list-text">Java 11 per SnapCenter 6.2 e versioni precedenti sul tuo host Linux, Windows o AIX.</block>
+  <block id="72ba6005a64f422a3d5be89eb973a40d" category="paragraph">Se si utilizza Windows Server 2019 o Windows Server 2016 per l'host del server SnapCenter, è necessario installare Java 17 (Oracle Java o OpenJDK) per SnapCenter 6.2.1 e versioni successive oppure Java 11 per SnapCenter 6.2 e versioni precedenti.</block>
+  <block id="053398b8efb795d378bd0be3e1aa5134" category="list-text">Java 17 per SnapCenter 6.2.1 e versioni successive, IBM Java o</block>
+  <block id="0d7e20101a3e419a465e1b6f8a1ebc37" category="list-text">Java 11 per SnapCenter 6.2 e versioni precedenti, IBM Java</block>
+  <block id="c842fd3cfc5f62a17cf7f19fd729eaa2" category="list-text">Installa Java 17 (per SnapCenter 6.2.1 e versioni successive) o</block>
+  <block id="ddfb156e468d0aa9a0ffb0fcdba4a8d4" category="list-text">Java 11 (per SnapCenter 6.2 e versioni precedenti) sul tuo host Linux o Windows.</block>
+  <block id="109ff0460272edc0bd3491d5f2eb73e0" category="list-text">È necessario aver installato Java 17 (per SnapCenter 6.2.1 e versioni successive) oppure</block>
+  <block id="0c494a1e6f3783c5f3e653b10574a52b" category="list-text">Java 11 (per SnapCenter 6.2 e versioni precedenti) sul tuo host.</block>
+  <block id="33fbc477dfdbff390971c493832a3265" category="list-text">Java 11 (per SnapCenter 6.2 e versioni precedenti) sul tuo host Windows.</block>
+  <block id="a7ef3d889d89cbb2d0e4fc54c9de1d70" category="list-text">Java 11 (per SnapCenter 6.2 e versioni precedenti) sul tuo host Linux.</block>
+  <block id="a8f721a877a07dc425cb496a5a8b12c0" category="list-text">Java 11 (per SnapCenter 6.2 e versioni precedenti) sul tuo host Linux o AIX.</block>
+  <block id="f046fe622c3b6e85f42746be044fc2ab" category="admonition">Assicurati di aver installato solo la versione certificata di Java 17 (per SnapCenter 6.2.1 e successive) o Java 11 (per SnapCenter 6.2 e precedenti) sul sistema host Linux.</block>
+  <block id="ad4079e1181a0e9bb4d9fa57bb01ec8b" category="list-text">Java 17 (Oracle o OpenJDK) per SnapCenter 6.2.1 e versioni successive o</block>
+  <block id="9ce62cd4575b0c0494165028b8132a2e" category="admonition">Assicurati di aver installato solo la versione certificata di Java 17 per SnapCenter 6.2.1 e successive o Java 11 per SnapCenter 6.2 e precedenti sul sistema host Linux.</block>
+  <block id="94b8a8fb91d667b4a4496a600e8d33db" category="list-text">IBM Java 17 per SnapCenter 6.2.1 e versioni successive o</block>
+  <block id="9542d1521504d218851303316af3283e" category="list-text">IBM Java 11 per SnapCenter 6.2 e versioni precedenti</block>
+  <block id="b01cafc658d1fa9656a555819d02f92a" category="list-text">È necessario aver installato Java 17 per SnapCenter 6.2.1 e versioni successive oppure</block>
+  <block id="a7969fc9aa7edecbc676b844a3cebb1d" category="list-text">È necessario aver installato PowerShell 7.4.13 o versioni successive.</block>
+  <block id="5721856931f9d7a5db61bfbfdaa64f25" category="list-text">Nella pagina *Impostazioni*, selezionare *Software*.</block>
+  <block id="78697add9083ce88242f5ce4c68a5ff4" category="list-text">Seleziona *Verifica aggiornamenti* per vedere se sono disponibili versioni più recenti dei pacchetti di plug-in.</block>
+  <block id="0b87bff3a1b090fd638eb30e63a17a17" category="list-text">Seleziona *Pianifica aggiornamenti* per creare una pianificazione per specificare l'intervallo in cui desideri ricevere informazioni sugli aggiornamenti disponibili:</block>
+  <block id="bcb8accb5335c40025954514ef35481e" category="list-text">Installare ASP.NET Core Runtime 8.0.24 (e tutte le patch successive 8.0.x) Hosting Bundle e PowerShell 7.4.13 o versioni successive.</block>
+  <block id="0d4f9ea16fd7eba541b088d3783fd1a6" category="list-text">Assicurarsi che ASP.NET Core Runtime 8.0.24 (e tutte le patch successive per la versione 8.0.x) Hosting Bundle e PowerShell 7.4.13 o successiva siano installati sull'host del plug-in Windows.</block>
+  <block id="a0eb79b89395199c485c81b2df9a6da3" category="list-text">Assicurarsi che Java 17 (Oracle Java o OpenJDK) per SnapCenter 6.2.1 e successive, oppure Java 11 per SnapCenter 6.2 e precedenti, sia installato sugli host plug-in Windows e Linux.</block>
 </blocks>

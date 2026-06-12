@@ -17,7 +17,8 @@ Prima di utilizzare i plug-in supportati da SnapCenter NetApp, l'amministratore 
 * Accedere al server SnapCenter.
 * Configurare l'ambiente SnapCenter aggiungendo connessioni al sistema di storage e creando credenziali, se applicabili.
 * Aggiungere host e installare e caricare i plug-in.
-* Se necessario, installare Java 17, Java 11 (solo per SnapCenter 6.2) sull'host del plug-in.
+* Se applicabile, installare Java 17 (Oracle Java o OpenJDK) per SnapCenter 6.2.1 e versioni successive oppure
+* Java 11 per SnapCenter 6.2 e versioni precedenti sull'host del plug-in.
 * Se si dispone di più percorsi dati (LIF) o di una configurazione DNFS, è possibile eseguire le seguenti operazioni utilizzando l'interfaccia utente di SnapCenter sull'host del database:
 +
 ** Per impostazione predefinita, tutti gli indirizzi IP dell'host del database vengono aggiunti alla policy di esportazione dello storage NFS in SVM (Storage Virtual Machine) per i volumi clonati. Se si desidera avere un indirizzo IP specifico o limitare un sottoinsieme di indirizzi IP, eseguire la CLI Set-PreferredHostIPsInStorageExportPolicy.
