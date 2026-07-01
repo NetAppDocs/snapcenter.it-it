@@ -120,7 +120,7 @@ Server Web
 +
 ** Estendibilità di .NET 4.5
 ** Inizializzazione dell'applicazione
-** ASP.NET Core Runtime 8.0.24 (e tutte le successive patch 8.0.x) Hosting Bundle
+** Pacchetto di hosting ASP.NET Core 10.0.7 (o versioni successive) Consulta la link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter Software Note di rilascio"^] per le versioni più recenti di ASP.NET Core qualificate per la tua versione specifica di SnapCenter.
 ** Include lato server
 ** Protocollo WebSocket
 
@@ -146,11 +146,11 @@ Script e strumenti di gestione IIS
  a| 
 +Funzionalità di .NET Framework+
  a| 
-* ASP.NET Core Runtime 8.0.24 (e tutte le successive patch 8.0.x) Hosting Bundle
+* ASP.NET Core Runtime 10.0.7 Hosting Bundle (o versioni successive)
 * Attivazione HTTP di Windows Communication Foundation (WCF) 45
 +
 ** Attivazione TCP
-** Attivazione HTTP
+** Attivazione HTTP Fai riferimento alla link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter Software Note di rilascio"^] per le versioni più recenti di ASP.NET Core qualificate per la tua specifica versione di SnapCenter.
 
 
 

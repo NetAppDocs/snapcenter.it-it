@@ -105,15 +105,18 @@ Non applicabile
  a| 
 Pacchetti software richiesti
  a| 
-* ASP.NET Core Runtime 8.0.24 (e tutte le successive patch 8.0.x) Hosting Bundle
-* PowerShell 7.4.13 o successivo
+* ASP.NET Core Runtime 10.0.7 Hosting Bundle (o versioni successive)
+* PowerShell 7.6.1 (o versioni successive)
 
+
+Consulta la link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter Software Note di rilascio"^] per le versioni più recenti e qualificate di ASP.NET Core e PowerShell per la tua versione specifica di SnapCenter.
 
 Per informazioni specifiche sulla risoluzione dei problemi di .NET, vedere https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["L'aggiornamento o l'installazione di SnapCenter non riesce per i sistemi legacy che non dispongono di connettività Internet"^].
  a| 
 * .NET Framework 8.0.12 (e tutte le patch 8,0.x successive)
-* PowerShell 7.4.13 o successivo
+* PowerShell 7.6.1 (o versioni successive)
 * Nginx è un server web che può essere usato come proxy inverso
+* Perl
 * PAM-devel
 +
 PAM (Plugggable Authentication Modules) è uno strumento di protezione del sistema che consente agli amministratori di sistema di impostare i criteri di autenticazione senza dover ricompilare i programmi che eseguono l'autenticazione.

@@ -50,8 +50,7 @@ NOTE: È necessario allocare spazio su disco sufficiente e monitorare il consumo
  a| 
 Pacchetti software richiesti
  a| 
-* Java 17 (Oracle Java o OpenJDK) per SnapCenter 6.2.1 e versioni successive o
-* Java 11 per SnapCenter 6.2 e versioni precedenti
+* Java 17 (Oracle Java, OpenJDK o SAP JDK) per SnapCenter 6.2.1 e versioni successive oppure Java 11 per SnapCenter 6.2 e versioni precedenti
 
 
 Se hai aggiornato Java all'ultima versione, devi assicurarti che l'opzione JAVA_HOME situata in /var/opt/snapcenter/spl/etc/spl.properties sia impostata sulla versione di Java corretta e sul percorso corretto.

@@ -13,8 +13,7 @@ summary: Prima di aggiungere un host e installare i pacchetti plug-in, è necess
 [role="lead"]
 Prima di aggiungere un host e installare i pacchetti plug-in, è necessario completare tutti i requisiti. Il plug-in SnapCenter per database SAP HANA è disponibile sia in ambienti Windows che Linux.
 
-* È necessario aver installato Java 17 (Oracle Java o OpenJDK) per SnapCenter 6.2.1 e versioni successive oppure
-* Java 11 per SnapCenter 6.2 e versioni precedenti sul tuo host.
+* Devi aver installato Java 17 (Oracle Java, OpenJDK o SAP JDK) per SnapCenter 6.2.1 e versioni successive oppure Java 11 per SnapCenter 6.2 e versioni precedenti sul tuo host.
 +
 
 NOTE: IBM Java non è supportato su host Windows e Linux.
@@ -34,8 +33,7 @@ NOTE: IBM Java non è supportato su host Windows e Linux.
 * È necessario disporre di un utente di dominio con privilegi di amministratore locale con autorizzazioni di accesso locale sull'host remoto.
 * Durante l'installazione del plug-in per database SAP HANA su un host Windows, il plug-in SnapCenter per Microsoft Windows viene installato automaticamente.
 * È necessario aver attivato la connessione SSH basata su password per l'utente root o non root.
-* È necessario aver installato Java 17 (Oracle Java o OpenJDK) per SnapCenter 6.2.1 e versioni successive oppure
-* Java 11 per SnapCenter 6.2 e versioni precedenti sul tuo host Windows.
+* Devi aver installato Java 17 (Oracle Java, OpenJDK o SAP JDK) per SnapCenter 6.2.1 e versioni successive oppure Java 11 per SnapCenter 6.2 e versioni precedenti sul tuo host Windows.
 +
 link:https://www.oracle.com/java/technologies/downloads/#java17["Scarica Java per tutti i sistemi operativi"]
 
@@ -46,8 +44,7 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["Scarica Java pe
 == Host Linux
 
 * È necessario aver attivato la connessione SSH basata su password per l'utente root o non root.
-* È necessario aver installato Java 17 (Oracle Java o OpenJDK) per SnapCenter 6.2.1 e versioni successive oppure
-* Java 11 per SnapCenter 6.2 e versioni precedenti sul tuo host Linux.
+* Devi aver installato Java 17 (Oracle Java, OpenJDK o SAP JDK) per SnapCenter 6.2.1 e versioni successive oppure Java 11 per SnapCenter 6.2 e versioni precedenti sul tuo host Linux.
 +
 link:https://www.oracle.com/java/technologies/downloads/#java17["Scarica Java per tutti i sistemi operativi"]
 

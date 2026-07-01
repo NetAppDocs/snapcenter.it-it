@@ -23,10 +23,9 @@ Il plug-in SnapCenter per database Oracle può essere installato da un utente no
 Il pacchetto di plug-in SnapCenter per AIX risolve automaticamente il collegamento simbolico a livello di file, ma non i collegamenti simbolici a livello di directory per ottenere il percorso ASSOLUTO JAVA_HOME.
 
 * Creare le credenziali con la modalità di autenticazione come Linux o AIX per l'utente di installazione.
-* È necessario aver installato Java 17 (per SnapCenter 6.2.1 e versioni successive) oppure
-* Java 11 (per SnapCenter 6.2 e versioni precedenti) sul tuo host Linux o AIX.
+* Devi aver installato Java 17 (per SnapCenter 6.2.1 e versioni successive) o Java 11 (per SnapCenter 6.2 e versioni precedenti) sul tuo host Linux o AIX.
 +
-** Java di Oracle e OpenJDK sono supportati per Linux.
+** Java di Oracle, OpenJDK o SAP JDK è supportato per Linux.
 ** IBM Java per AIX. È possibile scaricarlo da  https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?version=17&os=AIX["IBM Semeru Runtimes Download"^].
 +
 
@@ -92,8 +91,7 @@ NOTE: È necessario allocare spazio su disco sufficiente e monitorare il consumo
  a| 
 Pacchetti software richiesti
  a| 
-* Java 17 (Oracle o OpenJDK) per SnapCenter 6.2.1 e versioni successive o
-* Java 11 per SnapCenter 6.2 e versioni precedenti
+* Java 17 (Oracle Java, OpenJDK o SAP JDK) per SnapCenter 6.2.1 e versioni successive oppure Java 11 per SnapCenter 6.2 e versioni precedenti
 
 
 
@@ -222,8 +220,7 @@ NOTE: È necessario allocare spazio su disco sufficiente e monitorare il consumo
  a| 
 Pacchetti software richiesti
  a| 
-* IBM Java 17 per SnapCenter 6.2.1 e versioni successive o
-* IBM Java 11 per SnapCenter 6.2 e versioni precedenti
+* IBM Java 17 per SnapCenter 6.2.1 e versioni successive oppure IBM Java 11 per SnapCenter 6.2 e versioni precedenti
 
 
 Se hai aggiornato Java all'ultima versione, devi assicurarti che l'opzione JAVA_HOME situata in /var/opt/snapcenter/spl/etc/spl.properties sia impostata sulla versione di Java corretta e sul percorso corretto.
