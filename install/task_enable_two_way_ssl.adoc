@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: security,disable two-way SSL,enable two-way SSL, windows host 
 summary: 'È possibile abilitare la comunicazione bidirezionale SSL per proteggere la comunicazione reciproca tra il server SnapCenter sull"host Windows e i plug-in utilizzando i comandi PowerShell.' 
 ---
-= Attivare la comunicazione SSL bidirezionale sull'host Windows
+= Abilita la comunicazione SSL bidirezionale su un host Windows SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -39,6 +39,7 @@ Eseguire i comandi per tutti i plug-in e l'agente SMCore prima e poi per il serv
 
 
 
+[[disable-two-way-ssl-communication]]
 == Disattiva la comunicazione SSL bidirezionale
 
 È possibile disattivare la comunicazione SSL bidirezionale utilizzando i comandi PowerShell.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Postgresql 
 summary: Il rilevamento automatico non è supportato per alcune istanze di PostgreSQL. È necessario aggiungere queste risorse manualmente. 
 ---
-= Aggiungere le risorse manualmente all'host del plug-in
+= Aggiungi manualmente le risorse PostgreSQL di SnapCenter all'host del plug-in
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

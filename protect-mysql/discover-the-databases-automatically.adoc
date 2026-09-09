@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: 'Le risorse sono database MySQL sull"host Linux che sono gestiti da SnapCenter. È possibile aggiungere queste risorse ai gruppi di risorse per eseguire operazioni di protezione dei dati dopo aver scoperto i database MySQL disponibili.' 
 ---
-= Rilevare automaticamente i database
+= Scopri automaticamente i database MySQL in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

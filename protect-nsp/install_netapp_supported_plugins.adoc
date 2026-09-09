@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install workflow, NetApp supported plug-in 
 summary: Se si desidera proteggere le risorse dei plug-in supportati da NetApp, è necessario installare e configurare i plug-in supportati da SnapCenter NetApp. 
 ---
-= Flusso di lavoro di installazione dei plug-in supportati da SnapCenter NetApp
+= Flusso di lavoro di installazione per i plug-in supportati da SnapCenter NetApp
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

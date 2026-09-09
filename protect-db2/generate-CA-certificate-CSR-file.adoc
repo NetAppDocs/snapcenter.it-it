@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: 'È possibile generare una CSR (Certificate Signing Request) e importare il certificato.' 
 ---
-= Generare il file CSR del certificato CA
+= File CSR del certificato CA per SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resource groups, attach policies, snapcenter 
 summary: Un gruppo di risorse è il container al quale è necessario aggiungere risorse di cui si desidera eseguire il backup e la protezione. Un gruppo di risorse consente di eseguire contemporaneamente il backup di tutti i dati associati a una determinata applicazione. Per qualsiasi lavoro di protezione dei dati è necessario un gruppo di risorse. È inoltre necessario associare uno o più criteri al gruppo di risorse per definire il tipo di lavoro di protezione dei dati che si desidera eseguire. 
 ---
-= Creare gruppi di risorse e allegare policy
+= Crea gruppi di risorse e associa criteri per MySQL con SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

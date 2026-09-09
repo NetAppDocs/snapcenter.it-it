@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Resources page 
 summary: È possibile individuare le risorse ed eseguire operazioni di protezione dei dati dalla pagina risorse. Le operazioni che è possibile eseguire variano in base al plug-in utilizzato per gestire le risorse. 
 ---
-= Operazioni supportate dalla pagina risorse
+= Operazioni supportate dalla pagina Risorse di SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

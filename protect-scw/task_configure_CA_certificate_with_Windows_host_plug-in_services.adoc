@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: Configurare il certificato CA con i servizi plug-in host di Windows 
 ---
-= Configurare il certificato CA con i servizi plug-in dell'host Windows
+= Configura un certificato CA per i servizi plug-in di Windows di SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: oracle databases discover 
 summary: In che modo SnapCenter rileva i database Oracle. 
 ---
-= Convenzioni di denominazione del backup
+= SnapCenter convenzioni di denominazione dei backup
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

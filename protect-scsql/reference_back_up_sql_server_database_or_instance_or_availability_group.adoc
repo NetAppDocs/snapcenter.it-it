@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Backup workflow 
 summary: 'Quando si installa il plug-in SnapCenter per Microsoft SQL Server nell"ambiente in uso, è possibile utilizzare SnapCenter per eseguire il backup delle risorse di SQL Server.' 
 ---
-= Workflow di backup
+= Flusso di lavoro di backup di SQL Server in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -28,6 +28,7 @@ NOTE: Le opzioni Backup Now (Backup ora), Restore (Ripristina), Manage Backup (G
 
 
 
+[[how-snapcenter-backs-up-databases]]
 == Come SnapCenter esegue il backup dei database
 
 SnapCenter utilizza la tecnologia Snapshot per eseguire il backup dei database di SQL Server che risiedono su LUN o VMDK. SnapCenter crea il backup creando istantanee dei database.

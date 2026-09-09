@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Minimum ONTAP privileges 
 summary: I privilegi minimi di ONTAP richiesti variano in base ai plug-in di SnapCenter utilizzati per la protezione dei dati. 
 ---
-= Privilegi minimi di ONTAP richiesti per il plug-in SQL
+= Privilegi ONTAP minimi per il plug-in SnapCenter per Microsoft SQL Server
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter, CA certificate 
 summary: Importare i certificati CA del server SnapCenter e i plug-in host di Windows 
 ---
-= Importare i certificati CA
+= Importa certificati CA in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

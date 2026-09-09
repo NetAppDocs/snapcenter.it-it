@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cluster role, privileges, asa r2 systems 
 summary: È necessario creare ruoli cluster ONTAP per i sistemi ASA R2 in modo da non dover utilizzare il ruolo di amministratore ONTAP per eseguire le operazioni in SnapCenter. 
 ---
-= Creare ruoli del cluster ONTAP per i sistemi ASA R2
+= Crea ruoli cluster ONTAP per sistemi ASA r2 in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -35,6 +35,7 @@ NOTE: Ripetere questo comando per ogni autorizzazione.
 
 
 
+[[ontap-cli-commands-for-creating-cluster-roles-and-assigning-permissions]]
 == Comandi dell'interfaccia utente di ONTAP per la creazione di ruoli cluster e l'assegnazione delle autorizzazioni
 
 Esistono diversi comandi dell'interfaccia utente di ONTAP da eseguire per creare ruoli cluster e assegnare autorizzazioni.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clone, monitor 
 summary: 'È possibile monitorare l"avanzamento delle operazioni di clonazione SnapCenter utilizzando la pagina lavori. Potrebbe essere necessario controllare lo stato di avanzamento di un"operazione per determinare quando è completa o se si verifica un problema.' 
 ---
-= Monitorare le operazioni di clonazione del database Oracle
+= Monitora le operazioni di clonazione del database Oracle in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

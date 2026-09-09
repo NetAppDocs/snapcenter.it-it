@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Manage hosts 
 summary: 'È possibile aggiungere host e installare pacchetti di plug-in SnapCenter, aggiungere un server di verifica, rimuovere host, migrare processi di backup e aggiornare host per aggiornare pacchetti di plug-in o aggiungere nuovi pacchetti di plug-in. A seconda del plug-in in in uso, è inoltre possibile eseguire il provisioning dei dischi, gestire le condivisioni SMB, gestire i gruppi di iniziatori (igroups), gestire le sessioni iSCSI e migrare i dati.' 
 ---
-= Gestire gli host
+= Gestisci gli host in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -248,6 +248,7 @@ No
 |===
 
 
+[[refresh-virtual-machine-information]]
 == Aggiorna le informazioni della macchina virtuale
 
 È necessario aggiornare le informazioni della macchina virtuale quando si modificano le credenziali di VMware vCenter o si riavvia l'host del database o del file system. L'aggiornamento delle informazioni della macchina virtuale in SnapCenter avvia la comunicazione con VMware vSphere vCenter e ottiene le credenziali vCenter.
@@ -265,6 +266,7 @@ NOTE: I dischi basati su RDM sono gestiti dal plug-in SnapCenter per Microsoft W
 
 
 
+[[modify-plug-in-hosts]]
 == Modificare gli host dei plug-in
 
 Dopo aver installato un plug-in, è possibile modificare i dettagli degli host del plug-in, se necessario. È possibile modificare le credenziali, il percorso di installazione, i plug-in, i dettagli della directory di log per il plug-in SnapCenter per Microsoft SQL Server, l'account di servizio gestito di gruppo (gMSA) e la porta del plug-in.
@@ -311,6 +313,7 @@ L'host viene validato e aggiunto al server SnapCenter.
 
 
 
+[[start-or-restart-plug-in-services]]
 == Avviare o riavviare i servizi plug-in
 
 L'avvio dei servizi plug-in di SnapCenter consente di avviare i servizi se non sono in esecuzione o di riavviarli se sono in esecuzione. Potrebbe essere necessario riavviare i servizi dopo aver eseguito la manutenzione.
@@ -330,6 +333,7 @@ Al riavvio dei servizi, assicurarsi che non siano in esecuzione processi.
 
 
 
+[[suspend-schedules-for-host-maintenance]]
 == Sospendere le pianificazioni per la manutenzione dell'host
 
 Se si desidera impedire all'host di eseguire qualsiasi processo pianificato SnapCenter, è possibile impostare l'host in modalità di manutenzione. Questa operazione deve essere eseguita prima di aggiornare i plug-in o se si eseguono attività di manutenzione sugli host.

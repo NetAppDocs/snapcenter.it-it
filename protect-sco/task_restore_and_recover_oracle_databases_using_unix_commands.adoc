@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore, recover, CLI 
 summary: 'Il flusso di lavoro di ripristino e ripristino include la pianificazione, l"esecuzione delle operazioni di ripristino e ripristino e il monitoraggio delle operazioni.' 
 ---
-= Ripristinare e ripristinare i database Oracle utilizzando i comandi UNIX
+= Ripristina e recupera i database Oracle utilizzando i comandi UNIX in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

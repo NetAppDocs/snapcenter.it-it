@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in Packages for Linux, SnapCenter Plug-in Packages for Windows 
 summary: È possibile installare i pacchetti plug-in SnapCenter per Linux o Windows su più host contemporaneamente utilizzando il cmdlet Install-SmHostPackage PowerShell. 
 ---
-= Installare i pacchetti plug-in SnapCenter per Linux o Windows su più host remoti utilizzando i cmdlet
+= Installa i pacchetti plug-in di SnapCenter su più host usando i cmdlet
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

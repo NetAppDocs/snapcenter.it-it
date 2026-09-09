@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade, upgrade snapcenter server, windows 
 summary: È possibile utilizzare il file eseguibile del programma di installazione del server SnapCenter per aggiornare il server SnapCenter. 
 ---
-= Aggiornare il server SnapCenter sull'host Windows
+= Aggiorna il SnapCenter Server su un host Windows
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

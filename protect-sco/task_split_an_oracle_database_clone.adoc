@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: split a clone, split 
 summary: È possibile utilizzare SnapCenter per separare una risorsa clonata dalla risorsa principale. Il clone diviso diventa indipendente dalla risorsa padre. 
 ---
-= Separare un clone di database Oracle
+= Dividi un clone di database Oracle in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

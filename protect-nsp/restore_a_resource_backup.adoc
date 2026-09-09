@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore 
 summary: È possibile utilizzare SnapCenter per ripristinare le risorse. Le funzionalità delle operazioni di ripristino dipendono dal plug-in utilizzato. 
 ---
-= Ripristinare un backup delle risorse
+= Ripristina un backup delle risorse in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

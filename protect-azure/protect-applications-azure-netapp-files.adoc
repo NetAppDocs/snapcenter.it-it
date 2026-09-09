@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: azure netapp files, ANF, back up, restore, clone, ANF backup, Azure Blob storage 
 summary: Puoi eseguire backup, ripristino e cloning delle applicazioni in esecuzione su Azure NetApp Files. 
 ---
-= Proteggi le applicazioni in esecuzione su Azure NetApp Files
+= Scopri la protezione delle applicazioni di Azure NetApp Files con SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -19,6 +19,7 @@ Quando una policy con backup di Azure NetApp Files è abilitata e associata a un
 
 
 
+[[limitations]]
 == Limitazioni
 
 * Le funzionalità dello storage a oggetti per FAS, ASA o AFF ONTAP e Amazon FSX per i sistemi di storage NetApp ONTAP non sono supportate.

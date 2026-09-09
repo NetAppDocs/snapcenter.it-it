@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: CA client certificate, LDAPS 
 summary: 'È necessario configurare il certificato del client CA per LDAPS sul server SnapCenter quando quest"ultimo è configurato con i certificati CA.' 
 ---
-= Configurare il certificato del client CA per LDAPS
+= Configura il certificato client CA per LDAPS in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

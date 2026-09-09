@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: 'Installare il plug-in per Exchange dall"interfaccia utente di SnapCenter. Tuttavia, se per qualche motivo non è possibile eseguire il programma di installazione del plug-in per Exchange in modalità automatica dalla riga di comando di Windows.' 
 ---
-= Installare il plug-in SnapCenter per Exchange in modo invisibile dalla riga di comando
+= Installa il SnapCenter Plug-in per Exchange dalla riga di comando
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

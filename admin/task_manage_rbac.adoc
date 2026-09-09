@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: modify RBAC, role, users, groups 
 summary: SnapCenter consente di modificare ruoli, utenti e gruppi. 
 ---
-= Gestire RBAC
+= Gestisci RBAC in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ SnapCenter consente di modificare ruoli, utenti e gruppi.
 
 
 
+[[modify-a-role]]
 == Modificare un ruolo
 
 È possibile modificare un ruolo SnapCenter per rimuovere utenti o gruppi e modificare le autorizzazioni associate al ruolo. È particolarmente utile modificare i ruoli quando si desidera modificare o eliminare le autorizzazioni utilizzate da un intero ruolo.
@@ -44,6 +45,7 @@ NOTE: Quando questa opzione è attivata, l'assegnazione dell'accesso degli utent
 
 
 
+[[modify-users-and-groups]]
 == Modificare utenti e gruppi
 
 È possibile modificare gli utenti o i gruppi di SnapCenter per modificarne i ruoli e le risorse.

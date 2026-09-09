@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Manage resources 
 summary: Oltre a gestire gli host nei domini attendibili di Active Directory, SnapCenter gestisce anche gli host in più domini ad non attendibili. I domini ad non attendibili devono essere registrati con il server SnapCenter. SnapCenter supporta utenti e gruppi di più domini ad non attendibili. 
 ---
-= Gestire le risorse di domini non attendibili
+= Gestisci le risorse di SnapCenter in domini non attendibili
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -19,6 +19,7 @@ I gruppi Active Directory (ad) che appartengono a domini non registrati con il s
 
 
 
+[[modify-untrusted-domains]]
 == Modificare i domini non attendibili
 
 È possibile modificare un dominio non attendibile quando si desidera aggiornare gli indirizzi IP del controller di dominio o il nome di dominio completo (FQDN).
@@ -58,6 +59,7 @@ Se l'FQDN del dominio non è risolvibile, specificare uno o più indirizzi IP de
 
 
 
+[[unregister-untrusted-active-directory-domains]]
 == Annullare la registrazione dei domini Active Directory non attendibili
 
 È possibile annullare la registrazione di un dominio Active Directory non attendibile se non si desidera utilizzare le risorse associate a tale dominio.

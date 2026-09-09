@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for mysql 
 summary: È necessario definire una strategia prima di poter eseguire correttamente le operazioni di ripristino utilizzando SnapCenter. Esistono due tipi di strategie di ripristino per i database MySQL rilevati automaticamente. 
 ---
-= Tipo di strategia di ripristino supportata per MySQL rilevato automaticamente
+= Strategie di ripristino per i database MySQL rilevati automaticamente in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

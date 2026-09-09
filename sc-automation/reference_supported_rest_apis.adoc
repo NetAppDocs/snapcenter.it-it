@@ -15,12 +15,14 @@ Le risorse disponibili tramite l'API REST di SnapCenter sono organizzate in cate
 
 
 
+[[auth]]
 == Auth
 
 È possibile utilizzare questa API per accedere al server SnapCenter. Questa API restituisce un token di autorizzazione utente utilizzato per autenticare le richieste successive.
 
 
 
+[[domains]]
 == Domini
 
 È possibile utilizzare le API per eseguire diverse operazioni.
@@ -33,6 +35,7 @@ Le risorse disponibili tramite l'API REST di SnapCenter sono organizzate in cate
 
 
 
+[[jobs]]
 == Lavori
 
 È possibile utilizzare le API per eseguire diverse operazioni.
@@ -44,6 +47,7 @@ Le risorse disponibili tramite l'API REST di SnapCenter sono organizzate in cate
 
 
 
+[[settings]]
 == Impostazioni
 
 È possibile utilizzare le API per eseguire diverse operazioni.
@@ -59,6 +63,7 @@ Le risorse disponibili tramite l'API REST di SnapCenter sono organizzate in cate
 
 
 
+[[hosts]]
 == Host
 
 È possibile utilizzare le API per eseguire diverse operazioni.
@@ -89,6 +94,7 @@ Le risorse disponibili tramite l'API REST di SnapCenter sono organizzate in cate
 
 
 
+[[resources]]
 == Risorse
 
 È possibile utilizzare le API per eseguire diverse operazioni.
@@ -143,6 +149,7 @@ Le risorse disponibili tramite l'API REST di SnapCenter sono organizzate in cate
 
 
 
+[[backups]]
 == Backup
 
 È possibile utilizzare le API per eseguire diverse operazioni.
@@ -160,6 +167,7 @@ Le risorse disponibili tramite l'API REST di SnapCenter sono organizzate in cate
 
 
 
+[[clones]]
 == Cloni
 
 È possibile utilizzare le API per eseguire diverse operazioni.
@@ -176,6 +184,7 @@ Le risorse disponibili tramite l'API REST di SnapCenter sono organizzate in cate
 
 
 
+[[clone-split]]
 == Suddivisione dei cloni
 
 È possibile utilizzare le API per eseguire diverse operazioni.
@@ -187,6 +196,7 @@ Le risorse disponibili tramite l'API REST di SnapCenter sono organizzate in cate
 
 
 
+[[resource-groups]]
 == Gruppi di risorse
 
 È possibile utilizzare le API per eseguire diverse operazioni.
@@ -207,6 +217,7 @@ Le risorse disponibili tramite l'API REST di SnapCenter sono organizzate in cate
 
 
 
+[[policies]]
 == Policy
 
 È possibile utilizzare le API per eseguire diverse operazioni.
@@ -223,6 +234,7 @@ Le risorse disponibili tramite l'API REST di SnapCenter sono organizzate in cate
 
 
 
+[[storage]]
 == Storage
 
 È possibile utilizzare le API per eseguire diverse operazioni.
@@ -239,6 +251,7 @@ Le risorse disponibili tramite l'API REST di SnapCenter sono organizzate in cate
 
 
 
+[[share]]
 == Condividere
 
 È possibile utilizzare le API per eseguire diverse operazioni.
@@ -251,6 +264,7 @@ Le risorse disponibili tramite l'API REST di SnapCenter sono organizzate in cate
 
 
 
+[[plugins]]
 == Plug-in
 
 È possibile utilizzare le API per eseguire diverse operazioni.
@@ -293,6 +307,7 @@ Le risorse disponibili tramite l'API REST di SnapCenter sono organizzate in cate
 
 
 
+[[reports]]
 == Report
 
 È possibile utilizzare le API per eseguire diverse operazioni.
@@ -304,6 +319,7 @@ Le risorse disponibili tramite l'API REST di SnapCenter sono organizzate in cate
 
 
 
+[[alerts]]
 == Avvisi
 
 È possibile utilizzare le API per eseguire diverse operazioni.
@@ -315,6 +331,7 @@ Le risorse disponibili tramite l'API REST di SnapCenter sono organizzate in cate
 
 
 
+[[rbac]]
 == RBAC
 
 È possibile utilizzare le API per eseguire diverse operazioni.
@@ -333,6 +350,7 @@ Le risorse disponibili tramite l'API REST di SnapCenter sono organizzate in cate
 
 
 
+[[configuration]]
 == Configurazione
 
 È possibile utilizzare le API per eseguire diverse operazioni.
@@ -343,6 +361,7 @@ Le risorse disponibili tramite l'API REST di SnapCenter sono organizzate in cate
 
 
 
+[[certificatesettings]]
 == CertificateSettings (Impostazioni certificazione)
 
 È possibile utilizzare le API per eseguire diverse operazioni.
@@ -353,6 +372,7 @@ Le risorse disponibili tramite l'API REST di SnapCenter sono organizzate in cate
 
 
 
+[[repository]]
 == Repository
 
 È possibile utilizzare le API per eseguire diverse operazioni.
@@ -366,6 +386,7 @@ Le risorse disponibili tramite l'API REST di SnapCenter sono organizzate in cate
 
 
 
+[[version]]
 == Versione
 
 È possibile utilizzare questa API per visualizzare la versione di SnapCenter.

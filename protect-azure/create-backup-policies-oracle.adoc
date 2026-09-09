@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create policies, Oracle, backup policies 
 summary: Creare un criterio di backup per la risorsa o il gruppo di risorse di cui si desidera eseguire il backup. 
 ---
-= Creare policy di backup per i database Oracle
+= Crea criteri di backup per i database Oracle in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Requirements 
 summary: Prima di eseguire il backup di una risorsa SQL, è necessario assicurarsi che siano soddisfatti diversi requisiti. 
 ---
-= Requisiti per il backup delle risorse SQL
+= Requisiti per il backup delle risorse SQL in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

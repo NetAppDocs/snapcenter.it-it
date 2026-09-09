@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: topology, unix file systems, 
 summary: Quando ci si prepara per il backup, il ripristino o la clonazione di una risorsa, si può trovare utile visualizzare una rappresentazione grafica di tutti i backup, dei file system ripristinati e dei cloni sullo storage primario e secondario. 
 ---
-= Visualizzare i file system Unix protetti nella pagina topologia
+= Visualizza i file system UNIX protetti nella pagina Topologia di SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SQL Server Database, back up, resource groups 
 summary: 'Un gruppo di risorse è un insieme di risorse su un host. Un"operazione di backup sul gruppo di risorse viene eseguita su tutte le risorse definite nel gruppo di risorse.' 
 ---
-= Eseguire il backup dei gruppi di risorse di SQL Server
+= Esegui il backup dei gruppi di risorse di SQL Server in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

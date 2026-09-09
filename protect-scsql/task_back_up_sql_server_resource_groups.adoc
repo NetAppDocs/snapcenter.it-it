@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SQL Server 
 summary: È possibile eseguire il backup di un gruppo di risorse su richiesta dalla pagina risorse. Se un gruppo di risorse dispone di un criterio associato e di una pianificazione configurata, i backup vengono eseguiti automaticamente in base alla pianificazione. 
 ---
-= Eseguire il backup dei gruppi di risorse di SQL Server
+= Esegui il backup dei gruppi di risorse di SQL Server in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

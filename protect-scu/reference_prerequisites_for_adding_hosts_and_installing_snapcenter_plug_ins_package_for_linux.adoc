@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: prerequisites, iSCSI, host requirement for Linux, sudo privileges, non-root user, credentials, authenticate, domain administrator, local administrator, workgroup, sudo, root user 
 summary: Prima di aggiungere un host e installare i pacchetti plug-in, è necessario completare tutti i requisiti. 
 ---
-= Prerequisiti per l'aggiunta di host e l'installazione di Plug-in Package per Linux
+= Prerequisiti per l'aggiunta di host e l'installazione del SnapCenter Plug-ins Package per Linux
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -36,6 +36,7 @@ Per informazioni sui download di Java, fare riferimento a link:https://www.oracl
 
 
 
+[[linux-host-requirements]]
 == Requisiti degli host Linux
 
 Assicurarsi che l'host soddisfi i requisiti prima di installare il pacchetto di plug-in SnapCenter per Linux.

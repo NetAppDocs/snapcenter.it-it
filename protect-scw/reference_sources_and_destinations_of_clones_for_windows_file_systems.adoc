@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: snapcenter 
 summary: È possibile clonare un backup del file system dallo storage primario o secondario. È inoltre possibile scegliere la destinazione che supporta i requisiti, ovvero la posizione di backup originale o una destinazione diversa sullo stesso host o su un host diverso. La destinazione deve trovarsi sullo stesso volume del backup di origine del clone. 
 ---
-= Origini e destinazioni dei cloni per file system Windows
+= SnapCenter clone di origini e destinazioni per i file system di Windows
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

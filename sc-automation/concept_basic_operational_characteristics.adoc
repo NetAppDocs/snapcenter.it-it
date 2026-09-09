@@ -4,7 +4,7 @@ permalink: sc-automation/concept_basic_operational_characteristics.html
 keywords: request and response, object identifiers, synchronous, asynchronous 
 summary: Mentre REST stabilisce un insieme comune di tecnologie e Best practice, i dettagli di ciascuna API possono variare in base alle scelte di progettazione. 
 ---
-= Caratteristiche operative di base
+= Caratteristiche operative di base della REST API SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Mentre REST stabilisce un insieme comune di tecnologie e Best practice, i dettag
 
 
 
+[[request-and-response-api-transaction]]
 == Transazione API di richiesta e risposta
 
 Ogni chiamata API REST viene eseguita come richiesta HTTP al sistema del server SnapCenter che genera una risposta associata al client. Questa coppia di richieste e risposte è considerata una transazione API.
@@ -23,6 +24,7 @@ Prima di utilizzare l'API, è necessario conoscere le variabili di input disponi
 
 
 
+[[support-for-crud-operations]]
 == Supporto per le operazioni CRUD
 
 Si accede a ciascuna delle risorse disponibili tramite l'API REST SnapCenter in base al modello CRUD:
@@ -37,6 +39,7 @@ Per alcune delle risorse, è supportato solo un sottoinsieme delle operazioni.
 
 
 
+[[object-identifiers]]
 == Identificatori di oggetti
 
 A ogni istanza o oggetto di risorsa viene assegnato un identificatore univoco al momento della creazione. Nella maggior parte dei casi, l'identificatore è un UUID a 128 bit. Questi identificatori sono univoci a livello globale all'interno di uno specifico server SnapCenter.
@@ -48,18 +51,21 @@ IMPORTANT: Il contenuto e la struttura interna degli identificatori di oggetti p
 
 
 
+[[object-instances-and-collections]]
 == Istanze e raccolte di oggetti
 
 A seconda del percorso di risorsa e del metodo HTTP, una chiamata API può essere applicata a un'istanza di oggetto specifica o a un insieme di oggetti.
 
 
 
+[[synchronous-and-asynchronous-operations]]
 == Operazioni sincrone e asincrone
 
 SnapCenter esegue una richiesta HTTP ricevuta da un client in modo sincrono o asincrono.
 
 
 
+[[synchronous-processing]]
 === Elaborazione sincrona
 
 SnapCenter esegue immediatamente la richiesta e risponde con un codice di stato HTTP 200 o 201 se l'operazione ha esito positivo.
@@ -68,6 +74,7 @@ Ogni richiesta che utilizza il metodo GET viene sempre eseguita in modo sincrono
 
 
 
+[[asynchronous-processing]]
 === Elaborazione asincrona
 
 Se una richiesta asincrona è valida, SnapCenter crea un'attività in background per elaborare la richiesta e un oggetto di lavoro per ancorare l'attività. Il codice di stato HTTP 202 viene restituito al chiamante insieme all'oggetto lavoro. È necessario recuperare lo stato del lavoro per determinare il successo o l'errore.
@@ -76,18 +83,21 @@ Le richieste che utilizzano i metodi POST e DELETE sono progettate per essere es
 
 
 
+[[security]]
 == Sicurezza
 
 La sicurezza fornita con L'API REST si basa principalmente sulle funzionalità di sicurezza esistenti disponibili con SnapCenter. L'API utilizza la seguente protezione:
 
 
 
+[[transport-layer-security]]
 === Transport Layer Security
 
 Tutto il traffico inviato in rete tra il server SnapCenter e il client viene in genere crittografato utilizzando TLS, in base alle impostazioni di configurazione di SnapCenter.
 
 
 
+[[http-authentication]]
 === Autenticazione HTTP
 
 A livello HTTP, per le transazioni API viene utilizzata l'autenticazione di base. A ogni richiesta viene aggiunta un'intestazione HTTP con nome utente e password in una stringa base64.

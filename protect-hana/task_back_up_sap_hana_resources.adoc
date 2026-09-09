@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database 
 summary: 'È possibile creare un backup di una risorsa o di un gruppo di risorse. Il workflow di backup include la pianificazione, l"identificazione dei database per il backup, la gestione delle policy di backup, la creazione di gruppi di risorse e l"aggiunta di policy, la creazione di backup e il monitoraggio delle operazioni.' 
 ---
-= Eseguire il backup delle risorse SAP HANA
+= Flusso di lavoro di backup delle risorse SAP HANA in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

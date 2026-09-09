@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Server, monitor, backup, activity pane, data protection 
 summary: 'È possibile monitorare l"avanzamento di diverse operazioni di backup utilizzando la pagina lavori SnapCenter. Potrebbe essere necessario controllare i progressi per determinare quando sono stati completati o se si è verificato un problema.' 
 ---
-= Monitorare il backup del database Oracle
+= Monitora le operazioni di backup del database Oracle in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Scopri come monitorare l'avanzamento delle operazioni di backup e protezione dei
 
 
 
+[[monitor-oracle-database-backup-operations]]
 == Monitorare le operazioni di backup del database Oracle
 
 È possibile monitorare l'avanzamento di diverse operazioni di backup utilizzando la pagina SnapCenterJobs. Potrebbe essere necessario controllare i progressi per determinare quando sono stati completati o se si è verificato un problema.
@@ -55,6 +56,7 @@ Il pulsante *View logs* (Visualizza registri) visualizza i registri dettagliati 
 
 
 
+[[monitor-data-protection-operations-in-the-activity-pane]]
 == Monitorare le operazioni di protezione dei dati nel riquadro attività
 
 Il riquadro Activity (attività) visualizza le cinque operazioni più recenti eseguite. Il riquadro Activity (attività) visualizza anche il momento in cui l'operazione è stata avviata e lo stato dell'operazione.

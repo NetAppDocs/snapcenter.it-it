@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter reports 
 summary: SnapCenter offre una vasta gamma di opzioni di reporting che consentono di monitorare e gestire lo stato di salute del sistema e il successo delle operazioni. 
 ---
-= Panoramica delle funzionalità di reporting di SnapCenter
+= Scopri le funzionalità di reporting di SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -55,6 +55,7 @@ Qualsiasi altro utente diverso da Administrator potrà visualizzare o modificare
 |===
 
 
+[[access-reports]]
 == Accesso ai report
 
 È possibile utilizzare la dashboard di SnapCenter per ottenere una rapida panoramica dello stato di salute del sistema. Dalla dashboard è possibile analizzare più dettagli. In alternativa, è possibile accedere direttamente ai report dettagliati.
@@ -67,6 +68,7 @@ Qualsiasi altro utente diverso da Administrator potrà visualizzare o modificare
 
 
 
+[[filter-your-report]]
 == Filtrare il report
 
 È possibile filtrare i dati del report in base a una serie di parametri, a seconda del livello di dettaglio e dell'intervallo di tempo delle informazioni richieste.
@@ -91,6 +93,7 @@ Qualsiasi altro utente diverso da Administrator potrà visualizzare o modificare
 
 
 
+[[export-or-print-reports]]
 == Esportare o stampare i report
 
 L'esportazione dei report SnapCenter consente di visualizzare il report in diversi formati alternativi. È inoltre possibile stampare i report.
@@ -110,6 +113,7 @@ L'esportazione dei report SnapCenter consente di visualizzare il report in diver
 
 
 
+[[set-the-smtp-server-for-email-notifications]]
 == Impostare il server SMTP per le notifiche e-mail
 
 È possibile specificare il server SMTP da utilizzare per l'invio dei report dei processi di protezione dei dati a se stessi o ad altri. È inoltre possibile inviare un'e-mail di prova per verificare la configurazione. Le impostazioni vengono applicate a livello globale per qualsiasi processo SnapCenter per il quale si configura la notifica via email.
@@ -126,6 +130,7 @@ Questa opzione consente di configurare il server SMTP per l'invio di tutti i rep
 
 
 
+[[configure-the-option-to-email-reports]]
 == Configurare l'opzione per inviare i report via email
 
 Se si desidera che i normali aggiornamenti dei processi di protezione dei dati di SnapCenter vengano inviati a se stessi o ad altri utenti in modo da poter monitorare lo stato di tali aggiornamenti, è possibile configurare l'opzione per inviare tramite email i report di SnapCenter quando si crea un gruppo di risorse.

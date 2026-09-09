@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Utilizzando SnapCenter, è possibile creare cloni da un gruppo di risorse o da un database. È possibile eseguire cloni on-demand oppure pianificare operazioni ricorrenti di cloni di un gruppo di risorse o di un database . Se si clonano periodicamente un backup, è possibile utilizzare il clone per sviluppare applicazioni, popolare i dati o ripristinare i dati. 
 ---
-= Eseguire il ciclo di vita del clone
+= Gestisci il ciclo di vita dei cloni con SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -110,7 +110,7 @@ Il timeout predefinito dello script è di 60 secondi.
 NOTE: Per la notifica via email, è necessario aver specificato i dettagli del server SMTP utilizzando la GUI o il comando PowerShell Set-SmtpServer.
 
 +
-Per EMS, fare riferimento a. https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_ems_data_collection.html["Gestire la raccolta di dati EMS"]
+Per EMS, puoi fare riferimento a https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_ems_data_collection.html["Gestisci la raccolta di dati EMS in SnapCenter"]
 
 . Esaminare il riepilogo, quindi fare clic su *fine*.
 

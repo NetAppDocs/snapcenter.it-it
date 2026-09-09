@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: 'Windows Server 2016 o versione successiva consente di creare un account di servizio gestito di gruppo (gMSA) che fornisce la gestione automatica delle password dell"account di servizio da un account di dominio gestito.' 
 ---
-= Configurare gMSA su Windows Server 2016 o versione successiva
+= Configura gMSA su Windows Server 2016 o versioni successive per SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

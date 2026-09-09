@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: dashboard 
 summary: 'Dal riquadro di navigazione a sinistra di SnapCenter, la dashboard offre una prima panoramica dello stato del sistema, tra cui attività di processo recenti, avvisi, riepilogo della protezione, efficienza e utilizzo dello storage, stato dei processi SnapCenter (backup, clonazione, ripristino), stato della configurazione per host cluster standalone e Windows, Numero di macchine virtuali di storage (SVM) gestite da SnapCenter e capacità di licenza.' 
 ---
-= Panoramica della dashboard
+= Scopri la dashboard di SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -19,6 +19,7 @@ In molti casi, è possibile visualizzare ulteriori informazioni su un display pa
 
 
 
+[[recent-job-activities]]
 == Attività lavorative recenti
 
 Il riquadro attività recenti visualizza l'ultima attività di processo da qualsiasi processo di backup, ripristino e clonazione a cui si dispone dell'accesso. I job in questa schermata presentano uno dei seguenti stati: Completato, Avviso, non riuscito, in esecuzione, in coda, E annullato.
@@ -29,6 +30,7 @@ Fare clic su *Visualizza tutto* per visualizzare la cronologia di tutti i job Sn
 
 
 
+[[alerts]]
 == Avvisi
 
 Il riquadro Avvisi visualizza gli ultimi avvisi critici e di avviso non risolti per gli host e il server SnapCenter.
@@ -39,6 +41,7 @@ Facendo clic su un avviso specifico, viene visualizzata nuovamente la pagina Avv
 
 
 
+[[latest-protection-summary]]
 == Riepilogo della protezione più recente
 
 La sezione Riepilogo protezione più recente fornisce lo stato di protezione per tutte le entità a cui si ha accesso. Per impostazione predefinita, il display fornisce lo stato di tutti i plug-in. Vengono fornite informazioni sullo stato delle risorse di cui è stato eseguito il backup sullo storage primario come Snapshot e sullo storage secondario mediante le tecnologie SnapMirror e SnapVault. La disponibilità delle informazioni sullo stato di protezione per lo storage secondario si basa sul tipo di plug-in selezionato.
@@ -98,6 +101,7 @@ NOTE: Se si utilizza SnapCenter Server 4.2 e una versione precedente del plug-in
 
 
 
+[[jobs]]
 == Lavori
 
 La sezione lavori fornisce un riepilogo dei processi di backup, ripristino e clonazione a cui si ha accesso. È possibile personalizzare l'intervallo di tempo per qualsiasi report utilizzando il menu a discesa. Le opzioni relative all'intervallo di tempo sono fisse alle ultime 24 ore, agli ultimi 7 giorni e agli ultimi 30 giorni. Il report predefinito mostra i processi di protezione dei dati eseguiti negli ultimi 7 giorni.
@@ -137,6 +141,7 @@ Numero di processi attualmente in esecuzione.
 |===
 
 
+[[storage]]
 == Storage
 
 Il riquadro Storage visualizza lo storage primario e secondario consumato dai processi di protezione in un periodo di 90 giorni, illustra graficamente le tendenze di consumo e calcola i risparmi dello storage primario. Le informazioni sullo storage vengono aggiornate ogni 24 ore alle 12
@@ -152,6 +157,7 @@ NOTE: Se si utilizza SnapCenter Server 4.2 e una versione precedente del plug-in
 
 
 
+[[configuration]]
 == Configurazione
 
 Il riquadro Configurazione fornisce informazioni consolidate sullo stato di tutti gli host cluster Windows e standalone attivi gestiti da SnapCenter e a cui si dispone dell'accesso. Sono incluse le informazioni sullo stato del plug-in associato a tali host.

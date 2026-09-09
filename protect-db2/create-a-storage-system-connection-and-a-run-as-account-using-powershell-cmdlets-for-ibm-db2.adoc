@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: 'È necessario creare una connessione SVM (Storage Virtual Machine) e una credenziale prima di utilizzare i cmdlet PowerShell per eseguire il backup, il ripristino o la clonazione dei database IBM DB2.' 
 ---
-= Creare una connessione al sistema di archiviazione e una credenziale utilizzando i cmdlet PowerShell per IBM DB2
+= Crea una connessione di storage e le credenziali con i cmdlet di SnapCenter per IBM Db2
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: È possibile utilizzare SnapCenter per ripristinare e ripristinare i dati da uno o più backup. 
 ---
-= Ripristinare e ripristinare un backup del database rilevato automaticamente
+= Ripristina e recupera un backup del database rilevato automaticamente con SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: IBM DB2 
 summary: Prima di utilizzare SnapCenter, è utile comprendere i concetti di base relativi alle operazioni di backup, clonazione e ripristino che si desidera eseguire. Interagisci con risorse, gruppi di risorse e policy per diverse operazioni. 
 ---
-= Modalità di utilizzo di risorse, gruppi di risorse e criteri per la protezione di IBM DB2
+= Come SnapCenter utilizza risorse, gruppi di risorse e criteri per proteggere IBM Db2
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

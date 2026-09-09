@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Backup schedules 
 summary: 'La frequenza di backup (tipo di pianificazione) viene specificata nei criteri; nella configurazione del gruppo di risorse viene specificata una pianificazione di backup.' 
 ---
-= Pianificazioni di backup per il plug-in per SQL Server
+= Pianificazioni di backup per il plug-in SnapCenter per SQL Server
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

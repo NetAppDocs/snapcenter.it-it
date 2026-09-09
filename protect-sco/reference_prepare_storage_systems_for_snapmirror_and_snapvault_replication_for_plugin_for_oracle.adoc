@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: snapmirror, snapvault, storage system, replication 
 summary: È possibile utilizzare un plug-in SnapCenter con le tecnologie SnapMirror e SnapVault di ONTAP 
 ---
-= Preparazione dei sistemi storage per la replica di SnapMirror e SnapVault per il plug-in per Oracle
+= SnapMirror e SnapVault requisiti di replica del SnapCenter Plug-in per Oracle Database
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

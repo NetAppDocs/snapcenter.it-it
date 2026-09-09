@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database 
 summary: 'Il flusso di lavoro di ripristino e ripristino include la pianificazione, l"esecuzione delle operazioni di ripristino e il monitoraggio delle operazioni.' 
 ---
-= Ripristinare il flusso di lavoro
+= Flusso di lavoro di ripristino e recovery del database SAP HANA in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

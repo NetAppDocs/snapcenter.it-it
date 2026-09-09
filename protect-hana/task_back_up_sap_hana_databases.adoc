@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database 
 summary: Se una risorsa non fa ancora parte di un gruppo di risorse, è possibile eseguire il backup della risorsa dalla pagina risorse. 
 ---
-= Eseguire il backup dei database SAP HANA
+= Esegui il backup dei database SAP HANA con SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

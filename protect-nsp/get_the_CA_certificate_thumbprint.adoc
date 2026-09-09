@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter, CA certificate 
 summary: Ottenere il thumbprint del certificato CA. 
 ---
-= Ottenere il thumbprint del certificato CA
+= Ottieni l'impronta digitale del certificato CA in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

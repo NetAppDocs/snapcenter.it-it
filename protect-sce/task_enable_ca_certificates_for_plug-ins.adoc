@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: È necessario configurare i certificati CA e implementarne i certificati nel server SnapCenter e negli host plug-in corrispondenti. 
 ---
-= Abilitare i certificati CA per i plug-in
+= Abilita i certificati CA per i plug-in di SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

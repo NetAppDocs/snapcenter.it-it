@@ -15,6 +15,7 @@ Fornisce una serie di istruzioni di installazione per l'installazione del server
 
 
 
+[[step-1-download-and-install-snapcenter-server]]
 == Fase 1: Scaricare e installare il server SnapCenter
 
 . Scaricare il pacchetto di installazione del server SnapCenter dal https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["Sito di supporto NetApp"^] quindi fare doppio clic sul file exe.
@@ -34,6 +35,7 @@ NOTE: Il carattere speciale "%" non è supportato nel percorso personalizzato pe
 
 
 
+[[step-2-log-in-to-snapcenter]]
 == Fase 2: Accedere a SnapCenter
 
 . Avviare SnapCenter da un collegamento sul desktop host o dall'URL fornito dall'installazione (https://server:8146_ per la porta predefinita 8146 in cui è installato il server SnapCenter).
@@ -49,6 +51,7 @@ Per un formato nome utente admin locale incorporato, utilizzare _<username>_.
 
 
 
+[[step-3-add-a-snapcenter-standard-controller-based-license]]
 == Fase 3: Aggiunta di una licenza basata su controller standard SnapCenter
 
 . Accedere al controller utilizzando la riga di comando ONTAP e digitare:
@@ -63,6 +66,7 @@ Per un formato nome utente admin locale incorporato, utilizzare _<username>_.
 
 
 
+[[step-4-set-up-storage-system-connections]]
 == Fase 4: Configurare le connessioni del sistema di storage
 
 . Nel riquadro di sinistra, fare clic su *Storage Systems > New* (sistemi storage > nuovo).

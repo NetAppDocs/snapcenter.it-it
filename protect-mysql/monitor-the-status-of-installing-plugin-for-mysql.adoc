@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: monitor, install, snapCenter plug-in for mysql 
 summary: 'È possibile monitorare lo stato di avanzamento dell"installazione del pacchetto plug-in di SnapCenter utilizzando la pagina lavori. Potrebbe essere necessario controllare lo stato di avanzamento dell"installazione per determinare quando è completa o se si è verificato un problema.' 
 ---
-= Monitorare lo stato dell'installazione del plug-in per MySQL
+= Monitora lo stato di installazione del SnapCenter Plug-in per MySQL
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

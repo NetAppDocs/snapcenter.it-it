@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa r2, secondary protection, consistency group, primary consistency group, secondary consistency group 
 summary: Un gruppo di risorse è un container in cui vengono aggiunte le risorse di cui si desidera eseguire il backup e la protezione. Un gruppo di risorse consente di eseguire contemporaneamente il backup di tutti i dati associati a una determinata applicazione. 
 ---
-= Creare gruppi di risorse e abilitare la protezione secondaria per i file system Unix sui sistemi ASA R2
+= Crea gruppi di risorse per i file system UNIX di SnapCenter su ASA r2
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reseed 
 summary: 'Reseed è un"opzione per ripristinare i database del gruppo di disponibilità. Se un database secondario non viene sincronizzato con il database primario in un AG, è possibile eseguire nuovamente il reeeding del database secondario.' 
 ---
-= Eseguire nuovamente il reeed dei database del gruppo di disponibilità
+= Esegui il reseed dei database dei gruppi di disponibilità in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

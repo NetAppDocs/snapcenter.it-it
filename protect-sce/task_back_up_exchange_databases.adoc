@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: Se un database non fa parte di alcun gruppo di risorse, è possibile eseguire il backup del database o del gruppo disponibilità database dalla pagina risorse. 
 ---
-= Eseguire il backup dei database Exchange
+= Esegui il backup dei database di Exchange con SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -15,6 +15,7 @@ summary: È possibile utilizzare le interfacce REST API, PowerShell e SCCLI per 
 
 
 
+[[snapcenter-mfa-cli-authentication]]
 == Autenticazione SnapCenter MFA CLI
 
 In PowerShell e SCCLI, il cmdlet esistente (Open-SmConnection) viene esteso con un altro campo chiamato "AccessToken" per utilizzare il token bearer per autenticare l'utente.
@@ -25,12 +26,14 @@ Una volta eseguito il cmdlet sopra indicato, viene creata una sessione per conse
 
 
 
+[[snapcenter-mfa-rest-api-authentication]]
 == Autenticazione API REST MFA SnapCenter
 
 Utilizzare il token bearer nel formato _Authorization=bearer <access token>_ nel client API REST (come Postman o swagger) e citare il nome del ruolo dell'utente nell'intestazione per ottenere una risposta corretta da SnapCenter.
 
 
 
+[[mfa-rest-api-workflow]]
 == Flusso di lavoro API REST MFA
 
 Quando MFA è configurato con ad FS, è necessario eseguire l'autenticazione utilizzando un token di accesso (bearer) per accedere all'applicazione SnapCenter da qualsiasi API REST.
@@ -80,6 +83,7 @@ Se l'autenticazione ha esito positivo, SnapCenter restituisce il risultato, altr
 
 
 
+[[enable-or-disable-snapcenter-mfa-functionality-for-rest-api-cli-and-gui]]
 == Attivare o disattivare la funzionalità MFA di SnapCenter per API REST, CLI e GUI
 
 *GUI*

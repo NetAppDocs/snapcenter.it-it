@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: application volume, resource group, back up, database 
 summary: È possibile eseguire il backup del gruppo di risorse contenente solo volumi applicativi o una combinazione di volumi applicativi e database. 
 ---
-= Eseguire il backup del gruppo di risorse dei volumi dell'applicazione
+= Esegui il backup di un gruppo di risorse dei volumi dell'applicazione in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

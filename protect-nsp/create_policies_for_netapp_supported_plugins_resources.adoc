@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create policies, NetApp supported plug-in 
 summary: Prima di utilizzare SnapCenter per eseguire il backup di risorse specifiche dei plug-in supportati da NetApp, è necessario creare un criterio di backup per la risorsa o il gruppo di risorse di cui si desidera eseguire il backup. 
 ---
-= Crea policy per le risorse dei plug-in supportate da NetApp
+= Crea criteri SnapCenter per le risorse plug-in supportate NetApp
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

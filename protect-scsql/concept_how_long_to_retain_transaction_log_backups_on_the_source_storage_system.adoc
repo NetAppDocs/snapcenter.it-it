@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: retain transaction log backups 
 summary: Il plug-in SnapCenter per Microsoft SQL Server richiede backup del log delle transazioni per eseguire operazioni di ripristino aggiornate al minuto, che ripristinano il database a un intervallo di tempo compreso tra due backup completi. 
 ---
-= Per quanto tempo conservare i backup del log delle transazioni sul sistema di storage di origine
+= Per quanto tempo conservare i backup del registro delle transazioni in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

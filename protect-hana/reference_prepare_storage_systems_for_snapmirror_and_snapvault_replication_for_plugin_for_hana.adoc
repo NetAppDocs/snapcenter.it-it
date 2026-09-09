@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: snapmirror, snapvault, storage system, replication 
 summary: È possibile utilizzare un plug-in SnapCenter con le tecnologie SnapMirror e SnapVault di ONTAP 
 ---
-= Preparazione dei sistemi storage per la replica di SnapMirror e SnapVault per i database SAP HANA
+= SnapMirror e SnapVault replication per database SAP HANA in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

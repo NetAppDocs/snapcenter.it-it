@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for PostgreSQL 
 summary: 'Il fattore più critico per determinare una pianificazione di backup è il tasso di cambiamento per la risorsa. È possibile eseguire il backup di una risorsa utilizzata in modo pesante ogni ora, mentre è possibile eseguire il backup di una risorsa utilizzata raramente una volta al giorno. Altri fattori includono l"importanza della risorsa per la tua organizzazione, il tuo SLA (Service Level Agreement) e l"obiettivo RPO (Recovery Point Objective).' 
 ---
-= Considerazioni per determinare le pianificazioni di backup per PostgreSQL
+= SnapCenter Plug-in per i fattori di pianificazione del backup di PostgreSQL
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

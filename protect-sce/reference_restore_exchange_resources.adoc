@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Microsoft Exchange Server 
 summary: È possibile utilizzare SnapCenter per ripristinare i database Exchange ripristinando uno o più backup nel file system attivo. 
 ---
-= Ripristinare il flusso di lavoro
+= Flusso di lavoro per il ripristino del database Exchange in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

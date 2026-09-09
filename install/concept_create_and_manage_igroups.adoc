@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: igroup 
 summary: 'È possibile creare gruppi di iniziatori (igroups) per specificare gli host che possono accedere a una determinata LUN sul sistema di storage. È possibile utilizzare SnapCenter per creare, rinominare, modificare o eliminare un igroup su un host Windows.' 
 ---
-= Creare e gestire igroups
+= Crea e gestisci igroups in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: 'È possibile creare gruppi di iniziatori (igroups) per specificare gli
 
 
 
+[[create-an-igroup]]
 == Creare un igroup
 
 È possibile utilizzare SnapCenter per creare un igroup su un host Windows. L'igroup sarà disponibile nella procedura guidata Create Disk (Crea disco) o Connect Disk (Connetti disco) quando si esegue la mappatura dell'igroup a un LUN.
@@ -72,6 +73,7 @@ SnapCenter crea l'igroup sul sistema storage.
 
 
 
+[[rename-an-igroup]]
 == Rinominare un igroup
 
 È possibile utilizzare SnapCenter per rinominare un igroup esistente.
@@ -87,6 +89,7 @@ SnapCenter crea l'igroup sul sistema storage.
 
 
 
+[[modify-an-igroup]]
 == Modificare un igroup
 
 È possibile utilizzare SnapCenter per aggiungere gli iniziatori igroup a un igroup esistente. Durante la creazione di un igroup è possibile aggiungere un solo host. Se si desidera creare un igroup per un cluster, è possibile modificare il igroup per aggiungere altri nodi a tale igroup.
@@ -103,6 +106,7 @@ SnapCenter crea l'igroup sul sistema storage.
 
 
 
+[[delete-an-igroup]]
 == Eliminare un igroup
 
 È possibile utilizzare SnapCenter per eliminare un igroup quando non è più necessario.

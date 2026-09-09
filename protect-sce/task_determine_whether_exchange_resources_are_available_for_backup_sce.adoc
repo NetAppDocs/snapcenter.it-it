@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: 'Le risorse sono i database, i gruppi di disponibilità dei database Exchange gestiti dai plug-in installati. È possibile aggiungere tali risorse ai gruppi di risorse in modo da poter eseguire lavori di protezione dei dati, ma prima occorre identificare le risorse disponibili. La determinazione delle risorse disponibili verifica inoltre che l"installazione del plug-in sia stata completata correttamente.' 
 ---
-= Determinare se le risorse Exchange sono disponibili per il backup
+= Determina se le risorse di Exchange sono disponibili per il backup in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

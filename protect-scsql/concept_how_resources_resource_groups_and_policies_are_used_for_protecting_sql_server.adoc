@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SQL Server 
 summary: Prima di utilizzare SnapCenter, è utile comprendere i concetti di base relativi alle operazioni di backup, clonazione e ripristino che si desidera eseguire. Interagisci con risorse, gruppi di risorse e policy per diverse operazioni. 
 ---
-= Utilizzo di risorse, gruppi di risorse e policy per la protezione di SQL Server
+= Come SnapCenter utilizza le risorse, i gruppi di risorse e i criteri per SQL Server
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

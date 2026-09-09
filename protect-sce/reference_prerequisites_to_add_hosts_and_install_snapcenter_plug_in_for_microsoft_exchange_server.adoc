@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Microsoft Exchange Server 
 summary: Prima di aggiungere un host e installare i pacchetti plug-in, è necessario completare tutti i requisiti. 
 ---
-= Prerequisiti per aggiungere host e installare il plug-in SnapCenter per Microsoft Exchange Server
+= Prerequisiti per installare il SnapCenter Plug-in per Microsoft Exchange Server
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -44,6 +44,7 @@ Per identificare l'intervallo di porte, eseguire i seguenti comandi:
 ====
 
 
+[[host-requirements-to-install-snapcenter-plug-ins-package-for-windows]]
 == Requisiti dell'host per installare il pacchetto di plug-in SnapCenter per Windows
 
 Prima di installare il pacchetto di plug-in SnapCenter per Windows, è necessario conoscere alcuni requisiti di base relativi allo spazio del sistema host e al dimensionamento.
@@ -93,6 +94,7 @@ Per informazioni specifiche sulla risoluzione dei problemi di .NET, vedere https
 |===
 
 
+[[exchange-server-privileges-required]]
 == Privilegi di Exchange Server richiesti
 
 Per consentire a SnapCenter di aggiungere Exchange Server o DAG e installare il plug-in SnapCenter per Microsoft Exchange Server su un host o DAG, è necessario configurare SnapCenter con le credenziali per un utente con un set minimo di privilegi e autorizzazioni.

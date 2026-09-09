@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: 'Le risorse sono cluster PostgreSQL sull"host Linux che sono gestiti da SnapCenter. È possibile aggiungere queste risorse ai gruppi di risorse per eseguire operazioni di protezione dei dati dopo aver scoperto i cluster PostgreSQL disponibili.' 
 ---
-= Rilevare automaticamente i cluster
+= Scopri automaticamente i cluster PostgreSQL in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

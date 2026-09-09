@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for postgresql 
 summary: 'I fattori che determinano il numero di processi di backup necessari includono la dimensione della risorsa, il numero di volumi utilizzati, il tasso di cambiamento della risorsa e il contratto del livello di servizio (SLA).' 
 ---
-= Numero di processi di backup necessari per PostgreSQL
+= SnapCenter Plug-in per PostgreSQL numero di processi di backup necessari
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

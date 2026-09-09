@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: È possibile annullare le operazioni di backup in esecuzione, in coda o che non rispondono. 
 ---
-= Annullare le operazioni di backup dei database Oracle
+= Annulla le operazioni di backup del database Oracle in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

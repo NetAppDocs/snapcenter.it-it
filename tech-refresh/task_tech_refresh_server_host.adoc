@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: tech refresh, SnapCenter Server, cmdlet, APIs, F5, rollback, decommission, disaster recovery, standalone 
 summary: Installare la stessa versione del server SnapCenter sul nuovo host ed eseguire le API o eseguire i cmdlet per eseguire il backup di SnapCenter dal vecchio server e ripristinarlo sul nuovo server. 
 ---
-= Aggiornamento tecnico dell'host server SnapCenter
+= Esegui un tech refresh dell'host del server SnapCenter
 :allow-uri-read: 
 
 
@@ -55,6 +55,7 @@ NOTE: Se il file web.config è stato aggiornato manualmente nel vecchio host Sna
 
 
 
+[[tech-refresh-of-a-node-in-f5-cluster]]
 == Tech refresh di un nodo nel cluster F5
 
 Puoi fare un tech refresh di qualsiasi nodo nel cluster F5 rimuovendo il nodo e aggiungendo il nuovo nodo. Se il nodo da aggiornare è attivo, rendere attivo un altro nodo del cluster e quindi rimuovere il nodo.
@@ -66,22 +67,26 @@ NOTE: Se l'URL del cluster F5 cambia, l'URL può essere aggiornato in tutti gli 
 
 
 
+[[decommissioning-the-old-snapcenter-server-host]]
 == Smantellamento del vecchio host del server SnapCenter
 
 È possibile rimuovere il vecchio host del server SnapCenter dopo aver verificato che il nuovo server SnapCenter sia attivo e funzionante e che tutti gli host dei plug-in siano in grado di comunicare con il nuovo host del server SnapCenter.
 
 
 
+[[rollback-to-the-old-snapcenter-server-host]]
 == Eseguire il rollback dell'host del server SnapCenter precedente
 
 In caso di problemi, è possibile ripristinare il vecchio host del server SnapCenter aggiornando l'URL del server SnapCenter in tutti gli host utilizzando l'API: O il cmdlet: `/<snapcenter_version>/server/configureurl` _Set-SmServerConfig_.
 
 
 
+[[disaster-recovery]]
 == Disaster recovery
 
 
 
+[[disaster-recovery-of-standalone-snapcenter-host]]
 === Disaster recovery dell'host SnapCenter standalone
 
 È possibile eseguire il ripristino di emergenza ripristinando il backup del server nel nuovo host.
@@ -115,6 +120,7 @@ NOTE: Le voci del server _etc/host_ non verranno ripristinate. È possibile ripr
 
 
 
+[[disaster-recovery-of-snapcenter-f5-cluster]]
 === Disaster recovery del cluster SnapCenter F5
 
 È possibile eseguire il ripristino di emergenza ripristinando il backup del server nel nuovo host e convertendo quindi l'host standalone in un cluster.

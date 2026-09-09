@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup types, restore methods, connect-and-copy restore, full restore, partial restore, in-place restore, recovery type, limitations 
 summary: È necessario definire una strategia prima di ripristinare e ripristinare il database in modo da poter eseguire correttamente le operazioni di ripristino e ripristino. 
 ---
-= Definire una strategia di ripristino per i database Oracle
+= Scopri le strategie di ripristino e recupero per i database Oracle in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: È necessario definire una strategia prima di ripristinare e ripristina
 
 
 
+[[types-of-backups-supported-for-restore-and-recovery-operations]]
 == Tipi di backup supportati per le operazioni di ripristino e ripristino
 
 SnapCenter supporta il ripristino e il ripristino di diversi tipi di backup dei database Oracle.
@@ -39,6 +40,7 @@ NOTE: Non è possibile eseguire il ripristino dei database di standby di Active 
 
 
 
+[[types-of-restore-methods-supported-for-oracle-databases]]
 == Tipi di metodi di ripristino supportati per i database Oracle
 
 SnapCenter supporta il ripristino Connect-and-copy o in-place per i database Oracle. Durante un'operazione di ripristino, SnapCenter determina il metodo di ripristino appropriato per il file system da utilizzare per il ripristino senza alcuna perdita di dati.
@@ -48,6 +50,7 @@ NOTE: SnapCenter non supporta SnapRestore basato su volume.
 
 
 
+[[connect-and-copy-restore]]
 === Ripristino connessione e copia
 
 Se il layout del database differisce dal backup o se sono presenti nuovi file dopo la creazione del backup, viene eseguito il ripristino della connessione e della copia. Nel metodo di ripristino Connect-and-copy, vengono eseguite le seguenti attività:
@@ -76,6 +79,7 @@ Anche se il ripristino in-place è stato attivato forzatamente, SnapCenter esegu
 
 
 
+[[in-place-restore]]
 === Rispristino in-place
 
 Se il layout del database è simile al backup e non ha subito modifiche di configurazione nello stack di storage e database, viene eseguito il ripristino in-place, in cui il ripristino del file o del LUN viene eseguito su ONTAP. SnapCenter supporta solo SFSR (Single file SnapRestore) come parte del metodo di ripristino in-place.
@@ -110,6 +114,7 @@ Negli ambienti SAN, SnapCenter rimuove i dispositivi da tutti i nodi peer ed ese
 
 
 
+[[types-of-restore-operations-supported-for-oracle-databases]]
 == Tipi di operazioni di ripristino supportate per i database Oracle
 
 SnapCenter consente di eseguire diversi tipi di operazioni di ripristino per i database Oracle.
@@ -118,6 +123,7 @@ Prima di ripristinare il database, i backup vengono validati per identificare se
 
 
 
+[[full-restore]]
 === Ripristino completo
 
 * Ripristina solo i file di dati
@@ -128,6 +134,7 @@ Prima di ripristinare il database, i backup vengono validati per identificare se
 
 
 
+[[partial-restore]]
 === Ripristino parziale
 
 * Ripristina solo gli spazi delle tabelle selezionati
@@ -137,6 +144,7 @@ Prima di ripristinare il database, i backup vengono validati per identificare se
 
 
 
+[[types-of-recovery-operations-supported-for-oracle-databases]]
 == Tipi di operazioni di recovery supportati per i database Oracle
 
 SnapCenter consente di eseguire diversi tipi di operazioni di recovery per i database Oracle.
@@ -157,6 +165,7 @@ NOTE: Il plug-in per il database Oracle non supporta il ripristino se è stato r
 
 
 
+[[limitations-related-to-restore-and-recovery-of-oracle-databases]]
 == Limitazioni relative al ripristino e al ripristino dei database Oracle
 
 Prima di eseguire le operazioni di ripristino, è necessario essere consapevoli delle limitazioni.
@@ -186,6 +195,7 @@ Le seguenti operazioni di ripristino non sono supportate:
 
 
 
+[[limitations-related-to-point-in-time-recovery-of-tablespaces]]
 == Limitazioni relative al ripristino point-in-time degli spazi delle tabelle
 
 * Il PITR (Point-in-Time Recovery) di SISTEMA, SYSAUX e TABLESPACE DI ANNULLAMENTO non è supportato
@@ -212,18 +222,21 @@ Esempi di questi tipi di oggetti sono PL/SQL, classi Java, programmi di richiamo
 
 
 
+[[sources-and-destinations-for-restoring-oracle-databases]]
 == Origini e destinazioni per il ripristino dei database Oracle
 
 È possibile ripristinare un database Oracle da una copia di backup sullo storage primario o secondario. È possibile ripristinare i database solo nella stessa posizione della stessa istanza di database. Tuttavia, nella configurazione di Real Application Cluster (RAC), è possibile ripristinare i database in altri nodi.
 
 
 
+[[sources-for-restore-operations]]
 === Fonti per le operazioni di ripristino
 
 È possibile ripristinare i database da un backup sullo storage primario o secondario. Se si desidera eseguire il ripristino da un backup sullo storage secondario in una configurazione con mirroring multiplo, è possibile selezionare il mirror dello storage secondario come origine.
 
 
 
+[[destinations-for-restore-operations]]
 === Destinazioni per le operazioni di ripristino
 
 È possibile ripristinare i database solo nella stessa posizione della stessa istanza di database.

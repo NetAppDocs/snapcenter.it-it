@@ -15,6 +15,7 @@ Dovresti conoscere i sistemi storage, le applicazioni e i database supportati da
 
 
 
+[[supported-storage-systems]]
 == Sistemi storage supportati
 
 * NetApp ONTAP 9.12.1 e versioni successive
@@ -34,6 +35,7 @@ Se si utilizzano SnapCenter Server 6.2 e i plug-in SnapCenter 6.2, è necessario
 
 
 
+[[supported-applications-and-databases]]
 == Applicazioni e database supportati
 
 SnapCenter supporta la protezione di diverse applicazioni e database.

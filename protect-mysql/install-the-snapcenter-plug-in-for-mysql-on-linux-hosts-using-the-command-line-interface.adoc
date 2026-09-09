@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install, SnapCenter Plug-in for MySQL 
 summary: 'È necessario installare il plug-in SnapCenter per il database MySQL utilizzando l"interfaccia utente (UI) di SnapCenter. Se l"ambiente non consente l"installazione remota del plug-in dall"interfaccia utente di SnapCenter, è possibile installare il plug-in per MySQL Database sia in modalità console che in modalità silent utilizzando l"interfaccia a riga di comando (CLI1).' 
 ---
-= Installare il plug-in SnapCenter per MySQL su host Linux utilizzando l'interfaccia a riga di comando
+= Installa il SnapCenter Plug-in per MySQL sugli host Linux usando la CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

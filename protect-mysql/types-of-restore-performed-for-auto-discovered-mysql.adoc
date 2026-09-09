@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for mysql 
 summary: 'SnapCenter supporta i tipi di SnapRestore \(VBSR\) basato su volume, Single file SnapRestore e di ripristino Connect-and-copy per i database MySQL rilevati automaticamente.' 
 ---
-= Tipi di operazioni di ripristino per MySQL rilevato automaticamente
+= Tipi di ripristino per i database MySQL rilevati automaticamente in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Il plug-in SnapCenter per MySQL supporta Single file SnapRestore e tipi di ripri
 
 
 
+[[single-file-snaprestore-is-performed-in-nfs-environments-for-the-following-scenarios]]
 == Single file SnapRestore viene eseguito in ambienti NFS per i seguenti scenari:
 
 * Se è selezionata solo l'opzione *completa risorsa*
@@ -23,6 +24,7 @@ Il plug-in SnapCenter per MySQL supporta Single file SnapRestore e tipi di ripri
 
 
 
+[[single-file-snaprestore-is-performed-in-san-environments-for-the-following-scenarios]]
 == Single file SnapRestore viene eseguito negli ambienti SAN per i seguenti scenari:
 
 * Se è selezionata solo l'opzione *completa risorsa*

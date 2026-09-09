@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: È possibile creare un criterio di backup per le risorse di Exchange o per i gruppi di risorse prima di utilizzare SnapCenter per eseguire il backup delle risorse di Exchange Server oppure creare un criterio di backup al momento della creazione di un gruppo di risorse o del backup di una singola risorsa. 
 ---
-= Creare criteri di backup per i database di Exchange Server
+= Crea criteri di backup per i database di Exchange Server in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

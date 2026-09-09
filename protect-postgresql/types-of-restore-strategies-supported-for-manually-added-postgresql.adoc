@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: È necessario definire una strategia prima di poter eseguire correttamente le operazioni di ripristino utilizzando SnapCenter. Esistono due tipi di strategie di ripristino per le risorse PostgreSQL aggiunte manualmente. Non è possibile recuperare le risorse PostgreSQL aggiunte manualmente. 
 ---
-= Tipi di strategie di ripristino supportate per le risorse PostgreSQL aggiunte manualmente
+= Strategie di ripristino per PostgreSQL aggiunto manualmente in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,6 +18,7 @@ NOTE: Non è possibile recuperare le risorse PostgreSQL aggiunte manualmente.
 
 
 
+[[complete-resource-restore]]
 == Ripristino completo delle risorse
 
 * Ripristina tutti i volumi, le qtree e le LUN di una risorsa

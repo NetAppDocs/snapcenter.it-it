@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database 
 summary: 'La definizione di una strategia di backup prima della creazione dei processi di backup consente di ottenere i backup necessari per ripristinare o clonare correttamente le risorse. Il contratto a livello di servizio (SLA), l"obiettivo del tempo di ripristino (RTO) e l"obiettivo del punto di ripristino (RPO) determinano in gran parte la strategia di backup.' 
 ---
-= Definire una strategia di backup per i database SAP HANA
+= Definisci una strategia di backup per i database SAP HANA in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

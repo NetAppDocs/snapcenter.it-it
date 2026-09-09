@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup policies, policies, unix file systems, file systems 
 summary: Creare un criterio di backup per i file system Unix di cui si desidera eseguire il backup. 
 ---
-= Creare criteri di backup per i file system Unix
+= Crea criteri di backup per i file system UNIX in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

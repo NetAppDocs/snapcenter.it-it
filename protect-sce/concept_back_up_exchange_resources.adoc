@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Backup workflow 
 summary: 'Quando si installa il plug-in SnapCenter per Microsoft Exchange Server nell"ambiente in uso, è possibile utilizzare SnapCenter per eseguire il backup delle risorse Exchange.' 
 ---
-= Workflow di backup
+= Flusso di lavoro di backup per il SnapCenter Plug-in per Microsoft Exchange Server
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

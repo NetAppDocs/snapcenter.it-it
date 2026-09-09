@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Exchange Server 
 summary: 'È possibile monitorare l"avanzamento delle diverse operazioni di ripristino di SnapCenter utilizzando la pagina lavori. Potrebbe essere necessario controllare lo stato di avanzamento di un"operazione per determinare quando è completa o se si verifica un problema.' 
 ---
-= Monitorare le operazioni di ripristino
+= Monitora le operazioni di ripristino di SnapCenter per server Exchange
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

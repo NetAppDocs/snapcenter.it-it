@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: Un gruppo di risorse è una raccolta di risorse su un host o su un DAG Exchange e il gruppo di risorse può includere un intero DAG o singoli database. È possibile eseguire il backup dei gruppi di risorse dalla pagina risorse. 
 ---
-= Eseguire il backup dei gruppi di risorse di Exchange
+= Esegui il backup dei gruppi di risorse Exchange con SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

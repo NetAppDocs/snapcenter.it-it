@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EMS data collection 
 summary: 'È possibile pianificare e gestire la raccolta di dati EMS (Event Management System) utilizzando i cmdlet PowerShell. La raccolta di dati EMS comprende la raccolta di dettagli sul server SnapCenter, sui pacchetti plug-in SnapCenter installati, sugli host e informazioni simili, quindi l"invio a una macchina virtuale di storage ONTAP specificata.' 
 ---
-= Gestire la raccolta di dati EMS
+= Gestisci la raccolta di dati EMS in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,6 +18,7 @@ NOTE: L'utilizzo della CPU del sistema è elevato quando è in corso l'attività
 
 
 
+[[stop-ems-data-collection]]
 == Interrompere la raccolta dei dati EMS
 
 Per impostazione predefinita, la raccolta dei dati EMS viene attivata e viene eseguita ogni sette giorni dopo la data di installazione. È possibile disattivare la raccolta dati in qualsiasi momento utilizzando il cmdlet PowerShell _Disable-SmDataCollectionEMS_.
@@ -29,6 +30,7 @@ Per impostazione predefinita, la raccolta dei dati EMS viene attivata e viene es
 
 
 
+[[start-ems-data-collection]]
 == Avviare la raccolta dati EMS
 
 La raccolta dei dati EMS è attivata per impostazione predefinita ed è pianificata per l'esecuzione ogni sette giorni dalla data di installazione. Se è stata disattivata, è possibile avviare nuovamente la raccolta dati EMS utilizzando il cmdlet _Enable-SmDataCollectionEMS_.
@@ -42,6 +44,7 @@ L'autorizzazione generate-AutoSupport-log dell'evento NetApp ONTAP è stata conc
 
 
 
+[[change-ems-data-collection-schedule-and-target-svm]]
 == Modificare il programma di raccolta dei dati EMS e la SVM di destinazione
 
 È possibile utilizzare i cmdlet PowerShell per modificare la pianificazione della raccolta dati EMS o la SVM (Storage Virtual Machine) di destinazione.
@@ -54,6 +57,7 @@ L'autorizzazione generate-AutoSupport-log dell'evento NetApp ONTAP è stata conc
 
 
 
+[[monitor-ems-data-collection-status]]
 == Monitorare lo stato di raccolta dei dati EMS
 
 È possibile monitorare lo stato della raccolta dati EMS utilizzando diversi cmdlet PowerShell. È possibile ottenere informazioni su pianificazione, destinazione della macchina virtuale di storage (SVM) e stato.

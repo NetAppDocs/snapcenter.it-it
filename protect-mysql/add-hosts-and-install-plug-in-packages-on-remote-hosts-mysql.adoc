@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: Utilizzare la pagina Aggiungi host di SnapCenter per aggiungere host e installare i pacchetti dei plug-in. I plug-in vengono installati automaticamente sugli host remoti. È possibile aggiungere un host e installare pacchetti plug-in per un singolo host o per un cluster. 
 ---
-= Aggiungere host e installare pacchetti plug-in su host remoti
+= Aggiungi host e installa pacchetti plug-in su host remoti per MySQL
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

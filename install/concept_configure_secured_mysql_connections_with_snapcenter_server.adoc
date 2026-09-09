@@ -15,6 +15,7 @@ summary: 'È possibile generare certificati SSL (Secure Sockets Layer) e file di
 
 
 
+[[configure-secured-mysql-connections-for-standalone-snapcenter-server-configurations]]
 == Configurare connessioni MySQL protette per configurazioni standalone del server SnapCenter
 
 È possibile generare certificati SSL (Secure Sockets Layer) e file di chiavi, se si desidera proteggere la comunicazione tra il server SnapCenter e MySQL. È necessario configurare i certificati e i file delle chiavi nel server MySQL e nel server SnapCenter.
@@ -128,6 +129,7 @@ L'esempio seguente mostra i percorsi aggiornati nella sezione [client] del file 
 
 
 
+[[configure-secured-mysql-connections-for-ha-configurations]]
 == Configurare connessioni MySQL protette per le configurazioni ha
 
 È possibile generare certificati SSL (Secure Sockets Layer) e file di chiavi per i nodi ad alta disponibilità (ha) se si desidera proteggere la comunicazione tra server SnapCenter e server MySQL. È necessario configurare i certificati e i file delle chiavi nei server MySQL e nei nodi ha.

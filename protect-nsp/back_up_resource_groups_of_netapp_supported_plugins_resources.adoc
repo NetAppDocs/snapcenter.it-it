@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup, NetApp supported plug-ins 
 summary: È possibile eseguire il backup di un gruppo di risorse su richiesta dalla pagina risorse. Se un gruppo di risorse dispone di un criterio associato e di una pianificazione configurata, i backup vengono eseguiti automaticamente in base alla pianificazione. 
 ---
-= Eseguire il backup di gruppi di risorse dei plug-in supportati da NetApp
+= Esegui il backup dei gruppi di risorse dei plug-in supportati da NetApp in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

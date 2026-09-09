@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: svm role, privileges, asa r2 systems 
 summary: Se si configurano SVM in sistemi ASA R2 da utilizzare con SanpCenter, è necessario creare ruoli SVM senza utilizzare il ruolo di vsadmin, 
 ---
-= Creare ruoli SVM per i sistemi ASA R2
+= Crea ruoli SVM per i sistemi ASA r2 in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -35,6 +35,7 @@ NOTE: Ripetere questo comando per ogni autorizzazione.
 
 
 
+[[ontap-cli-commands-for-creating-svm-roles-and-assigning-permissions]]
 == Comandi dell'interfaccia utente di ONTAP per la creazione di ruoli SVM e l'assegnazione delle autorizzazioni
 
 Esistono diversi comandi dell'interfaccia utente di ONTAP da eseguire per creare ruoli SVM e assegnare autorizzazioni.

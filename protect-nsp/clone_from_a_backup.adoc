@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clone 
 summary: È possibile utilizzare SnapCenter per clonare un backup. È possibile clonare dal backup primario o secondario. Le funzionalità delle operazioni di clonazione dipendono dal plug-in utilizzato. 
 ---
-= Clonare da un backup
+= Clona da un backup in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

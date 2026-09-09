@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade, upgrade snapcenter server, linux 
 summary: È possibile utilizzare il file di installazione del server SnapCenter per aggiornare il server SnapCenter. 
 ---
-= Aggiornare il server SnapCenter sull'host Linux
+= Aggiorna il server SnapCenter su un host Linux
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for PostgreSQL 
 summary: Se una risorsa non fa ancora parte di un gruppo di risorse, è possibile eseguire il backup della risorsa dalla pagina risorse. 
 ---
-= Eseguire il backup di PostgreSQL
+= Esegui il backup di PostgreSQL in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

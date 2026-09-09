@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for MySQL 
 summary: Se una risorsa non fa ancora parte di un gruppo di risorse, è possibile eseguire il backup della risorsa dalla pagina risorse. 
 ---
-= Eseguire il backup di MySQL
+= Esegui il backup di una risorsa MySQL con SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup, Unix file system, policy, schedule, resources 
 summary: Se una risorsa non fa parte di un gruppo di risorse, è possibile eseguarne il backup dalla pagina risorse. 
 ---
-= Eseguire il backup dei file system Unix
+= Esegui il backup dei file system UNIX con SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

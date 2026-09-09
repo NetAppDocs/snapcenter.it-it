@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: alternate methods, install, plug-ins package, linux, aix, remote hosts, cmdlets, cluster host, silent mode, console mode 
 summary: È possibile utilizzare altri metodi alternativi per installare il pacchetto di plug-in SnapCenter per Linux o il pacchetto di plug-in SnapCenter per AIX. 
 ---
-= Metodi alternativi per installare Plug-ins Package per Linux o AIX
+= Installa manualmente il plug-in SnapCenter per Linux o AIX
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -26,6 +26,7 @@ Convalidare la firma del pacchetto binario eseguendo il comando:
 
 
 
+[[install-on-multiple-remote-hosts-using-cmdlets]]
 == Installazione su più host remoti utilizzando cmdlet
 
 Utilizzare il cmdlet _Install-SmHostPackage_ PowerShell per installare il pacchetto di plug-in SnapCenter per Linux o il pacchetto di plug-in SnapCenter per AIX su più host.
@@ -53,6 +54,7 @@ Le informazioni relative ai parametri che possono essere utilizzati con il cmdle
 
 
 
+[[install-on-cluster-host]]
 == Installare sull'host del cluster
 
 Installare il pacchetto di plug-in SnapCenter per Linux o il pacchetto di plug-in SnapCenter per AIX su entrambi i nodi dell'host del cluster.
@@ -79,6 +81,7 @@ NOTE: Se si verifica il failover mentre sono in esecuzione altre operazioni Snap
 
 
 
+[[install-plug-ins-package-for-linux-in-silent-mode]]
 == Installare il pacchetto plug-in per Linux in modalità silenziosa
 
 È possibile installare il pacchetto di plug-in SnapCenter per Linux in modalità silenziosa utilizzando l'interfaccia a riga di comando (CLI).
@@ -115,6 +118,7 @@ IMPORTANT: L'installazione del pacchetto di plug-in registra i plug-in sull'host
 
 
 
+[[install-plug-ins-package-for-aix-in-silent-mode]]
 == Installare il pacchetto plug-in per AIX in modalità silenziosa
 
 È possibile installare il pacchetto plug-in SnapCenter per AIX in modalità silenziosa utilizzando l'interfaccia della riga di comando (CLI).

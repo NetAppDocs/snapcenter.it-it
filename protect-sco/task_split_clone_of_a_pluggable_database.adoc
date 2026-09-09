@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: split, PDB, cloned PDB 
 summary: 'È possibile utilizzare SnapCenter per suddividere un database clonato collegabile (PDB).' 
 ---
-= Clone separato di un database collegabile
+= Dividi un clone di database collegabile in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

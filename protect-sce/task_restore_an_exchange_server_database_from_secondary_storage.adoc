@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: 'È possibile ripristinare un database Exchange Server di cui è stato eseguito il backup dallo storage secondario (mirror o vault).' 
 ---
-= Ripristinare un database Exchange Server dallo storage secondario
+= Ripristina un database Exchange da storage secondario in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

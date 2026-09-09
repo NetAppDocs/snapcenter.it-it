@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: mount, unmount, backup, ASM, asm_diskstring 
 summary: 'Se si desidera accedere ai file del backup, è possibile montare uno o più backup di dati e solo log. È possibile montare il backup sullo stesso host in cui è stato creato il backup o su un host remoto con lo stesso tipo di configurazioni Oracle e host. Se i backup sono stati montati manualmente, è necessario disinstallarli manualmente dopo aver completato l"operazione. È possibile montare il backup del database una sola volta su un host per un database specifico. Durante l"esecuzione di un"operazione, è possibile montare solo un backup singolo.' 
 ---
-= Montare e smontare i backup del database
+= Monta e smonta i backup del database in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,6 +18,7 @@ NOTE: In una configurazione di Flex ASM, non è possibile eseguire l'operazione 
 
 
 
+[[mount-a-database-backup]]
 == Montare un backup del database
 
 Se si desidera accedere ai file del backup, è necessario montare manualmente un backup del database.
@@ -85,6 +86,7 @@ Le informazioni riguardanti i parametri che possono essere utilizzati con il com
 
 
 
+[[unmount-a-database-backup]]
 == Smontare un backup del database
 
 È possibile smontare manualmente un backup del database montato quando non si desidera più accedere ai file sul backup.

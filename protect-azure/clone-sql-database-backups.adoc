@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SQL Server Database, clone, database, backups 
 summary: È possibile utilizzare SnapCenter per clonare un backup. 
 ---
-= Clona il backup del database SQL Server
+= Clona i backup del database SQL Server con SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -50,6 +50,7 @@ Se non viene specificata la QOS per i volumi clonati, verrà utilizzata la QOS d
 
 
 
+[[perform-clone-lifecycle]]
 == Eseguire il ciclo di vita del clone
 
 Utilizzando SnapCenter, è possibile creare cloni da un gruppo di risorse o da un database. È possibile eseguire cloni on-demand o pianificare operazioni ricorrenti di cloni di un gruppo di risorse o di un database. Se si clonano periodicamente un backup, è possibile utilizzare il clone per sviluppare applicazioni, popolare i dati o ripristinare i dati.

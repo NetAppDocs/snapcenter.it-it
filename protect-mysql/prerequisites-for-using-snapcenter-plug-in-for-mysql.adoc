@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Credentials,SnapCenter Plug-in for mysql 
 summary: 'Prima di utilizzare il plug-in SnapCenter per MySQL, l"amministratore di SnapCenter deve installare e configurare il server SnapCenter ed eseguire le attività dei prerequisiti.' 
 ---
-= Prerequisiti per l'utilizzo del plug-in SnapCenter per MySQL
+= Prerequisiti per usare il SnapCenter Plug-in per MySQL
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

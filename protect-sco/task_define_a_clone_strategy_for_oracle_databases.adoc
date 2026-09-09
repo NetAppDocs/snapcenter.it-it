@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup types, cloning type, clone name, limitations 
 summary: 'La definizione di una strategia prima della clonazione del database garantisce il successo dell"operazione di clonazione.' 
 ---
-= Definire una strategia di clonazione per i database Oracle
+= Scopri le strategie di clonazione per i database Oracle in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ La definizione di una strategia prima della clonazione del database garantisce i
 
 
 
+[[types-of-backups-supported-for-cloning]]
 == Tipi di backup supportati per la clonazione
 
 SnapCenter supporta la clonazione di diversi tipi di backup dei database Oracle.
@@ -37,6 +38,7 @@ NOTE: La clonazione dei backup del registro di archiviazione non è supportata.
 
 
 
+[[types-of-cloning-supported-for-oracle-databases]]
 == Tipi di cloning supportati per i database Oracle
 
 In un ambiente di database Oracle, SnapCenter supporta la clonazione di un backup di database. È possibile clonare il backup dai sistemi di storage primario e secondario.
@@ -50,6 +52,7 @@ NOTE: L'operazione di refresh dei cloni può essere eseguita solo utilizzando i 
 
 
 
+[[clone-naming-conventions-for-oracle-databases]]
 == Convenzioni di denominazione dei cloni per i database Oracle
 
 A partire da SnapCenter 3.0, la convenzione di naming utilizzata per i cloni dei file system è diversa dai cloni dei gruppi di dischi ASM.
@@ -63,6 +66,7 @@ HASHCODEofDISKGROUP è un numero generato automaticamente (da 2 a 10 cifre) univ
 
 
 
+[[limitations-of-cloning-oracle-databases]]
 == Limitazioni della clonazione dei database Oracle
 
 Prima di clonare i database, è necessario conoscere i limiti delle operazioni di clonazione.

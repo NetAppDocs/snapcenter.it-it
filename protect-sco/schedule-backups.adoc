@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: oracle databases discover 
 summary: In che modo SnapCenter rileva i database Oracle. 
 ---
-= Pianificazioni di backup
+= Programmi di backup in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SQL Server 
 summary: È possibile utilizzare SnapCenter per eseguire diversi tipi di operazioni di ripristino sulle risorse di SQL Server. 
 ---
-= Tipi di operazioni di ripristino
+= Tipi di operazioni di ripristino di SQL Server in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -28,6 +28,7 @@ NOTE: SnapCenter non supporta SnapRestore basato su volume.
 
 
 
+[[restore-up-to-the-minute]]
 == Ripristino fino al minuto
 
 In un'operazione di ripristino up-to-the-minute (selezionata per impostazione predefinita), i database vengono ripristinati fino al punto di errore. SnapCenter esegue questa operazione eseguendo la seguente sequenza:
@@ -48,12 +49,14 @@ Se non è necessario mantenere una funzionalità di ripristino aggiornata al min
 
 
 
+[[example-of-an-up-to-the-minute-restore-operation]]
 == Esempio di un'operazione di ripristino aggiornata al minuto
 
 Si supponga di eseguire il backup di SQL Server ogni giorno alle 12:00 e mercoledì alle 16:00 è necessario eseguire il ripristino da un backup. Per qualche motivo, la verifica del backup da mercoledì a mezzogiorno non è riuscita, quindi si decide di eseguire il ripristino dal backup di martedì a mezzogiorno. In seguito, se il backup viene ripristinato, tutti i log delle transazioni vengono spostati in avanti e applicati ai database ripristinati, a partire da quelli non impegnati al momento della creazione del backup di martedì e proseguendo con l'ultimo log delle transazioni scritto mercoledì alle 16:00 (se è stato eseguito il backup dei log delle transazioni).
 
 
 
+[[restore-to-a-previous-point-in-time]]
 == Ripristinare un punto precedente
 
 In un'operazione di ripristino point-in-time, i database vengono ripristinati solo a un'ora specifica rispetto al passato. Un'operazione di ripristino point-in-time si verifica nelle seguenti situazioni di ripristino:
@@ -75,6 +78,7 @@ Se si applicano i backup del log delle transazioni, è anche possibile specifica
 
 
 
+[[example-of-a-point-in-time-restore-operation]]
 == Esempio di un'operazione di ripristino point-in-time
 
 Si supponga di eseguire backup completi del database una volta a mezzanotte e un backup del log delle transazioni ogni ora. Il database si blocca alle 9:45, ma si continua a eseguire il backup dei registri delle transazioni del database guasto. È possibile scegliere tra i seguenti scenari di ripristino point-in-time:

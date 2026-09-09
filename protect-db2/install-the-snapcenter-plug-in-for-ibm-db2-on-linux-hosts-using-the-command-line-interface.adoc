@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install, SnapCenter Plug-in for IBM Db2 
 summary: 'È necessario installare il plug-in SnapCenter per il database IBM DB2 utilizzando l"interfaccia utente di SnapCenter. Se l"ambiente in uso non consente l"installazione remota del plug-in dall"interfaccia utente di SnapCenter, è possibile installare il plug-in per il database IBM DB2 in modalità console o in modalità automatica utilizzando l"interfaccia della riga di comando (CLI1).' 
 ---
-= Installare il plug-in SnapCenter per IBM DB2 su host Linux utilizzando l'interfaccia a riga di comando
+= Installa il plug-in SnapCenter per IBM Db2 su host Linux usando la CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

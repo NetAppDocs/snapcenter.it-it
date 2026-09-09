@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: application volume, back up 
 summary: 'È possibile eseguire il backup del volume dell"applicazione dalla pagina risorse se il volume dell"applicazione non fa parte di alcun gruppo di risorse.' 
 ---
-= Eseguire il backup del volume dell'applicazione
+= Esegui il backup di un volume applicativo in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

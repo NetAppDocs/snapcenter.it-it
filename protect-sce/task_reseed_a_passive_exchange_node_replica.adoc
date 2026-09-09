@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Se è necessario eseguire di nuovo il reeed di una copia della replica, ad esempio quando una copia è danneggiata, è possibile eseguire nuovamente il reeed del backup più recente utilizzando la funzione di reeed di SnapCenter. 
 ---
-= Eseguire nuovamente la configurazione di una replica passiva del nodo Exchange
+= Riseminare una replica passiva del nodo Exchange in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

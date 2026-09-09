@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore operation 
 summary: È possibile utilizzare SnapCenter per ripristinare i database di SQL Server di cui è stato eseguito il backup. Il ripristino del database è un processo multifase che copia tutti i dati e le pagine di registro da un backup di SQL Server specificato in un database specifico. 
 ---
-= Ripristinare i backup del database di SQL Server
+= Ripristina i backup del database di SQL Server in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

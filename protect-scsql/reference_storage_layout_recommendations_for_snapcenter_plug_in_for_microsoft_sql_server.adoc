@@ -19,6 +19,7 @@ In questo caso, le LUN possono includere dischi VMware RDM e LUN iSCSI direct-at
 
 
 
+[[lun-and-vmdk-requirements]]
 == Requisiti LUN e VMDK
 
 È possibile utilizzare facoltativamente LUN o VMDK dedicati per ottenere performance e gestione ottimali per i seguenti database:
@@ -36,6 +37,7 @@ Per la directory di log, è necessario creare un LUN o VMDK separato in modo che
 
 
 
+[[lun-and-vmdk-sample-layouts]]
 == Layout di esempio LUN e VMDK
 
 La seguente figura mostra come configurare il layout dello storage per database di grandi dimensioni su LUN:

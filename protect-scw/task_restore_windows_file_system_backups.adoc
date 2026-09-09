@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore 
 summary: È possibile utilizzare SnapCenter per ripristinare i backup del file system. Il ripristino del file system è un processo multifase che copia tutti i dati da un backup specificato nella posizione originale del file system. 
 ---
-= Ripristinare i backup del file system di Windows
+= Ripristina i backup del file system di Windows con SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -49,6 +49,7 @@ Il pulsante *View logs* (Visualizza registri) visualizza i registri dettagliati 
 
 
 
+[[monitor-data-protection-operations-on-sql-resources-in-the-activity-pane]]
 == Monitorare le operazioni di protezione dei dati sulle risorse SQL nel riquadro attività
 
 Il riquadro Activity (attività) visualizza le cinque operazioni più recenti eseguite. Il riquadro Activity (attività) visualizza anche il momento in cui l'operazione è stata avviata e lo stato dell'operazione.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for PostgreSQL 
 summary: Prima di utilizzare SnapCenter per eseguire il backup delle risorse cluster PostgreSQL, è necessario creare un criterio di backup per la risorsa o il gruppo di risorse di cui si desidera eseguire il backup. Un criterio di backup è un insieme di regole che regolano la gestione, la pianificazione e la conservazione dei backup. 
 ---
-= Creare criteri di backup per PostgreSQL
+= Crea il plug-in SnapCenter per le policy di backup di PostgreSQL
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

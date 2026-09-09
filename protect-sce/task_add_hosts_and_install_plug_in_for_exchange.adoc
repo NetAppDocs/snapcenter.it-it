@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Microsoft Exchange Server, NET TCP 
 summary: 'È possibile utilizzare la pagina SnapCenterAdd host per aggiungere host Windows. Il plug-in per Exchange viene installato automaticamente sull"host specificato. Questo è il metodo consigliato per installare i plug-in. È possibile aggiungere un host e installare un plug-in per un singolo host o per un cluster.' 
 ---
-= Aggiungere host e installare il plug-in per Exchange
+= Aggiungi host e installa il SnapCenter Plug-in per Microsoft Exchange Server
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -194,6 +194,7 @@ NOTE: In una configurazione ha, se si aggiorna il file web.config, è necessario
 
 
 
+[[configure-custom-port-for-net-tcp-communication]]
 == Configurare la porta personalizzata per la comunicazione TCP NET
 
 Per impostazione predefinita, a partire dalla versione SnapCenter 6,0, il plug-in SnapCenter per Windows utilizza la porta 909 per la comunicazione TCP di rete. Se la porta 909 è in uso, è possibile configurare un'altra porta per la comunicazione TCP NET.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup policy 
 summary: È possibile creare un nuovo criterio di backup per le risorse prima di utilizzare SnapCenter per eseguire il backup dei file system Windows oppure creare un nuovo criterio di backup al momento della creazione di un gruppo di risorse o del backup di una risorsa. 
 ---
-= Creare criteri di backup per i file system Windows
+= Crea criteri di backup SnapCenter per i file system di Windows
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

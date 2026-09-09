@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: 'Le risorse sono database SAP HANA e volumi non dati sull"host Linux gestiti da SnapCenter. È possibile aggiungere queste risorse ai gruppi di risorse per eseguire operazioni di protezione dei dati dopo aver individuato i database SAP HANA disponibili.' 
 ---
-= Rilevare automaticamente i database
+= Scopri automaticamente i database SAP HANA in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

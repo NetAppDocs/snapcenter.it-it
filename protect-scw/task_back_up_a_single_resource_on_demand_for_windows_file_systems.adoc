@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backing up 
 summary: Se una risorsa non si trova in un gruppo di risorse, è possibile eseguire il backup su richiesta dalla pagina risorse. 
 ---
-= Eseguire il backup di una singola risorsa on-demand per i file system Windows
+= Esegui il backup di una risorsa file system di Windows su richiesta in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

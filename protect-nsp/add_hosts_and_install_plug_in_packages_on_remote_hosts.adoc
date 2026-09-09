@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add hostsNetApp supported plug-ins, MongoDB, ORASCPM, Oracle Applications, SAP ASE, SAP MaxDB, Storage plug-in 
 summary: Utilizzare la pagina SnapCenterAdd host per aggiungere host e installare i pacchetti plug-in. I plug-in vengono installati automaticamente sugli host remoti. È possibile aggiungere un host e installare i pacchetti plug-in per un singolo host o per un cluster. 
 ---
-= Aggiungere host e installare pacchetti plug-in su host remoti
+= Aggiungi host e installa i pacchetti plug-in di SnapCenter sugli host remoti
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Manage policies 
 summary: È possibile scollegare i criteri da una risorsa o da un gruppo di risorse, modificarli, eliminarli, visualizzarli e copiarli. 
 ---
-= Gestire le policy
+= Gestisci le policy in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: È possibile scollegare i criteri da una risorsa o da un gruppo di riso
 
 
 
+[[modify-policies]]
 == Modificare i criteri
 
 È possibile modificare le opzioni di replica, le impostazioni di conservazione di Snapshot, il conteggio dei tentativi di errore o le informazioni sugli script mentre un criterio è collegato a una risorsa o a un gruppo di risorse. È possibile modificare il tipo di pianificazione (frequenza) solo dopo aver disaccoppiato un criterio.
@@ -59,6 +60,7 @@ Ad esempio, se un criterio specifica i backup orari e si desidera modificarli in
 
 
 
+[[detach-policies]]
 == Scollegare le policy
 
 È possibile scollegare le policy da una risorsa o da un gruppo di risorse ogni volta che non si desidera più che tali policy regolino la protezione dei dati per le risorse. È necessario scollegare un criterio prima di poterlo eliminare o prima di modificare il tipo di pianificazione.
@@ -74,6 +76,7 @@ Ad esempio, se un criterio specifica i backup orari e si desidera modificarli in
 
 
 
+[[delete-policies]]
 == Eliminare i criteri
 
 Se non sono più necessarie policy, è possibile eliminarle.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Microsoft Exchange Server 
 summary: È possibile utilizzare il plug-in per Exchange per eseguire il backup e il ripristino dei database di Exchange Server. 
 ---
-= Operazioni che è possibile eseguire con il plug-in SnapCenter per Microsoft Exchange Server
+= Funzionalità del SnapCenter Plug-in per Microsoft Exchange Server
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

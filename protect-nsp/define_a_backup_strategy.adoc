@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup strategy 
 summary: 'La definizione di una strategia di backup prima della creazione dei processi di backup garantisce la disponibilità dei backup necessari per ripristinare o clonare correttamente le risorse. Il contratto a livello di servizio (SLA), l"obiettivo del tempo di ripristino (RTO) e l"obiettivo del punto di ripristino (RPO) determinano in gran parte la strategia di backup.' 
 ---
-= Definire una strategia di backup
+= Definisci una strategia di backup SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

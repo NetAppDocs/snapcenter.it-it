@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore, recover, Oracle 
 summary: In caso di perdita di dati, è possibile utilizzare SnapCenter per ripristinare i dati da uno o più backup nel file system attivo e quindi ripristinare il database. 
 ---
-= Ripristinare e ripristinare il database Oracle
+= Ripristina e recupera un database Oracle in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

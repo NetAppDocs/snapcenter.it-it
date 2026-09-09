@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database 
 summary: Il rilevamento automatico non è supportato per alcune istanze di HANA. È necessario aggiungere queste risorse manualmente. 
 ---
-= Aggiungere le risorse manualmente all'host del plug-in
+= Aggiungi manualmente le risorse al plug-in SnapCenter host per SAP HANA
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Databases 
 summary: 'SnapCenter supporta i tipi di ripristino VBSR (Volume-Based SnapRestore), Single file SnapRestore e Connect-and-copy per i database SAP HANA rilevati automaticamente.' 
 ---
-= Tipi di operazioni di ripristino per i database SAP HANA rilevati automaticamente
+= Operazioni di ripristino per i database SAP HANA rilevati automaticamente in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ SnapCenter supporta i tipi di ripristino VBSR (Volume-Based SnapRestore), Single
 
 
 
+[[volume-based-snaprestore-vbsr-is-performed-in-nfs-environments-for-the-following-scenarios]]
 == Il volume-based SnapRestore (VBSR) viene eseguito in ambienti NFS per i seguenti scenari:
 
 * Quando il backup selezionato per il ripristino viene eseguito su release precedenti a SnapCenter 4.3 e solo se è selezionata l'opzione **completa risorsa**
@@ -23,6 +24,7 @@ SnapCenter supporta i tipi di ripristino VBSR (Volume-Based SnapRestore), Single
 
 
 
+[[single-file-snaprestore-is-performed-in-nfs-environments-for-the-following-scenarios]]
 == Single file SnapRestore viene eseguito in ambienti NFS per i seguenti scenari:
 
 * Quando il backup selezionato per il ripristino viene eseguito in SnapCenter 4.3 e se è selezionata solo l'opzione *completa risorsa*
@@ -32,6 +34,7 @@ SnapCenter supporta i tipi di ripristino VBSR (Volume-Based SnapRestore), Single
 
 
 
+[[single-file-snaprestore-is-performed-in-san-environments-for-the-following-scenarios]]
 == Single file SnapRestore viene eseguito negli ambienti SAN per i seguenti scenari:
 
 * Quando i backup vengono eseguiti su release precedenti a SnapCenter 4.3 e solo se è selezionata l'opzione *completa risorsa*
@@ -41,6 +44,7 @@ SnapCenter supporta i tipi di ripristino VBSR (Volume-Based SnapRestore), Single
 
 
 
+[[connect-and-copy-based-restore-is-performed-in-san-environments-for-the-following-scenario]]
 == Il ripristino basato su connessione e copia viene eseguito negli ambienti SAN per il seguente scenario:
 
 * Per MDC, quando il backup selezionato per il ripristino viene eseguito in SnapCenter 4.3 e l'opzione *Database tenant* è selezionata

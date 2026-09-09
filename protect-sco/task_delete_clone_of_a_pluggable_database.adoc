@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, PDB, clone PDB 
 summary: 'È possibile eliminare il clone di un database collegabile (PDB) se non è più necessario.' 
 ---
-= Eliminare il clone di un database collegabile
+= Elimina un clone di un database pluggable in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

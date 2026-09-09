@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clone strategy 
 summary: La definizione di una strategia di cloning consente di clonare correttamente il database. 
 ---
-= Definire una strategia di cloning per SQL Server
+= Strategia di clonazione per SQL Server in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -19,6 +19,7 @@ La definizione di una strategia di cloning consente di clonare correttamente il 
 
 
 
+[[limitations-of-clone-operations]]
 == Limitazioni delle operazioni di cloni
 
 Prima di clonare i database, è necessario conoscere i limiti delle operazioni di clonazione.
@@ -31,6 +32,7 @@ Prima di clonare i database, è necessario conoscere i limiti delle operazioni d
 
 
 
+[[types-of-clone-operations]]
 == Tipi di operazioni di cloni
 
 È possibile utilizzare SnapCenter per clonare un backup del database SQL Server o un database di produzione.

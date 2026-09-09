@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ALM 
 summary: 'Il plug-in SnapCenter per Microsoft SQL Server supporta il rilevamento in SQL Server 2012 e versioni successive, configurazioni ALM (Asymmetric LUN Mapping) per l"alta disponibilità e gruppi di disponibilità per il disaster recovery. Durante il rilevamento delle risorse, SnapCenter rileva i database sugli host locali e sugli host remoti nelle configurazioni ALM.' 
 ---
-= Supporto della mappatura LUN asimmetrica nei cluster Windows
+= SnapCenter supporto per la mappatura LUN asimmetrica nei cluster Windows
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

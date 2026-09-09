@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup, resource group 
 summary: 'Un"operazione di backup sul gruppo di risorse viene eseguita su tutte le risorse definite nel gruppo di risorse.' 
 ---
-= Eseguire il backup dei gruppi di risorse dei file system Unix
+= Esegui il backup dei gruppi di risorse dei file system UNIX di SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: split clone, snapcenter 
 summary: È possibile utilizzare SnapCenter per separare una risorsa clonata dalla risorsa principale. Il clone diviso diventa indipendente dalla risorsa padre. 
 ---
-= Separare un clone
+= Dividi un clone per un cluster PostgreSQL in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup policy 
 summary: È possibile creare un criterio di backup per la risorsa o il gruppo di risorse prima di utilizzare SnapCenter per eseguire il backup delle risorse di SQL Server oppure creare un criterio di backup al momento della creazione di un gruppo di risorse o del backup di una singola risorsa. 
 ---
-= Creare criteri di backup per i database di SQL Server
+= Crea criteri di backup per i database di SQL Server in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -58,6 +58,7 @@ Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dagli Snapshot del vault 
 
 
 
+[[step-1-create-policy-name]]
 == Fase 1: Creazione del nome della policy
 
 . Nel riquadro di navigazione a sinistra, selezionare *Impostazioni*.
@@ -68,6 +69,7 @@ Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dagli Snapshot del vault 
 
 
 
+[[step-2-configure-policy-options]]
 == Passaggio 2: Configurare le opzioni dei criteri
 
 . Nella pagina tipo di criterio, effettuare le seguenti operazioni:
@@ -129,6 +131,7 @@ NOTE: Microsoft SQL non supporta l'opzione *Copia solo backup* insieme all'opzio
 
 
 
+[[step-3-configure-availability-group-settings]]
 == Passaggio 3: Configurare le impostazioni del gruppo di disponibilità
 
 . Nella sezione Availability Group Settings (Impostazioni gruppo di disponibilità), eseguire le seguenti operazioni:
@@ -158,6 +161,7 @@ NOTE: Nelle configurazioni del cluster, i backup vengono conservati in ciascun n
 
 
 
+[[step-4-configure-snapshot-and-replication-settings]]
 == Passaggio 4: Configurare le impostazioni di istantanea e replica
 
 . Nella pagina Snapshot and Replication (istantanea e replica), effettuare le seguenti operazioni:
@@ -180,6 +184,7 @@ NOTE: Se sono previste le 2:00, la programmazione non verrà attivata durante l'
 
 
 
+[[step-5-configure-up-to-the-minute-retention-settings]]
 == Passaggio 5: Configurare le impostazioni di conservazione up-to-the-minute
 
 . Nella sezione Impostazioni conservazione fino al minuto, a seconda del tipo di backup selezionato nella pagina del tipo di backup, eseguire una o più delle seguenti operazioni:
@@ -206,6 +211,7 @@ Conservare le copie di backup per un numero specifico di giorni.
 ====
 
 
+[[step-6-configure-snapshot-settings]]
 == Passaggio 6: Configurare le impostazioni dell'istantanea
 
 . Per le impostazioni di conservazione del backup completo, effettuare le seguenti operazioni:
@@ -246,6 +252,7 @@ NOTE: È possibile assegnare etichette SnapMirror agli snapshot primari per la r
 
 
 
+[[step-7-configure-secondary-replication-options]]
 == Passaggio 7: Configurare le opzioni di replica secondarie
 
 . Nella sezione Seleziona opzioni di replica secondaria, selezionare una o entrambe le seguenti opzioni di replica secondaria:
@@ -299,6 +306,7 @@ Vedere link:../protect-scsql/task_view_sql_server_backups_and_clones_in_the_topo
 ====
 
 
+[[step-8-configure-script-settings]]
 == Fase 8: Configurare le impostazioni dello script
 
 . Nella pagina script, immettere il percorso e gli argomenti del prespt o del postscript che devono essere eseguiti rispettivamente prima o dopo l'operazione di backup.
@@ -317,6 +325,7 @@ NOTE: È necessario configurare il criterio di conservazione SnapMirror in ONTAP
 
 
 
+[[step-9-configure-verification-settings]]
 == Fase 9: Configurare le impostazioni di verifica
 
 Nella pagina verifica, attenersi alla seguente procedura:
@@ -361,6 +370,7 @@ NOTE: Il percorso prescripts o postscripts non deve includere dischi o condivisi
 
 
 
+[[step-10-review-summary]]
 == Fase 10: Riepilogo
 
 . Esaminare il riepilogo, quindi selezionare *fine*.

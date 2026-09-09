@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: snapmirror, snapvault, storage system, replication 
 summary: È possibile utilizzare un plug-in SnapCenter con le tecnologie SnapMirror e SnapVault di ONTAP 
 ---
-= Preparare sistemi storage per la replica SnapMirror e SnapVault per i plug-in supportati da NetApp
+= Prepara i sistemi storage per la replica SnapMirror e SnapVault in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

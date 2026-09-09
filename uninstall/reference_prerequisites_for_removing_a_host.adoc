@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: uninstall, prerequisites, plug-in, plug-in packages 
 summary: È possibile rimuovere un host se non si desidera più utilizzare SnapCenter per gestire i propri processi di protezione dei dati. Ad esempio, è possibile rimuovere un host se non dispone più di dati da proteggere. Prima di rimuovere un host dal server SnapCenter, è necessario eseguire le attività preliminari. 
 ---
-= Prerequisiti per la rimozione di un host
+= Prerequisiti per la rimozione di un host da SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -24,6 +24,7 @@ Prima di rimuovere un host dal server SnapCenter, è necessario completare i pre
 
 
 
+[[prerequisites-to-remove-a-host-using-role-based-access-control]]
 == Prerequisiti per rimuovere un host utilizzando il controllo degli accessi basato sui ruoli
 
 * Si dovrebbe aver effettuato l'accesso utilizzando un ruolo RBAC che dispone delle autorizzazioni di lettura, eliminazione dell'host, installazione, disinstallazione del plug-in ed eliminazione degli oggetti.
@@ -37,6 +38,7 @@ Gli oggetti possono essere cloni, backup, gruppo di risorse, sistema di storage 
 
 
 
+[[prerequisites-to-remove-a-host-with-clones-created-from-clone-lifecycle-operation]]
 == Prerequisiti per rimuovere un host con cloni creati dall'operazione di ciclo di vita dei cloni
 
 * I lavori cloni dovrebbero essere stati creati utilizzando la gestione del ciclo di vita dei cloni per i database SQL.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: 'Configurare il certificato CA per il servizio plug-in PostgreSQL di SnapCenter sull"host Windows' 
 ---
-= Configurare il certificato CA per il servizio plug-in PostgreSQL di SnapCenter sull'host Windows
+= Configura un certificato CA per il plug-in PostgreSQL di SnapCenter su un host Windows
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,6 +17,7 @@ Il plug-in utilizza il file _keystore.jks_, che si trova in _C:\Program Files\Ne
 
 
 
+[[manage-password-for-plug-in-keystore-and-alias-of-the-ca-signed-key-pair-in-use]]
 == Gestisci la password per il keystore del plug-in e l'alias della coppia di chiavi firmata dalla CA in uso
 
 .Fasi
@@ -51,6 +52,7 @@ NOTE: La password per l'archivio chiavi del plug-in e per tutte le password alia
 
 
 
+[[configure-root-or-intermediate-certificates-to-plug-in-trust-store]]
 == Configurare i certificati radice o intermedi per collegare trust-store
 
 È necessario configurare i certificati radice o intermedi senza la chiave privata per collegare trust-store.
@@ -74,6 +76,7 @@ NOTE: Aggiungere il certificato CA principale e i certificati CA intermedi.
 
 
 
+[[configure-ca-signed-key-pair-to-plug-in-trust-store]]
 == Configurare la coppia di chiavi firmata da CA per collegare l'archivio attendibile
 
 È necessario configurare la coppia di chiavi firmata dalla CA nel trust-store del plug-in.
@@ -110,6 +113,7 @@ Aggiornare questo valore con la chiave SCC_CERTIFICATE_ALIAS.
 
 
 
+[[configure-certificate-revocation-list-crl-for-snapcenter-plug-ins]]
 == Configurare l'elenco di revoche dei certificati (CRL) per i plug-in di SnapCenter
 
 .A proposito di questa attività

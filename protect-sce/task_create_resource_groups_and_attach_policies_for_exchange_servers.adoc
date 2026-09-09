@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resource group 
 summary: Per qualsiasi lavoro di protezione dei dati è necessario un gruppo di risorse. È inoltre necessario associare uno o più criteri al gruppo di risorse per definire il tipo di lavoro di protezione dei dati che si desidera eseguire e la pianificazione della protezione. 
 ---
-= Creare gruppi di risorse e associare criteri per i server Exchange
+= Crea gruppi di risorse e associa criteri per i server Exchange in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: uninstall, snapcenter server, linux 
 summary: Se non si desidera più utilizzare il server SnapCenter per gestire i processi di protezione dati, è possibile disinstallare il server SnapCenter. 
 ---
-= Disinstallare il server SnapCenter sull'host Linux
+= Disinstalla il SnapCenter Server su un host Linux
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

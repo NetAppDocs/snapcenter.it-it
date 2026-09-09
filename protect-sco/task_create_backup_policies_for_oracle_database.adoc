@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup policies, policies 
 summary: 'Prima di utilizzare SnapCenter per eseguire il backup delle risorse di database Oracle, è necessario creare un criterio di backup per la risorsa o il gruppo di risorse di cui si desidera eseguire il backup. Un criterio di backup è un insieme di regole che regolano la gestione, la pianificazione e la conservazione dei backup. È inoltre possibile specificare le impostazioni di replica, script e tipo di backup. La creazione di una policy consente di risparmiare tempo quando si desidera riutilizzare la policy su un"altra risorsa o gruppo di risorse.' 
 ---
-= Creare policy di backup per i database Oracle
+= Crea criteri di backup per i database Oracle in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

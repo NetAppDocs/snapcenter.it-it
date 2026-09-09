@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: La definizione di una strategia di ripristino per Exchange Server consente di ripristinare correttamente il database. 
 ---
-= Definire una strategia di ripristino per i database Exchange
+= Definisci una strategia di ripristino per i database Exchange in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ La definizione di una strategia di ripristino per Exchange Server consente di ri
 
 
 
+[[sources-for-a-restore-operation-in-exchange-server]]
 == Origini di un'operazione di ripristino in Exchange Server
 
 È possibile ripristinare un database Exchange Server da una copia di backup sullo storage primario.
@@ -23,6 +24,7 @@ La definizione di una strategia di ripristino per Exchange Server consente di ri
 
 
 
+[[types-of-restore-operations-supported-for-exchange-server]]
 == Tipi di operazioni di ripristino supportate per Exchange Server
 
 È possibile utilizzare SnapCenter per eseguire diversi tipi di operazioni di ripristino sulle risorse Exchange.
@@ -33,6 +35,7 @@ La definizione di una strategia di ripristino per Exchange Server consente di ri
 
 
 
+[[restore-up-to-the-minute]]
 === Ripristino fino al minuto
 
 In un'operazione di ripristino up-to-the-minute, i database vengono ripristinati fino al punto di errore. SnapCenter esegue questa operazione eseguendo la seguente sequenza:
@@ -64,6 +67,7 @@ Se non è necessario mantenere una funzionalità di ripristino aggiornata al min
 
 
 
+[[restore-to-a-previous-point-in-time]]
 === Ripristinare un punto precedente
 
 In un'operazione di ripristino point-in-time, i database vengono ripristinati solo a un'ora specifica rispetto al passato. Un'operazione di ripristino point-in-time si verifica nelle seguenti situazioni di ripristino:

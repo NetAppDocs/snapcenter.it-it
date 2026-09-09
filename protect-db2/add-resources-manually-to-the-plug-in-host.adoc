@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: Il rilevamento automatico non è supportato per alcune istanze DB2. È necessario aggiungere queste risorse manualmente. 
 ---
-= Aggiungere le risorse manualmente all'host del plug-in
+= Aggiungi manualmente le risorse IBM Db2 all'host del plug-in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

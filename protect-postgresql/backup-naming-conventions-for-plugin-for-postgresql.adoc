@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Backup naming conventions 
 summary: È possibile utilizzare la convenzione di denominazione predefinita dello snapshot o una convenzione di denominazione personalizzata. La convenzione di denominazione del backup predefinita aggiunge un indicatore data e ora ai nomi degli snapshot che consente di identificare il momento in cui le copie sono state create. 
 ---
-= Convenzioni di denominazione per il backup del plug-in per i cluster PostgreSQL
+= SnapCenter Plug-in per le convenzioni di denominazione dei backup di PostgreSQL
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

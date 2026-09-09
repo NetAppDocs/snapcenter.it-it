@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: availability 
 summary: 'Le risorse sono le LUN e i componenti simili nel file system gestiti dai plug-in installati. È possibile aggiungere tali risorse ai gruppi di risorse in modo da poter eseguire lavori di protezione dei dati su più risorse, ma prima è necessario identificare le risorse disponibili. La ricerca delle risorse disponibili verifica inoltre che l"installazione del plug-in sia stata completata correttamente.' 
 ---
-= Determinare la disponibilità delle risorse per i file system Windows
+= Determina la disponibilità delle risorse SnapCenter per i file system di Windows
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

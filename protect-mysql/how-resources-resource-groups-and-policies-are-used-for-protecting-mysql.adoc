@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: MySQL 
 summary: Prima di utilizzare SnapCenter, è utile comprendere i concetti di base relativi alle operazioni di backup, clonazione e ripristino che si desidera eseguire. Interagisci con risorse, gruppi di risorse e policy per diverse operazioni. 
 ---
-= Come vengono utilizzate le risorse, i gruppi di risorse e le policy per proteggere MySQL
+= Come SnapCenter utilizza risorse, gruppi di risorse e criteri per proteggere MySQL
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

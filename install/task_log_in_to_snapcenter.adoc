@@ -92,6 +92,7 @@ A partire dalla versione 6,0, sul desktop viene creato un collegamento per SnapC
 
 
 
+[[log-in-to-snapcenter-using-multi-factor-authentication-mfa]]
 == Accedere a SnapCenter utilizzando l'autenticazione multifattore (MFA)
 
 Il server SnapCenter supporta MFA per l'account di dominio, che fa parte di Active Directory.
@@ -125,6 +126,7 @@ L'account utente deve esistere in Active Directory (ad)
 
 
 
+[[modify-the-snapcenter-default-gui-session-timeout]]
 == Modificare il timeout della sessione GUI predefinita di SnapCenter
 
 È possibile modificare il periodo di timeout della sessione GUI di SnapCenter in modo che sia inferiore o superiore al periodo di timeout predefinito di 20 minuti.
@@ -140,6 +142,7 @@ Come funzione di sicurezza, dopo un periodo di inattività predefinito di 15 min
 
 
 
+[[secure-the-snapcenter-web-server-by-disabling-ssl-3-0]]
 == Proteggere il server Web SnapCenter disattivando SSL 3.0
 
 Per motivi di sicurezza, è necessario disattivare il protocollo SSL (Secure Socket Layer) 3.0 in Microsoft IIS, se attivato sul server Web SnapCenter.

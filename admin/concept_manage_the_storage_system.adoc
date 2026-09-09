@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Manage storage system 
 summary: Dopo aver aggiunto il sistema di storage, è possibile modificare la configurazione e le connessioni del sistema di storage o eliminarlo. 
 ---
-= Gestire il sistema storage
+= Gestisci il sistema storage in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Dopo aver aggiunto il sistema di storage, è possibile modificare la configurazi
 
 
 
+[[modify-storage-system-configuration]]
 == Modificare la configurazione del sistema storage
 
 È possibile utilizzare SnapCenter per modificare la configurazione del sistema di storage se si desidera modificare il nome utente, la password, la piattaforma, la porta, il protocollo, Periodo di timeout, indirizzo IP preferito o opzioni di messaggistica.
@@ -72,6 +73,7 @@ Per visualizzare tutti i cluster aggiunti e modificare la configurazione del clu
 
 
 
+[[delete-the-storage-system]]
 == Eliminare il sistema di storage
 
 È possibile utilizzare SnapCenter per eliminare qualsiasi sistema di storage inutilizzato.
@@ -102,6 +104,7 @@ NOTE: Se una SVM viene eliminata dal cluster ONTAP utilizzando l'interfaccia gra
 
 
 
+[[rest-api-support]]
 == Supporto API REST
 
 Per impostazione predefinita, tutte le connessioni dei sistemi ASA, AFF o FAS a ONTAP avvengono tramite ZAPI. L'API REST può essere abilitata per specifiche versioni di ONTAP.

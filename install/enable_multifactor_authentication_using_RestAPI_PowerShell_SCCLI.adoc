@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: mfa, authentication, multifactor authentication 
 summary: 'È possibile utilizzare le interfacce REST API, PowerShell e SCCLI per gestire l"MFA.' 
 ---
-= Gestisci l'autenticazione a più fattori (MFA) utilizzando REST API, PowerShell e SCCLI
+= Gestisci MFA in SnapCenter usando REST API, PowerShell e SCCLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ L'accesso MFA è supportato da browser, REST API, PowerShell e SCCLI. MFA è sup
 
 
 
+[[setup-ad-fs-as-oauthoidc]]
 == Impostare ad FS come OAuth/OIDC
 
 *Configurare ad FS utilizzando la GUI di Windows*
@@ -95,6 +96,7 @@ Configurare OpenID Connect in modo da fornire un nome utente come rivendicato.
 
 
 
+[[create-application-group-using-powershell-commands]]
 == Creare un gruppo di applicazioni utilizzando i comandi PowerShell
 
 È possibile creare il gruppo di applicazioni, l'API Web e aggiungere l'ambito e le attestazioni utilizzando i comandi PowerShell. Questi comandi sono disponibili in formato script automatizzato. Per ulteriori informazioni, vedere <link to KB article>.
@@ -174,6 +176,7 @@ Configurare OpenID Connect in modo da fornire un nome utente come rivendicato.
 
 
 
+[[update-access-token-expiry-time]]
 == Aggiornare il tempo di scadenza del token di accesso
 
 È possibile aggiornare il tempo di scadenza del token di accesso utilizzando il comando PowerShell.
@@ -193,6 +196,7 @@ Per aggiornare il tempo di scadenza del token di accesso per un gruppo di applic
 
 
 
+[[get-the-bearer-token-from-ad-fs]]
 == Ottenere il token del bearer da ad FS
 
 Inserire i parametri indicati di seguito in qualsiasi client REST (come Postman) e richiedere di inserire le credenziali dell'utente. Inoltre, per ottenere il token del bearer, è necessario immettere l'autenticazione del secondo fattore (qualcosa che si possiede e qualcosa che si è).

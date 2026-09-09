@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for MySQL 
 summary: Prima di utilizzare SnapCenter per eseguire il backup delle risorse del database MySQL, è necessario creare una policy di backup per la risorsa o il gruppo di risorse di cui si desidera eseguire il backup. Un criterio di backup è un insieme di regole che regolano la gestione, la pianificazione e la conservazione dei backup. 
 ---
-= Creare criteri di backup per MySQL
+= Crea criteri di backup per MySQL con SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

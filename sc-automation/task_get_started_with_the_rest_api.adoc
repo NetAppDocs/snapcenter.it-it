@@ -4,7 +4,7 @@ permalink: sc-automation/task_get_started_with_the_rest_api.html
 keywords: REST API 
 summary: 'L"accesso all"API offre una prospettiva prima di iniziare a utilizzarla con i processi di workflow più complessi in un setup live.' 
 ---
-= Inizia con L'API REST
+= Inizia a utilizzare l'API REST di SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: 'L"accesso all"API offre una prospettiva prima di iniziare a utilizzarl
 
 
 
+[[hello-world]]
 == Ciao mondo
 
 È possibile eseguire un semplice comando sul sistema per iniziare a utilizzare l'API REST di SnapCenter e verificarne la disponibilità.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: È possibile annullare i processi di ripristino in coda. 
 ---
-= Annulla le operazioni di ripristino per il database Exchange
+= Annulla le operazioni di ripristino per i database Exchange in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

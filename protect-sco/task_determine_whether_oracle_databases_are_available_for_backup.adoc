@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials,SnapCenter Plug-in for Oracle Databases, non-database entries, oratab 
 summary: 'Le risorse sono database Oracle sull"host gestiti da SnapCenter. È possibile aggiungere questi database ai gruppi di risorse per eseguire operazioni di protezione dei dati dopo aver individuato i database disponibili.' 
 ---
-= Scopri i database Oracle disponibili per il backup
+= Scopri i database Oracle disponibili per il backup in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -25,6 +25,7 @@ Per ulteriori informazioni, vedere https://docs.netapp.com/us-en/sc-plugin-vmwar
 
 
 
+[[step-1-prevent-snapcenter-from-discovering-non-database-entries]]
 == Fase 1: Impedire a SnapCenter di rilevare voci non del database
 
 È possibile impedire a SnapCenter di rilevare voci non di database aggiunte nel file oratab.
@@ -66,6 +67,7 @@ IMPORTANT: Si consiglia sempre di eseguire un backup del file sc_oratab.config p
 
 
 
+[[step-2-discover-resources]]
 == Fase 2: Individuare le risorse
 
 Dopo aver installato il plug-in, tutti i database su quell'host vengono automaticamente rilevati e visualizzati nella pagina risorse.

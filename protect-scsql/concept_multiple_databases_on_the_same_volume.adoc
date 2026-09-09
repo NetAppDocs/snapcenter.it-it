@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Multiple databases 
 summary: 'È possibile inserire tutti i database nello stesso volume, poiché il criterio di backup dispone di un"opzione per impostare il numero massimo di database per ogni backup (il valore predefinito è 100).' 
 ---
-= Database multipli sullo stesso volume
+= Più database sullo stesso volume in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

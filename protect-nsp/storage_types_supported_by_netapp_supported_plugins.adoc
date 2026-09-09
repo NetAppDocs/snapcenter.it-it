@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NetApp supported plug-ins 
 summary: 'SnapCenter supporta un"ampia gamma di tipi di storage su macchine fisiche e virtuali. È necessario verificare il supporto per il tipo di archiviazione prima di installare i plug-in supportati da NetApp.' 
 ---
-= Tipi di storage supportati dai plug-in NetApp
+= Tipi di storage supportati dai plug-in NetApp supportati in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

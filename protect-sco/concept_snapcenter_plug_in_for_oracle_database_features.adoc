@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: plug-in for Oracle features 
 summary: 'Il plug-in per database Oracle si integra con il database Oracle sull"host Linux o AIX e con le tecnologie NetApp sul sistema storage.' 
 ---
-= Funzionalità del plug-in per database Oracle
+= Caratteristiche del SnapCenter Plug-in per Oracle Database
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

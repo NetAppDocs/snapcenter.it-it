@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: HDB User Store Key, HDBSQL OS User, SAP HANA database 
 summary: È necessario configurare HDB User Store Key e HDBSQL OS User per eseguire operazioni di protezione dei dati sui database SAP HANA. 
 ---
-= Configurare HDB User Store Key e HDBSQL OS User per il database SAP HANA
+= Configura la chiave dello user store HDB e l'utente OS HDBSQL per SnapCenter database SAP HANA
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

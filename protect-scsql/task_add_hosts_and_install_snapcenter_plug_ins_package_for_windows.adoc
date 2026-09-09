@@ -34,7 +34,7 @@ Non è possibile aggiungere un server SnapCenter come host plug-in a un altro se
 
 È possibile aggiungere un host e installare i pacchetti plug-in per un singolo host o per un cluster. Se si installano i plug-in su un cluster o su un cluster di failover di Windows Server (WSFC), i plug-in vengono installati su tutti i nodi del cluster.
 
-Per informazioni sulla gestione degli host, vedere link:../admin/concept_manage_hosts.html["Gestire gli host"^].
+Per informazioni sulla gestione degli host, vedi link:../admin/concept_manage_hosts.html["Gestisci gli host in SnapCenter"^].
 
 .Fasi
 . Nel riquadro di navigazione a sinistra, selezionare *hosts*.

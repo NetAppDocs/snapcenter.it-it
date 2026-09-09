@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: dashboard 
 summary: 'Dal riquadro di navigazione sinistro di SnapCenter, è possibile visualizzare vari riquadri o display del dashboard, insieme ai dettagli del sistema associati. Il numero di display disponibili nella dashboard è fisso e non può essere modificato. Il contenuto fornito all"interno di ogni display dipende dal controllo dell"accesso basato sui ruoli (RBAC).' 
 ---
-= Come visualizzare le informazioni sulla dashboard
+= Visualizza le informazioni sulla dashboard di SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

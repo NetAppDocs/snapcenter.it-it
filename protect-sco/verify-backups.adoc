@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: oracle databases backup 
 summary: Verificare la copia di backup utilizzando il volume di storage primario o secondario. 
 ---
-= Dove verificare la copia di backup
+= Come SnapCenter verifica le copie di backup
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

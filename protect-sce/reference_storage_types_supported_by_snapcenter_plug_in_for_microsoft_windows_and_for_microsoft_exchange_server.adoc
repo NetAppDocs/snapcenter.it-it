@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Microsoft Exchange Server 
 summary: 'SnapCenter supporta un"ampia gamma di tipi di storage su macchine fisiche e virtuali. Prima di installare il pacchetto per l"host, è necessario verificare se il supporto è disponibile per il tipo di storage in uso.' 
 ---
-= Tipi di archiviazione supportati dal plug-in SnapCenter per Microsoft Exchange Server
+= Tipi di storage supportati dal SnapCenter Plug-in per Microsoft Exchange Server
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

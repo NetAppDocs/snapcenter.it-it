@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Oracle Database, clone, database, backups. split clone, pluggable database 
 summary: È possibile utilizzare SnapCenter per clonare un backup. 
 ---
-= Clona il backup del database Oracle
+= Clona i backup del database Oracle con SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -59,6 +59,7 @@ Deselezionare la casella di controllo se si desidera assegnare il DBID del datab
 
 
 
+[[clone-a-pluggable-database]]
 == Clonare un database collegabile
 
 È possibile clonare un database collegabile (PDB) su un CDB di destinazione diverso o uguale sullo stesso host o su un host alternativo. È inoltre possibile ripristinare il PDB clonato a un SCN desiderato o a una data e un'ora.

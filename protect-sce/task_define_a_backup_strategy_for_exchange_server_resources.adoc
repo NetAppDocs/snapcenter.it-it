@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: 'La definizione di una strategia di backup prima di creare i processi di backup consente di garantire la presenza dei backup necessari per ripristinare correttamente i database. Il contratto SLA (Service Level Agreement), l"RTO (Recovery Time Objective) e l"RPO (Recovery Point Objective) determinano in gran parte la strategia di backup.' 
 ---
-= Definire una strategia di backup per le risorse di Exchange Server
+= Definisci una strategia di backup per le risorse di Exchange Server in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,6 +17,7 @@ Uno SLA definisce il livello di servizio previsto e risolve molti problemi relat
 
 
 
+[[types-of-backups-supported-for-exchange-database]]
 == Tipi di backup supportati per il database Exchange
 
 Il backup delle cassette postali Exchange mediante SnapCenter richiede la scelta del tipo di risorsa, ad esempio database e gruppi di disponibilità database (DAG). La tecnologia Snapshot viene sfruttata per creare copie online di sola lettura dei volumi in cui risiedono le risorse.
@@ -55,6 +56,7 @@ Non viene eseguito il backup dei log troncati che sono già stati impegnati nel 
 |===
 
 
+[[backup-schedules-for-database-plug-ins]]
 == Pianificazioni di backup per i plug-in del database
 
 La frequenza di backup (tipo di pianificazione) viene specificata nei criteri; nella configurazione del gruppo di risorse viene specificata una pianificazione di backup. Il fattore più critico per determinare una frequenza o una pianificazione di backup è il tasso di cambiamento per la risorsa e l'importanza dei dati. È possibile eseguire il backup di una risorsa utilizzata in modo pesante ogni ora, mentre è possibile eseguire il backup di una risorsa utilizzata raramente una volta al giorno. Altri fattori includono l'importanza della risorsa per la tua organizzazione, il tuo Service Level Agreement (SLA) e il tuo Recover Point Objective (RPO).
@@ -77,12 +79,14 @@ Le pianificazioni di backup (esattamente quando devono essere eseguiti i backup)
 
 
 
+[[number-of-backup-jobs-needed-for-databases]]
 == Numero di processi di backup necessari per i database
 
 I fattori che determinano il numero di processi di backup necessari includono la dimensione della risorsa, il numero di volumi utilizzati, il tasso di cambiamento della risorsa e il contratto SLA (Service Level Agreement).
 
 
 
+[[backup-naming-conventions]]
 == Convenzioni di denominazione del backup
 
 È possibile utilizzare la convenzione di naming predefinita di Snapshot o una convenzione di naming personalizzata. La convenzione di denominazione predefinita dei backup aggiunge un indicatore data e ora ai nomi Snapshot che consente di identificare quando le copie sono state create.
@@ -108,6 +112,7 @@ In alternativa, è possibile specificare il formato del nome dell'istantanea men
 
 
 
+[[backup-retention-options]]
 == Opzioni di conservazione del backup
 
 È possibile scegliere il numero di giorni per i quali conservare le copie di backup o specificare il numero di copie di backup che si desidera conservare, fino a un massimo di 255 copie ONTAP. Ad esempio, l'organizzazione potrebbe richiedere di conservare 10 giorni di copie di backup o 130 copie di backup.
@@ -123,6 +128,7 @@ NOTE: Per la conservazione a lungo termine delle copie di backup, è necessario 
 
 
 
+[[how-long-to-retain-transaction-log-backups-on-the-source-storage-volume-for-exchange-server]]
 == Per quanto tempo conservare i backup del log delle transazioni sul volume di storage di origine per Exchange Server
 
 Il plug-in SnapCenter per Microsoft Exchange Server richiede backup del log delle transazioni per eseguire operazioni di ripristino aggiornate al minuto, che ripristinano il database a un intervallo di tempo compreso tra due backup completi.

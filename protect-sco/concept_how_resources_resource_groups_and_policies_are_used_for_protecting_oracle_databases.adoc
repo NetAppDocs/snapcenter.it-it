@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Oracle Database 
 summary: Prima di utilizzare SnapCenter, è utile comprendere i concetti di base relativi alle operazioni di backup, clonazione e ripristino che si desidera eseguire. 
 ---
-= Utilizzo di risorse, gruppi di risorse e policy per la protezione dei database Oracle
+= Come SnapCenter utilizza i gruppi di risorse e le policy per i database Oracle
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

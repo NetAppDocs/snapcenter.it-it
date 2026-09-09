@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: È possibile utilizzare i cmdlet PowerShell per ripristinare una replica non sana utilizzando la copia più recente sullo stesso host o la copia più recente da un host alternativo. 
 ---
-= Eseguire di nuovo il reeeding di una replica utilizzando i cmdlet PowerShell per il database Exchange
+= Ripopolare una replica di Exchange usando i cmdlet SnapCenter PowerShell
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cancel clone 
 summary: È possibile annullare i lavori clonati in coda. 
 ---
-= Annullare le operazioni di clonazione
+= Annulla le operazioni di clonazione in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

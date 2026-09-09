@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore operation 
 summary: È possibile ripristinare un database SQL Server da una copia di backup sullo storage primario o secondario. È inoltre possibile ripristinare il database in diverse destinazioni oltre alla posizione originale, consentendo di scegliere la destinazione che supporta i requisiti. 
 ---
-= Origini e destinazioni per un'operazione di ripristino
+= Origini e destinazioni per le operazioni di ripristino di SQL Server in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,12 +15,14 @@ summary: È possibile ripristinare un database SQL Server da una copia di backup
 
 
 
+[[sources-for-a-restore-operation]]
 == Origini di un'operazione di ripristino
 
 È possibile ripristinare i database dallo storage primario o secondario.
 
 
 
+[[destinations-for-a-restore-operation]]
 == Destinazioni per un'operazione di ripristino
 
 È possibile ripristinare i database in diverse destinazioni:

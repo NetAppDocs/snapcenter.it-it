@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: tech refresh, storage system, 
 summary: Eseguire un tech refresh del sistema storage spostando i dati dal vecchio storage al nuovo storage, montando il nuovo storage nei rispettivi host e quindi sollevando i database. 
 ---
-= Tech refresh del sistema storage
+= Esegui un tech refresh di un sistema storage in SnapCenter
 :allow-uri-read: 
 
 
@@ -33,6 +33,7 @@ L'aggiornamento tecnologico dello storage è supportato per sostituire lo storag
 
 
 
+[[update-the-backups-of-the-primary-storage]]
 == Aggiornare i backup dello storage primario
 
 Quando lo storage viene tech refresh, è necessario eseguire l'API o il cmdlet per l'aggiornamento dei vecchi backup in SnapCenter con i nuovi dettagli dello storage.
@@ -104,6 +105,7 @@ In questo modo verrà eseguito il controllo dell'esistenza dello snapshot sul nu
 
 
 
+[[update-the-backups-of-the-secondary-storage]]
 == Aggiornare i backup dello storage secondario
 
 Quando lo storage viene tech refresh, è necessario eseguire l'API o il cmdlet per l'aggiornamento dei vecchi backup in SnapCenter con i nuovi dettagli dello storage.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Monitor jobs, schedules, events, logs 
 summary: 'È possibile monitorare l"avanzamento dei lavori, ottenere informazioni sui lavori pianificati e rivedere eventi e registri dalla pagina Monitor.' 
 ---
-= Monitoraggio di processi, pianificazioni, eventi e registri
+= Monitora i job, le pianificazioni, gli eventi e i log di SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: 'È possibile monitorare l"avanzamento dei lavori, ottenere informazion
 
 
 
+[[monitor-jobs]]
 == Monitorare i lavori
 
 È possibile visualizzare informazioni sui processi di backup, clonazione, ripristino e verifica di SnapCenter. È possibile filtrare questa visualizzazione in base alla data di inizio e di fine, al tipo di processo, al gruppo di risorse, alla policy o al plug-in SnapCenter. È inoltre possibile ottenere ulteriori dettagli e file di log per i lavori specificati.
@@ -33,6 +34,7 @@ NOTE: È possibile monitorare solo i lavori creati e rilevanti per l'utente, a m
 
 
 
+[[manage-scheduled-backup-jobs]]
 === Gestire i processi di backup pianificati
 
 A partire dalla release di SnapCenter 6.0.1, è stato introdotto un nuovo parametro *JobConcurrencyThreshold* che imposta una soglia sul numero di processi pianificati che possono essere eseguiti in un determinato momento. Ciò consente di controllare il numero di backup che si desidera eseguire in base alla configurazione hardware del sistema.
@@ -50,6 +52,7 @@ NOTE: Se si abilita *JobConcurrencyThreshold* per gestire processi simultanei, S
 
 
 
+[[manage-stale-jobs]]
 === Gestire i lavori obsoleti
 
 I lavori obsoleti vengono creati a causa di interruzioni in SnapCenter o di aggiornamenti impropri dei lavori. A partire dalla versione SnapCenter 6.0.1, viene introdotta una pianificazione predefinita per ripulire questi lavori obsoleti che rimangono bloccati per più di 72 ore. È possibile modificare la frequenza di pianificazione modificando il parametro configurabile *CleanUpStaleJobsIntervalHours*.
@@ -64,6 +67,7 @@ I lavori obsoleti vengono creati a causa di interruzioni in SnapCenter o di aggi
 
 
 
+[[monitor-schedules]]
 == Monitorare le pianificazioni
 
 È possibile visualizzare le pianificazioni correnti per determinare quando l'operazione viene avviata, quando è stata eseguita l'ultima volta e quando viene eseguita successivamente. È inoltre possibile determinare l'host su cui viene eseguita l'operazione, insieme alle informazioni sul gruppo di risorse e sui criteri dell'operazione.
@@ -78,6 +82,7 @@ I lavori obsoleti vengono creati a causa di interruzioni in SnapCenter o di aggi
 
 
 
+[[monitor-events]]
 == Monitorare gli eventi
 
 È possibile visualizzare un elenco di eventi SnapCenter nel sistema, ad esempio quando un utente crea un gruppo di risorse o quando il sistema avvia attività, ad esempio la creazione di un backup pianificato. È possibile visualizzare gli eventi per determinare se è in corso un'operazione come un'operazione di backup o ripristino.
@@ -96,6 +101,7 @@ Tutte le informazioni sul lavoro vengono visualizzate nella pagina Eventi. Ad es
 
 
 
+[[monitor-logs]]
 == Registri di monitoraggio
 
 È possibile visualizzare e scaricare i log del server SnapCenter, i log dell'agente host SnapCenter e i log dei plug-in. È possibile visualizzare i registri per agevolare la risoluzione dei problemi.
@@ -146,6 +152,7 @@ NOTE: Per accedere alle informazioni di integrità o configurazione al termine d
 
 
 
+[[remove-jobs-and-logs-from-snapcenter]]
 == Rimuovere job e log da SnapCenter
 
 È possibile rimuovere i log e i processi di backup, ripristino, clonazione e verifica da SnapCenter. SnapCenter memorizza i log dei processi riusciti e non riusciti a tempo indeterminato, a meno che non vengano rimossi. Potrebbe essere necessario rimuoverli per riempire lo storage.

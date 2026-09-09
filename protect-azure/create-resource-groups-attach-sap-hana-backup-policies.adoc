@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resource groups, attach policies, snapcenter, SAP HANA, backup polices, schedule 
 summary: Un gruppo di risorse è il container al quale è necessario aggiungere risorse di cui si desidera eseguire il backup e la protezione. 
 ---
-= Creare gruppi di risorse e collegare le policy di backup per SAP HANA
+= Crea gruppi di risorse SnapCenter e associa le policy di backup di SAP HANA
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

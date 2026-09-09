@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: Prima di utilizzare SnapCenter per eseguire il backup delle risorse del database IBM DB2, è necessario creare un criterio di backup per la risorsa o il gruppo di risorse di cui si desidera eseguire il backup. Un criterio di backup è un insieme di regole che regolano la gestione, la pianificazione e la conservazione dei backup. 
 ---
-= Creare criteri di backup per IBM DB2
+= Crea criteri di backup per IBM Db2 in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

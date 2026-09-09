@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: snapcenter server, azure virtual machine, install 
 summary: Scarica e installa SnapCenter su macchina virtuale Azure. 
 ---
-= Installare SnapCenter sulla macchina virtuale Azure
+= Installa SnapCenter su una macchina virtuale Azure
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -47,6 +47,7 @@ Tuttavia, se si fa clic su *Annulla* durante l'esecuzione delle operazioni "riav
 
 
 
+[[register-the-product-to-enable-support]]
 == Registrare il prodotto per attivare il supporto
 
 Se non si dispone di un account NetApp esistente per la prima volta in NetApp, è necessario registrare il prodotto per attivare l'assistenza.

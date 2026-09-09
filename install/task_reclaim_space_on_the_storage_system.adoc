@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: space, storage system, reclaim 
 summary: 'Sebbene NTFS rilevi lo spazio disponibile su un LUN quando i file vengono cancellati o modificati, non riporta le nuove informazioni al sistema di storage. È possibile eseguire il cmdlet PowerShell per la rigenerazione dello spazio nel plug-in per l"host Windows per assicurarsi che i blocchi appena liberati siano contrassegnati come disponibili nello storage.' 
 ---
-= Recuperare spazio sul sistema storage
+= Recupera spazio sul sistema storage utilizzando SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

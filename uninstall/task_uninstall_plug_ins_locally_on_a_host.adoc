@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: uninstall, uninstall plug-in locally, uninstall plug-in from a host 
 summary: 'È possibile disinstallare i plug-in SnapCenter localmente su un host se non è possibile raggiungere l"host dal server SnapCenter.' 
 ---
-= Disinstallare i plug-in localmente su un host
+= Disinstalla i plug-in SnapCenter localmente su un host
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

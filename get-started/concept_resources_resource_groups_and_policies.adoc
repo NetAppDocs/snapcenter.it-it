@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resource, resource group, policy 
 summary: Prima di utilizzare SnapCenter, è utile comprendere i concetti di base relativi alle operazioni di backup, clonazione e ripristino che si desidera eseguire. 
 ---
-= Concetti chiave relativi alla protezione dei dati
+= Risorse, gruppi di risorse e politiche in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,12 +15,14 @@ Prima di utilizzare SnapCenter, comprendi i concetti chiave relativi al backup, 
 
 
 
+[[resources]]
 == Risorse
 
 Le risorse includono database, file system Windows o condivisioni di file di cui è stato eseguito il backup o il cloning con SnapCenter. A seconda dell'ambiente in uso, le risorse possono essere anche istanze di database, gruppi di disponibilità di SQL Server, database Oracle, database RAC o gruppi di applicazioni personalizzate.
 
 
 
+[[resource-group]]
 == Gruppo di risorse
 
 Un gruppo di risorse è una raccolta di risorse su un host o cluster, potenzialmente provenienti da più host e cluster. Le operazioni eseguite su un gruppo di risorse si applicano a tutte le risorse in base alla pianificazione specificata. È possibile eseguire backup su richiesta o pianificati per singole risorse o gruppi.
@@ -32,6 +34,7 @@ Utilizza plug-in pertinenti per eseguire il backup di risorse specifiche: Plug-i
 
 
 
+[[policies]]
 == Policy
 
 Le policy specificano la frequenza del backup, la conservazione delle copie, la replica, gli script e altre caratteristiche delle operazioni di protezione dei dati.
@@ -46,18 +49,21 @@ Quando si crea il gruppo di risorse e si allegano i criteri, è possibile config
 
 
 
+[[consistency-group-cg]]
 == Gruppo di coerenza (CG)
 
 Un gruppo di coerenza è una raccolta di volumi gestiti come un'unica unità.  I CG vengono sincronizzati per garantire la coerenza dei dati tra unità di archiviazione e volumi.  In ONTAP, forniscono una gestione semplice e una garanzia di protezione per un carico di lavoro applicativo che si estende su più volumi. Scopri di più su link:https://docs.netapp.com/us-en/ontap/consistency-groups["gruppi di coerenza"^] .
 
 
 
+[[usage-of-prescripts-and-postscripts]]
 == Utilizzo di prescrittori e postscript
 
 Prescrittori e postscript personalizzati possono automatizzare le attività di protezione dei dati prima o dopo l'intervento. Ad esempio, è possibile aggiungere uno script per notificare errori o avvisi di processo. Prima di impostarli, assicurarsi di aver compreso i requisiti di questi script.
 
 
 
+[[supported-script-types]]
 === Tipi di script supportati
 
 Per Windows sono supportati i seguenti tipi di script:
@@ -80,6 +86,7 @@ NOTE: Insieme alla shell bash di default sono supportate anche altre shell come 
 
 
 
+[[script-path]]
 === Percorso dello script
 
 Tutti i prescritti e postscript eseguiti come parte delle operazioni SnapCenter su sistemi di storage non virtualizzati e virtualizzati vengono eseguiti sull'host plug-in.
@@ -98,6 +105,7 @@ NOTE: Il percorso dello script viene convalidato al momento dell'esecuzione.
 
 
 
+[[where-to-specify-scripts]]
 === Dove specificare gli script
 
 Gli script sono specificati nelle policy di backup. All'avvio di un processo di backup, il criterio associa automaticamente lo script alle risorse di cui viene eseguito il backup. Quando si crea un criterio di backup, è possibile specificare gli argomenti prescrittt e postscript.
@@ -107,12 +115,14 @@ NOTE: Non è possibile specificare più script.
 
 
 
+[[script-timeouts]]
 === Timeout dello script
 
 Per impostazione predefinita, il timeout è impostato su 60 secondi. È possibile modificare il valore di timeout.
 
 
 
+[[script-output]]
 === Output dello script
 
 La directory predefinita per i file di output delle prescrizioni e dei post-script di Windows è Windows System32.

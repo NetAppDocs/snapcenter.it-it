@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore, PITR, point-in-time recovery, RMAN, tablespaces 
 summary: È possibile ripristinare un sottoinsieme di tablespace corrotti o interrotti senza influire sugli altri tablespace del database. SnapCenter utilizza RMAN per eseguire il recovery point-in-time dei tablespace. 
 ---
-= Ripristinare e ripristinare gli spazi delle tabelle utilizzando il ripristino point-in-time
+= Ripristina i tablespace utilizzando il ripristino point-in-time in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for mysql 
 summary: Il tipo di backup specifica il tipo di backup che si desidera creare. SnapCenter supporta il tipo di backup basato su copie snapshot per i database MySQL. 
 ---
-= Tipo di backup supportati
+= Tipi di backup supportati dal plug-in SnapCenter per MySQL
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Il tipo di backup specifica il tipo di backup che si desidera creare. SnapCenter
 
 
 
+[[snapshot-copy-based-backup]]
 == Backup basato su copia Snapshot
 
 I backup basati su copie Snapshot sfruttano la tecnologia NetApp Snapshot per creare copie online di sola lettura dei volumi su cui risiedono i database MySQL.

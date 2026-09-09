@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add host, install, install plug-in, oracle, database 
 summary: Aggiungere gli host e quindi installare i pacchetti dei plug-in. 
 ---
-= Aggiunta di host e installazione del plug-in SnapCenter per database Oracle
+= Aggiungi host e installa il plug-in SnapCenter per Oracle Database
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

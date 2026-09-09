@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup strategy 
 summary: 'La definizione di una strategia di backup prima della creazione dei backup fornisce i backup necessari per ripristinare o clonare correttamente i file system. Il tuo SLA (Service-Level Agreement), RTO (Recovery Time Objective) e RPO (Recovery Point Objective) determinano in gran parte la tua strategia di backup.' 
 ---
-= Definire una strategia di backup per i file system Windows
+= Strategia di backup per i file system di Windows in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,6 +17,7 @@ Uno SLA definisce il livello di servizio previsto e risolve molti problemi relat
 
 
 
+[[backup-schedules-for-windows-file-systems]]
 == Pianificazioni di backup per file system Windows
 
 La frequenza di backup viene specificata nei criteri; nella configurazione del gruppo di risorse viene specificata una pianificazione di backup. Il fattore più critico per determinare una frequenza o una pianificazione di backup è il tasso di cambiamento per la risorsa e l'importanza dei dati. È possibile eseguire il backup di una risorsa utilizzata in modo pesante ogni ora, mentre è possibile eseguire il backup di una risorsa utilizzata raramente una volta al giorno. Altri fattori includono l'importanza della risorsa per la tua organizzazione, il tuo Service Level Agreement (SLA) e il tuo Recover Point Objective (RPO).
@@ -39,12 +40,14 @@ Le pianificazioni di backup (esattamente quando devono essere eseguiti i backup)
 
 
 
+[[number-of-backups-needed-for-windows-file-systems]]
 == Numero di backup necessari per i file system Windows
 
 I fattori che determinano il numero di backup necessari includono le dimensioni del file system Windows, il numero di volumi utilizzati, la velocità di modifica del file system e il contratto SLA (Service Level Agreement).
 
 
 
+[[backup-naming-convention-for-windows-file-systems]]
 == Convenzione di naming del backup per i file system Windows
 
 I backup dei file system di Windows utilizzano la convenzione di denominazione predefinita di Snapshot. La convenzione di denominazione predefinita dei backup aggiunge un indicatore data e ora ai nomi Snapshot che consente di identificare quando le copie sono state create.
@@ -68,6 +71,7 @@ Quando si crea un backup, è possibile aggiungere anche un tag descrittivo per i
 
 
 
+[[backup-retention-options]]
 == Opzioni di conservazione del backup
 
 È possibile scegliere il numero di giorni per i quali conservare le copie di backup o specificare il numero di copie di backup che si desidera conservare, fino a un massimo di 255 copie ONTAP. Ad esempio, l'organizzazione potrebbe richiedere di conservare 10 giorni di copie di backup o 130 copie di backup.

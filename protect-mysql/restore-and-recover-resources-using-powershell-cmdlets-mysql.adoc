@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore resources, snapcenter 
 summary: 'Il ripristino di un backup delle risorse include l"avvio di una sessione di connessione con il server SnapCenter, l"elenco dei backup, il recupero delle informazioni di backup e il ripristino di un backup.' 
 ---
-= Ripristinare le risorse utilizzando i cmdlet PowerShell
+= Ripristina e recupera le risorse MySQL utilizzando i cmdlet PowerShell
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

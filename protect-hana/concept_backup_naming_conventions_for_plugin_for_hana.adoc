@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Backup naming conventions 
 summary: È possibile utilizzare la convenzione di naming predefinita di Snapshot o una convenzione di naming personalizzata. La convenzione di denominazione predefinita dei backup aggiunge un indicatore data e ora ai nomi Snapshot che consente di identificare quando le copie sono state create. 
 ---
-= Convenzioni di denominazione del backup per il plug-in per i database SAP HANA
+= Convenzioni di denominazione dei backup per il plug-in SnapCenter per i database SAP HANA
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

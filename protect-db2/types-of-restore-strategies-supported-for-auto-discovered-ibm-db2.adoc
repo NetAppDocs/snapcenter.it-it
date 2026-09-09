@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: È necessario definire una strategia prima di poter eseguire correttamente le operazioni di ripristino utilizzando SnapCenter. Esistono due tipi di strategie di ripristino per i database IBM DB2 rilevati automaticamente. 
 ---
-= Tipo di strategia di ripristino supportata per IBM DB2 rilevato automaticamente
+= Strategie di ripristino per IBM Db2 rilevato automaticamente in SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

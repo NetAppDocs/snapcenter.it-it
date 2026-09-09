@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: oracle databases discover 
 summary: In che modo SnapCenter rileva i database Oracle. 
 ---
-= Nodi preferiti nella configurazione RAC
+= Come SnapCenter utilizza i nodi preferiti in una configurazione RAC
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -26,12 +26,14 @@ Il node3 non verrà utilizzato per il backup perché non è presente nell'elenco
 
 
 
+[[flex-asm-setup]]
 == Configurazione di Flex ASM
 
 In una configurazione di Flex ASM, i nodi Leaf non vengono elencati come nodi preferiti se la cardinalità è inferiore al numero di nodi nel cluster RAC. In caso di modifiche nei ruoli dei nodi del cluster Flex ASM, è necessario eseguire manualmente la ricerca in modo da aggiornare i nodi preferiti.
 
 
 
+[[required-database-state]]
 == Stato del database richiesto
 
 Le istanze del database RAC sui nodi preferiti devono trovarsi nello stato richiesto per il completamento del backup:
