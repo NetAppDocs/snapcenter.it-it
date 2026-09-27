@@ -2,7 +2,7 @@
 permalink: protect-postgresql/types-of-restore-performed-for-auto-discovered-postgresql.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for postgresql 
-summary: 'SnapCenter supporta i tipi di ripristino SnapRestore \(VBSR\) basato su volume, Single file SnapRestore e Connect-and-copy per i cluster PostgreSQL rilevati automaticamente.' 
+summary: 'SnapCenter supporta i tipi di ripristino SnapRestore basato su volume (VBSR), Single File SnapRestore e connect-and-copy per i cluster PostgreSQL rilevati automaticamente.' 
 ---
 = Tipi di ripristino per PostgreSQL rilevato automaticamente in SnapCenter
 :allow-uri-read: 

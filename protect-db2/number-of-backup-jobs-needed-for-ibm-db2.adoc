@@ -2,7 +2,7 @@
 permalink: protect-db2/number-of-backup-jobs-needed-for-ibm-db2.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for IBM Db2 
-summary: 'I fattori che determinano il numero di processi di backup necessari includono la dimensione della risorsa, il numero di volumi utilizzati, il tasso di cambiamento della risorsa e il contratto del livello di servizio (SLA).' 
+summary: 'I fattori che determinano il numero di processi di backup necessari includono la dimensione della risorsa, il numero di volumi utilizzati, il tasso di cambiamento della risorsa e il contratto SLA (Service Level Agreement).' 
 ---
 = Numero di processi di backup necessari per il plug-in SnapCenter per IBM Db2
 :allow-uri-read: 

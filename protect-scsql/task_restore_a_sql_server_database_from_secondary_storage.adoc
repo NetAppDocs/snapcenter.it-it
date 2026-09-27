@@ -2,7 +2,7 @@
 permalink: protect-scsql/task_restore_a_sql_server_database_from_secondary_storage.html 
 sidebar: sidebar 
 keywords: restore operation 
-summary: 'È possibile ripristinare i database di SQL Server di cui è stato eseguito il backup dai LUN fisici (RDM, iSCSI o FCP) su un sistema di storage secondario. La funzionalità di ripristino è un processo multifase che copia tutti i dati e le pagine di registro da un backup SQL Server specificato che risiede nel sistema di storage secondario in un database specifico.' 
+summary: 'È possibile ripristinare i database di SQL Server di cui è stato eseguito il backup dalle LUN fisiche (RDM, iSCSI o FCP) su un sistema di storage secondario. La funzionalità di ripristino è un processo multifase che copia tutti i dati e le pagine di registro da un backup SQL Server specificato che risiede nel sistema di storage secondario in un database specifico.' 
 ---
 = Ripristina un database Microsoft SQL Server dallo storage secondario in SnapCenter
 :allow-uri-read: 

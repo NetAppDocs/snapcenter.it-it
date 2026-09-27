@@ -2,7 +2,7 @@
 permalink: protect-scsql/task_reseed_availability_group_databases.html 
 sidebar: sidebar 
 keywords: reseed 
-summary: 'Reseed è un"opzione per ripristinare i database del gruppo di disponibilità. Se un database secondario non viene sincronizzato con il database primario in un AG, è possibile eseguire nuovamente il reeeding del database secondario.' 
+summary: 'Reseed è un"opzione per ripristinare i database del gruppo di disponibilità (AG). Se un database secondario non viene sincronizzato con il database primario in un AG, è possibile eseguire nuovamente il reeeding del database secondario.' 
 ---
 = Esegui il reseed dei database dei gruppi di disponibilità in SnapCenter
 :allow-uri-read: 

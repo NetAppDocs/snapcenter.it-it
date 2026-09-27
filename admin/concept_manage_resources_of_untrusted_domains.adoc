@@ -2,7 +2,7 @@
 permalink: admin/concept_manage_resources_of_untrusted_domains.html 
 sidebar: sidebar 
 keywords: Manage resources 
-summary: Oltre a gestire gli host nei domini attendibili di Active Directory, SnapCenter gestisce anche gli host in più domini ad non attendibili. I domini ad non attendibili devono essere registrati con il server SnapCenter. SnapCenter supporta utenti e gruppi di più domini ad non attendibili. 
+summary: 'Oltre a gestire gli host nei domini attendibili di Active Directory (ad), SnapCenter gestisce anche gli host in più domini ad non attendibili. I domini ad non attendibili devono essere registrati con il server SnapCenter. SnapCenter supporta utenti e gruppi di più domini ad non attendibili.' 
 ---
 = Gestisci le risorse di SnapCenter in domini non attendibili
 :allow-uri-read: 

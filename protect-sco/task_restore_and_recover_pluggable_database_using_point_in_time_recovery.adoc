@@ -2,7 +2,7 @@
 permalink: protect-sco/task_restore_and_recover_pluggable_database_using_point_in_time_recovery.html 
 sidebar: sidebar 
 keywords: PDB, pluggable database, restore, CDB, PITR, point-in-time recovery, RMAN 
-summary: 'È possibile ripristinare e ripristinare un database collegabile (PDB) che è stato corrotto o interrotto senza influire sulle altre PDB nel database container (CDB). SnapCenter utilizza RMAN per eseguire il ripristino point-in-time del PDB.' 
+summary: 'È possibile ripristinare e ripristinare un database collegabile (PDB) che è stato danneggiato o interrotto senza influire sulle altre PDB nel database container (CDB). SnapCenter utilizza RMAN per eseguire il recovery point-in-time (PITR) del PDB.' 
 ---
 = Ripristina un database pluggable utilizzando il ripristino point-in-time in SnapCenter
 :allow-uri-read: 

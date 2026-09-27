@@ -2,7 +2,7 @@
 permalink: protect-scsql/concept_backup_schedules_for_plugin_for_sql.html 
 sidebar: sidebar 
 keywords: Backup schedules 
-summary: 'La frequenza di backup (tipo di pianificazione) viene specificata nei criteri; nella configurazione del gruppo di risorse viene specificata una pianificazione di backup.' 
+summary: 'La frequenza di backup (tipo di pianificazione) è specificata nelle policy, mentre una pianificazione di backup è specificata nella configurazione del gruppo di risorse.' 
 ---
 = Pianificazioni di backup per il plug-in SnapCenter per SQL Server
 :allow-uri-read: 

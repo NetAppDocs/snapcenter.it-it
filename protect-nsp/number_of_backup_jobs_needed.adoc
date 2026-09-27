@@ -2,7 +2,7 @@
 permalink: protect-nsp/number_of_backup_jobs_needed.html 
 sidebar: sidebar 
 keywords: backup jobs 
-summary: 'I fattori che determinano il numero di processi di backup necessari includono la dimensione della risorsa, il numero di volumi utilizzati, il tasso di cambiamento della risorsa e il contratto del livello di servizio (SLA).' 
+summary: 'I fattori che determinano il numero di processi di backup necessari includono la dimensione della risorsa, il numero di volumi utilizzati, il tasso di cambiamento della risorsa e il contratto SLA (Service Level Agreement).' 
 ---
 = Numero di lavori di backup necessari in SnapCenter
 :allow-uri-read: 

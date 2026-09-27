@@ -2,7 +2,7 @@
 permalink: admin/concept_manage_hosts.html 
 sidebar: sidebar 
 keywords: Manage hosts 
-summary: 'È possibile aggiungere host e installare pacchetti di plug-in SnapCenter, aggiungere un server di verifica, rimuovere host, migrare processi di backup e aggiornare host per aggiornare pacchetti di plug-in o aggiungere nuovi pacchetti di plug-in. A seconda del plug-in in in uso, è inoltre possibile eseguire il provisioning dei dischi, gestire le condivisioni SMB, gestire i gruppi di iniziatori (igroups), gestire le sessioni iSCSI e migrare i dati.' 
+summary: 'È possibile aggiungere host e installare pacchetti di plug-in SnapCenter, aggiungere un server di verifica, rimuovere host, migrare processi di backup e aggiornare host per aggiornare pacchetti di plug-in o aggiungere nuovi pacchetti di plug-in. A seconda del plug-in utilizzato, è possibile eseguire il provisioning dei dischi, gestire le condivisioni SMB, gestire i gruppi di iniziatori (igroups), gestire le sessioni iSCSI e migrare i dati.' 
 ---
 = Gestisci gli host in SnapCenter
 :allow-uri-read: 

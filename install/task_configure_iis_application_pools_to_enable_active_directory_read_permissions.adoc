@@ -2,7 +2,7 @@
 permalink: install/task_configure_iis_application_pools_to_enable_active_directory_read_permissions.html 
 sidebar: sidebar 
 keywords: IIS application pool, active directory, enable 
-summary: È possibile configurare IIS sul server Windows per creare un account pool di applicazioni personalizzato quando è necessario attivare le autorizzazioni di lettura di Active Directory per SnapCenter. 
+summary: 'È possibile configurare Internet Information Services (IIS) sul server Windows per creare un account pool di applicazioni personalizzato quando è necessario attivare le autorizzazioni di lettura di Active Directory per SnapCenter.' 
 ---
 = Configura i pool di applicazioni IIS per Active Directory in SnapCenter
 :allow-uri-read: 
