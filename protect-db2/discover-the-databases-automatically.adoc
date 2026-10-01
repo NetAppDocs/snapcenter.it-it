@@ -15,7 +15,7 @@ Le risorse sono database IBM DB2 sull'host Linux gestiti da SnapCenter. È possi
 
 .Prima di iniziare
 * È necessario aver già completato attività quali l'installazione del server SnapCenter, l'aggiunta di host e la configurazione delle connessioni al sistema di archiviazione.
-* Il plug-in SnapCenter per IBM DB2 non supporta il rilevamento automatico delle risorse residenti negli ambienti virtuali RDM/VMDK. Durante l'aggiunta manuale dei database, è necessario fornire le informazioni di storage per gli ambienti virtuali.
+* Il plug-in SnapCenter per IBM Db2 non supporta il rilevamento automatico delle risorse residenti negli ambienti virtuali RDM/VMDK. Devi fornire le informazioni di archiviazione per gli ambienti virtuali durante l'aggiunta manuale dei database. Per i dettagli, fai riferimento a <<resources_rdm_vmdk_virtual_environments,Risorse residenti in ambienti virtuali RDM/VMDK>>.
 
 
 .A proposito di questa attività
@@ -45,3 +45,16 @@ Le risorse vengono visualizzate insieme a informazioni quali tipo di risorsa, no
 
 
 IMPORTANT: È necessario aggiornare le risorse se i database vengono rinominati al di fuori di SnapCenter.
+
+[[resources_rdm_vmdk_virtual_environments]]
+.Risorse residenti in ambienti virtuali RDM/VMDK
+Le risorse residenti in ambienti virtuali RDM/VMDK non possono essere rilevate automaticamente. Devi disabilitare il rilevamento automatico e aggiungere manualmente l'istanza per il plug-in SnapCenter per IBM Db2, come segue:
+
+[listing]
+----
+Set-SmConfigSettings -Agent -Hostname <HOST_NAME> -configSettings @{"DISABLE_AUTO_DISCOVERY"="true"}
+
+PS C:\> Add-SmResource -HostName 10.32.212.13 -PluginCode DB2 -ResourceType Instance -ResourceName db2inst1 -StorageFootPrint
+(@{"VolumeName"="windb201_data01";"LUNName"="windb201_data01";"StorageSystem"="windb2svm"})
+----
+Per ulteriori informazioni, consulta link:back-up-db2-databases.html["Esegui il backup dei database IBM Db2, cmdlet di PowerShell"].
