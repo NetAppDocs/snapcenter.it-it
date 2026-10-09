@@ -19,6 +19,13 @@ summary: È possibile utilizzare SnapCenter per clonare un backup. È possibile 
 * Assicurarsi che gli aggregati che ospitano i volumi siano inclusi nell'elenco degli aggregati assegnati della macchina virtuale di storage (SVM).
 
 
+[NOTE]
+====
+* Per le configurazioni di storage NVMe su TCP e NVMe su FC, SnapCenter crea automaticamente un sottosistema NVMe se non ne esiste già uno durante le operazioni di ripristino o clonazione delle LUN.
+* SnapCenter non elimina il sottosistema creato nell'ambito di un'operazione di eliminazione del clone. Lo mantiene per ulteriori operazioni di clonazione o ripristino. Se elimini il sottosistema, eliminalo da ONTAP e disconnettilo dall'host usando il seguente comando: `nvme disconnect -n <subsystem_NQN>` sostituendo  `<subsystem_NQN>` con l'NQN effettivo del sottosistema.
+
+
+====
 .A proposito di questa attività
 Per ONTAP 9.12.1 e versioni precedenti, i cloni creati dagli Snapshot del vault di SnapLock come parte del ripristino ereditano il tempo di scadenza del vault di SnapLock. L'amministratore dello storage dovrebbe ripulire manualmente i cloni dopo il tempo di scadenza del SnapLock.
 
