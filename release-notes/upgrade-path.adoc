@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade paths, supported, upgrade to SnapCenter 
 summary: I percorsi di aggiornamento supportati per SnapCenter. 
 ---
-= Percorsi di aggiornamento supportati per SnapCenter
+= Percorsi di upgrade per SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,23 @@ Il percorso di aggiornamento mostra da quali versioni di SnapCenter è possibile
 
 
 NOTE: Se si aggiorna SnapCenter Server alla versione 6.2, aggiornare anche i plug-in alla versione 6.2.
+
+
+
+[[recommended-upgrade-path]]
+== Percorso di upgrade consigliato
+
+NetApp consiglia di aggiornare alla versione più recente supportata di SnapCenter, la 6.2.3, per garantire compatibilità e prestazioni ottimali con SnapCenter.
+
+
+CAUTION: Per eseguire l'aggiornamento a SnapCenter 6.2.3 da una versione precedente alla 6.0 o dalla 6.0, aggiorna prima alla 6.1P3, che supporta .NET 8 e Java 11, e poi alla 6.2.3, che supporta .NET 10 e Java 17. Non utilizzare la 6.2.2 o qualsiasi altra versione intermedia come parte del percorso di upgrade, a meno che tu non la stia già utilizzando.
+
+Per ulteriori dettagli sull'aggiornamento dei tuoi host, fai riferimento a *Upgrade Hosts to SnapCenter 6.2.3* nel link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter Note di rilascio"^].
+
+
+
+[[supported-upgrade-paths]]
+=== Percorsi di upgrade supportati
 
 |===
 | Se si utilizza la versione del server SnapCenter... | È possibile aggiornare direttamente il server SnapCenter a... | Versioni plug-in supportate 
@@ -45,7 +62,7 @@ NOTE: Se si aggiorna SnapCenter Server alla versione 6.2, aggiornare anche i plu
 
 
 
-.3+| 6,1  a| 
+.4+| 6,1  a| 
 6,2
  a| 
 * 6,1
@@ -66,7 +83,14 @@ NOTE: Se si aggiorna SnapCenter Server alla versione 6.2, aggiornare anche i plu
 
 
 
-.2+| 6,2 | 6.2.1  a| 
+| 6.2.3  a| 
+* 6.2.2
+* 6.2.3
+
+
+
+
+.3+| 6,2 | 6.2.1  a| 
 * 6,2
 
 
@@ -74,6 +98,13 @@ NOTE: Se si aggiorna SnapCenter Server alla versione 6.2, aggiornare anche i plu
 
 | 6.2.2  a| 
 * 6,2
+
+
+
+
+| 6.2.3  a| 
+* 6.2.2
+* 6.2.3
 
 
 |===

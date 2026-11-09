@@ -11,9 +11,9 @@ summary: Fornisce importanti informazioni su questa versione del server SnapCent
 
 
 [role="lead"]
-Scopri le nuove funzionalità e i miglioramenti disponibili in SnapCenter 6.2, 6.2.1 e 6.2.2.
+Scopri le nuove funzionalità e i miglioramenti disponibili in SnapCenter 6.2, 6.2.1, 6.2.2 e 6.2.3.
 
-Per un elenco completo delle nuove funzionalità e dei miglioramenti, consultare link:what's-new-in-snapcenter622.html["Novità in SnapCenter 6.2.2"].
+Per un elenco completo delle nuove funzionalità e dei miglioramenti, consultare link:what's-new-in-snapcenter623.html["Novità in SnapCenter 6.2.3"]. Per un elenco completo delle nuove funzionalità e dei miglioramenti, consultare link:what's-new-in-snapcenter622.html["Novità in SnapCenter 6.2.2"].
 
 Per un elenco completo delle nuove funzionalità e dei miglioramenti, consultare link:what's-new-in-snapcenter621.html["Novità in SnapCenter 6.2.1"].
 

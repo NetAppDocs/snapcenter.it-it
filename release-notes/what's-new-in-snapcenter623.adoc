@@ -1,0 +1,18 @@
+---
+permalink: 'release-notes/what"s-new-in-snapcenter623.html' 
+sidebar: sidebar 
+keywords: what is new, features, enhancements, 6.2.3 
+summary: La versione 6.2.3 del SnapCenter software non presenta nuove funzionalità o miglioramenti e include solo correzioni di bug noti e aggiornamenti di versione qualificati per il SnapCenter Server e i plug-in. 
+---
+= Novità del software SnapCenter 6.2.3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La versione 6.2.3 del SnapCenter software non presenta nuove funzionalità o miglioramenti.
+
+Include solo correzioni di bug noti e aggiornamenti delle versioni qualificate per il SnapCenter Server e i plug-in. Consulta il link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter Note di rilascio"^] per ulteriori dettagli.
+
+Per aggiornare i tuoi host a SnapCenter 6.2.3, consulta *Upgrade Hosts to SnapCenter 6.2.3* nel link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter Note di rilascio"^] per ulteriori dettagli sull'aggiornamento dei tuoi host.
